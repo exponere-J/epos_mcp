@@ -1,0 +1,17 @@
+{
+  "brief_id": "CB-LEGO-011",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "architect",
+  "hook_type": "how_to",
+  "visual_mask": "schematic",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Systematic method to find LEGO deals using price tracking and seasonal patterns.",
+  "hook_line": "How to never pay full price for LEGO again.",
+  "cta": "Price tracker links in description.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "Any trending LEGO set"
+  ],
+  "status": "draft"
+}

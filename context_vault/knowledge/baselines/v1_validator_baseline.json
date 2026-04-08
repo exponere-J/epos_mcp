@@ -1,0 +1,15 @@
+{
+  "role": "v1_validator",
+  "name": "V1 Validator \u2014 Constitutional Content Gate",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "Content governance and brand compliance benchmarks 2026",
+  "methodology": "5-check constitutional gate: brand voice, claims accuracy, affiliate disclosure, CTA format, ERI premortem",
+  "key_metrics": {
+    "validation_pass_rate": "85-95% for AI-generated content",
+    "false_rejection_rate": "<5%",
+    "compliance_coverage": "5 check types"
+  },
+  "epos_implementation": "V1 Validation Engine with PASS/CONDITIONAL_PASS/FAIL verdicts",
+  "operational_validation": "pending_cycle_1"
+}

@@ -1,0 +1,15 @@
+{
+  "role": "ttlg_diagnostic",
+  "name": "TTLG \u2014 Diagnostic Intelligence",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "AI business consulting benchmarks 2026 \u2014 prescriptive analytics",
+  "methodology": "4-track diagnostic (marketing/sales/service/governance) with Build Manifest fabrication",
+  "key_metrics": {
+    "diagnostic_time": "15 minutes per track",
+    "prescription_accuracy": "validated by client ROI",
+    "manifest_generation": "3 tiers per gap"
+  },
+  "epos_implementation": "TTLG v2 with Custom Props, LangGraph pipeline, Mirror Reports",
+  "operational_validation": "pending_cycle_1"
+}

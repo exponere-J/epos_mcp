@@ -1,0 +1,35 @@
+{
+  "niche": "enterprise",
+  "track": "sales",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Sales Strategy Alignment",
+    "Customer Relationship Management",
+    "Sales Performance Metrics",
+    "Sales Team Enablement",
+    "Revenue Growth Optimization"
+  ],
+  "key_bottleneck_patterns": [
+    "Inefficient Lead Qualification",
+    "Insufficient Sales Training and Support",
+    "Inadequate Sales and Marketing Alignment"
+  ],
+  "thinker_context": "In the enterprise sales landscape, organizations often struggle to balance short-term revenue goals with long-term strategic growth initiatives. As a result, sales teams may find themselves hindered by outdated processes, inadequate training, and misaligned incentives, ultimately leading to suboptimal performance and missed opportunities. To conduct a effective gap analysis, it's essential to consider the complex interplay between sales strategy, customer relationships, and revenue growth objectives.",
+  "surgeon_priorities": [
+    "Optimize Sales Process for Efficiency and Effectiveness",
+    "Develop and Implement Data-Driven Sales Metrics and Feedback Loops",
+    "Enhance Sales Training and Enablement Programs for Improved Performance"
+  ],
+  "mirror_report_tone": "Professional, data-driven, and actionable, with a focus on providing clear recommendations for improvement",
+  "desire_vocabulary": [
+    "Revenue",
+    "Growth",
+    "Efficiency",
+    "Productivity",
+    "Alignment",
+    "Optimization",
+    "Performance",
+    "Results"
+  ],
+  "generated_at": "2026-03-29T19:07:29.583418+00:00"
+}

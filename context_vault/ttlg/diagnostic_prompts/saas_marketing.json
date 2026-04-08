@@ -1,0 +1,35 @@
+{
+  "niche": "saas",
+  "track": "marketing",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Customer Acquisition Cost (CAC)",
+    "Customer Lifetime Value (CLV)",
+    "Marketing Channel ROI",
+    "Sales Funnel Conversion Rates",
+    "Brand Awareness and Positioning"
+  ],
+  "key_bottleneck_patterns": [
+    "Inefficient ad spend due to poor targeting",
+    "Insufficient lead nurturing and qualification",
+    "Lack of clear and compelling unique value proposition (UVP)"
+  ],
+  "thinker_context": "The SaaS marketing landscape is highly competitive, with numerous players vying for attention in a crowded market. To stand out, SaaS companies must develop a deep understanding of their target audience, craft compelling messaging, and leverage data-driven marketing strategies to optimize their funnel and maximize ROI. Effective marketing audit and optimization are crucial to identifying and addressing bottlenecks, improving customer acquisition and retention, and ultimately driving business growth.",
+  "surgeon_priorities": [
+    "Optimize and align marketing channels for maximum ROI",
+    "Develop and refine a unique value proposition (UVP) that resonates with the target audience",
+    "Implement data-driven lead nurturing and qualification processes"
+  ],
+  "mirror_report_tone": "Data-driven, actionable, and concise, with a focus on providing clear recommendations for improvement",
+  "desire_vocabulary": [
+    "Growth",
+    "Efficiency",
+    "ROI",
+    "Acquisition",
+    "Retention",
+    "Engagement",
+    "Conversion",
+    "Optimization"
+  ],
+  "generated_at": "2026-03-29T19:07:10.956637+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "asset_id": "ASSET-81b95fa9",
+  "asset_type": "mirror_report",
+  "title": "Mirror Report \u2014 SERVICE \u2014 epos_ecosystem",
+  "body": "**Mirror Report: TTLG SERVICE Diagnostic**\n\nWHAT WE FOUND: Our diagnostic revealed that the current onboarding process for small businesses using epos_ecosystem is manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration. Additionally, we identified inconsistencies in delivery consistency, which can impact the overall customer experience. These gaps are hindering the service's ability to reach its full potential.\n\nTHE REAL COST: The manual onboarding process and inconsistencies in delivery consistency are likely costing the business time, resources, and potential revenue. The effort required from business owners or staff to navigate the onboarding process can lead to frustration and decreased satisfaction. Furthermore, delays and errors can result in lost sales and damaged relationships with customers.\n\nTHE PATH FORWARD: To address these gaps, we recommend focusing on the highest-leverage indicators. The top prescription is to address the onboarding process by streamlining and automating it, reducing the effort required from business owners or staff. This can be achieved by implementing a more efficient onboarding system, providing clear guidance and support, and ensuring that the process is tailored to the needs of small businesses. By doing so, the service can improve delivery consistency, reduce errors, and enhance the overall customer experience.\n\nWHAT CHANGES IN 30 DAYS: We expect to see measurable improvements in the onboarding process, with a reduction in the time and effort required from business owners or staff. This will lead to increased customer satisfaction, reduced errors, and improved delivery consistency. With a medium confidence level, we project that these changes will have a positive impact on the service's overall performance.\n\nSOVEREIGN ALIGNMENT SCORE: With a current score of 10/25, there is significant room for improvement. By addressing the key gaps and implementing the recommended changes, the service can move closer to achieving sovereign alignment, resulting in increased efficiency, effectiveness, and customer satisfaction.",
+  "status": "draft",
+  "niche_id": null,
+  "segment_id": null,
+  "author_agent": "ttlg_diagnostic",
+  "platform_targets": [],
+  "scheduled_at": null,
+  "published_at": null,
+  "eri_predicted": null,
+  "eri_actual": null,
+  "version": 1,
+  "tags": [
+    "service",
+    "epos_ecosystem",
+    "sovereign_alignment"
+  ],
+  "created_at": "2026-04-01T19:10:25.126658+00:00",
+  "updated_at": "2026-04-01T19:10:25.126658+00:00"
+}

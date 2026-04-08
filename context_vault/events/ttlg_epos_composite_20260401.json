@@ -1,0 +1,32 @@
+{
+  "client_id": "epos_ecosystem",
+  "sovereign_alignment_score": 58.0,
+  "track_results": {
+    "marketing": {
+      "score": 10,
+      "verdict": "GO",
+      "prescriptions": 1,
+      "mirror_report_preview": "**Mirror Report: TTLG Marketing Diagnostic**\n\nWHAT WE FOUND: Our analysis reveals that your marketing efforts are currently hindered by limited content output and inconsistent online presence. Your bu"
+    },
+    "sales": {
+      "score": 13,
+      "verdict": "GO",
+      "prescriptions": 1,
+      "mirror_report_preview": "**Mirror Report: Unlocking Sales Potential**\n\nWHAT WE FOUND: Our analysis reveals that your sales process has key gaps, particularly in Lead Response Time and Follow Up Consistency. The average lead r"
+    },
+    "service": {
+      "score": 22.0,
+      "verdict": "LEARN",
+      "prescriptions": 1,
+      "mirror_report_preview": "**Mirror Report: TTLG SERVICE Diagnostic**\n\nWHAT WE FOUND: Our diagnostic revealed that the current onboarding process for small businesses using epos_ecosystem is often manual and time-consuming, req"
+    },
+    "governance": {
+      "score": 13,
+      "verdict": "GO",
+      "prescriptions": 1,
+      "mirror_report_preview": "**Mirror Report: TTLG Governance Diagnostic**\n\nWHAT WE FOUND: Our diagnostic revealed that your small business has a Sovereign Alignment Score of 13/25, indicating significant gaps in governance. Spec"
+    }
+  },
+  "executive_summary": "The Sovereign Alignment assessment reveals a composite score of 58/100 for epos_ecosystem, indicating opportunities for growth and improvement. The highest priority track is MARKETING, with a score of 10/25, requiring immediate attention. This week, the single most important action is to develop a comprehensive marketing strategy, focusing on targeted campaigns and brand enhancement. By addressing this critical area, epos_ecosystem can expect significant progress. With focused efforts, we project a composite score increase to 75/100 within the next 90 days. By prioritizing marketing and implementing strategic changes, epos_ecosystem can enhance its overall performance, drive growth, and improve its competitive edge.",
+  "diagnostic_date": "2026-04-01T19:29:09.986152+00:00"
+}

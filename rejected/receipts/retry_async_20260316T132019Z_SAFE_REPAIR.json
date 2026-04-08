@@ -1,0 +1,20 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:20:19.060095+00:00",
+  "file": "rejected/retry_async.py",
+  "verdict": "SAFE_REPAIR",
+  "violations": [
+    {
+      "code": "ERR-HEADER-001",
+      "article": "Article III (Governance Gate Triage)",
+      "message": "Missing mandatory file header with absolute path.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": 1,
+      "suggestion": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\retry_async.py"
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

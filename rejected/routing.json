@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "routes": [
+    { "domain": "filesystem", "delegate_to": "filesystem_local" },
+    { "domain": "cli",        "delegate_to": "terminalrunner_local" },
+    { "domain": "gui",        "delegate_to": "computeruse_local" }
+  ]
+}

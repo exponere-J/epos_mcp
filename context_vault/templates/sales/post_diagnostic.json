@@ -1,0 +1,51 @@
+{
+  "template_id": "post_diagnostic",
+  "category": "sales",
+  "version": "1.0",
+  "description": "Follow-up after delivering a TTLG diagnostic or Mirror Report.",
+  "subject": "Your {{diagnostic_name}} — next moves",
+  "body_sections": [
+    {"type": "opening", "content": "Hi {{client_name}},"},
+    {"type": "recap", "content": "The diagnostic surfaced {{gap_count}} gaps. The top 3 by impact: {{top_gaps}}."},
+    {"type": "insight", "content": "The throughline: {{throughline}}."},
+    {"type": "next_step", "content": "{{avatar_next_step}}"},
+    {"type": "cta", "content": "{{avatar_cta}}"},
+    {"type": "signature", "content": "{{sender_name}}\n\n1% daily. 37x annually."}
+  ],
+  "cta_token_pattern": "CTA-POSTDIAG-{{avatar_id}}-{{date}}",
+  "follow_up_trigger": {"days": 3, "template": "post_diagnostic_bump"},
+  "avatar_overrides": {
+    "local_champion": {
+      "avatar_next_step": "The fastest win is lead response automation. Most {{niche}} shops that install it see 30-50% more booked jobs in 60 days.",
+      "avatar_cta": "Want me to set it up for you? I can have it running this week."
+    },
+    "solo_strategic_consultant": {
+      "avatar_next_step": "The highest leverage move is the Productization Engine — turn your top engagement into a repeatable offer. It's the gap that most constrains your scale.",
+      "avatar_cta": "Should we book 45 minutes to scope the Productization install?"
+    },
+    "boutique_agency_founder": {
+      "avatar_next_step": "The margin recovery starts with the Delivery Playbook system — standardizing the top 3 service lines first, then expanding.",
+      "avatar_cta": "I can send a 4-week install proposal by EOD tomorrow. Want me to?"
+    },
+    "fractional_executive": {
+      "avatar_next_step": "Per-client context vaults are the unlock. Start with your 2 biggest engagements.",
+      "avatar_cta": "30-min scoping call this week?"
+    },
+    "technical_founder_operator": {
+      "avatar_next_step": "The reference architecture + sovereign install is the fastest path. Repo + docs + 90-min pairing session.",
+      "avatar_cta": "Want the repo link and a scheduling link?"
+    },
+    "solo_operator": {
+      "avatar_next_step": "Start with the Template Pack + 30-min guided setup. First value in 24 hours.",
+      "avatar_cta": "Ready to start? I'll send the payment link."
+    },
+    "agency_builder": {
+      "avatar_next_step": "The Scaling Playbook — 6-week installation across your delivery, sales, and reporting layers.",
+      "avatar_cta": "I'll send the full proposal tomorrow. Anyone else on your team should be on the walkthrough call?"
+    },
+    "creative_hustler": {
+      "avatar_next_step": "The Creator Stack — resonance reports, audience segmentation, monetization layer. Self-serve onboarding.",
+      "avatar_cta": "Drop your email and I'll send the creator stack setup guide."
+    }
+  }
+}

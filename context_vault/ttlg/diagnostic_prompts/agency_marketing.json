@@ -1,0 +1,35 @@
+{
+  "niche": "agency",
+  "track": "marketing",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Brand Awareness",
+    "Lead Generation",
+    "Conversion Rate Optimization",
+    "Customer Engagement",
+    "Return on Investment (ROI) Analysis"
+  ],
+  "key_bottleneck_patterns": [
+    "Inconsistent Brand Messaging",
+    "Ineffective Social Media Strategy",
+    "Insufficient Data-Driven Decision Making"
+  ],
+  "thinker_context": "As a marketing agency, understanding the intricacies of a client's brand and target audience is crucial for devising effective marketing strategies. However, agencies often face challenges in aligning their services with the evolving needs of their clients, necessitating a continuous audit of their marketing approaches to identify gaps and areas for improvement. This involves analyzing current marketing efforts, understanding consumer behavior, and leveraging data to inform strategic decisions that drive client satisfaction and business growth.",
+  "surgeon_priorities": [
+    "Developing Personalized Marketing Strategies",
+    "Implementing Advanced Data Analytics Tools",
+    "Enhancing Client Communication and Feedback Loops"
+  ],
+  "mirror_report_tone": "Professional, data-driven, and solution-focused, with an emphasis on actionable insights and strategic recommendations tailored to the agency's specific marketing challenges and goals.",
+  "desire_vocabulary": [
+    "Growth",
+    "Visibility",
+    "Engagement",
+    "Conversion",
+    "Retention",
+    "Efficiency",
+    "Innovation",
+    "Impact"
+  ],
+  "generated_at": "2026-03-29T19:07:04.629112+00:00"
+}

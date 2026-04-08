@@ -1,0 +1,2 @@
+{"timestamp": "2026-02-06T09:25:29.041685", "event_type": "violation", "violation_code": "ERR-PATH-001", "mission_id": "TEST_004"}
+{"timestamp": "2026-02-06T09:25:29.041685", "event_type": "success", "mission_id": "TEST_005"}

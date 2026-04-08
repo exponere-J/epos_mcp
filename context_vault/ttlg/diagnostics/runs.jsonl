@@ -1,0 +1,3 @@
+{"timestamp": "2026-04-04T14:48:03.050645+00:00", "client_id": "pgp_orlando", "tracks_run": ["marketing"], "composite_score": 13, "gate_verdicts": {"marketing": "GO"}}
+{"timestamp": "2026-04-04T14:51:15.480721+00:00", "client_id": "test-pgp", "tracks_run": ["marketing"], "composite_score": 10, "gate_verdicts": {"marketing": "GO"}}
+{"timestamp": "2026-04-04T14:51:35.128175+00:00", "client_id": "pgp_orlando", "tracks_run": ["marketing"], "composite_score": 10, "gate_verdicts": {"marketing": "GO"}}

@@ -1,0 +1,452 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:22:00.188180+00:00",
+  "file": "rejected/vc.py",
+  "verdict": "SAFE_REPAIR",
+  "violations": [
+    {
+      "code": "ERR-HEADER-001",
+      "article": "Article III (Governance Gate Triage)",
+      "message": "Missing mandatory file header with absolute path.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": 1,
+      "suggestion": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\vc.py"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 930,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 938,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1034,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1160,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1401,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1404,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1405,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1644,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1647,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1777,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1779,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1783,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1785,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1790,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1791,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1792,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1802,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1805,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1806,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1807,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1810,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1811,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1812,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1814,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1818,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1822,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1840,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1841,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1896,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1925,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1926,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1930,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1931,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1952,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1955,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1958,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1977,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1978,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1982,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1983,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1996,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 1997,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 2003,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 2004,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 2085,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 2086,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-PATH-002",
+      "article": "Article II Rule 1 (Path Discipline)",
+      "message": "os.path usage detected. Migrate to pathlib.Path.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": 2407,
+      "suggestion": "Replace os.path.join(a, b) with Path(a) / b"
+    },
+    {
+      "code": "ERR-CONTEXT-002",
+      "article": "Article VII (Context Governance)",
+      "message": "File ~25604 tokens. Review for vault extraction.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": null,
+      "suggestion": "Consider splitting large data into Context Vault files."
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

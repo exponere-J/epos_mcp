@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-005",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "architect",
+  "hook_type": "how_to",
+  "visual_mask": "schematic",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Step by step guide to identifying which LEGO sets will retire and increase in value.",
+  "hook_line": "How to spot a LEGO set that will double in price.",
+  "cta": "Full checklist in the description.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Icons Titanic",
+    "LEGO Harry Potter Hogwarts Castle"
+  ],
+  "status": "draft"
+}

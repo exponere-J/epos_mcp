@@ -1,0 +1,15 @@
+{
+  "directive_id": "DIR-fc92a436",
+  "directive": "Write a Python function that returns hello world",
+  "mission_type": "code",
+  "results": [
+    {
+      "mission_id": "M-92a436-001",
+      "executor": "code",
+      "status": "deferred",
+      "output": "Code execution deferred to Claude Code session. Mission logged."
+    }
+  ],
+  "completed_at": "2026-04-08T02:32:20.912988+00:00",
+  "success": false
+}

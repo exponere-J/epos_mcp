@@ -1,0 +1,15 @@
+{"timestamp": "2026-04-04T16:14:09.742419+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-cea4c815", "source_type": "comment", "intent": "question", "signal_strength": 70}}
+{"timestamp": "2026-04-04T16:14:09.744416+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-c099ad42", "source_type": "observation", "intent": "interest", "signal_strength": 55}}
+{"timestamp": "2026-04-04T16:17:37.629347+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-954b9743", "source_type": "transcript", "intent": "interest", "signal_strength": 50}}
+{"timestamp": "2026-04-04T16:17:37.638623+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-b1af654a", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:38.843860+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-39c5b3f8", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:39.314488+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-fd4e6078", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:39.322989+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-db8037ab", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:39.824119+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-441d4047", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:40.305986+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-1f32f1f8", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:40.316123+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-db5aa817", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:40.780767+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-876e2b3b", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:41.406345+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-9ca22d6b", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:41.419475+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-ca54734b", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:41.863014+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-45e2db54", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}
+{"timestamp": "2026-04-04T16:17:42.274071+00:00", "event_type": "expression.captured", "payload": {"expression_id": "EXPR-2d505609", "source_type": "transcript", "intent": "interest", "signal_strength": 45}}

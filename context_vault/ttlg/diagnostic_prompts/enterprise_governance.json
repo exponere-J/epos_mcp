@@ -1,0 +1,35 @@
+{
+  "niche": "enterprise",
+  "track": "governance",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Risk Management",
+    "Compliance",
+    "Regulatory Affairs",
+    "Audit and Assurance",
+    "Internal Controls"
+  ],
+  "key_bottleneck_patterns": [
+    "Inadequate Policy Framework",
+    "Insufficient Training and Awareness",
+    "Ineffective Audit and Compliance Processes"
+  ],
+  "thinker_context": "Enterprise governance is critical for ensuring that organizations operate within established boundaries, manage risk, and maintain stakeholder trust. Effective governance enables companies to make informed decisions, allocate resources efficiently, and respond to changing market conditions. However, many enterprises struggle with implementing and maintaining robust governance practices, leading to gaps in risk management, compliance, and internal controls. A thorough gap analysis is necessary to identify areas for improvement and develop targeted strategies to address these challenges.",
+  "surgeon_priorities": [
+    "Develop and Implement a Comprehensive Governance Framework",
+    "Establish a Robust Risk Management and Compliance Program",
+    "Conduct Regular Audit and Assurance Activities to Ensure Internal Controls are Operating Effectively"
+  ],
+  "mirror_report_tone": "Professional, objective, and analytical, with a focus on providing actionable recommendations for improvement",
+  "desire_vocabulary": [
+    "Compliance",
+    "Risk",
+    "Governance",
+    "Assurance",
+    "Regulatory",
+    "Audit",
+    "Control",
+    "Transparency"
+  ],
+  "generated_at": "2026-03-29T19:07:32.557793+00:00"
+}

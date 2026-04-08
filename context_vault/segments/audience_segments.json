@@ -1,0 +1,15 @@
+{
+  "_governance": {"watermarked": true, "version": "3.1"},
+  "version": "1.0",
+  "segments": [
+    {"id": "purist_creator", "name": "The Purist", "tier": "L2", "needs": "workflow_management"},
+    {"id": "technical_creator", "name": "The Technical Creator", "tier": "L2", "needs": "precision_edit_assist"},
+    {"id": "visual_artist", "name": "The Visual Artist", "tier": "L2", "needs": "intelligent_editing"},
+    {"id": "writer_purist", "name": "The Writer", "tier": "L2", "needs": "text_generation_with_style"},
+    {"id": "content_creator", "name": "The Content Creator", "tier": "L2_L3", "needs": "cascade_engine"},
+    {"id": "small_business", "name": "The Small Business Owner", "tier": "L3", "needs": "ongoing_production"},
+    {"id": "marketing_manager", "name": "The Marketing Manager", "tier": "L3", "needs": "force_multiplier"},
+    {"id": "agency", "name": "The Agency", "tier": "L4", "needs": "white_label_at_scale"},
+    {"id": "enterprise", "name": "The Enterprise", "tier": "L5", "needs": "full_campaign_orchestration"}
+  ]
+}

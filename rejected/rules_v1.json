@@ -1,0 +1,15 @@
+{
+  "auto": {
+    "airtable": {
+      "content_types": ["process", "sop", "workflow", "decision", "architecture"],
+      "min_priority": 2
+    },
+    "drive": {
+      "content_types": ["content", "asset", "script", "outline", "doc"],
+      "min_priority": 1
+    }
+  },
+  "queue_only": {
+    "content_types": ["sprint", "plan", "experiment", "idea", "note"]
+  }
+}

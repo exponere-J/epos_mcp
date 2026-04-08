@@ -1,0 +1,32 @@
+{
+  "mission_id": "MISSION-a83686f3",
+  "objective": "Generate weekly content schedule for lego_affiliate niche",
+  "constraints": [
+    "Only read vault data",
+    "No external API calls"
+  ],
+  "success_criteria": [
+    "Schedule JSON produced",
+    "5+ content slots filled"
+  ],
+  "failure_modes": [
+    "Vault read failure",
+    "Insufficient sparks"
+  ],
+  "risk_level": "low",
+  "assigned_agent": "content_agent",
+  "status": "complete",
+  "created_at": "2026-04-04T16:21:49.424824+00:00",
+  "started_at": "2026-04-04T16:21:49.433335+00:00",
+  "completed_at": "2026-04-04T16:21:49.442946+00:00",
+  "receipt": {
+    "execution_receipt": {
+      "slots_filled": 5,
+      "duration_seconds": 12
+    },
+    "proof_artifact": "context_vault/schedules/week_15.json",
+    "rollback_path": "context_vault/schedules/week_15.json.bak",
+    "completed_at": "2026-04-04T16:21:49.442946+00:00"
+  },
+  "aar": null
+}

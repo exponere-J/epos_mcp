@@ -1,0 +1,13 @@
+{
+  "$id": "core.telemetry_envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "run_id", "ts_start", "run_dir"],
+  "properties": {
+    "schema_id": { "const": "core.telemetry_envelope" },
+    "run_id": { "type": "string" },
+    "ts_start": { "type": "string" },
+    "run_dir": { "type": "string" }
+  }
+}
+

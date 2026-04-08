@@ -1,0 +1,24 @@
+{
+  "week_ending": "2026-04-07",
+  "total_directives": 3,
+  "by_type": {
+    "healing": {
+      "count": 1,
+      "success_rate": 1.0
+    },
+    "computeruse": {
+      "count": 1,
+      "success_rate": 0.0
+    },
+    "content": {
+      "count": 1,
+      "success_rate": 1.0
+    }
+  },
+  "top_types": [
+    "healing",
+    "computeruse",
+    "content"
+  ],
+  "unknown_count": 0
+}

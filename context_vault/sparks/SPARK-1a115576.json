@@ -1,0 +1,11 @@
+{
+  "spark_id": "SPARK-1a115576",
+  "source": "desire_vocab:lego_affiliate",
+  "signal_type": "vault_riff",
+  "raw_content": "best value LEGO",
+  "engagement_score": 0,
+  "captured_at": "2026-03-29T12:43:29.658168+00:00",
+  "tags": [],
+  "status": "converted",
+  "converted_to": "CB-LEGOAF-5809"
+}

@@ -1,0 +1,26 @@
+{
+  "expression_id": "EXPR-cea4c815",
+  "captured_at": "2026-04-04T16:14:09.742419+00:00",
+  "source_type": "comment",
+  "source_platform": "youtube",
+  "source_id": "VIDEO-001",
+  "author": "ANON-f4f3592f",
+  "raw_text": "How do I build a content engine like this? I'm frustrated with manual posting.",
+  "intent": "question",
+  "emotion": "frustrated",
+  "interest_clusters": [
+    "content_production"
+  ],
+  "keywords": [
+    "like",
+    "posting",
+    "build",
+    "frustrated",
+    "content",
+    "engine",
+    "manual"
+  ],
+  "lead_signal_strength": 70,
+  "metadata": {},
+  "routed_to": []
+}

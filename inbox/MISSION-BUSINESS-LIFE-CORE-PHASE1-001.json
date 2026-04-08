@@ -1,0 +1,243 @@
+{
+  "mission_id": "BUSINESS-LIFE-CORE-PHASE1-001",
+  "objective": "Deploy JARVIS bridge and initialize Business OS + Life OS core infrastructure",
+  "constitutional_authority": "EPOS Constitution v3.1 - Articles I-XIII",
+  "confidence": 0.85,
+  "estimated_duration_hours": 10,
+  "phases": [
+    {
+      "phase_id": "P1",
+      "name": "JARVIS Bridge Deployment",
+      "duration_hours": 2,
+      "tasks": [
+        {
+          "task_id": "P1-T1",
+          "description": "Deploy jarvis_bridge.py as always-on service",
+          "actions": [
+            "Verify engine/jarvis_bridge.py exists",
+            "Create containers/jarvis/Dockerfile",
+            "Add jarvis-bridge service to docker-compose-constitutional-3.yml",
+            "Test Event Bus subscription (pattern: *)"
+          ],
+          "success_criteria": [
+            "jarvis-bridge container running",
+            "Health check passing at localhost:8104/health",
+            "Event subscription confirmed in logs"
+          ]
+        },
+        {
+          "task_id": "P1-T2",
+          "description": "Wire governance + learning servers",
+          "actions": [
+            "Configure JARVIS to call governance_url for validation",
+            "Configure JARVIS to publish insights to learning_url",
+            "Test constitutional validation with sample mission"
+          ],
+          "success_criteria": [
+            "Governance validation working (test with ERR-PATH-001 scenario)",
+            "Learning server receiving events",
+            "No violations in logs"
+          ]
+        },
+        {
+          "task_id": "P1-T3",
+          "description": "Validate event flow end-to-end",
+          "actions": [
+            "Publish test mission to Event Bus",
+            "Verify JARVIS receives and queues mission",
+            "Verify governance validation occurs",
+            "Verify episode logged to Context Vault"
+          ],
+          "success_criteria": [
+            "Test mission processed without errors",
+            "Episode written to context_vault/missions/EPISODES.jsonl",
+            "All services remain healthy"
+          ]
+        }
+      ]
+    },
+    {
+      "phase_id": "P2",
+      "name": "Business OS Core Deployment",
+      "duration_hours": 4,
+      "tasks": [
+        {
+          "task_id": "P2-T1",
+          "description": "Create Business OS namespace in Context Vault",
+          "actions": [
+            "Run epos_genesis.py to scaffold directories",
+            "Verify context_vault/business_os/* created",
+            "Create initial schema files for finance, operations, reports"
+          ],
+          "success_criteria": [
+            "All Business OS directories exist",
+            "Schema files present and valid JSON",
+            "epos_genesis.py reports SUCCESS"
+          ]
+        },
+        {
+          "task_id": "P2-T2",
+          "description": "Build financial data ingestor",
+          "actions": [
+            "Create business_os/finance_ingestor.py",
+            "Wire to context_vault/business_os/finance/",
+            "Test with sample revenue/expense data",
+            "Validate data integrity with constitutional_enforcer"
+          ],
+          "success_criteria": [
+            "Ingestor runs without errors",
+            "Data written to finance namespace",
+            "No ERR-BLOAT-001 violations (data < 8K tokens per file)"
+          ]
+        },
+        {
+          "task_id": "P2-T3",
+          "description": "Build operations data ingestor",
+          "actions": [
+            "Create business_os/operations_ingestor.py",
+            "Wire to context_vault/business_os/operations/",
+            "Test with sample task/project data"
+          ],
+          "success_criteria": [
+            "Operations data ingested successfully",
+            "Task/project schemas validated",
+            "Queryable via Context Server API"
+          ]
+        },
+        {
+          "task_id": "P2-T4",
+          "description": "Validate Business OS data integrity",
+          "actions": [
+            "Run constitutional_enforcer on business_os namespace",
+            "Check for path violations, missing headers, bloat",
+            "Generate integrity report"
+          ],
+          "success_criteria": [
+            "Zero CRITICAL violations",
+            "Integrity report generated in ops/",
+            "All data accessible via Context Vault"
+          ]
+        }
+      ]
+    },
+    {
+      "phase_id": "P3",
+      "name": "Business Dashboard Generation",
+      "duration_hours": 2,
+      "tasks": [
+        {
+          "task_id": "P3-T1",
+          "description": "Create autonomous weekly report generator",
+          "actions": [
+            "Build business_os/report_generator.py",
+            "Query finance + operations data from Context Vault",
+            "Generate markdown report with JARVIS insights",
+            "Write to context_vault/business_os/reports/"
+          ],
+          "success_criteria": [
+            "First report generated successfully",
+            "Report includes finance summary, ops metrics, JARVIS commentary",
+            "Report < 5000 words, readable formatting"
+          ]
+        },
+        {
+          "task_id": "P3-T2",
+          "description": "Schedule automated execution",
+          "actions": [
+            "Add cron/scheduler entry for weekly reports",
+            "Test manual trigger via JARVIS",
+            "Verify report delivery to user (email/dashboard)"
+          ],
+          "success_criteria": [
+            "Scheduler active and visible in logs",
+            "Manual trigger works",
+            "Report accessible via Command Center UI"
+          ]
+        }
+      ]
+    },
+    {
+      "phase_id": "P4",
+      "name": "Life OS Foundation",
+      "duration_hours": 2,
+      "tasks": [
+        {
+          "task_id": "P4-T1",
+          "description": "Create Life OS namespace",
+          "actions": [
+            "Scaffold context_vault/life_os/* (energy, relationships, growth, purpose)",
+            "Define initial schemas for each pillar",
+            "Create life_os/constraint_engine.py"
+          ],
+          "success_criteria": [
+            "All Life OS directories exist",
+            "Schemas validate via constitutional_enforcer",
+            "Constraint engine can read/enforce rules"
+          ]
+        },
+        {
+          "task_id": "P4-T2",
+          "description": "Wire JARVIS decision constraints",
+          "actions": [
+            "Integrate constraint_engine into jarvis_bridge.py",
+            "Test: Block evening meeting if relationship_health < 7/10",
+            "Test: Defer non-critical project if energy < 6/10",
+            "Log all override decisions to Context Vault"
+          ],
+          "success_criteria": [
+            "Constraints enforced correctly in test scenarios",
+            "Override decisions logged with reasoning",
+            "No Business OS action violates Life OS boundaries"
+          ]
+        },
+        {
+          "task_id": "P4-T3",
+          "description": "Test life-business integration logic",
+          "actions": [
+            "Simulate high-pressure business quarter",
+            "Verify JARVIS proactively schedules family time",
+            "Verify energy depletion triggers mission deferrals"
+          ],
+          "success_criteria": [
+            "Life OS constraints respected under business pressure",
+            "JARVIS logs proactive life-protecting decisions",
+            "User time saved >= 2 hrs/week, stress reduction measurable"
+          ]
+        }
+      ]
+    }
+  ],
+  "success_metrics": {
+    "technical": [
+      "All services healthy (docker ps shows 6 containers running)",
+      "Zero CRITICAL constitutional violations",
+      "Event Bus processing >10 events/min",
+      "Context Vault growing (episodes, business data, life data)"
+    ],
+    "functional": [
+      "Business Dashboard auto-generates weekly",
+      "JARVIS can autonomously queue and validate missions",
+      "Life OS constraints block violating actions"
+    ],
+    "strategic": [
+      "50% of decisions made autonomously (confidence >= 0.8)",
+      "2+ hrs/week time savings (manual tasks eliminated)",
+      "80%+ life constraint compliance rate"
+    ]
+  },
+  "rollback_plan": {
+    "trigger": "Any FATAL constitutional violation or cascade failure",
+    "steps": [
+      "docker-compose down (stop all services)",
+      "Restore Context Vault from last known-good backup",
+      "Review violation logs in ops/bi_decision_log.json",
+      "Fix root cause before redeploying"
+    ]
+  },
+  "life_os_constraints": {
+    "energy_threshold": 6,
+    "relationship_threshold": 7,
+    "evening_block": true,
+    "weekend_sovereignty": true
+  }
+}

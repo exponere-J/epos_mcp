@@ -1,0 +1,328 @@
+{
+  "mission_id": "INTEGRATION-LAYER-001",
+  "title": "Deploy EPOS Error Detector Service",
+  "priority": "CRITICAL",
+  "constitutional_authority": "Article VI (Autonomous Evolution), Article VII (Context Governance)",
+  "agent": "agent-zero",
+  "status": "PENDING",
+  "created": "2026-02-08T12:00:00Z",
+  
+  "objective": "Deploy autonomous error detection service on port 8115 with Event Bus integration",
+  
+  "context": {
+    "problem": "EPOS cannot automatically detect and diagnose user workflow errors (e.g., YAML parse failures)",
+    "current_state": "Event Bus, Governance, Learning servers operational but not monitoring external errors",
+    "desired_state": "Error Detector running on port 8115, catching and diagnosing common development errors",
+    "epos_root": "C:\\Users\\Jamie\\workspace\\epos_mcp"
+  },
+  
+  "file_paths": {
+    "mission_file": "C:\\Users\\Jamie\\workspace\\epos_mcp\\inbox\\MISSION-INTEGRATION-LAYER.json",
+    "source_python": "C:\\Users\\Jamie\\workspace\\epos_mcp\\inbox\\error_detector.py",
+    "dest_python": "C:\\Users\\Jamie\\workspace\\epos_mcp\\error_detector.py",
+    "dockerfile_dir": "C:\\Users\\Jamie\\workspace\\epos_mcp\\containers\\error-detector",
+    "dockerfile": "C:\\Users\\Jamie\\workspace\\epos_mcp\\containers\\error-detector\\Dockerfile",
+    "docker_compose": "C:\\Users\\Jamie\\workspace\\epos_mcp\\docker-compose.yml",
+    "engine_dir": "C:\\Users\\Jamie\\workspace\\epos_mcp\\engine",
+    "context_vault": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault"
+  },
+  
+  "deliverables": [
+    {
+      "id": "D1",
+      "name": "error_detector.py",
+      "type": "python_service",
+      "source": "inbox/error_detector.py",
+      "destination": "error_detector.py",
+      "port": 8115,
+      "validates_against": ["EPOS_CONSTITUTION_v3.1.md"],
+      "validation_rules": [
+        "ERR-PATH-001: All paths must use pathlib.Path",
+        "ERR-HEADER-001: Constitutional header with correct port (8115)",
+        "ERR-IMPORT-001: Graceful Event Bus import fallback"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Dockerfile",
+      "type": "dockerfile",
+      "destination": "containers/error-detector/Dockerfile",
+      "build_context": ".",
+      "base_image": "python:3.11-slim",
+      "port": 8115,
+      "copy_requirements": [
+        "engine/ (must exist at C:\\Users\\Jamie\\workspace\\epos_mcp\\engine\\)",
+        "error_detector.py (from root)"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "docker-compose.yml",
+      "type": "config_update",
+      "action": "APPEND_SERVICE",
+      "service_name": "error-detector",
+      "append_strategy": {
+        "method": "INSERT_BEFORE_EOF",
+        "marker": "# End of services",
+        "validation": "docker-compose config (YAML syntax check)"
+      }
+    }
+  ],
+  
+  "tasks": [
+    {
+      "id": "T1",
+      "phase": "PRE_FLIGHT",
+      "description": "Verify EPOS environment ready",
+      "validations": [
+        {
+          "check": "Docker Desktop running",
+          "command": "docker ps",
+          "expected": "CONTAINER ID",
+          "failure_action": "ABORT - Start Docker Desktop first"
+        },
+        {
+          "check": "Event Bus operational",
+          "command": "docker ps --filter name=epos-event-bus",
+          "expected": "Up",
+          "failure_action": "ABORT - Start Event Bus: docker-compose up -d event-bus"
+        },
+        {
+          "check": "engine/ directory exists",
+          "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\engine",
+          "failure_action": "ABORT - Missing engine directory"
+        },
+        {
+          "check": "Port 8115 available",
+          "command": "netstat -ano | findstr :8115",
+          "expected": "EMPTY",
+          "failure_action": "WARN - Port conflict detected"
+        }
+      ],
+      "success_criteria": "All pre-flight checks pass"
+    },
+    {
+      "id": "T2",
+      "phase": "GOVERNANCE_VALIDATION",
+      "description": "Validate error_detector.py through Governance Gate",
+      "input_file": "inbox/error_detector.py",
+      "validation_endpoint": "http://governance-server:8101/validate",
+      "rules": [
+        "Constitutional header present",
+        "Port 8115 specified (not 8106)",
+        "Event Bus import has fallback",
+        "All paths use pathlib.Path"
+      ],
+      "dependencies": ["T1"],
+      "failure_action": "REMEDIATE - Log violations, attempt auto-fix",
+      "success_criteria": "0 governance violations"
+    },
+    {
+      "id": "T3",
+      "phase": "FILE_PLACEMENT",
+      "description": "Copy validated error_detector.py to root",
+      "source": "C:\\Users\\Jamie\\workspace\\epos_mcp\\inbox\\error_detector.py",
+      "destination": "C:\\Users\\Jamie\\workspace\\epos_mcp\\error_detector.py",
+      "dependencies": ["T2"],
+      "validation": "File exists at destination, size > 0 bytes",
+      "success_criteria": "error_detector.py in root directory"
+    },
+    {
+      "id": "T4",
+      "phase": "DOCKERFILE_CREATION",
+      "description": "Create Dockerfile for error-detector container",
+      "directory": "C:\\Users\\Jamie\\workspace\\epos_mcp\\containers\\error-detector",
+      "dockerfile_content": {
+        "base": "FROM python:3.11-slim",
+        "workdir": "WORKDIR /app",
+        "dependencies": [
+          "RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*",
+          "RUN pip install --no-cache-dir fastapi==0.104.1 uvicorn[standard]==0.24.0 pyyaml==6.0.1"
+        ],
+        "copy": [
+          "COPY engine/ ./engine/",
+          "COPY error_detector.py ./error_detector.py"
+        ],
+        "healthcheck": "HEALTHCHECK --interval=30s --timeout=10s CMD curl -f http://localhost:8115/health || exit 1",
+        "expose": "EXPOSE 8115",
+        "env": "ENV PYTHONUNBUFFERED=1",
+        "cmd": "CMD [\"python\", \"error_detector.py\"]"
+      },
+      "dependencies": ["T3"],
+      "validation": "Dockerfile syntax valid",
+      "success_criteria": "Dockerfile created at containers/error-detector/Dockerfile"
+    },
+    {
+      "id": "T5",
+      "phase": "DOCKER_COMPOSE_UPDATE",
+      "description": "Add error-detector service to docker-compose.yml",
+      "file": "C:\\Users\\Jamie\\workspace\\epos_mcp\\docker-compose.yml",
+      "service_definition": {
+        "error-detector": {
+          "build": {
+            "context": ".",
+            "dockerfile": "containers/error-detector/Dockerfile"
+          },
+          "container_name": "epos-error-detector",
+          "hostname": "error-detector",
+          "networks": ["epos-nervous-system"],
+          "depends_on": {
+            "event-bus": {
+              "condition": "service_healthy"
+            }
+          },
+          "volumes": [
+            "context-vault:/app/context_vault",
+            "logs:/app/logs",
+            ".:/app/epos_root:ro"
+          ],
+          "ports": ["8115:8115"],
+          "environment": [
+            "EPOS_ROOT=/app",
+            "NODE_ID=error-detector"
+          ],
+          "restart": "unless-stopped",
+          "healthcheck": {
+            "test": ["CMD", "curl", "-f", "http://localhost:8115/health"],
+            "interval": "30s",
+            "timeout": "10s",
+            "retries": 3,
+            "start_period": "5s"
+          }
+        }
+      },
+      "append_method": "INSERT_AFTER_COMMAND_CENTER",
+      "validation_command": "docker-compose config",
+      "dependencies": ["T4"],
+      "rollback_on_failure": "Restore docker-compose.yml from backup",
+      "success_criteria": "docker-compose config returns 0 exit code"
+    },
+    {
+      "id": "T6",
+      "phase": "BUILD",
+      "description": "Build error-detector Docker image",
+      "command": "docker-compose build error-detector",
+      "working_directory": "C:\\Users\\Jamie\\workspace\\epos_mcp",
+      "dependencies": ["T5"],
+      "timeout": "300s",
+      "expected_output": "Successfully built",
+      "failure_action": "Log build output to context_vault/errors/",
+      "success_criteria": "Docker image epos_mcp-error-detector exists"
+    },
+    {
+      "id": "T7",
+      "phase": "DEPLOY",
+      "description": "Start error-detector container",
+      "command": "docker-compose up -d error-detector",
+      "working_directory": "C:\\Users\\Jamie\\workspace\\epos_mcp",
+      "dependencies": ["T6"],
+      "expected_output": "Container epos-error-detector  Started",
+      "wait_time": "10s",
+      "success_criteria": "Container running in docker ps output"
+    },
+    {
+      "id": "T8",
+      "phase": "HEALTH_CHECK",
+      "description": "Verify error-detector is healthy",
+      "command": "curl http://localhost:8115/health",
+      "dependencies": ["T7"],
+      "retry_attempts": 3,
+      "retry_delay": "5s",
+      "expected_response": {
+        "status": "healthy",
+        "service": "error-detector",
+        "port": 8115,
+        "event_bus": "connected"
+      },
+      "success_criteria": "HTTP 200 response with status=healthy"
+    },
+    {
+      "id": "T9",
+      "phase": "EVENT_BUS_INTEGRATION",
+      "description": "Verify error-detector published to Event Bus",
+      "validation_file": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\events\\system_events.jsonl",
+      "search_pattern": "error-detector.*online",
+      "dependencies": ["T8"],
+      "timeout": "30s",
+      "success_criteria": "Event Bus shows error-detector.online event"
+    },
+    {
+      "id": "T10",
+      "phase": "FUNCTIONAL_TEST",
+      "description": "Test error detection capability",
+      "test_payload": {
+        "error": "yaml: line 47: found unexpected end of stream",
+        "context": "C:\\Users\\Jamie\\workspace\\epos_mcp"
+      },
+      "endpoint": "http://localhost:8115/analyze",
+      "method": "POST",
+      "dependencies": ["T9"],
+      "expected_response": {
+        "error_type": "YAML Truncation",
+        "fix_available": true
+      },
+      "success_criteria": "Error Detector returns valid diagnosis"
+    }
+  ],
+  
+  "rollback": {
+    "trigger": "Any task with failure_action=ABORT fails",
+    "steps": [
+      {
+        "id": "R1",
+        "action": "Stop container if running",
+        "command": "docker-compose down error-detector"
+      },
+      {
+        "id": "R2",
+        "action": "Remove service from docker-compose.yml",
+        "method": "Restore from backup"
+      },
+      {
+        "id": "R3",
+        "action": "Remove Dockerfile",
+        "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\containers\\error-detector"
+      },
+      {
+        "id": "R4",
+        "action": "Log failure",
+        "destination": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\events\\mission_failures.jsonl",
+        "data": {
+          "mission_id": "INTEGRATION-LAYER-001",
+          "failed_task": "$(FAILED_TASK_ID)",
+          "timestamp": "$(TIMESTAMP)",
+          "reason": "$(FAILURE_REASON)"
+        }
+      }
+    ]
+  },
+  
+  "success_metrics": {
+    "deployment": {
+      "container_running": "docker ps shows epos-error-detector",
+      "port_bound": "netstat shows 0.0.0.0:8115",
+      "health_check": "curl localhost:8115/health returns 200"
+    },
+    "integration": {
+      "event_bus": "error-detector.online event in system_events.jsonl",
+      "governance": "0 constitutional violations"
+    },
+    "functionality": {
+      "yaml_detection": "Can diagnose YAML parse errors",
+      "docker_detection": "Can diagnose Docker build errors",
+      "remediation": "Provides actionable fix steps"
+    }
+  },
+  
+  "completion_event": {
+    "event_type": "mission.completed",
+    "payload": {
+      "mission_id": "INTEGRATION-LAYER-001",
+      "agent": "agent-zero",
+      "duration_seconds": "$(TOTAL_TIME)",
+      "tasks_completed": 10,
+      "tasks_failed": 0
+    },
+    "destination": "context_vault/events/mission_completions.jsonl"
+  }
+}

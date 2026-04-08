@@ -1,0 +1,288 @@
+{
+  "node_definition": {
+    "nodeid": "ttlg_diagnostics_internal",
+    "version": "0.1",
+    "role": "Autonomous Healing Brain",
+    "status": "active",
+    "created": "2026-02-28",
+    "authority": "jamie_lawson",
+    "constitutional_alignment": {
+      "alignment_score": "100%",
+      "principles_enforced": [
+        "NO_SILENT_FAILURES",
+        "NO_VENDOR_LOCK_IN",
+        "NO_UNAUDITABLE_DECISIONS",
+        "TRANSPARENCY_BY_DEFAULT",
+        "PERMISSION_GATED_AUTONOMY"
+      ]
+    },
+    "mission_statement": "TTLG Diagnostics continuously scans EPOS and client stacks for architectural disease, proposes evidence-based cures, and learns from every diagnosis to improve future decisions. It proves that autonomous systems can heal themselves, be governed, and grow institutional intelligence.",
+    "core_responsibilities": [
+      "Scan internal EPOS architecture daily for brittleness and governance gaps",
+      "Evaluate findings against constitutional principles and ROI horizons",
+      "Gate code changes through human approval (Governance Gate, Phase 3)",
+      "Execute fixes only after approval and verification",
+      "Capture learning patterns that feed back into Thinker guardrails",
+      "Maintain immutable audit trail of every decision",
+      "Run diagnostics on client stacks to prove the healing model works at scale"
+    ],
+    "inputs": {
+      "required": [
+        {
+          "name": "target_codebase",
+          "type": "file_path",
+          "description": "Repository to scan",
+          "example": "./epos_core"
+        },
+        {
+          "name": "constitution_reference",
+          "type": "file_path",
+          "description": "Path to EPOS Constitution",
+          "example": "./EPOS_CONSTITUTION_v3.1.md"
+        },
+        {
+          "name": "api_keys",
+          "type": "env_vars",
+          "description": "API credentials for Scout, Thinker, Surgeon, Analyst providers",
+          "example": "TOGETHER_API_KEY, DEEPSEEK_API_KEY, ANTHROPIC_API_KEY, GOOGLE_API_KEY"
+        }
+      ],
+      "optional": [
+        {
+          "name": "approval_contact",
+          "type": "string",
+          "description": "Who approves fixes (defaults to jamie)",
+          "default": "jamie"
+        },
+        {
+          "name": "scan_targets",
+          "type": "comma_separated_list",
+          "description": "Modules to scan",
+          "default": "epos_core,friday_orchestrator,node_implementations,governance_gate,context_vault"
+        }
+      ]
+    },
+    "outputs": {
+      "required": [
+        {
+          "name": "dependency_graph",
+          "type": "json",
+          "location": "context_vault/scans/<scan_id>/scout_output.json",
+          "description": "Complete architectural map with brittle points"
+        },
+        {
+          "name": "heal_list",
+          "type": "json",
+          "location": "context_vault/scans/<scan_id>/heal_list.json",
+          "description": "Prioritized list of issues to fix (Phase 2 output)"
+        },
+        {
+          "name": "aar",
+          "type": "json",
+          "location": "context_vault/internal_diagnostics/aars/AAR-<timestamp>.json",
+          "description": "After Action Review capturing learning from this diagnostic cycle"
+        },
+        {
+          "name": "audit_log",
+          "type": "jsonl",
+          "location": "logs/ttlg_diagnostics.jsonl",
+          "description": "Immutable ledger of every phase transition and decision"
+        }
+      ]
+    },
+    "phases": [
+      {
+        "phase_number": 1,
+        "name": "DECONSTRUCT",
+        "owner": "scout_together_ai",
+        "input": "target_codebase",
+        "output": "dependency_graph + brittle_points",
+        "success_criteria": "100% of files scanned, 100% of dependencies mapped",
+        "timeout_minutes": 60
+      },
+      {
+        "phase_number": 2,
+        "name": "EVALUATE",
+        "owner": "thinker_deepseek_r1",
+        "input": "dependency_graph, constitution, roi_horizons",
+        "output": "heal_list (ranked by constitutional severity + ROI)",
+        "success_criteria": "Every issue linked to constitutional principle or ROI threshold",
+        "timeout_minutes": 30
+      },
+      {
+        "phase_number": 3,
+        "name": "GOVERNANCE_GATE",
+        "owner": "approval_required (jamie)",
+        "input": "heal_list",
+        "output": "approved_heal_list or rejection_reasoning",
+        "success_criteria": "Jamie approves or provides blocking feedback",
+        "timeout_minutes": 1440,
+        "required": true,
+        "description": "Human decision gate. No fixes execute without explicit approval."
+      },
+      {
+        "phase_number": 4,
+        "name": "RECONFIGURE",
+        "owner": "surgeon_claude_code",
+        "input": "approved_heal_list",
+        "output": "code_fixes + test_results",
+        "success_criteria": "All tests pass, no regressions, code follows EPOS patterns",
+        "timeout_minutes": 120,
+        "depends_on": "phase_3_approval"
+      },
+      {
+        "phase_number": 5,
+        "name": "RECONSTRUCT",
+        "owner": "analyst_gemini_flash",
+        "input": "fixed_code, test_results",
+        "output": "verification_report + benchmark_comparison",
+        "success_criteria": "Architecture healthier than baseline, meets market benchmarks",
+        "timeout_minutes": 30,
+        "depends_on": "phase_4_complete"
+      },
+      {
+        "phase_number": 6,
+        "name": "AAR",
+        "owner": "context_vault_legacy_system",
+        "input": "all_phase_results",
+        "output": "after_action_review + pattern_extraction",
+        "success_criteria": "AAR complete, patterns actionable, learning captured",
+        "timeout_minutes": 30,
+        "depends_on": "phase_5_complete"
+      }
+    ],
+    "governance": {
+      "approval_required_before": ["phase_4", "phase_5", "phase_6"],
+      "approval_role": "jamie",
+      "approval_timeout_hours": 24,
+      "constitutional_checks": [
+        "NO_SILENT_FAILURES: Every finding must be logged",
+        "TRANSPARENCY_BY_DEFAULT: Every decision traced and auditable",
+        "PERMISSION_GATED_AUTONOMY: Fixes require human approval (Phase 3)",
+        "NO_VENDOR_LOCK_IN: Recommendations respect sovereignty principles",
+        "NO_UNAUDITABLE_DECISIONS: Complete audit trail maintained"
+      ],
+      "immutable_logs": true,
+      "log_retention": "permanent"
+    },
+    "learning": {
+      "pattern_extraction": true,
+      "pattern_feedback_to_thinker": true,
+      "pattern_feedback_to_friday": true,
+      "antipattern_promotion": true,
+      "learning_storage": "context_vault/patterns/",
+      "learning_decay": "none (patterns persist indefinitely unless explicitly deprecated)"
+    },
+    "performance_metrics": {
+      "target_scan_time": "< 120 minutes (end-to-end)",
+      "target_approval_time": "< 24 hours (Phase 3)",
+      "target_verification_success": "> 95% (Phase 5 passes)",
+      "target_learning_patterns": "> 1 per scan",
+      "cost_per_scan": "$0.40 (very cheap vs consultant)"
+    },
+    "dependencies": {
+      "external_services": [
+        {
+          "service": "Together AI",
+          "role": "Scout (Phase 1)",
+          "api_endpoint": "https://api.together.ai/v1/completions",
+          "model": "meta-llama/Llama-3.3-70b-instruct",
+          "context_window": 10000000,
+          "cost_per_scan": "$0.10"
+        },
+        {
+          "service": "DeepSeek",
+          "role": "Thinker (Phase 2)",
+          "api_endpoint": "https://api.deepseek.com/v1/chat/completions",
+          "model": "deepseek-reasoner",
+          "cost_per_scan": "$0.05"
+        },
+        {
+          "service": "Anthropic",
+          "role": "Surgeon (Phase 4)",
+          "api_endpoint": "https://api.anthropic.com/v1/messages",
+          "model": "claude-opus-4.5",
+          "cost_per_scan": "$0.20"
+        },
+        {
+          "service": "Google",
+          "role": "Analyst (Phase 5)",
+          "api_endpoint": "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent",
+          "model": "gemini-1.5-flash",
+          "cost_per_scan": "$0.05"
+        }
+      ],
+      "internal_services": [
+        "governance_gate (EPOS constitutional validation)",
+        "context_vault (persistent storage for AARs)",
+        "friday_orchestrator (receives learning feedback)"
+      ]
+    },
+    "monetization": {
+      "internal_cost": "full",
+      "external_pricing_tier": "L7_advanced_diagnostics",
+      "external_description": "TTLG Diagnostics: Automated architectural health scanning, constitutional compliance validation, and intelligence-driven remediation for client stacks",
+      "future_revenue_model": "Per-scan SaaS (estimated $50-200 per client engagement)"
+    },
+    "integration_points": {
+      "epos_nervous_system_events": [
+        {
+          "event": "diagnostic.started",
+          "when": "Phase 1 begins",
+          "subscribers": ["friday_orchestrator", "context_vault"]
+        },
+        {
+          "event": "diagnostic.evaluation_complete",
+          "when": "Phase 2 done",
+          "subscribers": ["governance_gate", "approval_system"]
+        },
+        {
+          "event": "governance.approval_required",
+          "when": "Phase 3 waits for Jamie",
+          "subscribers": ["notification_system", "approval_webhooks"]
+        },
+        {
+          "event": "agent.missioncompleted",
+          "when": "Phase 4 finishes",
+          "subscribers": ["metrics_aggregator", "context_vault"]
+        },
+        {
+          "event": "context.stored",
+          "when": "AAR written to vault",
+          "subscribers": ["learning_system", "friday_pattern_library"]
+        }
+      ]
+    },
+    "deployment": {
+      "environment": "local (can run on EPOS host machine)",
+      "container_support": true,
+      "resource_requirements": {
+        "cpu": "1 core minimum (APIs run on external services)",
+        "memory": "512 MB",
+        "disk": "1 GB for logs + AARs"
+      },
+      "config_file": ".env",
+      "charter_file": "CLAUDE.md",
+      "schema_file": "schemas/aar_v1.json"
+    },
+    "schedule": {
+      "default_cadence": "daily at 2am UTC (9pm EST)",
+      "cron_expression": "0 2 * * *",
+      "manual_trigger": "bash scripts/ttlg_phase1_scout.sh",
+      "can_skip_phases": false,
+      "phases_must_be_sequential": true
+    },
+    "compliance": {
+      "audit_trail": "complete and immutable",
+      "constitutional_governance": "enforced in Phase 3",
+      "error_handling": "no silent failures (all errors logged)",
+      "rollback_capability": "AARs provide evidence for decision-making (read-only, no auto-rollback)"
+    },
+    "roadmap": {
+      "v0.1": "Internal healing loop (current)",
+      "v0.2": "Add client diagnostic capability",
+      "v1.0": "Public TTLG as a service (revenue layer L7)",
+      "v2.0": "Multi-tenant SaaS with custom domain modules"
+    }
+  }
+}

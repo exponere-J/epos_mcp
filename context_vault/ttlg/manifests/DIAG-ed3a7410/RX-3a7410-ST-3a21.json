@@ -1,0 +1,44 @@
+{
+  "prescription_id": "RX-3a7410-ST-3a21",
+  "type": "strategic_build",
+  "gap_addressed": "Doctor reports 2 warnings",
+  "consequence_chain": "Strategic remediation addresses Doctor reports 2 warnings and connected downstream effects: ~$10500/quarter in recovered value plus operational efficiency gains.",
+  "nodes_required": [
+    "dashboard_engine",
+    "event_bus"
+  ],
+  "configuration": {
+    "dashboard_engine": {
+      "capabilities_used": [
+        "ecosystem_aggregation",
+        "health_monitoring",
+        "revenue_tracking"
+      ],
+      "integration": "event_bus"
+    },
+    "event_bus": {
+      "capabilities_used": [
+        "pub_sub",
+        "event_logging",
+        "trace_replay"
+      ],
+      "integration": "event_bus"
+    }
+  },
+  "estimated_hours": 20.0,
+  "monthly_cost": 101.4,
+  "projected_roi_90d": 12327.4,
+  "deployment_sequence": [
+    "1. Configure event bus integration",
+    "2. Deploy Dashboard Engine with vault path initialization",
+    "3. Deploy Event Bus with vault path initialization",
+    "4. Run sovereignty certification",
+    "5. Verify end-to-end pipeline"
+  ],
+  "success_criteria": [
+    "All deployed nodes pass sovereignty certification at 85+",
+    "Event bus shows events from all new nodes",
+    "Doctor reports zero new FAILs"
+  ],
+  "value_at_risk": 15000.0
+}

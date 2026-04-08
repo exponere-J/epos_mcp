@@ -1,0 +1,11 @@
+{
+  "id": "evt_001",
+  "type": "sprint",
+  "payload": {
+    "project": "EPOS",
+    "task": "Design context extractor"
+  },
+  "status": "pending",
+  "meta": {},
+  "routed_at": "2025-12-11T23:22:44.676446Z"
+}

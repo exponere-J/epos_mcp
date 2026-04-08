@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "total_assets": 55,
+  "by_status": {},
+  "by_type": {
+    "script": 1,
+    "case_study": 1,
+    "mirror_report": 50,
+    "conversation_transcript": 3
+  },
+  "by_niche": {
+    "lego_affiliate": 1
+  },
+  "last_updated": "2026-04-04T14:51:35.124143+00:00"
+}

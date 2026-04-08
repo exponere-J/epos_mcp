@@ -1,0 +1,9 @@
+{
+  "id": "fal_ai",
+  "name": "fal.ai",
+  "category": "image",
+  "use_case": "AI image generation at scale via API",
+  "tier": "L2+",
+  "url": "https://fal.ai",
+  "added_at": "2026-03-29T12:48:15.812144+00:00"
+}

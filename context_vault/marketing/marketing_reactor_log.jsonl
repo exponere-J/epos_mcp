@@ -1,0 +1,5 @@
+{"timestamp": "2026-04-07T15:24:32.858033+00:00", "handler": "handle_signal_amplification", "event_type": "avatar.signal.detected", "action": "auto-brief: BRIEF-791a461671", "success": true}
+{"timestamp": "2026-04-07T15:24:32.859572+00:00", "handler": "handle_paid_amplification", "event_type": "marketing.amplify.triggered", "action": "campaign staged: CAMP-AGENCY_BUILDER-20260407152432 budget=994", "success": true}
+{"timestamp": "2026-04-07T15:24:32.859572+00:00", "handler": "handle_paid_amplification", "event_type": "marketing.amplify.triggered", "action": "score=60.0 below paid threshold 75.0 \u2014 not staged", "success": true}
+{"timestamp": "2026-04-07T15:24:32.860588+00:00", "handler": "handle_resonance_amplification", "event_type": "content.echo.scored", "action": "expansion fired: content=ECHO-001 formats=4", "success": true}
+{"timestamp": "2026-04-07T15:24:32.861584+00:00", "handler": "handle_communication_expansion", "event_type": "crs.threshold.crossed", "action": "avatar solo_strategic_consultant advanced to next nurture step (score=88.0)", "success": true}

@@ -1,0 +1,24 @@
+# ============================================================
+# FOTW (Fly on the Wall) — Environment Configuration
+# Phase: Step 1 — Blue Ocean Validation + Scaffold Init
+# Date: March 16, 2026
+# Rule: This file is loaded ONCE by settings.py. Nowhere else.
+# ============================================================
+
+# === PROJECT ROOT (single source of truth for all paths) ===
+FOTW_ROOT=C:/Users/Jamie/workspace/fotw
+
+# === EPOS PARENT (shared node access: Governance Gate, Vault) ===
+EPOS_ROOT=C:/Users/Jamie/workspace/epos_mcp
+
+# === LLM — MONO-SOVEREIGN: GEMINI ONLY ===
+GEMINI_API_KEY=AIzaSyD6mnRqg7fkq8xJSDfDlcqD4fDUpfvZmGE
+GEMINI_MODEL=gemini-2.5-flash
+GEMINI_TEMPERATURE=0.7
+
+# === LOGGING (JSONL structured, proof field required) ===
+LOG_LEVEL=INFO
+
+# === PHASE GATE (controls what runs — prevents premature execution) ===
+# Phases: research | matrix | blueprint | scaffold | pilot
+FOTW_PHASE=research

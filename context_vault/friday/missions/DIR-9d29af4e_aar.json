@@ -1,0 +1,15 @@
+{
+  "directive_id": "DIR-9d29af4e",
+  "directive": "Check the health of all EPOS systems",
+  "mission_type": "computeruse",
+  "results": [
+    {
+      "mission_id": "M-29af4e-001",
+      "executor": "agent_zero",
+      "status": "failed",
+      "output": "HTTP 405: <!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n"
+    }
+  ],
+  "completed_at": "2026-04-07T00:50:21.079620+00:00",
+  "success": false
+}

@@ -1,0 +1,45 @@
+{
+  "prescription_id": "RX-3a7410-FU-5bc2",
+  "type": "full_transformation",
+  "gap_addressed": "Doctor reports 2 warnings",
+  "consequence_chain": "Full transformation eliminates Doctor reports 2 warnings and all connected gaps: ~$15000/quarter in recovered value with compound returns from system integration.",
+  "nodes_required": [
+    "dashboard_engine",
+    "event_bus"
+  ],
+  "configuration": {
+    "dashboard_engine": {
+      "capabilities_used": [
+        "ecosystem_aggregation",
+        "health_monitoring",
+        "revenue_tracking"
+      ],
+      "integration": "event_bus"
+    },
+    "event_bus": {
+      "capabilities_used": [
+        "pub_sub",
+        "event_logging",
+        "trace_replay"
+      ],
+      "integration": "event_bus"
+    }
+  },
+  "estimated_hours": 40.0,
+  "monthly_cost": 101.4,
+  "projected_roi_90d": 19723.9,
+  "deployment_sequence": [
+    "1. Configure event bus integration",
+    "2. Deploy Dashboard Engine with vault path initialization",
+    "3. Deploy Event Bus with vault path initialization",
+    "4. Run sovereignty certification",
+    "5. Verify end-to-end pipeline"
+  ],
+  "success_criteria": [
+    "All deployed nodes pass sovereignty certification at 85+",
+    "Event bus shows events from all new nodes",
+    "Doctor reports zero new FAILs",
+    "90-day revenue recovery exceeds monthly cost by 3x"
+  ],
+  "value_at_risk": 15000.0
+}

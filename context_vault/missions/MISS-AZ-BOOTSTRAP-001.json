@@ -1,0 +1,26 @@
+{
+  "mission_id": "MISS-AZ-BOOTSTRAP-001",
+  "intent": "Wire Agent Zero as the EPOS execution arm. Scaffold all missing directories, validate the environment, and confirm the AZ bridge is operational.",
+  "execution_arm": "terminal",
+  "how": [
+    "cd C:/Users/Jamie/workspace/epos_mcp && python epos_doctor.py",
+    "mkdir C:/Users/Jamie/workspace/epos_mcp/engine/missions",
+    "mkdir C:/Users/Jamie/workspace/epos_mcp/queue/email",
+    "mkdir C:/Users/Jamie/workspace/epos_mcp/context_vault/receipts",
+    "mkdir C:/Users/Jamie/workspace/epos_mcp/ops",
+    "cd C:/Users/Jamie/workspace/epos_mcp && python -c \"from config import EPOS_ROOT; print('CONFIG OK:', EPOS_ROOT)\"",
+    "cd C:/Users/Jamie/workspace/epos_mcp && uvicorn eposrunner:app --host 127.0.0.1 --port 8001 --workers 1"
+  ],
+  "constraints": [
+    "All paths Windows-absolute",
+    "Idempotent — mkdir safe on re-run",
+    "No destructive commands",
+    "Log every step to ops/logs/"
+  ],
+  "success_criteria": "epos_doctor.py exits 0 AND /health returns {status: ok} on port 8001",
+  "failure_modes": [
+    "Port 8001 in use — kill occupant with: netstat -ano | findstr :8001",
+    "Python not 3.11 — run: .venvepos/Scripts/activate",
+    "config.py not found — write File 1 above first"
+  ]
+}

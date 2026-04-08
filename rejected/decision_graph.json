@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "default_archetype": "SOVEREIGN",
+  "routing": {
+    "strategy": "deterministic_first",
+    "fallback": "llm_classify"
+  },
+  "routes": [
+    {
+      "id": "personal_identity",
+      "label": "Personal OS / Identity",
+      "match_any": ["intent:personal", "intent:identity", "intent:family"],
+      "pipeline": "personal.identity_routine",
+      "priority": 90
+    },
+    {
+      "id": "business_ops",
+      "label": "Business Operations",
+      "match_any": ["intent:business", "intent:ops", "intent:client"],
+      "pipeline": "business.operations",
+      "priority": 80
+    },
+    {
+      "id": "product_dev",
+      "label": "EPOS Product Development",
+      "match_any": ["intent:code", "intent:feature", "intent:module"],
+      "pipeline": "product.development",
+      "priority": 100
+    },
+    {
+      "id": "content_marketing",
+      "label": "Content / Marketing",
+      "match_any": ["intent:content", "intent:marketing", "intent:storybrand"],
+      "pipeline": "content.research_and_creation",
+      "priority": 70
+    },
+    {
+      "id": "automation_integrations",
+      "label": "Automation / Integrations",
+      "match_any": ["intent:automate", "intent:integrate", "intent:n8n", "intent:airtable"],
+      "pipeline": "automation.workflow_design",
+      "priority": 85
+    }
+  ]
+}

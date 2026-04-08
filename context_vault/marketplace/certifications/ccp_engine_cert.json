@@ -1,0 +1,45 @@
+{
+  "node_id": "ccp_engine",
+  "name": "CCP — Concentric Context Protocol Engine",
+  "module": "ccp.ccp_engine",
+  "total_score": 105,
+  "max_score": 105,
+  "pct": 100.0,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 15,
+      "detail": "Imports cleanly with 0 EPOS deps — pure stdlib only"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "python ccp_engine.py <any_file> produces valid analysis output with report, questions, flags, and hub-spoke notebooks"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "1 class (CCPEngine), 7 public methods (analyze, save_results, generate_research_questions, parse_ring1_document, parse_ring2_sections, parse_ring3_statements, compute_statistics), documented"
+    },
+    "event_bus": {
+      "score": 15,
+      "detail": "Publishes 3 event types (ccp.analysis.started, ccp.analysis.complete, ccp.vector.routed) to both CCP vault and EPOS system bus"
+    },
+    "data_sovereignty": {
+      "score": 15,
+      "detail": "Owns vault path ccp/context_vault/ with analyses/, research_questions/, events/ subdirectories + JSONL event journal"
+    },
+    "configuration": {
+      "score": 15,
+      "detail": "Constructor accepts output_root (Path) and project_name (str) — fully configurable output location with sensible defaults"
+    },
+    "value_proposition": {
+      "score": 15,
+      "detail": "Clear, actionable VP: 'Parses raw research through concentric context rings, routes to 7 vectors, flags depth items, and auto-generates targeted research questions. Pre-patent innovation.'"
+    }
+  },
+  "hardening_needed": [],
+  "value_prop": "Parses raw research through concentric context rings, routes to 7 research vectors, flags depth items, and auto-generates targeted research questions.",
+  "pricing_tier": "department",
+  "suggested_price": "$99/mo",
+  "market_category": "Research & Intelligence",
+  "certified_at": "2026-04-02T10:12:00.000000+00:00"
+}

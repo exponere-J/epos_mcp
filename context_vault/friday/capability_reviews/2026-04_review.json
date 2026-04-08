@@ -1,0 +1,11 @@
+{
+  "month": "2026-04",
+  "total_missions_30d": 3,
+  "total_failures_30d": 1,
+  "failure_rate": 0.333,
+  "failure_by_executor": {
+    "agent_zero": 1
+  },
+  "worst_executor": "agent_zero",
+  "recommendation": "Improve agent_zero executor reliability"
+}

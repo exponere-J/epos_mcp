@@ -1,0 +1,9 @@
+{
+  "id": "moviepy",
+  "name": "MoviePy + FFmpeg",
+  "category": "video",
+  "use_case": "Local video assembly and compositing \u2014 free",
+  "tier": "L1+",
+  "url": "https://zulko.github.io/moviepy/",
+  "added_at": "2026-03-29T12:48:15.812144+00:00"
+}

@@ -1,0 +1,90 @@
+{
+  "avatar_id": "agency_builder",
+  "display_name": "The Agency Builder",
+  "tier": 1,
+  "tier_rationale": "Growth-stage agencies at the scaling inflection point. Highest ACV tier. Multi-seat expansion potential. Will build case studies Echoes can amplify.",
+  "tagline": "An agency owner scaling past 5 clients whose team can't keep up with demand.",
+  "demographics": {
+    "role_titles": ["Agency Owner", "Managing Partner", "Founder/CEO", "Head of Agency"],
+    "company_size": "5-25 employees",
+    "annual_revenue_range": "$500K - $5M",
+    "team_size": "5-25",
+    "decision_authority": "sole or with operations co-founder"
+  },
+  "psychographics": {
+    "self_identity": "I'm building something that outgrows me.",
+    "core_belief": "Systems and playbooks are what separate a firm from a founder hustling.",
+    "fear": "Hitting the ceiling where every new client makes margin worse.",
+    "ambition": "$5M run rate, 40%+ margin, without the founder being the bottleneck.",
+    "status_anxiety": "Being dismissed as 'just another agency' by bigger players."
+  },
+  "pain_points": [
+    {"pain": "Team can't keep up with client demand", "severity": 10, "frequency": "weekly"},
+    {"pain": "Quality drops when scaling fast", "severity": 9, "frequency": "monthly"},
+    {"pain": "Hiring lags behind the pipeline", "severity": 9, "frequency": "monthly"},
+    {"pain": "Margin compression as team grows", "severity": 10, "frequency": "quarterly"},
+    {"pain": "Delivery playbooks don't exist or aren't enforced", "severity": 8, "frequency": "weekly"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "Team produces 2x the output with the same headcount", "priority": 1},
+    {"outcome": "Standardized delivery playbooks every PM uses", "priority": 2},
+    {"outcome": "Margin expansion from 25% to 40%", "priority": 3},
+    {"outcome": "Founder out of day-to-day delivery", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Just lost a key account due to delivery slip", "urgency_score": 10},
+    {"trigger": "Margin dropped below 25% last quarter", "urgency_score": 10},
+    {"trigger": "Senior team member burning out or threatening to leave", "urgency_score": 10},
+    {"trigger": "Considering raising prices but scared of churn", "urgency_score": 9},
+    {"trigger": "About to take on a big client and nervous about capacity", "urgency_score": 9}
+  ],
+  "objections": [
+    {"objection": "We already have HubSpot/Asana/Monday", "counter_angle": "EPOS is the connective tissue — it doesn't replace, it conducts."},
+    {"objection": "Our delivery is too bespoke to systemize", "counter_angle": "Start with one service line; prove margin lift; expand."},
+    {"objection": "Cost per seat adds up fast", "counter_angle": "One rescued client account pays for the year."},
+    {"objection": "Change management with the team will be painful", "counter_angle": "Rollout playbook + founder champion model."}
+  ],
+  "channels": {
+    "primary": ["LinkedIn", "Industry conferences", "Mastermind groups", "Agency Slack communities"],
+    "secondary": ["Podcasts", "Trade publications", "Peer referrals"],
+    "avoided": ["Cold display ads", "TikTok", "Generic SaaS marketing"]
+  },
+  "communication_preferences": {
+    "tone": "Professional, efficiency-focused, margin-conscious, operator-to-operator",
+    "length": "Medium-long — case studies, frameworks, ROI calculators",
+    "format": ["LinkedIn posts", "case studies", "ROI calculators", "operator frameworks"],
+    "vocabulary": "Margin, utilization, throughput, delivery, retention, LTV:CAC, playbook",
+    "proof_type": "Named agency case studies with margin and revenue numbers"
+  },
+  "crs_weights": {
+    "engagement": 0.15,
+    "intent_keywords": 0.30,
+    "channel_match": 0.15,
+    "timing": 0.20,
+    "social_proof_response": 0.20
+  },
+  "niche_tags": ["agency", "growth-stage", "scaling", "delivery", "operations", "margin"],
+  "price_tolerance": {
+    "monthly_floor": 497,
+    "monthly_ceiling": 2497,
+    "one_time_floor": 5000,
+    "one_time_ceiling": 50000,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "LinkedIn case study — named agency, margin delta numbers",
+    "interest": "Free 'Agency Margin Diagnostic' TTLG scan",
+    "consideration": "Mirror Report with quantified recoverable margin",
+    "decision": "4-8 week installation engagement with margin guarantee",
+    "retention": "Quarterly margin reviews + new playbook rollouts"
+  },
+  "signal_keywords": [
+    "agency scaling", "agency margin", "agency operations", "delivery playbook",
+    "team capacity", "PM burnout", "agency churn", "utilization rate", "raise prices",
+    "agency hiring", "agency systemization", "agency playbook", "ltv cac"
+  ],
+  "exclusion_keywords": [
+    "side hustle", "first client", "freelance", "solo founder", "indie hacker",
+    "bootstrapped solo", "how to start an agency"
+  ]
+}

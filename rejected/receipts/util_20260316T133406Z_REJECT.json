@@ -1,0 +1,38 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:34:06.765353+00:00",
+  "file": "venv_epos_311/lib/python3.11/site-packages/pip/_vendor/distlib/util.py",
+  "verdict": "REJECT",
+  "violations": [
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 432,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    },
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 634,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    },
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 1023,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

@@ -1,0 +1,15 @@
+{
+  "role": "fotw_listener",
+  "name": "FOTW \u2014 Expression Capture",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "Engagement intelligence + conversation mining research 2026",
+  "methodology": "Multi-source expression capture with intent/emotion classification and interest clustering",
+  "key_metrics": {
+    "expression_capture_rate": "95%+ from monitored sources",
+    "classification_accuracy": "70%+ confidence gate",
+    "cluster_update_cadence": "weekly"
+  },
+  "epos_implementation": "FOTW captures from comments, calls, observations, forms. CCP parses locally.",
+  "operational_validation": "pending_cycle_1"
+}

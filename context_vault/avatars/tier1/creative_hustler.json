@@ -1,0 +1,90 @@
+{
+  "avatar_id": "creative_hustler",
+  "display_name": "The Creative Hustler",
+  "tier": 1,
+  "tier_rationale": "Creator economy tier. Signal amplification via audience reach — every creator-operator becomes a distribution node. High network effect. Feeds awareness funnel for other tiers.",
+  "tagline": "A content creator monetizing an audience who has no idea what's actually working.",
+  "demographics": {
+    "role_titles": ["Content Creator", "Influencer", "YouTuber", "Podcaster", "Newsletter Operator", "Course Creator"],
+    "company_size": "1-3",
+    "annual_revenue_range": "$50K - $600K",
+    "team_size": "0-2 (editor + VA maybe)",
+    "decision_authority": "sole"
+  },
+  "psychographics": {
+    "self_identity": "I'm building an audience-first brand.",
+    "core_belief": "Attention is the asset — monetization follows resonance.",
+    "fear": "Algorithm change wiping out the audience.",
+    "ambition": "Productize the audience into recurring revenue that doesn't depend on the next post.",
+    "status_anxiety": "Still being seen as an influencer, not a real business."
+  },
+  "pain_points": [
+    {"pain": "No idea which content is actually driving revenue", "severity": 10, "frequency": "daily"},
+    {"pain": "Platform dependency — one algorithm change could kill it", "severity": 10, "frequency": "weekly"},
+    {"pain": "Revenue is unpredictable — sponsorship cycles, launch cycles", "severity": 9, "frequency": "monthly"},
+    {"pain": "Content treadmill never stops", "severity": 9, "frequency": "daily"},
+    {"pain": "Hard to repurpose across platforms without losing signal", "severity": 8, "frequency": "weekly"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "Know which content actually converts", "priority": 1},
+    {"outcome": "Diversify off a single platform", "priority": 2},
+    {"outcome": "Owned audience (email/SMS) that algorithm can't touch", "priority": 3},
+    {"outcome": "Productize knowledge into a recurring revenue engine", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Algorithm change dropped reach 50%+", "urgency_score": 10},
+    {"trigger": "Sponsorship revenue dipped unexpectedly", "urgency_score": 9},
+    {"trigger": "Hit a follower milestone but revenue didn't move", "urgency_score": 9},
+    {"trigger": "Competitor creator launched a product and it sold out", "urgency_score": 8},
+    {"trigger": "Posted something that flopped despite high effort", "urgency_score": 8}
+  ],
+  "objections": [
+    {"objection": "I'm a creator, not a business operator", "counter_angle": "Show creator-native UX; no spreadsheets, no dashboards — just 'what's working right now'."},
+    {"objection": "I already use creator analytics tools", "counter_angle": "Position as 'one layer above the per-platform metrics' — cross-platform resonance."},
+    {"objection": "I don't want my process to feel corporate", "counter_angle": "The system is invisible — it feeds recommendations, not reports."},
+    {"objection": "My niche is too specific for templates", "counter_angle": "Templates are starting points; the system learns your voice."}
+  ],
+  "channels": {
+    "primary": ["TikTok", "Instagram Reels", "YouTube Shorts", "X/Twitter", "Newsletter"],
+    "secondary": ["Podcasts", "Discord communities", "Patreon-style platforms"],
+    "avoided": ["LinkedIn corporate", "Trade publications", "Traditional PR"]
+  },
+  "communication_preferences": {
+    "tone": "Energetic, trend-aware, platform-native, emoji-fluent",
+    "length": "Short, high-density — 60-second videos, punchy captions",
+    "format": ["short-form video", "behind-the-scenes", "tools lists", "screenshots", "meta commentary"],
+    "vocabulary": "Audience, drop, launch, engagement, reach, cohort, algo, banger, stack",
+    "proof_type": "Screenshots, follower counts, revenue screenshots"
+  },
+  "crs_weights": {
+    "engagement": 0.40,
+    "intent_keywords": 0.15,
+    "channel_match": 0.25,
+    "timing": 0.10,
+    "social_proof_response": 0.10
+  },
+  "niche_tags": ["creator", "influencer", "content", "audience", "monetization", "algo"],
+  "price_tolerance": {
+    "monthly_floor": 29,
+    "monthly_ceiling": 149,
+    "one_time_floor": 99,
+    "one_time_ceiling": 997,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "Short-form video from a creator using the system to identify their banger",
+    "interest": "Free cross-platform resonance report",
+    "consideration": "Self-serve trial with template pack",
+    "decision": "Creator-tier subscription ($29-99/month)",
+    "retention": "Weekly 'what's working' report + peer creator community"
+  },
+  "signal_keywords": [
+    "creator economy", "influencer", "content creator", "algorithm change", "reach drop",
+    "monetize audience", "newsletter launch", "course launch", "sponsorship cycle",
+    "content treadmill", "banger", "viral", "audience first", "email list", "cohort launch"
+  ],
+  "exclusion_keywords": [
+    "enterprise b2b", "fortune 500", "cold outreach", "sdr", "account executive",
+    "kpi dashboard", "compliance", "procurement"
+  ]
+}

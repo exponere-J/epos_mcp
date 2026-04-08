@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-008",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "architect",
+  "hook_type": "list",
+  "visual_mask": "schematic",
+  "target_platform": "youtube_shorts",
+  "script_premise": "The definitive ranking of LEGO sets designed specifically for adult builders.",
+  "hook_line": "Top 5 LEGO sets every adult needs on their shelf.",
+  "cta": "Full list with prices in description.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Icons Flower Bouquet",
+    "LEGO Ideas Globe"
+  ],
+  "status": "draft"
+}

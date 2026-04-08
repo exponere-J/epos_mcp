@@ -1,0 +1,45 @@
+{
+  "node_id": "event_bus",
+  "name": "EPOS Event Bus",
+  "module": "epos_event_bus",
+  "total_score": 105,
+  "max_score": 105,
+  "pct": 100.0,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 15,
+      "detail": "Imports cleanly with 1 EPOS deps"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "Has self-test with assertions and PASS output"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "2 classes, 7 public methods, documented"
+    },
+    "event_bus": {
+      "score": 15,
+      "detail": "Publishes (3 calls) and subscribes to events"
+    },
+    "data_sovereignty": {
+      "score": 15,
+      "detail": "Owns vault path + JSONL journal"
+    },
+    "configuration": {
+      "score": 15,
+      "detail": "Env-configurable with defaults and init params"
+    },
+    "value_proposition": {
+      "score": 15,
+      "detail": "Clear, actionable VP: 'Lightweight event bus that connects all your tools without i...'"
+    }
+  },
+  "hardening_needed": [],
+  "value_prop": "Lightweight event bus that connects all your tools without infrastructure overhead.",
+  "pricing_tier": "solo",
+  "suggested_price": "$29/mo",
+  "market_category": "Infrastructure",
+  "certified_at": "2026-04-06T20:06:27.603147+00:00"
+}

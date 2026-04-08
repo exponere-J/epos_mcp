@@ -1,0 +1,76 @@
+{
+  "template_id": "cold_outreach",
+  "category": "sales",
+  "version": "1.0",
+  "description": "First-touch cold outreach calibrated per avatar.",
+  "subject": "{{avatar_hook_subject}}",
+  "body_sections": [
+    {"type": "opening", "content": "{{greeting}} {{client_name}},"},
+    {"type": "pain_acknowledgment", "content": "{{avatar_pain_reframe}}"},
+    {"type": "value_proposition", "content": "{{service_value_prop}}"},
+    {"type": "evidence", "content": "{{avatar_proof}}"},
+    {"type": "cta", "content": "{{avatar_cta}}"},
+    {"type": "signature", "content": "{{sender_name}}\n{{sender_title}}\n\n1% daily. 37x annually."}
+  ],
+  "cta_token_pattern": "CTA-COLD-{{avatar_id}}-{{date}}",
+  "follow_up_trigger": {"days": 7, "template": "cold_followup"},
+  "escalation": {"condition": "no_response_14_days", "action": "archive_lead"},
+  "avatar_overrides": {
+    "local_champion": {
+      "greeting": "Hey",
+      "avatar_hook_subject": "A faster way to handle your {{niche}} leads",
+      "avatar_pain_reframe": "You're great at the work. Following up on every lead in under 5 minutes is a whole other job — one that's costing you booked jobs every week.",
+      "avatar_cta": "Reply with your phone number and I'll send you a 2-minute loom showing how it works for a {{niche}} business your size.",
+      "avatar_proof": "One pressure washing operator in Orlando went from 18 booked jobs/month to 34 in 60 days just by responding to leads in under 5 minutes."
+    },
+    "solo_strategic_consultant": {
+      "greeting": "Hi",
+      "avatar_hook_subject": "The consultant leverage gap",
+      "avatar_pain_reframe": "Every new client doubles your operational load. You sell judgment, but you're spending 40% of your week on delivery admin.",
+      "avatar_cta": "If this is a fair read, I'd share a 15-minute leverage diagnostic — no pitch, just a map of where the 10 hours are hiding.",
+      "avatar_proof": "Most solo consultants I work with reclaim 8-12 hours/week by installing a system around the parts that aren't the judgment."
+    },
+    "boutique_agency_founder": {
+      "greeting": "Hi",
+      "avatar_hook_subject": "Agency margin recovery — a diagnostic read",
+      "avatar_pain_reframe": "Project profitability that's invisible until invoices land. A senior leaving with 30% of delivery capacity. PMs reinventing the wheel on every engagement. You already know the symptoms.",
+      "avatar_cta": "I'd walk you through the Margin Diagnostic on a 25-min call. No pitch deck — the output is yours to keep.",
+      "avatar_proof": "A 12-person agency in Austin recovered 8 margin points in one quarter after installing the delivery playbook system. Named case study on request."
+    },
+    "fractional_executive": {
+      "greeting": "Hi",
+      "avatar_hook_subject": "Running 5+ clients without the context-switching tax",
+      "avatar_pain_reframe": "Context-switching between 5 clients destroys depth. You need a system that loads the right context before every meeting — without you rebuilding it each time.",
+      "avatar_cta": "Worth a 20-minute operator conversation? I'll show you the per-client context vault pattern.",
+      "avatar_proof": "Fractional CMOs using the pattern report 4-6 hours/week reclaimed across their portfolio."
+    },
+    "technical_founder_operator": {
+      "greeting": "Hey",
+      "avatar_hook_subject": "Self-hosted business OS — reference architecture",
+      "avatar_pain_reframe": "You're tired of the SaaS tax and vendor lock-in. The business ops layer should be sovereign, self-hosted, and composable — but it never is.",
+      "avatar_cta": "Open source repo + architecture doc in reply if you want to see the reference deployment.",
+      "avatar_proof": "Runs on a single box, no cloud dependencies, bring your own Postgres and Ollama."
+    },
+    "solo_operator": {
+      "greeting": "Hey",
+      "avatar_hook_subject": "The solo operator stack",
+      "avatar_pain_reframe": "You're wearing every hat. The hat that's slipping is marketing — because delivery always wins the day.",
+      "avatar_cta": "Reply 'solo' and I'll send the 5-tool template pack that runs while you work.",
+      "avatar_proof": "Solo operators using this pack hit their first $10K month without hiring."
+    },
+    "agency_builder": {
+      "greeting": "Hi",
+      "avatar_hook_subject": "The scaling inflection — past 5 clients",
+      "avatar_pain_reframe": "You're at the inflection where every new client makes margin worse. The fix isn't more headcount — it's systemized delivery.",
+      "avatar_cta": "25-minute call to walk through the Agency Margin Diagnostic?",
+      "avatar_proof": "Agencies scaling from $1M to $3M using this playbook hold 35%+ margin through the growth."
+    },
+    "creative_hustler": {
+      "greeting": "Hey",
+      "avatar_hook_subject": "What's actually converting on your content",
+      "avatar_pain_reframe": "You produce content constantly. You have no idea which pieces are actually driving the revenue. The algorithm could change tomorrow and wipe it out.",
+      "avatar_cta": "Drop your handle — I'll run a free cross-platform resonance report in 24 hours.",
+      "avatar_proof": "Creators using the resonance report 2x'd their conversion from the same output volume."
+    }
+  }
+}

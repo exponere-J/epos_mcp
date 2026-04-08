@@ -1,0 +1,197 @@
+{
+  "mission_id": "UNIFIED-INGESTION-001",
+  "version": "1.0.0",
+  "constitutional_authority": "EPOS_UNIFIED_NERVOUS_SYSTEM.md",
+  "created_at": "2026-02-05T03:00:00Z",
+  "agent_id": "agent_zero",
+  "trace_id": "TRACE_UNIFICATION_2026_02_05",
+  
+  "mission_overview": {
+    "title": "Unified Nervous System Deployment",
+    "description": "Deploy the EPOS Unified Nervous System - the event-driven integration layer that connects all components without tight coupling.",
+    "priority": "architectural_integrity",
+    "estimated_hours": 12
+  },
+  
+  "pre_mortem_analysis": {
+    "FM-NS-001": {
+      "risk": "Event bus file lock contention",
+      "mitigation": "Use atomic append with threading locks",
+      "test": "Concurrent write test with 3 publishers"
+    },
+    "FM-NS-002": {
+      "risk": "Subscriber backlog causing memory pressure",
+      "mitigation": "Implement watermarks and old event dropping",
+      "test": "High-volume publish test (1000 events/second)"
+    },
+    "FM-NS-003": {
+      "risk": "Circular event loops",
+      "mitigation": "Event deduplication via event_id",
+      "test": "Circular subscription test"
+    },
+    "FM-NS-004": {
+      "risk": "Cold start race condition",
+      "mitigation": "Persist last_position, replay on startup",
+      "test": "Late subscriber test"
+    }
+  },
+  
+  "tasks": [
+    {
+      "task_id": "INGEST-001",
+      "title": "Event Bus Foundation",
+      "description": "Initialize engine/event_bus.py to manage the JSONL shared event log.",
+      "constitutional_authority": "Article VII (Context Governance)",
+      "dependencies": [],
+      "requirements": [
+        "Implement publish/subscribe pattern",
+        "Use Windows Absolute Paths per PATH_CLARITY_RULES.md",
+        "Support wildcard pattern matching (governance.*, *)",
+        "Atomic append operations to prevent FM-NS-001",
+        "Background polling with configurable interval",
+        "Trace ID support for event correlation"
+      ],
+      "success_criteria": [
+        "Publishes 100 events/minute without errors",
+        "Subscribers receive events within 2 seconds",
+        "Pattern matching works correctly",
+        "File lock contention prevented"
+      ],
+      "output_files": [
+        "engine/event_bus.py"
+      ]
+    },
+    {
+      "task_id": "INGEST-002",
+      "title": "Governance Server (Event-Driven)",
+      "description": "Deploy the governance_gate that publishes 'governance.violation_detected' events instead of direct function calls.",
+      "constitutional_authority": "Article IX (Enforcement)",
+      "dependencies": ["INGEST-001"],
+      "requirements": [
+        "No direct imports of RewardBus or RemediationGenerator",
+        "Publish events to event bus for all validations",
+        "Include trace_id in all published events",
+        "Generate educational rejection receipts",
+        "Support dry-run and verbose modes"
+      ],
+      "success_criteria": [
+        "Violation triggers event publication (not function call)",
+        "Event log contains trace_id",
+        "Node Sovereignty TEST-IND-001 passes",
+        "ERR-IMPORT-001 detection working"
+      ],
+      "output_files": [
+        "engine/enforcement/governance_gate.py"
+      ]
+    },
+    {
+      "task_id": "INGEST-003",
+      "title": "Learning Server (Event-Driven)",
+      "description": "Deploy the learning server that subscribes to governance events and generates remediation lessons.",
+      "constitutional_authority": "Article VI (Autonomous Evolution)",
+      "dependencies": ["INGEST-001", "INGEST-002"],
+      "requirements": [
+        "Subscribe to governance.violation_detected events",
+        "Generate educational lessons in context_vault/learning/",
+        "Track agent performance in compliance ledger",
+        "Publish learning.remediation_generated events"
+      ],
+      "success_criteria": [
+        "Lessons generated for all violation types",
+        "Performance tracking working",
+        "Event chain continues to context server"
+      ],
+      "output_files": [
+        "engine/enforcement/learning_server.py"
+      ]
+    },
+    {
+      "task_id": "INGEST-004",
+      "title": "Context Server (Event-Driven)",
+      "description": "Deploy the context server that manages context injection and vault operations.",
+      "constitutional_authority": "Article VII (Context Governance)",
+      "dependencies": ["INGEST-001", "INGEST-003"],
+      "requirements": [
+        "Subscribe to learning.remediation_generated events",
+        "Manage context vault domains",
+        "Support symbolic search across vault",
+        "Publish context.injected events"
+      ],
+      "success_criteria": [
+        "Context injection working",
+        "Vault search functional",
+        "Full event chain completes"
+      ],
+      "output_files": [
+        "engine/enforcement/context_server.py"
+      ]
+    },
+    {
+      "task_id": "INGEST-005",
+      "title": "Diagnostic Server (Revenue)",
+      "description": "Deploy the diagnostic server that powers Through the Looking Glass.",
+      "constitutional_authority": "NODE_SOVEREIGNTY_CONSTITUTION Article III",
+      "dependencies": ["INGEST-001"],
+      "requirements": [
+        "Run Through the Looking Glass diagnostic",
+        "Calculate constitutional pricing (Article IV)",
+        "Generate engagement manifests",
+        "Support 3 option tiers (minimum, recommended, complete)"
+      ],
+      "success_criteria": [
+        "Diagnostic returns valid recommendations",
+        "Pricing complies with discount rules",
+        "Engagement manifests generated correctly"
+      ],
+      "output_files": [
+        "engine/enforcement/diagnostic_server.py"
+      ]
+    },
+    {
+      "task_id": "STRESS-TEST-001",
+      "title": "End-to-End Trace Validation",
+      "description": "Trigger a deliberate PATH-CLARITY violation and trace the event through the system.",
+      "constitutional_authority": "EPOS_UNIFIED_NERVOUS_SYSTEM.md",
+      "dependencies": ["INGEST-001", "INGEST-002", "INGEST-003", "INGEST-004"],
+      "requirements": [
+        "Create test file with deliberate violations",
+        "Submit to governance gate",
+        "Verify trace_id correlation across all events",
+        "Confirm lesson generation in context_vault",
+        "Validate compliance ledger update"
+      ],
+      "success_criteria": [
+        "All events share same trace_id",
+        "Event sequence: violation → remediation → injection",
+        "Lesson file exists in context_vault/learning/remediation_library/",
+        "Agent performance ledger updated"
+      ],
+      "output_files": [
+        "tests/test_unified_nervous_system.py"
+      ]
+    }
+  ],
+  
+  "validation_gates": {
+    "pre_execution": [
+      "python epos_doctor.py --verbose",
+      "Verify EPOS_ROOT environment variable set",
+      "Verify context_vault directory structure exists"
+    ],
+    "post_execution": [
+      "python tests/test_unified_nervous_system.py",
+      "Verify all 6 tests pass",
+      "Verify event log contains trace-correlated events"
+    ]
+  },
+  
+  "rollback_procedure": {
+    "trigger": "Any critical test failure",
+    "steps": [
+      "Stop all running servers",
+      "Archive context_vault/events/system_events.jsonl",
+      "Clear inbox/ and rejected/ directories",
+      "Restore from backup if available"
+    ]
+  }
+}

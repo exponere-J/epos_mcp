@@ -1,0 +1,11 @@
+{
+  "spark_id": "SPARK-099677ae",
+  "source": "desire_vocab:lego_affiliate",
+  "signal_type": "vault_riff",
+  "raw_content": "which LEGO set is worth it",
+  "engagement_score": 0,
+  "captured_at": "2026-03-29T12:43:29.655242+00:00",
+  "tags": [],
+  "status": "converted",
+  "converted_to": "CB-LEGOAF-D22F"
+}

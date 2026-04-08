@@ -1,0 +1,18 @@
+{
+  "directive_id": "DIR-205e9fd7",
+  "directive": "Run a self-healing cycle on EPOS",
+  "mission_type": "healing",
+  "results": [
+    {
+      "mission_id": "M-5e9fd7-001",
+      "executor": "self_healing",
+      "status": "complete",
+      "output": "Healing cycle: 1 actions taken",
+      "details": [
+        "healed"
+      ]
+    }
+  ],
+  "completed_at": "2026-04-07T00:52:07.921892+00:00",
+  "success": true
+}

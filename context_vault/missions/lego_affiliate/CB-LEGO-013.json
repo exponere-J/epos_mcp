@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-013",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "controversy",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Technic fans and Creator Expert fans are both wrong about the other theme.",
+  "hook_line": "Technic fans will hate this video. But they need to hear it.",
+  "cta": "Which side are you on? Drop a comment. Links for both below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Technic Lamborghini",
+    "LEGO Creator Expert Mustang"
+  ],
+  "status": "draft"
+}

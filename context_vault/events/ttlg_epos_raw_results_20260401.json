@@ -1,0 +1,448 @@
+{
+  "marketing": {
+    "gate_verdict": "GO",
+    "gate_rationale": "5 bottlenecks confirmed. Highest leverage: {'dimension': 'Content Output', 'severity': 'medium', 'state': 'The small business has a limited content output, with occasional posts on social media and a rarely updated blog. This results in a lack of consistent engagement with the target audience.'}",
+    "sovereign_alignment_score": 10,
+    "bottleneck_indicators": [
+      {
+        "dimension": "Content Output",
+        "severity": "medium",
+        "state": "The small business has a limited content output, with occasional posts on social media and a rarely updated blog. This results in a lack of consistent engagement with the target audience."
+      },
+      {
+        "dimension": "Platform Presence",
+        "severity": "medium",
+        "state": "The small business has a basic presence on major social media platforms, but the profiles are not fully optimized and lack consistency in branding and design. This limits the business's ability to reach and engage with its target audience."
+      },
+      {
+        "dimension": "Content Quality",
+        "severity": "high",
+        "state": "The content created by the small business is often generic and lacks a clear unique value proposition, failing to differentiate the business from its competitors. The quality is also inconsistent, with some posts being more engaging than others."
+      },
+      {
+        "dimension": "Lead Generation",
+        "severity": "high",
+        "state": "The small business lacks a clear lead generation strategy, relying on passive methods such as website traffic and social media engagement. This results in a limited number of leads and a lack of conversion opportunities."
+      },
+      {
+        "dimension": "Brand Consistency",
+        "severity": "medium",
+        "state": "The small business's brand identity is not consistently applied across all platforms and marketing materials, resulting in a disjointed and unprofessional image. This inconsistency can confuse the target audience and undermine the business's credibility."
+      }
+    ],
+    "gap_analysis": {
+      "gaps": [
+        {
+          "indicator": {
+            "dimension": "Content Output",
+            "severity": "medium",
+            "state": "The small business has a limited content output, with occasional posts on social media and a rarely updated blog. This results in a lack of consistent engagement with the target audience."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Platform Presence",
+            "severity": "medium",
+            "state": "The small business has a basic presence on major social media platforms, but the profiles are not fully optimized and lack consistency in branding and design. This limits the business's ability to reach and engage with its target audience."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Content Quality",
+            "severity": "high",
+            "state": "The content created by the small business is often generic and lacks a clear unique value proposition, failing to differentiate the business from its competitors. The quality is also inconsistent, with some posts being more engaging than others."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Lead Generation",
+            "severity": "high",
+            "state": "The small business lacks a clear lead generation strategy, relying on passive methods such as website traffic and social media engagement. This results in a limited number of leads and a lack of conversion opportunities."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Brand Consistency",
+            "severity": "medium",
+            "state": "The small business's brand identity is not consistently applied across all platforms and marketing materials, resulting in a disjointed and unprofessional image. This inconsistency can confuse the target audience and undermine the business's credibility."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        }
+      ],
+      "highest_leverage": {
+        "dimension": "Content Output",
+        "severity": "medium",
+        "state": "The small business has a limited content output, with occasional posts on social media and a rarely updated blog. This results in a lack of consistent engagement with the target audience."
+      },
+      "total_gap_cost": "requires_deeper_analysis",
+      "opportunity_value": "significant"
+    },
+    "prescriptions": [
+      {
+        "prescription_id": "RX-001",
+        "action": "Address highest leverage indicator",
+        "specific_change": {
+          "dimension": "Content Output",
+          "severity": "medium",
+          "state": "The small business has a limited content output, with occasional posts on social media and a rarely updated blog. This results in a lack of consistent engagement with the target audience."
+        },
+        "success_metric": "Indicator resolved",
+        "effort_level": "medium"
+      }
+    ],
+    "priority_order": [
+      "RX-001"
+    ],
+    "thirty_day_projection": {
+      "improvement": "measurable",
+      "confidence": "medium"
+    },
+    "mirror_report": "**Mirror Report: TTLG Marketing Diagnostic**\n\nWHAT WE FOUND: Our analysis reveals that your small business has a limited online presence, with inconsistent content output and a sparse platform presence. Specifically, your social media posts are occasional, and your blog is rarely updated, resulting in a lack of engagement with your target audience. This limited online activity is hindering your ability to connect with potential customers and build a strong brand. Furthermore, your platform presence is also underutilized, leaving opportunities for growth untapped.\n\nTHE REAL COST: This limited online presence is likely costing you potential customers, revenue, and brand awareness. By not consistently engaging with your target audience, you're missing out on opportunities to build trust, establish your authority, and drive sales. This gap in your marketing strategy is not only affecting your short-term goals but also your long-term growth and sustainability.\n\nTHE PATH FORWARD: To address these gaps, we recommend focusing on the highest-leverage indicators. First, prioritize increasing your content output by developing a consistent social media posting schedule and regularly updating your blog with relevant, engaging content. Second, enhance your platform presence by optimizing your online profiles and leveraging relevant platforms to reach your target audience. Third, consider investing in targeted advertising to amplify your reach and drive traffic to your website.\n\nWHAT CHANGES IN 30 DAYS: By implementing these changes, you can expect to see a measurable improvement in your online engagement and platform presence within 30 days. Specifically, you can anticipate an increase in website traffic, social media engagement, and lead generation, setting the foundation for long-term growth and success.\n\nSOVEREIGN ALIGNMENT SCORE: With a current score of 10/25, there is significant room for improvement in your marketing strategy. By addressing the identified gaps and implementing the recommended changes, you can expect to see a notable increase in your Sovereign Alignment Score, indicating a stronger, more effective marketing approach that drives real results for your business.",
+    "action_plan": [
+      {
+        "step": 1,
+        "action": {
+          "dimension": "Content Output",
+          "severity": "medium",
+          "state": "The small business has a limited content output, with occasional posts on social media and a rarely updated blog. This results in a lack of consistent engagement with the target audience."
+        },
+        "metric": "Indicator resolved",
+        "effort": "medium"
+      }
+    ],
+    "next_cycle_date": "2026-05-01T19:27:14.903794+00:00"
+  },
+  "sales": {
+    "gate_verdict": "GO",
+    "gate_rationale": "5 bottlenecks confirmed. Highest leverage: {'dimension': 'Lead Response Time', 'severity': 'medium', 'state': 'The typical small business often lacks a formal lead response process, resulting in delayed or inconsistent responses to new leads. This can lead to missed opportunities and a negative first impression.'}",
+    "sovereign_alignment_score": 10,
+    "bottleneck_indicators": [
+      {
+        "dimension": "Lead Response Time",
+        "severity": "medium",
+        "state": "The typical small business often lacks a formal lead response process, resulting in delayed or inconsistent responses to new leads. This can lead to missed opportunities and a negative first impression."
+      },
+      {
+        "dimension": "Follow Up Consistency",
+        "severity": "high",
+        "state": "Small businesses usually struggle to maintain consistent follow-ups with leads due to limited resources and manual tracking methods, leading to forgotten or neglected leads. This inconsistency can hinder the conversion of leads into customers."
+      },
+      {
+        "dimension": "Proposal Process",
+        "severity": "medium",
+        "state": "The proposal process in small businesses is often informal and time-consuming, involving manual creation and customization of proposals for each potential client. This can be inefficient and may not effectively showcase the value proposition."
+      },
+      {
+        "dimension": "Closing Mechanism",
+        "severity": "high",
+        "state": "Small businesses typically have an informal closing process, which can lead to a lack of standardization and potential revenue loss due to ineffective negotiation and closing techniques. This informality can also make it difficult to scale the sales process."
+      },
+      {
+        "dimension": "Pipeline Visibility",
+        "severity": "high",
+        "state": "Small businesses often lack visibility into their sales pipeline due to the absence of a formal sales tracking system, making it challenging to forecast revenue, identify bottlenecks, and make data-driven decisions. This limited visibility can hinder growth and scalability."
+      }
+    ],
+    "gap_analysis": {
+      "gaps": [
+        {
+          "indicator": {
+            "dimension": "Lead Response Time",
+            "severity": "medium",
+            "state": "The typical small business often lacks a formal lead response process, resulting in delayed or inconsistent responses to new leads. This can lead to missed opportunities and a negative first impression."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Follow Up Consistency",
+            "severity": "high",
+            "state": "Small businesses usually struggle to maintain consistent follow-ups with leads due to limited resources and manual tracking methods, leading to forgotten or neglected leads. This inconsistency can hinder the conversion of leads into customers."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Proposal Process",
+            "severity": "medium",
+            "state": "The proposal process in small businesses is often informal and time-consuming, involving manual creation and customization of proposals for each potential client. This can be inefficient and may not effectively showcase the value proposition."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Closing Mechanism",
+            "severity": "high",
+            "state": "Small businesses typically have an informal closing process, which can lead to a lack of standardization and potential revenue loss due to ineffective negotiation and closing techniques. This informality can also make it difficult to scale the sales process."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Pipeline Visibility",
+            "severity": "high",
+            "state": "Small businesses often lack visibility into their sales pipeline due to the absence of a formal sales tracking system, making it challenging to forecast revenue, identify bottlenecks, and make data-driven decisions. This limited visibility can hinder growth and scalability."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        }
+      ],
+      "highest_leverage": {
+        "dimension": "Lead Response Time",
+        "severity": "medium",
+        "state": "The typical small business often lacks a formal lead response process, resulting in delayed or inconsistent responses to new leads. This can lead to missed opportunities and a negative first impression."
+      },
+      "total_gap_cost": "requires_deeper_analysis",
+      "opportunity_value": "significant"
+    },
+    "prescriptions": [
+      {
+        "prescription_id": "RX-001",
+        "action": "Address highest leverage indicator",
+        "specific_change": {
+          "dimension": "Lead Response Time",
+          "severity": "medium",
+          "state": "The typical small business often lacks a formal lead response process, resulting in delayed or inconsistent responses to new leads. This can lead to missed opportunities and a negative first impression."
+        },
+        "success_metric": "Indicator resolved",
+        "effort_level": "medium"
+      }
+    ],
+    "priority_order": [
+      "RX-001"
+    ],
+    "thirty_day_projection": {
+      "improvement": "measurable",
+      "confidence": "medium"
+    },
+    "mirror_report": "**Mirror Report: Unlocking Sales Potential**\n\nWHAT WE FOUND: Our analysis reveals that your sales process is hindered by a lack of formal lead response and inconsistent follow-up. This can lead to missed opportunities and a negative first impression, ultimately affecting your bottom line. Specifically, we identified gaps in Lead Response Time and Follow Up Consistency, which are crucial for converting leads into customers. By addressing these gaps, you can significantly improve your sales performance.\n\nTHE REAL COST: The absence of a structured lead response process and inconsistent follow-up can result in lost sales and revenue. This not only affects your financial performance but also undermines your reputation and credibility in the market. By not responding promptly to new leads, you may be leaving money on the table and allowing competitors to capitalize on your missed opportunities.\n\nTHE PATH FORWARD: To improve your sales performance, we recommend addressing the highest-leverage indicators. Firstly, establish a formal lead response process to ensure timely and consistent responses to new leads. Secondly, implement a follow-up strategy to nurture leads and build strong relationships with potential customers. By focusing on these key areas, you can enhance your sales process and increase conversions.\n\nWHAT CHANGES IN 30 DAYS: Within the next 30 days, you can expect to see measurable improvements in your sales performance. By implementing a formal lead response process, you can reduce the time it takes to respond to new leads and increase the number of leads converted into customers. This, in turn, will have a positive impact on your revenue and reputation.\n\nSOVEREIGN ALIGNMENT SCORE: With a current score of 10/25, there is significant room for improvement in your sales process. By addressing the identified gaps and implementing the recommended changes, you can increase your score and unlock your full sales potential.",
+    "action_plan": [
+      {
+        "step": 1,
+        "action": {
+          "dimension": "Lead Response Time",
+          "severity": "medium",
+          "state": "The typical small business often lacks a formal lead response process, resulting in delayed or inconsistent responses to new leads. This can lead to missed opportunities and a negative first impression."
+        },
+        "metric": "Indicator resolved",
+        "effort": "medium"
+      }
+    ],
+    "next_cycle_date": "2026-05-01T19:27:25.229344+00:00"
+  },
+  "service": {
+    "gate_verdict": "GO",
+    "gate_rationale": "3 bottlenecks confirmed. Highest leverage: {'dimension': 'Onboarding Process', 'severity': 'medium', 'state': 'The onboarding process for a typical small business using epos_ecosystem is often manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration.'}",
+    "sovereign_alignment_score": 16,
+    "bottleneck_indicators": [
+      {
+        "dimension": "Onboarding Process",
+        "severity": "medium",
+        "state": "The onboarding process for a typical small business using epos_ecosystem is often manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration."
+      },
+      {
+        "dimension": "Communication",
+        "severity": "medium",
+        "state": "Effective communication is crucial for small businesses, but they often struggle with maintaining consistent and clear communication with customers, staff, and suppliers, which can lead to misunderstandings and errors. epos_ecosystem can help streamline communication, but its adoption and utilization may vary."
+      },
+      {
+        "dimension": "Quality Control",
+        "severity": "high",
+        "state": "Small businesses may lack formal quality control processes, relying on individual staff members to ensure quality, which can be inconsistent and prone to errors. Implementing epos_ecosystem can help standardize processes, but it requires careful configuration and monitoring."
+      }
+    ],
+    "gap_analysis": {
+      "gaps": [
+        {
+          "indicator": {
+            "dimension": "Onboarding Process",
+            "severity": "medium",
+            "state": "The onboarding process for a typical small business using epos_ecosystem is often manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Communication",
+            "severity": "medium",
+            "state": "Effective communication is crucial for small businesses, but they often struggle with maintaining consistent and clear communication with customers, staff, and suppliers, which can lead to misunderstandings and errors. epos_ecosystem can help streamline communication, but its adoption and utilization may vary."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Quality Control",
+            "severity": "high",
+            "state": "Small businesses may lack formal quality control processes, relying on individual staff members to ensure quality, which can be inconsistent and prone to errors. Implementing epos_ecosystem can help standardize processes, but it requires careful configuration and monitoring."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        }
+      ],
+      "highest_leverage": {
+        "dimension": "Onboarding Process",
+        "severity": "medium",
+        "state": "The onboarding process for a typical small business using epos_ecosystem is often manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration."
+      },
+      "total_gap_cost": "requires_deeper_analysis",
+      "opportunity_value": "significant"
+    },
+    "prescriptions": [
+      {
+        "prescription_id": "RX-001",
+        "action": "Address highest leverage indicator",
+        "specific_change": {
+          "dimension": "Onboarding Process",
+          "severity": "medium",
+          "state": "The onboarding process for a typical small business using epos_ecosystem is often manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration."
+        },
+        "success_metric": "Indicator resolved",
+        "effort_level": "medium"
+      }
+    ],
+    "priority_order": [
+      "RX-001"
+    ],
+    "thirty_day_projection": {
+      "improvement": "measurable",
+      "confidence": "medium"
+    },
+    "mirror_report": "**Mirror Report: TTLG SERVICE Diagnostic**\n\nWHAT WE FOUND: Our diagnostic analysis reveals that the current onboarding process for small businesses using epos_ecosystem is manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration. Furthermore, communication gaps exist, which may exacerbate these issues. These key gaps hinder the overall efficiency and effectiveness of the service.\n\nTHE REAL COST: The current state of the onboarding process and communication gaps likely result in increased labor costs, potential revenue losses due to delays, and a higher risk of customer dissatisfaction. These costs can be substantial, and addressing these gaps is essential to optimizing the service and improving the overall customer experience.\n\nTHE PATH FORWARD: To address these gaps, we recommend the following high-leverage changes: streamlining the onboarding process through automation and reducing manual effort, enhancing communication channels to ensure timely and effective support, and providing additional training and resources for business owners and staff. By implementing these changes, the service can become more efficient, effective, and customer-centric.\n\nWHAT CHANGES IN 30 DAYS: Within the next 30 days, we expect to see measurable improvements in the onboarding process, with a reduction in manual effort and setup time. This will lead to increased customer satisfaction and a decrease in potential errors. With a medium confidence level, we anticipate these changes will have a positive impact on the overall service.\n\nSOVEREIGN ALIGNMENT SCORE: With a current score of 16/25, there is significant room for improvement. By addressing the identified gaps and implementing the recommended changes, we expect to see a notable increase in the Sovereign Alignment Score, indicating a more optimized and effective service that better meets the needs of its customers.",
+    "action_plan": [
+      {
+        "step": 1,
+        "action": {
+          "dimension": "Onboarding Process",
+          "severity": "medium",
+          "state": "The onboarding process for a typical small business using epos_ecosystem is often manual and time-consuming, requiring significant effort from the business owner or staff. This can lead to delays and potential errors in setup and configuration."
+        },
+        "metric": "Indicator resolved",
+        "effort": "medium"
+      }
+    ],
+    "next_cycle_date": "2026-05-01T19:27:36.671930+00:00"
+  },
+  "governance": {
+    "gate_verdict": "GO",
+    "gate_rationale": "4 bottlenecks confirmed. Highest leverage: {'dimension': 'Data Sovereignty', 'severity': 'medium', 'state': 'The small business likely has limited control over its data, relying on third-party services and cloud storage, which may compromise data ownership and security.'}",
+    "sovereign_alignment_score": 13,
+    "bottleneck_indicators": [
+      {
+        "dimension": "Data Sovereignty",
+        "severity": "medium",
+        "state": "The small business likely has limited control over its data, relying on third-party services and cloud storage, which may compromise data ownership and security."
+      },
+      {
+        "dimension": "Saas Dependency",
+        "severity": "high",
+        "state": "The small business is probably heavily reliant on various SaaS tools for daily operations, which can lead to vendor lock-in and increased costs."
+      },
+      {
+        "dimension": "Documentation Sops",
+        "severity": "medium",
+        "state": "The small business likely has inadequate documentation of standard operating procedures, making it difficult to onboard new employees and ensure consistency in operations."
+      },
+      {
+        "dimension": "Backup Continuity",
+        "severity": "high",
+        "state": "The small business may not have a robust backup and disaster recovery plan in place, putting its critical data and systems at risk in the event of an outage or cyberattack."
+      }
+    ],
+    "gap_analysis": {
+      "gaps": [
+        {
+          "indicator": {
+            "dimension": "Data Sovereignty",
+            "severity": "medium",
+            "state": "The small business likely has limited control over its data, relying on third-party services and cloud storage, which may compromise data ownership and security."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Saas Dependency",
+            "severity": "high",
+            "state": "The small business is probably heavily reliant on various SaaS tools for daily operations, which can lead to vendor lock-in and increased costs."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Documentation Sops",
+            "severity": "medium",
+            "state": "The small business likely has inadequate documentation of standard operating procedures, making it difficult to onboard new employees and ensure consistency in operations."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        },
+        {
+          "indicator": {
+            "dimension": "Backup Continuity",
+            "severity": "high",
+            "state": "The small business may not have a robust backup and disaster recovery plan in place, putting its critical data and systems at risk in the event of an outage or cyberattack."
+          },
+          "consequence": "analysis_needed",
+          "cost_90d": "unknown"
+        }
+      ],
+      "highest_leverage": {
+        "dimension": "Data Sovereignty",
+        "severity": "medium",
+        "state": "The small business likely has limited control over its data, relying on third-party services and cloud storage, which may compromise data ownership and security."
+      },
+      "total_gap_cost": "requires_deeper_analysis",
+      "opportunity_value": "significant"
+    },
+    "prescriptions": [
+      {
+        "prescription_id": "RX-001",
+        "action": "Address highest leverage indicator",
+        "specific_change": {
+          "dimension": "Data Sovereignty",
+          "severity": "medium",
+          "state": "The small business likely has limited control over its data, relying on third-party services and cloud storage, which may compromise data ownership and security."
+        },
+        "success_metric": "Indicator resolved",
+        "effort_level": "medium"
+      }
+    ],
+    "priority_order": [
+      "RX-001"
+    ],
+    "thirty_day_projection": {
+      "improvement": "measurable",
+      "confidence": "medium"
+    },
+    "mirror_report": "**Mirror Report: TTLG Governance Diagnostic**\n\nWHAT WE FOUND: Our diagnostic reveals that your small business has a Sovereign Alignment Score of 13/25, indicating significant gaps in governance. Specifically, we've identified key areas of concern, including limited control over your data due to reliance on third-party services and cloud storage, which may compromise data ownership and security. Additionally, your business is heavily reliant on SaaS solutions, which poses a high severity risk. These gaps can have far-reaching consequences, including compromised data security and limited flexibility in responding to changing business needs.\n\nTHE REAL COST: The current state of your governance is likely costing you in terms of data security risks, potential compliance issues, and limited ability to make informed decisions due to lack of control over your data. These costs can be difficult to quantify, but they can have a significant impact on your business's bottom line and reputation. By addressing these gaps, you can mitigate these risks and improve your overall business resilience.\n\nTHE PATH FORWARD: To address these gaps, we recommend focusing on the highest-leverage changes. Firstly, addressing your data sovereignty by implementing measures to regain control over your data, such as migrating to self-hosted solutions or negotiating better terms with your cloud storage providers. Secondly, reducing your reliance on SaaS solutions by exploring alternative, more flexible options. By taking these steps, you can improve your data security, reduce risks, and increase your business's agility.\n\nWHAT CHANGES IN 30 DAYS: Within the next 30 days, we expect to see measurable improvements in your data sovereignty, with a medium confidence level in achieving these changes. Specifically, we anticipate that you will have begun to implement measures to regain control over your data, such as developing a data management plan or starting to migrate to self-hosted solutions.\n\nSOVEREIGN ALIGNMENT SCORE: With a current score of 13/25, your business has a significant opportunity to improve its governance and reduce risks. By addressing the identified gaps and implementing the recommended changes, you can improve your score and achieve better control over your data, ultimately leading to a more resilient and agile business.",
+    "action_plan": [
+      {
+        "step": 1,
+        "action": {
+          "dimension": "Data Sovereignty",
+          "severity": "medium",
+          "state": "The small business likely has limited control over its data, relying on third-party services and cloud storage, which may compromise data ownership and security."
+        },
+        "metric": "Indicator resolved",
+        "effort": "medium"
+      }
+    ],
+    "next_cycle_date": "2026-05-01T19:27:55.504722+00:00"
+  }
+}

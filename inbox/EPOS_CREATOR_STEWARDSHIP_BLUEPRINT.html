@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPOS Creator Stewardship Platform — Strategic Blueprint</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2128;
+    --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --accent: #58a6ff; --green: #3fb950; --purple: #d2a8ff;
+    --warn: #d29922; --pink: #f778ba; --coral: #f0883e;
+    --red: #f85149;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 20px; }
+  .container { max-width: 920px; margin: 0 auto; }
+  h1 { font-size: 1.9em; color: var(--accent); margin: 35px 0 10px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
+  h2 { font-size: 1.4em; color: var(--purple); margin: 25px 0 8px; }
+  h3 { font-size: 1.15em; color: var(--green); margin: 18px 0 6px; }
+  h4 { font-size: 1.05em; color: var(--coral); margin: 12px 0 4px; }
+  p { margin: 8px 0; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 12px 0; }
+  .hl { background: var(--surface); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+  .hl-green { border-left-color: var(--green); }
+  .hl-purple { border-left-color: var(--purple); }
+  .hl-pink { border-left-color: var(--pink); }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.95em; }
+  th { background: var(--surface); color: var(--accent); text-align: left; padding: 8px 10px; border: 1px solid var(--border); }
+  td { padding: 7px 10px; border: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) { background: rgba(255,255,255,0.015); }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 35px 0; }
+  .section-label { font-size: 0.72em; text-transform: uppercase; letter-spacing: 2.5px; color: var(--muted); margin-bottom: 3px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  @media (max-width: 700px) { .grid2, .grid3 { grid-template-columns: 1fr; } }
+  .metric { font-size: 1.8em; font-weight: bold; }
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.82em; margin: 2px; }
+  .phase { border-left: 3px solid var(--green); padding-left: 14px; margin: 12px 0; }
+  .quote { font-style: italic; color: var(--purple); border-left: 3px solid var(--purple); padding: 10px 16px; margin: 12px 0; background: rgba(210,168,255,0.05); border-radius: 0 6px 6px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<p class="section-label">EPOS Strategic Blueprint — Creator Stewardship Platform</p>
+<h1>The Creator Stewardship Platform</h1>
+<p style="color:var(--muted)">From FOTW Architecture to Full Creator Service Delivery<br>
+Roles · Technical Approaches · Prioritization · Metrics · Profile Architecture · Sales Messaging<br>
+February 19, 2026</p>
+
+<div class="quote">
+"You focus on being yourself. We handle everything else."<br>
+— The one sentence that defines EPOS's positioning to creators
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 1: THE FOTW ADAPTATION            -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>I. The FOTW Adaptation: Five Service Layers</h1>
+
+<p>The Fly On The Wall architecture was designed to observe conversations and transmute them into structured deliverables. Applied to creator stewardship, it becomes five distinct service layers — each a sovereign node, each independently valuable, all composing into a complete creator shield.</p>
+
+<div class="card">
+<table>
+  <tr><th>Layer</th><th>FOTW Function</th><th>Creator Application</th><th>What It Actually Does</th></tr>
+  <tr>
+    <td><strong style="color:var(--green)">Moderation</strong></td>
+    <td>Real-Time Observation</td>
+    <td>Live chat intelligence during streams</td>
+    <td>Highlights interesting questions, surfaces relevant facts for the host to respond to, fact-checks claims in real time, pins notable comments. Operates as a smart producer whispering in the host's ear.</td>
+  </tr>
+  <tr>
+    <td><strong style="color:var(--pink)">Guardianship</strong></td>
+    <td>Sentiment Filtering</td>
+    <td>Protection from harassment, predatory DMs, harmful messages</td>
+    <td>Pre-screens all DMs, emails, and comment streams. Filters block and delete harmful content BEFORE the creator sees it. Mental health protected at the infrastructure level. The creator never encounters the toxic message — it simply doesn't exist in their view.</td>
+  </tr>
+  <tr>
+    <td><strong style="color:var(--coral)">Auto-Clipping</strong></td>
+    <td>Intent/Enthusiasm Detection</td>
+    <td>Identifying viral moments during live streams</td>
+    <td>Monitors audio/video for engagement spikes (laughter, exclamations, chat velocity increases). Marks clip boundaries. Produces edited clips with captions. Presents for approval. Posts to platforms at optimal times.</td>
+  </tr>
+  <tr>
+    <td><strong style="color:var(--accent)">Stream Intelligence</strong></td>
+    <td>Context Orchestration</td>
+    <td>Teleprompter, topic management, multi-platform broadcast</td>
+    <td>Maintains talking points as a floating overlay. Tracks time on each topic. Manages multi-platform simulcast (StreamYard/Restream integration). Handles platform-specific chat aggregation.</td>
+  </tr>
+  <tr>
+    <td><strong style="color:var(--purple)">Content Engine</strong></td>
+    <td>Multi-Format Transmutation</td>
+    <td>Post-stream repurposing, promotion, and distribution</td>
+    <td>Takes raw stream → produces clips, carousels, text posts, stories, newsletters, highlight reels. Each formatted for target platform. Captions written in the creator's voice. Scheduled across the week.</td>
+  </tr>
+</table>
+</div>
+
+<div class="hl">
+<strong>The key insight:</strong> Competitors offer one or two of these layers. No one wraps all five around a single creator with constitutional governance ensuring the creator's authentic voice is never compromised. The five layers compose into a protective, amplifying cocoon that lets the creator focus entirely on being present.
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 2: ROLES NEEDED                    -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>II. Roles Needed to Elevate Visibility</h1>
+
+<p>Each role maps to an EPOS node. Some are AI-driven, some are human-supervised, some are hybrid. The architecture of discovery means each role contributes to a flywheel: better content → more engagement → deeper audience data → better content.</p>
+
+<div class="card">
+<h3>Core Roles (The Inner Circle)</h3>
+<table>
+  <tr><th>Role</th><th>Function</th><th>EPOS Node</th><th>AI vs Human</th></tr>
+  <tr><td><strong>Brand Architect</strong></td><td>Defines and protects the creator's authentic voice, visual identity, and content boundaries</td><td>Brand Validator (C10)</td><td>Human-defined, AI-enforced</td></tr>
+  <tr><td><strong>Content Strategist</strong></td><td>Designs content pillars, posting cadence, platform-specific approaches, and campaign arcs</td><td>Analysis Engine (C10)</td><td>AI with human approval</td></tr>
+  <tr><td><strong>Community Guardian</strong></td><td>Moderates live chat, filters DMs/emails, protects mental health, surfaces positive engagement</td><td>FOTW Guardianship Layer</td><td>AI filtering, human escalation</td></tr>
+  <tr><td><strong>Clip Producer</strong></td><td>Identifies best moments, edits clips, writes captions, optimizes for each platform</td><td>Echolocation + Cascade (C10)</td><td>AI production, human approval</td></tr>
+  <tr><td><strong>Distribution Manager</strong></td><td>Schedules posts, manages cross-platform timing, handles platform-specific formatting</td><td>Publisher Orchestrator (C10)</td><td>Fully automated</td></tr>
+  <tr><td><strong>Account Manager</strong></td><td>Single point of contact for the creator. Translates everything into simple, human language</td><td>Account Manager Thread</td><td>Human-facing AI</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Growth Roles (The Expansion Ring)</h3>
+<table>
+  <tr><th>Role</th><th>Function</th><th>When Needed</th></tr>
+  <tr><td><strong>Audience Analyst</strong></td><td>Tracks follower demographics, engagement patterns, growth trends, audience sentiment</td><td>Month 2+ (need data)</td></tr>
+  <tr><td><strong>Monetization Advisor</strong></td><td>Identifies brand deal opportunities, affiliate programs, product-market fit for digital products</td><td>Month 3+ (need audience)</td></tr>
+  <tr><td><strong>Collaboration Scout</strong></td><td>Finds complementary creators for cross-promotion, guest appearances, content swaps</td><td>Month 4+ (need positioning)</td></tr>
+  <tr><td><strong>Performance Reporter</strong></td><td>Produces weekly/monthly reports showing what's working, in language the creator understands</td><td>Month 1 (from day one)</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 3: AUTHENTIC PROMOTION              -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>III. Authentic Promotion: Centering Natural Interest</h1>
+
+<p>The question you asked — "How can the natural interest of individuals be centered and broadcast in authentic promotion?" — is the core design principle. The answer is: <strong>never create content that doesn't come from the creator's actual voice, opinions, and experiences.</strong></p>
+
+<div class="card">
+<h3>The Authenticity Architecture</h3>
+
+<h4>Input: Only What's Real</h4>
+<p>Every piece of promotional content traces back to something the creator actually said, did, or experienced. The system does not generate opinions, positions, or claims on behalf of the creator. It amplifies, repurposes, and distributes what already exists.</p>
+
+<h4>Processing: Voice Fidelity</h4>
+<p>The Brand Validator checks every caption, hook, and text post against the creator's voice profile — word choice patterns, sentence rhythm, humor style, topics they naturally discuss vs topics they avoid. If a caption doesn't sound like them, it gets flagged.</p>
+
+<h4>Output: Platform-Native, Human-Authentic</h4>
+<p>Each platform gets content formatted for its algorithm and culture, but the voice remains consistent. A TikTok caption feels different from a LinkedIn post in format, but the person behind both is recognizably the same human.</p>
+</div>
+
+<div class="hl hl-green">
+<strong>The test:</strong> If the creator's best friend saw the post, would they say "that sounds exactly like her" or "that sounds like a marketing team wrote it"? Every output must pass the first test.
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 4: TECHNICAL APPROACHES             -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>IV. Technical Approaches: Gathering Online Presence</h1>
+
+<p>Before EPOS can amplify a creator, it needs to understand who they are online. This is the "discovery audit" — a technical process that gathers available public information to build a comprehensive picture of their existing brand.</p>
+
+<div class="card">
+<h3>The Brand Discovery Process</h3>
+
+<h4>Phase 1: Platform Scan</h4>
+<p>For each platform the creator is active on, gather publicly available data:</p>
+<table>
+  <tr><th>Data Point</th><th>Source</th><th>What It Reveals</th></tr>
+  <tr><td>Bio/About text</td><td>Profile pages</td><td>How they describe themselves — keywords, tone, priorities</td></tr>
+  <tr><td>Content history</td><td>Public posts/videos</td><td>What topics they naturally gravitate toward, posting patterns</td></tr>
+  <tr><td>Engagement patterns</td><td>Public metrics</td><td>What resonates with their audience vs what falls flat</td></tr>
+  <tr><td>Visual identity</td><td>Profile images, thumbnails, color usage</td><td>Whether there's a cohesive visual brand or organic inconsistency</td></tr>
+  <tr><td>Community interaction</td><td>Comments, replies, chat behavior</td><td>How they talk to their audience — formal, casual, playful, mentoring</td></tr>
+  <tr><td>Cross-platform consistency</td><td>All platforms compared</td><td>Is the brand coherent across platforms or fragmented?</td></tr>
+</table>
+
+<h4>Phase 2: Audience Analysis</h4>
+<p>Using platform analytics (creator grants access) and public signals:</p>
+<table>
+  <tr><th>Analysis</th><th>Method</th><th>Insight</th></tr>
+  <tr><td>Demographic clustering</td><td>Platform analytics API + comment sentiment analysis</td><td>Who actually watches/reads — age, interests, geography</td></tr>
+  <tr><td>Engagement spike mapping</td><td>Time-series analysis of post performance</td><td>What content types drive the most meaningful engagement</td></tr>
+  <tr><td>Community vocabulary</td><td>Comment/chat word frequency analysis</td><td>What language the audience uses — this feeds caption writing</td></tr>
+  <tr><td>Competitor adjacency</td><td>Audience overlap analysis</td><td>Who else this audience follows — reveals positioning opportunities</td></tr>
+</table>
+
+<h4>Phase 3: Brand Synthesis</h4>
+<p>The discovery data is synthesized into a <strong>Creator Profile Document</strong> (see Section VII) that becomes the constitutional basis for all content decisions. This document is reviewed and approved by the creator — they must recognize themselves in it.</p>
+</div>
+
+<div class="card">
+<h3>Communicating Results: The Mirror Report</h3>
+<p>Drawing from the TTLG diagnostic framework, the results of brand discovery are communicated as a <strong>Mirror Report</strong> — a document that shows the creator their own brand reflected back to them with clarity they may not have had before.</p>
+
+<div class="hl hl-purple">
+<strong>The Mirror Report contains:</strong><br><br>
+→ <strong>Your Brand In One Sentence:</strong> How we'd describe you to someone who's never seen your content<br>
+→ <strong>Your Strongest Content:</strong> The 5 posts/streams that performed best and WHY they worked<br>
+→ <strong>Your Audience's Language:</strong> How your community talks about you and what they value<br>
+→ <strong>Your Untapped Opportunities:</strong> Content formats, platforms, or topics where your brand naturally fits but you haven't explored<br>
+→ <strong>Your Brand Gaps:</strong> Where the presentation is inconsistent or where you're leaving engagement on the table<br>
+→ <strong>Your Growth Pathway:</strong> A personalized 90-day roadmap based on YOUR strengths, not generic best practices
+</div>
+
+<p>The Mirror Report is the first deliverable in the consultative sales process. It demonstrates value before asking for commitment. It's the creator's first experience of what it feels like to have EPOS in their corner.</p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 5: PRIORITIZATION                   -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>V. Development Prioritization</h1>
+
+<p>What must be built first to support indie creator sales messaging and service delivery? Ordered by dependency chain — each phase enables the next.</p>
+
+<div class="card">
+<h3>Phase 1: Foundation (Weeks 1-2)</h3>
+<p class="section-label">Must exist before first client engagement</p>
+<table>
+  <tr><th>Component</th><th>Purpose</th><th>EPOS Node</th></tr>
+  <tr><td>Creator Profile Template</td><td>Structured intake form for new creator clients</td><td>Context Vault / Clients</td></tr>
+  <tr><td>Mirror Report Generator</td><td>Automated brand discovery → visual report</td><td>TTLG Diagnostic adapted</td></tr>
+  <tr><td>Brand Voice Extraction</td><td>Analyze existing content to build voice model</td><td>Brand Validator (C10)</td></tr>
+  <tr><td>Content Calendar Template</td><td>Weekly plan structure with platform-specific slots</td><td>Publisher Orchestrator (C10)</td></tr>
+  <tr><td>Clip Approval Workflow</td><td>Simple "approve/reject/edit" interface for creators</td><td>Account Manager</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Phase 2: Protection (Weeks 3-4)</h3>
+<p class="section-label">Guardianship + moderation before scaling visibility</p>
+<table>
+  <tr><th>Component</th><th>Purpose</th><th>EPOS Node</th></tr>
+  <tr><td>DM/Email Filter Engine</td><td>Pre-screen all inbound messages, block harmful content before creator sees it</td><td>FOTW Guardianship</td></tr>
+  <tr><td>Live Chat Intelligence</td><td>Real-time comment highlighting, question surfacing, toxic comment removal</td><td>FOTW Moderation</td></tr>
+  <tr><td>Safety Dashboard</td><td>Summary of what was filtered, without exposing the creator to the content itself</td><td>Account Manager</td></tr>
+</table>
+<div class="hl hl-pink">
+<strong>Why protection comes before amplification:</strong> Increasing visibility without protection exposes creators — especially women — to proportionally more harassment. The shield must be up before the signal gets louder. This is a constitutional principle, not a nice-to-have.
+</div>
+</div>
+
+<div class="card">
+<h3>Phase 3: Amplification (Weeks 5-8)</h3>
+<p class="section-label">Content production and distribution at scale</p>
+<table>
+  <tr><th>Component</th><th>Purpose</th><th>EPOS Node</th></tr>
+  <tr><td>Auto-Clip Engine</td><td>Identify, cut, caption, and format stream highlights</td><td>Echolocation + Cascade (C10)</td></tr>
+  <tr><td>Caption Generator (Voice-Matched)</td><td>Write hooks and captions in the creator's voice</td><td>Content Generator (C10)</td></tr>
+  <tr><td>Multi-Platform Scheduler</td><td>Post at platform-optimal times with format-specific variants</td><td>Publisher Orchestrator (C10)</td></tr>
+  <tr><td>Stream Teleprompter</td><td>Floating overlay with talking points, topic timers, chat highlights</td><td>FOTW Stream Intelligence</td></tr>
+  <tr><td>Multi-Cast Manager</td><td>StreamYard/Restream integration for simultaneous multi-platform broadcast</td><td>FOTW Stream Intelligence</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Phase 4: Intelligence (Weeks 9-12)</h3>
+<p class="section-label">Data-driven optimization and monetization</p>
+<table>
+  <tr><th>Component</th><th>Purpose</th><th>EPOS Node</th></tr>
+  <tr><td>Performance Analytics</td><td>Track engagement, growth, and content performance across platforms</td><td>BI Engine</td></tr>
+  <tr><td>Audience Insight Engine</td><td>Demographic analysis, engagement pattern detection, community health</td><td>Research Engine (C10)</td></tr>
+  <tr><td>Monetization Readiness Score</td><td>Assess when audience is ready for sponsorships, products, paid community</td><td>Market Awareness (C10)</td></tr>
+  <tr><td>Creator Health Dashboard</td><td>Everything the creator needs to see, nothing they don't — simple, clear, encouraging</td><td>Account Manager</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 6: COMPETITIVE LANDSCAPE            -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>VI. Competitive Landscape & Positioning</h1>
+
+<div class="card">
+<table>
+  <tr><th>Competitor</th><th>What They Do</th><th>What They Don't Do</th><th>EPOS Advantage</th></tr>
+  <tr><td><strong>Opus Clip</strong></td><td>Auto-clips long video into shorts</td><td>No voice matching, no strategy, no protection, no scheduling</td><td>Clips are one step in a five-layer system</td></tr>
+  <tr><td><strong>Repurpose.io</strong></td><td>Cross-posts content between platforms</td><td>No content creation, no moderation, no brand validation</td><td>We don't just move content — we optimize it per platform</td></tr>
+  <tr><td><strong>Later / Buffer</strong></td><td>Social media scheduling</td><td>No content production, no protection, no strategic planning</td><td>Scheduling is our last mile, not our product</td></tr>
+  <tr><td><strong>StreamElements / Nightbot</strong></td><td>Chat moderation and bot commands</td><td>No DM protection, no content strategy, no clip production</td><td>We protect beyond the chat — DMs, emails, all inbound</td></tr>
+  <tr><td><strong>Jasper / Copy.ai</strong></td><td>AI copywriting</td><td>Generic voice, no creator-specific training, no protection</td><td>Every caption sounds like the specific creator, not like AI</td></tr>
+  <tr><td><strong>Management agencies</strong></td><td>Full-service creator management</td><td>$5K-50K/month, take 15-20% of deals, creator loses control</td><td>EPOS gives agency-level service at SaaS pricing with full creator control</td></tr>
+</table>
+</div>
+
+<div class="hl">
+<strong>Positioning statement:</strong> "EPOS is the first creator stewardship platform — it protects, amplifies, and optimizes your entire digital presence while you focus on being yourself. Unlike tools that handle one piece, or agencies that take a cut of everything, EPOS wraps five layers of intelligence around your brand at a fraction of the cost, with you in complete control."
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 7: PROFILE ARCHITECTURE             -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>VII. Creator Profile Architecture</h1>
+
+<p>The profile is the constitutional document for each creator client. It drives every content decision, moderation filter, and strategic recommendation. It must illuminate pathways without creating comparison anxiety.</p>
+
+<div class="card">
+<h3>Profile Structure</h3>
+
+<h4>Layer 1: Identity (Who You Are)</h4>
+<table>
+  <tr><th>Field</th><th>Purpose</th><th>Example (Stacey)</th></tr>
+  <tr><td>Brand Archetype</td><td>Core identity framing</td><td>The Grounded Guide</td></tr>
+  <tr><td>Voice Signature</td><td>Tone, vocabulary, humor style, off-limits topics</td><td>Warm, conversational, no politics/pop culture, laughs easily</td></tr>
+  <tr><td>Content Pillars</td><td>3-5 core topic areas</td><td>Travel, Book Club, Parenting, Stories for Zayne</td></tr>
+  <tr><td>Brand Boundaries</td><td>What they will never do or say</td><td>No political commentary, no product shilling, no inauthenticity</td></tr>
+  <tr><td>Visual Identity</td><td>Colors, aesthetic, presentation style</td><td>Warm tones, natural lighting, unpolished-on-purpose</td></tr>
+</table>
+
+<h4>Layer 2: Audience (Who Cares)</h4>
+<table>
+  <tr><th>Field</th><th>Purpose</th></tr>
+  <tr><td>Core Demographic</td><td>Age, interests, values of primary audience</td></tr>
+  <tr><td>Community Language</td><td>Words and phrases the audience uses (feeds caption writing)</td></tr>
+  <tr><td>Engagement Triggers</td><td>What types of content drive saves, shares, comments (not just likes)</td></tr>
+  <tr><td>Community Needs</td><td>What the audience is looking for that they're not getting elsewhere</td></tr>
+</table>
+
+<h4>Layer 3: Growth (Where You're Going)</h4>
+
+<div class="hl hl-green">
+<strong>The anti-comparison-anxiety design:</strong> Growth metrics are always presented as YOUR trajectory — "you grew 23% this month" not "you're 80% behind creators at your level." Benchmarks are used to set realistic expectations, never to create feelings of inadequacy. The system celebrates consistency and personal records, not rankings.
+</div>
+
+<table>
+  <tr><th>Field</th><th>Purpose</th></tr>
+  <tr><td>Personal Growth Goals</td><td>What success looks like FOR THEM (not industry benchmarks)</td></tr>
+  <tr><td>Monetization Readiness</td><td>Which revenue streams they're ready for based on current audience and content</td></tr>
+  <tr><td>Next Milestone</td><td>The single most important next achievement — keeps focus narrow</td></tr>
+  <tr><td>90-Day Trajectory</td><td>Projected growth based on current cadence and performance</td></tr>
+</table>
+
+<h4>Layer 4: Protection (What We Shield)</h4>
+<table>
+  <tr><th>Field</th><th>Purpose</th></tr>
+  <tr><td>Filter Sensitivity Level</td><td>How aggressive the DM/comment filtering should be</td></tr>
+  <tr><td>Block Keywords</td><td>Words/phrases that auto-filter without creator exposure</td></tr>
+  <tr><td>Escalation Contacts</td><td>Who to alert if the system detects a safety concern</td></tr>
+  <tr><td>Mental Health Boundaries</td><td>Content topics or engagement types that the creator finds draining</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 8: METRICS FRAMEWORK                -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>VIII. Metrics Framework by Growth Stage</h1>
+
+<p>Different metrics matter at different stages. Showing a creator with 200 followers their "brand deal readiness score" is demoralizing and irrelevant. Showing them their week-over-week engagement growth is empowering and actionable.</p>
+
+<div class="card">
+<h3>Stage 1: Foundation (0-1,000 followers)</h3>
+<p style="color:var(--muted)">Focus: consistency, voice development, community seeding</p>
+<table>
+  <tr><th>Metric</th><th>Why It Matters</th><th>Target</th></tr>
+  <tr><td>Posting consistency rate</td><td>Algorithms reward predictability</td><td>90%+ of planned posts published</td></tr>
+  <tr><td>Engagement rate (per post)</td><td>Quality of connection matters more than reach</td><td>5-15% (normal for small accounts)</td></tr>
+  <tr><td>Content-to-clip ratio</td><td>Are streams producing usable clips?</td><td>3+ clips per stream</td></tr>
+  <tr><td>Stream-to-derivative efficiency</td><td>How much content does each live produce?</td><td>10+ derivatives per live session</td></tr>
+  <tr><td>Voice consistency score</td><td>Do captions sound like the creator?</td><td>90%+ approval rate on first draft</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Stage 2: Growth (1,000-10,000 followers)</h3>
+<p style="color:var(--muted)">Focus: discoverability, audience expansion, platform algorithm optimization</p>
+<table>
+  <tr><th>Metric</th><th>Why It Matters</th><th>Target</th></tr>
+  <tr><td>Follower growth rate (weekly)</td><td>Is content reaching new people?</td><td>3-5% week-over-week</td></tr>
+  <tr><td>Share/save ratio</td><td>Shares and saves signal algorithmic value more than likes</td><td>Increasing month-over-month</td></tr>
+  <tr><td>Cross-platform conversion</td><td>TikTok viewers becoming Twitch viewers?</td><td>2-5% cross-platform follow rate</td></tr>
+  <tr><td>Content format performance</td><td>Which clip styles, lengths, and hooks perform best?</td><td>Top 3 formats identified</td></tr>
+  <tr><td>Community health (comment sentiment)</td><td>Is the audience positive, engaged, supportive?</td><td>85%+ positive sentiment</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Stage 3: Monetization (10,000+ followers)</h3>
+<p style="color:var(--muted)">Focus: revenue activation, brand deal readiness, product-market fit</p>
+<table>
+  <tr><th>Metric</th><th>Why It Matters</th><th>Target</th></tr>
+  <tr><td>Revenue per 1,000 followers</td><td>Monetization efficiency — better than raw follower count</td><td>$5-50/month per 1K (varies by niche)</td></tr>
+  <tr><td>Brand deal inquiry rate</td><td>Are brands reaching out?</td><td>1+ inbound/month at 10K+</td></tr>
+  <tr><td>Affiliate conversion rate</td><td>Do recommendations translate to purchases?</td><td>2-5% click-through, 1-3% conversion</td></tr>
+  <tr><td>Community willingness to pay</td><td>Would audience pay for premium content?</td><td>Survey 100+ members before launching paid tier</td></tr>
+  <tr><td>Content ROI (time invested vs revenue generated)</td><td>Is the creator's time being spent efficiently?</td><td>Improving quarterly</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 9: CONSULTATIVE SALES MESSAGING     -->
+<!-- ═══════════════════════════════════════════ -->
+
+<h1>IX. Consultative Sales Messaging</h1>
+
+<p>The sales approach follows the TTLG diagnostic methodology: lead with value, diagnose before prescribing, and let the architecture of discovery reveal the need.</p>
+
+<div class="card">
+<h3>The Sales Conversation Flow</h3>
+
+<div class="phase">
+<h4>Step 1: The Mirror (Free — Value First)</h4>
+<p>Offer a free Brand Mirror Report. No commitment. We research their public presence, synthesize a one-page portrait of their brand, and present it. This is the TTLG diagnostic applied to a human brand. Most creators have never seen themselves described this clearly.</p>
+<p><strong>What the creator experiences:</strong> "Wow, they understand my brand better than I do."</p>
+</div>
+
+<div class="phase">
+<h4>Step 2: The Gap (Consultative — Show the Opportunity)</h4>
+<p>Walk through the Mirror Report together. Point out the untapped opportunities — not as criticism, but as discovery. "You're naturally funny in your streams, but those moments die on Twitch. What if every great reaction became a TikTok that reached 10x your stream audience?"</p>
+<p><strong>What the creator experiences:</strong> "I can see exactly what I'm leaving on the table."</p>
+</div>
+
+<div class="phase">
+<h4>Step 3: The Shield (Emotional — Address the Real Fear)</h4>
+<p>For women creators especially: "We know that growing your visibility means growing your exposure to harassment. EPOS puts a shield between you and the toxic messages before you ever see them. Your mental health is not a tradeoff for growth."</p>
+<p><strong>What the creator experiences:</strong> "They actually thought about the scary part, not just the growth part."</p>
+</div>
+
+<div class="phase">
+<h4>Step 4: The Architecture (Logical — Show the System)</h4>
+<p>Show how the five layers work together. One stream → 20+ pieces of content → posted across 4 platforms → engagement tracked → next week's strategy informed by real data. All while you just focus on being yourself.</p>
+<p><strong>What the creator experiences:</strong> "This is what it would feel like to have a real team behind me."</p>
+</div>
+
+<div class="phase">
+<h4>Step 5: The Invitation (Low-Friction — Try Before Commitment)</h4>
+<p>Offer a 2-week pilot: "Let us handle your content for the next two weeks. You stream like normal. We do everything else. At the end, you'll see the difference — and you decide if you want to keep going."</p>
+<p><strong>What the creator experiences:</strong> "There's no risk. Let's try it."</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Core Sales Messages by Creator Type</h3>
+
+<h4>For the Indie Creator (Stacey / Desiree profile)</h4>
+<div class="hl">
+"You have a brand people love. You just don't have a team to match. EPOS gives you agency-level content production, community protection, and strategic planning — without the agency price tag or the loss of creative control. You stay you. We handle the rest."
+</div>
+
+<h4>For the Boutique Business Owner</h4>
+<div class="hl hl-purple">
+"Your business is your personality. But right now, you're spending more time managing social media than running your business. EPOS turns your natural expertise into a consistent content engine that attracts clients while you focus on serving them."
+</div>
+
+<h4>For the Community Builder</h4>
+<div class="hl hl-green">
+"Community isn't built by posting more — it's built by being present. EPOS handles the content machinery so you can be in the conversation, not behind the editing desk. Every post drives people back to the community experience you're building."
+</div>
+</div>
+
+<hr class="divider">
+
+<h1>X. Next Actions</h1>
+
+<div class="card">
+<table>
+  <tr><th>#</th><th>Action</th><th>Depends On</th><th>Owner</th></tr>
+  <tr><td>1</td><td>Build Creator Profile Template as a JSON schema in context_vault/clients/</td><td>Nothing (start here)</td><td>EPOS Dev</td></tr>
+  <tr><td>2</td><td>Build Mirror Report generator using TTLG diagnostic engine</td><td>Profile template</td><td>EPOS Dev</td></tr>
+  <tr><td>3</td><td>Run Mirror Reports for Stacey and Desiree (first real test)</td><td>Mirror Report generator</td><td>Jamie</td></tr>
+  <tr><td>4</td><td>Design Guardianship filter architecture (DM/email/comment screening)</td><td>Profile template (filter config)</td><td>EPOS Dev</td></tr>
+  <tr><td>5</td><td>Launch Strategist + Account Manager threads with persona briefs loaded</td><td>Sprint document (already done)</td><td>Jamie</td></tr>
+  <tr><td>6</td><td>First live stream with EPOS support (manual execution of the five layers)</td><td>Stacey/Desiree schedules confirmed</td><td>Jamie + Creator</td></tr>
+  <tr><td>7</td><td>Develop consultative sales deck from Section IX messaging</td><td>Mirror Report as proof of concept</td><td>Jamie + Content Lab</td></tr>
+  <tr><td>8</td><td>Price the Creator Stewardship tiers (solo, pro, full-service)</td><td>Competitive analysis + cost modeling</td><td>Jamie</td></tr>
+</table>
+</div>
+
+<p style="text-align:center;color:var(--muted);margin-top:40px">
+EPOS Creator Stewardship Platform — Strategic Blueprint v1.0<br>
+February 19, 2026 | Constitutional Authority: Articles II, VII, XIV<br>
+"Protect first. Amplify second. Let the creator be the creator."
+</p>
+
+</div>
+</body>
+</html>

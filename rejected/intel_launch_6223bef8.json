@@ -1,0 +1,21 @@
+{
+  "mission_id": "launch_6223bef8",
+  "agent": "huntsman",
+  "directive": "deploy_product",
+  "created_at": "2025-12-28T11:20:56.320853",
+  "parameters": {
+    "platforms": [
+      "gumroad"
+    ],
+    "execution_mode": "direct"
+  },
+  "payload": {
+    "product_name": "The Reward Bus: Enterprise Edition",
+    "price_usd": 197.0,
+    "description_markdown": "\n        ## The Reward Bus: Enterprise Edition\n        \n        **The Problem:** Fragile AI Agents that crash in production is broken.\n        **The Solution:** We built the code to fix it.\n        \n        This is not a course. This is the raw execution logic used by PGP Property Solutions.\n        \n        **Included:**\n        - \u2705 Source Code\n        - \u2705 Implementation Guide\n        - \u2705 Enterprise Logic\n        \n        *Built by Exponere.*\n        ",
+    "call_to_action": "Get Instant Access",
+    "settings": {
+      "generate_license_keys": true
+    }
+  }
+}

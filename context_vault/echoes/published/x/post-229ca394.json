@@ -1,0 +1,19 @@
+{
+  "id": "post-229ca394",
+  "platform": "x",
+  "mode": "profile",
+  "content_type": "text",
+  "body": "Your business diagnostics should prescribe the fix, not just name the problem. TTLG v2: diagnose, fabricate, deploy, heal.",
+  "media_url": null,
+  "cta_token": "ECHO-20260406-bf564a",
+  "stagger_minutes": 0,
+  "created_at": "2026-04-06T12:37:19.734359+00:00",
+  "status": "published",
+  "published_at": "2026-04-06T12:37:19.735876+00:00",
+  "result": {
+    "success": true,
+    "method": "staged",
+    "message": "Post staged at C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\ready_to_post\\x\\post-229ca394.txt. Copy and paste to publish.",
+    "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\ready_to_post\\x\\post-229ca394.txt"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "brief_id": "CB-LEGOAF-7DD8",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-04-04T16:05:28.436549+00:00",
+  "source_spark_id": "SPARK-3d5333a1",
+  "angle_type": "educator",
+  "hook_type": "statistic",
+  "visual_mask": "clean_professional",
+  "target_platform": "youtube_shorts",
+  "script_premise": "The most popular LEGO sets are selling out fast, and here's how you can get your hands on them before they're gone forever",
+  "hook_line": "Did you know that 1 in 5 LEGO sets sell out within the first month of release?",
+  "cta": "Check the links in our description to buy the hottest LEGO sets before they're sold out",
+  "predicted_eri_score": 0,
+  "affiliate_products": [],
+  "status": "draft"
+}

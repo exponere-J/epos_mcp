@@ -1,0 +1,10 @@
+{
+  "diagnostic_id": "DIAG-ed3a7410",
+  "completed_at": "2026-04-06T12:29:40.346536+00:00",
+  "props_name": "ecosystem_architecture",
+  "target": "epos",
+  "gate_verdict": "GO",
+  "findings_count": 7,
+  "manifests_count": 3,
+  "value_at_risk": 15000.0
+}

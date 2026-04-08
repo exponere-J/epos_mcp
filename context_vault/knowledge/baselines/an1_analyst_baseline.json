@@ -1,0 +1,15 @@
+{
+  "role": "an1_analyst",
+  "name": "AN1 Analyst \u2014 Echolocation Scoring",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "AI content scoring accuracy benchmarks 2026",
+  "methodology": "Pre-production ERI prediction + post-publish actual scoring. 40% capacity shift on >85 resonance.",
+  "key_metrics": {
+    "prediction_accuracy": "40-60%",
+    "capacity_shift_threshold": "85 resonance",
+    "measurement_window": "48 hours"
+  },
+  "epos_implementation": "AN1 predicts before production, scores after publish, feeds Echolocation loop",
+  "operational_validation": "pending_cycle_1"
+}

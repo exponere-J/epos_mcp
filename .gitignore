@@ -1,0 +1,92 @@
+# =========================
+# EPOS – STRICT IGNORE RULES
+# =========================
+
+# Never track anything above repo root
+../
+../../
+
+# OS / User / System
+AppData/
+NTUSER.*
+OneDrive/
+Desktop/
+Documents/
+Downloads/
+Pictures/
+Videos/
+Music/
+Saved Games/
+Searches/
+
+# Editors / IDEs
+.cursor/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv*
+.env
+
+# Node
+node_modules/
+
+# Docker / Infra
+.docker/
+.n8n/
+.ollama/
+
+# Conda / Python tooling
+.conda/
+.anaconda/
+.anaconda3/
+.condarc
+.continuum/
+
+# Caches / Histories
+.cache/
+.bash_history
+.python_history
+.node_repl_history
+.viminfo
+
+# Windows tooling
+.chocolatey/
+.windows-build-tools/
+
+# Output / runtime artifacts
+out/
+sprint_logs/
+kernel/state/
+
+# Secrets
+*.key
+*.pem
+*cmo_integration_api_key*
+__pycache__/
+venv/
+.env
+*.zip
+.DS_Store
+codebase_snapshot.txt
+codebase_snapshot.txt
+
+# Embedded repos / third-party clones — track as submodules or exclude
+CLI-Anything/
+venv_epos/
+venv_epos_311/
+
+# EPOS generated artifacts — never commit
+epos_align_report_*.md
+TTLG_SESSION_*.md
+ops/ttlg_sessions/
+ops/surgical_backups/
+logs/
+*.log
+__pycache__/
+.venv/
+epos_status.json
+.env

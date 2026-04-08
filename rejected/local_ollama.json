@@ -1,0 +1,9 @@
+{
+  "provider": "ollama",
+  "base_url": "http://localhost:11434",
+  "models": {
+    "cadence": "phi3:mini",
+    "metaphor": "phi4",
+    "critic": "mistral:instruct"
+  }
+}

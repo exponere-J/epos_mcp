@@ -1,0 +1,1151 @@
+{
+  "total_nodes": 22,
+  "certified_at": "2026-04-06T20:06:28.332073+00:00",
+  "by_readiness": {
+    "MARKETPLACE_READY": [
+      "research_engine",
+      "content_lab",
+      "ttlg_diagnostic",
+      "lead_scoring",
+      "consumer_journey",
+      "event_bus",
+      "context_graph",
+      "friday_intelligence",
+      "lifeos",
+      "idea_pipeline",
+      "epos_doctor",
+      "governance_gate",
+      "multimodal_router",
+      "payment_gateway",
+      "fotw_listener",
+      "ttlg_conversational",
+      "dashboard_engine",
+      "reputation_manager",
+      "paperclip_governance",
+      "browser_use_node",
+      "ttlg_v2_pipeline",
+      "self_healing_engine"
+    ]
+  },
+  "nodes": {
+    "research_engine": {
+      "node_id": "research_engine",
+      "name": "RS1 Research Engine",
+      "module": "rs1_research_compiler",
+      "total_score": 92,
+      "max_score": 105,
+      "pct": 87.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 4 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 2 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 10,
+          "detail": "Has data access but shared schema",
+          "gap": "Shared data ownership",
+          "fix": "Create dedicated vault subdirectory and journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'AI research analyst that turns any topic into structured, ac...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "AI research analyst that turns any topic into structured, actionable intelligence.",
+      "pricing_tier": "solo",
+      "suggested_price": "$49/mo",
+      "market_category": "Research & Intelligence",
+      "certified_at": "2026-04-06T20:06:24.857104+00:00"
+    },
+    "content_lab": {
+      "node_id": "content_lab",
+      "name": "Content Lab",
+      "module": "content.lab.content_lab_core",
+      "total_score": 91,
+      "max_score": 105,
+      "pct": 86.7,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "3 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 2 public methods, documented"
+        },
+        "event_bus": {
+          "score": 15,
+          "detail": "Publishes (6 calls) and subscribes to events"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 10,
+          "detail": "Init params with defaults, no env override",
+          "gap": "No environment configuration",
+          "fix": "Add os.getenv() overrides for key parameters"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'AI content production line that creates, validates, and sche...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "AI content production line that creates, validates, and schedules content autonomously.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$149/mo",
+      "market_category": "Content Production",
+      "certified_at": "2026-04-06T20:06:24.873120+00:00"
+    },
+    "ttlg_diagnostic": {
+      "node_id": "ttlg_diagnostic",
+      "name": "TTLG Diagnostic",
+      "module": "graphs.ttlg_diagnostic_graph",
+      "total_score": 88,
+      "max_score": 105,
+      "pct": 83.8,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 5,
+          "detail": "7 EPOS deps \u2014 tightly coupled",
+          "gap": "Heavy internal coupling",
+          "fix": "Refactor to dependency injection pattern"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "2 classes, 11 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 2 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Diagnose marketing, sales, service, and governance gaps in 1...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [
+        {
+          "criterion": "standalone_import",
+          "current_score": 5,
+          "gap": "Heavy internal coupling",
+          "fix": "Refactor to dependency injection pattern"
+        }
+      ],
+      "value_prop": "Diagnose marketing, sales, service, and governance gaps in 15 minutes with AI-powered consequence chains.",
+      "pricing_tier": "department",
+      "suggested_price": "$997/engagement",
+      "market_category": "Business Consulting",
+      "certified_at": "2026-04-06T20:06:27.541279+00:00"
+    },
+    "lead_scoring": {
+      "node_id": "lead_scoring",
+      "name": "Lead Scoring Engine",
+      "module": "lead_scoring",
+      "total_score": 92,
+      "max_score": 105,
+      "pct": 87.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "3 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 3 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 2 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 10,
+          "detail": "Init params with defaults, no env override",
+          "gap": "No environment configuration",
+          "fix": "Add os.getenv() overrides for key parameters"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'AI lead scoring that tells you exactly which prospects to ca...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "AI lead scoring that tells you exactly which prospects to call today.",
+      "pricing_tier": "solo",
+      "suggested_price": "$79/mo",
+      "market_category": "CRM & Sales",
+      "certified_at": "2026-04-06T20:06:27.567707+00:00"
+    },
+    "consumer_journey": {
+      "node_id": "consumer_journey",
+      "name": "Consumer Journey Engine",
+      "module": "graphs.consumer_journey_graph",
+      "total_score": 102,
+      "max_score": 105,
+      "pct": 97.1,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 1 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "2 classes, 15 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 3 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'AI journey manager that guides prospects from first touch to...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "AI journey manager that guides prospects from first touch to loyal customer.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$199/mo",
+      "market_category": "CRM & Sales",
+      "certified_at": "2026-04-06T20:06:27.598260+00:00"
+    },
+    "event_bus": {
+      "node_id": "event_bus",
+      "name": "EPOS Event Bus",
+      "module": "epos_event_bus",
+      "total_score": 105,
+      "max_score": 105,
+      "pct": 100.0,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 1 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "2 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 15,
+          "detail": "Publishes (3 calls) and subscribes to events"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'Lightweight event bus that connects all your tools without i...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Lightweight event bus that connects all your tools without infrastructure overhead.",
+      "pricing_tier": "solo",
+      "suggested_price": "$29/mo",
+      "market_category": "Infrastructure",
+      "certified_at": "2026-04-06T20:06:27.603147+00:00"
+    },
+    "context_graph": {
+      "node_id": "context_graph",
+      "name": "Context Graph",
+      "module": "context_graph",
+      "total_score": 97,
+      "max_score": 105,
+      "pct": 92.4,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "3 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "3 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 3 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'AI memory that learns what works and gets smarter with every...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "AI memory that learns what works and gets smarter with every decision.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$99/mo",
+      "market_category": "Intelligence",
+      "certified_at": "2026-04-06T20:06:27.651319+00:00"
+    },
+    "friday_intelligence": {
+      "node_id": "friday_intelligence",
+      "name": "Friday Intelligence",
+      "module": "friday_intelligence",
+      "total_score": 92,
+      "max_score": 105,
+      "pct": 87.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 10,
+          "detail": "Has self-test, partial assertions",
+          "gap": "Incomplete test coverage",
+          "fix": "Add assertion-based self-tests with PASS/FAIL output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'AI chief of staff that learns your patterns and protects you...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "AI chief of staff that learns your patterns and protects your time.",
+      "pricing_tier": "department",
+      "suggested_price": "$297/mo",
+      "market_category": "Executive Intelligence",
+      "certified_at": "2026-04-06T20:06:27.721047+00:00"
+    },
+    "lifeos": {
+      "node_id": "lifeos",
+      "name": "LifeOS",
+      "module": "lifeos_sovereignty",
+      "total_score": 92,
+      "max_score": 105,
+      "pct": 87.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 5,
+          "detail": "7 EPOS deps \u2014 tightly coupled",
+          "gap": "Heavy internal coupling",
+          "fix": "Refactor to dependency injection pattern"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 8 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 3 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'Personal operating system that tracks energy, goals, and gro...'"
+        }
+      },
+      "hardening_needed": [
+        {
+          "criterion": "standalone_import",
+          "current_score": 5,
+          "gap": "Heavy internal coupling",
+          "fix": "Refactor to dependency injection pattern"
+        }
+      ],
+      "value_prop": "Personal operating system that tracks energy, goals, and growth \u2014 not just tasks.",
+      "pricing_tier": "solo",
+      "suggested_price": "$39/mo",
+      "market_category": "Personal Productivity",
+      "certified_at": "2026-04-06T20:06:27.782775+00:00"
+    },
+    "idea_pipeline": {
+      "node_id": "idea_pipeline",
+      "name": "Idea Pipeline",
+      "module": "idea_log",
+      "total_score": 93,
+      "max_score": 105,
+      "pct": 88.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 2 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 4 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 10,
+          "detail": "Init params with defaults, no env override",
+          "gap": "No environment configuration",
+          "fix": "Add os.getenv() overrides for key parameters"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Never lose an idea again. AI triages and researches every ca...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Never lose an idea again. AI triages and researches every captured thought.",
+      "pricing_tier": "solo",
+      "suggested_price": "$29/mo",
+      "market_category": "Project Management",
+      "certified_at": "2026-04-06T20:06:27.812532+00:00"
+    },
+    "epos_doctor": {
+      "node_id": "epos_doctor",
+      "name": "EPOS Doctor",
+      "module": "engine.epos_doctor",
+      "total_score": 97,
+      "max_score": 105,
+      "pct": 92.4,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 41 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'Automated health check that validates your entire stack befo...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Automated health check that validates your entire stack before deployment.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$49/mo",
+      "market_category": "DevOps & Monitoring",
+      "certified_at": "2026-04-06T20:06:27.840169+00:00"
+    },
+    "governance_gate": {
+      "node_id": "governance_gate",
+      "name": "Governance Gate",
+      "module": "engine.governance_gate",
+      "total_score": 102,
+      "max_score": 105,
+      "pct": 97.1,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 1 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "6 classes, 20 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 15,
+          "detail": "Clear, actionable VP: 'Automated code governance that enforces standards before any...'"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Automated code governance that enforces standards before anything ships.",
+      "pricing_tier": "department",
+      "suggested_price": "$199/mo",
+      "market_category": "Compliance & Governance",
+      "certified_at": "2026-04-06T20:06:27.883073+00:00"
+    },
+    "multimodal_router": {
+      "node_id": "multimodal_router",
+      "name": "Multimodal Router",
+      "module": "multimodal_router",
+      "total_score": 98,
+      "max_score": 105,
+      "pct": 93.3,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 2 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 6 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Route text, image, and video generation to the best provider...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Route text, image, and video generation to the best provider at the lowest cost.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$79/mo",
+      "market_category": "AI Infrastructure",
+      "certified_at": "2026-04-06T20:06:27.912905+00:00"
+    },
+    "payment_gateway": {
+      "node_id": "payment_gateway",
+      "name": "Payment Gateway",
+      "module": "payment_gateway",
+      "total_score": 95,
+      "max_score": 105,
+      "pct": 90.5,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 2 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 8,
+          "detail": "'Accept payments, generate invoices, and track revenue with o...'",
+          "gap": "needs action verb; contains internal jargon",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [
+        {
+          "criterion": "value_proposition",
+          "current_score": 8,
+          "gap": "needs action verb; contains internal jargon",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      ],
+      "value_prop": "Accept payments, generate invoices, and track revenue with one sovereign node.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$49/mo",
+      "market_category": "Financial Operations",
+      "certified_at": "2026-04-06T20:06:27.939713+00:00"
+    },
+    "fotw_listener": {
+      "node_id": "fotw_listener",
+      "name": "FOTW Listener",
+      "module": "fotw_listener",
+      "total_score": 93,
+      "max_score": 105,
+      "pct": 88.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 3 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Capture every customer expression and route it to the intell...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Capture every customer expression and route it to the intelligence that needs it.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$99/mo",
+      "market_category": "Engagement Intelligence",
+      "certified_at": "2026-04-06T20:06:27.964996+00:00"
+    },
+    "ttlg_conversational": {
+      "node_id": "ttlg_conversational",
+      "name": "Conversational TTLG",
+      "module": "ttlg_conversational",
+      "total_score": 88,
+      "max_score": 105,
+      "pct": 83.8,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 4 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 10,
+          "detail": "Has data access but shared schema",
+          "gap": "Shared data ownership",
+          "fix": "Create dedicated vault subdirectory and journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Turn business diagnostics into guided conversations that clo...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Turn business diagnostics into guided conversations that close themselves.",
+      "pricing_tier": "department",
+      "suggested_price": "$497/engagement",
+      "market_category": "Sales Automation",
+      "certified_at": "2026-04-06T20:06:27.992659+00:00"
+    },
+    "dashboard_engine": {
+      "node_id": "dashboard_engine",
+      "name": "Dashboard Engine",
+      "module": "dashboard_engine",
+      "total_score": 98,
+      "max_score": 105,
+      "pct": 93.3,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 2 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 2 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'See your entire operation in one view \u2014 nodes, revenue, cont...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "See your entire operation in one view \u2014 nodes, revenue, content, and intelligence.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$49/mo",
+      "market_category": "Business Intelligence",
+      "certified_at": "2026-04-06T20:06:28.013410+00:00"
+    },
+    "reputation_manager": {
+      "node_id": "reputation_manager",
+      "name": "Reputation Manager",
+      "module": "reputation_manager",
+      "total_score": 93,
+      "max_score": 105,
+      "pct": 88.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 4 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Monitor reviews, generate responses, and track reputation sc...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Monitor reviews, generate responses, and track reputation score across platforms.",
+      "pricing_tier": "solo",
+      "suggested_price": "$79/mo",
+      "market_category": "Reputation Management",
+      "certified_at": "2026-04-06T20:06:28.037680+00:00"
+    },
+    "paperclip_governance": {
+      "node_id": "paperclip_governance",
+      "name": "Paperclip Governance",
+      "module": "paperclip_governance",
+      "total_score": 93,
+      "max_score": 105,
+      "pct": 88.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "3 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "2 classes, 7 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Deploy autonomous agents with constitutional guardrails and ...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Deploy autonomous agents with constitutional guardrails and proof-of-execution.",
+      "pricing_tier": "department",
+      "suggested_price": "$297/mo",
+      "market_category": "Agent Governance",
+      "certified_at": "2026-04-06T20:06:28.073039+00:00"
+    },
+    "browser_use_node": {
+      "node_id": "browser_use_node",
+      "name": "BrowserUse Node",
+      "module": "nodes.browser_use_node",
+      "total_score": 98,
+      "max_score": 105,
+      "pct": 93.3,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 15,
+          "detail": "Imports cleanly with 2 EPOS deps"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 2 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 1 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Automate any browser workflow autonomously without a live Cl...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Automate any browser workflow autonomously without a live Claude session.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$79/mo",
+      "market_category": "Browser Automation",
+      "certified_at": "2026-04-06T20:06:28.088143+00:00"
+    },
+    "ttlg_v2_pipeline": {
+      "node_id": "ttlg_v2_pipeline",
+      "name": "TTLG v2 Pipeline",
+      "module": "ttlg.pipeline_graph",
+      "total_score": 88,
+      "max_score": 105,
+      "pct": 83.8,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "4 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "2 classes, 17 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 5 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 10,
+          "detail": "Has data access but shared schema",
+          "gap": "Shared data ownership",
+          "fix": "Create dedicated vault subdirectory and journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Run AI-powered business diagnostics that prescribe exact sol...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Run AI-powered business diagnostics that prescribe exact solutions with machine-readable deployment specs.",
+      "pricing_tier": "department",
+      "suggested_price": "$997/engagement",
+      "market_category": "Business Intelligence",
+      "certified_at": "2026-04-06T20:06:28.293484+00:00"
+    },
+    "self_healing_engine": {
+      "node_id": "self_healing_engine",
+      "name": "Self-Healing Engine",
+      "module": "ttlg.self_healing_scout",
+      "total_score": 93,
+      "max_score": 105,
+      "pct": 88.6,
+      "readiness": "MARKETPLACE_READY",
+      "criteria": {
+        "standalone_import": {
+          "score": 10,
+          "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+          "gap": "3 internal dependencies",
+          "fix": "Create adapter interfaces for EPOS-specific imports"
+        },
+        "self_test": {
+          "score": 15,
+          "detail": "Has self-test with assertions and PASS output"
+        },
+        "api_surface": {
+          "score": 15,
+          "detail": "1 classes, 2 public methods, documented"
+        },
+        "event_bus": {
+          "score": 12,
+          "detail": "Publishes 6 events, no subscription",
+          "gap": "One-way event flow",
+          "fix": "Add event subscription for reactive behavior"
+        },
+        "data_sovereignty": {
+          "score": 15,
+          "detail": "Owns vault path + JSONL journal"
+        },
+        "configuration": {
+          "score": 15,
+          "detail": "Env-configurable with defaults and init params"
+        },
+        "value_proposition": {
+          "score": 11,
+          "detail": "'Detect and fix operational failures automatically with const...'",
+          "gap": "needs action verb",
+          "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+        }
+      },
+      "hardening_needed": [],
+      "value_prop": "Detect and fix operational failures automatically with constitutional governance and audit trails.",
+      "pricing_tier": "workflow",
+      "suggested_price": "$149/mo",
+      "market_category": "DevOps & Monitoring",
+      "certified_at": "2026-04-06T20:06:28.330476+00:00"
+    }
+  }
+}

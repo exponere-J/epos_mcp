@@ -1,0 +1,48 @@
+{
+  "client_id": "epos_ecosystem",
+  "composite_score": 88.0,
+  "tracks": {
+    "marketing": {
+      "score": 22.0,
+      "verdict": "LEARN",
+      "gaps": 2,
+      "prescriptions": 3,
+      "has_trajectory": true,
+      "has_value_at_risk": true,
+      "mirror_chars": 4812,
+      "bifurcated": true
+    },
+    "sales": {
+      "score": 22.0,
+      "verdict": "LEARN",
+      "gaps": 2,
+      "prescriptions": 3,
+      "has_trajectory": true,
+      "has_value_at_risk": true,
+      "mirror_chars": 5182,
+      "bifurcated": true
+    },
+    "service": {
+      "score": 22.0,
+      "verdict": "LEARN",
+      "gaps": 2,
+      "prescriptions": 3,
+      "has_trajectory": true,
+      "has_value_at_risk": true,
+      "mirror_chars": 5054,
+      "bifurcated": true
+    },
+    "governance": {
+      "score": 22.0,
+      "verdict": "LEARN",
+      "gaps": 2,
+      "prescriptions": 3,
+      "has_trajectory": true,
+      "has_value_at_risk": true,
+      "mirror_chars": 5025,
+      "bifurcated": true
+    }
+  },
+  "p0_p2_verified": true,
+  "verified_at": "2026-04-01"
+}

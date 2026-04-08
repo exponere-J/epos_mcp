@@ -1,0 +1,6 @@
+{"lead_id": "bbd728a1", "run_id": "node_alpha", "company": "ACME Testing ", "budget": "$2.000", "source": "Inbound", "context": "", "timestamp": 1766579077.35007}
+{"lead_id": "1872569a", "run_id": "node_alpha", "company": "ACME", "budget": "$2,000f", "source": "Inbound", "context": "", "timestamp": 1766579794.0165925}
+{"lead_id": "a081e92e", "run_id": "node_alpha", "company": "ACME", "budget": "$2000", "source": "Inbound", "context": "", "timestamp": 1766579967.3461092}
+{"lead_id": "eab40839", "run_id": "node_alpha", "company": "acme", "budget": "$2,000", "source": "Inbound", "context": "", "timestamp": 1766591304.6598983}
+{"lead_id": "deeeb7c3", "run_id": "node_alpha", "company": "BridgeTest Corp .", "budget": "", "source": "Inbound", "context": "", "timestamp": 1766601492.546869}
+{"lead_id": "fc9384ff", "run_id": "node_alpha", "company": "Test Corp.", "budget": "$50K", "source": "Inbound", "context": "", "timestamp": 1766610614.4994721}

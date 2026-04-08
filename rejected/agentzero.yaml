@@ -1,0 +1,16 @@
+models:
+  phi3_mini:
+    provider: ollama
+    model: phi3:mini
+    api_url: http://host.docker.internal:11434
+    context_length: 4096
+
+context:
+  project_root: /app/context
+  system_briefing: |
+    EPOS SYSTEM OVERVIEW:
+    - Multi-agent orchestration platform with hybrid MARL reward bus
+    - Current status: Dockerized Agent Zero integrated with local Phi-3 Mini
+    - Project root: /app/context (epos_mcp)
+    - Business readiness: Prototyping → MVP → Production phases
+    - Goal: Intelligent agent system for business automation and decision-making

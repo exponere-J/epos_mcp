@@ -1,0 +1,26 @@
+{
+  "mission_id": "AZ-001-NERVOUS-SYSTEM",
+  "title": "Deploy Unified Nervous System",
+  "description": "Stand up Event Bus, Context Vault, and MCP servers",
+  "priority": "CRITICAL",
+  "week": 1,
+  "estimated_duration": "4 hours",
+  "dependencies": [],
+  "tasks": [
+    "Validate Context Vault structure",
+    "Start Event Bus on port 8008",
+    "Start Context MCP server on port 8009",
+    "Validate all health endpoints responding",
+    "Log success to context_vault/missions/az_executions/"
+  ],
+  "constitutional_compliance": [
+    "Article II: No silent failures",
+    "Article XII: GRAG governance"
+  ],
+  "success_criteria": [
+    "All /health endpoints return 200",
+    "Event published to Bus",
+    "Context query returns results"
+  ],
+  "failure_recovery": "Restart services individually, check port conflicts, validate paths"
+}

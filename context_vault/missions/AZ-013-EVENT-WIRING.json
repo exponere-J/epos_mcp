@@ -1,0 +1,17 @@
+{
+    "description":  "Execution steps defined in EPOS_AZ_MISSION_PACK.html under mission ID AZ-013-EVENT-WIRING.",
+    "estimated_duration":  "2-4 hours",
+    "priority":  "HIGH",
+    "authority":  "EPOS_CONSTITUTION_v3.1.md",
+    "design_file":  "context_vault/missions/EPOS_AZ_MISSION_PACK.html",
+    "dependencies":  [
+
+                     ],
+    "status":  "proposed",
+    "mission_id":  "AZ-013-EVENT-WIRING",
+    "title":  "Event Bus Subscription Wiring",
+    "week":  "Sprint Day 3-4",
+    "tasks":  [
+                  "See EPOS_AZ_MISSION_PACK.html for deterministic execution steps"
+              ]
+}

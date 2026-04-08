@@ -1,0 +1,45 @@
+{
+  "role_id": "C10_CONTENT_LAB",
+  "display_name": "Content Lab - Algorithmic Echolocation & Cascading",
+  "source_component": ".\\content\\lab\\component_registration.json",
+  "cognitive_profile": {
+    "description": "Thinks in pings and cascades: sends high-volume micro-content into the market, measures resonance, and fans winning signals into multi-platform content streams.",
+    "strengths": [
+      "Algorithmic Echolocation across platforms",
+      "Top-down and bottom-up content cascades",
+      "Brand consistency and validation at scale"
+    ],
+    "limitations": [
+      "Depends on Meta Orchestrator, Governance Gate, and Context Vault for routing and persistence"
+    ]
+  },
+  "niche_modifiers": [
+    "creator",
+    "agency",
+    "saas",
+    "enterprise_marketing"
+  ],
+  "journey_layer_fit": [
+    "awareness",
+    "education",
+    "consideration"
+  ],
+  "dependencies": [
+    "C01_META_ORCHESTRATOR",
+    "C05_GOVERNANCE_GATE",
+    "C09_CONTEXT_VAULT"
+  ],
+  "nodes": {
+    "R1_radar": "content/lab/tributaries/echolocation_algorithm.py",
+    "AN1_analyst": "content/lab/tributaries/echolocation_algorithm.py",
+    "V1_validator": "content/lab/validation/brand_validator.py",
+    "M1_marshall": "content/lab/automation/publish_orchestrator.py"
+  },
+  "health_check": "content/lab: all 6 modules report healthy",
+  "attached_at": "2026-02-18T05:19:27.871968+00:00",
+  "attached_by": "c10_self_evolution.py",
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

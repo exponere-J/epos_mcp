@@ -1,0 +1,21 @@
+{
+  "review_id": "REV-6da1acc2",
+  "client_id": "test_client",
+  "platform": "yelp",
+  "reviewer": "Bob S",
+  "rating": 2,
+  "text": "Terrible experience. Unprofessional and disappointing.",
+  "review_date": "2026-04-04",
+  "sentiment": "negative",
+  "sentiment_score": -0.5,
+  "keywords": [
+    "professional",
+    "terrible",
+    "unprofessional",
+    "disappointing"
+  ],
+  "response_needed": true,
+  "response_generated": true,
+  "ingested_at": "2026-04-04T16:20:39.723737+00:00",
+  "suggested_response": "\"Dear valued customer, \n\nI'm so sorry to hear that your experience with us fell short of your expectations. We take all feedback seriously and would like to make things right. Could you please contact us directly so we can discuss what went wrong and how we can improve our service for you in the future? Your satisfaction is our top priority, and we appreciate your feedback in helping us grow. Thank you for bringing this to our attention, and we look forward to the opportunity to serve you better.\""
+}

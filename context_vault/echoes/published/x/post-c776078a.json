@@ -1,0 +1,20 @@
+{
+  "id": "post-c776078a",
+  "platform": "x",
+  "mode": "profile",
+  "content_type": "text",
+  "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...",
+  "media_url": null,
+  "cta_token": "ECHO-20260406-cacb8f",
+  "stagger_minutes": 0,
+  "created_at": "2026-04-06T12:37:19.747375+00:00",
+  "status": "published",
+  "truncated": true,
+  "published_at": "2026-04-06T12:37:19.750388+00:00",
+  "result": {
+    "success": true,
+    "method": "staged",
+    "message": "Post staged at C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\ready_to_post\\x\\post-c776078a.txt. Copy and paste to publish.",
+    "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\ready_to_post\\x\\post-c776078a.txt"
+  }
+}

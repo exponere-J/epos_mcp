@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "niche_id": "lego_affiliate",
+  "niche_name": "LEGO Affiliate \u2014 YouTube Shorts",
+  "created_at": "2026-03-28T19:05:06.680248+00:00",
+  "last_updated": "2026-03-29T19:42:02.362792+00:00",
+  "attention_map": {
+    "primary_platforms": [
+      "youtube_shorts",
+      "tiktok",
+      "instagram_reels"
+    ],
+    "content_formats": [
+      "avatar_video_30s",
+      "avatar_video_60s",
+      "unboxing_style",
+      "review_style",
+      "list_style"
+    ],
+    "posting_cadence": {
+      "platform": "youtube_shorts",
+      "optimal_days": [
+        "monday",
+        "wednesday",
+        "friday",
+        "saturday"
+      ],
+      "optimal_times_utc": [
+        "14:00",
+        "18:00",
+        "20:00"
+      ]
+    },
+    "scan_targets": []
+  },
+  "desire_vocabulary": {
+    "pain_language": [
+      "which LEGO set is worth it",
+      "LEGO too expensive",
+      "hard to find",
+      "sold out",
+      "best value LEGO"
+    ],
+    "outcome_language": [
+      "perfect gift",
+      "hours of fun",
+      "display worthy",
+      "collector value",
+      "goes up in price"
+    ],
+    "objection_language": [
+      "too many pieces",
+      "not for beginners",
+      "overpriced",
+      "takes too long",
+      "just for kids"
+    ],
+    "tribal_markers": [
+      "AFOL",
+      "adult fan of LEGO",
+      "retirement set",
+      "Icons series",
+      "Technic",
+      "Creator Expert",
+      "minifig",
+      "poly bag"
+    ]
+  },
+  "purchase_intent_signals": {
+    "behavioral": [
+      "saves video (high weight)",
+      "clicks description link",
+      "comments asking price or availability",
+      "returns to video multiple times"
+    ],
+    "language_patterns": [
+      "where can I buy",
+      "is this still available",
+      "how much does it cost",
+      "link in bio",
+      "does Amazon have this"
+    ],
+    "platform_signals": [
+      "description link tap",
+      "pinned comment click",
+      "end screen tap"
+    ],
+    "threshold_score": 45
+  },
+  "margin_matrix": {
+    "affiliate_programs": [
+      {
+        "program_name": "Amazon Associates \u2014 Toys",
+        "network": "amazon_associates",
+        "commission_rate": 0.03,
+        "cookie_window_hours": 24,
+        "avg_order_value": 85.0,
+        "product_price_range": {
+          "min": 15,
+          "max": 800
+        },
+        "approval_status": "applied"
+      },
+      {
+        "program_name": "LEGO Affiliate Program",
+        "network": "impact",
+        "commission_rate": 0.0,
+        "cookie_window_hours": 0,
+        "avg_order_value": 120.0,
+        "product_price_range": {
+          "min": 10,
+          "max": 900
+        },
+        "approval_status": "applied"
+      }
+    ],
+    "production_cost_per_video": 2.5,
+    "break_even_eri_score": 35,
+    "target_monthly_revenue": 500.0,
+    "videos_needed_at_break_even": 67
+  },
+  "proof_benchmark": {
+    "competitor_scan_date": "",
+    "top_competitor_eri_scores": [],
+    "median_eri_score": 0,
+    "eri_score_90th_percentile": 0,
+    "typical_views_at_30_days": 0,
+    "typical_engagement_rate": 0.0,
+    "baseline_calibrated": false,
+    "hook_performance": {
+      "list": 0.72,
+      "question": 0.45
+    },
+    "last_calibrated": "2026-03-29T19:42:02.362792+00:00"
+  }
+}

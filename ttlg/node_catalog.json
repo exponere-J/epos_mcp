@@ -1,0 +1,26 @@
+{
+  "catalog_version": "1.0",
+  "last_updated": "2026-04-04",
+  "nodes": {
+    "ccp_engine": {"name": "CCP Engine", "score": 105, "capabilities": ["context_parsing", "vector_routing", "research_generation", "depth_flagging"], "monthly_cost": 99, "category": "intelligence"},
+    "event_bus": {"name": "Event Bus", "score": 105, "capabilities": ["pub_sub", "event_logging", "trace_replay"], "monthly_cost": 29, "category": "infrastructure"},
+    "governance_gate": {"name": "Governance Gate", "score": 102, "capabilities": ["file_triage", "auto_repair", "constitutional_enforcement", "watermarking"], "monthly_cost": 199, "category": "governance"},
+    "consumer_journey": {"name": "Consumer Journey", "score": 102, "capabilities": ["lead_routing", "stage_management", "offer_tiering", "journey_tracking"], "monthly_cost": 199, "category": "sales"},
+    "multimodal_router": {"name": "Multimodal Router", "score": 98, "capabilities": ["image_generation", "local_llm", "provider_failover", "model_routing"], "monthly_cost": 79, "category": "ai_infrastructure"},
+    "dashboard_engine": {"name": "Dashboard Engine", "score": 98, "capabilities": ["ecosystem_aggregation", "health_monitoring", "revenue_tracking", "content_pipeline_view"], "monthly_cost": 49, "category": "interface"},
+    "context_graph": {"name": "Context Graph", "score": 97, "capabilities": ["knowledge_graph", "ema_learning", "hook_optimization", "edge_weighting"], "monthly_cost": 99, "category": "memory"},
+    "epos_doctor": {"name": "EPOS Doctor", "score": 97, "capabilities": ["health_checks", "self_healing", "constitutional_validation", "governance_audit"], "monthly_cost": 49, "category": "health"},
+    "payment_gateway": {"name": "Payment Gateway", "score": 95, "capabilities": ["stripe_integration", "invoice_generation", "subscription_management", "webhook_processing"], "monthly_cost": 49, "category": "financial"},
+    "idea_pipeline": {"name": "Idea Pipeline", "score": 93, "capabilities": ["idea_capture", "triage", "research_brief_generation", "build_queue"], "monthly_cost": 29, "category": "research"},
+    "fotw_listener": {"name": "FOTW Listener", "score": 93, "capabilities": ["expression_capture", "intent_classification", "interest_clustering", "lead_signal_routing"], "monthly_cost": 99, "category": "intelligence"},
+    "reputation_manager": {"name": "Reputation Manager", "score": 93, "capabilities": ["review_monitoring", "sentiment_analysis", "response_generation", "reputation_scoring"], "monthly_cost": 79, "category": "service"},
+    "paperclip_governance": {"name": "Paperclip Governance", "score": 93, "capabilities": ["mission_governance", "execution_receipts", "rollback_management", "tier_escalation"], "monthly_cost": 297, "category": "execution"},
+    "rs1_research": {"name": "RS1 Research Engine", "score": 92, "capabilities": ["skill_compilation", "research_briefs", "7_vector_analysis"], "monthly_cost": 49, "category": "research"},
+    "lead_scoring": {"name": "Lead Scoring", "score": 92, "capabilities": ["behavioral_scoring", "engagement_scoring", "fit_scoring", "recency_scoring"], "monthly_cost": 79, "category": "sales"},
+    "friday_intelligence": {"name": "Friday Intelligence", "score": 92, "capabilities": ["pattern_learning", "idea_triage", "daily_anchors", "steward_signals"], "monthly_cost": 297, "category": "orchestration"},
+    "lifeos": {"name": "LifeOS", "score": 92, "capabilities": ["goal_tracking", "energy_monitoring", "growth_timeline", "relationship_os"], "monthly_cost": 29, "category": "orchestration"},
+    "content_lab": {"name": "Content Lab", "score": 91, "capabilities": ["script_generation", "eri_prediction", "brand_validation", "cascade_optimization", "schedule_generation"], "monthly_cost": 149, "category": "content"},
+    "ttlg_conversational": {"name": "Conversational TTLG", "score": 88, "capabilities": ["guided_diagnostic", "session_management", "mirror_report_preview", "tier_recommendation"], "monthly_cost": 497, "category": "diagnostic"}
+  },
+  "margin_floor": 1.3
+}

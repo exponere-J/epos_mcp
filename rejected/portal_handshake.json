@@ -1,0 +1,16 @@
+{
+  "id": "portal_handshake",
+  "description": "Validate external tunnel / ngrok status.",
+  "steps": [
+    {
+      "id": "check_portal",
+      "type": "shell",
+      "command": "echo 'portal check stub – replace with ngrok API call'"
+    },
+    {
+      "id": "log_result",
+      "type": "log",
+      "event": "portal_health_checked"
+    }
+  ]
+}

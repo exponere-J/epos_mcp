@@ -1,0 +1,35 @@
+{
+  "niche": "saas",
+  "track": "sales",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Sales Funnel Optimization",
+    "Customer Acquisition Cost (CAC) Reduction",
+    "Sales Team Performance Metrics",
+    "Competitor Analysis and Market Share",
+    "Revenue Growth and Forecasting"
+  ],
+  "key_bottleneck_patterns": [
+    "Inefficient Lead Qualification and Handoff",
+    "Insufficient Sales Enablement and Training",
+    "Poor Sales and Marketing Alignment"
+  ],
+  "thinker_context": "The SaaS sales landscape is highly competitive, with companies constantly seeking to optimize their sales funnels, reduce customer acquisition costs, and improve sales team performance. To stay ahead, SaaS businesses must be able to identify and address key bottlenecks in their sales processes, such as inefficient lead qualification and handoff, insufficient sales enablement and training, and poor sales and marketing alignment. By doing so, they can improve revenue growth, increase market share, and ultimately drive business success.",
+  "surgeon_priorities": [
+    "Implementing Data-Driven Sales Forecasting and Pipeline Management",
+    "Developing and Executing a Comprehensive Sales Enablement Strategy",
+    "Enhancing Sales and Marketing Alignment through Shared Goals and Metrics"
+  ],
+  "mirror_report_tone": "Data-Driven, Action-Oriented, and Empathetic",
+  "desire_vocabulary": [
+    "Revenue Growth",
+    "Sales Efficiency",
+    "Customer Satisfaction",
+    "Competitive Advantage",
+    "Scalability",
+    "Predictability",
+    "Profitability",
+    "Sustainability"
+  ],
+  "generated_at": "2026-03-29T19:07:12.390687+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Market Forward Intelligence Audit",
+  "version": "1.0",
+  "target": "client",
+  "context": {
+    "domain": "general",
+    "market_position": "challenger",
+    "assessment_type": "market_forward",
+    "time_horizon_days": 14
+  },
+  "phases": {
+    "scout": {
+      "scope": ["marketing", "sales", "competitive_landscape", "market_signals"],
+      "depth": "standard",
+      "measurement_points": ["recent_market_shifts", "competitor_movements", "technology_releases", "regulatory_changes"]
+    },
+    "thinker": {
+      "weighting_model": "market_forward",
+      "extract_intelligence": ["emerging_threats", "positioning_opportunities", "benchmark_drift", "timing_windows"]
+    },
+    "gate": {
+      "approval_criteria": "market_timing",
+      "auto_remediate": false,
+      "escalation_threshold": 3
+    },
+    "surgeon": {
+      "change_scope": "advisory",
+      "priority_filter": "competitive_urgency",
+      "max_prescriptions_per_gap": 3
+    },
+    "analyst": {
+      "verification_metrics": ["market_share_projection", "competitive_gap_closure", "first_mover_advantage"],
+      "projection_days": [14, 30, 90]
+    }
+  },
+  "output_format": {
+    "type": "strategic_intelligence",
+    "sections": ["market_shifts", "competitive_implications", "positioning_recommendations", "timing_windows", "action_items"]
+  }
+}

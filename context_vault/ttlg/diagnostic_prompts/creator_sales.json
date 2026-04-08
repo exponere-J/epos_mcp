@@ -1,0 +1,35 @@
+{
+  "niche": "creator",
+  "track": "sales",
+  "version": "1.0",
+  "scout_dimensions": [
+    "audience engagement",
+    "content quality",
+    "monetization strategies",
+    "marketing effectiveness",
+    "revenue growth"
+  ],
+  "key_bottleneck_patterns": [
+    "inconsistent content scheduling",
+    "ineffective audience targeting",
+    "insufficient sales funnel optimization"
+  ],
+  "thinker_context": "As a creator, driving sales is crucial to sustaining and growing a business. However, many creators struggle to effectively monetize their audience and content, often due to a lack of clear sales strategies, inadequate marketing efforts, or insufficient understanding of their target audience. To address these challenges, it's essential to identify and analyze the key bottlenecks hindering sales growth and develop targeted prescriptions to overcome them.",
+  "surgeon_priorities": [
+    "developing a robust sales funnel",
+    "implementing data-driven marketing strategies",
+    "creating engaging and relevant content"
+  ],
+  "mirror_report_tone": "empowering and actionable, with a focus on providing creators with practical advice and strategies to enhance their sales performance",
+  "desire_vocabulary": [
+    "growth",
+    "engagement",
+    "revenue",
+    "audience",
+    "monetization",
+    "success",
+    "impact",
+    "sustainability"
+  ],
+  "generated_at": "2026-03-29T19:07:23.654589+00:00"
+}

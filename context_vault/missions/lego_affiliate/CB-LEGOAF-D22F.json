@@ -1,0 +1,16 @@
+{
+  "brief_id": "CB-LEGOAF-D22F",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-04-04T16:05:25.551461+00:00",
+  "source_spark_id": "SPARK-099677ae",
+  "angle_type": "educator",
+  "hook_type": "question",
+  "visual_mask": "clean_professional",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Helping LEGO enthusiasts make informed purchasing decisions by reviewing and comparing the value of different LEGO sets",
+  "hook_line": "Which LEGO set is actually worth your hard-earned cash?",
+  "cta": "Check the links in our description to find the best LEGO deals",
+  "predicted_eri_score": 0,
+  "affiliate_products": [],
+  "status": "draft"
+}

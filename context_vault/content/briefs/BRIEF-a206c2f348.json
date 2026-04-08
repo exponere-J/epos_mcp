@@ -1,0 +1,81 @@
+{
+  "brief_id": "BRIEF-a206c2f348",
+  "created_at": "2026-04-07T15:25:43.807902+00:00",
+  "topic": "What is Echolocation and why does it matter for your business?",
+  "target_avatar": "local_champion",
+  "avatar_display_name": "The Local Champion",
+  "angle": "closer",
+  "angle_stance": "Action-oriented / urgency",
+  "format": "email",
+  "tone": "Conversational, plain English, no jargon, results-focused",
+  "vocabulary_include": [
+    "pressure washing",
+    "landscaping",
+    "roofing",
+    "hvac",
+    "plumbing",
+    "electrician",
+    "painting",
+    "cleaning service",
+    "lawn care",
+    "handyman",
+    "Jobs",
+    "leads",
+    "calls",
+    "reviews",
+    "schedule",
+    "booked"
+  ],
+  "vocabulary_exclude": [
+    "saas",
+    "enterprise",
+    "venture",
+    "tech startup",
+    "b2b software",
+    "api",
+    "developer",
+    "engineering team"
+  ],
+  "hook": "If you don't fix great at the job, terrible at marketing this month, next quarter is already compromised.",
+  "structure": {
+    "opening": "Acknowledge the specific reality this avatar lives in \u2014 use their vocabulary, not yours.",
+    "value": "Name the cost of What is Echolocation and why does it matter for your business? in terms this avatar tracks (time, money, or reputation).",
+    "evidence": "Show proof in the format they trust: Photos, dollar amounts, booked calendar screenshots.",
+    "system": "Present the fix as a repeatable system, not a one-off tactic.",
+    "cta": "Free 'lead response scorecard' \u2014 how fast are you really responding?",
+    "signoff": "1% daily. 37x annually."
+  },
+  "cta_token": "ECHO-2026-04-LOCAL_CHAMPION-WHAT-IS-ECHOLOCATION",
+  "constraints": {
+    "max_words": 200,
+    "must_include_dollar_amount": true,
+    "must_include_comparison": false,
+    "must_include_screenshot": true,
+    "must_include_case_study": false,
+    "preferred_send_time": "05:00-07:00 local"
+  },
+  "predicted_resonance": 79.5,
+  "optimization_notes": [
+    "Lead with a dollar amount \u2014 this avatar responds to financial framing.",
+    "Include a before/after or visual comparison \u2014 this avatar's top performers all had them.",
+    "Attach a screenshot as proof \u2014 raw evidence beats explanation.",
+    "Keep it tight \u2014 this avatar's dwell time drops fast on long content.",
+    "Use vocabulary the avatar recognizes: Jobs, leads, calls, reviews, schedule, booked, crew, trucks"
+  ],
+  "primary_channels": [
+    "Email",
+    "SMS/text",
+    "Facebook",
+    "Google Business Profile"
+  ],
+  "proof_type": "Photos, dollar amounts, booked calendar screenshots",
+  "price_tolerance": {
+    "monthly_floor": 99,
+    "monthly_ceiling": 297,
+    "one_time_floor": 300,
+    "one_time_ceiling": 1500,
+    "currency": "USD"
+  },
+  "prediction_id": "PRED-03f4caec2f26",
+  "spark_ref": "SPARK-E2E-20260407152543"
+}

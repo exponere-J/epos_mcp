@@ -1,0 +1,5 @@
+Task ID,Task Name,Project ID,Status,Priority,Owner,Estimate (hrs),Blocker,Next Action,Notes
+TASK-001,Generate codebase snapshot for Claude,PROJ-002,In Progress,Highest,Jamie,0.3,,Run print_codebase.py and verify output,
+TASK-002,Add decision_graph.json to kernel/config,PROJ-002,Planned,Highest,EPOS,0.5,,Create file + minimal routes,
+TASK-003,Implement router loader + evaluator,PROJ-002,Planned,Highest,EPOS,1.5,,Create router module + tests,
+TASK-004,Import Airtable MVP tables,PROJ-003,Planned,High,Jamie,0.7,,Import CSVs in order,

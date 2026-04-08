@@ -1,0 +1,17 @@
+{
+    "description":  "Execution steps defined in EPOS_AZ_MISSION_PACK.html under mission ID AZ-011-SA-HITL-FLOW.",
+    "estimated_duration":  "2-4 hours",
+    "priority":  "HIGH",
+    "authority":  "EPOS_CONSTITUTION_v3.1.md",
+    "design_file":  "context_vault/missions/EPOS_AZ_MISSION_PACK.html",
+    "dependencies":  [
+
+                     ],
+    "status":  "proposed",
+    "mission_id":  "AZ-011-SA-HITL-FLOW",
+    "title":  "Steward Advisor Option + Approval Flow",
+    "week":  "Sprint Day 3",
+    "tasks":  [
+                  "See EPOS_AZ_MISSION_PACK.html for deterministic execution steps"
+              ]
+}

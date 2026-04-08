@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "niche_id": "",
+  "niche_name": "",
+  "created_at": "",
+  "last_updated": "",
+
+  "attention_map": {
+    "primary_platforms": [],
+    "content_formats": [],
+    "posting_cadence": {
+      "platform": "",
+      "optimal_days": [],
+      "optimal_times_utc": []
+    },
+    "scan_targets": []
+  },
+
+  "desire_vocabulary": {
+    "pain_language": [],
+    "outcome_language": [],
+    "objection_language": [],
+    "tribal_markers": []
+  },
+
+  "purchase_intent_signals": {
+    "behavioral": [],
+    "language_patterns": [],
+    "platform_signals": [],
+    "threshold_score": 0
+  },
+
+  "margin_matrix": {
+    "affiliate_programs": [
+      {
+        "program_name": "",
+        "network": "",
+        "commission_rate": 0.0,
+        "cookie_window_hours": 0,
+        "avg_order_value": 0.0,
+        "product_price_range": {"min": 0, "max": 0},
+        "approval_status": ""
+      }
+    ],
+    "production_cost_per_video": 0.0,
+    "break_even_eri_score": 0,
+    "target_monthly_revenue": 0.0,
+    "videos_needed_at_break_even": 0
+  },
+
+  "proof_benchmark": {
+    "competitor_scan_date": "",
+    "top_competitor_eri_scores": [],
+    "median_eri_score": 0,
+    "eri_score_90th_percentile": 0,
+    "typical_views_at_30_days": 0,
+    "typical_engagement_rate": 0.0,
+    "baseline_calibrated": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "role": "m1_marshall",
+  "name": "M1 Marshall \u2014 Distribution Orchestration",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "Multi-platform content distribution benchmarks 2026",
+  "methodology": "Staggered publishing (0-78 hour offsets) with platform-native formatting and CTA tracking",
+  "key_metrics": {
+    "platform_coverage": "5 platforms",
+    "stagger_cadence": "LinkedIn T+0, X T+2h, TikTok T+59h",
+    "cta_attribution": "unique token per platform per piece"
+  },
+  "epos_implementation": "M1 Marshall schedules + M1 Publisher stages/posts",
+  "operational_validation": "pending_cycle_1"
+}

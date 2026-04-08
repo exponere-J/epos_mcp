@@ -1,0 +1,12 @@
+{
+  "$id": "core._defs",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EPOS Shared Definitions",
+  "type": "object",
+  "additionalProperties": false,
+  "$defs": {
+    "schema_id": { "type": "string", "minLength": 1 },
+    "iso_datetime": { "type": "string", "minLength": 1 },
+    "non_empty_string": { "type": "string", "minLength": 1 }
+  }
+}

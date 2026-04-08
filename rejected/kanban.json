@@ -1,0 +1,9 @@
+{
+  "todo": [
+    "Wire Phi-4 into Orchestrator prompt for local ops",
+    "Verify epos_runner /health endpoint",
+    "Test cockpit StoryEngine tab with a real PGP campaign"
+  ],
+  "doing": [],
+  "done": []
+}

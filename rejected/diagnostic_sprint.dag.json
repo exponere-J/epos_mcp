@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "runbook": "Diagnostic Sprint (7-Day Cycle)",
+  "schedule": [
+    {
+      "day": 1,
+      "phase": "COGNITIVE_CAPTURE",
+      "tasks": [
+        { 
+          "type": "lead.ingest.passive", 
+          "inputs": { "source": "manual_intake", "poll_interval": 60 } 
+        },
+        { 
+          "type": "shadow.predict", 
+          "inputs": { "lead_id": "latest" } 
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "phase": "PATTERN_SYNTHESIS",
+      "tasks": [
+        { 
+          "type": "rules.synthesize", 
+          "inputs": { "min_samples": 3 } 
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "phase": "HANDOVER",
+      "tasks": [
+        { 
+          "type": "handover.switch.propose", 
+          "inputs": { "threshold": 0.90 } 
+        }
+      ]
+    }
+  ]
+}

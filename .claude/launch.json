@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "epos-api",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "uvicorn", "epos_runner:app", "--host", "127.0.0.1", "--port", "8001", "--reload"],
+      "port": 8001
+    },
+    {
+      "name": "friday-ui",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "streamlit", "run", "app.py", "--server.port", "8502"],
+      "port": 8502
+    }
+  ]
+}

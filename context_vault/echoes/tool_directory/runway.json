@@ -1,0 +1,9 @@
+{
+  "id": "runway",
+  "name": "Runway",
+  "category": "video",
+  "use_case": "Cinematic AI video generation",
+  "tier": "L3+",
+  "url": "https://runway.ml",
+  "added_at": "2026-03-29T12:48:15.812144+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "role": "lead_scoring",
+  "name": "Lead Scoring \u2014 4-Dimension Scoring",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "AI lead scoring benchmarks 2026 \u2014 behavioral + predictive models",
+  "methodology": "4-dimension weighted scoring: behavioral 40%, engagement 25%, fit 20%, recency 15%",
+  "key_metrics": {
+    "scoring_accuracy": "70-80% for qualified lead prediction",
+    "escalation_threshold": "score >= 85",
+    "update_cadence": "real-time on events"
+  },
+  "epos_implementation": "Lead Scoring Engine (92/105) with event bus integration",
+  "operational_validation": "pending_cycle_1"
+}

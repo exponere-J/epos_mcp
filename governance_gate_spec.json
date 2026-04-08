@@ -1,0 +1,433 @@
+{
+  "component_name": "governance_gate.py",
+  "version": "1.0.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md Article II + Article III",
+  "created": "2026-01-31",
+  "purpose": "Automated constitutional enforcement through code validation",
+  
+  "implementation_requirements": {
+    "file_header": {
+      "required": true,
+      "format": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\governance_gate.py",
+      "constitutional_reference": "PATH_CLARITY_RULES.md"
+    },
+    
+    "python_version": {
+      "minimum": "3.11.0",
+      "validation": "sys.version_info check at import",
+      "constitutional_reference": "Article II Rule 3"
+    },
+    
+    "pre_flight_check": {
+      "required": true,
+      "method": "Call epos_doctor.py before validation",
+      "exit_on_failure": true,
+      "constitutional_reference": "Article III"
+    },
+    
+    "dotenv_loading": {
+      "required": true,
+      "method": "load_dotenv(Path(__file__).parent / '.env')",
+      "constitutional_reference": "Article II Rule 6"
+    }
+  },
+  
+  "command_line_interface": {
+    "usage": "python governance_gate.py [OPTIONS]",
+    "options": {
+      "--dry-run": {
+        "description": "Audit only, no file movement",
+        "default": false
+      },
+      "--verbose": {
+        "description": "Detailed output with reasons",
+        "default": false
+      },
+      "--auto-fix": {
+        "description": "Automatically fix violations where possible",
+        "default": false,
+        "limited_to": ["ERR-HEADER-001", "ERR-ENTRYPOINT-002", "ERR-CONFIG-001"]
+      },
+      "--check-context": {
+        "description": "Validate Context Vault references",
+        "default": true
+      },
+      "--audit-engine": {
+        "description": "Re-validate all files in engine/ directory",
+        "default": false
+      },
+      "--override": {
+        "description": "Manually promote file (requires --reason)",
+        "requires": "--reason and human approval",
+        "logged": true
+      },
+      "--json": {
+        "description": "Output results as JSON",
+        "default": false
+      }
+    }
+  },
+  
+  "core_classes": {
+    "GovernanceGate": {
+      "purpose": "Main orchestrator for validation workflow",
+      "methods": {
+        "__init__": {
+          "parameters": ["verbose: bool", "dry_run: bool", "auto_fix: bool", "check_context: bool"],
+          "initializes": ["violation_codes", "statistics", "epos_root", "inbox_path", "engine_path", "rejected_path"]
+        },
+        
+        "load_violation_codes": {
+          "returns": "dict",
+          "source": "VIOLATION_CODES.json",
+          "validates": "JSON schema",
+          "error_handling": "Exit code 2 if invalid"
+        },
+        
+        "run": {
+          "returns": "int (exit code)",
+          "workflow": [
+            "1. Call epos_doctor.py for pre-flight",
+            "2. Load VIOLATION_CODES.json",
+            "3. Scan inbox/ directory for .py files",
+            "4. For each file: validate_file()",
+            "5. Generate compliance_report.json",
+            "6. Return exit code (0=success, 1=failures)"
+          ]
+        },
+        
+        "validate_file": {
+          "parameters": ["filepath: Path"],
+          "returns": "ValidationResult",
+          "workflow": [
+            "1. Read file content",
+            "2. Check ERR-HEADER-001 (file header)",
+            "3. Check ERR-PATH-001 (absolute paths)",
+            "4. Check ERR-CONTEXT-001 (inline data size)",
+            "5. Check ERR-ENTRYPOINT-001 (pre-flight check)",
+            "6. Check ERR-CONFIG-001 (dotenv loading)",
+            "7. Check all other violation patterns",
+            "8. If all pass: promote_file()",
+            "9. If violations: reject_file() + generate_receipt()"
+          ]
+        },
+        
+        "promote_file": {
+          "parameters": ["filepath: Path"],
+          "actions": [
+            "Move file from inbox/ to engine/",
+            "Log promotion to ops/logs/governance.log",
+            "Update statistics.promoted_count"
+          ],
+          "constitutional_reference": "Article II (compliant code)"
+        },
+        
+        "reject_file": {
+          "parameters": ["filepath: Path", "violations: list"],
+          "actions": [
+            "Move file from inbox/ to rejected/",
+            "Generate educational receipt",
+            "Log rejection to ops/logs/governance.log",
+            "Update statistics.rejected_count"
+          ],
+          "constitutional_reference": "Article III Quality Gates"
+        },
+        
+        "generate_receipt": {
+          "parameters": ["filepath: Path", "violations: list"],
+          "output_path": "rejected/receipts/{filename}_{timestamp}.md",
+          "template": "See VIOLATION_CODES.json educational_receipt_template",
+          "includes": [
+            "Header with file info",
+            "List of violations detected",
+            "For each violation: code, severity, constitutional reference, example fix",
+            "Numbered remediation steps",
+            "Resubmission instructions"
+          ]
+        },
+        
+        "generate_compliance_report": {
+          "returns": "dict",
+          "output_path": "compliance_report.json",
+          "includes": {
+            "timestamp": "ISO8601",
+            "total_files": "int",
+            "promoted": "int",
+            "rejected": "int",
+            "compliance_rate": "(promoted / total) * 100",
+            "violations_by_type": "dict[code] = count",
+            "top_violations": "list of top 5",
+            "recommendations": "list of remediation priorities"
+          }
+        }
+      }
+    },
+    
+    "ValidationResult": {
+      "purpose": "Structured result of file validation",
+      "attributes": {
+        "filepath": "Path",
+        "passed": "bool",
+        "violations": "list[dict]",
+        "warnings": "list[dict]",
+        "auto_fixable": "bool",
+        "constitutional_references": "list[str]"
+      }
+    },
+    
+    "ViolationDetector": {
+      "purpose": "Pattern matching and detection logic",
+      "methods": {
+        "check_header": {
+          "detects": "ERR-HEADER-001",
+          "pattern": "^# File: C:[/\\]Users[/\\]Jamie[/\\]workspace[/\\]",
+          "returns": "bool, str (reason)"
+        },
+        
+        "check_paths": {
+          "detects": "ERR-PATH-001",
+          "patterns": [
+            "os\\.path\\.join\\(",
+            "[\"'].+\\.json[\"']((?!Path).)*$",
+            "\\.\\./"
+          ],
+          "returns": "bool, list[str] (violations)"
+        },
+        
+        "check_context_vault": {
+          "detects": ["ERR-CONTEXT-001", "ERR-CONTEXT-002", "ERR-CONTEXT-005"],
+          "methods": {
+            "estimate_tokens": "Count tokens in inline data",
+            "check_vault_reference": "Validate vault file exists",
+            "check_direct_load": "Detect direct file reads of vault"
+          },
+          "returns": "bool, list[str] (violations)"
+        },
+        
+        "check_entrypoint": {
+          "detects": ["ERR-ENTRYPOINT-001", "ERR-ENTRYPOINT-002"],
+          "looks_for": [
+            "if __name__ == '__main__'",
+            "epos_doctor import",
+            "sys.version_info check"
+          ],
+          "returns": "bool, list[str] (violations)"
+        },
+        
+        "check_config": {
+          "detects": ["ERR-CONFIG-001", "ERR-CONFIG-002"],
+          "looks_for": [
+            "load_dotenv() call",
+            "os.getenv() with defaults"
+          ],
+          "returns": "bool, list[str] (violations)"
+        }
+      }
+    }
+  },
+  
+  "validation_workflow": {
+    "phase_1_pre_flight": {
+      "step": 1,
+      "action": "Run epos_doctor.py",
+      "success_criteria": "Exit code 0 or 1",
+      "failure_action": "Exit with code 2, display doctor output"
+    },
+    
+    "phase_2_load_config": {
+      "step": 2,
+      "action": "Load VIOLATION_CODES.json",
+      "success_criteria": "Valid JSON, required keys present",
+      "failure_action": "Exit with code 2, suggest syntax check"
+    },
+    
+    "phase_3_scan_inbox": {
+      "step": 3,
+      "action": "Find all .py files in inbox/",
+      "success_criteria": "At least 1 file found",
+      "failure_action": "Print 'No files to validate' and exit 0"
+    },
+    
+    "phase_4_validate_files": {
+      "step": 4,
+      "action": "For each file: run all violation checks",
+      "success_criteria": "No critical violations",
+      "on_pass": "Promote to engine/",
+      "on_fail": "Reject to rejected/, generate receipt"
+    },
+    
+    "phase_5_compliance_report": {
+      "step": 5,
+      "action": "Calculate compliance rate, generate report",
+      "output": "compliance_report.json",
+      "success_criteria": "Compliance ≥95%",
+      "warning_threshold": "Compliance <85%"
+    },
+    
+    "phase_6_exit": {
+      "step": 6,
+      "action": "Return exit code based on results",
+      "exit_0": "All files promoted or no failures",
+      "exit_1": "Some files rejected but process completed",
+      "exit_2": "Critical system failure (doctor failed, config invalid)"
+    }
+  },
+  
+  "output_specifications": {
+    "console_output": {
+      "format": "human-readable with emoji indicators",
+      "levels": {
+        "✅ PASS": "File promoted to engine/",
+        "❌ FAIL": "File rejected to rejected/",
+        "⚠️ WARN": "Non-critical violation detected",
+        "🔧 FIXED": "Auto-fix applied successfully"
+      }
+    },
+    
+    "compliance_report_json": {
+      "location": "compliance_report.json",
+      "schema": {
+        "timestamp": "2026-01-31T14:30:22Z",
+        "total_files": 10,
+        "promoted": 8,
+        "rejected": 2,
+        "compliance_rate": 80.0,
+        "violations_by_type": {
+          "ERR-HEADER-001": 2,
+          "ERR-PATH-001": 1,
+          "ERR-CONTEXT-001": 1
+        },
+        "top_violations": [
+          {"code": "ERR-HEADER-001", "count": 2, "severity": "critical"},
+          {"code": "ERR-PATH-001", "count": 1, "severity": "critical"}
+        ],
+        "recommendations": [
+          "Add file headers to all rejected files",
+          "Replace relative paths with pathlib.Path absolute paths"
+        ]
+      }
+    },
+    
+    "educational_receipt_md": {
+      "location": "rejected/receipts/{filename}_{timestamp}.md",
+      "example": "See VIOLATION_CODES.json educational_receipt_template"
+    },
+    
+    "governance_log": {
+      "location": "ops/logs/governance.log",
+      "format": "timestamp | action | filepath | result | violations",
+      "append_only": true
+    }
+  },
+  
+  "dependencies": {
+    "python_stdlib": [
+      "sys",
+      "os",
+      "re",
+      "json",
+      "pathlib.Path",
+      "datetime",
+      "argparse"
+    ],
+    
+    "third_party": [
+      "python-dotenv (optional, graceful degradation)"
+    ],
+    
+    "epos_components": [
+      "epos_doctor.py (required, called at startup)",
+      "VIOLATION_CODES.json (required, validation patterns)",
+      "EPOS_CONSTITUTION_v3.1.md (reference only)"
+    ]
+  },
+  
+  "testing_requirements": {
+    "unit_tests": {
+      "test_header_detection": "Verify ERR-HEADER-001 detection",
+      "test_path_detection": "Verify ERR-PATH-001 detection",
+      "test_context_detection": "Verify ERR-CONTEXT-001 detection",
+      "test_entrypoint_detection": "Verify ERR-ENTRYPOINT-001 detection",
+      "test_receipt_generation": "Verify educational receipt format",
+      "test_compliance_calculation": "Verify compliance rate formula"
+    },
+    
+    "integration_tests": {
+      "test_full_workflow": "inbox → validation → promotion/rejection",
+      "test_doctor_integration": "Verify epos_doctor.py is called",
+      "test_dry_run": "Verify no files moved in dry-run mode",
+      "test_auto_fix": "Verify auto-fix capability"
+    },
+    
+    "test_fixtures": {
+      "compliant_file.py": "File with header, absolute paths, pre-flight",
+      "missing_header.py": "File without header (ERR-HEADER-001)",
+      "relative_paths.py": "File with ../config.json (ERR-PATH-001)",
+      "inline_data.py": "File with >8K tokens inline (ERR-CONTEXT-001)",
+      "missing_vault.py": "File referencing non-existent vault file (ERR-CONTEXT-002)"
+    }
+  },
+  
+  "performance_targets": {
+    "validation_speed": "<5 seconds per file",
+    "max_memory": "< 500MB for 100 files",
+    "compliance_report_generation": "<2 seconds",
+    "receipt_generation": "<1 second per file"
+  },
+  
+  "error_handling": {
+    "file_not_found": "Log error, continue with remaining files",
+    "permission_denied": "Exit code 2, suggest running as admin",
+    "json_decode_error": "Exit code 2, show syntax error location",
+    "regex_compile_error": "Log warning, skip that validation check",
+    "unexpected_exception": "Log full traceback, exit code 1"
+  },
+  
+  "logging_strategy": {
+    "console": "Human-readable with emoji indicators",
+    "file": "ops/logs/governance.log (append-only, timestamped)",
+    "json": "compliance_report.json (overwritten each run)",
+    "receipts": "rejected/receipts/ (one per rejection)"
+  },
+  
+  "constitutional_compliance_checklist": [
+    "✅ File header with absolute path (PATH_CLARITY_RULES.md)",
+    "✅ Python version validation (Article II Rule 3)",
+    "✅ Pre-flight check via epos_doctor.py (Article III)",
+    "✅ dotenv loading (Article II Rule 6)",
+    "✅ Absolute paths enforced (Article II Rule 1)",
+    "✅ File I/O validation (Article II Rule 2)",
+    "✅ Logging ≠ Execution separation (Article II Rule 4)",
+    "✅ Context Vault validation (Article II Rule 7)",
+    "✅ Educational receipts (Article III Quality Gates)",
+    "✅ Compliance reporting (Article IX Compliance Metrics)"
+  ],
+  
+  "implementation_notes": {
+    "regex_patterns": "Use raw strings (r'...') for all regex",
+    "path_handling": "Always use pathlib.Path, never os.path",
+    "token_estimation": "Approximate 4 characters = 1 token for English text",
+    "auto_fix_safety": "Only auto-fix mechanical violations (headers), not logic",
+    "override_mechanism": "Require human justification, log to audit trail",
+    "dry_run_mode": "Read files, run checks, but don't move files",
+    "context_vault_check": "Validate both inline size and vault reference existence"
+  },
+  
+  "future_enhancements": {
+    "parallel_validation": "Validate multiple files concurrently",
+    "ml_based_detection": "Use ML to detect semantic violations",
+    "auto_remediation": "Generate pull requests with fixes",
+    "continuous_monitoring": "Watch inbox/ for new files",
+    "web_dashboard": "Real-time compliance visualization"
+  },
+  
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-01-31",
+      "changes": "Initial specification aligned with EPOS_CONSTITUTION_v3.1.md",
+      "author": "AI Engineering Team",
+      "approved_by": "Jamie"
+    }
+  ]
+}

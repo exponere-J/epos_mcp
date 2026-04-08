@@ -1,0 +1,35 @@
+{
+  "niche": "agency",
+  "track": "sales",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Sales Strategy",
+    "Client Acquisition",
+    "Revenue Growth",
+    "Sales Team Performance",
+    "Market Competition"
+  ],
+  "key_bottleneck_patterns": [
+    "Inconsistent Sales Messaging",
+    "Inefficient Lead Generation",
+    "Lack of Effective Sales Metrics"
+  ],
+  "thinker_context": "As an agency, driving sales growth is crucial to expanding the client base and increasing revenue. However, many agencies struggle to develop a consistent sales strategy, leading to inconsistent messaging and inefficient lead generation. To overcome these challenges, it's essential to assess the current sales process, identify bottlenecks, and develop targeted solutions to improve sales team performance and ultimately drive revenue growth.",
+  "surgeon_priorities": [
+    "Develop a Clear Sales Strategy",
+    "Implement Effective Lead Generation Tactics",
+    "Establish Key Sales Performance Metrics"
+  ],
+  "mirror_report_tone": "Data-driven and actionable, with a focus on providing clear recommendations for sales growth and improvement.",
+  "desire_vocabulary": [
+    "Growth",
+    "Revenue",
+    "Clients",
+    "Sales",
+    "Performance",
+    "Strategy",
+    "Efficiency",
+    "Results"
+  ],
+  "generated_at": "2026-03-29T19:07:06.473896+00:00"
+}

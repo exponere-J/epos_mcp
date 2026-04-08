@@ -1,0 +1,28 @@
+{
+  "self_ops": {
+    "mode": "shadow_then_repair",
+    "approval_required_for": [
+      "epos_hq/sidecar/**",
+      "epos_hq/agents/**",
+      "epos_hq/core/**",
+      "epos_hq/kernel/**",
+      "deployment/**",
+      ".env",
+      "**/secrets/**"
+    ],
+    "allowed_write_roots": [
+      "epos_hq/**"
+    ],
+    "disallowed_actions": [
+      "delete_files",
+      "edit_env",
+      "change_allowlists",
+      "publish_external"
+    ],
+    "escalation": {
+      "max_failures_per_hour": 3,
+      "max_same_error_repeat": 2,
+      "max_retries_per_task": 2
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-003",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "closer",
+  "hook_type": "question",
+  "visual_mask": "founder_glow",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Direct comparison showing which set to buy if you have exactly 100 dollars.",
+  "hook_line": "You have 100 dollars. Which LEGO set should you actually buy?",
+  "cta": "Grab it before it sells out. Link in bio.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Technic Porsche 911",
+    "LEGO Architecture Statue of Liberty"
+  ],
+  "status": "draft"
+}

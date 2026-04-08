@@ -1,0 +1,17 @@
+{
+  "brief_id": "CB-LEGO-017",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "architect",
+  "hook_type": "how_to",
+  "visual_mask": "schematic",
+  "target_platform": "youtube_shorts",
+  "script_premise": "How to pick the right LEGO set for any person using 3 simple questions.",
+  "hook_line": "How to pick the perfect LEGO gift in under 60 seconds.",
+  "cta": "Cheat sheet and links in description.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "Various by age group"
+  ],
+  "status": "draft"
+}

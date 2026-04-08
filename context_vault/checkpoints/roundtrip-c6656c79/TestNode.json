@@ -1,0 +1,8 @@
+{
+  "mission_id": "roundtrip-c6656c79",
+  "node_name": "TestNode",
+  "state": {
+    "value": 42
+  },
+  "checkpointed_at": "2026-03-28T17:18:17.993015+00:00"
+}

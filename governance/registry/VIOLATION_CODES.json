@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "last_updated": "2026-02-01",
+  "violations": {
+    "ERR-PATH-001": {
+      "code": "ERR-PATH-001",
+      "severity": "CRITICAL",
+      "authority": "PATH_CLARITY_RULES.md Article I",
+      "description": "Non-canonical path format detected. Paths must be Windows Absolute (C:\\...)",
+      "remediation": "Convert all POSIX, relative, or tilde paths to Windows absolute format using pathlib.Path."
+    },
+    "ERR-HEADER-001": {
+      "code": "ERR-HEADER-001",
+      "severity": "HIGH",
+      "authority": "PATH_CLARITY_RULES.md Article II",
+      "description": "Missing or incorrect mandatory file header.",
+      "remediation": "Ensure the first line of the file is: # File: C:\\Users\\Jamie\\workspace\\epos_mcp\\[path_to_file]"
+    },
+    "ERR-VAULT-001": {
+      "code": "ERR-VAULT-001",
+      "severity": "CRITICAL",
+      "authority": "Legislative Namespace Mandate",
+      "description": "Governance document located outside of /governance/ directory.",
+      "remediation": "Move all laws to /governance/laws/ and registries to /governance/registry/."
+    },
+    "ERR-VERSION-001": {
+      "code": "ERR-VERSION-001",
+      "severity": "HIGH",
+      "authority": "ARCHITECTURAL_ANALYSIS.md AP-004",
+      "description": "Python version check missing in entrypoint.",
+      "remediation": "Add 'if sys.version_info[:2] < (3, 11): sys.exit(2)' to the script head."
+    }
+  }
+}

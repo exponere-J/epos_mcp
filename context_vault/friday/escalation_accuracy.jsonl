@@ -1,0 +1,2 @@
+{"signal_type": "hot_lead", "action": "acted", "weight_delta": 0.1, "timestamp": "2026-03-30T01:48:07.044368+00:00"}
+{"signal_type": "sla_breach", "action": "dismissed", "weight_delta": -0.05, "timestamp": "2026-03-30T01:48:07.044368+00:00"}

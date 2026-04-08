@@ -1,0 +1,31 @@
+{
+  "$id": "core.platform_deploy_request",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "product_id", "platform", "mode", "action"],
+  "properties": {
+    "run_id": { "$ref": "core._defs#/$defs/non_empty_string" },
+    "product_id": { "$ref": "core._defs#/$defs/non_empty_string" },
+    "platform": { "type": "string", "enum": ["gumroad", "lemonsqueezy", "etsy", "appsumo", "wordpress"] },
+    "mode": { "type": "string", "enum": ["dry_run", "live"] },
+    "action": { "type": "string", "enum": ["create", "update", "publish", "unpublish"] },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "listing_id": { "type": "string" },
+        "storefront": { "type": "string" }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "product_pack_ref": { "type": "string" },
+        "listing_canonical_ref": { "type": "string" }
+      }
+    },
+    "grants_required": { "type": "array", "items": { "type": "string" } }
+  }
+}

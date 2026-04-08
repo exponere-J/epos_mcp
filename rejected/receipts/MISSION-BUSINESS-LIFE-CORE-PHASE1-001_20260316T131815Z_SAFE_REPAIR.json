@@ -1,0 +1,38 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:18:15.330543+00:00",
+  "file": "inbox/MISSION-BUSINESS-LIFE-CORE-PHASE1-001.json",
+  "verdict": "SAFE_REPAIR",
+  "violations": [
+    {
+      "code": "ERR-SCHEMA-002",
+      "article": "Article III (Schema Validation)",
+      "message": "Missing required field: 'constraints'.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": null,
+      "suggestion": "Add 'constraints' field to mission JSON."
+    },
+    {
+      "code": "ERR-SCHEMA-002",
+      "article": "Article III (Schema Validation)",
+      "message": "Missing required field: 'success_criteria'.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": null,
+      "suggestion": "Add 'success_criteria' field to mission JSON."
+    },
+    {
+      "code": "ERR-SCHEMA-002",
+      "article": "Article III (Schema Validation)",
+      "message": "Missing required field: 'failure_modes'.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": null,
+      "suggestion": "Add 'failure_modes' field to mission JSON."
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

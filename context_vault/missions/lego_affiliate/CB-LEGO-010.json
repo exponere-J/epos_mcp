@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-010",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "statistic",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "You are paying full price for LEGO when discounts of 20 percent or more exist constantly.",
+  "hook_line": "You are overpaying for every LEGO set. Here is proof.",
+  "cta": "Current deals updated daily. Link below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO City Fire Station",
+    "LEGO Friends Heartlake City"
+  ],
+  "status": "draft"
+}

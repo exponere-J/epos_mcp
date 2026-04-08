@@ -1,0 +1,37 @@
+{
+  "content_id": "PIPE_HIGH",
+  "text": "Your AI strategy is a subscription to a cage. EPOS gives you the title. Sovereignty is survival. #EPOS #DataSovereignty",
+  "likes": 280,
+  "shares": 95,
+  "comments": 42,
+  "saves": 31,
+  "impressions": 8500,
+  "hours_live": 6.0,
+  "follower_count": 2400,
+  "verified_engagers": 5,
+  "_echolocation": {
+    "score": 91.8,
+    "action": "expand",
+    "components": {
+      "engagement": 100,
+      "velocity": 100,
+      "audience_quality": 90,
+      "brand_alignment": 75
+    },
+    "transformations": [
+      "linkedin_post",
+      "blog_outline",
+      "youtube_script_segment",
+      "email_section",
+      "whitepaper_section",
+      "layer_6_prospectus",
+      "case_study",
+      "webinar_segment"
+    ],
+    "scored_at": "2026-02-18T05:19:27.705203+00:00"
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

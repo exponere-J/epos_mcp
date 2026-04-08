@@ -1,0 +1,4 @@
+{"timestamp": "2026-04-04T16:21:49.424824+00:00", "event_type": "mission.created", "payload": {"mission_id": "MISSION-a83686f3", "risk": "low"}}
+{"timestamp": "2026-04-04T16:21:49.434344+00:00", "event_type": "mission.started", "payload": {"mission_id": "MISSION-a83686f3"}}
+{"timestamp": "2026-04-04T16:21:49.442946+00:00", "event_type": "mission.completed", "payload": {"mission_id": "MISSION-a83686f3"}}
+{"timestamp": "2026-04-04T16:21:49.444619+00:00", "event_type": "mission.rejected", "payload": {"mission_id": "MISSION-e8913d91", "reason": "Prohibited action detected: delete_data"}}

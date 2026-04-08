@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "authority": "EPOS Constitution v3.1",
+  "mission": "Make Echoes the source of truth in content creation",
+
+  "monitoring_streams": {
+    "model_releases": {
+      "sources": [
+        "fal.ai new models", "huggingface trending", "openai announcements",
+        "google ai blog", "runway announcements", "elevenlabs blog"
+      ],
+      "scan_frequency_days": 1,
+      "spark_threshold": "new_model_or_major_version_update",
+      "response_sla_hours": 24,
+      "output_formats": ["tool_directory_entry", "white_paper_brief", "newsletter_item", "youtube_review_brief"]
+    },
+    "platform_algorithms": {
+      "sources": [
+        "youtube official blog", "tiktok for business",
+        "linkedin marketing blog", "instagram for creators"
+      ],
+      "scan_frequency_days": 7,
+      "spark_threshold": "algorithm_change_or_feature_launch",
+      "response_sla_hours": 48,
+      "output_formats": ["tactical_creator_guide", "newsletter_item", "linkedin_post_brief"]
+    },
+    "creator_economy": {
+      "sources": [
+        "creator economy newsletters", "agency pricing signals", "tool landscape shifts"
+      ],
+      "scan_frequency_days": 7,
+      "spark_threshold": "market_shift_or_pricing_change",
+      "response_sla_hours": 72,
+      "output_formats": ["competitive_brief", "white_paper_brief"]
+    },
+    "regulatory": {
+      "sources": [
+        "ftc ai content guidelines", "platform affiliate policies",
+        "email marketing regulations", "copyright ai developments"
+      ],
+      "scan_frequency_days": 7,
+      "spark_threshold": "policy_change_affecting_content_or_affiliate",
+      "response_sla_hours": 24,
+      "output_formats": ["compliance_alert", "validation_rule_update_proposal"]
+    }
+  },
+
+  "benchmark_test_prompts": {
+    "photorealism": "Professional product shot of a LEGO Architecture set, soft studio lighting, dark background, 8K detail",
+    "text_in_image": "YouTube thumbnail with bold text BEST LEGO SETS 2026 on navy background, high contrast",
+    "character_consistency": "Echoes Marketing brand ambassador, professional attire, navy background, consistent identity",
+    "cinematic_video": "Cinematic product reveal, LEGO set on dark surface, spotlight, slow rotation, 4K quality",
+    "narrative_consistency": "Same character across three scenes: office, outdoor, presentation — identity preserved"
+  },
+
+  "publication_cadence": {
+    "newsletter_the_signal": "weekly",
+    "white_paper": "monthly_minimum_triggered_by_major_development",
+    "model_review": "within_24h_of_major_release",
+    "tool_directory_update": "continuous",
+    "youtube_brief": "weekly"
+  },
+
+  "active_niches": ["lego_affiliate"],
+  "target_business_niches": ["agency", "saas", "local_service", "enterprise", "creator"],
+
+  "groq_models": {
+    "research_synthesis": "llama-3.3-70b-versatile",
+    "classification": "llama-3.1-8b-instant",
+    "newsletter_drafting": "llama-3.3-70b-versatile"
+  }
+}

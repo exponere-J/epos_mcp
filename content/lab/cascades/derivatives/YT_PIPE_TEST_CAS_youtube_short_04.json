@@ -1,0 +1,54 @@
+{
+  "derivative_id": "YT_PIPE_TEST_CAS_youtube_short_04",
+  "type": "youtube_short",
+  "format": "vertical_video",
+  "description": "Short clips from highest-retention segments",
+  "content_spec": {
+    "text_excerpt": "Here is the EPOS blueprint. The bottom line is",
+    "estimated_seconds": 60
+  },
+  "source_attribution": "Source: Why Sovereign AI Wins (https://youtube.com/watch?v=test)",
+  "status": "pending_validation",
+  "_validation": {
+    "content_id": "YT_PIPE_TEST_CAS_youtube_short_04",
+    "passed": true,
+    "requires_human_review": false,
+    "score": 100,
+    "checks": {
+      "voice_tone": {
+        "passed": true,
+        "detail": "Voice check passed"
+      },
+      "prohibited_words": {
+        "passed": true,
+        "detail": "No prohibited words found"
+      },
+      "platform_format": {
+        "passed": true,
+        "detail": "Format compliant for youtube"
+      },
+      "hashtag_limit": {
+        "passed": true,
+        "detail": "Hashtag count OK (0/3)"
+      },
+      "cta_present": {
+        "passed": true,
+        "detail": "CTA token valid: CTA-CONTENT-LAB-CASCADE"
+      },
+      "source_attribution": {
+        "passed": true,
+        "detail": "Attribution check passed"
+      },
+      "flagged_content": {
+        "passed": true,
+        "detail": "No flagged content detected"
+      }
+    },
+    "issues": [],
+    "timestamp": "2026-02-18T05:19:27.805291+00:00"
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

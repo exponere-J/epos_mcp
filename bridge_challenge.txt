@@ -1,0 +1,16 @@
+CHALLENGE CODE: PHOENIX-7394-EMBER
+Timestamp: 2026-01-15T23:37:29Z
+Test ID: BRIDGE_PROOF_001
+
+Instructions for Jamie:
+1. Save this file as "bridge_challenge.txt" in C:\Users\Jamie\workspace\epos_mcp\
+2. Add one line at the bottom: "CONFIRMED: [your custom phrase]"
+3. Tell Claude to read bridge_challenge.txt via epos:consult_phi3
+
+If Phi-3 can read your custom phrase back, we have TRUE bidirectional access.
+If it can't, the MCP bridge is display-only or the tools are misconfigured.
+
+This proves:
+- ✓ You can read my generated content (download working)
+- ? I can read your modified content (upload path unknown)
+- ? Phi-3 can access live filesystem (not just cached data)

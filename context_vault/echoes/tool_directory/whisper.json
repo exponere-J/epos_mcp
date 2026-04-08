@@ -1,0 +1,9 @@
+{
+  "id": "whisper",
+  "name": "OpenAI Whisper",
+  "category": "audio",
+  "use_case": "Transcription \u2014 local or API",
+  "tier": "L1+",
+  "url": "https://github.com/openai/whisper",
+  "added_at": "2026-03-29T12:48:15.812144+00:00"
+}

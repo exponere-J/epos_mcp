@@ -1,0 +1,17 @@
+{
+  "mission_id": "MISSION-e8913d91",
+  "objective": "Delete data from the client database",
+  "constraints": [],
+  "success_criteria": [
+    "Data removed"
+  ],
+  "failure_modes": [],
+  "risk_level": "critical",
+  "assigned_agent": "agent_zero",
+  "status": "rejected",
+  "created_at": "2026-04-04T16:21:49.444619+00:00",
+  "started_at": null,
+  "completed_at": null,
+  "receipt": null,
+  "aar": null
+}

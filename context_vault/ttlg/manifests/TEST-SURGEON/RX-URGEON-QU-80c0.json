@@ -1,0 +1,44 @@
+{
+  "prescription_id": "RX-URGEON-QU-80c0",
+  "type": "quick_win",
+  "gap_addressed": "Lead management is manual with no scoring",
+  "consequence_chain": "Closing this gap addresses the most immediate impact: ~$14100/quarter in recovered value from Lead management is manual with no scoring.",
+  "nodes_required": [
+    "lead_scoring",
+    "consumer_journey"
+  ],
+  "configuration": {
+    "lead_scoring": {
+      "capabilities_used": [
+        "behavioral_scoring",
+        "engagement_scoring",
+        "fit_scoring"
+      ],
+      "integration": "event_bus"
+    },
+    "consumer_journey": {
+      "capabilities_used": [
+        "lead_routing",
+        "stage_management",
+        "offer_tiering"
+      ],
+      "integration": "event_bus"
+    }
+  },
+  "estimated_hours": 8.0,
+  "monthly_cost": 361.4,
+  "projected_roi_90d": 6502.5,
+  "deployment_sequence": [
+    "1. Configure event bus integration",
+    "2. Deploy Lead Scoring with vault path initialization",
+    "3. Deploy Consumer Journey with vault path initialization",
+    "4. Run sovereignty certification",
+    "5. Verify end-to-end pipeline"
+  ],
+  "success_criteria": [
+    "All deployed nodes pass sovereignty certification at 85+",
+    "Event bus shows events from all new nodes",
+    "Doctor reports zero new FAILs"
+  ],
+  "value_at_risk": 47000.0
+}

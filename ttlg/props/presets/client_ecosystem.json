@@ -1,0 +1,40 @@
+{
+  "name": "Client Ecosystem Diagnostic",
+  "version": "1.0",
+  "target": "client",
+  "context": {
+    "domain": "general",
+    "market_position": "established",
+    "assessment_type": "external",
+    "time_horizon_days": 90
+  },
+  "phases": {
+    "scout": {
+      "scope": ["marketing", "sales", "service", "governance"],
+      "depth": "standard",
+      "measurement_points": ["lead_flow", "conversion_rate", "churn_rate", "operational_efficiency", "documentation_completeness"]
+    },
+    "thinker": {
+      "weighting_model": "internal_health",
+      "extract_intelligence": ["production_blockers", "support_burden", "technical_debt", "revenue_leakage", "process_gaps"]
+    },
+    "gate": {
+      "approval_criteria": "strategic_alignment",
+      "auto_remediate": false,
+      "escalation_threshold": 3
+    },
+    "surgeon": {
+      "change_scope": "prescriptive",
+      "priority_filter": "revenue_impact",
+      "max_prescriptions_per_gap": 3
+    },
+    "analyst": {
+      "verification_metrics": ["roi_projection", "score_trajectory", "value_at_risk"],
+      "projection_days": [30, 60, 90]
+    }
+  },
+  "output_format": {
+    "type": "mirror_report",
+    "sections": ["executive_summary", "boardroom_view", "engine_room_view", "engagement_menu", "score_trajectory", "value_at_risk"]
+  }
+}

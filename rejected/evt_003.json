@@ -1,0 +1,11 @@
+{
+  "id": "evt_003",
+  "type": "knowledge",
+  "payload": {
+    "topic": "decision graph",
+    "source": "Gemini"
+  },
+  "status": "pending",
+  "meta": {},
+  "routed_at": "2025-12-11T23:22:44.681258Z"
+}

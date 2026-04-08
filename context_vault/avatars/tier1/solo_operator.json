@@ -1,0 +1,88 @@
+{
+  "avatar_id": "solo_operator",
+  "display_name": "The Solo Operator",
+  "tier": 1,
+  "tier_rationale": "Massive TAM. Low-friction entry tier. High word-of-mouth coefficient. Feeds upgrade path into Fractional Executive and Agency Builder tiers.",
+  "tagline": "A solo founder or freelancer who can't do everything alone but can't afford to hire.",
+  "demographics": {
+    "role_titles": ["Freelancer", "Solo Founder", "Solopreneur", "Independent Operator", "Sole Proprietor"],
+    "company_size": "1",
+    "annual_revenue_range": "$30K - $150K",
+    "team_size": "0",
+    "decision_authority": "sole"
+  },
+  "psychographics": {
+    "self_identity": "I am my business. Every task falls on me.",
+    "core_belief": "If I stop moving, everything stops.",
+    "fear": "Burning out before I break through.",
+    "ambition": "Hit six figures without hiring a team.",
+    "status_anxiety": "Still feeling like an amateur next to 'real' businesses."
+  },
+  "pain_points": [
+    {"pain": "Wearing every hat — sales, delivery, admin, marketing", "severity": 10, "frequency": "daily"},
+    {"pain": "No time for marketing when delivery is full", "severity": 9, "frequency": "weekly"},
+    {"pain": "Can't afford premium tools, stuck with fragmented free tier", "severity": 8, "frequency": "monthly"},
+    {"pain": "Revenue feast-or-famine cycle", "severity": 9, "frequency": "monthly"},
+    {"pain": "No one to brainstorm or delegate to", "severity": 8, "frequency": "daily"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "A system that does the admin and marketing while I deliver", "priority": 1},
+    {"outcome": "Predictable monthly revenue without constant hustle", "priority": 2},
+    {"outcome": "First $10K month without hiring", "priority": 3},
+    {"outcome": "Feeling less alone in the business", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Missed a lead because they were too busy to reply", "urgency_score": 10},
+    {"trigger": "Burned out and considering quitting", "urgency_score": 10},
+    {"trigger": "Saw a peer hit a milestone they're stuck below", "urgency_score": 8},
+    {"trigger": "Cancelled a subscription because it wasn't pulling weight", "urgency_score": 7}
+  ],
+  "objections": [
+    {"objection": "I can't afford another subscription", "counter_angle": "Show sub-$50 entry with a free trial; position as 'replaces 5 tools you already pay for'."},
+    {"objection": "I don't have time to set it up", "counter_angle": "30-minute guided setup; first value in 24 hours."},
+    {"objection": "I'm too small for this", "counter_angle": "Built for solo — every feature works with a team of one."}
+  ],
+  "channels": {
+    "primary": ["X/Twitter", "YouTube Shorts", "Instagram Reels", "TikTok"],
+    "secondary": ["Email newsletter", "Reddit", "IndieHackers"],
+    "avoided": ["LinkedIn corporate", "Trade publications", "Conference circuits"]
+  },
+  "communication_preferences": {
+    "tone": "Casual, direct, peer-to-peer, practical",
+    "length": "Short — 60-second video, 280-char tweet, 150-word email",
+    "format": ["short-form video", "X threads", "tips lists", "screen recordings"],
+    "vocabulary": "Side hustle, solo, bootstrapped, indie, grind, ship",
+    "proof_type": "Raw numbers from real solo operators"
+  },
+  "crs_weights": {
+    "engagement": 0.35,
+    "intent_keywords": 0.20,
+    "channel_match": 0.20,
+    "timing": 0.10,
+    "social_proof_response": 0.15
+  },
+  "niche_tags": ["solo", "freelance", "bootstrapped", "indie", "side-hustle"],
+  "price_tolerance": {
+    "monthly_floor": 29,
+    "monthly_ceiling": 149,
+    "one_time_floor": 49,
+    "one_time_ceiling": 499,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "Short-form video or X thread showing solo operator winning with a system",
+    "interest": "Free assessment — 'what's breaking in your solo business'",
+    "consideration": "Entry-tier trial with template pack",
+    "decision": "Self-serve sign up under $99/month",
+    "retention": "Weekly template + peer community access"
+  },
+  "signal_keywords": [
+    "solo founder", "freelancer", "one-person business", "bootstrapped", "wearing every hat",
+    "no time for marketing", "solo hustle", "side hustle to full time", "first 10k month",
+    "too busy to follow up", "burned out"
+  ],
+  "exclusion_keywords": [
+    "series a", "venture backed", "hiring a team", "enterprise", "fortune 500",
+    "multi-million budget"
+  ]
+}

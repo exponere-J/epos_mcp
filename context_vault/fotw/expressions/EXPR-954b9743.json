@@ -1,0 +1,27 @@
+{
+  "expression_id": "EXPR-954b9743",
+  "captured_at": "2026-04-04T16:17:37.627832+00:00",
+  "source_type": "transcript",
+  "source_platform": "call",
+  "source_id": "CONV-92b5d054",
+  "author": "ANON-e7a00712",
+  "raw_text": "Our biggest issue is we can't produce content consistently. It's all manual.",
+  "intent": "interest",
+  "emotion": "curious",
+  "interest_clusters": [
+    "content_production"
+  ],
+  "keywords": [
+    "produce",
+    "issue",
+    "biggest",
+    "content",
+    "consistently",
+    "manual"
+  ],
+  "lead_signal_strength": 50,
+  "metadata": {
+    "timestamp_seconds": 0
+  },
+  "routed_to": []
+}

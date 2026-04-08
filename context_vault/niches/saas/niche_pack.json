@@ -1,0 +1,56 @@
+{
+  "niche_id": "saas",
+  "niche_name": "Software as a Service companies",
+  "version": "1.0",
+  "attention_map": {
+    "primary_platforms": [
+      "LinkedIn",
+      "Twitter",
+      "Industry-specific forums"
+    ],
+    "preferred_formats": [
+      "Blog posts",
+      "Webinars"
+    ],
+    "content_cadence": "3 per week"
+  },
+  "desire_vocabulary": {
+    "pain_language": [
+      "Scalability issues",
+      "Integration challenges",
+      "Cost optimization"
+    ],
+    "outcome_language": [
+      "Increased efficiency",
+      "Improved customer experience",
+      "Enhanced data insights"
+    ],
+    "objection_language": [
+      "Security concerns",
+      "Implementation complexity"
+    ],
+    "tribal_markers": [
+      "Cloud-based solutions",
+      "Agile development methodologies",
+      "Customer-centric approach"
+    ]
+  },
+  "purchase_intent_signals": [
+    "Request for product demos",
+    "Comparison of pricing plans",
+    "Evaluation of case studies and testimonials"
+  ],
+  "margin_matrix": {
+    "min_project_value": 10000,
+    "avg_retainer_monthly": 5000,
+    "target_margin_pct": 25,
+    "constitutional_floor_multiplier": 1.3
+  },
+  "proof_benchmark": {},
+  "diagnostic_emphasis": [
+    "Inefficient workflows",
+    "Insufficient data analysis",
+    "Lack of automation"
+  ],
+  "offer_angle": "Streamline your operations and boost productivity with our tailored SaaS solutions"
+}

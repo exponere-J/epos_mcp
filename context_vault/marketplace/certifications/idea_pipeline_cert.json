@@ -1,0 +1,51 @@
+{
+  "node_id": "idea_pipeline",
+  "name": "Idea Pipeline",
+  "module": "idea_log",
+  "total_score": 93,
+  "max_score": 105,
+  "pct": 88.6,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 15,
+      "detail": "Imports cleanly with 2 EPOS deps"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "Has self-test with assertions and PASS output"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "1 classes, 7 public methods, documented"
+    },
+    "event_bus": {
+      "score": 12,
+      "detail": "Publishes 4 events, no subscription",
+      "gap": "One-way event flow",
+      "fix": "Add event subscription for reactive behavior"
+    },
+    "data_sovereignty": {
+      "score": 15,
+      "detail": "Owns vault path + JSONL journal"
+    },
+    "configuration": {
+      "score": 10,
+      "detail": "Init params with defaults, no env override",
+      "gap": "No environment configuration",
+      "fix": "Add os.getenv() overrides for key parameters"
+    },
+    "value_proposition": {
+      "score": 11,
+      "detail": "'Never lose an idea again. AI triages and researches every ca...'",
+      "gap": "needs action verb",
+      "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+    }
+  },
+  "hardening_needed": [],
+  "value_prop": "Never lose an idea again. AI triages and researches every captured thought.",
+  "pricing_tier": "solo",
+  "suggested_price": "$29/mo",
+  "market_category": "Project Management",
+  "certified_at": "2026-04-06T20:06:27.812532+00:00"
+}

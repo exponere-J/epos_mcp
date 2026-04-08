@@ -1,0 +1,115 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# TTLG DIAGNOSTICS v0.1 CONFIGURATION
+# Sovereign Feedback Loop: Friday (Strategy) ↔ EPOS (Optimization)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# ▶ PHASE 1: DECONSTRUCT (The Scout)
+# Role: Global repo scan, dependency graph, brittle point detection
+# Why Together AI: 10M context window, can hold entire architecture in mind
+SCOUT_PROVIDER="together_ai"
+SCOUT_MODEL="meta-llama/Llama-3.3-70b-instruct"
+TOGETHER_API_KEY="your_actual_together_api_key_here"
+SCOUT_CONTEXT_WINDOW=10000000
+SCOUT_TASK="full_repo_scan"
+
+# ▶ PHASE 2: EVALUATE (The Thinker)
+# Role: Review dependency graph against Sovereign Constitution, prioritize by ROI
+# Why DeepSeek-R1: Chain-of-thought reasoning, constitutional compliance checking
+THINKER_PROVIDER="deepseek"
+THINKER_MODEL="deepseek-reasoner"
+DEEPSEEK_API_KEY="your_actual_deepseek_api_key_here"
+THINKER_CONSTITUTION_PATH="./EPOS_CONSTITUTION_v3.1.md"
+THINKER_ROI_HORIZONS="90,180,365"
+
+# ▶ PHASE 3: GOVERNANCE GATE (Human Approval)
+# Role: Validate fixes against constitution before execution
+GOVERNANCE_GATE_APPROVAL_REQUIRED="true"
+APPROVAL_ROLE="jamie"
+APPROVAL_TIMEOUT_HOURS=24
+APPROVAL_CONTACT="jamie@exponere.local"
+
+# ▶ PHASE 4: RECONFIGURE (The Surgeon)
+# Role: Execute code fixes on EPOS nodes, generate clean decoupled architecture
+# Why Claude Code: Best-in-class code generation, file manipulation, testing
+SURGEON_PROVIDER="anthropic"
+SURGEON_TOOL="claude_code"
+ANTHROPIC_API_KEY="your_actual_anthropic_api_key_here"
+SURGEON_EXECUTION_MODE="staged"
+SURGEON_APPROVAL_REQUIRED="true"
+
+# ▶ PHASE 5: RECONSTRUCT (The Analyst)
+# Role: Verify architecture, stress-test event bus, benchmark against market patterns
+# Why Gemini 1.5 Flash: Fast analysis, multimodal verification, benchmark databases
+ANALYST_PROVIDER="google"
+ANALYST_MODEL="gemini-1.5-flash"
+GOOGLE_API_KEY="your_actual_google_api_key_here"
+ANALYST_STRESS_TESTS="event_bus_load,dependency_cycle_detection,latency_profile"
+ANALYST_BENCHMARK_DB="market_patterns_2026"
+
+# ▶ PHASE 6: AAR (The Legacy)
+# Role: Write After Action Review, capture learning, update intelligence floor
+AAR_STORAGE_PATH="./context_vault/internal_diagnostics/aars/"
+AAR_SCHEMA="./schemas/aar_v1.json"
+AAR_LEARNING_FEED="true"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# GOVERNANCE & SAFETY GATES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Never execute changes that violate constitution
+GOVERNANCE_GATE_CONSTITUTIONAL_CHECK="true"
+GOVERNANCE_GATE_CONSTITUTIVE_RULES="NO_SILENT_FAILURES,NO_VENDOR_LOCK_IN,NO_UNAUDITABLE_DECISIONS,TRANSPARENCY_BY_DEFAULT"
+
+# Log every phase transition for audit trail
+AUDIT_LOG_PATH="./logs/ttlg_diagnostics.jsonl"
+AUDIT_LOG_IMMUTABLE="true"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SCANNING SCOPE (What Friday audits)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCAN_TARGETS="epos_core,friday_orchestrator,node_implementations,governance_gate,context_vault"
+SCAN_EXCLUDE=".git,node_modules,venv,__pycache__,*.log,.env,*.pyc"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SCHEDULE & MONITORING
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Run full diagnostics on this schedule (2am UTC = 9pm EST)
+TTLG_SCAN_SCHEDULE="0 2 * * *"
+TTLG_SCAN_TIMEOUT_MINUTES=60
+
+# Emit metrics to this dashboard
+METRICS_OUTPUT_PATH="./dashboards/ttlg_health.json"
+METRICS_INCLUDE="scan_duration,issues_found,issues_fixed,approval_time,learning_patterns_captured"
+
+# Notify on scan completion
+NOTIFICATION_WEBHOOK="https://your-slack-or-email-webhook"
+NOTIFICATION_ON="phase_complete,issues_found,approval_needed,aar_generated"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# INTELLIGENCE FEEDBACK (Learning Loop Closure)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# After each AAR, extract patterns and feed to Thinker
+LEARNING_PATTERN_EXTRACTION="true"
+LEARNING_PATTERNS_STORAGE="./context_vault/patterns/"
+LEARNING_FEEDBACK_TO_THINKER="true"
+LEARNING_FEEDBACK_TO_FRIDAY="true"
+LEARNING_ANTIPATTERN_PROMOTION="true"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# ACCESSIBILITY: Dark Mode for Terminal/Logs
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+LOG_COLOR_SCHEME="dark"
+TERMINAL_BACKGROUND="black"
+REPORT_FORMAT="markdown_dark"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# INTERNAL CONFIGURATION (Do not modify)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TTLG_VERSION="0.1"
+TTLG_NODE_ID="ttlg_diagnostics_internal"
+TTLG_EPOS_ROOT="./"

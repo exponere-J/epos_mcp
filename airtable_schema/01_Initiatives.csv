@@ -1,0 +1,5 @@
+Initiative ID,Initiative Name,Classification,Archetype Alignment,Priority,Time Horizon,Status,Owner,Reward Metric,Notes
+INIT-001,Morning Calibration,Personal,FATHER|LOVER,High,Daily,Active,Jamie,consistency_score,Daily archetype activation + intention setting
+INIT-002,Memory Vault Launch,Product,WARRIOR|SOVEREIGN,Highest,Weekly,Active,EPOS,units_sold,Ship + sell Memory Vault
+INIT-003,Decision Graph Router,Technical,WARRIOR,Highest,Weekly,In Progress,EPOS,router_accuracy,Deterministic routing layer
+INIT-004,Airtable Command Base,Ops,SOVEREIGN,High,Weekly,Planned,EPOS,throughput,Unified task + sprint tracking

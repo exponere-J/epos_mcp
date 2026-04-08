@@ -1,0 +1,54 @@
+{
+  "skill_id": "echoes_imagery_generation_v1",
+  "core_principles": [
+    "Define a specific color palette that aligns with Echoes Marketing's brand identity, incorporating a navy accent gold palette",
+    "Utilize the Stable Diffusion model for generating high-quality images with fine-grained control over the color palette",
+    "Craft well-designed prompts that incorporate the navy accent gold palette to generate brand-consistent imagery",
+    "Create custom color palette embeddings using the CLIP model to condition the Stable Diffusion model",
+    "Refine generated images using the DALL-E model to ensure they meet the Echoes Marketing brand standards"
+  ],
+  "operational_workflow": [
+    "Select and fine-tune the Stable Diffusion model for generating brand-consistent imagery",
+    "Craft and refine prompts using the T5 model to incorporate the navy accent gold palette",
+    "Create custom color palette embeddings using the CLIP model",
+    "Generate images using the Stable Diffusion model with the custom color palette embeddings",
+    "Refine generated images using the DALL-E model"
+  ],
+  "tool_routing": {
+    "primary": "huggingface.co/models",
+    "fallback": "fal.ai/models",
+    "avoid": "unverified models"
+  },
+  "failure_modes": [
+    {
+      "failure": "Generated images do not meet brand standards",
+      "cause": "Inadequate prompt design or color palette embeddings",
+      "prevention": "Refine prompts and color palette embeddings, and adjust model parameters as needed"
+    }
+  ],
+  "prompt_templates": {
+    "standard": "Generate an image of a {object} with a navy blue background, gold accents, and a modern font",
+    "high_quality": "Create a high-quality image of a {object} with intricate details, a navy blue background, gold accents, and a modern font",
+    "fast": "Quickly generate an image of a {object} with a navy blue background and gold accents"
+  },
+  "benchmark_criteria": [
+    "Image quality and resolution",
+    "Color palette consistency with the Echoes Marketing brand identity",
+    "Overall aesthetic appeal and brand consistency"
+  ],
+  "update_triggers": [
+    "Changes to the Echoes Marketing brand identity or color palette",
+    "Availability of new or improved open diffusion models",
+    "User feedback or performance metrics indicating the need for refinement"
+  ],
+  "friday_invocation": "python epos.py skills invoke echoes_imagery_generation",
+  "domain": "echoes_imagery_generation",
+  "learning_emphasis": "How to generate brand-consistent imagery for Echoes Marketing using open diffusion models with navy accent gold palette",
+  "version": "1.0",
+  "synthesized_from": [
+    "huggingface.co/models",
+    "fal.ai/models",
+    "ollama.ai/library"
+  ],
+  "compiled_at": "2026-03-30T13:38:06.908779+00:00"
+}

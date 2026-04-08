@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "epos": {
+      "command": "python",
+      "args": ["C:\\Users\\jamie\\workspace\\epos_mcp\\epos_mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\jamie\\workspace\\epos_mcp\\src\\python"
+      }
+    }
+  }
+}

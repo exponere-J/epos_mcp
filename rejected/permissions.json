@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "last_update": "",
+  "permissions": [
+    {
+      "agent": "jarvis",
+      "can_execute": ["read", "write", "route", "delegate", "audit"],
+      "requires_keeper": false
+    },
+    {
+      "agent": "filesmith_local",
+      "can_execute": ["route", "delegate"],
+      "requires_keeper": false
+    },
+    {
+      "agent": "terminalrunner_local",
+      "can_execute": ["shell"],
+      "requires_keeper": true,
+      "requires_double_check_agent": "verifykeeper_agent"
+    },
+    {
+      "agent": "computeruse_local",
+      "can_execute": ["gui"],
+      "requires_keeper": true,
+      "requires_double_check_agent": "verifykeeper_agent"
+    }
+  ]
+}

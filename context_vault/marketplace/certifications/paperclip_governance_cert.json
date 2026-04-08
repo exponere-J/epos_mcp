@@ -1,0 +1,51 @@
+{
+  "node_id": "paperclip_governance",
+  "name": "Paperclip Governance",
+  "module": "paperclip_governance",
+  "total_score": 93,
+  "max_score": 105,
+  "pct": 88.6,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 10,
+      "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+      "gap": "3 internal dependencies",
+      "fix": "Create adapter interfaces for EPOS-specific imports"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "Has self-test with assertions and PASS output"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "2 classes, 7 public methods, documented"
+    },
+    "event_bus": {
+      "score": 12,
+      "detail": "Publishes 1 events, no subscription",
+      "gap": "One-way event flow",
+      "fix": "Add event subscription for reactive behavior"
+    },
+    "data_sovereignty": {
+      "score": 15,
+      "detail": "Owns vault path + JSONL journal"
+    },
+    "configuration": {
+      "score": 15,
+      "detail": "Env-configurable with defaults and init params"
+    },
+    "value_proposition": {
+      "score": 11,
+      "detail": "'Deploy autonomous agents with constitutional guardrails and ...'",
+      "gap": "needs action verb",
+      "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+    }
+  },
+  "hardening_needed": [],
+  "value_prop": "Deploy autonomous agents with constitutional guardrails and proof-of-execution.",
+  "pricing_tier": "department",
+  "suggested_price": "$297/mo",
+  "market_category": "Agent Governance",
+  "certified_at": "2026-04-06T20:06:28.073039+00:00"
+}

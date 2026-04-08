@@ -1,0 +1,56 @@
+{
+  "node_id": "payment_gateway",
+  "name": "Payment Gateway",
+  "module": "payment_gateway",
+  "total_score": 95,
+  "max_score": 105,
+  "pct": 90.5,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 15,
+      "detail": "Imports cleanly with 2 EPOS deps"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "Has self-test with assertions and PASS output"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "1 classes, 7 public methods, documented"
+    },
+    "event_bus": {
+      "score": 12,
+      "detail": "Publishes 1 events, no subscription",
+      "gap": "One-way event flow",
+      "fix": "Add event subscription for reactive behavior"
+    },
+    "data_sovereignty": {
+      "score": 15,
+      "detail": "Owns vault path + JSONL journal"
+    },
+    "configuration": {
+      "score": 15,
+      "detail": "Env-configurable with defaults and init params"
+    },
+    "value_proposition": {
+      "score": 8,
+      "detail": "'Accept payments, generate invoices, and track revenue with o...'",
+      "gap": "needs action verb; contains internal jargon",
+      "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+    }
+  },
+  "hardening_needed": [
+    {
+      "criterion": "value_proposition",
+      "current_score": 8,
+      "gap": "needs action verb; contains internal jargon",
+      "fix": "Rewrite VP: [Action verb] + [what user gets] + [in plain language]"
+    }
+  ],
+  "value_prop": "Accept payments, generate invoices, and track revenue with one sovereign node.",
+  "pricing_tier": "workflow",
+  "suggested_price": "$49/mo",
+  "market_category": "Financial Operations",
+  "certified_at": "2026-04-06T20:06:27.939713+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "asset_id": "ASSET-2ee64b98",
+  "asset_type": "mirror_report",
+  "title": "Mirror Report \u2014 GOVERNANCE \u2014 epos_ecosystem",
+  "body": "**Mirror Report: TTLG Governance Diagnostic**\n\nWHAT WE FOUND: Our diagnostic reveals that your small business has a Sovereign Alignment Score of 13/25, indicating significant gaps in governance. Specifically, we've identified key areas of concern, including limited control over your data due to reliance on third-party services and cloud storage, which may compromise data ownership and security. Additionally, your business is heavily reliant on SaaS solutions, which poses a high severity risk. These gaps can have far-reaching consequences, including compromised data security and limited flexibility in responding to changing business needs.\n\nTHE REAL COST: The current state of your governance is likely costing you in terms of data security risks, potential compliance issues, and limited ability to make informed decisions due to lack of control over your data. These costs can be difficult to quantify, but they can have a significant impact on your business's bottom line and reputation. By addressing these gaps, you can mitigate these risks and improve your overall business resilience.\n\nTHE PATH FORWARD: To address these gaps, we recommend focusing on the highest-leverage changes. Firstly, addressing your data sovereignty by implementing measures to regain control over your data, such as migrating to self-hosted solutions or negotiating better terms with your cloud storage providers. Secondly, reducing your reliance on SaaS solutions by exploring alternative, more flexible options. By taking these steps, you can improve your data security, reduce risks, and increase your business's agility.\n\nWHAT CHANGES IN 30 DAYS: Within the next 30 days, we expect to see measurable improvements in your data sovereignty, with a medium confidence level in achieving these changes. Specifically, we anticipate that you will have begun to implement measures to regain control over your data, such as developing a data management plan or starting to migrate to self-hosted solutions.\n\nSOVEREIGN ALIGNMENT SCORE: With a current score of 13/25, your business has a significant opportunity to improve its governance and reduce risks. By addressing the identified gaps and implementing the recommended changes, you can improve your score and achieve better control over your data, ultimately leading to a more resilient and agile business.",
+  "status": "draft",
+  "niche_id": null,
+  "segment_id": null,
+  "author_agent": "ttlg_diagnostic",
+  "platform_targets": [],
+  "scheduled_at": null,
+  "published_at": null,
+  "eri_predicted": null,
+  "eri_actual": null,
+  "version": 1,
+  "tags": [
+    "governance",
+    "epos_ecosystem",
+    "sovereign_alignment"
+  ],
+  "created_at": "2026-04-01T19:27:55.494337+00:00",
+  "updated_at": "2026-04-01T19:27:55.494337+00:00"
+}

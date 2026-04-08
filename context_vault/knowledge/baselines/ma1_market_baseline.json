@@ -1,0 +1,14 @@
+{
+  "role": "ma1_market",
+  "name": "MA1 Market \u2014 Market Intelligence",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "Competitive intelligence automation benchmarks 2026",
+  "methodology": "Weekly Market View with market temperature, competitive threat level, strategic opportunity",
+  "key_metrics": {
+    "signal_detection_cadence": "weekly",
+    "competitive_coverage": "direct + indirect + substitutes"
+  },
+  "epos_implementation": "MA1 populates Weekly Market View template with market-forward props",
+  "operational_validation": "pending_cycle_1"
+}

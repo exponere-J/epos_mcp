@@ -1,0 +1,40 @@
+{
+  "mission_id": "VAULT-INIT-001",
+  "type": "INFRASTRUCTURE",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md Article III",
+  "description": "Establish the Governance Vault and migrate core law documents to sovereign directory.",
+  "tasks": [
+    {
+      "task_id": "TASK-001",
+      "description": "Create directory structure: governance/constitution, governance/laws, governance/registry, governance/logic"
+    },
+    {
+      "task_id": "TASK-002",
+      "description": "Move ARCHITECTURAL_ANALYSIS.md and PATH_CLARITY_RULES.md from project root to /governance/laws/"
+    },
+    {
+      "task_id": "TASK-003",
+      "description": "Update headers in moved files to reflect new absolute paths."
+    },
+    {
+      "task_id": "TASK-004",
+      "description": "Generate GOVERNANCE_MANIFEST.json in /governance/registry/ listing all files in the vault."
+    }
+  ],
+  "constraints": [
+    "Follow PATH_CLARITY_RULES.md explicitly for all operations.",
+    "Do not modify any files in the /engine/ directory.",
+    "Do not use relative paths in any generated headers or manifest entries.",
+    "All file operations must be performed using pathlib.Path."
+  ],
+  "success_criteria": [
+    "Directory structure exists at C:\\Users\\Jamie\\workspace\\epos_mcp\\governance\\",
+    "Both law documents are present in /governance/laws/ and removed from root.",
+    "All headers match the new absolute path locations.",
+    "GOVERNANCE_MANIFEST.json contains zero relative paths."
+  ],
+  "proof_artifact_spec": {
+    "artifact_type": "GOVERNANCE_MANIFEST",
+    "location": "C:\\Users\\Jamie\\workspace\\epos_mcp\\governance\\registry\\GOVERNANCE_MANIFEST.json"
+  }
+}

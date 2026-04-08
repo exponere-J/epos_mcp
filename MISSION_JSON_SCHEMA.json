@@ -1,0 +1,498 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://exponere.systems/schemas/epos-mission-v3.1.json",
+  "title": "EPOS Agent Mission Specification",
+  "description": "Constitutional schema for all Agent Zero mission assignments per EPOS_CONSTITUTION_v3.1.md",
+  "type": "object",
+  "required": [
+    "mission_id",
+    "mission_type",
+    "constitutional_authority",
+    "success_criteria",
+    "validation_protocol",
+    "rollback_procedure",
+    "proof_artifact_spec"
+  ],
+  "properties": {
+    "mission_id": {
+      "type": "string",
+      "pattern": "^[A-Z]+-[A-Z]+-\\d{3}$",
+      "description": "Unique identifier: CATEGORY-ACTION-NNN (e.g., FOREMAN-INIT-001)",
+      "examples": ["FOREMAN-INIT-001", "CONTENT-GEN-042", "GOVERNANCE-AUDIT-007"]
+    },
+    "mission_type": {
+      "type": "string",
+      "enum": [
+        "INFRASTRUCTURE",
+        "GOVERNANCE",
+        "CONTENT_GENERATION",
+        "DATA_MIGRATION",
+        "AGENT_COORDINATION",
+        "MARKET_ANALYSIS",
+        "CODE_REFACTOR",
+        "DOCUMENTATION"
+      ],
+      "description": "Category determining validation requirements and risk assessment"
+    },
+    "constitutional_authority": {
+      "type": "string",
+      "pattern": "^EPOS_CONSTITUTION_v3\\.1\\.md Article [IVX]+",
+      "description": "Which constitutional article authorizes this mission",
+      "examples": ["EPOS_CONSTITUTION_v3.1.md Article II, Rule 1"]
+    },
+    "created_by": {
+      "type": "string",
+      "description": "Human or agent that created this mission",
+      "examples": ["Jamie (Founder)", "Agent Alpha (Constitutional Arbiter)"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of mission creation"
+    },
+    "assigned_to": {
+      "type": "string",
+      "description": "Which agent will execute this mission",
+      "examples": ["Agent Zero", "Agent Sigma (Context Librarian)", "Agent Omega (Flywheel Analyst)"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"],
+      "description": "Execution priority (CRITICAL blocks other missions)"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 500,
+      "description": "Clear, measurable goal statement (50-500 chars)"
+    },
+    "context": {
+      "type": "object",
+      "description": "Background information and dependencies",
+      "properties": {
+        "background": {
+          "type": "string",
+          "description": "Why this mission exists"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dependency_id", "status"],
+            "properties": {
+              "dependency_id": {
+                "type": "string",
+                "description": "Mission ID or component name this depends on"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["COMPLETE", "IN_PROGRESS", "BLOCKED", "NOT_STARTED"]
+              },
+              "required_before_start": {
+                "type": "boolean",
+                "description": "Must be COMPLETE before this mission starts?"
+              }
+            }
+          }
+        },
+        "risks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["risk_description", "mitigation"],
+            "properties": {
+              "risk_description": {
+                "type": "string"
+              },
+              "probability": {
+                "type": "string",
+                "enum": ["HIGH", "MEDIUM", "LOW"]
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
+              },
+              "mitigation": {
+                "type": "string",
+                "description": "How to prevent or handle this risk"
+              }
+            }
+          }
+        },
+        "context_vault_references": {
+          "type": "array",
+          "description": "Large data files (>8K tokens) in context_vault/ needed for mission",
+          "items": {
+            "type": "object",
+            "required": ["vault_path", "purpose"],
+            "properties": {
+              "vault_path": {
+                "type": "string",
+                "pattern": "^context_vault/",
+                "description": "Relative path from EPOS_ROOT"
+              },
+              "purpose": {
+                "type": "string",
+                "description": "Why this data is needed"
+              },
+              "access_method": {
+                "type": "string",
+                "enum": ["regex_search", "window_search", "metadata_only"],
+                "description": "How agent should access this data (symbolic, not inline)"
+              }
+            }
+          }
+        }
+      }
+    },
+    "execution_plan": {
+      "type": "object",
+      "required": ["steps"],
+      "description": "Sequential execution steps with validation points",
+      "properties": {
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["step_id", "description", "validation"],
+            "properties": {
+              "step_id": {
+                "type": "string",
+                "pattern": "^STEP-\\d{2}$",
+                "examples": ["STEP-01", "STEP-02"]
+              },
+              "description": {
+                "type": "string",
+                "description": "What this step does"
+              },
+              "commands": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Bash or Python commands to execute"
+              },
+              "expected_output": {
+                "type": "string",
+                "description": "What success looks like for this step"
+              },
+              "validation": {
+                "type": "object",
+                "required": ["method"],
+                "properties": {
+                  "method": {
+                    "type": "string",
+                    "enum": ["file_exists", "exit_code_zero", "regex_match", "manual_review"],
+                    "description": "How to verify step succeeded"
+                  },
+                  "criteria": {
+                    "type": "string",
+                    "description": "Specific validation criteria (e.g., 'exit code 0', 'file size > 0')"
+                  }
+                }
+              },
+              "rollback_on_failure": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Commands to undo this step if it fails"
+              }
+            }
+          }
+        },
+        "estimated_duration": {
+          "type": "string",
+          "pattern": "^\\d+[mh]$",
+          "description": "Expected execution time (e.g., '15m', '2h')"
+        }
+      }
+    },
+    "success_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Measurable outcomes that define mission success",
+      "items": {
+        "type": "object",
+        "required": ["criterion", "measurement_method"],
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "description": "What must be true for success"
+          },
+          "measurement_method": {
+            "type": "string",
+            "enum": [
+              "file_exists",
+              "compliance_rate",
+              "test_passes",
+              "health_check_ok",
+              "manual_verification"
+            ]
+          },
+          "threshold": {
+            "type": "number",
+            "description": "Numeric threshold if applicable (e.g., 0.95 for 95% compliance)"
+          }
+        }
+      }
+    },
+    "validation_protocol": {
+      "type": "object",
+      "required": ["governance_gate_required", "pre_flight_checklist"],
+      "description": "How to validate mission execution per Constitution Article II",
+      "properties": {
+        "governance_gate_required": {
+          "type": "boolean",
+          "description": "Must output files pass governance_gate.py?"
+        },
+        "pre_flight_checklist": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Items from PRE_FLIGHT_CHECKLIST.md that apply"
+        },
+        "epos_doctor_validation": {
+          "type": "boolean",
+          "description": "Must epos_doctor.py pass before mission starts?"
+        },
+        "manual_review_required": {
+          "type": "boolean",
+          "description": "Does human need to review before deployment?"
+        }
+      }
+    },
+    "rollback_procedure": {
+      "type": "object",
+      "required": ["rollback_steps"],
+      "description": "How to undo this mission if it fails (Article I mandate)",
+      "properties": {
+        "rollback_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["step_id", "action"],
+            "properties": {
+              "step_id": {
+                "type": "string",
+                "pattern": "^ROLLBACK-\\d{2}$"
+              },
+              "action": {
+                "type": "string",
+                "description": "Command or procedure to undo corresponding execution step"
+              },
+              "validation": {
+                "type": "string",
+                "description": "How to verify rollback succeeded"
+              }
+            }
+          }
+        },
+        "rollback_triggers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Conditions that require rollback (e.g., 'compliance_rate < 0.95')"
+        }
+      }
+    },
+    "proof_artifact_spec": {
+      "type": "object",
+      "required": ["artifact_type", "storage_location"],
+      "description": "Verifiable evidence that mission executed successfully",
+      "properties": {
+        "artifact_type": {
+          "type": "string",
+          "enum": [
+            "compliance_report",
+            "snapshot_json",
+            "test_results",
+            "log_file",
+            "proof_manifest"
+          ]
+        },
+        "storage_location": {
+          "type": "string",
+          "pattern": "^(ops/logs|rejected/receipts|engine/proofs)/",
+          "description": "Where proof artifact will be stored"
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Fields that must be present in proof artifact"
+        }
+      }
+    },
+    "inter_agent_communication": {
+      "type": "object",
+      "description": "How this mission coordinates with other agents (Article VIII)",
+      "properties": {
+        "notifications_required": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["agent_id", "event"],
+            "properties": {
+              "agent_id": {
+                "type": "string",
+                "description": "Which agent to notify"
+              },
+              "event": {
+                "type": "string",
+                "enum": ["mission_start", "mission_complete", "mission_failed", "approval_needed"]
+              },
+              "message_template": {
+                "type": "string",
+                "description": "What to include in notification"
+              }
+            }
+          }
+        },
+        "approval_chain": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["approver_id", "approval_type"],
+            "properties": {
+              "approver_id": {
+                "type": "string",
+                "examples": ["Agent Alpha (Constitutional Arbiter)", "Jamie (Founder)"]
+              },
+              "approval_type": {
+                "type": "string",
+                "enum": ["constitutional_review", "technical_review", "business_impact_review"]
+              },
+              "required_before": {
+                "type": "string",
+                "description": "Which step requires this approval"
+              }
+            }
+          }
+        }
+      }
+    },
+    "mission_status": {
+      "type": "object",
+      "description": "Current execution state (updated by executing agent)",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "DRAFT",
+            "READY",
+            "IN_PROGRESS",
+            "BLOCKED",
+            "COMPLETE",
+            "FAILED",
+            "ROLLED_BACK"
+          ]
+        },
+        "current_step": {
+          "type": "string",
+          "description": "Which step is currently executing"
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "completed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "execution_log_path": {
+          "type": "string",
+          "description": "Path to detailed execution log in ops/logs/"
+        },
+        "proof_artifact_path": {
+          "type": "string",
+          "description": "Path to generated proof artifact"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata for tracking and analytics",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Categorization tags for searchability"
+        },
+        "related_missions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Mission IDs of related/dependent missions"
+        },
+        "sprint": {
+          "type": "string",
+          "description": "Which sprint this mission belongs to"
+        },
+        "business_value": {
+          "type": "string",
+          "description": "Why this mission matters to business goals"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "mission_id": "FOREMAN-INIT-001",
+      "mission_type": "INFRASTRUCTURE",
+      "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md Article I",
+      "created_by": "Jamie (Founder)",
+      "created_at": "2026-01-31T10:00:00Z",
+      "assigned_to": "Agent Zero",
+      "priority": "CRITICAL",
+      "objective": "Seat Agent Zero as constitutional foreman, establishing baseline governance compliance ≥95% and enabling autonomous code execution under strict constitutional oversight.",
+      "success_criteria": [
+        {
+          "criterion": "Compliance rate ≥95%",
+          "measurement_method": "compliance_rate",
+          "threshold": 0.95
+        },
+        {
+          "criterion": "Empty inbox/ directory",
+          "measurement_method": "file_exists"
+        },
+        {
+          "criterion": "epos_doctor.py returns exit code 0",
+          "measurement_method": "health_check_ok"
+        }
+      ],
+      "validation_protocol": {
+        "governance_gate_required": true,
+        "pre_flight_checklist": [
+          "Python 3.11.x verified",
+          "All constitutional documents present",
+          "Context vault initialized"
+        ],
+        "epos_doctor_validation": true,
+        "manual_review_required": false
+      },
+      "rollback_procedure": {
+        "rollback_steps": [
+          {
+            "step_id": "ROLLBACK-01",
+            "action": "Move all files from engine/ back to inbox/",
+            "validation": "inbox/ contains pre-mission file count"
+          }
+        ],
+        "rollback_triggers": ["compliance_rate < 0.95", "epos_doctor.py exit code != 0"]
+      },
+      "proof_artifact_spec": {
+        "artifact_type": "compliance_report",
+        "storage_location": "ops/logs/foreman_init_001_proof.json",
+        "required_fields": ["compliance_rate", "violations_by_type", "timestamp", "executor"]
+      }
+    }
+  ]
+}

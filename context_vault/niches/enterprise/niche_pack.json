@@ -1,0 +1,56 @@
+{
+  "niche_id": "enterprise",
+  "niche_name": "Enterprise businesses with multiple departments",
+  "version": "1.0",
+  "attention_map": {
+    "primary_platforms": [
+      "LinkedIn",
+      "Twitter",
+      "Company websites"
+    ],
+    "preferred_formats": [
+      "Whitepapers",
+      "Webinars"
+    ],
+    "content_cadence": "3 per week"
+  },
+  "desire_vocabulary": {
+    "pain_language": [
+      "inefficient processes",
+      "disconnected teams",
+      "insufficient resources"
+    ],
+    "outcome_language": [
+      "streamlined operations",
+      "enhanced collaboration",
+      "increased productivity"
+    ],
+    "objection_language": [
+      "cost concerns",
+      "implementation complexity"
+    ],
+    "tribal_markers": [
+      " Fortune 500",
+      "global presence",
+      "industry leader"
+    ]
+  },
+  "purchase_intent_signals": [
+    "request for proposal",
+    "comparison of competing solutions",
+    "evaluation of case studies"
+  ],
+  "margin_matrix": {
+    "min_project_value": 10000,
+    "avg_retainer_monthly": 5000,
+    "target_margin_pct": 25,
+    "constitutional_floor_multiplier": 1.3
+  },
+  "proof_benchmark": {},
+  "diagnostic_emphasis": [
+    "inefficient communication",
+    "lack of standardization",
+    "insufficient training"
+  ],
+  "offer_angle": "Transform your enterprise with tailored solutions that drive efficiency, collaboration, and growth."
+}

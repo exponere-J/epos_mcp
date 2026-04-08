@@ -1,0 +1,8 @@
+﻿{
+    "version":  "1.0.0",
+    "missionid":  "AZ-AT-BRIDGE-001",
+    "note":  "Execution steps defined in EPOS_AZ_MISSION_PACK.html under mission ID AZ-AT-BRIDGE-001.",
+    "authority":  "EPOSCONSTITUTIONv3.1.md",
+    "design_file":  "contextvault/missions/EPOS_AZ_MISSION_PACK.html",
+    "status":  "proposed"
+}

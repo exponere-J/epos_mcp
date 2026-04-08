@@ -1,0 +1,19 @@
+{
+  "id": "post-c55e2008",
+  "platform": "linkedin",
+  "mode": "profile",
+  "content_type": "text",
+  "body": "Auto-generated from spark",
+  "media_url": null,
+  "cta_token": "AUTO-AUTOBRIEF-WF",
+  "stagger_minutes": 0,
+  "created_at": "2026-04-07T02:17:24.818236+00:00",
+  "status": "published",
+  "published_at": "2026-04-07T02:18:29.671349+00:00",
+  "result": {
+    "success": true,
+    "method": "browser_use",
+    "message": "Published to linkedin via BrowserUse",
+    "details": "Task completed (no text result)"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "asset_id": "ASSET-032b105d",
+  "asset_type": "mirror_report",
+  "title": "Mirror Report \u2014 SALES \u2014 pgp_orlando",
+  "body": "**Mirror Report: TTLG Sales Diagnostic**\n\n**WHAT WE FOUND**: Our diagnostic revealed that your sales process is currently underperforming, with a Sovereign Alignment Score of 10/25. Specifically, we identified gaps in Lead Response Time and Follow Up Consistency, which are crucial for converting leads into customers. The typical small business often lacks a formal process for responding to leads, resulting in delayed or inconsistent responses, leading to missed opportunities and a negative first impression. This inconsistency also affects follow-up efforts, further hindering sales growth.\n\n**THE REAL COST**: These gaps in your sales process are likely costing you potential customers and revenue. Inconsistent lead response times and follow-up efforts can lead to a negative first impression, causing prospects to lose interest and explore alternative options. This not only affects your bottom line but also damages your brand reputation, making it harder to attract new customers in the future.\n\n**THE PATH FORWARD**: To address these gaps, we recommend implementing a formal process for responding to leads and following up with prospects. This can include setting clear response time targets, assigning dedicated staff to handle lead responses, and establishing a consistent follow-up schedule. By doing so, you can improve your lead conversion rates, enhance customer satisfaction, and ultimately drive revenue growth.\n\n**WHAT CHANGES IN 30 DAYS**: Within the next 30 days, we expect to see measurable improvements in your lead response times and follow-up consistency. By implementing these changes, you can start to see a reduction in missed opportunities and an increase in converted leads. With a medium confidence level, we project that these changes will have a positive impact on your sales performance.\n\n**SOVEREIGN ALIGNMENT SCORE**: With a current score of 10/25, your sales process has significant room for improvement. By addressing the identified gaps and implementing the recommended changes, you can start to move closer to achieving a higher Sovereign Alignment Score, ultimately leading to improved sales performance and revenue growth.",
+  "status": "draft",
+  "niche_id": null,
+  "segment_id": null,
+  "author_agent": "ttlg_diagnostic",
+  "platform_targets": [],
+  "scheduled_at": null,
+  "published_at": null,
+  "eri_predicted": null,
+  "eri_actual": null,
+  "version": 1,
+  "tags": [
+    "sales",
+    "pgp_orlando",
+    "sovereign_alignment"
+  ],
+  "created_at": "2026-03-29T19:20:44.599562+00:00",
+  "updated_at": "2026-03-29T19:20:44.599562+00:00"
+}

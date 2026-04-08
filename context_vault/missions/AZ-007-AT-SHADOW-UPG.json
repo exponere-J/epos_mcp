@@ -1,0 +1,17 @@
+{
+    "description":  "Execution steps defined in EPOS_AZ_MISSION_PACK.html under mission ID AZ-007-AT-SHADOW-UPG.",
+    "estimated_duration":  "2-4 hours",
+    "priority":  "CRITICAL",
+    "authority":  "EPOS_CONSTITUTION_v3.1.md",
+    "design_file":  "context_vault/missions/EPOS_AZ_MISSION_PACK.html",
+    "dependencies":  [
+
+                     ],
+    "status":  "proposed",
+    "mission_id":  "AZ-007-AT-SHADOW-UPG",
+    "title":  "Shadow Log Value-Capture Upgrades",
+    "week":  "Sprint Day 0",
+    "tasks":  [
+                  "See EPOS_AZ_MISSION_PACK.html for deterministic execution steps"
+              ]
+}

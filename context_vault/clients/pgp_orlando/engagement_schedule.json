@@ -1,0 +1,79 @@
+{
+  "client_id": "pgp_orlando",
+  "initial_score": 58.0,
+  "start_date": "2026-03-29T19:15:10.978255+00:00",
+  "touchpoints": [
+    {
+      "day": 0,
+      "phase": 1,
+      "name": "Initial Sovereign Alignment Report",
+      "type": "diagnostic",
+      "scheduled_date": "2026-03-29T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 7,
+      "phase": 1,
+      "name": "Implementation check-in",
+      "type": "checkin",
+      "scheduled_date": "2026-04-05T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 15,
+      "phase": 1,
+      "name": "Milestone 1 review",
+      "type": "review",
+      "scheduled_date": "2026-04-13T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 30,
+      "phase": 1,
+      "name": "Phase 1 close",
+      "type": "phase_close",
+      "scheduled_date": "2026-04-28T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 31,
+      "phase": 2,
+      "name": "Phase 2 diagnostic (new baseline)",
+      "type": "diagnostic",
+      "scheduled_date": "2026-04-29T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 45,
+      "phase": 2,
+      "name": "Mid-phase signal check",
+      "type": "checkin",
+      "scheduled_date": "2026-05-13T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 60,
+      "phase": 2,
+      "name": "Phase 2 close",
+      "type": "phase_close",
+      "scheduled_date": "2026-05-28T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 75,
+      "phase": 3,
+      "name": "Quarterly Business Review",
+      "type": "qbr",
+      "scheduled_date": "2026-06-12T19:15:10.978255+00:00",
+      "status": "scheduled"
+    },
+    {
+      "day": 90,
+      "phase": 3,
+      "name": "Full re-diagnostic + expansion review",
+      "type": "diagnostic",
+      "scheduled_date": "2026-06-27T19:15:10.978255+00:00",
+      "status": "scheduled"
+    }
+  ]
+}

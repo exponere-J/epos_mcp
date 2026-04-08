@@ -1,0 +1,28 @@
+{
+  "content_id": "PIPE_LOW",
+  "text": "Nice weather today, grabbed coffee",
+  "likes": 2,
+  "shares": 0,
+  "comments": 0,
+  "saves": 0,
+  "impressions": 50,
+  "hours_live": 48.0,
+  "follower_count": 2400,
+  "verified_engagers": 0,
+  "_echolocation": {
+    "score": 21.4,
+    "action": "kill",
+    "components": {
+      "engagement": 1.0,
+      "velocity": 0.2,
+      "audience_quality": 80,
+      "brand_alignment": 20
+    },
+    "transformations": [],
+    "scored_at": "2026-02-18T05:19:27.732715+00:00"
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

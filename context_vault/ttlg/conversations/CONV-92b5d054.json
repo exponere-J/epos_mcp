@@ -1,0 +1,185 @@
+{
+  "session_id": "CONV-92b5d054",
+  "client_id": "test-client",
+  "client_name": "Test Corp",
+  "industry": "marketing agency",
+  "started_at": "2026-04-04T16:17:37.618443+00:00",
+  "phase": "prescribe",
+  "current_track": "governance",
+  "track_index": 2,
+  "responses": {
+    "intake": "Our biggest issue is we can't produce content consistently. It's all manual.",
+    "marketing_0": "We handle it manually, no real system in place.",
+    "marketing_1": "We handle it manually, no real system in place.",
+    "marketing_2": "We handle it manually, no real system in place.",
+    "sales_0": "We handle it manually, no real system in place.",
+    "sales_1": "We handle it manually, no real system in place.",
+    "sales_2": "We handle it manually, no real system in place.",
+    "service_0": "We handle it manually, no real system in place.",
+    "service_1": "We handle it manually, no real system in place.",
+    "service_2": "We handle it manually, no real system in place.",
+    "governance_0": "We handle it manually, no real system in place.",
+    "governance_1": "We handle it manually, no real system in place.",
+    "governance_2": "We handle it manually, no real system in place."
+  },
+  "track_scores": {
+    "marketing": [
+      5.0,
+      5.0,
+      5.0
+    ],
+    "sales": [
+      5.0,
+      5.0,
+      5.0
+    ],
+    "service": [
+      5.0,
+      5.0,
+      5.0
+    ],
+    "governance": [
+      5.0,
+      5.0,
+      5.0
+    ]
+  },
+  "conversation_log": [
+    {
+      "role": "consultant",
+      "text": "Welcome, Test Corp. I'm here to help you see your business in marketing agency as it actually is \u2014 then show you what it could become.\n\nBefore we dive into the diagnostic, tell me: what's the one thing about your business operations that keeps you up at night?",
+      "timestamp": "2026-04-04T16:17:37.618443+00:00"
+    },
+    {
+      "role": "client",
+      "text": "Our biggest issue is we can't produce content consistently. It's all manual.",
+      "timestamp": "2026-04-04T16:17:37.627832+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "Thank you. Let's start with your marketing.\n\nWhat's your primary way of getting new clients right now?",
+      "timestamp": "2026-04-04T16:17:37.630358+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:37.638069+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "I understand that you're relying on manual processes for now. Can you give me a rough estimate of how much of your content creation is automated versus done manually, perhaps broken down by specific tasks or departments?",
+      "timestamp": "2026-04-04T16:17:38.833451+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:38.842844+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "\"I understand that currently, things are handled manually. That can be a challenge to scalability. If your top marketing person quit tomorrow, would content production stop, or do you have a plan in place for someone else to take over their responsibilities?\"",
+      "timestamp": "2026-04-04T16:17:39.305240+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:39.313482+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "Good. Let's look at your sales.\n\nWalk me through what happens when someone expresses interest in working with you.",
+      "timestamp": "2026-04-04T16:17:39.315451+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:39.322407+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "\"Manual handling can be a heavy burden on your team.\" \n\nCan you tell me, how do your team members currently identify which leads are a good fit for your business versus those that aren't, and is there any data or metrics they use to make that decision?",
+      "timestamp": "2026-04-04T16:17:39.811721+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:39.823550+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "\"I appreciate your honesty about the current state of your operation. To better understand where you're losing efficiency, can you tell me what percentage of qualified conversations result in a closed deal, and what's the average time between qualification and close?\"",
+      "timestamp": "2026-04-04T16:17:40.292039+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:40.304968+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "Good. Let's look at your service.\n\nAfter a client signs, what does the first 30 days look like?",
+      "timestamp": "2026-04-04T16:17:40.306938+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:40.315448+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "\"You're right, a manual approach can be cumbersome. Can you tell me, what are some key indicators you're currently using to determine whether a client feels satisfied with the results of your work?\"",
+      "timestamp": "2026-04-04T16:17:40.765885+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:40.779683+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "\"I understand you're managing things on a manual basis, which can be time-consuming and prone to errors. Can you tell me, what's the one thing that consistently slows you down or causes the most frustration in your day-to-day operations?\"",
+      "timestamp": "2026-04-04T16:17:41.392465+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:41.405628+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "Good. Let's look at your governance.\n\nIf you had to hand your business operations to someone for a month, how long would the handoff take?",
+      "timestamp": "2026-04-04T16:17:41.406992+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:41.418148+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "You're right, manual handling can be cumbersome. \n\nI'm curious, where do you store your customer orders, invoices, and payment records? Are they in a single database, spreadsheet, or perhaps a combination of paper files and digital documents?",
+      "timestamp": "2026-04-04T16:17:41.848690+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:41.859669+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "\"I hear you, handling things manually can be a challenge. What happens when something breaks at 2am - is there a process in place for your team to follow, or does it fall on you to troubleshoot and fix the issue?\"",
+      "timestamp": "2026-04-04T16:17:42.263900+00:00"
+    },
+    {
+      "role": "client",
+      "text": "We handle it manually, no real system in place.",
+      "timestamp": "2026-04-04T16:17:42.273341+00:00"
+    },
+    {
+      "role": "consultant",
+      "text": "Here's what I see.\n\nSovereign Alignment Score: 5/10\n\n  Marketing: developing (5/10)\n  Sales: developing (5/10)\n  Service: developing (5/10)\n  Governance: developing (5/10)\n\nYour strongest area is Marketing. The area that needs the most attention is Marketing.\n\nWould you like to see the specific recommendations?",
+      "timestamp": "2026-04-04T16:17:42.275294+00:00"
+    }
+  ],
+  "status": "active"
+}

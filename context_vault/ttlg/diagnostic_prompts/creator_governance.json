@@ -1,0 +1,35 @@
+{
+  "niche": "creator",
+  "track": "governance",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Content Strategy",
+    "Audience Engagement",
+    "Revenue Streams",
+    "Team Management",
+    "Intellectual Property"
+  ],
+  "key_bottleneck_patterns": [
+    "Inconsistent Content Scheduling",
+    "Ineffective Collaboration Tools",
+    "Unclear Ownership and Licensing"
+  ],
+  "thinker_context": "As a creator, establishing a robust governance framework is crucial to ensure the long-term sustainability and scalability of your business. This involves developing a comprehensive content strategy, fostering a loyal audience, diversifying revenue streams, managing a team of contributors, and protecting your intellectual property. Effective governance enables creators to navigate the complexities of their industry, mitigate risks, and capitalize on opportunities for growth.",
+  "surgeon_priorities": [
+    "Develop a Content Calendar to Streamline Production",
+    "Implement a Project Management Tool to Enhance Collaboration",
+    "Establish a Clear Intellectual Property Policy to Protect Assets"
+  ],
+  "mirror_report_tone": "Empathetic yet direct, with a focus on actionable insights and practical recommendations",
+  "desire_vocabulary": [
+    "Autonomy",
+    "Creativity",
+    "Freedom",
+    "Growth",
+    "Influence",
+    "Ownership",
+    "Profitability",
+    "Recognition"
+  ],
+  "generated_at": "2026-03-29T19:07:27.136608+00:00"
+}

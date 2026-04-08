@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "agents": [
+    {
+      "id": "content.strategist",
+      "name": "Content Strategist",
+      "description": "Designs content strategy and campaigns for services (e.g. gutter cleaning).",
+      "entry_workflow": "workflows/orchestrator/content_strategy.orch.json"
+    },
+    {
+      "id": "content.writer",
+      "name": "Content Writer",
+      "description": "Generates whitepapers, blogs, email sequences, and scripts from templates.",
+      "entry_workflow": "workflows/orchestrator/content_generation.orch.json"
+    },
+    {
+      "id": "distribution.manager",
+      "name": "Distribution Manager",
+      "description": "Uses posting_matrix.json and service_content_pipeline to schedule and track distribution.",
+      "entry_workflow": "workflows/orchestrator/distribution.orch.json"
+    }
+  ]
+}

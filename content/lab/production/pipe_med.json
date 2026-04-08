@@ -1,0 +1,33 @@
+{
+  "content_id": "PIPE_MED",
+  "text": "Built a content engine. 200 pieces a month. Zero employees. 12 sovereign AI nodes and constitutional governance.",
+  "likes": 45,
+  "shares": 12,
+  "comments": 8,
+  "saves": 3,
+  "impressions": 1200,
+  "hours_live": 12.0,
+  "follower_count": 2400,
+  "verified_engagers": 1,
+  "_echolocation": {
+    "score": 60.5,
+    "action": "promote",
+    "components": {
+      "engagement": 52.5,
+      "velocity": 28.3,
+      "audience_quality": 82,
+      "brand_alignment": 85
+    },
+    "transformations": [
+      "linkedin_post",
+      "blog_outline",
+      "youtube_script_segment",
+      "email_section"
+    ],
+    "scored_at": "2026-02-18T05:19:27.764009+00:00"
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "receipt_id": "VR-CB-LEGO-TEST-a268b9",
+  "script_id": null,
+  "brief_id": "CB-LEGO-TEST",
+  "verdict": "PASS",
+  "checks": {
+    "brand_voice": {
+      "pass": true,
+      "violations": [],
+      "note": "clean"
+    },
+    "claims_accuracy": {
+      "pass": true,
+      "note": "no uncited claims"
+    },
+    "affiliate_disclosure": {
+      "pass": true,
+      "note": "disclosure present"
+    },
+    "cta_token_format": {
+      "pass": true,
+      "note": "no token required"
+    },
+    "eri_premortem_logged": {
+      "pass": true,
+      "note": "ERI prediction found"
+    }
+  },
+  "failed_checks": [],
+  "generated_at": "2026-03-29T12:43:30.160285+00:00",
+  "requires_human_review": false
+}

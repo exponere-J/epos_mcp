@@ -1,0 +1,35 @@
+{
+  "niche": "agency",
+  "track": "governance",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Compliance and Risk Management",
+    "Board and Leadership Effectiveness",
+    "Regulatory Framework and Standards",
+    "Stakeholder Engagement and Communication",
+    "Internal Controls and Audit Processes"
+  ],
+  "key_bottleneck_patterns": [
+    "Inadequate Board Oversight and Governance",
+    "Insufficient Compliance and Risk Management Practices",
+    "Ineffective Communication and Stakeholder Engagement"
+  ],
+  "thinker_context": "As an agency, effective governance is crucial to ensure compliance with regulatory requirements, manage risks, and maintain stakeholder trust. A governance audit track helps identify areas of improvement in board and leadership effectiveness, regulatory compliance, and internal controls. By assessing these areas, agencies can address gaps and implement changes to enhance their overall governance framework, ultimately leading to better decision-making, reduced risks, and improved stakeholder relationships.",
+  "surgeon_priorities": [
+    "Implement a Robust Compliance and Risk Management Framework",
+    "Enhance Board and Leadership Effectiveness through Training and Development",
+    "Develop and Implement Effective Stakeholder Engagement and Communication Strategies"
+  ],
+  "mirror_report_tone": "Professional, objective, and constructive, with a focus on providing actionable recommendations for improvement",
+  "desire_vocabulary": [
+    "Compliance",
+    "Risk",
+    "Governance",
+    "Effectiveness",
+    "Efficiency",
+    "Stakeholder",
+    "Trust",
+    "Accountability"
+  ],
+  "generated_at": "2026-03-29T19:07:09.102330+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-001",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "controversy",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Most LEGO buyers overpay because they chase hype sets instead of value.",
+  "hook_line": "Stop wasting money on LEGO sets that lose value.",
+  "cta": "Link in description for the 5 sets that actually hold their price.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Icons Eiffel Tower",
+    "LEGO Creator Expert Bookshop"
+  ],
+  "status": "draft"
+}

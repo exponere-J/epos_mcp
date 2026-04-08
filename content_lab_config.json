@@ -1,0 +1,60 @@
+{
+  "_governance": {"watermarked": true, "version": "3.1"},
+  "version": "1.0",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "created_at": "2026-03-29T00:00:00Z",
+
+  "generation_stack": {
+    "text": {
+      "model_router": "groq_router.py",
+      "hero_scripts": "llama-3.3-70b-versatile",
+      "derivative_copy": "llama-3.1-8b-instant",
+      "seo_descriptions": "llama-3.1-8b-instant"
+    },
+    "voice": {
+      "provider": "elevenlabs",
+      "api_key_env": "ELEVENLABS_API_KEY",
+      "echoes_voice_id_env": "ELEVENLABS_ECHOES_VOICE_ID",
+      "epos_voice_id_env": "ELEVENLABS_EPOS_VOICE_ID"
+    },
+    "video": {
+      "provider": "heygen",
+      "api_key_env": "HEYGEN_API_KEY",
+      "scenes": {
+        "founder_glow": "",
+        "schematic": "",
+        "glitch": ""
+      }
+    },
+    "graphics": {
+      "provider": "canva",
+      "api_key_env": "CANVA_API_KEY",
+      "templates": {
+        "thumbnail_founder_glow": "",
+        "thumbnail_schematic": "",
+        "thumbnail_glitch": "",
+        "channel_banner": "",
+        "carousel_slide": "",
+        "lead_magnet_cover": ""
+      }
+    },
+    "transcription": {
+      "provider": "whisper_local",
+      "model": "base",
+      "fallback": "whisper_api"
+    }
+  },
+
+  "production_rules": {
+    "max_short_duration_s": 60,
+    "min_short_duration_s": 15,
+    "stabilization_window_hours": 24,
+    "max_derivatives_per_source": 14,
+    "affiliate_disclosure_required": true,
+    "brand_validation_required": true
+  },
+
+  "active_niches": ["lego_affiliate"],
+
+  "cta_token_format": "ECH-{PLATFORM}-{MASK}-{DATE}-{VARIANT}"
+}

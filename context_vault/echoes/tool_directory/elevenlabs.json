@@ -1,0 +1,9 @@
+{
+  "id": "elevenlabs",
+  "name": "ElevenLabs",
+  "category": "audio",
+  "use_case": "Voice synthesis and audio post-production",
+  "tier": "L2+",
+  "url": "https://elevenlabs.io",
+  "added_at": "2026-03-29T12:48:15.812144+00:00"
+}

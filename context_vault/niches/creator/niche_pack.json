@@ -1,0 +1,56 @@
+{
+  "niche_id": "creator",
+  "niche_name": "Content creators and personal brands",
+  "version": "1.0",
+  "attention_map": {
+    "primary_platforms": [
+      "YouTube",
+      "TikTok",
+      "Instagram"
+    ],
+    "preferred_formats": [
+      "Video",
+      "Podcasting"
+    ],
+    "content_cadence": "3 times per week"
+  },
+  "desire_vocabulary": {
+    "pain_language": [
+      "audience engagement",
+      "content consistency",
+      "monetization strategies"
+    ],
+    "outcome_language": [
+      "grow my audience",
+      "increase brand awareness",
+      "drive revenue"
+    ],
+    "objection_language": [
+      "lack of time",
+      "limited resources"
+    ],
+    "tribal_markers": [
+      "influencer marketing",
+      "personal branding",
+      "content creation"
+    ]
+  },
+  "purchase_intent_signals": [
+    "researching equipment and software",
+    "engaging with online courses and tutorials",
+    "participating in online communities and forums"
+  ],
+  "margin_matrix": {
+    "min_project_value": 1000,
+    "avg_retainer_monthly": 5000,
+    "target_margin_pct": 30,
+    "constitutional_floor_multiplier": 1.3
+  },
+  "proof_benchmark": {},
+  "diagnostic_emphasis": [
+    "inconsistent content scheduling",
+    "ineffective audience engagement strategies",
+    "limited brand visibility"
+  ],
+  "offer_angle": "Helping content creators and personal brands build and monetize their online presence through strategic content creation and audience engagement."
+}

@@ -1,0 +1,44 @@
+{
+  "template_id": "invoice",
+  "category": "operational",
+  "version": "1.0",
+  "description": "Invoice delivery with payment link and avatar-appropriate framing.",
+  "subject": "Invoice {{invoice_number}} — {{invoice_amount}} due {{due_date}}",
+  "body_sections": [
+    {"type": "opening", "content": "Hi {{client_name}},"},
+    {"type": "invoice_summary", "content": "Invoice {{invoice_number}}: {{invoice_description}}\n\nAmount due: {{invoice_amount}}\nDue: {{due_date}}"},
+    {"type": "value_delivered", "content": "{{avatar_value_recap}}"},
+    {"type": "payment_link", "content": "Pay securely: {{payment_link}}"},
+    {"type": "support", "content": "Questions? Reply to this email and I'll respond personally."},
+    {"type": "signature", "content": "{{sender_name}}\n\n1% daily. 37x annually."}
+  ],
+  "cta_token_pattern": "CTA-INVOICE-{{avatar_id}}-{{invoice_number}}",
+  "follow_up_trigger": {"days": 3, "before_due": true, "template": "invoice_reminder"},
+  "escalation": {"condition": "overdue_7_days", "action": "publish_event:billing.overdue.flagged"},
+  "avatar_overrides": {
+    "local_champion": {
+      "avatar_value_recap": "This month: {{metric_booked_jobs}} booked jobs, {{metric_leads_followed}} leads followed up in under 5 minutes."
+    },
+    "solo_strategic_consultant": {
+      "avatar_value_recap": "This month: {{metric_hours_reclaimed}} hours reclaimed, {{metric_systems_installed}} systems live."
+    },
+    "boutique_agency_founder": {
+      "avatar_value_recap": "This month: {{metric_margin_delta}} margin delta, {{metric_playbooks_rolled}} playbooks rolled out."
+    },
+    "fractional_executive": {
+      "avatar_value_recap": "This month: {{metric_clients_onboarded}} client vaults provisioned, {{metric_context_loads}} context loads executed."
+    },
+    "technical_founder_operator": {
+      "avatar_value_recap": "This month: {{metric_modules_shipped}} modules shipped, {{metric_integrations_wired}} integrations wired."
+    },
+    "solo_operator": {
+      "avatar_value_recap": "This month: {{metric_templates_used}} templates deployed, {{metric_hours_saved}} hours saved."
+    },
+    "agency_builder": {
+      "avatar_value_recap": "This month: {{metric_margin_delta}} margin points recovered, {{metric_team_adoption}} team adoption rate."
+    },
+    "creative_hustler": {
+      "avatar_value_recap": "This month: top 3 resonating formats + {{metric_conversion_delta}} conversion delta."
+    }
+  }
+}

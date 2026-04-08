@@ -1,0 +1,35 @@
+{
+  "niche": "saas",
+  "track": "service",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Customer Onboarding Efficiency",
+    "Service Level Agreement (SLA) Adherence",
+    "Issue Resolution Time",
+    "Customer Satisfaction (CSAT) Scores",
+    "Knowledge Base and Documentation Quality"
+  ],
+  "key_bottleneck_patterns": [
+    "Inefficient Ticket Routing and Escalation",
+    "Lack of Proactive Issue Detection and Prevention",
+    "Insufficient Training and Enablement for Support Agents"
+  ],
+  "thinker_context": "The SaaS service landscape is increasingly competitive, with customers expecting seamless, personalized, and timely support experiences. As a result, SaaS businesses must prioritize optimizing their service operations to drive customer satisfaction, retention, and ultimately, revenue growth. Effective service audit tracks can help identify areas of improvement, from streamlining onboarding and issue resolution processes to enhancing the overall quality of support interactions.",
+  "surgeon_priorities": [
+    "Implementing AI-Powered Chatbots for Tier 1 Support",
+    "Developing Proactive Monitoring and Alert Systems",
+    "Creating Personalized Customer Success Plans"
+  ],
+  "mirror_report_tone": "Data-Driven, Action-Oriented, and Customer-Centric",
+  "desire_vocabulary": [
+    "Effortless",
+    "Proactive",
+    "Personalized",
+    "Timely",
+    "Seamless",
+    "Intuitive",
+    "Empathetic",
+    "Results-Driven"
+  ],
+  "generated_at": "2026-03-29T19:07:14.023173+00:00"
+}

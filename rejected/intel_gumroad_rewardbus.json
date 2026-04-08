@@ -1,0 +1,15 @@
+{
+  "mission_id": "dist_reward_bus_001",
+  "agent": "huntsman",
+  "directive": "deploy_product",
+  "parameters": {
+    "platforms": ["gumroad"],
+    "execution_mode": "direct"
+  },
+  "payload": {
+    "product_name": "The Reward Bus: Agentic Nervous System (Enterprise Edition)",
+    "price_usd": 197.00,
+    "description_markdown": "## STOP BUILDING FRAGILE AGENTS.\n\nMost AI agents are blind. The Reward Bus gives them a nervous system.\n\nIncludes:\n- Core Python Library\n- JSON Schemas\n- Ranking Logic\n\nPrice: $197 (One-time)",
+    "call_to_action": "I want this"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "brief_id": "CB-LEGOAF-9968",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-04-04T16:05:29.440366+00:00",
+  "source_spark_id": "SPARK-3e48733a",
+  "angle_type": "educator",
+  "hook_type": "question",
+  "visual_mask": "clean_professional",
+  "target_platform": "youtube_shorts",
+  "script_premise": "The video showcases the top rare and hard-to-find Lego sets that every enthusiast should know about.",
+  "hook_line": "Are you tired of searching for the rarest Lego sets that seem impossible to find?",
+  "cta": "Check the links in our description to find out where to get these exclusive sets",
+  "predicted_eri_score": 0,
+  "affiliate_products": [],
+  "status": "draft"
+}

@@ -1,0 +1,76 @@
+# ============================================================================
+# EPOS SOVEREIGN STACK — OpenClaw Integration
+# File: C:\Users\Jamie\workspace\epos_mcp\docker-compose.openclaw.yml
+#
+# USAGE: docker compose -f docker-compose.yml -f docker-compose.openclaw.yml up -d
+#
+# This overlay adds OpenClaw as the strategic intelligence layer.
+# OpenClaw connects to:
+#   - Anthropic API (via your existing API key)
+#   - EPOS PostgreSQL (via MCP postgres server, read-only)
+#   - n8n (via webhooks for bidirectional automation)
+#   - Context Vault (via mounted workspace volume)
+#   - Ollama (for local model fallback)
+#
+# CONSTITUTIONAL AUTHORITY: EPOS Constitution v3.1, Article X
+# ============================================================================
+
+version: "3.8"
+
+services:
+
+  # ========================================================================
+  # OPENCLAW GATEWAY — Strategic Intelligence Layer
+  # ========================================================================
+  # OpenClaw serves as the EPOS "Market Awareness Cortex":
+  #   - Recon Protocol execution (RECON-001 through RECON-XXX)
+  #   - Pre-integration intelligence briefs
+  #   - External landscape analysis
+  #   - Competitive awareness and market sensing
+  #   - Content research and strategic recommendations
+  #
+  # It does NOT have write access to EPOS core data.
+  # All data flows through n8n webhooks (governed integration).
+  # ========================================================================
+  openclaw-gateway:
+    image: coollabsio/openclaw:latest
+    container_name: epos-openclaw
+    restart: unless-stopped
+    networks:
+      - epos-net
+    ports:
+      - "${OPENCLAW_PORT:-18789}:18789"
+      - "${OPENCLAW_UI_PORT:-8082}:8080"
+    volumes:
+      # Persistent OpenClaw state and config
+      - epos-openclaw-data:/data
+      # Mount Context Vault as workspace — OpenClaw reads recon templates,
+      # writes intelligence briefs here
+      - ./context_vault:/data/workspace/context_vault
+      # Mount recon output directory
+      - ./context_vault/recon:/data/workspace/recon
+    environment:
+      # ── AI Provider: Anthropic (primary) ──
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:?ANTHROPIC_API_KEY must be set}
+
+      # ── Ollama fallback (for local/sovereign tasks) ──
+      OLLAMA_URL: http://ollama:11434
+
+      # ── Gateway Configuration ──
+      OPENCLAW_BIND: "loopback"
+      AUTH_PASSWORD: ${OPENCLAW_AUTH_PASSWORD:-}
+
+      # ── Webhooks: Enable for n8n integration ──
+      OPENCLAW_HOOKS_ENABLED: "true"
+      OPENCLAW_HOOKS_TOKEN: ${OPENCLAW_HOOKS_TOKEN:-}
+      OPENCLAW_HOOKS_PATH: "/hooks"
+
+      # ── Workspace ──
+      OPENCLAW_HOME: /data/.openclaw
+      OPENCLAW_WORKSPACE: /data/workspace
+    depends_on:
+      - ollama
+
+volumes:
+  epos-openclaw-data:
+    name: epos-openclaw-data

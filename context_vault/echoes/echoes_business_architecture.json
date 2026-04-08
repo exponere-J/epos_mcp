@@ -1,0 +1,159 @@
+{
+  "_governance": {"watermarked": true, "version": "3.1"},
+  "version": "1.0",
+  "business_name": "Echoes Marketing",
+  "dba_under": "EXPONERE",
+  "domain": "echoes.marketing",
+  "tagline": "We follow the signal.",
+  "mission": "The new-age ad agency that is also the university of content creation. We serve everyone in the domain — from the purist photographer to the enterprise multimedia campaign. We create for businesses. We educate the industry. We build the tools that make both possible.",
+
+  "positioning": {
+    "primary": "Universal digital marketing agency powered by AI production capability",
+    "authority": "The leading voice and source of truth in content creation",
+    "differentiator": "We serve every user in the domain — purist to enterprise — with the right capability for their specific need",
+    "anti_positioning": [
+      "Not a social media scheduler",
+      "Not a content calendar tool",
+      "Not a one-size-fits-all AI generator",
+      "Not just a YouTube channel",
+      "Not just an agency"
+    ]
+  },
+
+  "user_profiles": [
+    {
+      "id": "purist_creator",
+      "name": "The Purist",
+      "description": "Film photographer, analog artist, traditional craftsperson. The work is the art. Needs business infrastructure, not AI generation.",
+      "primary_need": "workflow_management_and_business_overhead",
+      "echoes_service": "business_autonomy_os",
+      "revenue_tier": "L2"
+    },
+    {
+      "id": "technical_creator",
+      "name": "The Technical Creator",
+      "description": "Videographer, colorist, audio engineer. Deep technical skill, drowning in execution time.",
+      "primary_need": "precision_edit_assist",
+      "echoes_service": "precision_edit_assist",
+      "revenue_tier": "L2"
+    },
+    {
+      "id": "visual_artist",
+      "name": "The Visual Artist",
+      "description": "Photographer perfecting the image. Wants acceleration, not replacement of craft.",
+      "primary_need": "intelligent_editing_assistance",
+      "echoes_service": "precision_edit_assist",
+      "revenue_tier": "L2"
+    },
+    {
+      "id": "writer_purist",
+      "name": "The Writer",
+      "description": "Journalist, copywriter, brand strategist. Wants a thinking partner that sounds like them.",
+      "primary_need": "high_quality_text_generation_with_style_fidelity",
+      "echoes_service": "imagination_engine_text",
+      "revenue_tier": "L2"
+    },
+    {
+      "id": "content_creator",
+      "name": "The Content Creator",
+      "description": "YouTuber, podcaster, newsletter writer. One idea needs maximum distribution.",
+      "primary_need": "cascade_engine",
+      "echoes_service": "cascade_engine",
+      "revenue_tier": "L2_L3"
+    },
+    {
+      "id": "small_business",
+      "name": "The Small Business Owner",
+      "description": "Restaurant, retail, local service. Needs professional marketing without a team.",
+      "primary_need": "ongoing_content_production",
+      "echoes_service": "content_factory",
+      "revenue_tier": "L3"
+    },
+    {
+      "id": "marketing_manager",
+      "name": "The Marketing Manager",
+      "description": "Inside a mid-size company. Impossible deadlines, small team.",
+      "primary_need": "force_multiplier_for_content_production",
+      "echoes_service": "content_factory_plus_cascade",
+      "revenue_tier": "L3"
+    },
+    {
+      "id": "agency",
+      "name": "The Agency",
+      "description": "Creative agency wanting to white-label production capability.",
+      "primary_need": "white_label_production_at_scale",
+      "echoes_service": "full_white_label",
+      "revenue_tier": "L4"
+    },
+    {
+      "id": "enterprise",
+      "name": "The Enterprise",
+      "description": "Full multimedia campaign. Broadcast to social. Everything consistent, on-brand, on-time.",
+      "primary_need": "full_campaign_production_orchestration",
+      "echoes_service": "enterprise_campaign_production",
+      "revenue_tier": "L5"
+    }
+  ],
+
+  "service_layers": {
+    "L1_intelligence": {
+      "price": 0,
+      "services": ["newsletter_the_signal", "tool_directory", "model_comparisons", "white_papers"],
+      "purpose": "Build audience and authority. Convert to L2."
+    },
+    "L2_creator_tools": {
+      "price_range": "49_to_149_per_month",
+      "services": ["cascade_engine", "precision_edit_assist", "imagination_engine", "echoes_academy"],
+      "target": ["purist_creator", "technical_creator", "visual_artist", "writer_purist", "content_creator"]
+    },
+    "L3_business_production": {
+      "price_range": "497_to_997_per_month",
+      "services": ["content_factory", "brand_intelligence", "campaign_production_small", "niche_intelligence"],
+      "target": ["small_business", "marketing_manager", "content_creator"]
+    },
+    "L4_agency_white_label": {
+      "price_range": "997_to_2997_per_month",
+      "services": ["full_content_lab_white_label", "client_dashboard", "unlimited_cascade", "priority_queue"],
+      "target": ["agency"]
+    },
+    "L5_enterprise": {
+      "price_range": "custom",
+      "services": ["full_campaign_production", "dedicated_account", "custom_model_finetuning", "sla_delivery"],
+      "target": ["enterprise"]
+    }
+  },
+
+  "content_channels": {
+    "youtube": {"handle": "@EchoesMarketing", "role": "primary_showcase_and_education"},
+    "newsletter": {"name": "The Signal", "role": "weekly_intelligence_brief"},
+    "linkedin": {"role": "b2b_authority_and_client_acquisition"},
+    "x_twitter": {"role": "realtime_industry_intelligence"},
+    "tiktok": {"role": "discovery_and_reach"},
+    "instagram_reels": {"role": "visual_showcase"},
+    "website": {"domain": "echoes.marketing", "role": "permanent_authority_hub"}
+  },
+
+  "epos_nodes_powering_echoes": [
+    "R1_Radar", "MA1_Market_Awareness", "AN1_Analyst",
+    "A1_Architect", "V1_Validation", "P1_Producer",
+    "M1_Marshall", "TTLG_Diagnostic",
+    "EchoesResearchEngine", "ContentRouter",
+    "CascadeEngine", "PrecisionEditAssist"
+  ],
+
+  "pilot_evidence": {
+    "binding_pilot": {
+      "niche": "lego_affiliate",
+      "channel": "@EchoesMarketing",
+      "purpose": "Prove ERI algorithm accuracy and Content Lab production capability",
+      "success_metric": "70_percent_eri_prediction_accuracy_across_25_videos",
+      "business_purpose": "Becomes first public case study and sales asset"
+    },
+    "pgp_orlando": {
+      "client": "PGP Property Solutions",
+      "service": "pressure_washing_and_gutter_services_orlando_fl",
+      "purpose": "First client case study — local service business transformation",
+      "echoes_role": "full_content_factory_and_campaign_production"
+    }
+  }
+}

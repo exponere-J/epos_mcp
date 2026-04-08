@@ -1,0 +1,74 @@
+{
+  "brief_id": "BRIEF-8d98967425",
+  "created_at": "2026-04-07T15:16:10.724601+00:00",
+  "topic": "agency margin recovery playbook",
+  "target_avatar": "agency_builder",
+  "avatar_display_name": "The Agency Builder",
+  "angle": "architect",
+  "angle_stance": "Framework / systems-thinking",
+  "format": "LinkedIn posts",
+  "tone": "Professional, efficiency-focused, margin-conscious, operator-to-operator",
+  "vocabulary_include": [
+    "agency scaling",
+    "agency margin",
+    "agency operations",
+    "delivery playbook",
+    "team capacity",
+    "PM burnout",
+    "agency churn",
+    "utilization rate",
+    "raise prices",
+    "agency hiring",
+    "Margin",
+    "utilization",
+    "throughput",
+    "delivery",
+    "retention",
+    "LTV:CAC"
+  ],
+  "vocabulary_exclude": [
+    "side hustle",
+    "first client",
+    "freelance",
+    "solo founder",
+    "indie hacker",
+    "bootstrapped solo",
+    "how to start an agency"
+  ],
+  "hook": "There's a system-level fix for this: team can't keep up with client demand. Here's the architecture.",
+  "structure": {
+    "opening": "Acknowledge the specific reality this avatar lives in \u2014 use their vocabulary, not yours.",
+    "value": "Name the cost of agency margin recovery playbook in terms this avatar tracks (time, money, or reputation).",
+    "evidence": "Show proof in the format they trust: Named agency case studies with margin and revenue numbers.",
+    "system": "Present the fix as a repeatable system, not a one-off tactic.",
+    "cta": "Free 'Agency Margin Diagnostic' TTLG scan",
+    "signoff": "1% daily. 37x annually."
+  },
+  "cta_token": "ECHO-2026-04-AGENCY_BUILDER-AGENCY-MARGIN-RECOVERY",
+  "constraints": {
+    "max_words": 500,
+    "must_include_dollar_amount": true,
+    "must_include_comparison": false,
+    "must_include_screenshot": false,
+    "must_include_case_study": true,
+    "preferred_send_time": "07:00-09:00 local"
+  },
+  "predicted_resonance": 65,
+  "optimization_notes": [],
+  "primary_channels": [
+    "LinkedIn",
+    "Industry conferences",
+    "Mastermind groups",
+    "Agency Slack communities"
+  ],
+  "proof_type": "Named agency case studies with margin and revenue numbers",
+  "price_tolerance": {
+    "monthly_floor": 497,
+    "monthly_ceiling": 2497,
+    "one_time_floor": 5000,
+    "one_time_ceiling": 50000,
+    "currency": "USD"
+  },
+  "prediction_id": null,
+  "spark_ref": "SPARK-TEST-002"
+}

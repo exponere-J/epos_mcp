@@ -1,0 +1,330 @@
+{
+  "aar_schema_v1": {
+    "description": "After Action Review schema for TTLG Diagnostics. Captures what was learned from each diagnostic cycle.",
+    "version": "1.0",
+    "required_fields": ["aar_id", "domain", "timestamp_created", "phase_1_findings", "phase_6_learning"],
+    "properties": {
+      "aar_id": {
+        "type": "string",
+        "description": "Unique identifier for this AAR. Format: AAR-YYYY-MM-DD-THHmmssZ",
+        "example": "AAR-2026-02-28-T14-25-30Z"
+      },
+      "domain": {
+        "type": "string",
+        "enum": ["internal_epos_healing", "client_diagnosis"],
+        "description": "Whether this AAR is from internal EPOS scan or client engagement"
+      },
+      "timestamp_created": {
+        "type": "string",
+        "format": "ISO 8601",
+        "description": "When this AAR was generated",
+        "example": "2026-02-28T14:25:30Z"
+      },
+      "scan_id": {
+        "type": "string",
+        "description": "Link back to the Scout scan that generated this AAR",
+        "example": "scan_20260228_142530"
+      },
+      "phase_1_findings": {
+        "type": "object",
+        "description": "Scout output: what was scanned and what was found",
+        "properties": {
+          "files_scanned": {
+            "type": "integer",
+            "description": "Total files analyzed"
+          },
+          "dependencies_mapped": {
+            "type": "integer",
+            "description": "Total nodes in the architecture"
+          },
+          "brittle_points_found": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Unique brittle point ID (e.g., BP-001)",
+                  "example": "BP-001"
+                },
+                "severity": {
+                  "type": "string",
+                  "enum": ["critical", "high", "medium", "low"],
+                  "description": "How urgent this issue is"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "What is broken",
+                  "example": "Hardcoded paths in governance.py"
+                },
+                "file_reference": {
+                  "type": "string",
+                  "description": "Where in code this appears",
+                  "example": "governance.py:42"
+                },
+                "remediation_effort": {
+                  "type": "string",
+                  "enum": ["easy", "medium", "hard"],
+                  "description": "How much work to fix"
+                }
+              },
+              "required": ["id", "severity", "description", "file_reference"]
+            }
+          }
+        },
+        "required": ["files_scanned", "dependencies_mapped", "brittle_points_found"]
+      },
+      "phase_2_evaluation": {
+        "type": "object",
+        "description": "Thinker output: prioritized list of what to fix",
+        "properties": {
+          "heal_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "issue_id": {
+                  "type": "string",
+                  "description": "Reference to BP-XXX from Phase 1"
+                },
+                "constitutional_severity": {
+                  "type": "string",
+                  "enum": ["blocks_autonomy", "violates_rule", "technical_debt"],
+                  "description": "Why this matters to EPOS constitution"
+                },
+                "roi_impact": {
+                  "type": "object",
+                  "description": "Time-based ROI of fixing this",
+                  "properties": {
+                    "90_days": {
+                      "type": "string",
+                      "description": "What gets better in 90 days",
+                      "example": "30% latency reduction"
+                    },
+                    "180_days": {
+                      "type": "string",
+                      "description": "What gets better in 180 days",
+                      "example": "100% governance compliance"
+                    },
+                    "365_days": {
+                      "type": "string",
+                      "description": "What gets better in 365 days",
+                      "example": "Can add 5+ new client nodes without overhead increase"
+                    }
+                  }
+                },
+                "priority": {
+                  "type": "integer",
+                  "description": "Priority rank (1 = highest)",
+                  "minimum": 1
+                }
+              },
+              "required": ["issue_id", "constitutional_severity", "priority"]
+            }
+          }
+        }
+      },
+      "phase_3_approval": {
+        "type": "object",
+        "description": "Governance Gate: Jamie's approval",
+        "properties": {
+          "requested_by": {
+            "type": "string",
+            "description": "Which AI agent requested approval",
+            "example": "ttlg_thinker"
+          },
+          "approved_by": {
+            "type": "string",
+            "description": "Who approved (should be 'jamie')",
+            "example": "jamie"
+          },
+          "approval_timestamp": {
+            "type": "string",
+            "format": "ISO 8601",
+            "description": "When approval was granted"
+          },
+          "approval_status": {
+            "type": "string",
+            "enum": ["approved", "rejected", "deferred"],
+            "description": "Did Jamie approve?"
+          },
+          "approval_notes": {
+            "type": "string",
+            "description": "Why approved/rejected/deferred"
+          }
+        },
+        "required": ["requested_by", "approved_by", "approval_status"]
+      },
+      "phase_4_fixes": {
+        "type": "object",
+        "description": "Surgeon output: what code changed",
+        "properties": {
+          "fixes_applied": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "issue_id": {
+                  "type": "string",
+                  "description": "Which BP or heal list item this addresses"
+                },
+                "change_description": {
+                  "type": "string",
+                  "description": "What was changed (in plain language)",
+                  "example": "Introduced PATH_ABSTRACTION layer instead of hardcoded strings"
+                },
+                "files_modified": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Files that were changed"
+                },
+                "tests_passed": {
+                  "type": "integer",
+                  "description": "Number of tests that passed"
+                },
+                "tests_failed": {
+                  "type": "integer",
+                  "description": "Number of tests that failed (should be 0)"
+                }
+              },
+              "required": ["issue_id", "change_description", "files_modified", "tests_passed"]
+            }
+          }
+        }
+      },
+      "phase_5_verification": {
+        "type": "object",
+        "description": "Analyst output: did the fixes actually work?",
+        "properties": {
+          "stress_tests": {
+            "type": "object",
+            "description": "Results of stress testing the fixed system",
+            "properties": {
+              "event_bus_load": {
+                "type": "string",
+                "enum": ["pass", "fail"],
+                "description": "Can the event bus handle traffic?"
+              },
+              "dependency_cycles": {
+                "type": "string",
+                "enum": ["pass", "fail"],
+                "description": "Are there any circular imports?"
+              },
+              "latency_profile": {
+                "type": "string",
+                "enum": ["pass", "fail"],
+                "description": "Is latency acceptable?"
+              }
+            }
+          },
+          "benchmark_comparison": {
+            "type": "string",
+            "description": "How does fixed system compare to market patterns?",
+            "example": "Exceeds market benchmark for coupling ratio (our 0.62 vs industry 0.75)"
+          }
+        }
+      },
+      "phase_6_learning": {
+        "type": "object",
+        "description": "What patterns and guardrails emerge from this diagnostic",
+        "properties": {
+          "patterns_discovered": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pattern_id": {
+                  "type": "string",
+                  "description": "Unique identifier for this pattern",
+                  "example": "PAT-hardcoded-paths"
+                },
+                "pattern_name": {
+                  "type": "string",
+                  "description": "Human-readable name",
+                  "example": "Hardcoded Path Brittleness"
+                },
+                "root_cause": {
+                  "type": "string",
+                  "description": "Why this pattern appears",
+                  "example": "Paths were concatenated as strings instead of computed from config"
+                },
+                "solution_applied": {
+                  "type": "string",
+                  "description": "How we fixed it",
+                  "example": "Introduced PATH_ABSTRACTION layer with centralized config"
+                },
+                "confidence": {
+                  "type": "string",
+                  "enum": ["high", "medium", "low"],
+                  "description": "How confident are we in this pattern?"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Links to supporting evidence",
+                  "example": ["fixed in 3 EPOS components", "all latency tests passed"]
+                },
+                "guardrail_to_add": {
+                  "type": "string",
+                  "description": "New rule for Thinker to enforce",
+                  "example": "Flag any hardcoded path as HIGH priority in future scans"
+                }
+              },
+              "required": ["pattern_name", "root_cause", "solution_applied", "confidence"]
+            }
+          },
+          "learning_feedback": {
+            "type": "object",
+            "description": "How this learning affects future diagnostics",
+            "properties": {
+              "updated_guardrails": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "New rules added to Thinker config"
+              },
+              "updated_antipatterns": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "New antipatterns Friday should recognize"
+              }
+            }
+          }
+        },
+        "required": ["patterns_discovered"]
+      },
+      "summary": {
+        "type": "object",
+        "description": "High-level summary for dashboards and reports",
+        "properties": {
+          "total_issues_found": {
+            "type": "integer"
+          },
+          "total_issues_fixed": {
+            "type": "integer"
+          },
+          "total_patterns_discovered": {
+            "type": "integer"
+          },
+          "governance_compliance": {
+            "type": "string",
+            "enum": ["pass", "fail"],
+            "description": "Did all fixes respect the constitution?"
+          },
+          "recommendation": {
+            "type": "string",
+            "enum": ["continue_at_current_pace", "accelerate_improvements", "slow_down_and_stabilize"],
+            "description": "What's the next move?"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "verifier_local",
+  "role": "Audit & Verification Agent",
+  "interface": "local",
+  "description": "Validates workflow outcomes and records audit results.",
+  "allowed_ops": ["log_event"]
+}

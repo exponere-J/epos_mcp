@@ -1,0 +1,35 @@
+{
+  "niche": "local_service",
+  "track": "marketing",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Online Presence",
+    "Customer Engagement",
+    "Local Search Optimization",
+    "Content Marketing",
+    "Social Media Management"
+  ],
+  "key_bottleneck_patterns": [
+    "Inconsistent Branding Across Platforms",
+    "Insufficient Online Reviews and Ratings",
+    "Ineffective Use of Social Media Advertising"
+  ],
+  "thinker_context": "As a local service business, having a strong online presence is crucial to attracting and retaining customers. However, many local service businesses struggle to effectively market themselves online, leading to a lack of visibility, low customer engagement, and ultimately, a decrease in sales. A marketing audit can help identify areas of improvement and provide a roadmap for enhancing online presence, engaging with customers, and driving sales.",
+  "surgeon_priorities": [
+    "Develop a Comprehensive Online Presence Strategy",
+    "Implement a Customer Review and Rating Management System",
+    "Create and Execute a Social Media Advertising Plan"
+  ],
+  "mirror_report_tone": "Action-oriented and data-driven, with a focus on providing actionable recommendations for improvement",
+  "desire_vocabulary": [
+    "Visibility",
+    "Engagement",
+    "Conversion",
+    "Growth",
+    "Customer",
+    "Retention",
+    "Revenue",
+    "Competitive"
+  ],
+  "generated_at": "2026-03-29T19:07:16.894034+00:00"
+}

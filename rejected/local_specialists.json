@@ -1,0 +1,24 @@
+{
+  "specialists": [
+    {
+      "id": "filesystem_local",
+      "domain": "filesystem",
+      "interface": "local",
+      "allowed_ops": ["read_file", "write_file", "list_directory"]
+    },
+    {
+      "id": "terminalrunner_local",
+      "domain": "cli",
+      "interface": "http",
+      "endpoint": "http://localhost:8000/run-task",
+      "allowed_ops": ["build", "test", "lint", "status", "generic"]
+    },
+    {
+      "id": "computeruse_local",
+      "domain": "gui",
+      "interface": "cli",
+      "entrypoint": "python epos_run.py",
+      "allowed_ops": ["execute_plan"]
+    }
+  ]
+}

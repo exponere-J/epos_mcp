@@ -1,0 +1,24 @@
+{
+  "id": "C10_CONTENT_LAB",
+  "name": "Content Lab - Algorithmic Echolocation & Cascading",
+  "version": "1.0.0",
+  "status": "operational",
+  "dependencies": [
+    "C01_META_ORCHESTRATOR",
+    "C05_GOVERNANCE_GATE",
+    "C09_CONTEXT_VAULT"
+  ],
+  "nodes": {
+    "R1_radar": "content/lab/tributaries/echolocation_algorithm.py",
+    "AN1_analyst": "content/lab/tributaries/echolocation_algorithm.py",
+    "V1_validator": "content/lab/validation/brand_validator.py",
+    "M1_marshall": "content/lab/automation/publish_orchestrator.py"
+  },
+  "health_check": "content/lab: all 6 modules report healthy",
+  "attached_at": "2026-02-18T05:19:27.871968+00:00",
+  "attached_by": "c10_self_evolution.py",
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

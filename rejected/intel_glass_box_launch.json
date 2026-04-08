@@ -1,0 +1,16 @@
+{
+  "mission_id": "launch_glass_box_001",
+  "agent": "huntsman",
+  "directive": "deploy_product_suite",
+  "parameters": {
+    "platforms": ["gumroad"],
+    "execution_mode": "manual_attest"
+  },
+  "payload": {
+    "product_name": "The Reward Bus: Enterprise Edition",
+    "price_usd": 197.00,
+    "description_markdown": "## The Cure for Fragile Agents.\n\nStanford Research (2025) proves agents fail without 'A1/A2 Adaptation'.\n\n**The Reward Bus** is the Python implementation of that adaptation layer.\n\n**Includes:**\n- ✅ Source Code (`reward_bus.py`)\n- ✅ Schema & Logic\n- ✅ The 'Glass Box' Implementation Guide\n\n*Don't build blind agents.*",
+    "call_to_action": "Get The System",
+    "files": ["assets/products/RewardBus_AssetPack_v1.zip"]
+  }
+}

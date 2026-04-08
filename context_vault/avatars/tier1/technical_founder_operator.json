@@ -1,0 +1,90 @@
+{
+  "avatar_id": "technical_founder_operator",
+  "display_name": "Technical Founder Operator",
+  "tier": 1,
+  "tier_rationale": "Highest natural fit for sovereign self-hosted architecture. Will install, extend, and contribute back. Becomes a power-user evangelist who pulls peers in.",
+  "tagline": "A technical founder running a productized service or early SaaS who refuses to outsource their operating system to a SaaS vendor.",
+  "demographics": {
+    "role_titles": ["Founder/CEO", "Founder/CTO", "Solo Founder", "Indie Hacker", "Productized Service Owner"],
+    "company_size": "1-5",
+    "annual_revenue_range": "$50K - $1M",
+    "team_size": "0-4",
+    "decision_authority": "sole"
+  },
+  "psychographics": {
+    "self_identity": "I would rather build and own than rent and depend.",
+    "core_belief": "Sovereignty over the stack is a long-term competitive advantage.",
+    "fear": "Vendor lock-in, data hostage, AI moat collapse.",
+    "ambition": "A self-hosted, AI-native business that compounds without subscriptions bleeding it dry.",
+    "status_anxiety": "Building 'just another wrapper' instead of something durable."
+  },
+  "pain_points": [
+    {"pain": "Patchwork of SaaS subscriptions consuming margin", "severity": 8, "frequency": "monthly"},
+    {"pain": "Wants AI ops but doesn't trust closed cloud vendors with data", "severity": 9, "frequency": "weekly"},
+    {"pain": "Building product steals time from running the business", "severity": 9, "frequency": "daily"},
+    {"pain": "No content / pipeline strategy — relies on luck", "severity": 8, "frequency": "weekly"},
+    {"pain": "Tools don't compose — every integration is glue code", "severity": 8, "frequency": "weekly"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "Self-hosted operating system that owns its own data", "priority": 1},
+    {"outcome": "AI-native workflows that respect privacy and sovereignty", "priority": 2},
+    {"outcome": "Composable nodes that extend with their own code", "priority": 3},
+    {"outcome": "Content engine that doesn't need a marketing hire", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Just had a SaaS price hike or vendor outage", "urgency_score": 10},
+    {"trigger": "AI vendor changed terms or model availability", "urgency_score": 10},
+    {"trigger": "Spent a weekend writing glue code between tools", "urgency_score": 9},
+    {"trigger": "Read a sovereignty / open-source manifesto", "urgency_score": 8},
+    {"trigger": "Hit a wall on growth without marketing systems", "urgency_score": 8}
+  ],
+  "objections": [
+    {"objection": "I can build it myself", "counter_angle": "You can — but the integration debt will eat 6 months. EPOS is the scaffolding so you build the moat, not the plumbing."},
+    {"objection": "Self-hosting is operational overhead", "counter_angle": "EPOS runs on a single machine; one daemon, no ops team needed."},
+    {"objection": "Lock-in risk", "counter_angle": "Code is yours, vault is yours, models are pluggable. Constitutional sovereignty."},
+    {"objection": "Open source alternatives exist", "counter_angle": "EPOS is the OS layer that composes them. Bring your own Postgres, Ollama, Groq, browser-use."}
+  ],
+  "channels": {
+    "primary": ["GitHub", "Hacker News", "Indie Hackers", "X/Twitter dev community", "Discord servers"],
+    "secondary": ["Personal blog", "Newsletter", "Open-source contributions"],
+    "avoided": ["LinkedIn ads", "Webinar funnels", "Salesy outreach"]
+  },
+  "communication_preferences": {
+    "tone": "Technical-peer, principled, anti-corporate, dry humor welcome",
+    "length": "Long-form when substance is real; short and dense when not",
+    "format": ["technical essays", "architecture diagrams", "code examples", "manifestos"],
+    "vocabulary": "Sovereign, self-hosted, composable, primitive, durable, moat",
+    "proof_type": "Working code + architecture decisions + operator metrics"
+  },
+  "crs_weights": {
+    "engagement": 0.30,
+    "intent_keywords": 0.25,
+    "channel_match": 0.20,
+    "timing": 0.10,
+    "social_proof_response": 0.15
+  },
+  "niche_tags": ["indie", "founder", "self-hosted", "open-source", "productized", "technical", "ai-native"],
+  "price_tolerance": {
+    "monthly_floor": 0,
+    "monthly_ceiling": 297,
+    "one_time_floor": 99,
+    "one_time_ceiling": 4500,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "Architecture essay or technical manifesto on sovereign business OS",
+    "interest": "Open-source/self-install path; technical docs; reference deployment",
+    "consideration": "Discord community + reference architecture + working examples",
+    "decision": "Sovereign install (self-serve) or 'bring your stack' onboarding session",
+    "retention": "Module ecosystem, contribution path, peer community"
+  },
+  "signal_keywords": [
+    "self-hosted", "sovereign", "indie hacker", "productized service", "saas tax",
+    "vendor lock-in", "open source", "ai ops", "local-first", "composable",
+    "data ownership", "founder ops", "build vs buy"
+  ],
+  "exclusion_keywords": [
+    "no-code only", "I don't code", "outsource everything", "VC-backed unicorn",
+    "scale to billions", "enterprise sales motion"
+  ]
+}

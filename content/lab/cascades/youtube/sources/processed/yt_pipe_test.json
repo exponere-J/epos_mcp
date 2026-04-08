@@ -1,0 +1,17 @@
+{
+  "source_id": "YT_PIPE_TEST",
+  "title": "Why Sovereign AI Wins",
+  "transcript": "Step 1: Stop renting intelligence. Step 2: Build sovereign nodes. Step 3: Deploy constitutional governance. The key insight is that data sovereignty is the entire business model. Here is the EPOS blueprint. The bottom line is if your AI cannot run offline, you do not own it.",
+  "url": "https://youtube.com/watch?v=test",
+  "published_at": "2026-02-12T10:00:00Z",
+  "metrics": {
+    "likes": 340,
+    "shares": 89,
+    "comments": 45,
+    "impressions": 12000
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "root_path": "./",
+  "allowed_paths": ["kernel", "docs", "tests", "scripts"],
+  "file_extensions": [".py", ".md", ".json", ".txt", ".sh"]
+}

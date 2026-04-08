@@ -1,0 +1,15 @@
+{
+  "brief_id": "AUTOBRIEF-WF1-VERI",
+  "spark_id": "WF1-VERIFY-001",
+  "spark_path": "context_vault\\echoes\\sparks\\WF1-VERIFY-001.json",
+  "angle_type": "architect",
+  "hook_type": "question",
+  "visual_mask": "schematic",
+  "target_platform": "linkedin",
+  "script_premise": "Auto-generated from spark",
+  "hook_line": "",
+  "cta": "Link in bio.",
+  "predicted_eri_score": 85,
+  "affiliate_products": [],
+  "status": "auto_generated"
+}

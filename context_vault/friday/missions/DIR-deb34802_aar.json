@@ -1,0 +1,15 @@
+{
+  "directive_id": "DIR-deb34802",
+  "directive": "Tell me a joke about quantum computing",
+  "mission_type": "content",
+  "results": [
+    {
+      "mission_id": "M-b34802-001",
+      "executor": "content_lab",
+      "status": "complete",
+      "output": "Content signals processed: 0"
+    }
+  ],
+  "completed_at": "2026-04-07T00:50:22.193043+00:00",
+  "success": true
+}

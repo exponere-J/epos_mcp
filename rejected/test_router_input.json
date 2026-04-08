@@ -1,0 +1,5 @@
+{"id": "evt_001", "type": "sprint", "payload": {"project": "EPOS", "task": "Design context extractor"}, "status": "pending"}
+{"id": "evt_002", "type": "process", "payload": {"process_name": "content_pipeline", "stage": "ingest", "intent": "content", "risk_level": "low"}, "status": "pending"}
+{"id": "evt_003", "type": "knowledge", "payload": {"topic": "decision graph", "source": "Gemini"}, "status": "pending"}
+{"id": "evt_004", "type": "architecture", "payload": {"module": "router", "action": "validate"}, "status": "pending"}
+{"id": "evt_005", "type": "content", "payload": {"medium": "blog", "title": "EPOS MARL Hybrid System", "intent": "content", "risk_level": "low"}, "status": "pending"}

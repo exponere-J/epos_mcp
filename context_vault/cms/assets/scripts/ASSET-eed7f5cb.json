@@ -1,0 +1,23 @@
+{
+  "asset_id": "ASSET-eed7f5cb",
+  "asset_type": "script",
+  "title": "Top 5 LEGO sets under $50 \u2014 Architect angle",
+  "body": "[HOOK] You've been buying LEGO sets wrong. [BODY] Here are the 5 sets...",
+  "status": "approved",
+  "niche_id": "lego_affiliate",
+  "segment_id": null,
+  "author_agent": "a1_architect",
+  "platform_targets": [],
+  "scheduled_at": null,
+  "published_at": null,
+  "eri_predicted": null,
+  "eri_actual": null,
+  "version": 1,
+  "tags": [
+    "lego",
+    "list",
+    "architect"
+  ],
+  "created_at": "2026-03-29T15:42:32.634755+00:00",
+  "updated_at": "2026-03-29T15:42:32.655762+00:00"
+}

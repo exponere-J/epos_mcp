@@ -1,0 +1,103 @@
+{
+  "$id": "core.listing_canonical",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "product_id",
+    "run_id",
+    "version",
+    "title",
+    "short_description",
+    "long_description",
+    "tags",
+    "category",
+    "audience",
+    "price",
+    "license",
+    "assets",
+    "support",
+    "brand_voice",
+    "proof"
+  ],
+  "properties": {
+    "schema_id": { "const": "core.listing_canonical" },
+
+    "product_id": { "$ref": "core._defs#/$defs/non_empty_string" },
+    "run_id": { "$ref": "core._defs#/$defs/non_empty_string" },
+    "version": { "type": "string", "minLength": 1 },
+
+    "title": { "type": "string", "minLength": 1 },
+    "short_description": { "type": "string", "minLength": 1 },
+    "long_description": { "type": "string", "minLength": 1 },
+
+    "tags": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "category": { "type": "string", "minLength": 1 },
+    "audience": { "type": "string", "minLength": 1 },
+
+    "price": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currency", "amount", "pricing_model"],
+      "properties": {
+        "currency": { "type": "string", "minLength": 1 },
+        "amount": { "type": "number", "minimum": 0 },
+        "pricing_model": { "type": "string", "enum": ["one_time", "subscription", "pay_what_you_want"] }
+      }
+    },
+
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "terms_url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "terms_url": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cover_image", "gallery_images", "downloadables"],
+      "properties": {
+        "cover_image": { "type": "string", "minLength": 1 },
+        "gallery_images": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "downloadables": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+
+    "support": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contact", "update_policy"],
+      "properties": {
+        "contact": { "type": "string", "minLength": 1 },
+        "update_policy": { "type": "string", "minLength": 1 }
+      }
+    },
+
+    "brand_voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tone_rules", "banned_phrases"],
+      "properties": {
+        "tone_rules": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "banned_phrases": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["what_problem", "why_it_works", "who_its_for", "who_its_not_for"],
+      "properties": {
+        "what_problem": { "type": "string", "minLength": 1 },
+        "why_it_works": { "type": "string", "minLength": 1 },
+        "who_its_for": { "type": "string", "minLength": 1 },
+        "who_its_not_for": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

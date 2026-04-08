@@ -1,0 +1,2 @@
+{"timestamp": "2026-04-04T16:20:39.722736+00:00", "event_type": "review.ingested", "payload": {"review_id": "REV-0b7d74b2", "platform": "google", "rating": 5, "sentiment": "positive"}}
+{"timestamp": "2026-04-04T16:20:39.723737+00:00", "event_type": "review.ingested", "payload": {"review_id": "REV-6da1acc2", "platform": "yelp", "rating": 2, "sentiment": "negative"}}

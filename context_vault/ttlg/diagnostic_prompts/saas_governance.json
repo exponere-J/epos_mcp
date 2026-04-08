@@ -1,0 +1,35 @@
+{
+  "niche": "saas",
+  "track": "governance",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Compliance and Risk Management",
+    "Data Security and Privacy",
+    "Regulatory Requirements",
+    "Audit and Assurance",
+    "Internal Controls and Governance"
+  ],
+  "key_bottleneck_patterns": [
+    "Inadequate access controls and permission management",
+    "Insufficient data encryption and backup procedures",
+    "Lack of transparency and accountability in decision-making processes"
+  ],
+  "thinker_context": "As a SaaS business, effective governance is crucial to ensure the security, integrity, and compliance of customer data. With the increasing complexity of regulatory requirements and the evolving threat landscape, SaaS companies must prioritize governance to mitigate risks, maintain customer trust, and drive long-term growth. A thorough gap analysis will help identify areas for improvement, enabling the implementation of targeted strategies to strengthen governance and stay ahead of the competition.",
+  "surgeon_priorities": [
+    "Implement a robust access control framework with role-based permissions",
+    "Develop and enforce a comprehensive data security and privacy policy",
+    "Establish a transparent and accountable decision-making process with clear lines of authority"
+  ],
+  "mirror_report_tone": "Objective, informative, and actionable, with a focus on providing clear recommendations for improvement",
+  "desire_vocabulary": [
+    "Compliance",
+    "Security",
+    "Transparency",
+    "Accountability",
+    "Risk",
+    "Regulation",
+    "Governance",
+    "Trust"
+  ],
+  "generated_at": "2026-03-29T19:07:15.085926+00:00"
+}

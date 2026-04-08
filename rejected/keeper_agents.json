@@ -1,0 +1,16 @@
+{
+  "keepers": [
+    {
+      "id": "portalkeeper_agent",
+      "workflow": "workflows/orchestrator/portal_handshake.json"
+    },
+    {
+      "id": "bridgekeeper_agent",
+      "workflow": "workflows/orchestrator/bridge_handshake.json"
+    },
+    {
+      "id": "verifykeeper_agent",
+      "workflow": "workflows/orchestrator/audit_workflow.json"
+    }
+  ]
+}

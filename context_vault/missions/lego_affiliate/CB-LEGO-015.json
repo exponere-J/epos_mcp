@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-015",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "closer",
+  "hook_type": "question",
+  "visual_mask": "founder_glow",
+  "target_platform": "youtube_shorts",
+  "script_premise": "The one LEGO set that works for any age group and any occasion.",
+  "hook_line": "Need a gift for someone and have no idea what to get?",
+  "cta": "This is the universal LEGO gift. Link in bio.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Classic Creative Bricks",
+    "LEGO Architecture Skyline"
+  ],
+  "status": "draft"
+}

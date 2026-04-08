@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "created": "2026-01-31",
+  "description": "Registry of all constitutional violation codes for automated governance gate validation",
+  
+  "violation_categories": {
+    "HEADER": "File header and metadata violations",
+    "PATH": "Path handling and absolutism violations",
+    "CONTEXT": "Context vault and token management violations",
+    "ENTRYPOINT": "Pre-flight and environment validation violations",
+    "LOGGING": "Logging and execution separation violations",
+    "CONFIG": "Configuration and environment loading violations",
+    "SOVEREIGNTY": "Data sovereignty and vendor boundary violations",
+    "DESTRUCTIVE": "Destructive operation safety violations"
+  },
+
+  "violations": {
+    "ERR-HEADER-001": {
+      "code": "ERR-HEADER-001",
+      "category": "HEADER",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 1 + PATH_CLARITY_RULES.md",
+      "description": "Missing mandatory file header with absolute Windows-style path",
+      "detection_pattern": "^# File: C:[\\\\/]Users[\\\\/]Jamie[\\\\/]workspace[\\\\/].*\\.py$",
+      "example_violation": "File has no header or uses relative path",
+      "example_fix": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\my_module.py",
+      "remediation": "Add header as first line of file with Windows-style absolute path using forward slashes (C:/Users/...)",
+      "auto_fixable": true
+    },
+
+    "ERR-PATH-001": {
+      "code": "ERR-PATH-001",
+      "category": "PATH",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 1",
+      "description": "Hardcoded or relative paths instead of pathlib.Path with Windows-style absolute paths",
+      "detection_patterns": [
+        "os\\.path\\.join\\(",
+        "[\"\'].+\\.json[\"\']((?!Path).)*$",
+        "^(?!.*Path).*[\"']\\.\\./",
+        "^(?!.*Path).*[\"\']\\./",
+        "C:\\\\\\\\Users"
+      ],
+      "example_violation": "config_file = '../config.json' or path = 'C:\\\\Users\\\\Jamie'",
+      "example_fix": "from pathlib import Path\nconfig_file = Path('C:/Users/Jamie/workspace/epos_mcp/config.json')",
+      "remediation": "Replace all path strings with pathlib.Path objects using Windows-style absolute paths",
+      "auto_fixable": false
+    },
+
+    "ERR-CONTEXT-001": {
+      "code": "ERR-CONTEXT-001",
+      "category": "CONTEXT",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 7 + Article VII",
+      "description": "Inline data exceeding 8,192 tokens without using Context Vault",
+      "detection_method": "Token count estimation on string literals and embedded data",
+      "threshold": 8192,
+      "example_violation": "mission_data = { 'data': '[... 50,000 tokens of text ...]' }",
+      "example_fix": "mission_data = { 'context_vault_path': 'context_vault/mission_data/large_dataset.txt' }",
+      "remediation": "Move large data to context_vault/ directory and reference via path",
+      "auto_fixable": false
+    },
+
+    "ERR-CONTEXT-002": {
+      "code": "ERR-CONTEXT-002",
+      "category": "CONTEXT",
+      "severity": "high",
+      "constitutional_reference": "Article VII Section 4",
+      "description": "Context vault file path referenced but file does not exist",
+      "detection_method": "Path existence check for context_vault_path values",
+      "example_violation": "context_vault_path: 'context_vault/missing_file.txt'",
+      "example_fix": "Ensure file exists before referencing, or remove context_vault_path field",
+      "remediation": "Create the referenced file or update path to existing file",
+      "auto_fixable": false
+    },
+
+    "ERR-CONTEXT-003": {
+      "code": "ERR-CONTEXT-003",
+      "category": "CONTEXT",
+      "severity": "medium",
+      "constitutional_reference": "Article VII Section 4",
+      "description": "Context vault file exceeds recommended 100MB size",
+      "detection_method": "File size check on context_vault/ files",
+      "threshold_mb": 100,
+      "example_violation": "context_vault/mission_data/huge_file.txt (150MB)",
+      "example_fix": "Split file into smaller chunks or optimize data structure",
+      "remediation": "Optimize file size through compression or chunking",
+      "auto_fixable": false
+    },
+
+    "ERR-CONTEXT-004": {
+      "code": "ERR-CONTEXT-004",
+      "category": "CONTEXT",
+      "severity": "high",
+      "constitutional_reference": "Article VII Section 2",
+      "description": "Invalid regex pattern in symbolic search query",
+      "detection_method": "Regex compilation test",
+      "example_violation": "pattern = '[invalid(regex'",
+      "example_fix": "pattern = r'\\[.*?\\]'  # Valid regex with raw string",
+      "remediation": "Fix regex syntax or use simple string search",
+      "auto_fixable": false
+    },
+
+    "ERR-CONTEXT-005": {
+      "code": "ERR-CONTEXT-005",
+      "category": "CONTEXT",
+      "severity": "critical",
+      "constitutional_reference": "Article VII Section 2",
+      "description": "Direct file load of vault content instead of symbolic search",
+      "detection_patterns": [
+        "open\\(.*context_vault.*\\)\\.read\\(\\)",
+        "Path\\(.*context_vault.*\\)\\.read_text\\(\\)",
+        "with open\\(.*context_vault"
+      ],
+      "example_violation": "data = open('context_vault/file.txt').read()  # Loads entire file",
+      "example_fix": "data = context_handler.regex_search(pattern='key_term', vault_path='context_vault/file.txt')",
+      "remediation": "Use context_handler.py symbolic search methods instead of direct file reads",
+      "auto_fixable": false
+    },
+
+    "ERR-ENTRYPOINT-001": {
+      "code": "ERR-ENTRYPOINT-001",
+      "category": "ENTRYPOINT",
+      "severity": "critical",
+      "constitutional_reference": "Article III Pre-Flight Validation",
+      "description": "Entrypoint skips epos_doctor.py pre-flight check",
+      "detection_method": "Check for epos_doctor import and call in files with if __name__ == '__main__'",
+      "example_violation": "if __name__ == '__main__':\n    main()  # No doctor check",
+      "example_fix": "if __name__ == '__main__':\n    from epos_doctor import run_checks\n    if not run_checks():\n        sys.exit(1)\n    main()",
+      "remediation": "Add epos_doctor.py health check before main execution",
+      "auto_fixable": false
+    },
+
+    "ERR-ENTRYPOINT-002": {
+      "code": "ERR-ENTRYPOINT-002",
+      "category": "ENTRYPOINT",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 3",
+      "description": "Missing Python version validation in entrypoint",
+      "detection_method": "Check for sys.version_info validation in entrypoint files",
+      "example_violation": "No version check in file with __name__ == '__main__'",
+      "example_fix": "REQUIRED_PYTHON = (3, 11)\nif sys.version_info[:2] < REQUIRED_PYTHON:\n    raise EnvironmentError('Python 3.11+ required')",
+      "remediation": "Add Python version check at top of entrypoint files",
+      "auto_fixable": true
+    },
+
+    "ERR-LOGGING-001": {
+      "code": "ERR-LOGGING-001",
+      "category": "LOGGING",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 4",
+      "description": "Logging conflated with execution (status lies)",
+      "detection_patterns": [
+        "logger\\.info.*return.*executed",
+        "print.*return.*success"
+      ],
+      "example_violation": "logger.info('Executing task')\nreturn {'status': 'executed'}  # LIE",
+      "example_fix": "result = agent.execute()\nif result.success:\n    logger.info('Task completed')\n    return {'status': 'executed', 'proof': result.output}\nelse:\n    return {'status': 'failed', 'error': result.error}",
+      "remediation": "Separate logging from execution; verify work done before reporting success",
+      "auto_fixable": false
+    },
+
+    "ERR-LOGGING-002": {
+      "code": "ERR-LOGGING-002",
+      "category": "LOGGING",
+      "severity": "high",
+      "constitutional_reference": "Article II Rule 2",
+      "description": "File I/O operation without validation",
+      "detection_patterns": [
+        "\\.write_text\\((?!.*assert)",
+        "\\.write\\((?!.*assert)",
+        "open\\(.*\\)\\.write\\((?!.*assert)"
+      ],
+      "example_violation": "log_path.write_text(log_data)  # No validation",
+      "example_fix": "log_path.write_text(log_data)\nassert log_path.exists(), 'Log file not created'",
+      "remediation": "Add assertion or validation after file write operations",
+      "auto_fixable": false
+    },
+
+    "ERR-CONFIG-001": {
+      "code": "ERR-CONFIG-001",
+      "category": "CONFIG",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 6",
+      "description": "Missing load_dotenv() call in entrypoint",
+      "detection_method": "Check for load_dotenv import and call in entrypoint files",
+      "example_violation": "No load_dotenv() call before os.getenv() usage",
+      "example_fix": "from dotenv import load_dotenv\nload_dotenv(Path(__file__).parent / '.env')",
+      "remediation": "Add dotenv import and load call at top of entrypoint",
+      "auto_fixable": true
+    },
+
+    "ERR-CONFIG-002": {
+      "code": "ERR-CONFIG-002",
+      "category": "CONFIG",
+      "severity": "high",
+      "constitutional_reference": "Article II Rule 6",
+      "description": "os.getenv() without default or validation",
+      "detection_patterns": [
+        "os\\.getenv\\([^,)]+\\)(?!.*or)",
+        "getenv\\([^,)]+\\)$"
+      ],
+      "example_violation": "path = os.getenv('AGENT_ZERO_PATH')  # Could be None",
+      "example_fix": "path = Path(os.getenv('AGENT_ZERO_PATH', 'C:/Users/Jamie/workspace/agent-zero'))\nif not path.exists():\n    raise EnvironmentError(f'Path not found: {path}')",
+      "remediation": "Provide default value and validate existence",
+      "auto_fixable": false
+    },
+
+    "ERR-SOVEREIGNTY-001": {
+      "code": "ERR-SOVEREIGNTY-001",
+      "category": "SOVEREIGNTY",
+      "severity": "critical",
+      "constitutional_reference": "Article I Sovereignty Covenant",
+      "description": "Cloud/external dependency without local fallback",
+      "detection_patterns": [
+        "requests\\.post\\(.*api\\.openai",
+        "anthropic\\.Client",
+        "boto3\\.client"
+      ],
+      "example_violation": "response = requests.post('https://api.openai.com/v1/chat')",
+      "example_fix": "Add local Ollama fallback or make external calls explicit vendor boundaries",
+      "remediation": "Ensure local-first operation with vendor services as optional extensions",
+      "auto_fixable": false
+    },
+
+    "ERR-SOVEREIGNTY-002": {
+      "code": "ERR-SOVEREIGNTY-002",
+      "category": "SOVEREIGNTY",
+      "severity": "high",
+      "constitutional_reference": "Article X Vendor Integration",
+      "description": "Vendor code modifying EPOS core",
+      "detection_method": "Check for write operations to engine/ or constitutional files",
+      "example_violation": "Path('engine/governance_gate.py').write_text(new_code)",
+      "example_fix": "Write to vendor sandbox directory instead",
+      "remediation": "Vendor code must operate within designated sandbox boundaries",
+      "auto_fixable": false
+    },
+
+    "ERR-DESTRUCTIVE-001": {
+      "code": "ERR-DESTRUCTIVE-001",
+      "category": "DESTRUCTIVE",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 5",
+      "description": "Destructive operation without explicit confirmation",
+      "detection_patterns": [
+        "shutil\\.rmtree\\(",
+        "os\\.remove\\(",
+        "Path.*\\.unlink\\(",
+        "subprocess.*rm -rf"
+      ],
+      "example_violation": "shutil.rmtree(directory)  # No confirmation",
+      "example_fix": "if confirm_destructive_action('Delete directory?'):\n    shutil.rmtree(directory)\n    log_destructive_action('rmtree', directory)",
+      "remediation": "Add confirmation prompt and audit logging for destructive operations",
+      "auto_fixable": false
+    },
+
+    "ERR-DESTRUCTIVE-002": {
+      "code": "ERR-DESTRUCTIVE-002",
+      "category": "DESTRUCTIVE",
+      "severity": "critical",
+      "constitutional_reference": "Article II Rule 5",
+      "description": "File overwrite without backup",
+      "detection_patterns": [
+        "\\.write_text\\((?!.*backup)",
+        "open\\(.*'w'\\)(?!.*backup)"
+      ],
+      "example_violation": "config.json overwritten with no backup",
+      "example_fix": "backup_path = original_path.with_suffix('.backup')\nshutil.copy(original_path, backup_path)\noriginal_path.write_text(new_content)",
+      "remediation": "Create backup before overwriting files",
+      "auto_fixable": false
+    }
+  },
+
+  "severity_levels": {
+    "critical": {
+      "description": "Immediate rejection, blocks execution, must be fixed before promotion",
+      "gate_action": "reject",
+      "requires_human_review": false,
+      "auto_fixable_allowed": true
+    },
+    "high": {
+      "description": "Strong recommendation to fix, generates warning, allowed with documentation",
+      "gate_action": "warn",
+      "requires_human_review": true,
+      "auto_fixable_allowed": false
+    },
+    "medium": {
+      "description": "Best practice violation, tracked but not blocking",
+      "gate_action": "note",
+      "requires_human_review": false,
+      "auto_fixable_allowed": true
+    },
+    "low": {
+      "description": "Stylistic or optimization suggestion",
+      "gate_action": "suggest",
+      "requires_human_review": false,
+      "auto_fixable_allowed": true
+    }
+  },
+
+  "compliance_calculation": {
+    "formula": "(files_promoted / (files_promoted + files_rejected)) * 100",
+    "target_rate": 95.0,
+    "warning_threshold": 85.0,
+    "critical_threshold": 75.0,
+    "actions": {
+      "below_critical": "Enter STASIS mode per Article XI",
+      "below_warning": "Trigger architecture review",
+      "below_target": "Increase remediation priority",
+      "above_target": "Maintain current governance"
+    }
+  },
+
+  "educational_receipt_template": {
+    "structure": {
+      "header": "Constitutional Violation Receipt",
+      "file_info": "Rejected file path and submission time",
+      "violation_summary": "List of all violations detected",
+      "detailed_explanation": "For each violation: code, severity, constitutional reference, example fix",
+      "remediation_steps": "Numbered list of required fixes",
+      "resubmission_instructions": "How to fix and resubmit to governance gate",
+      "footer": "Constitutional authority and appeals process"
+    },
+    "format": "markdown",
+    "location": "rejected/receipts/{filename}_{timestamp}.md"
+  },
+
+  "auto_fix_capabilities": {
+    "ERR-HEADER-001": {
+      "enabled": true,
+      "confidence": "high",
+      "method": "Prepend standard header with detected filename"
+    },
+    "ERR-ENTRYPOINT-002": {
+      "enabled": true,
+      "confidence": "medium",
+      "method": "Insert Python version check after imports"
+    },
+    "ERR-CONFIG-001": {
+      "enabled": true,
+      "confidence": "high",
+      "method": "Insert load_dotenv() call after imports"
+    }
+  },
+
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-01-31",
+      "changes": "Initial violation code registry aligned with EPOS_CONSTITUTION_v3.1.md",
+      "author": "AI Engineering Team",
+      "approved_by": "Jamie"
+    }
+  ]
+}

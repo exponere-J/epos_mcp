@@ -1,0 +1,23 @@
+{
+  "asset_id": "ASSET-779ef28a",
+  "asset_type": "mirror_report",
+  "title": "Mirror Report \u2014 SERVICE \u2014 epos_ecosystem",
+  "body": "**Mirror Report for TTLG SERVICE Diagnostic**\n\nWHAT WE FOUND: Our diagnostic revealed that the current onboarding process for small businesses using epos_ecosystem is manual, time-consuming, and requires significant employee training and support. This leads to delays and inefficiencies in getting the system up and running. Additionally, communication gaps were identified as a key area for improvement. These gaps can hinder the overall effectiveness of the service and impact the user experience.\n\nTHE REAL COST: The current state of the onboarding process and communication gaps can result in wasted time, resources, and revenue. Small businesses may experience delays in getting their systems operational, leading to lost sales and revenue opportunities. Furthermore, the manual and time-consuming onboarding process can lead to increased labor costs and decreased employee productivity.\n\nTHE PATH FORWARD: To address these gaps, we recommend focusing on the highest-leverage indicators. First, streamline the onboarding process by implementing automated and intuitive tools that reduce the need for manual intervention and employee training. Second, enhance communication by establishing clear channels and protocols for feedback and support. Finally, provide ongoing training and support to ensure that small businesses can effectively utilize the epos_ecosystem.\n\nWHAT CHANGES IN 30 DAYS: Within the next 30 days, we expect to see measurable improvements in the onboarding process, with a reduction in the time and resources required to get small businesses up and running. We anticipate a significant decrease in delays and inefficiencies, leading to increased user satisfaction and revenue growth.\n\nSOVEREIGN ALIGNMENT SCORE: With a score of 16/25, there is significant room for improvement in the TTLG SERVICE. By addressing the key gaps and implementing the recommended changes, we are confident that the score will increase, indicating a more aligned and effective service that meets the needs of small businesses.",
+  "status": "draft",
+  "niche_id": null,
+  "segment_id": null,
+  "author_agent": "ttlg_diagnostic",
+  "platform_targets": [],
+  "scheduled_at": null,
+  "published_at": null,
+  "eri_predicted": null,
+  "eri_actual": null,
+  "version": 1,
+  "tags": [
+    "service",
+    "epos_ecosystem",
+    "sovereign_alignment"
+  ],
+  "created_at": "2026-04-01T19:08:56.912724+00:00",
+  "updated_at": "2026-04-01T19:08:56.912724+00:00"
+}

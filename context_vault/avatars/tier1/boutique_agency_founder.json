@@ -1,0 +1,90 @@
+{
+  "avatar_id": "boutique_agency_founder",
+  "display_name": "Boutique Agency Founder",
+  "tier": 1,
+  "tier_rationale": "Pays for systems out of operating budget. Margin pressure makes ops automation a board-level concern. Multi-seat opportunity.",
+  "tagline": "Founder of a 5-15 person shop where every margin point is fought for and process drift kills profitability.",
+  "demographics": {
+    "role_titles": ["Agency Founder", "Managing Director", "Principal", "Owner-Operator"],
+    "company_size": "5-15 employees",
+    "annual_revenue_range": "$500K - $3.5M",
+    "team_size": "5-15",
+    "decision_authority": "sole or with operations partner"
+  },
+  "psychographics": {
+    "self_identity": "I built a craft business and accidentally became a CEO.",
+    "core_belief": "Process is what separates a real firm from a job with extra steps.",
+    "fear": "Becoming the bottleneck on every project, then watching margin disappear.",
+    "ambition": "An agency that delivers without the founder in every meeting.",
+    "status_anxiety": "Being seen as a freelancer pretending to be an agency."
+  },
+  "pain_points": [
+    {"pain": "Project profitability is invisible until invoices land", "severity": 9, "frequency": "monthly"},
+    {"pain": "Every senior leaving threatens 30% of capacity", "severity": 9, "frequency": "annually"},
+    {"pain": "PMs reinvent the wheel on each engagement", "severity": 8, "frequency": "weekly"},
+    {"pain": "Sales pipeline lives in the founder's head", "severity": 8, "frequency": "weekly"},
+    {"pain": "Client comms scattered across 5 tools", "severity": 7, "frequency": "daily"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "Standardized delivery playbooks PMs actually use", "priority": 1},
+    {"outcome": "Margin visibility per client per week", "priority": 2},
+    {"outcome": "Sales pipeline that operates without founder", "priority": 3},
+    {"outcome": "Knowledge captured so churn doesn't reset the firm", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Just lost a senior employee with critical client knowledge", "urgency_score": 10},
+    {"trigger": "Quarterly margin missed by 15%+", "urgency_score": 10},
+    {"trigger": "Major client account at risk due to process slip", "urgency_score": 9},
+    {"trigger": "Considering hiring an Ops Director", "urgency_score": 8},
+    {"trigger": "About to pitch a strategic acquirer / due diligence prep", "urgency_score": 9}
+  ],
+  "objections": [
+    {"objection": "Adoption is the killer — my team won't use it", "counter_angle": "Show install path that piggybacks on existing tools (Slack/Email/Drive)."},
+    {"objection": "We already pay for HubSpot/Asana/Notion", "counter_angle": "Position EPOS as the connective tissue, not a replacement."},
+    {"objection": "Cost is a problem when margins are tight", "counter_angle": "Lead with margin-recovery math: one rescued account pays for two years."},
+    {"objection": "I need it customized to our delivery model", "counter_angle": "Niche pack + sovereign install = customizable, owned, evolving."}
+  ],
+  "channels": {
+    "primary": ["LinkedIn", "Industry Slack groups", "Conferences"],
+    "secondary": ["Podcast guesting", "Trade publications", "Peer masterminds"],
+    "avoided": ["Cold email blasts", "TikTok", "Display ads"]
+  },
+  "communication_preferences": {
+    "tone": "Operator-to-operator, financially literate, no fluff",
+    "length": "Medium-long (case studies, ROI analyses, frameworks)",
+    "format": ["case studies", "P&L breakdowns", "operator interviews", "frameworks"],
+    "vocabulary": "Margin, utilization, capacity, retention, throughput, EBITDA",
+    "proof_type": "Margin recovery numbers + named agency case studies"
+  },
+  "crs_weights": {
+    "engagement": 0.20,
+    "intent_keywords": 0.25,
+    "channel_match": 0.15,
+    "timing": 0.20,
+    "social_proof_response": 0.20
+  },
+  "niche_tags": ["agency", "boutique", "services", "PSA", "operations", "delivery"],
+  "price_tolerance": {
+    "monthly_floor": 297,
+    "monthly_ceiling": 2497,
+    "one_time_floor": 7500,
+    "one_time_ceiling": 50000,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "Operator essay on agency margin death spirals or retention math",
+    "interest": "Free 'Agency Margin Diagnostic' (TTLG variant)",
+    "consideration": "Mirror Report quantifying recoverable margin + named gaps",
+    "decision": "Installation engagement (4-8 weeks) with margin guarantee",
+    "retention": "Quarterly margin reviews + new module rollouts"
+  },
+  "signal_keywords": [
+    "agency margin", "utilization rate", "delivery slipping", "PM burnout", "senior leaving",
+    "capacity planning", "agency operations", "scale agency", "agency systems", "client at risk",
+    "process drift", "agency playbook", "delivery standardization"
+  ],
+  "exclusion_keywords": [
+    "freelance", "side hustle", "passive income", "drop shipping", "starting an agency",
+    "first client", "how to get clients"
+  ]
+}

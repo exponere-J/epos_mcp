@@ -1,0 +1,25 @@
+{
+  "id": "evt_005",
+  "type": "content",
+  "payload": {
+    "medium": "blog",
+    "title": "EPOS MARL Hybrid System",
+    "intent": "content",
+    "risk_level": "low"
+  },
+  "status": "pending",
+  "meta": {
+    "decision_graph": {
+      "version": "v1",
+      "node_id": "root",
+      "chosen_route_id": "content",
+      "pipeline": "content.research_and_creation",
+      "archetype_bias": [
+        "SOVEREIGN"
+      ],
+      "intent": "content",
+      "risk": "low"
+    }
+  },
+  "routed_at": "2025-12-11T23:22:44.684947Z"
+}

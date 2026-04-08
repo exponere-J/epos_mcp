@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "schema_name": "EPOS Avatar Profile",
+  "authority": "EPOS Constitution v3.1 — 12-Avatar Signal Architecture",
+  "description": "Canonical schema for avatar profiles. Tier 1 avatars are the foundation for Lead Scoring, Content Reactor segmentation, Consumer Journey routing, and the future Marketing Reactor.",
+  "fields": {
+    "avatar_id": {"type": "string", "format": "snake_case", "required": true},
+    "display_name": {"type": "string", "required": true},
+    "tier": {"type": "integer", "values": [1, 2, 3], "required": true},
+    "tier_rationale": {"type": "string", "required": true},
+    "tagline": {"type": "string", "required": true},
+    "demographics": {
+      "role_titles": "array<string>",
+      "company_size": "string",
+      "annual_revenue_range": "string",
+      "team_size": "string",
+      "decision_authority": "string"
+    },
+    "psychographics": {
+      "self_identity": "string",
+      "core_belief": "string",
+      "fear": "string",
+      "ambition": "string",
+      "status_anxiety": "string"
+    },
+    "pain_points": "array<{pain, severity, frequency}>",
+    "desired_outcomes": "array<{outcome, priority}>",
+    "buying_triggers": "array<{trigger, urgency_score}>",
+    "objections": "array<{objection, counter_angle}>",
+    "channels": {
+      "primary": "array<string>",
+      "secondary": "array<string>",
+      "avoided": "array<string>"
+    },
+    "communication_preferences": {
+      "tone": "string",
+      "length": "string",
+      "format": "array<string>",
+      "vocabulary": "string",
+      "proof_type": "string"
+    },
+    "crs_weights": {
+      "engagement": "float 0-1",
+      "intent_keywords": "float 0-1",
+      "channel_match": "float 0-1",
+      "timing": "float 0-1",
+      "social_proof_response": "float 0-1"
+    },
+    "niche_tags": "array<string>",
+    "price_tolerance": {
+      "monthly_floor": "integer",
+      "monthly_ceiling": "integer",
+      "one_time_floor": "integer",
+      "one_time_ceiling": "integer",
+      "currency": "string"
+    },
+    "conversion_path": {
+      "awareness": "string",
+      "interest": "string",
+      "consideration": "string",
+      "decision": "string",
+      "retention": "string"
+    },
+    "signal_keywords": "array<string>",
+    "exclusion_keywords": "array<string>"
+  }
+}

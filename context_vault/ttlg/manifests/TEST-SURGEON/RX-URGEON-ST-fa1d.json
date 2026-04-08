@@ -1,0 +1,44 @@
+{
+  "prescription_id": "RX-URGEON-ST-fa1d",
+  "type": "strategic_build",
+  "gap_addressed": "Zero published content",
+  "consequence_chain": "Strategic remediation addresses Zero published content and connected downstream effects: ~$17500/quarter in recovered value plus operational efficiency gains.",
+  "nodes_required": [
+    "content_lab",
+    "multimodal_router"
+  ],
+  "configuration": {
+    "content_lab": {
+      "capabilities_used": [
+        "script_generation",
+        "eri_prediction",
+        "brand_validation"
+      ],
+      "integration": "event_bus"
+    },
+    "multimodal_router": {
+      "capabilities_used": [
+        "image_generation",
+        "local_llm",
+        "provider_failover"
+      ],
+      "integration": "event_bus"
+    }
+  },
+  "estimated_hours": 20.0,
+  "monthly_cost": 296.4,
+  "projected_roi_90d": 7028.8,
+  "deployment_sequence": [
+    "1. Configure event bus integration",
+    "2. Deploy Content Lab with vault path initialization",
+    "3. Deploy Multimodal Router with vault path initialization",
+    "4. Run sovereignty certification",
+    "5. Verify end-to-end pipeline"
+  ],
+  "success_criteria": [
+    "All deployed nodes pass sovereignty certification at 85+",
+    "Event bus shows events from all new nodes",
+    "Doctor reports zero new FAILs"
+  ],
+  "value_at_risk": 25000.0
+}

@@ -1,0 +1,487 @@
+{
+  "version": "1.0",
+  "built_at": "2026-03-29T12:54:43.407823+00:00",
+  "total_entries": 60,
+  "entries": [
+    {
+      "vault_id": "missions\\AZ-001-NERVOUS-SYSTEM.json",
+      "namespace": "missions",
+      "filename": "AZ-001-NERVOUS-SYSTEM.json",
+      "size_bytes": 864,
+      "modified_at": "2026-02-20T17:58:37.875314+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-002-AIRTABLE-BASES.json",
+      "namespace": "missions",
+      "filename": "AZ-002-AIRTABLE-BASES.json",
+      "size_bytes": 1016,
+      "modified_at": "2026-02-20T17:58:37.875314+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-003-PHI3-DEPLOY.json",
+      "namespace": "missions",
+      "filename": "AZ-003-PHI3-DEPLOY.json",
+      "size_bytes": 933,
+      "modified_at": "2026-02-20T17:58:37.876330+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-004-GOOGLE-SHEETS-SYNC.json",
+      "namespace": "missions",
+      "filename": "AZ-004-GOOGLE-SHEETS-SYNC.json",
+      "size_bytes": 1006,
+      "modified_at": "2026-02-20T17:58:37.876330+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-005-CRM-PM-INTEGRATION.json",
+      "namespace": "missions",
+      "filename": "AZ-005-CRM-PM-INTEGRATION.json",
+      "size_bytes": 1006,
+      "modified_at": "2026-02-20T17:58:37.876330+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-006-AT-BRIDGE-001.json",
+      "namespace": "missions",
+      "filename": "AZ-006-AT-BRIDGE-001.json",
+      "size_bytes": 637,
+      "modified_at": "2026-02-20T18:36:31.637827+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-007-AT-SHADOW-UPG.json",
+      "namespace": "missions",
+      "filename": "AZ-007-AT-SHADOW-UPG.json",
+      "size_bytes": 638,
+      "modified_at": "2026-02-20T18:36:31.638834+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-008-AT-SOIL-UPG.json",
+      "namespace": "missions",
+      "filename": "AZ-008-AT-SOIL-UPG.json",
+      "size_bytes": 636,
+      "modified_at": "2026-02-20T18:36:31.638834+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-009-CC-ADVISORY-TAB.json",
+      "namespace": "missions",
+      "filename": "AZ-009-CC-ADVISORY-TAB.json",
+      "size_bytes": 647,
+      "modified_at": "2026-02-20T18:36:31.639834+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-010-GS-CLIENT-QUERY.json",
+      "namespace": "missions",
+      "filename": "AZ-010-GS-CLIENT-QUERY.json",
+      "size_bytes": 644,
+      "modified_at": "2026-02-20T18:36:31.639834+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-011-SA-HITL-FLOW.json",
+      "namespace": "missions",
+      "filename": "AZ-011-SA-HITL-FLOW.json",
+      "size_bytes": 637,
+      "modified_at": "2026-02-20T18:36:31.640835+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-012-VOICE-PERSONA.json",
+      "namespace": "missions",
+      "filename": "AZ-012-VOICE-PERSONA.json",
+      "size_bytes": 638,
+      "modified_at": "2026-02-20T18:36:31.640835+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-013-EVENT-WIRING.json",
+      "namespace": "missions",
+      "filename": "AZ-013-EVENT-WIRING.json",
+      "size_bytes": 630,
+      "modified_at": "2026-02-20T18:44:08.544756+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\AZ-014-SOV-SUITE-REG.json",
+      "namespace": "missions",
+      "filename": "AZ-014-SOV-SUITE-REG.json",
+      "size_bytes": 646,
+      "modified_at": "2026-02-20T18:44:08.545101+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\EPISODES.jsonl",
+      "namespace": "missions",
+      "filename": "EPISODES.jsonl",
+      "size_bytes": 0,
+      "modified_at": "2026-02-10T18:55:35.878114+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "missions\\EPOS_AZ_MISSION_PACK.html",
+      "namespace": "missions",
+      "filename": "EPOS_AZ_MISSION_PACK.html",
+      "size_bytes": 44994,
+      "modified_at": "2026-02-20T17:12:24.294730+00:00",
+      "extension": ".html"
+    },
+    {
+      "vault_id": "missions\\MISS-AZ-BOOTSTRAP-001.json",
+      "namespace": "missions",
+      "filename": "MISS-AZ-BOOTSTRAP-001.json",
+      "size_bytes": 1298,
+      "modified_at": "2026-02-23T23:52:54.203927+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-001.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-001.json",
+      "size_bytes": 646,
+      "modified_at": "2026-03-28T19:07:12.071556+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-002.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-002.json",
+      "size_bytes": 645,
+      "modified_at": "2026-03-28T19:07:12.071556+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-003.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-003.json",
+      "size_bytes": 645,
+      "modified_at": "2026-03-28T19:07:12.073093+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-004.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-004.json",
+      "size_bytes": 587,
+      "modified_at": "2026-03-28T19:07:12.073093+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-005.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-005.json",
+      "size_bytes": 625,
+      "modified_at": "2026-03-28T19:07:12.074108+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-006.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-006.json",
+      "size_bytes": 591,
+      "modified_at": "2026-03-28T19:07:12.074108+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-007.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-007.json",
+      "size_bytes": 629,
+      "modified_at": "2026-03-28T19:07:12.074108+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-008.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-008.json",
+      "size_bytes": 609,
+      "modified_at": "2026-03-28T19:07:12.075104+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-009.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-009.json",
+      "size_bytes": 584,
+      "modified_at": "2026-03-28T19:07:12.075104+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-010.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-010.json",
+      "size_bytes": 639,
+      "modified_at": "2026-03-28T19:07:12.075104+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-011.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-011.json",
+      "size_bytes": 577,
+      "modified_at": "2026-03-28T19:07:12.076434+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-012.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-012.json",
+      "size_bytes": 585,
+      "modified_at": "2026-03-28T19:07:12.077446+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-013.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-013.json",
+      "size_bytes": 655,
+      "modified_at": "2026-03-28T19:07:12.077446+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-014.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-014.json",
+      "size_bytes": 617,
+      "modified_at": "2026-03-28T19:07:12.078444+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-015.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-015.json",
+      "size_bytes": 623,
+      "modified_at": "2026-03-28T19:07:12.078444+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-016.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-016.json",
+      "size_bytes": 602,
+      "modified_at": "2026-03-28T19:07:12.079443+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-017.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-017.json",
+      "size_bytes": 580,
+      "modified_at": "2026-03-28T19:07:12.079443+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-018.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-018.json",
+      "size_bytes": 600,
+      "modified_at": "2026-03-28T19:07:12.080443+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-019.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-019.json",
+      "size_bytes": 629,
+      "modified_at": "2026-03-28T19:07:12.080443+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "missions\\lego_affiliate\\CB-LEGO-020.json",
+      "namespace": "missions",
+      "filename": "CB-LEGO-020.json",
+      "size_bytes": 647,
+      "modified_at": "2026-03-28T19:07:12.080443+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "bi_history\\cascade_decisions.jsonl",
+      "namespace": "bi_history",
+      "filename": "cascade_decisions.jsonl",
+      "size_bytes": 332,
+      "modified_at": "2026-02-18T05:19:27.795494+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "bi_history\\compliance_cache.json",
+      "namespace": "bi_history",
+      "filename": "compliance_cache.json",
+      "size_bytes": 495,
+      "modified_at": "2026-03-28T21:28:35.051955+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "bi_history\\content_lab_attachment_report.json",
+      "namespace": "bi_history",
+      "filename": "content_lab_attachment_report.json",
+      "size_bytes": 5801,
+      "modified_at": "2026-02-18T05:19:27.871969+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "bi_history\\decisions.jsonl",
+      "namespace": "bi_history",
+      "filename": "decisions.jsonl",
+      "size_bytes": 13390,
+      "modified_at": "2026-03-29T12:51:07.823785+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "bi_history\\echolocation_decisions.jsonl",
+      "namespace": "bi_history",
+      "filename": "echolocation_decisions.jsonl",
+      "size_bytes": 854,
+      "modified_at": "2026-02-18T05:19:27.764009+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "bi_history\\flywheel_2026-03-28.jsonl",
+      "namespace": "bi_history",
+      "filename": "flywheel_2026-03-28.jsonl",
+      "size_bytes": 5656,
+      "modified_at": "2026-03-28T23:34:15.471037+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "bi_history\\flywheel_2026-03-29.jsonl",
+      "namespace": "bi_history",
+      "filename": "flywheel_2026-03-29.jsonl",
+      "size_bytes": 3735,
+      "modified_at": "2026-03-29T12:46:38.173893+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "bi_history\\validation_decisions.jsonl",
+      "namespace": "bi_history",
+      "filename": "validation_decisions.jsonl",
+      "size_bytes": 1921,
+      "modified_at": "2026-02-18T05:19:27.815426+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "agent_comms\\friday_to_ttlg_738ec102.json",
+      "namespace": "agent_comms",
+      "filename": "friday_to_ttlg_738ec102.json",
+      "size_bytes": 265,
+      "modified_at": "2026-03-28T17:18:18.002878+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "niches\\lego_affiliate\\niche_pack.json",
+      "namespace": "niches",
+      "filename": "niche_pack.json",
+      "size_bytes": 3251,
+      "modified_at": "2026-03-28T19:05:06.680779+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "niches\\_template\\niche_pack_schema_v1.json",
+      "namespace": "niches",
+      "filename": "niche_pack_schema_v1.json",
+      "size_bytes": 1322,
+      "modified_at": "2026-03-28T19:01:13.388936+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "governance\\file_registry.jsonl",
+      "namespace": "governance",
+      "filename": "file_registry.jsonl",
+      "size_bytes": 7500,
+      "modified_at": "2026-03-29T01:42:28.618726+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "governance\\sop_proposals\\SOP-20260328-170157-1080a9.json",
+      "namespace": "governance",
+      "filename": "SOP-20260328-170157-1080a9.json",
+      "size_bytes": 613,
+      "modified_at": "2026-03-28T18:01:33.616532+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "governance\\sop_proposals\\SOP-20260328-205434-77b52e.json",
+      "namespace": "governance",
+      "filename": "SOP-20260328-205434-77b52e.json",
+      "size_bytes": 535,
+      "modified_at": "2026-03-28T20:54:34.972682+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "governance\\validation_receipts\\VR-CB-LEGO-TEST-a268b9.json",
+      "namespace": "governance",
+      "filename": "VR-CB-LEGO-TEST-a268b9.json",
+      "size_bytes": 729,
+      "modified_at": "2026-03-29T12:43:30.160286+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "checkpoints\\roundtrip-c6656c79\\TestNode.json",
+      "namespace": "checkpoints",
+      "filename": "TestNode.json",
+      "size_bytes": 165,
+      "modified_at": "2026-03-28T17:18:17.994231+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "checkpoints\\test-f15a54a7\\RouterNode.json",
+      "namespace": "checkpoints",
+      "filename": "RouterNode.json",
+      "size_bytes": 369,
+      "modified_at": "2026-03-28T17:18:17.988853+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "learning\\agent_performance\\test_agent.jsonl",
+      "namespace": "learning",
+      "filename": "test_agent.jsonl",
+      "size_bytes": 228,
+      "modified_at": "2026-02-06T14:25:29.041686+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "mission_data\\vault_index.json",
+      "namespace": "mission_data",
+      "filename": "vault_index.json",
+      "size_bytes": 66,
+      "modified_at": "2026-01-26T12:12:37.229331+00:00",
+      "extension": ".json"
+    },
+    {
+      "vault_id": "events\\doctor_events.jsonl",
+      "namespace": "events",
+      "filename": "doctor_events.jsonl",
+      "size_bytes": 5600,
+      "modified_at": "2026-03-29T12:51:17.536060+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "events\\system_events.jsonl",
+      "namespace": "events",
+      "filename": "system_events.jsonl",
+      "size_bytes": 3413,
+      "modified_at": "2026-02-18T05:19:27.875795+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "events\\system\\events.jsonl",
+      "namespace": "events",
+      "filename": "events.jsonl",
+      "size_bytes": 5323,
+      "modified_at": "2026-03-29T12:46:38.095256+00:00",
+      "extension": ".jsonl"
+    },
+    {
+      "vault_id": "validation\\brand_validator.py",
+      "namespace": "validation",
+      "filename": "brand_validator.py",
+      "size_bytes": 10929,
+      "modified_at": "2026-03-28T18:19:14.209206+00:00",
+      "extension": ".py"
+    }
+  ]
+}

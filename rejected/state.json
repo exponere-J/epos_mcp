@@ -1,0 +1,374 @@
+{
+  "tasks": {
+    "0420fac3-db6b-4d5b-9902-6ce2d20cccb5": {
+      "id": "0420fac3-db6b-4d5b-9902-6ce2d20cccb5",
+      "intent": "Create Hello World API",
+      "role": "BUILDER",
+      "inputs": "FastAPI endpoint",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 3,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:29:32.807698",
+      "claimed_by": "phi4_builder",
+      "started_at": "2025-12-18T10:35:35.075969",
+      "last_error": "",
+      "output": "```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\nasync def read_root():\n    return {\"message\": \"Hello, World!\"}\n```",
+      "completed_at": "2025-12-18T10:35:51.122591"
+    },
+    "cd8308a5-bf87-411b-8665-b5228005c2b0": {
+      "id": "cd8308a5-bf87-411b-8665-b5228005c2b0",
+      "intent": "Research Competitors",
+      "role": "SCOUT",
+      "inputs": "Sovereign AI market",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 2,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:29:32.808350",
+      "claimed_by": "phi3_scout",
+      "started_at": "2025-12-18T10:33:34.393858",
+      "last_error": "",
+      "output": "To analyze the sovereign AI (Artificial Intelligence) market and identify competitors, we need to follow these steps systematically:\n\n1. Market Definition: Define what constitutes a 'sovereign' in this context - an entity that operates independently without relying on external data sources or algorithms for decision-making processes within AI systems. This could include government agencies using sovereign AI to make policy decisions, autonomous vehicles making real-time traffic management choices based solely on localized sensor inputs and predefined rules rather than cloud computing services.\n\n2. Market Segmentation: Divide the market into segments such as industries (e.g., healthcare, finance), application areas (e.g., autonomous vehicles, cybersecurity) or geographic regions where sovereign AI is being developed and deployed at a significant scale. This will help identify potential competitors operating in each segment of the market.\n\n3. Competitor Identification: Research companies that are actively developing and deploying their own versions of autonomous, self-reliant AI systems within these segments. Look for organizations with patents related to sovereign AI technologies or those who have published white papers on this topic in academic journals such as the Journal of Artificial Intelligence Research (JAIR) and IEEE Transactions on Cybernetics, among others.\n\n4. Competitive Analysis: Analyze each identified competitor's strengths and weaknesses by examining their patents, research papers, product offerings, market share in relevant segments, partnerships with other companies or government agencies, funding sources (e.g., grants from national governments), etc. This will help identify the key players that are leading innovation within each segment of the sovereign AI market and their unique selling propositions compared to others.\n\n5. SWOT Analysis: Conduct a Strengths, Weaknesses, Opportunities, and Threats (SWOT) analysis for both individual competitors as well as your organization in relation to the sovereign AI market landscape identified above. This will help identify potential areas of collaboration or competition with other players operating within this space.\n\n6. Market Trends: Analyze current trends and future projections related to autonomous, self-reliant AI systems by examining industry reports from reputable sources such as Gartner Research Group, Forrester Consulting, McKinsey & Company, etc., academic publications in top journals like Nature Machine Intelligence (Nature MI) and Artificial Life and Mind Simulation (ALMAS), governmental research initiatives on AI development.\n\n7. Conclusion: Based on the findings from this analysis, develop a comprehensive understanding of key players operating within each segment of the sovereign AI market landscape as well as potential opportunities for collaboration or competition with these organizations in your own business operations and strategic planning efforts related to autonomous systems development.\n\nBy following these steps systematically, we can gain valuable insights into competitors' strengths and weaknesses within each segment of the sovereign AI market landscape while identifying potential areas for collaboration or competition with other players operating in this space.",
+      "completed_at": "2025-12-18T10:35:00.916260"
+    },
+    "74c141a6-7c66-4555-bdd3-d62643b8c316": {
+      "id": "74c141a6-7c66-4555-bdd3-d62643b8c316",
+      "intent": "Write Launch Tweet",
+      "role": "CREATOR",
+      "inputs": "EPOS launch announcement",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:29:32.809050",
+      "claimed_by": "mistral_creator",
+      "started_at": "2025-12-18T10:29:33.232321",
+      "output": " \"\ud83d\udd0aGet ready to elevate your audio experience! \ud83d\ude80 EPOS is thrilled to announce the launch of our latest innovation! Stay tuned for more details on our cutting-edge technology designed to redefine sound quality. #EPOSLaunch #AudioRevolution \ud83c\udfa7\ud83d\udcbb\ud83c\udfac\"\n\nOr, if you want to focus on a specific product:\n\n\"\ud83d\ude80Exciting news! Dive into immersive audio with the new EPOS H6 PRO headphones! Experience crystal-clear sound and unparalleled comfort. Join us as we redefine your listening experience. #EPOSLaunch #H6PRO \ud83c\udfa7\ud83d\udcbb\ud83c\udfac\"",
+      "completed_at": "2025-12-18T10:30:52.376250"
+    },
+    "48171c07-c6b5-4ca3-9dbb-faf2d1a250a8": {
+      "id": "48171c07-c6b5-4ca3-9dbb-faf2d1a250a8",
+      "intent": "Create Hello World API",
+      "role": "BUILDER",
+      "inputs": "FastAPI endpoint",
+      "priority": 1,
+      "status": "CLAIMED",
+      "retries": 3,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:41:12.865156",
+      "claimed_by": "phi4_builder",
+      "started_at": "2025-12-18T10:47:15.640876",
+      "last_error": ""
+    },
+    "02ed9e5d-53e8-4314-a8f6-7093c6c72f6a": {
+      "id": "02ed9e5d-53e8-4314-a8f6-7093c6c72f6a",
+      "intent": "Research Competitors",
+      "role": "SCOUT",
+      "inputs": "Sovereign AI market",
+      "priority": 1,
+      "status": "CLAIMED",
+      "retries": 3,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:41:12.865939",
+      "claimed_by": "phi3_scout",
+      "started_at": "2025-12-18T10:47:15.390973",
+      "last_error": ""
+    },
+    "05262cc6-8c75-43a0-8a18-d17bed15ebca": {
+      "id": "05262cc6-8c75-43a0-8a18-d17bed15ebca",
+      "intent": "Write Launch Tweet",
+      "role": "CREATOR",
+      "inputs": "EPOS launch announcement",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:41:12.866754",
+      "claimed_by": "mistral_creator",
+      "started_at": "2025-12-18T10:41:13.252737",
+      "output": " \"\ud83d\ude80 Excitement levels at max! \ud83c\udfa7 We're thrilled to announce the launch of our latest innovation - the EPOS H6 Active Noise Cancelling Headphones! \ud83e\udd29 Dive into immersive sound, exceptional comfort, and seamless connectivity. Join us in redefining your audio experience! #EPOSLaunch #ANCHeadphones #ImmersiveSound\"\n\nOr if you want a more playful tone:\n\n\"\ud83c\udfa7 Get ready to groove to the beat of a different drum! \ud83e\udd41 Introducing the EPOS H6 Active Noise Cancelling Headphones - your ticket to a world of pure, uninterrupted sound. Buckle up for an audio adventure like never before! #EPOSLaunch #ANCHeadphones #SoundRevolution\"",
+      "completed_at": "2025-12-18T10:42:42.271671"
+    },
+    "b2d9dedd-012f-42d7-b842-78427663ca24": {
+      "id": "b2d9dedd-012f-42d7-b842-78427663ca24",
+      "intent": "Create Hello World API",
+      "role": "BUILDER",
+      "inputs": "FastAPI endpoint",
+      "priority": 1,
+      "status": "CLAIMED",
+      "retries": 2,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:54:08.599153",
+      "claimed_by": "phi4_builder",
+      "started_at": "2025-12-18T10:58:10.356427",
+      "last_error": ""
+    },
+    "09c04d41-9ea0-483a-adcc-baa98ec061fa": {
+      "id": "09c04d41-9ea0-483a-adcc-baa98ec061fa",
+      "intent": "Research Competitors",
+      "role": "SCOUT",
+      "inputs": "Sovereign AI market",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 1,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:54:08.599960",
+      "claimed_by": "phi3_scout",
+      "started_at": "2025-12-18T10:56:09.471178",
+      "last_error": "",
+      "output": "To analyze the sovereign AI (Artificial Intelligence) market and identify competitors, we need to follow these steps systematically:\n\n1. Market Definition & Segmentation: Define what constitutes a 'sovereign' entity in this context - an organization that develops or uses proprietary Artificial intelligence technology for national security purposes without relying on foreign AI systems and technologies, which could be considered as sovereign entities within the realm of cybersecurity.\n\n2. Market Research: Conduct comprehensive market research to understand current trends in this sector - identify key players (sovereigns), their products/services offered, target markets, revenue streams and growth potential. This can be done through primary sources like surveys or interviews with industry experts as well as secondary data from credible reports such as market research firms' publications on AI technology in cybersecurity (e.g., Gartner, IDC).\n\n3. Competitor Analysis: Identify the top sovereign entities operating within this sector based on their size and influence - analyze each competitor\u2019s strengths & weaknesses using SWOT analysis to understand how they differentiate themselves from others in terms of technology development capabilities, market reach, partnerships with government agencies or defense contractors.\n\n4. Product/Service Analysis: Evaluate the products/services offered by these sovereign entities - compare their features and functionalities against each other as well as non-sovereign AI companies in cybersecurity to understand how they meet specific national security needs, such as threat detection or response capabilities that are unique from conventional commercial offerings.\n\n5. Market Positioning: Analyze the market position of these sovereign entities - identify their target markets (e.g., government agencies), geographical reach and potential growth opportunities in terms of expanding into new regions, sectors or industries within cybersecurity that may not have been previously considered as part of national security concerns but could benefit from AI-based solutions for threat detection/response capabilities.\n\n6. Industry Trends: Analyze the latest industry trends and developments in sovereign AI technology - identify emerging technologies, new entrants or disruptive innovations that may impact market dynamics (e.g., quantum computing) as well as potential regulatory changes affecting national security concerns related to cybersecurity threats.\n\n7. Conclusion: Based on the analysis above, draw conclusions about current competitors in this sector and their position within it - identify areas of opportunity for growth or expansion that may not have been previously considered by sovereign entities as well as potential risks associated with relying solely on proprietary AI technology without external support.\n\nIn summary, analyzing the Sovereign AI market requires a comprehensive understanding of national security concerns related to cybersecurity threats and how they are addressed through Artific01i intelligence technologies developed by sovereign entities operating in this sector. By conducting thorough research on competitors' strengths & weaknesses, products/services offered as well as market positioning within the industry trends, we can identify potential opportunities for growth and expansion while mitigating risks associated with relying solely on proprietary AI technology without external support.",
+      "completed_at": "2025-12-18T10:57:35.930741"
+    },
+    "8b45e72e-02da-458e-9cfc-3241f8015a28": {
+      "id": "8b45e72e-02da-458e-9cfc-3241f8015a28",
+      "intent": "Write Launch Tweet",
+      "role": "CREATOR",
+      "inputs": "EPOS launch announcement",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T10:54:08.600818",
+      "claimed_by": "mistral_creator",
+      "started_at": "2025-12-18T10:54:08.983773",
+      "output": " \"\ud83d\udd0aGet ready to elevate your audio experience! \ud83d\ude80 EPOS is thrilled to announce the launch of our latest innovation! Stay tuned for more details on our cutting-edge technology designed to redefine sound quality. #EPOSLaunch #AudioRevolution \ud83c\udfa7\ud83d\udcab\"\n\nOr, if you want to focus on a specific product:\n\n\"\ud83d\ude80Exciting news! EPOS is launching our new flagship headset, designed for the ultimate audio experience. Stay tuned as we unveil the future of sound quality. #EPOSLaunch #GameChanger \ud83c\udfa7\ud83d\udcab\"",
+      "completed_at": "2025-12-18T10:55:26.323667"
+    },
+    "ec6ace11-e39c-4c0e-aeb3-9429174159db": {
+      "id": "ec6ace11-e39c-4c0e-aeb3-9429174159db",
+      "intent": "Create Streamlit UI for Content Lab",
+      "role": "BUILDER",
+      "inputs": "Features: Topic Input, Archetype Selector, Generate Button. Use st.columns for layout.",
+      "priority": 1,
+      "status": "CLAIMED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T11:03:20.601227",
+      "claimed_by": "phi4_builder",
+      "started_at": "2025-12-18T13:37:28.190830"
+    },
+    "d6a71169-6e7a-4f3e-91a2-d52c957c7992": {
+      "id": "d6a71169-6e7a-4f3e-91a2-d52c957c7992",
+      "intent": "Write Landing Page Copy",
+      "role": "CREATOR",
+      "inputs": "Product: EPOS Content Lab. Audience: Solo Founders. Benefit: Automate content strategy.",
+      "priority": 1,
+      "status": "CLAIMED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T11:03:20.602496",
+      "claimed_by": "mistral_creator",
+      "started_at": "2025-12-18T13:37:28.604163"
+    },
+    "c6e29c4c-c7c3-4083-8e89-00bb5e579cd4": {
+      "id": "c6e29c4c-c7c3-4083-8e89-00bb5e579cd4",
+      "intent": "Analyze Content Marketing Trends 2025",
+      "role": "SCOUT",
+      "inputs": "Focus on AI content tools and sovereignty.",
+      "priority": 1,
+      "status": "CLAIMED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T11:03:20.603713",
+      "claimed_by": "phi3_scout",
+      "started_at": "2025-12-18T13:37:28.414024"
+    },
+    "699e5446-8621-41cc-b2b8-025cf0f57b81": {
+      "id": "699e5446-8621-41cc-b2b8-025cf0f57b81",
+      "intent": "Create Hello World API",
+      "role": "BUILDER",
+      "inputs": "FastAPI endpoint",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 1,
+      "max_retries": 3,
+      "created_at": "2025-12-18T13:37:28.184249",
+      "claimed_by": "phi4_builder",
+      "started_at": "2025-12-18T15:34:52.547594",
+      "last_error": "",
+      "output": "```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\nasync def read_root():\n    return {\"message\": \"Hello, World!\"}\n```",
+      "completed_at": "2025-12-18T15:35:22.786128"
+    },
+    "dff48388-81c5-48ab-83c6-23258cb68e1e": {
+      "id": "dff48388-81c5-48ab-83c6-23258cb68e1e",
+      "intent": "Research Competitors",
+      "role": "SCOUT",
+      "inputs": "Sovereign AI market",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T13:37:28.185361",
+      "claimed_by": "phi3_scout",
+      "started_at": "2025-12-18T15:32:51.735876",
+      "output": "To analyze the sovereign AI (Artificial Intelligence) market and identify competitors, we need to follow these steps systematically:\n\n1. Market Definition & Segmentation: Define what constitutes a 'sovereign' in this context - an autonomous or self-governing entity within the realm of Artificial Intelligence that operates independently without human intervention and is capable of making decisions based on its programming, learning algorithms, and data analysis.\n\n2. Market Research: Conduct thorough market research to understand current trends in AI development, focusing specifically on sovereign AI systems or projects with a degree of autonomy that allows them to operate without human intervention for extended periods. This includes identifying the primary applications (e.g., military defense, autonomous vehicles, healthcare) and geographical markets where these technologies are being developed and deployed.\n\n3. Identify Key Players: Based on market research findings, identify key players in sovereign AI development - both publicly traded companies like DeepMind (UK), OpenAI (US), Baidu's Brain Lab (China) or startups such as RoboKind and Boston Dynamics. These entities are known for their significant investments into research, innovation, and deployment of autonomous AI systems in various industries.\n\n4. Competitor Analysis: Conduct a detailed competitive analysis by examining the following factors - technological capabilities (e.g., machine learning algorithms), market share, revenue streams, partnerships with other companies or government agencies, research and development expenditures, intellectual property portfolio, patents held in sovereign AI technology, as well as their strengths and weaknesses compared to each other.\n\n5. SWOT Analysis: Perform a Strengths, Weaknesses, Opportunities, and Threats (SWOT) analysis for the identified competitors based on market research findings - this will help in understanding how these companies are positioned within their respective markets compared to each other as well as potential opportunities or threats they may face.\n\n6. Emerging Competitors: Identify emerging players and startups that show promise for growth, innovation, and disruption of the sovereign AI market - these could include companies like Microsoft's Azure Sphere (US), Huawei's Hi-tech Lab (China) or Google Healthcare Solutions.\n\n7. Conclusion: Based on this analysis, draw conclusions about current trends in the development and deployment of sovereign AI systems across different industries - identify potential areas for growth as well as challenges that these companies may face due to regulatory concerns, ethical considerations or technological limitations.\n\n8. Recommendation: Provide recommendations on how a company can differentiate itself within the market by focusing on specific applications of sovereign AI technology (e.g., healthcare), investing in research and development to stay ahead of emerging competitors, or forming strategic partnerships with other companies for shared resources and expertise.\n\nIn conclusion, analyzing the Sovereign AI market requires a comprehensive understanding of current trends, key players, their strengths and weaknesses compared to each other as well as potential opportunities that may arise in this rapidly evolving industry. By conducting thorough research and analysis using these steps, we can identify competitors within the sovereign AI sector while also providing valuable insights for companies looking to enter or expand within this market.",
+      "completed_at": "2025-12-18T15:34:48.987855"
+    },
+    "42524838-de92-4311-9226-c6302fb17c3b": {
+      "id": "42524838-de92-4311-9226-c6302fb17c3b",
+      "intent": "Write Launch Tweet",
+      "role": "CREATOR",
+      "inputs": "EPOS launch announcement",
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T13:37:28.186697",
+      "claimed_by": "mistral_creator",
+      "started_at": "2025-12-18T15:32:51.922373",
+      "output": " \"\ud83d\ude80 Excitement levels at max! \ud83c\udfa7 We're thrilled to announce the launch of our latest innovation - the EPOS H6 Active Noise Cancelling Headphones! \ud83e\udd29 Dive into immersive sound, exceptional comfort, and seamless connectivity. Stay tuned for more details! #EPOS #HeadphoneRevolution #ANC #LaunchDay\"\n\nOr, if you want to add a bit of humor:\n\n\"\ud83c\udfa7 Get ready to say goodbye to noisy neighbors, crying babies, and your own thoughts! \ud83d\ude1c The EPOS H6 Active Noise Cancelling Headphones are here to save the day (and your sanity)! Launching soon. #EPOS #HeadphoneRevolution #ANC #NoMoreNoise\"",
+      "completed_at": "2025-12-18T15:34:23.553515"
+    },
+    "a0ab7b7e-48c9-42d5-a245-c8905afaa673": {
+      "id": "a0ab7b7e-48c9-42d5-a245-c8905afaa673",
+      "intent": "Screenshot Google Homepage",
+      "role": "HUNTSMAN",
+      "inputs": {
+        "job": "screenshot",
+        "url": "https://google.com",
+        "path": "epos_hq/data/logs/google.png"
+      },
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T15:32:51.539644",
+      "claimed_by": "huntsman",
+      "started_at": "2025-12-18T15:32:52.109223",
+      "output": {
+        "ok": true,
+        "path": "epos_hq/data/logs/google.png"
+      },
+      "completed_at": "2025-12-18T15:32:58.604029"
+    },
+    "f9a49d15-a261-49fe-8375-39d41dd48e67": {
+      "id": "f9a49d15-a261-49fe-8375-39d41dd48e67",
+      "intent": "Capture Desktop State",
+      "role": "COMPUTERUSE",
+      "inputs": {
+        "actions": [
+          {
+            "type": "screenshot",
+            "path": "epos_hq/data/logs/desktop_init.png"
+          }
+        ]
+      },
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-18T15:32:51.540788",
+      "claimed_by": "computeruse",
+      "started_at": "2025-12-18T15:32:52.112040",
+      "output": {
+        "ok": true,
+        "log": [
+          "Screenshot: epos_hq/data/logs/desktop_init.png"
+        ]
+      },
+      "completed_at": "2025-12-18T15:32:52.248508"
+    },
+    "92296fbc-36ab-42ec-97cb-c6bd4f46b557": {
+      "id": "92296fbc-36ab-42ec-97cb-c6bd4f46b557",
+      "intent": "Screenshot Google Homepage",
+      "role": "HUNTSMAN",
+      "inputs": {
+        "job": "screenshot",
+        "url": "https://google.com",
+        "path": "epos_hq/data/logs/google.png"
+      },
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-19T13:41:48.968664",
+      "claimed_by": "huntsman",
+      "started_at": "2025-12-19T13:41:48.976700",
+      "output": {
+        "ok": true,
+        "path": "epos_hq/data/logs/google.png"
+      },
+      "completed_at": "2025-12-19T13:42:08.156273"
+    },
+    "357c8d37-b430-4929-98a3-9521d03bf6ea": {
+      "id": "357c8d37-b430-4929-98a3-9521d03bf6ea",
+      "intent": "Capture Desktop State",
+      "role": "COMPUTERUSE",
+      "inputs": {
+        "actions": [
+          {
+            "type": "screenshot",
+            "path": "epos_hq/data/logs/desktop_init.png"
+          }
+        ]
+      },
+      "priority": 1,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 3,
+      "created_at": "2025-12-19T13:41:48.969884",
+      "claimed_by": "computeruse",
+      "started_at": "2025-12-19T13:41:48.979478",
+      "output": {
+        "ok": true,
+        "log": [
+          "Screenshot: epos_hq/data/logs/desktop_init.png"
+        ]
+      },
+      "completed_at": "2025-12-19T13:41:49.101176"
+    }
+  },
+  "agents": {
+    "phi4_builder": {
+      "role": "BUILDER",
+      "model": "phi4",
+      "status": "IDLE",
+      "last_heartbeat": "2025-12-24T15:46:53.581939",
+      "tasks_completed": 0,
+      "tasks_failed": 0
+    },
+    "phi3_scout": {
+      "role": "SCOUT",
+      "model": "phi3:mini",
+      "status": "IDLE",
+      "last_heartbeat": "2025-12-24T15:46:53.404905",
+      "tasks_completed": 0,
+      "tasks_failed": 0
+    },
+    "mistral_creator": {
+      "role": "CREATOR",
+      "model": "mistral:7b",
+      "status": "IDLE",
+      "last_heartbeat": "2025-12-24T15:46:53.501755",
+      "tasks_completed": 0,
+      "tasks_failed": 0
+    },
+    "huntsman": {
+      "role": "HUNTSMAN",
+      "model": "tool:playwright",
+      "status": "IDLE",
+      "last_heartbeat": "2025-12-19T19:51:05.504315",
+      "tasks_completed": 1,
+      "tasks_failed": 0
+    },
+    "computeruse": {
+      "role": "COMPUTERUSE",
+      "model": "tool:pyautogui",
+      "status": "IDLE",
+      "last_heartbeat": "2025-12-19T19:51:05.498571",
+      "tasks_completed": 1,
+      "tasks_failed": 0
+    }
+  },
+  "ceo": {
+    "active": "Claude Sonnet",
+    "status": "PRIMARY",
+    "updated": "2025-12-24T15:46:51.455753"
+  },
+  "metrics": {
+    "completed_tasks": 13,
+    "failed_tasks": 0,
+    "uptime_start": "2025-12-18T10:29:32.800638"
+  }
+}

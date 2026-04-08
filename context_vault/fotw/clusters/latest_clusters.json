@@ -1,0 +1,35 @@
+{
+  "clustered_at": "2026-04-04T16:14:09.760025+00:00",
+  "window_hours": 168,
+  "clusters": {
+    "sovereignty": {
+      "count": 1,
+      "expressions": [
+        "EXPR-c099ad42"
+      ]
+    },
+    "content_production": {
+      "count": 2,
+      "expressions": [
+        "EXPR-c099ad42",
+        "EXPR-cea4c815"
+      ]
+    },
+    "business_growth": {
+      "count": 0,
+      "expressions": []
+    },
+    "technology": {
+      "count": 0,
+      "expressions": []
+    },
+    "marketing": {
+      "count": 0,
+      "expressions": []
+    },
+    "leadership": {
+      "count": 0,
+      "expressions": []
+    }
+  }
+}

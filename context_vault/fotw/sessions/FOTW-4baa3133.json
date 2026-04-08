@@ -1,0 +1,74 @@
+{
+  "session_id": "FOTW-4baa3133",
+  "session_type": "discovery_call",
+  "started_at": "2026-03-29T20:12:02.667343+00:00",
+  "ended_at": "2026-03-29T20:12:02.710266+00:00",
+  "segments": [
+    {
+      "segment_id": "SEG-82d9da",
+      "speaker": "host",
+      "text": "Tell me about your current content process.",
+      "timestamp": "2026-03-29T20:12:02.673385+00:00",
+      "duration_seconds": 0.0,
+      "signals_detected": [],
+      "intent_classified": "general_conversation",
+      "confidence": 0.5
+    },
+    {
+      "segment_id": "SEG-22104d",
+      "speaker": "prospect",
+      "text": "We're struggling with consistency. Nothing works.",
+      "timestamp": "2026-03-29T20:12:02.674899+00:00",
+      "duration_seconds": 0.0,
+      "signals_detected": [
+        "pain_expression"
+      ],
+      "intent_classified": "pain_expression",
+      "confidence": 0.8
+    },
+    {
+      "segment_id": "SEG-66ed72",
+      "speaker": "host",
+      "text": "What have you tried that came closest to working?",
+      "timestamp": "2026-03-29T20:12:02.706202+00:00",
+      "duration_seconds": 0.0,
+      "signals_detected": [],
+      "intent_classified": "general_conversation",
+      "confidence": 0.5
+    },
+    {
+      "segment_id": "SEG-8d9568",
+      "speaker": "prospect",
+      "text": "We tried scheduling tools but they don't create the content.",
+      "timestamp": "2026-03-29T20:12:02.706202+00:00",
+      "duration_seconds": 0.0,
+      "signals_detected": [],
+      "intent_classified": "general_conversation",
+      "confidence": 0.5
+    },
+    {
+      "segment_id": "SEG-ac35ab",
+      "speaker": "prospect",
+      "text": "How much would a full production service cost?",
+      "timestamp": "2026-03-29T20:12:02.706202+00:00",
+      "duration_seconds": 0.0,
+      "signals_detected": [
+        "purchase_intent"
+      ],
+      "intent_classified": "buying_signal",
+      "confidence": 0.85
+    }
+  ],
+  "participants": [],
+  "contact_id": null,
+  "niche_id": "local_service",
+  "signals_summary": {
+    "pain_expression": 1,
+    "purchase_intent": 1
+  },
+  "insights_extracted": [
+    "Standard interaction \u2014 no exceptional signals detected"
+  ],
+  "learning_events_fired": 1,
+  "status": "completed"
+}

@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-016",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "story",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "I gave LEGO sets as gifts to 10 people and tracked their reactions.",
+  "hook_line": "I gave this LEGO set to 10 different people. Watch what happened.",
+  "cta": "The winner is linked below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Speed Champions",
+    "LEGO Creator 3-in-1"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,49 @@
+{
+  "node_id": "context_graph",
+  "name": "Context Graph",
+  "module": "context_graph",
+  "total_score": 97,
+  "max_score": 105,
+  "pct": 92.4,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 10,
+      "detail": "3 EPOS deps \u2014 extractable with adapter layer",
+      "gap": "3 internal dependencies",
+      "fix": "Create adapter interfaces for EPOS-specific imports"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "Has self-test with assertions and PASS output"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "3 classes, 7 public methods, documented"
+    },
+    "event_bus": {
+      "score": 12,
+      "detail": "Publishes 3 events, no subscription",
+      "gap": "One-way event flow",
+      "fix": "Add event subscription for reactive behavior"
+    },
+    "data_sovereignty": {
+      "score": 15,
+      "detail": "Owns vault path + JSONL journal"
+    },
+    "configuration": {
+      "score": 15,
+      "detail": "Env-configurable with defaults and init params"
+    },
+    "value_proposition": {
+      "score": 15,
+      "detail": "Clear, actionable VP: 'AI memory that learns what works and gets smarter with every...'"
+    }
+  },
+  "hardening_needed": [],
+  "value_prop": "AI memory that learns what works and gets smarter with every decision.",
+  "pricing_tier": "workflow",
+  "suggested_price": "$99/mo",
+  "market_category": "Intelligence",
+  "certified_at": "2026-04-06T20:06:27.651319+00:00"
+}

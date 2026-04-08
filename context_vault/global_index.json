@@ -1,0 +1,26 @@
+{
+  "version": "2.0",
+  "entries": [
+    {
+      "vault_id": "bf16b9b693d942a2",
+      "domain": "learning",
+      "filename": "selftest.txt",
+      "mission_id": null,
+      "timestamp": "2026-03-28T11:45:29.723040",
+      "metadata": {
+        "test": true
+      },
+      "paths": [
+        "context_vault\\learning\\selftest.txt"
+      ],
+      "size_bytes": 26,
+      "chunk_count": 1
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-03-28T11:45:29.723040",
+    "constitutional_authority": "Article VII",
+    "last_updated": "2026-03-28T11:45:49.887056",
+    "entry_count": 1
+  }
+}

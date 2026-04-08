@@ -1,0 +1,15 @@
+{
+  "role": "r1_radar",
+  "name": "R1 Radar \u2014 Signal Detection",
+  "baseline_version": "1.0.0",
+  "last_updated": "2026-04-06",
+  "source": "AI sales agent research 2026 \u2014 behavioral + predictive signal detection",
+  "methodology": "Multi-source monitoring with confidence scoring. Primary alerts for immediate threats, secondary tracking for gradual shifts.",
+  "key_metrics": {
+    "signal_to_engagement_conversion": "25-40%",
+    "false_positive_rate": "<20%",
+    "detection_lead_time": "3-6 months earlier than traditional"
+  },
+  "epos_implementation": "R1 captures signals from vault + platforms, tags with confidence, routes via Echolocation",
+  "operational_validation": "pending_cycle_1"
+}

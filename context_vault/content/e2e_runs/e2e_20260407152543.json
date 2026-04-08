@@ -1,0 +1,103 @@
+{
+  "started_at": "2026-04-07T15:25:43.796487+00:00",
+  "steps": {
+    "1_spark_created": {
+      "status": "ok",
+      "spark_id": "SPARK-E2E-20260407152543"
+    },
+    "2_scored": {
+      "status": "ok",
+      "winner": "local_champion",
+      "winning_score": 79.5,
+      "all_scores": [
+        {
+          "avatar": "local_champion",
+          "score": 79.5
+        },
+        {
+          "avatar": "agency_builder",
+          "score": 68.0
+        },
+        {
+          "avatar": "boutique_agency_founder",
+          "score": 68.0
+        },
+        {
+          "avatar": "creative_hustler",
+          "score": 68.0
+        },
+        {
+          "avatar": "fractional_executive",
+          "score": 68.0
+        },
+        {
+          "avatar": "solo_operator",
+          "score": 68.0
+        },
+        {
+          "avatar": "solo_strategic_consultant",
+          "score": 68.0
+        },
+        {
+          "avatar": "technical_founder_operator",
+          "score": 68.0
+        }
+      ]
+    },
+    "3_avatar_selected": {
+      "status": "ok",
+      "avatar_id": "local_champion"
+    },
+    "4_briefs_generated": {
+      "status": "ok",
+      "variant_count": 3,
+      "brief_ids": [
+        "BRIEF-b7799c3ec8",
+        "BRIEF-fe1b058940",
+        "BRIEF-a206c2f348"
+      ]
+    },
+    "5_validated": {
+      "status": "ok",
+      "results": [
+        {
+          "brief_id": "BRIEF-b7799c3ec8",
+          "angle": "challenger",
+          "passed": true,
+          "violations": []
+        },
+        {
+          "brief_id": "BRIEF-fe1b058940",
+          "angle": "architect",
+          "passed": true,
+          "violations": []
+        },
+        {
+          "brief_id": "BRIEF-a206c2f348",
+          "angle": "closer",
+          "passed": true,
+          "violations": []
+        }
+      ]
+    },
+    "6_published": {
+      "status": "ok (staging)",
+      "staged_count": 3,
+      "staged_paths": [
+        "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\staging\\BRIEF-b7799c3ec8_challenger.md",
+        "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\staging\\BRIEF-fe1b058940_architect.md",
+        "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\echoes\\staging\\BRIEF-a206c2f348_closer.md"
+      ]
+    },
+    "7_scheduled": {
+      "status": "ok",
+      "scheduled_count": 3
+    },
+    "8_cta_logged": {
+      "status": "ok",
+      "count": 3
+    }
+  },
+  "final_state": "all_steps_completed",
+  "ended_at": "2026-04-07T15:25:43.815896+00:00"
+}

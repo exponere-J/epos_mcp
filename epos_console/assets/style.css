@@ -1,0 +1,9 @@
+/* Sovereign Tech (dark, high trust) */
+:root {
+  --navy: #0A1628;
+  --blue: #00D4FF;
+  --gold: #FFB84D;
+  --paper: #F0F4F8;
+}
+.block-container { padding-top: 2rem; }
+h1, h2, h3 { letter-spacing: 0.2px; }

@@ -1,0 +1,37 @@
+{
+  "niche_id": "lego_affiliate",
+  "week": 1,
+  "generated_at": "2026-03-29T12:43:30.387076+00:00",
+  "assets": [
+    {
+      "asset_id": "CB-LEGO-001",
+      "platforms": {
+        "youtube_shorts": {
+          "scheduled_at": "2026-03-29T14:00:00+00:00",
+          "offset_hours": 0,
+          "status": "scheduled"
+        },
+        "x_twitter": {
+          "scheduled_at": "2026-03-29T22:00:00+00:00",
+          "offset_hours": 8,
+          "status": "scheduled"
+        },
+        "linkedin": {
+          "scheduled_at": "2026-03-30T17:00:00+00:00",
+          "offset_hours": 27,
+          "status": "scheduled"
+        },
+        "tiktok": {
+          "scheduled_at": "2026-04-01T01:00:00+00:00",
+          "offset_hours": 59,
+          "status": "scheduled"
+        },
+        "instagram_reels": {
+          "scheduled_at": "2026-04-01T20:00:00+00:00",
+          "offset_hours": 78,
+          "status": "scheduled"
+        }
+      }
+    }
+  ]
+}

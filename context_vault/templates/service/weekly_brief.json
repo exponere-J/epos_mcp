@@ -1,0 +1,51 @@
+{
+  "template_id": "weekly_brief",
+  "category": "service",
+  "version": "1.0",
+  "description": "Weekly Signal Brief cover email — delivers the Frontier Dispatch or Echoes weekly report.",
+  "subject": "Your Weekly Signal Brief — {{week_range}}",
+  "body_sections": [
+    {"type": "opening", "content": "Hi {{client_name}},"},
+    {"type": "headline", "content": "{{avatar_headline}}"},
+    {"type": "three_signals", "content": "Top 3 signals this week:\n\n1. {{signal_1}}\n2. {{signal_2}}\n3. {{signal_3}}"},
+    {"type": "action_recommendation", "content": "{{avatar_action}}"},
+    {"type": "brief_link", "content": "Full brief attached (or: {{brief_link}})."},
+    {"type": "signature", "content": "{{sender_name}}\n\n1% daily. 37x annually."}
+  ],
+  "cta_token_pattern": "CTA-WEEKLY-{{avatar_id}}-{{date}}",
+  "send_cadence": "weekly_monday_0700_local",
+  "avatar_overrides": {
+    "local_champion": {
+      "avatar_headline": "This week's market moves that affect booked jobs in your area.",
+      "avatar_action": "One thing to try this week: text the lead response scorecard link to the last 10 prospects who didn't book."
+    },
+    "solo_strategic_consultant": {
+      "avatar_headline": "Three leverage signals the consulting market is sending this week.",
+      "avatar_action": "Operator move of the week: audit your last 5 engagements for repeatable components — one of them wants to be a product."
+    },
+    "boutique_agency_founder": {
+      "avatar_headline": "Margin signals from the agency market — what's moving this week.",
+      "avatar_action": "Margin lever of the week: run the Utilization Delta — compare billed vs. booked hours per PM."
+    },
+    "fractional_executive": {
+      "avatar_headline": "Portfolio signals from the fractional market.",
+      "avatar_action": "Context move of the week: archive one client context vault that's gone stale and free the cognitive load."
+    },
+    "technical_founder_operator": {
+      "avatar_headline": "Sovereign stack signals from the indie operator market.",
+      "avatar_action": "Build move of the week: one integration you can replace with a sovereign primitive."
+    },
+    "solo_operator": {
+      "avatar_headline": "Solo operator signals — what's working for people building alone.",
+      "avatar_action": "One template to grab from the pack this week."
+    },
+    "agency_builder": {
+      "avatar_headline": "Scaling signals from agencies crossing $1M and $3M.",
+      "avatar_action": "Playbook rollout move of the week."
+    },
+    "creative_hustler": {
+      "avatar_headline": "Creator resonance signals — what's breaking through this week.",
+      "avatar_action": "Format test of the week — run it once, measure the delta."
+    }
+  }
+}

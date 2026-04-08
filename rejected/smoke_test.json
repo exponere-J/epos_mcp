@@ -1,0 +1,11 @@
+{
+  "id": "smoke_test_terminal_planner",
+  "type": "terminal_sprint",
+  "status": "pending",
+  "payload": {
+    "cwd": "out/phi_smoke_test",
+    "os_hint": "gitbash",
+    "model": "phi3:mini",
+    "task": "Create a folder named 'ok' and a file named 'SUCCESS.txt' containing the text 'planner loop works'. Do not overwrite existing files."
+  }
+}

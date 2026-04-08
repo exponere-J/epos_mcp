@@ -1,0 +1,35 @@
+{
+  "niche": "enterprise",
+  "track": "marketing",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Brand Awareness",
+    "Customer Engagement",
+    "Marketing ROI",
+    "Digital Presence",
+    "Competitor Analysis"
+  ],
+  "key_bottleneck_patterns": [
+    "Inefficient Marketing Channels",
+    "Lack of Personalization in Customer Interactions",
+    "Insufficient Data-Driven Decision Making"
+  ],
+  "thinker_context": "Enterprise marketing teams often struggle to balance the need for innovative, attention-grabbing campaigns with the requirement for measurable, data-driven results. As such, they must navigate complex organizational structures, manage multiple stakeholders, and optimize their marketing mix to achieve business objectives. Effective gap analysis in this context requires a deep understanding of the interplay between marketing strategy, customer behavior, and business outcomes.",
+  "surgeon_priorities": [
+    "Optimize Marketing Technology Stack",
+    "Develop Customer-Centric Marketing Strategies",
+    "Implement Data-Driven Performance Metrics"
+  ],
+  "mirror_report_tone": "Professional, objective, and actionable, with a focus on providing strategic recommendations that drive business growth and improvement.",
+  "desire_vocabulary": [
+    "Growth",
+    "Efficiency",
+    "Innovation",
+    "Customer",
+    "Engagement",
+    "ROI",
+    "Competitive",
+    "Sustainability"
+  ],
+  "generated_at": "2026-03-29T19:07:28.396897+00:00"
+}

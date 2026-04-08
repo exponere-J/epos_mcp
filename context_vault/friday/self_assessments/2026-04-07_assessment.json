@@ -1,0 +1,13 @@
+{
+  "date": "2026-04-07",
+  "missions_total": 3,
+  "missions_success": 2,
+  "missions_failed": 1,
+  "failure_rate": 0.333,
+  "by_type": {
+    "healing": 1,
+    "computeruse": 1,
+    "content": 1
+  },
+  "performance": "degraded"
+}

@@ -1,0 +1,17 @@
+{
+  "proposal_id": "SOP-20260328-170157-1080a9",
+  "class": "operational",
+  "pattern": "Compliance below 70.0%",
+  "evidence_record_ids": [
+    "arbiter_audit"
+  ],
+  "current_sop_section": "Article XIV: File Governance",
+  "proposed_change": "Schedule batch watermark pass on ungoverned files. Current score: 61%. Target: 80%.",
+  "affected_metric": "codebase_compliance_score",
+  "status": "approved",
+  "generated_at": "2026-03-28T17:01:57.570946+00:00",
+  "auto_execute": false,
+  "requires_human_gate": true,
+  "approved_at": "2026-03-28T18:01:33.615924",
+  "approved_by": "growth_steward"
+}

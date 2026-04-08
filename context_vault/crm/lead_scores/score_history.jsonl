@@ -1,0 +1,2 @@
+{"contact_id": "TEST-001", "score": 87, "band": "critical", "dimensions": {"behavioral": 100, "engagement": 61.0, "fit": 81.7, "recency": 100}, "signal_count": 5, "scored_at": "2026-03-31T11:03:55.457147+00:00"}
+{"contact_id": "TEST-002", "score": 20, "band": "cold", "dimensions": {"behavioral": 5, "engagement": 12.2, "fit": 50, "recency": 30}, "signal_count": 1, "scored_at": "2026-03-31T11:03:55.461912+00:00"}

@@ -1,0 +1,77 @@
+{
+  "$id": "core.health_report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "ts", "run_id", "node", "npm", "findings", "raw", "violations"],
+  "properties": {
+    "schema_id": { "const": "core.health_report" },
+    "ts": { "type": "string" },
+    "run_id": { "type": "string" },
+    "node": { "type": "string" },
+    "npm": { "type": "string" },
+
+    "findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["deprecated_count", "outdated_count", "vuln_summary", "notes"],
+      "properties": {
+        "deprecated_count": { "type": "integer", "minimum": 0 },
+        "outdated_count": { "type": "integer", "minimum": 0 },
+        "vuln_summary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["critical", "high", "moderate", "low"],
+          "properties": {
+            "critical": { "type": "integer", "minimum": 0 },
+            "high": { "type": "integer", "minimum": 0 },
+            "moderate": { "type": "integer", "minimum": 0 },
+            "low": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+
+    "raw": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["npm_ls", "npm_outdated", "npm_audit"],
+      "properties": {
+        "npm_ls": {
+          "type": "object",
+          "additionalProperties": false,
+          "patternProperties": {
+            ".*": {}
+          }
+        },
+        "npm_outdated": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "patternProperties": {
+            ".*": {}
+          }
+        },
+        "npm_audit": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "patternProperties": {
+            ".*": {}
+          }
+        }
+      }
+    },
+
+    "violations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" }
+        }
+      }
+    }
+  }
+}

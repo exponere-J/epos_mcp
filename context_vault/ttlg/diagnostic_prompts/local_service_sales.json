@@ -1,0 +1,35 @@
+{
+  "niche": "local_service",
+  "track": "sales",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Customer Acquisition",
+    "Sales Conversion Rates",
+    "Average Deal Size",
+    "Sales Cycle Length",
+    "Customer Retention"
+  ],
+  "key_bottleneck_patterns": [
+    "Inconsistent Lead Generation",
+    "Ineffective Sales Messaging",
+    "Poor Sales Process Management"
+  ],
+  "thinker_context": "Local service businesses often struggle to scale their sales efforts due to limited resources, intense competition, and high customer acquisition costs. To succeed, they must develop targeted sales strategies that resonate with their local audience, build strong relationships with customers, and continually optimize their sales processes to maximize efficiency and revenue growth.",
+  "surgeon_priorities": [
+    "Develop a tailored sales strategy aligned with the local market",
+    "Implement a robust sales process management system",
+    "Enhance sales messaging and training for consistent customer engagement"
+  ],
+  "mirror_report_tone": "Action-oriented and consultative, with a focus on providing practical, data-driven recommendations for sales improvement",
+  "desire_vocabulary": [
+    "Grow",
+    "Increase",
+    "Improve",
+    "Optimize",
+    "Boost",
+    "Enhance",
+    "Streamline",
+    "Maximize"
+  ],
+  "generated_at": "2026-03-29T19:07:18.215910+00:00"
+}

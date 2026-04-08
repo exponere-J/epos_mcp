@@ -1,0 +1,14 @@
+{
+  "run_at": "2026-03-29T19:42:00.008364+00:00",
+  "research_scan": {
+    "total_discoveries": 0,
+    "status": "scanned"
+  },
+  "comment_intelligence": {
+    "error": "No module named 'content.lab.nodes.comment_intelligence'"
+  },
+  "weight_shifts_detected": 1,
+  "sop_proposals_generated": 0,
+  "niches_updated": 1,
+  "frameworks_added": 0
+}

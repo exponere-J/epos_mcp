@@ -1,0 +1,21 @@
+{
+  "id": "local_task_router",
+  "description": "Route a high-level intent to the correct local specialist.",
+  "steps": [
+    {
+      "id": "classify_task",
+      "type": "ai_router",
+      "outputs": ["domain"]
+    },
+    {
+      "id": "delegate",
+      "type": "policy_route",
+      "policy": "kernel/config/routing.json"
+    },
+    {
+      "id": "log",
+      "type": "log",
+      "event": "task_routed"
+    }
+  ]
+}

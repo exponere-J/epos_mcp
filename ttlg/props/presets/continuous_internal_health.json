@@ -1,0 +1,48 @@
+{
+  "name": "EPOS Continuous Internal Health",
+  "version": "1.0",
+  "target": "epos",
+  "context": {
+    "domain": "agentic_operating_system",
+    "market_position": "first_mover",
+    "assessment_type": "continuous_internal",
+    "time_horizon_days": 1
+  },
+  "phases": {
+    "scout": {
+      "scope": ["all_layers"],
+      "depth": "quick",
+      "measurement_points": [
+        "doctor_results",
+        "event_bus_throughput",
+        "vault_journal_freshness",
+        "node_import_status",
+        "api_provider_availability",
+        "port_availability",
+        "vault_size"
+      ]
+    },
+    "thinker": {
+      "weighting_model": "internal_health",
+      "extract_intelligence": ["failure_patterns", "remediation_candidates"]
+    },
+    "gate": {
+      "approval_criteria": "tiered_autonomy",
+      "auto_remediate": true,
+      "escalation_threshold": 3
+    },
+    "surgeon": {
+      "change_scope": "remediation",
+      "priority_filter": "risk_mitigation",
+      "max_prescriptions_per_gap": 1
+    },
+    "analyst": {
+      "verification_metrics": ["remediation_success_rate", "recurrence_count", "escalation_count"],
+      "projection_days": [1, 7, 30]
+    }
+  },
+  "output_format": {
+    "type": "healing_report",
+    "sections": ["failures_detected", "remediations_applied", "escalations_raised", "pattern_learning"]
+  }
+}

@@ -1,0 +1,5 @@
+{"lead_id": "bbd728a1", "run_id": "node_alpha", "outcome": "Rejected (Archive)", "reason_code": "1", "reason_text": "Too small (<$5k)", "timestamp": 1766579152.261863}
+{"lead_id": "1872569a", "run_id": "node_alpha", "outcome": "Rejected (Archive)", "reason_code": "1", "reason_text": "Too small (<$5k)", "timestamp": 1766579873.9241087}
+{"lead_id": "a081e92e", "run_id": "node_alpha", "outcome": "Rejected (Archive)", "reason_code": "1", "reason_text": "Too small (<$5k)", "timestamp": 1766579990.7775493}
+{"lead_id": "eab40839", "run_id": "node_alpha", "outcome": "Qualified", "reason_code": "1", "reason_text": "Too small (<$5k)", "timestamp": 1766601528.5819921}
+{"lead_id": "deeeb7c3", "run_id": "node_alpha", "outcome": "Rejected", "reason_code": "2", "reason_text": "Bad timing (Not ready)", "timestamp": 1766610695.9115765}

@@ -1,0 +1,10 @@
+{"event_type": "edge_updated", "edge_id": "niche_lego_affiliate_hook_list", "new_weight": 0.72, "timestamp": "2026-03-29T19:37:43.189582+00:00"}
+{"event_type": "edge_updated", "edge_id": "niche_lego_affiliate_hook_question", "new_weight": 0.45, "timestamp": "2026-03-29T19:37:43.221287+00:00"}
+{"event_type": "edge_updated", "edge_id": "niche_lego_affiliate_hook_list", "new_weight": 0.72, "timestamp": "2026-03-29T19:38:35.107995+00:00"}
+{"event_type": "edge_updated", "edge_id": "segment_small_business_converted", "new_weight": 1.0, "timestamp": "2026-03-29T19:38:35.152482+00:00"}
+{"event_type": "edge_updated", "edge_id": "contact_test-001_conversion", "new_weight": 1.0, "timestamp": "2026-03-29T19:38:35.197461+00:00"}
+{"event_type": "edge_updated", "edge_id": "fotw_local_service_purchase_intent", "new_weight": 0.2, "timestamp": "2026-03-29T20:12:02.633451+00:00"}
+{"event_type": "edge_updated", "edge_id": "segment_small_business_converted", "new_weight": 1.0, "timestamp": "2026-04-04T14:45:41.442877+00:00"}
+{"event_type": "edge_updated", "edge_id": "contact_test-pgp_conversion", "new_weight": 1.0, "timestamp": "2026-04-04T14:45:41.450759+00:00"}
+{"event_type": "edge_updated", "edge_id": "segment_small_business_converted", "new_weight": 1.0, "timestamp": "2026-04-04T14:51:15.499682+00:00"}
+{"event_type": "edge_updated", "edge_id": "contact_test-pgp_conversion", "new_weight": 1.0, "timestamp": "2026-04-04T14:51:15.507672+00:00"}

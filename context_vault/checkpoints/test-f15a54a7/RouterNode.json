@@ -1,0 +1,13 @@
+{
+  "mission_id": "test-f15a54a7",
+  "node_name": "RouterNode",
+  "state": {
+    "brief_objective": "Orchestrator self-test \u2014 happy path",
+    "action_type": "diagnostic",
+    "assigned_agent": "ttlg",
+    "routed_to": "DiagnosticNode",
+    "priority": "normal",
+    "status": "dispatched"
+  },
+  "checkpointed_at": "2026-03-28T17:18:17.988853+00:00"
+}

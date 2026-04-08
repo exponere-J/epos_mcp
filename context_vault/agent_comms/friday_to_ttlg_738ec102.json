@@ -1,0 +1,11 @@
+{
+  "message_id": "friday_to_ttlg_738ec102",
+  "mission_id": "test-f15a54a7",
+  "from_agent": "friday",
+  "to_agent": "ttlg",
+  "message": {
+    "instruction": "run diagnostic",
+    "priority": "high"
+  },
+  "sent_at": "2026-03-28T17:18:18.002877+00:00"
+}

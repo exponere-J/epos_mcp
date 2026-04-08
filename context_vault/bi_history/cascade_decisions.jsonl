@@ -1,0 +1,2 @@
+{"event_type": "cascade.generated", "source_id": "VAULT_CAS_TEST", "total_derivatives": 7, "stabilization_ok": true, "timestamp": "2026-02-18T05:19:27.609039+00:00"}
+{"event_type": "cascade.generated", "source_id": "YT_PIPE_TEST", "total_derivatives": 9, "stabilization_ok": true, "timestamp": "2026-02-18T05:19:27.795494+00:00"}

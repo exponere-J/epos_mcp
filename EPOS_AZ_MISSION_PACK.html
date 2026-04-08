@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPOS AZ Mission Pack — Architectural Strategist Execution Plans</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+:root {
+  --bg:#08090a;--surface:#0f1210;--card:#151a16;--border:#243020;
+  --text:#dce5d8;--muted:#7a8a72;--gold:#d4a843;--gold-dim:rgba(212,168,67,0.08);
+  --green:#4a8c34;--green-lt:#6db84e;--earth:#8b6f47;--sky:#5b94bf;
+  --bloom:#c47289;--soil:#3a2c1e;--harvest:#c9884a;--red:#c45050;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.72;padding:28px;font-weight:300;
+  background-image:radial-gradient(ellipse at 15% 0%,rgba(74,140,52,0.04) 0%,transparent 60%),
+  radial-gradient(ellipse at 85% 100%,rgba(212,168,67,0.03) 0%,transparent 50%);min-height:100vh;}
+.container{max-width:980px;margin:0 auto;}
+h1{font-family:'Cormorant Garamond',serif;font-size:2.1em;color:var(--gold);margin:48px 0 10px;padding-bottom:10px;font-weight:600;border-bottom:1px solid var(--border);}
+h2{font-family:'Cormorant Garamond',serif;font-size:1.5em;color:var(--green-lt);margin:30px 0 8px;font-weight:600;}
+h3{font-size:0.88em;color:var(--gold);margin:16px 0 6px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;}
+h4{font-size:1em;color:var(--bloom);margin:12px 0 4px;font-weight:600;}
+p{margin:6px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px;margin:14px 0;box-shadow:0 2px 12px rgba(0,0,0,0.25);}
+.hl{border-left:3px solid var(--gold);padding:12px 18px;margin:10px 0;background:var(--gold-dim);border-radius:0 6px 6px 0;}
+.hl-green{border-left-color:var(--green-lt);background:rgba(109,184,78,0.06);}
+.hl-bloom{border-left-color:var(--bloom);background:rgba(196,114,137,0.06);}
+.hl-sky{border-left-color:var(--sky);background:rgba(91,148,191,0.06);}
+.hl-red{border-left-color:var(--red);background:rgba(196,80,80,0.06);}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:0.9em;}
+th{background:var(--surface);color:var(--gold);text-align:left;padding:9px 12px;border:1px solid var(--border);font-weight:600;font-size:0.82em;text-transform:uppercase;letter-spacing:1px;}
+td{padding:8px 12px;border:1px solid var(--border);vertical-align:top;}
+tr:nth-child(even){background:rgba(255,255,255,0.012);}
+.divider{border:none;border-top:1px solid var(--border);margin:40px 0;}
+.label{font-size:0.68em;text-transform:uppercase;letter-spacing:3.5px;color:var(--muted);margin-bottom:4px;font-weight:500;}
+code{font-family:'JetBrains Mono',monospace;background:var(--surface);padding:2px 6px;border-radius:3px;font-size:0.88em;color:var(--green-lt);}
+pre{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:14px 18px;margin:10px 0;overflow-x:auto;font-family:'JetBrains Mono',monospace;font-size:0.85em;line-height:1.5;color:var(--text);}
+.mission-id{font-family:'JetBrains Mono',monospace;font-size:1.1em;color:var(--harvest);font-weight:600;}
+.tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:0.78em;margin:2px;font-weight:500;}
+.tag-fs{background:var(--gold);color:var(--bg);}
+.tag-sa{background:var(--sky);color:white;}
+.tag-gs{background:var(--green);color:white;}
+.tag-infra{background:var(--earth);color:white;}
+.step{padding:8px 0 8px 28px;position:relative;border-left:2px solid var(--border);margin-left:12px;}
+.step::before{content:attr(data-n);position:absolute;left:-12px;top:8px;width:24px;height:24px;background:var(--gold);color:var(--bg);border-radius:50%;font-size:0.72em;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.step-cmd{font-family:'JetBrains Mono',monospace;background:var(--surface);padding:6px 12px;border-radius:4px;margin:4px 0;font-size:0.85em;border-left:2px solid var(--green-lt);}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);padding:16px 24px;margin:16px 0;border-left:3px solid var(--gold);background:rgba(212,168,67,0.04);border-radius:0 6px 6px 0;font-size:1.08em;}
+.footer{text-align:center;color:var(--muted);margin-top:50px;padding:20px 0;font-size:0.88em;}
+.footer em{font-family:'Cormorant Garamond',serif;font-size:1.1em;color:var(--gold);}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:800px){.grid2{grid-template-columns:1fr;}}
+.toc-link{color:var(--sky);text-decoration:none;border-bottom:1px dotted var(--sky);}
+.toc-link:hover{color:var(--gold);border-bottom-color:var(--gold);}
+</style>
+</head>
+<body>
+<div class="container">
+
+<p class="label">EPOS Architectural Strategist · AZ Mission Pack</p>
+<h1>Deterministic Execution Plans for Autonomous Upgrade</h1>
+<p style="color:var(--muted)">
+  Mission Template + 9 Execution Plans · I.I.D.E.A.T.E. Framework · Chain-of-Thought for Agent Zero<br>
+  February 20, 2026 · Constitutional Authority: Articles II, VII, VIII, XIV
+</p>
+
+<div class="quote">
+"Architectural Strategists own the 9th-order cognitive framing and produce the full, deterministic blueprints; EPOS (via Agent Zero) owns the execution of those blueprints."
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- TABLE OF CONTENTS                      -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1>Table of Contents</h1>
+<div class="card">
+<table>
+  <tr><th>#</th><th>Mission ID</th><th>Description</th><th>Tier</th></tr>
+  <tr><td>0</td><td><code>TEMPLATE</code></td><td>Architectural Strategist Mission Template (the scaffold all missions follow)</td><td><span class="tag tag-infra">Infra</span></td></tr>
+  <tr><td>1</td><td><code>AZ-AT-BRIDGE-001</code></td><td>Stand up 7-table Airtable Bridge with all fields</td><td><span class="tag tag-infra">Infra</span></td></tr>
+  <tr><td>2</td><td><code>AZ-AT-SHADOW-UPG</code></td><td>Shadow Log value-capture upgrades (COML, OC, Emotional Drain, Priority Rank)</td><td><span class="tag tag-gs">GS</span></td></tr>
+  <tr><td>3</td><td><code>AZ-AT-SOIL-UPG</code></td><td>Soil Samples upgrades (Signal Loss, Missed Revenue, Stewardship Goal)</td><td><span class="tag tag-gs">GS</span></td></tr>
+  <tr><td>4</td><td><code>AZ-CC-ADVISORY-TAB</code></td><td>Advisory Requests table + Command Center integration</td><td><span class="tag tag-sa">SA</span></td></tr>
+  <tr><td>5</td><td><code>AZ-GS-CLIENT-QUERY</code></td><td>Growth Steward client-facing query interface</td><td><span class="tag tag-gs">GS</span></td></tr>
+  <tr><td>6</td><td><code>AZ-SA-HITL-FLOW</code></td><td>Steward Advisor option generation + approval flow</td><td><span class="tag tag-sa">SA</span></td></tr>
+  <tr><td>7</td><td><code>AZ-VOICE-PERSONA</code></td><td>Steward Voice constitutional document + channel adapters</td><td><span class="tag tag-gs">GS</span></td></tr>
+  <tr><td>8</td><td><code>AZ-EVENT-WIRING</code></td><td>Event bus subscriptions for approvals, posting, analytics</td><td><span class="tag tag-infra">Infra</span></td></tr>
+  <tr><td>9</td><td><code>AZ-SOV-SUITE-REG</code></td><td>Sovereignty Suite registered as product node in Financial Command</td><td><span class="tag tag-fs">FS</span></td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION TEMPLATE                       -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1>Mission Template: The Architectural Strategist Scaffold</h1>
+
+<p>Every mission produced by the Architectural Strategist MUST follow this structure. Agent Zero executes from the <strong>Execution Plan</strong> section without additional interpretation.</p>
+
+<div class="card">
+<pre>{
+  "mission_id": "AZ-{DOMAIN}-{FEATURE}-{SEQ}",
+  "version": "1.0.0",
+  "tier": "FS | SA | GS | Infra",
+  "authority": "EPOS_CONSTITUTION_v3.1.md, Article {N}",
+  "status": "proposed | approved | executing | complete | failed",
+
+  "IMMERSION": {
+    "context": "What exists in the codebase, Vault, and Airtable right now",
+    "dependencies": ["list of files, tables, or services this mission needs"],
+    "unknowns": ["what we don't know yet — triggers research before design"]
+  },
+
+  "IDEATION": {
+    "options": [
+      {"id": "A", "approach": "description", "tradeoff": "what it costs"},
+      {"id": "B", "approach": "description", "tradeoff": "what it costs"}
+    ],
+    "selected": "A",
+    "rationale": "why this option was chosen"
+  },
+
+  "DESIGN": {
+    "schemas": "new or modified table schemas, file structures, API contracts",
+    "events": "new event types published or subscribed",
+    "failure_modes": [
+      {"mode": "description", "detection": "how we know", "mitigation": "what we do"}
+    ],
+    "pre_mortem": "the imaginative projection — what breaks if we're wrong"
+  },
+
+  "EXECUTION": {
+    "steps": [
+      {
+        "step": 1,
+        "action": "exact command or code change",
+        "verify": "how to confirm this step succeeded",
+        "rollback": "what to undo if it fails"
+      }
+    ],
+    "governance": {
+      "gate_validation": "governance_gate.py --file inbox/{filename}",
+      "doctor_check": "python epos_doctor.py --check {component}",
+      "article_xiv": "DNA watermark + file_registry.jsonl entry"
+    }
+  },
+
+  "ANALYSIS": {
+    "metrics": [
+      {"name": "metric_name", "source": "where it comes from", "baseline": "current value", "target": "expected value"}
+    ],
+    "tracking_frequency": "daily | weekly | per-cycle",
+    "bi_log_entry": "what gets written to bi_decision_log.jsonl"
+  },
+
+  "TWEAK": {
+    "review_trigger": "when to evaluate (e.g., after 7 days, after 100 events)",
+    "evaluation_criteria": "what determines success vs needs adjustment",
+    "adjustment_authority": "who can modify (FS only | SA + approval | GS auto)"
+  },
+
+  "EVOLVE": {
+    "feeds_into": "which next mission or cycle this informs",
+    "vault_artifact": "path where learnings are stored",
+    "recursive_hook": "how this connects back to IMMERSION for next iteration"
+  }
+}</pre>
+</div>
+
+<div class="hl">
+<strong>Rule:</strong> If any field in the EXECUTION section says "integrate," "wire up," or "just connect" — the plan is rejected. Every step must be a concrete command, file edit, or API call.
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 1: AIRTABLE BRIDGE             -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-AT-BRIDGE-001</span></h1>
+<h2>Stand Up the 7-Table Airtable Bridge</h2>
+<p class="label">Tier: Infrastructure · Priority: Day 0 (before sprint begins)</p>
+
+<div class="card">
+<h3>Immersion (What Exists)</h3>
+<p>No structured Airtable base exists yet. Client data lives in conversation transcripts, HTML blueprints, and Context Vault doctrine files. The Integration Engineer has specified a 7-table schema with exact field definitions. <code>pyairtable</code> is available for API access. Manual CSV import is the Day 1 fallback.</p>
+</div>
+
+<div class="card">
+<h3>Design (Schema)</h3>
+
+<h4>Table 1: Creators</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Creator Name</td><td>Primary (text)</td><td>"Stacey", "Desiree"</td></tr>
+  <tr><td>Handle – TikTok</td><td>Text</td><td></td></tr>
+  <tr><td>Handle – Twitch</td><td>Text</td><td></td></tr>
+  <tr><td>Handle – IG</td><td>Text</td><td></td></tr>
+  <tr><td>Handle – LinkedIn</td><td>Text</td><td></td></tr>
+  <tr><td>Niche / Pillars</td><td>Multi-select</td><td>Travel, Book Club, Gaming, Parenting, Authority</td></tr>
+  <tr><td>90-Day Plan Link</td><td>URL</td><td></td></tr>
+  <tr><td>Guardian Sensitivity Level</td><td>Single select</td><td>Low / Medium / High</td></tr>
+  <tr><td>Voice Profile Stored?</td><td>Checkbox</td><td></td></tr>
+  <tr><td>Voice Profile Path</td><td>Text</td><td>Pointer into Context Vault</td></tr>
+</table>
+
+<h4>Table 2: Content Calendar</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Post ID</td><td>Formula</td><td><code>Creator & "-" & Platform & "-" & DateFormat</code></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Platform</td><td>Single select</td><td>TikTok / IG Reels / IG Stories / LinkedIn / Twitch / YouTube</td></tr>
+  <tr><td>Content Type</td><td>Single select</td><td>Clip / Carousel / Story / Live / Text Post / VOD</td></tr>
+  <tr><td>Pillar</td><td>Single select</td><td></td></tr>
+  <tr><td>Hook / Title</td><td>Text</td><td></td></tr>
+  <tr><td>Caption</td><td>Long text</td><td></td></tr>
+  <tr><td>Asset URL</td><td>URL</td><td></td></tr>
+  <tr><td>Status</td><td>Single select</td><td>Draft / In Queue / Posted / Skipped</td></tr>
+  <tr><td>Planned Date</td><td>Date+Time</td><td></td></tr>
+  <tr><td>Actual Post Date</td><td>Date+Time</td><td></td></tr>
+  <tr><td>Resonance Notes</td><td>Long text</td><td>Echolocation notes</td></tr>
+</table>
+
+<h4>Table 3: Approved Queue</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Queue ID</td><td>Autonumber</td><td></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Content Calendar Item</td><td>Link → Content Calendar</td><td></td></tr>
+  <tr><td>Platform</td><td>Lookup</td><td></td></tr>
+  <tr><td>Hook / Title</td><td>Lookup</td><td></td></tr>
+  <tr><td>Caption</td><td>Lookup</td><td></td></tr>
+  <tr><td>Asset URL</td><td>Lookup</td><td></td></tr>
+  <tr><td>Post By</td><td>Date+Time</td><td></td></tr>
+  <tr><td>Client Status</td><td>Single select</td><td>Not Seen / Ready to Post / Posted / Needs Change</td></tr>
+  <tr><td>Client Notes</td><td>Long text</td><td></td></tr>
+</table>
+
+<h4>Table 4: DM Stewardship</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>DM ID</td><td>Autonumber</td><td></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Platform</td><td>Single select</td><td></td></tr>
+  <tr><td>DM Type</td><td>Single select</td><td>High-Intent / Toxic / Boundary / Other</td></tr>
+  <tr><td>Original Message</td><td>Long text</td><td></td></tr>
+  <tr><td>Proposed Reply</td><td>Long text</td><td>EPOS-generated</td></tr>
+  <tr><td>Reply Status</td><td>Single select</td><td>Draft / Approved / Sent / Ignored</td></tr>
+  <tr><td>Flags</td><td>Multi-select</td><td>Mental Health / Safety / Legal / Sales Opportunity</td></tr>
+</table>
+
+<h4>Table 5: Soil Samples</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Sample ID</td><td>Formula</td><td><code>Creator & "-" & WeekFormat</code></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Week Start</td><td>Date</td><td></td></tr>
+  <tr><td>TT Followers / Views / Profile Visits</td><td>Number (×3)</td><td></td></tr>
+  <tr><td>LI Followers</td><td>Number</td><td></td></tr>
+  <tr><td>IG Followers</td><td>Number</td><td></td></tr>
+  <tr><td>Twitch Avg CCV</td><td>Number</td><td></td></tr>
+  <tr><td>Echolocation Summary</td><td>Long text</td><td></td></tr>
+  <tr><td>Screenshot URLs (per platform)</td><td>URL (×4)</td><td></td></tr>
+</table>
+
+<h4>Table 6: Shadow Log</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Shadow ID</td><td>Autonumber</td><td></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Date</td><td>Date+Time</td><td></td></tr>
+  <tr><td>Source</td><td>Single select</td><td>Loom / Voice Memo / Calendar / Manual Note</td></tr>
+  <tr><td>Task Description</td><td>Long text</td><td></td></tr>
+  <tr><td>Friction Category</td><td>Single select</td><td>Invoicing / Scheduling / Lead Sorting / Content Ops / Admin / Other</td></tr>
+  <tr><td>Estimated Occurrence / Week</td><td>Number</td><td></td></tr>
+  <tr><td>Estimated Minutes / Occurrence</td><td>Number</td><td></td></tr>
+  <tr><td>Pain Score</td><td>Single select</td><td>1–5</td></tr>
+  <tr><td>Node Recommendation</td><td>Link → Nodes</td><td></td></tr>
+  <tr><td>Status</td><td>Single select</td><td>Logged / Node Designed / Node Live</td></tr>
+</table>
+
+<h4>Table 7: Nodes</h4>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Node ID</td><td>Text</td><td>e.g. <code>STACEY-INV-AUTO-01</code></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Node Name</td><td>Text</td><td></td></tr>
+  <tr><td>Type</td><td>Single select</td><td>Zapier / Make / n8n / Manual SOP</td></tr>
+  <tr><td>Problem Statement</td><td>Long text</td><td></td></tr>
+  <tr><td>Solution Summary</td><td>Long text</td><td></td></tr>
+  <tr><td>Build Status</td><td>Single select</td><td>Proposed / Designing / Building / Testing / Live</td></tr>
+  <tr><td>MRR Impact Class</td><td>Single select</td><td>Time-Saver / Revenue-Driver / Risk-Reducer</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Create Airtable base</strong> named "EPOS Creator Command Base"
+  <div class="step-cmd">Manual: Airtable → Create Base → name it "EPOS Creator Command Base"</div>
+  <strong>Verify:</strong> Base appears in Airtable workspace
+</div>
+<div class="step" data-n="2">
+  <strong>Create all 7 tables</strong> with exact field definitions above. Create in dependency order: Creators → Nodes → Shadow Log → Soil Samples → Content Calendar → Approved Queue → DM Stewardship
+  <div class="step-cmd">Manual: Add tables one by one. Set Link fields after all tables exist.</div>
+  <strong>Verify:</strong> Each table has all fields, correct types, correct link relationships
+</div>
+<div class="step" data-n="3">
+  <strong>Seed Creators table</strong> with Stacey and Desiree rows. Populate handles from persona briefs.
+  <div class="step-cmd">Add 2 rows to Creators. Set Guardian Sensitivity = "High" for both. Voice Profile Stored = unchecked until Day 1 sprint completes.</div>
+  <strong>Verify:</strong> 2 rows in Creators with all handle fields populated
+</div>
+<div class="step" data-n="4">
+  <strong>Generate Airtable API key</strong> and store in <code>.env</code> as <code>AIRTABLE_PAT</code> and <code>AIRTABLE_BASE_ID</code>
+  <div class="step-cmd">Airtable → Account → API → Create Personal Access Token (scopes: data.records:read, data.records:write)</div>
+  <strong>Verify:</strong> <code>python -c "from pyairtable import Api; Api(os.getenv('AIRTABLE_PAT')).table(os.getenv('AIRTABLE_BASE_ID'), 'Creators').all()"</code> returns 2 records
+</div>
+<div class="step" data-n="5">
+  <strong>Document schema</strong> in Context Vault as <code>context_vault/doctrine/airtable_bridge_schema.md</code>
+  <div class="step-cmd">Copy the Design section above into a markdown file. Route through governance gate.</div>
+  <strong>Verify:</strong> <code>python governance_gate.py --file inbox/airtable_bridge_schema.md</code> → APPROVED
+</div>
+</div>
+
+<div class="card">
+<h3>Failure Modes</h3>
+<table>
+  <tr><th>Mode</th><th>Detection</th><th>Mitigation</th></tr>
+  <tr><td>Link fields created before target table exists</td><td>Airtable error on creation</td><td>Create in dependency order specified above</td></tr>
+  <tr><td>Formula fields reference missing columns</td><td>Formula shows ERROR</td><td>Add formula fields last, after all other fields exist</td></tr>
+  <tr><td>API token scoped too narrowly</td><td><code>pyairtable</code> returns 403</td><td>Regenerate with data.records:read + write scopes</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Analysis Hooks</h3>
+<table>
+  <tr><th>Metric</th><th>Source</th><th>Baseline</th><th>Target</th></tr>
+  <tr><td>Tables created</td><td>Airtable base</td><td>0</td><td>7</td></tr>
+  <tr><td>Creator records seeded</td><td>Creators table</td><td>0</td><td>2</td></tr>
+  <tr><td>API connectivity</td><td>pyairtable test</td><td>No connection</td><td>200 OK + 2 records</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 2: SHADOW LOG UPGRADES         -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-AT-SHADOW-UPG</span></h1>
+<h2>Shadow Log Value-Capture Upgrades</h2>
+<p class="label">Tier: GS · Depends on: AZ-AT-BRIDGE-001</p>
+
+<div class="card">
+<h3>Design (New Fields)</h3>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Formula / Logic</th></tr>
+  <tr><td>Emotional Drain (1-5)</td><td>Single select</td><td>1, 2, 3, 4, 5</td></tr>
+  <tr><td>Creator Hourly Rate</td><td>Number</td><td>Default: 150</td></tr>
+  <tr><td>COML (Cost of Manual Labor)</td><td>Formula</td><td><code>(Minutes * Occurrences / 60) * Hourly Rate</code></td></tr>
+  <tr><td>High-Leverage Proxy Rate</td><td>Number</td><td>Default: 300</td></tr>
+  <tr><td>Opportunity Cost (OC)</td><td>Formula</td><td><code>(Minutes * Occurrences / 60) * Proxy Rate</code></td></tr>
+  <tr><td>Vibe Check Note</td><td>Long text</td><td>Brief quote from creator</td></tr>
+  <tr><td>Priority Rank</td><td>Formula</td><td><code>IF(Drain>=4,"P1",IF(OC>=1000,"P1",IF(COML>=500,"P2","P3")))</code></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Add 7 new fields</strong> to Shadow Log table in exact order above
+  <div class="step-cmd">Airtable → Shadow Log → Add Field for each. Set Creator Hourly Rate default = 150. Set High-Leverage Proxy Rate default = 300.</div>
+</div>
+<div class="step" data-n="2">
+  <strong>Enter COML formula:</strong>
+  <div class="step-cmd"><code>({Estimated Minutes / Occurrence} * {Estimated Occurrence / Week} / 60) * {Creator Hourly Rate}</code></div>
+</div>
+<div class="step" data-n="3">
+  <strong>Enter OC formula:</strong>
+  <div class="step-cmd"><code>({Estimated Minutes / Occurrence} * {Estimated Occurrence / Week} / 60) * {High-Leverage Proxy Rate}</code></div>
+</div>
+<div class="step" data-n="4">
+  <strong>Enter Priority Rank formula:</strong>
+  <div class="step-cmd"><code>IF({Emotional Drain (1-5)} >= 4, "P1", IF({Opportunity Cost (OC)} >= 1000, "P1", IF({COML (Cost of Manual Labor)} >= 500, "P2", "P3")))</code></div>
+</div>
+<div class="step" data-n="5">
+  <strong>Test with sample data:</strong> Add one row: Task="Invoice follow-up", Minutes=15, Occurrences=8, Drain=4, Rate=150, Proxy=300
+  <div class="step-cmd">Expected: COML = $300/wk, OC = $600/wk, Priority = P1</div>
+  <strong>Verify:</strong> Formula outputs match expected values
+</div>
+</div>
+
+<div class="card">
+<h3>Evolve Hook</h3>
+<p>After 7 days of Stacey's Friction Looms, run Analysis: sum all COML and OC values. If total weekly COML > $500, this data feeds directly into the Sovereignty Assessment and the "Friction Bounty" section of her next Crop Report. Feeds into <code>AZ-SOV-SUITE-REG</code> for pricing validation.</p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 3: SOIL SAMPLES UPGRADES       -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-AT-SOIL-UPG</span></h1>
+<h2>Soil Samples Value-Capture Upgrades</h2>
+<p class="label">Tier: GS · Depends on: AZ-AT-BRIDGE-001</p>
+
+<div class="card">
+<h3>Design (New Fields)</h3>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Formula / Logic</th></tr>
+  <tr><td>Stewardship Goal</td><td>Single select</td><td>Followers / Email List / Book Club Signups / Affiliate Clicks / Sponsor Leads</td></tr>
+  <tr><td>Goal Events (7d)</td><td>Number</td><td>e.g. affiliate clicks, signups</td></tr>
+  <tr><td>Total Reach (7d)</td><td>Number</td><td>Sum views/impressions across platforms</td></tr>
+  <tr><td>Signal Loss</td><td>Formula</td><td><code>IF(Reach > 0, 1 - (Goal Events / Reach), BLANK())</code></td></tr>
+  <tr><td>Affiliate / Offer ARPU</td><td>Number</td><td>e.g. 30 per book buyer, 50 per sponsor lead</td></tr>
+  <tr><td>Missed Revenue – 1% Lift</td><td>Formula</td><td><code>(Total Reach * 0.01) * ARPU</code></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Add 6 new fields</strong> to Soil Samples table
+  <div class="step-cmd">Airtable → Soil Samples → Add each field in order above</div>
+</div>
+<div class="step" data-n="2">
+  <strong>Enter Signal Loss formula:</strong>
+  <div class="step-cmd"><code>IF({Total Reach (7d)} > 0, 1 - ({Goal Events (7d)} / {Total Reach (7d)}), BLANK())</code></div>
+</div>
+<div class="step" data-n="3">
+  <strong>Enter Missed Revenue formula:</strong>
+  <div class="step-cmd"><code>({Total Reach (7d)} * 0.01) * {Affiliate / Offer ARPU}</code></div>
+</div>
+<div class="step" data-n="4">
+  <strong>Test:</strong> Add row for Desiree Week 1: Reach=50000, Goal Events=12, ARPU=50
+  <div class="step-cmd">Expected: Signal Loss = 99.98%, Missed Revenue = $25,000. This is the "at 1% conversion" number.</div>
+  <strong>Verify:</strong> Formulas compute correctly
+</div>
+</div>
+
+<div class="card">
+<h3>Narrative Output</h3>
+<div class="hl">
+Every Sunday Soil Sample automatically produces: <em>"A 1% lift this week alone would have been worth ${Missed Revenue} you didn't capture — this is the gap the Sovereignty Suite is designed to close."</em>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 4: ADVISORY REQUESTS           -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-CC-ADVISORY-TAB</span></h1>
+<h2>Advisory Requests Table + Command Center Tab</h2>
+<p class="label">Tier: SA · Depends on: AZ-AT-BRIDGE-001</p>
+
+<div class="card">
+<h3>Design (New Table: Advisory Requests)</h3>
+<table>
+  <tr><th>Field</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>Request ID</td><td>Autonumber</td><td></td></tr>
+  <tr><td>Creator</td><td>Link → Creators</td><td></td></tr>
+  <tr><td>Source Question</td><td>Long text</td><td>What the client or steward asked</td></tr>
+  <tr><td>Inquiry Tier</td><td>Single select</td><td>GS / SA / FS</td></tr>
+  <tr><td>Context Snapshots</td><td>Long text</td><td>Links to relevant Shadow Log / Soil Sample rows</td></tr>
+  <tr><td>Option A – Conservative</td><td>Long text</td><td>EPOS-generated</td></tr>
+  <tr><td>Option B – Aggressive</td><td>Long text</td><td>EPOS-generated</td></tr>
+  <tr><td>Option C – Experiment</td><td>Long text</td><td>EPOS-generated</td></tr>
+  <tr><td>Impact Delta</td><td>Long text</td><td>COML/OC/Missed Revenue projections per option</td></tr>
+  <tr><td>Chosen Option</td><td>Single select</td><td>A / B / C / Custom</td></tr>
+  <tr><td>Approved By</td><td>Text</td><td></td></tr>
+  <tr><td>Approved At</td><td>Date+Time</td><td></td></tr>
+  <tr><td>Resolution</td><td>Long text</td><td>What actually happened</td></tr>
+  <tr><td>Status</td><td>Single select</td><td>Pending / Options Generated / Approved / Executed / Closed</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Create Advisory Requests table</strong> in Airtable with all fields above
+</div>
+<div class="step" data-n="2">
+  <strong>Create Streamlit tab</strong> "Advisory" in <code>epos_command_center.py</code> that: reads Advisory Requests where Status = "Pending" or "Options Generated"; displays Source Question + Context + 3 Options + Impact Delta; provides Approve button that sets Chosen Option + Approved By + Approved At + flips Status to "Approved"
+  <div class="step-cmd">Add new tab to existing Streamlit skeleton. Use <code>pyairtable</code> for read/write.</div>
+</div>
+<div class="step" data-n="3">
+  <strong>Wire approval event:</strong> On approval, write event to <code>context_vault/events/system_events.jsonl</code>:
+  <div class="step-cmd"><code>{"event": "advisory.option.approved", "request_id": N, "option": "A|B|C", "creator": "name", "timestamp": "ISO"}</code></div>
+</div>
+</div>
+
+<div class="card">
+<h3>Failure Modes</h3>
+<table>
+  <tr><th>Mode</th><th>Detection</th><th>Mitigation</th></tr>
+  <tr><td>Advisory Request stuck in "Pending" > 48h</td><td>Cron check on Status + created time</td><td>Auto-escalate to Jamie via notification</td></tr>
+  <tr><td>Options generated but Impact Delta blank</td><td>Field empty check</td><td>Require COML/OC/Missed Revenue lookup before Options can be written</td></tr>
+</table>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 5: CLIENT QUERY INTERFACE      -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-GS-CLIENT-QUERY</span></h1>
+<h2>Growth Steward Client-Facing Query Interface</h2>
+<p class="label">Tier: GS · Depends on: AZ-AT-BRIDGE-001, AZ-CC-ADVISORY-TAB</p>
+
+<div class="card">
+<h3>Design</h3>
+<p>Clients can ask EPOS questions directly, but only in governed domains. Every query creates an Advisory Request row (GS tier) and responses are grounded in Airtable data only.</p>
+
+<h4>Allowed Questions</h4>
+<div class="hl-green">
+"What should I post about next week?" · "Where am I wasting the most time?" · "What did last week's analytics actually say?" · "How is my book club growing?"
+</div>
+
+<h4>Blocked Questions</h4>
+<div class="hl-red">
+"Should I pivot my whole business?" · "Should I hire/fire X?" · Any question outside content, friction, analytics, or basic strategy scope.
+</div>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Create intake channel:</strong> For HITL phase, a simple Google Form or Discord command that writes to Advisory Requests with Inquiry Tier = "GS"
+</div>
+<div class="step" data-n="2">
+  <strong>Build GS response generator:</strong> A prompt template that takes the question + reads from Content Calendar, Shadow Log, Soil Samples, and DM Stewardship via Airtable API. Returns 2-3 concrete options + one "do nothing" baseline, each tied to COML/OC or Missed Revenue numbers.
+  <div class="step-cmd">Store prompt template in <code>context_vault/prompts/gs_query_response.txt</code></div>
+</div>
+<div class="step" data-n="3">
+  <strong>Response boundary enforcement:</strong> If the question doesn't match allowed categories (content, friction, analytics, strategy), return: "Great question — that's one I want to think through with you personally. I'll flag it for our next touchpoint." And set Inquiry Tier to "SA" for human review.
+</div>
+<div class="step" data-n="4">
+  <strong>Log every interaction</strong> as an Advisory Request row for BI analysis.
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 6: SA HITL FLOW                -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-SA-HITL-FLOW</span></h1>
+<h2>Steward Advisor Option Generation + Approval Flow</h2>
+<p class="label">Tier: SA · Depends on: AZ-CC-ADVISORY-TAB</p>
+
+<div class="card">
+<h3>Design (Flow)</h3>
+<div class="hl-sky">
+<strong>1.</strong> Client question or GS escalation arrives → Advisory Request row created (Status: Pending)<br>
+<strong>2.</strong> EPOS reads Context Snapshots (Shadow Log + Soil Samples for that creator)<br>
+<strong>3.</strong> EPOS generates 3 options (Conservative / Aggressive / Experiment) with Impact Delta<br>
+<strong>4.</strong> Status → "Options Generated" → appears in Command Center Advisory Tab<br>
+<strong>5.</strong> Jamie reviews, picks/edits → sets Chosen Option + Approved By/At<br>
+<strong>6.</strong> Status → "Approved" → event emitted → downstream actions fire<br>
+<strong>7.</strong> Resolution logged after execution → Status → "Closed"
+</div>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Build option generator prompt:</strong> Takes question + creator's latest Shadow Log (top 3 by Priority) + latest Soil Sample. Outputs JSON with 3 options + Impact Delta.
+  <div class="step-cmd">Store in <code>context_vault/prompts/sa_option_generator.txt</code></div>
+</div>
+<div class="step" data-n="2">
+  <strong>Wire to Advisory Requests:</strong> On new row with Status="Pending", run option generator, write results to Option A/B/C + Impact Delta fields, set Status="Options Generated"
+</div>
+<div class="step" data-n="3">
+  <strong>Approval → Event:</strong> When Jamie clicks Approve in Command Center, emit <code>advisory.option.approved</code> event. Downstream subscribers (defined in AZ-EVENT-WIRING) handle execution.
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 7: STEWARD VOICE               -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-VOICE-PERSONA</span></h1>
+<h2>Steward Voice Constitutional Document + Channel Adapters</h2>
+<p class="label">Tier: GS · Depends on: AZ-AT-BRIDGE-001</p>
+
+<div class="card">
+<h3>Design</h3>
+<p>One personable communication layer that shows up everywhere. The Steward Voice is the constitutional personality — consistent across channels, adaptable per creator's voice profile.</p>
+
+<h4>Voice Constitution (stored in Context Vault)</h4>
+<div class="hl">
+<strong>Tone:</strong> Warm, grounded, agricultural. Peer-level collaborator, not boss. Uses "we" language. Celebrates consistency, never compares creators to each other.<br><br>
+<strong>Cadence:</strong> Crop Reports weekly. Posting alerts as-needed. Decision recaps after Advisory approvals. Never more than 2 unsolicited touches per day.<br><br>
+<strong>Boundaries:</strong> Never generates opinions the creator didn't express. Never pitches EPOS unless directly asked. Never exposes raw data without interpretation. Never uses comparison anxiety.
+</div>
+
+<h4>Channel Adapters</h4>
+<table>
+  <tr><th>Channel</th><th>Format</th><th>Max Length</th><th>Tone Adjustment</th></tr>
+  <tr><td>WhatsApp/Discord</td><td>Text message</td><td>280 chars</td><td>Casual, emoji-light</td></tr>
+  <tr><td>Email</td><td>Structured message</td><td>500 words max</td><td>Professional-warm</td></tr>
+  <tr><td>Voice (ElevenLabs)</td><td>Audio memo</td><td>90 seconds</td><td>Conversational</td></tr>
+  <tr><td>Dashboard tooltip</td><td>Inline text</td><td>50 words</td><td>Concise, actionable</td></tr>
+  <tr><td>Crop Report</td><td>Structured doc</td><td>1 page</td><td>Agricultural metaphor</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Create Voice Constitution file:</strong> <code>context_vault/doctrine/steward_voice_constitution.md</code> with tone, cadence, boundaries, and per-channel rules above.
+</div>
+<div class="step" data-n="2">
+  <strong>Create message generator prompt:</strong> Takes role (FS/SA/GS), channel, context (Advisory Request or Shadow/Soil snapshots), and creator's voice profile → returns channel-appropriate message text.
+  <div class="step-cmd">Store in <code>context_vault/prompts/steward_message_generator.txt</code></div>
+</div>
+<div class="step" data-n="3">
+  <strong>Store reaction log schema:</strong> <code>context_vault/bi/reaction_log_schema.json</code> with fields: message_id, channel, client, response_latency, sentiment, behavioral_outcome. Used for temperament tuning in focus group phase.
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 8: EVENT WIRING                -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-EVENT-WIRING</span></h1>
+<h2>Event Bus Subscriptions</h2>
+<p class="label">Tier: Infrastructure · Depends on: AZ-CC-ADVISORY-TAB, AZ-VOICE-PERSONA</p>
+
+<div class="card">
+<h3>Design (Event Types + Subscribers)</h3>
+<table>
+  <tr><th>Event</th><th>Trigger</th><th>Subscribers</th></tr>
+  <tr><td><code>advisory.option.approved</code></td><td>Jamie approves option in Command Center</td><td>Steward Message Generator → send "Decision Recap" to client. Node builder → scaffold automation. BI engine → log decision + predicted impact.</td></tr>
+  <tr><td><code>content.ready_to_post</code></td><td>Approved Queue item Status = "Ready to Post"</td><td>Notification adapter → ping client via preferred channel. Later: posting bots.</td></tr>
+  <tr><td><code>analytics.updated</code></td><td>New Soil Sample row created</td><td>BI engine → recompute rolling Missed Revenue + Signal Loss. Crop Report generator → queue next report.</td></tr>
+  <tr><td><code>friction.updated</code></td><td>New Shadow Log batch (weekly)</td><td>BI engine → recompute Friction Bounty totals. Sovereignty Assessment → update proof deck.</td></tr>
+  <tr><td><code>content.posted</code></td><td>Client confirms "Posted" in Approved Queue</td><td>Performance tracker → correlate with next Soil Sample. BI → update content velocity metrics.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Define event schemas</strong> in <code>context_vault/doctrine/event_schemas.json</code>:
+<pre>[
+  {"event": "advisory.option.approved", "payload": {"request_id": "int", "option": "A|B|C", "creator": "str"}},
+  {"event": "content.ready_to_post", "payload": {"queue_id": "int", "creator": "str", "platform": "str"}},
+  {"event": "analytics.updated", "payload": {"sample_id": "str", "creator": "str", "week_start": "date"}},
+  {"event": "friction.updated", "payload": {"creator": "str", "entry_count": "int", "total_coml": "float"}},
+  {"event": "content.posted", "payload": {"queue_id": "int", "creator": "str", "posted_at": "datetime"}}
+]</pre>
+</div>
+<div class="step" data-n="2">
+  <strong>Wire event emission</strong> into existing <code>EPOSEventBus</code> in the Unified Nervous System. Each event writes to <code>context_vault/events/system_events.jsonl</code>.
+</div>
+<div class="step" data-n="3">
+  <strong>HITL phase:</strong> Subscriber actions are manual for first 14 days. Events log to JSONL; Jamie reads and acts. Automation subscribers come online as n8n flows are built per the Nodes table.
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MISSION 9: SOVEREIGNTY SUITE           -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1><span class="mission-id">AZ-SOV-SUITE-REG</span></h1>
+<h2>Register Sovereignty Suite as Product Node</h2>
+<p class="label">Tier: FS · Depends on: AZ-AT-SHADOW-UPG, AZ-AT-SOIL-UPG</p>
+
+<div class="card">
+<h3>Design</h3>
+<p>The Sovereignty Suite is not a feature — it is a product line registered in the Financial Command. Its pricing is backed by the same data structures powering dashboards.</p>
+
+<h4>Product Definition</h4>
+<table>
+  <tr><th>Attribute</th><th>Value</th></tr>
+  <tr><td>Product Name</td><td>Sovereignty Suite</td></tr>
+  <tr><td>Price Band</td><td>$1,500 – $3,000/mo retainer OR 90-day intensive ($4,500 – $9,000)</td></tr>
+  <tr><td>ROI Narrative Source</td><td>Shadow Log COML/OC totals + Soil Sample Missed Revenue</td></tr>
+  <tr><td>Payback Threshold</td><td>If COML + Missed Revenue > 2× monthly retainer, ROI is positive</td></tr>
+  <tr><td>Includes</td><td>Mirror Report, 90-Day Plan, Weekly Crop Reports, Guardianship Filters, Content Calendar, Dashboard Access, Friction Bounty Analysis</td></tr>
+</table>
+
+<h4>Standard "Cost of Inaction" Block (reusable)</h4>
+<div class="hl">
+<em>"Over the past [N] weeks, we measured $[COML total] in manual labor costs, $[OC total] in opportunity costs, and $[Missed Revenue total] in uncaptured revenue at just a 1% conversion lift. The Sovereignty Suite exists to turn those numbers from 'leaked' to 'captured' — buying back your decision-making bandwidth, insulating you from drift and missed deals, and proving the return with the same dashboard you're already using."</em>
+</div>
+</div>
+
+<div class="card">
+<h3>Execution Plan</h3>
+<div class="step" data-n="1">
+  <strong>Register in Financial Command:</strong> Add Sovereignty Suite as a product line in <code>EPOS_Financial_Operations_Command.docx</code> or the financial Airtable base, with price band and ROI formula.
+</div>
+<div class="step" data-n="2">
+  <strong>Create Sovereignty Assessment template:</strong> One-page document that pulls: Top 5 friction entries (with COML/OC), Latest 4 Soil Samples (with Missed Revenue totals), and the "Cost of Inaction" block above.
+  <div class="step-cmd">Store in <code>context_vault/templates/sovereignty_assessment.md</code></div>
+</div>
+<div class="step" data-n="3">
+  <strong>Embed in standard deliverables:</strong> Add three sections to Mirror Reports, 90-Day Plans, and Crop Reports: (1) Friction Bounty, (2) Signal Loss Snapshot, (3) Sovereignty Suite Angle. Each auto-populates from Airtable.
+</div>
+<div class="step" data-n="4">
+  <strong>Set upsell trigger:</strong> When a client's cumulative COML + Missed Revenue exceeds 2× the monthly retainer price for 3 consecutive weeks, flag for Steward Advisor review via Advisory Request (FS tier).
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- EXECUTION ORDER                        -->
+<!-- ═══════════════════════════════════════ -->
+
+<h1>Mission Execution Order</h1>
+
+<div class="card">
+<table>
+  <tr><th>Order</th><th>Mission</th><th>Sprint Day</th><th>Depends On</th></tr>
+  <tr><td>1</td><td><code>AZ-AT-BRIDGE-001</code></td><td>Day 0 (today)</td><td>Nothing</td></tr>
+  <tr><td>2</td><td><code>AZ-AT-SHADOW-UPG</code></td><td>Day 0</td><td>Bridge-001</td></tr>
+  <tr><td>3</td><td><code>AZ-AT-SOIL-UPG</code></td><td>Day 0</td><td>Bridge-001</td></tr>
+  <tr><td>4</td><td><code>AZ-VOICE-PERSONA</code></td><td>Day 1</td><td>Bridge-001</td></tr>
+  <tr><td>5</td><td><code>AZ-CC-ADVISORY-TAB</code></td><td>Day 1-2</td><td>Bridge-001</td></tr>
+  <tr><td>6</td><td><code>AZ-GS-CLIENT-QUERY</code></td><td>Day 2-3</td><td>Advisory-Tab</td></tr>
+  <tr><td>7</td><td><code>AZ-SA-HITL-FLOW</code></td><td>Day 3</td><td>Advisory-Tab</td></tr>
+  <tr><td>8</td><td><code>AZ-EVENT-WIRING</code></td><td>Day 3-4</td><td>Advisory-Tab + Voice</td></tr>
+  <tr><td>9</td><td><code>AZ-SOV-SUITE-REG</code></td><td>Day 4-5</td><td>Shadow-UPG + Soil-UPG</td></tr>
+</table>
+</div>
+
+<div class="hl-green">
+<strong>Day 0 (today):</strong> Stand up Airtable base, add value-capture formulas, seed Stacey and Desiree. Everything else in the 5-day sprint builds on this foundation.
+</div>
+
+<hr class="divider">
+
+<div class="card">
+<h3>Governance Contract</h3>
+<p>Every file produced by these missions:</p>
+<p>→ Enters through <code>inbox/</code></p>
+<p>→ Passes <code>governance_gate.py</code> validation (header, entrypoint, config, path checks)</p>
+<p>→ Receives DNA watermark + SHA-256 hash</p>
+<p>→ Registers in <code>file_registry.jsonl</code></p>
+<p>→ Promotes to <code>engine/</code> or <code>context_vault/</code></p>
+<p>→ Logs to <code>bi_decision_log.jsonl</code></p>
+</div>
+
+<div class="quote">
+"You're not buying posts; you're buying back your decision-making bandwidth and future time."
+</div>
+
+<div class="footer">
+  <em>From Architecture to Autonomy</em><br>
+  EPOS AZ Mission Pack · February 20, 2026<br>
+  Architectural Strategist → Agent Zero Execution Pipeline<br>
+  Constitutional Authority: Articles II, VII, VIII, XIV
+</div>
+
+</div>
+</body>
+</html>

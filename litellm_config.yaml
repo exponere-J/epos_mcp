@@ -1,0 +1,28 @@
+model_list:
+  - model_name: claude-sonnet-4-20250514
+    litellm_params:
+      model: groq/qwen/qwen3-32b
+      api_key: os.environ/GROQ_API_KEY
+
+  - model_name: claude-haiku-4-5-20251001
+    litellm_params:
+      model: groq/qwen/qwen3-32b
+      api_key: os.environ/GROQ_API_KEY
+
+  - model_name: claude-3-5-sonnet-20241022
+    litellm_params:
+      model: groq/qwen/qwen3-32b
+      api_key: os.environ/GROQ_API_KEY
+
+  - model_name: qwen-qwq-32b
+    litellm_params:
+      model: groq/qwen/qwen3-32b
+      api_key: os.environ/GROQ_API_KEY
+
+  - model_name: qwen3-32b
+    litellm_params:
+      model: groq/qwen/qwen3-32b
+      api_key: os.environ/GROQ_API_KEY
+
+general_settings:
+  master_key: sk-epos-local-proxy

@@ -1,0 +1,24 @@
+{
+  "expression_id": "EXPR-441d4047",
+  "captured_at": "2026-04-04T16:17:39.823550+00:00",
+  "source_type": "transcript",
+  "source_platform": "call",
+  "source_id": "CONV-92b5d054",
+  "author": "ANON-e7a00712",
+  "raw_text": "We handle it manually, no real system in place.",
+  "intent": "interest",
+  "emotion": "curious",
+  "interest_clusters": [],
+  "keywords": [
+    "handle",
+    "manually",
+    "system",
+    "place",
+    "real"
+  ],
+  "lead_signal_strength": 45,
+  "metadata": {
+    "timestamp_seconds": 0
+  },
+  "routed_to": []
+}

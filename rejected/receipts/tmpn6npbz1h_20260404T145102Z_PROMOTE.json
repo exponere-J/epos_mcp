@@ -1,0 +1,27 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-04-04T14:51:02.527701+00:00",
+  "file": "C:\\Users\\Jamie\\workspace\\epos_mcp\\tmpn6npbz1h.py",
+  "verdict": "PROMOTE",
+  "violations": [
+    {
+      "code": "ERR-HEADER-001",
+      "article": "Article III (Governance Gate Triage)",
+      "message": "Missing mandatory file header with absolute path.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": 1,
+      "suggestion": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\tmpn6npbz1h.py"
+    }
+  ],
+  "repairs_applied": [
+    {
+      "violation_code": "ERR-HEADER-001",
+      "description": "Inserted file header with governance-origin provenance marker.",
+      "before": "# no governance header\nprint('hello')\n",
+      "after": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\tmpn6npbz1h.py\n# repair_origin: governance_gate_auto\n# requires_metadata_confirmation: true\n# no governance header\npri"
+    }
+  ],
+  "rollback_path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\ops\\rollbacks\\tmpn6npbz1h_20260404T145102Z.py.rollback"
+}

@@ -1,0 +1,29 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:18:31.845699+00:00",
+  "file": "rejected/__editable___epos_console_0_1_0_finder.py",
+  "verdict": "SAFE_REPAIR",
+  "violations": [
+    {
+      "code": "ERR-HEADER-001",
+      "article": "Article III (Governance Gate Triage)",
+      "message": "Missing mandatory file header with absolute path.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": 1,
+      "suggestion": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\__editable___epos_console_0_1_0_finder.py"
+    },
+    {
+      "code": "ERR-CONTEXT-002",
+      "article": "Article VII (Context Governance)",
+      "message": "File ~50799 tokens. Review for vault extraction.",
+      "severity": "judgment",
+      "repairable": false,
+      "line_number": null,
+      "suggestion": "Consider splitting large data into Context Vault files."
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-007",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "controversy",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "LEGO is not just for kids and anyone who says otherwise is wrong.",
+  "hook_line": "If you think LEGO is just for kids you are missing out.",
+  "cta": "See the adult sets that are changing minds. Links below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Botanical Collection",
+    "LEGO Art World Map"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,90 @@
+{
+  "avatar_id": "local_champion",
+  "display_name": "The Local Champion",
+  "tier": 1,
+  "tier_rationale": "Largest volume market in local service businesses. PGP (Pressure / Grass / Paint style) profile. Low churn once onboarded — they trust long-term relationships. High referral coefficient within local networks.",
+  "tagline": "A local service business owner who's great at their trade but terrible at marketing and admin.",
+  "demographics": {
+    "role_titles": ["Owner-Operator", "Shop Owner", "Contractor", "Local Business Owner", "Trade Professional"],
+    "company_size": "1-15 employees",
+    "annual_revenue_range": "$150K - $1.2M",
+    "team_size": "1-12 (mostly field crew)",
+    "decision_authority": "sole"
+  },
+  "psychographics": {
+    "self_identity": "I'm a craftsman who happens to run a business.",
+    "core_belief": "Good work gets rewarded — eventually.",
+    "fear": "A bad review tanking the business or a slow season lasting too long.",
+    "ambition": "Book the calendar out 3 weeks, pay the crew on time, buy another truck.",
+    "status_anxiety": "Getting outmarketed by slicker, less-skilled competitors."
+  },
+  "pain_points": [
+    {"pain": "Great at the job, terrible at marketing", "severity": 10, "frequency": "weekly"},
+    {"pain": "Leads come in but no one follows up fast enough", "severity": 10, "frequency": "daily"},
+    {"pain": "Reviews are inconsistent, don't know how to ask", "severity": 9, "frequency": "weekly"},
+    {"pain": "Scheduling chaos — double books and no-shows", "severity": 9, "frequency": "weekly"},
+    {"pain": "Seasonal slumps kill cash flow", "severity": 10, "frequency": "quarterly"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "Booked out 3 weeks ahead, every week", "priority": 1},
+    {"outcome": "Steady flow of 5-star reviews", "priority": 2},
+    {"outcome": "No missed leads — every call or form followed up in under 5 minutes", "priority": 3},
+    {"outcome": "Crew paid on time, cash reserves built", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Just lost a job to a competitor because they responded faster", "urgency_score": 10},
+    {"trigger": "Got a 1-star review and didn't know how to respond", "urgency_score": 10},
+    {"trigger": "Slow month hit and no pipeline to fall back on", "urgency_score": 10},
+    {"trigger": "Saw another local shop booked solid", "urgency_score": 8}
+  ],
+  "objections": [
+    {"objection": "I'm not tech-savvy", "counter_angle": "Runs on text message and email — nothing to log into daily."},
+    {"objection": "I tried a marketing agency and it didn't work", "counter_angle": "This isn't an agency — it's a system you own. Results show up in booked jobs, not reports."},
+    {"objection": "Too expensive for a small shop", "counter_angle": "One extra booked job per month covers it. Show the math."},
+    {"objection": "I don't have time to learn something new", "counter_angle": "Setup in 45 minutes. It works while you work."}
+  ],
+  "channels": {
+    "primary": ["Email", "SMS/text", "Facebook", "Google Business Profile"],
+    "secondary": ["YouTube", "Instagram (before/after photos)", "Local Chamber of Commerce"],
+    "avoided": ["LinkedIn", "X/Twitter", "TikTok corporate"]
+  },
+  "communication_preferences": {
+    "tone": "Conversational, plain English, no jargon, results-focused",
+    "length": "Short emails (100-200 words); text messages; short videos",
+    "format": ["email", "text", "before/after photos", "short videos"],
+    "vocabulary": "Jobs, leads, calls, reviews, schedule, booked, crew, trucks",
+    "proof_type": "Photos, dollar amounts, booked calendar screenshots"
+  },
+  "crs_weights": {
+    "engagement": 0.20,
+    "intent_keywords": 0.30,
+    "channel_match": 0.25,
+    "timing": 0.15,
+    "social_proof_response": 0.10
+  },
+  "niche_tags": ["local-service", "trades", "home-services", "contractor", "pgp", "owner-operator"],
+  "price_tolerance": {
+    "monthly_floor": 99,
+    "monthly_ceiling": 297,
+    "one_time_floor": 300,
+    "one_time_ceiling": 1500,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "Facebook or Google post — before/after photo + booked-calendar proof",
+    "interest": "Free 'lead response scorecard' — how fast are you really responding?",
+    "consideration": "30-minute phone call (not a Zoom)",
+    "decision": "Done-with-you setup engagement",
+    "retention": "Weekly SMS of booked jobs + monthly review call"
+  },
+  "signal_keywords": [
+    "pressure washing", "landscaping", "roofing", "hvac", "plumbing", "electrician",
+    "painting", "cleaning service", "lawn care", "handyman", "local business",
+    "booked calendar", "missed call", "lead follow up", "google reviews", "slow season",
+    "crew", "truck", "service business"
+  ],
+  "exclusion_keywords": [
+    "saas", "enterprise", "venture", "tech startup", "b2b software",
+    "api", "developer", "engineering team"
+  ]
+}

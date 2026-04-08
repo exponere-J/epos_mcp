@@ -1,0 +1,9 @@
+{
+  "current_phase": 1,
+  "phase_name": "Validation & Signal",
+  "allowed_agents": ["architect", "huntsman", "content_lab", "webmaster", "billing", "attest"],
+  "blocked_agents": ["browser_use_v2", "multi_tenant_saas"],
+  "revenue_goal": 5000.00,
+  "start_date": "2025-12-28",
+  "lock_status": "active"
+}

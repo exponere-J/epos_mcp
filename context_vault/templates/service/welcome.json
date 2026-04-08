@@ -1,0 +1,59 @@
+{
+  "template_id": "welcome",
+  "category": "service",
+  "version": "1.0",
+  "description": "New client welcome and onboarding activation.",
+  "subject": "Welcome {{client_name}} — your onboarding starts now",
+  "body_sections": [
+    {"type": "opening", "content": "Hi {{client_name}},"},
+    {"type": "welcome", "content": "Welcome in. I'm glad you're here."},
+    {"type": "what_happens_next", "content": "{{avatar_next_steps}}"},
+    {"type": "first_value", "content": "{{first_value_24h}}"},
+    {"type": "escalation_path", "content": "If anything feels stuck, reply to this email or text me at {{support_number}}. I monitor it personally."},
+    {"type": "cta", "content": "{{avatar_cta}}"},
+    {"type": "signature", "content": "{{sender_name}}\n\n1% daily. 37x annually."}
+  ],
+  "cta_token_pattern": "CTA-WELCOME-{{avatar_id}}-{{date}}",
+  "avatar_overrides": {
+    "local_champion": {
+      "avatar_next_steps": "1. I'll call you in the next 24 hours to set up your lead response system. 2. You'll get a text with the setup link. 3. First week we track booked jobs vs. previous baseline.",
+      "first_value_24h": "Within 24 hours your missed-call text-back is active — every unanswered call gets a polite text with your booking link.",
+      "avatar_cta": "What's the best number to call you on this week?"
+    },
+    "solo_strategic_consultant": {
+      "avatar_next_steps": "1. 45-min kickoff to map your current leverage gaps. 2. Week 1 install of the productization workspace. 3. Week 2-4 layered in systems.",
+      "first_value_24h": "Your workspace is provisioned. Calendar link coming in a separate email.",
+      "avatar_cta": "Book the kickoff here: {{kickoff_link}}"
+    },
+    "boutique_agency_founder": {
+      "avatar_next_steps": "1. Delivery audit call with you and your ops lead. 2. Week 1 playbook selection. 3. Weeks 2-6 rollout across chosen service line.",
+      "first_value_24h": "Audit prep doc is attached — fill in the 6 questions before the call.",
+      "avatar_cta": "Book the audit call: {{kickoff_link}}"
+    },
+    "fractional_executive": {
+      "avatar_next_steps": "1. Per-client vault provisioning. 2. Context ingest pipeline wired. 3. 90-min pairing session to load your top 2 engagements.",
+      "first_value_24h": "Your sovereign workspace is ready. Ingest instructions in a separate message.",
+      "avatar_cta": "Book the pairing session: {{kickoff_link}}"
+    },
+    "technical_founder_operator": {
+      "avatar_next_steps": "1. Repo access granted. 2. Install doc + reference config delivered. 3. Optional 60-min pairing if you want a second set of eyes.",
+      "first_value_24h": "Repo access is live. Start with the README and the /examples directory.",
+      "avatar_cta": "Repo: {{repo_link}}  |  Optional pairing: {{kickoff_link}}"
+    },
+    "solo_operator": {
+      "avatar_next_steps": "1. Template pack delivered. 2. 30-min async setup video. 3. First value in day 1.",
+      "first_value_24h": "Template pack is in the attachment. Watch the 8-min setup video first.",
+      "avatar_cta": "Stuck anywhere? Reply to this email."
+    },
+    "agency_builder": {
+      "avatar_next_steps": "1. Leadership walkthrough with you + ops partner. 2. Weeks 1-6 phased rollout. 3. Weekly margin-delta review.",
+      "first_value_24h": "Leadership walkthrough deck attached. Schedule the call via the link.",
+      "avatar_cta": "Book the leadership walkthrough: {{kickoff_link}}"
+    },
+    "creative_hustler": {
+      "avatar_next_steps": "1. Resonance tracker wired to your primary platforms. 2. Weekly 'what's working' report activated. 3. Creator community access.",
+      "first_value_24h": "Your resonance tracker is live and collecting baseline data.",
+      "avatar_cta": "Join the creator community: {{community_link}}"
+    }
+  }
+}

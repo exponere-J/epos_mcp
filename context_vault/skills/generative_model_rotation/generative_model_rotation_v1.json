@@ -1,0 +1,54 @@
+{
+  "skill_id": "generative_model_rotation_v1",
+  "core_principles": [
+    "Filter models based on specific criteria such as model architecture, dataset used for training, and performance metrics",
+    "Use a range of evaluation metrics to assess the performance of generative models",
+    "Use models that can generate outputs in a format that can be easily consumed by downstream agents or applications",
+    "Periodically update models with new data using model rotation",
+    "Fine-tune pre-trained models for specific tasks and datasets"
+  ],
+  "operational_workflow": [
+    "Discover open generative models using the Hugging Face Model Hub or paperswithcode.com/sota",
+    "Filter models based on specific criteria and evaluate them using relevant metrics",
+    "Select the best-performing model and fine-tune it for the specific task or dataset",
+    "Deploy the model and use it for inference, generating outputs in a format that can be easily consumed by downstream agents or applications",
+    "Periodically update the model with new data using model rotation to maintain its performance and adapt to changing conditions"
+  ],
+  "tool_routing": {
+    "primary": "Hugging Face Model Hub",
+    "fallback": "paperswithcode.com/sota",
+    "avoid": "Models that are not open-source or have limited evaluation metrics"
+  },
+  "failure_modes": [
+    {
+      "failure": "Model performance degradation over time",
+      "cause": "Lack of model updates or rotation",
+      "prevention": "Regularly update models with new data using model rotation"
+    }
+  ],
+  "prompt_templates": {
+    "standard": "Generate an image/text/audio clip based on the input prompt",
+    "high_quality": "Generate a high-quality image/text/audio clip based on the input prompt, using a fine-tuned model",
+    "fast": "Generate an image/text/audio clip based on the input prompt, using a fast and efficient model"
+  },
+  "benchmark_criteria": [
+    "Perplexity",
+    "Inception Score (IS) and Fr\u00e9chet Inception Distance (FID) for image generation",
+    "BLEU score and ROUGE score for text generation"
+  ],
+  "update_triggers": [
+    "New data becomes available",
+    "Model performance degradation is detected",
+    "Changes in the task or dataset requirements"
+  ],
+  "friday_invocation": "python epos.py skills invoke generative_model_rotation",
+  "domain": "generative_model_rotation",
+  "learning_emphasis": "How to discover evaluate and rotate open generative models for image text and TTS with agent-friendly inference",
+  "version": "1.0",
+  "synthesized_from": [
+    "huggingface.co/blog",
+    "paperswithcode.com/sota",
+    "simonwillison.net"
+  ],
+  "compiled_at": "2026-03-30T13:38:00.524344+00:00"
+}

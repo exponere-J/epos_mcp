@@ -1,0 +1,30 @@
+{
+  "expression_id": "EXPR-c099ad42",
+  "captured_at": "2026-04-04T16:14:09.744416+00:00",
+  "source_type": "observation",
+  "source_platform": "manual",
+  "source_id": "OBS-20260404161409",
+  "author": "Jamie",
+  "raw_text": "PGP Orlando asked about sovereign content engines during the diagnostic call",
+  "intent": "interest",
+  "emotion": "curious",
+  "interest_clusters": [
+    "sovereignty",
+    "content_production"
+  ],
+  "keywords": [
+    "asked",
+    "orlando",
+    "sovereign",
+    "diagnostic",
+    "during",
+    "call",
+    "content",
+    "engines"
+  ],
+  "lead_signal_strength": 55,
+  "metadata": {
+    "context": "TTLG follow-up"
+  },
+  "routed_to": []
+}

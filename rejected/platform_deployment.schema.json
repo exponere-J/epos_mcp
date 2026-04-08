@@ -1,0 +1,61 @@
+{
+  "$id": "core.platform_deployment",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "product_id", "platform", "mode", "listing", "actions", "asset_uploads", "receipts", "timestamps"],
+  "properties": {
+    "schema_id": { "const": "core.platform_deployment" },
+    "run_id": { "$ref": "core._defs#/$defs/non_empty_string" },
+    "product_id": { "$ref": "core._defs#/$defs/non_empty_string" },
+    "platform": { "type": "string", "enum": ["gumroad", "lemonsqueezy", "etsy", "appsumo", "wordpress"] },
+    "mode": { "type": "string", "enum": ["dry_run", "live"] },
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "url", "status"],
+      "properties": {
+        "id": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"] },
+        "status": { "type": "string", "enum": ["draft", "published", "failed", "planned"] }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "request_fingerprint", "outcome"],
+        "properties": {
+          "kind": { "type": "string" },
+          "request_fingerprint": { "type": "string" },
+          "outcome": { "type": "string", "enum": ["success", "failure", "skipped"] },
+          "error": { "type": "string" }
+        }
+      }
+    },
+    "asset_uploads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "local_name": { "type": "string" },
+          "remote_id": { "type": "string" },
+          "remote_url": { "type": "string" },
+          "outcome": { "type": "string", "enum": ["success", "failure", "skipped"] }
+        }
+      }
+    },
+    "receipts": { "type": "array", "items": { "type": "string" } },
+    "timestamps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["started"],
+      "properties": {
+        "started": { "$ref": "core._defs#/$defs/iso_datetime" },
+        "completed": { "$ref": "core._defs#/$defs/iso_datetime" }
+      }
+    }
+  }
+}

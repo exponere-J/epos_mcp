@@ -1,0 +1,35 @@
+{
+  "niche": "agency",
+  "track": "service",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Client Acquisition",
+    "Service Delivery",
+    "Team Management",
+    "Financial Performance",
+    "Growth Strategy"
+  ],
+  "key_bottleneck_patterns": [
+    "Inefficient Project Management",
+    "Insufficient Client Communication",
+    "Lack of Standardized Processes"
+  ],
+  "thinker_context": "As an agency, providing exceptional service to clients is crucial for success. However, agencies often struggle with scaling their services, managing client expectations, and maintaining profitability. To identify areas for improvement, it's essential to assess the agency's current state, including its client acquisition strategies, service delivery processes, team management, financial performance, and growth strategy. By analyzing these dimensions, agencies can uncover bottlenecks and opportunities for growth, ultimately enhancing their service offerings and driving long-term success.",
+  "surgeon_priorities": [
+    "Implementing Efficient Project Management Tools",
+    "Developing Standardized Service Delivery Processes",
+    "Enhancing Client Communication and Feedback Mechanisms"
+  ],
+  "mirror_report_tone": "Collaborative and Solution-Focused",
+  "desire_vocabulary": [
+    "Efficiency",
+    "Growth",
+    "Productivity",
+    "Profitability",
+    "Scalability",
+    "Client Satisfaction",
+    "Team Performance",
+    "Innovation"
+  ],
+  "generated_at": "2026-03-29T19:07:07.392054+00:00"
+}

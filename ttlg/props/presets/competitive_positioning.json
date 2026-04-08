@@ -1,0 +1,40 @@
+{
+  "name": "Competitive Positioning Analysis",
+  "version": "1.0",
+  "target": "competitor",
+  "context": {
+    "domain": "general",
+    "market_position": "challenger",
+    "assessment_type": "competitive",
+    "time_horizon_days": 90
+  },
+  "phases": {
+    "scout": {
+      "scope": ["product_capabilities", "pricing_model", "market_reach", "technology_stack", "customer_experience"],
+      "depth": "detailed",
+      "measurement_points": ["feature_parity", "pricing_comparison", "market_share", "technology_moats", "customer_sentiment"]
+    },
+    "thinker": {
+      "weighting_model": "competitive",
+      "extract_intelligence": ["defensible_advantages", "competitor_blind_spots", "opportunity_zones", "threat_zones", "positioning_statement"]
+    },
+    "gate": {
+      "approval_criteria": "defensibility_score",
+      "auto_remediate": false,
+      "escalation_threshold": 3
+    },
+    "surgeon": {
+      "change_scope": "prescriptive",
+      "priority_filter": "competitive_advantage",
+      "max_prescriptions_per_gap": 3
+    },
+    "analyst": {
+      "verification_metrics": ["moat_durability", "switching_cost", "network_effect_strength"],
+      "projection_days": [30, 60, 90]
+    }
+  },
+  "output_format": {
+    "type": "competitive_analysis",
+    "sections": ["comparison_matrix", "moat_analysis", "blind_spots", "opportunity_zones", "threat_zones", "positioning_statement"]
+  }
+}

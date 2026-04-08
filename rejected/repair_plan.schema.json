@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": ["plan_id", "summary", "risk", "steps", "expected_receipts"],
+  "properties": {
+    "plan_id": { "type": "string" },
+    "summary": { "type": "string" },
+    "risk": { "type": "string", "enum": ["low", "medium", "high"] },
+    "needs_approval": { "type": "boolean" },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step_id", "type", "payload"],
+        "properties": {
+          "step_id": { "type": "string" },
+          "type": { "type": "string", "enum": ["command", "patch", "test", "restart", "note"] },
+          "payload": { "type": "object" }
+        }
+      }
+    },
+    "expected_receipts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "rollback": { "type": "array", "items": { "type": "object" } }
+  }
+}

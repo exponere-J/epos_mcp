@@ -1,0 +1,34 @@
+{
+  "_governance": {"watermarked": true, "version": "3.1"},
+  "version": "2.0",
+  "updated_at": "2026-03-29",
+  "models": {
+    "image": [
+      {"id": "flux_2_pro", "provider": "fal-ai", "model": "fal-ai/flux/pro-v1.1", "role": "photorealism_primary", "cost_tier": "medium"},
+      {"id": "ideogram_v3", "provider": "fal-ai", "model": "fal-ai/ideogram/v3", "role": "text_in_image_primary", "cost_tier": "medium"},
+      {"id": "nano_banana_pro", "provider": "fal-ai", "model": "fal-ai/nano-banana/pro", "role": "character_consistency", "cost_tier": "medium"},
+      {"id": "recraft_v4", "provider": "recraft", "model": "recraft-v4", "role": "brand_style_consistency", "cost_tier": "medium"},
+      {"id": "seedream_5_lite", "provider": "fal-ai", "model": "fal-ai/seedream-5-lite", "role": "volume_and_speed", "cost_tier": "low"},
+      {"id": "flux_2_klein_local", "provider": "local", "model": "flux-2-klein", "role": "free_local_fallback", "cost_tier": "free"}
+    ],
+    "video": [
+      {"id": "heygen", "provider": "heygen", "model": "heygen-avatar", "role": "avatar_primary", "cost_tier": "medium"},
+      {"id": "runway_gen45", "provider": "runway", "model": "gen-4.5", "role": "cinematic_premium", "cost_tier": "high"},
+      {"id": "seedance_2", "provider": "fal-ai", "model": "seedance-2", "role": "narrative_multi_scene", "cost_tier": "medium", "features": ["native_audio"]},
+      {"id": "veo_3_1", "provider": "google", "model": "veo-3.1", "role": "4k_native_audio", "cost_tier": "high", "features": ["4k", "native_audio"]},
+      {"id": "kling_3_pro", "provider": "kling", "model": "kling-3-pro", "role": "motion_specialist", "cost_tier": "low", "note": "lowest_cost_per_second"},
+      {"id": "sora_2", "provider": "openai", "model": "sora-2", "role": "storyboard_storytelling", "cost_tier": "high"},
+      {"id": "moviepy_ffmpeg", "provider": "local", "model": "moviepy+ffmpeg", "role": "assembly_and_compositing", "cost_tier": "free"}
+    ],
+    "audio": [
+      {"id": "elevenlabs_v3", "provider": "elevenlabs", "model": "eleven-v3", "role": "voice_primary", "cost_tier": "medium"},
+      {"id": "elevenlabs_audio_studio_3", "provider": "elevenlabs", "model": "audio-studio-3", "role": "full_post_production", "cost_tier": "medium"},
+      {"id": "elevenlabs_sfx", "provider": "elevenlabs", "model": "sfx-gen", "role": "sound_effects", "cost_tier": "low"}
+    ],
+    "text": [
+      {"id": "groq_70b", "provider": "groq", "model": "llama-3.3-70b-versatile", "role": "reasoning_and_scripting", "cost_tier": "low"},
+      {"id": "groq_8b", "provider": "groq", "model": "llama-3.1-8b-instant", "role": "classification_and_tagging", "cost_tier": "free"},
+      {"id": "ollama_phi4", "provider": "ollama", "model": "phi4", "role": "local_fallback", "cost_tier": "free"}
+    ]
+  }
+}

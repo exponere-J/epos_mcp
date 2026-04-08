@@ -1,0 +1,764 @@
+{
+  "registry_version": "2.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "created": "2026-01-25T00:00:00Z",
+  "updated": "2026-01-25T00:00:00Z",
+  "governance_agents": {
+    "constitutional_arbiter": {
+      "id": "constitutional_arbiter",
+      "codename": "Agent Alpha",
+      "version": "1.0.0",
+      "status": "active",
+      "purpose": "Enforce EPOS Constitution v3.1 on every code change and PR submission",
+      "constitutional_authority": [
+        "Article II",
+        "Article III",
+        "Article IV"
+      ],
+      "scope": {
+        "primary": [
+          "Path discipline enforcement (PATH_CLARITY_RULES.md)",
+          "Header presence validation (# File: C:\\...)",
+          "Inline data limit enforcement (>8K tokens → Context Vault)",
+          "Pre-flight validation gate",
+          "Educational receipt generation"
+        ],
+        "secondary": [
+          "Sprint boundary audits",
+          "Compliance scoring",
+          "Amendment proposal validation"
+        ]
+      },
+      "tools": {
+        "primary": [
+          {
+            "name": "governance_gate.py",
+            "modes": [
+              "--dry-run",
+              "--verbose",
+              "--check-context",
+              "--active"
+            ],
+            "purpose": "Full constitutional audit of code submissions"
+          },
+          {
+            "name": "epos_doctor.py",
+            "modes": [
+              "--verbose",
+              "--check-constitution",
+              "--check-context",
+              "--json"
+            ],
+            "purpose": "Environment sanity and constitutional doc verification"
+          }
+        ],
+        "secondary": [
+          {
+            "name": "epos_snapshot.py",
+            "modes": [
+              "--output",
+              "--check-context-compliance"
+            ],
+            "purpose": "Codebase state capture for baseline comparisons"
+          }
+        ]
+      },
+      "workflows": {
+        "pre_flight_pr_scan": {
+          "trigger": "git push / PR open",
+          "priority": "critical",
+          "timeout_seconds": 120,
+          "steps": [
+            {
+              "order": 1,
+              "action": "run_doctor",
+              "command": "python epos_doctor.py --quick",
+              "purpose": "Confirm environment health",
+              "failure_action": "abort_with_receipt"
+            },
+            {
+              "order": 2,
+              "action": "run_gate_dry",
+              "command": "python governance_gate.py --dry-run --check-context",
+              "purpose": "Audit changed files without moving",
+              "failure_action": "generate_violations_report"
+            },
+            {
+              "order": 3,
+              "action": "evaluate_violations",
+              "conditions": {
+                "any_critical": "fail_pr_immediately",
+                "only_warnings": "pass_with_notes",
+                "clean": "approve"
+              }
+            }
+          ],
+          "outputs": [
+            "ops/logs/arbiter/pr_{id}.log",
+            "rejected/receipts/pr_{id}_violations.json"
+          ]
+        },
+        "merge_gate": {
+          "trigger": "PR approval",
+          "priority": "critical",
+          "timeout_seconds": 180,
+          "steps": [
+            {
+              "order": 1,
+              "action": "revalidate_full",
+              "command": "python governance_gate.py --verbose --check-context",
+              "purpose": "Re-run gate in active mode"
+            },
+            {
+              "order": 2,
+              "action": "triage_files",
+              "compliant_action": "move_to_engine",
+              "non_compliant_action": "move_to_rejected_with_receipt"
+            },
+            {
+              "order": 3,
+              "action": "log_decision",
+              "destination": "bi_decision_log.json",
+              "fields": [
+                "files_promoted",
+                "files_rejected",
+                "violation_summary"
+              ]
+            }
+          ],
+          "outputs": [
+            "engine/{promoted_files}",
+            "rejected/receipts/{file}_receipt.md"
+          ]
+        },
+        "sprint_boundary_audit": {
+          "trigger": "sprint_start (weekly)",
+          "priority": "high",
+          "timeout_seconds": 600,
+          "steps": [
+            {
+              "order": 1,
+              "action": "full_codebase_scan",
+              "command": "python governance_gate.py --scan-all --check-context",
+              "purpose": "Scan entire /engine for lingering violations"
+            },
+            {
+              "order": 2,
+              "action": "calculate_governance_score",
+              "formula": "(compliant_files / total_files) * 100",
+              "output_field": "governance_score"
+            },
+            {
+              "order": 3,
+              "action": "emit_to_bi",
+              "destination": "bi_decision_log.json",
+              "fields": [
+                "governance_score",
+                "violations_by_type",
+                "trend"
+              ]
+            }
+          ],
+          "outputs": [
+            "ops/logs/arbiter/sprint_{id}_audit.json"
+          ]
+        }
+      },
+      "violation_codes": {
+        "ERR-PATH-001": "Mixed path separators (must use Windows C:\\ style)",
+        "ERR-PATH-002": "Relative path without explicit base",
+        "ERR-HEADER-001": "Missing constitutional file header",
+        "ERR-HEADER-002": "Header path mismatch with actual location",
+        "ERR-CONFIG-001": "Missing load_dotenv() at entrypoint",
+        "ERR-TRUTH-001": "Status returned without proof of execution",
+        "ERR-CONTEXT-001": "Inline data exceeds 8K token limit",
+        "ERR-CONTEXT-002": "Invalid context vault path reference",
+        "ERR-CONTEXT-003": "Mission references vault but file not found"
+      },
+      "monetization_metadata": {
+        "product_id": "EPOS-ARBITER-1.0",
+        "value_proposition": "Repo-level constitutional governance as a service",
+        "pricing_tier": "governance_seat",
+        "price_monthly_usd": 297,
+        "features": [
+          "Automated PR compliance scanning",
+          "Educational rejection receipts",
+          "Sprint compliance dashboards",
+          "Constitutional amendment tracking"
+        ]
+      },
+      "dependencies": {
+        "required": [
+          "governance_gate.py",
+          "epos_doctor.py"
+        ],
+        "optional": [
+          "epos_snapshot.py"
+        ],
+        "environment": [
+          "EPOS_ROOT",
+          "AGENT_ZERO_PATH"
+        ]
+      }
+    },
+    "context_librarian": {
+      "id": "context_librarian",
+      "codename": "Agent Sigma",
+      "version": "1.0.0",
+      "status": "active",
+      "purpose": "Custodian of Context Vault; enforce Article VII and prevent prompt bloat",
+      "constitutional_authority": [
+        "Article VII"
+      ],
+      "scope": {
+        "primary": [
+          "Ingest large artifacts into context_vault/mission_data",
+          "Maintain symbolic search indices (regex, window, chunk)",
+          "Issue vault references instead of raw data dumps",
+          "Prevent context rot in long-running analysis"
+        ],
+        "secondary": [
+          "Vault hygiene (compression, archival)",
+          "Usage metrics tracking",
+          "Cross-mission context correlation"
+        ]
+      },
+      "tools": {
+        "primary": [
+          {
+            "name": "context_handler.py",
+            "class": "ContextVault",
+            "methods": [
+              "regex_search",
+              "window_search",
+              "chunk_search",
+              "get_metadata"
+            ],
+            "purpose": "Symbolic search without full file loading"
+          }
+        ],
+        "secondary": [
+          {
+            "name": "vault_indexer.py",
+            "purpose": "Build and maintain search indices"
+          },
+          {
+            "name": "vault_archiver.py",
+            "purpose": "Compress and archive cold data"
+          }
+        ]
+      },
+      "workflows": {
+        "large_input_triage": {
+          "trigger": "mission payload > 8K tokens OR large file upload",
+          "priority": "high",
+          "timeout_seconds": 60,
+          "steps": [
+            {
+              "order": 1,
+              "action": "estimate_tokens",
+              "formula": "len(content) / 4",
+              "threshold": 8192
+            },
+            {
+              "order": 2,
+              "action": "chunk_input",
+              "strategy": "content_aware_splitting",
+              "max_chunk_size": 4000
+            },
+            {
+              "order": 3,
+              "action": "write_to_vault",
+              "path_pattern": "context_vault/mission_data/{mission_id}/",
+              "file_pattern": "chunk_{index}.txt"
+            },
+            {
+              "order": 4,
+              "action": "create_manifest",
+              "output": "context_vault/mission_data/{mission_id}/vault_manifest.json"
+            },
+            {
+              "order": 5,
+              "action": "return_reference",
+              "response_fields": [
+                "vault_ids",
+                "summary",
+                "search_hints"
+              ]
+            }
+          ],
+          "outputs": [
+            "context_vault/mission_data/{mission_id}/",
+            "context_vault/mission_data/{mission_id}/vault_manifest.json"
+          ]
+        },
+        "context_retrieval": {
+          "trigger": "Agent Zero / Analysis Engine context request",
+          "priority": "critical",
+          "timeout_seconds": 30,
+          "steps": [
+            {
+              "order": 1,
+              "action": "parse_query",
+              "supported_types": [
+                "topic",
+                "mission_id",
+                "regex_pattern",
+                "keyword"
+              ]
+            },
+            {
+              "order": 2,
+              "action": "symbolic_search",
+              "method": "configurable",
+              "default": "regex_search"
+            },
+            {
+              "order": 3,
+              "action": "rank_results",
+              "algorithm": "relevance_score",
+              "top_k": 10
+            },
+            {
+              "order": 4,
+              "action": "return_bundle",
+              "format": {
+                "vault_references": "array",
+                "abstracts": "array",
+                "total_matches": "integer",
+                "search_metadata": "object"
+              }
+            }
+          ],
+          "outputs": [
+            "context_bundle (in-memory, fits 8K window)"
+          ]
+        },
+        "vault_hygiene": {
+          "trigger": "nightly cron (02:00)",
+          "priority": "low",
+          "timeout_seconds": 1800,
+          "steps": [
+            {
+              "order": 1,
+              "action": "detect_cold_data",
+              "criteria": {
+                "last_accessed_days": 30,
+                "query_count": "<5"
+              }
+            },
+            {
+              "order": 2,
+              "action": "compress_archive",
+              "destination": "context_vault/archive/",
+              "format": "gzip"
+            },
+            {
+              "order": 3,
+              "action": "reindex_remaining",
+              "purpose": "Keep hot indices optimal"
+            },
+            {
+              "order": 4,
+              "action": "emit_metrics",
+              "destination": "bi_decision_log.json",
+              "fields": [
+                "vault_size_mb",
+                "files_archived",
+                "space_recovered"
+              ]
+            }
+          ],
+          "outputs": [
+            "ops/vault_reports/{date}.json",
+            "context_vault/archive/{archived_files}"
+          ]
+        }
+      },
+      "search_api": {
+        "regex_search": {
+          "signature": "regex_search(pattern: str, flags: int = 0) -> List[str]",
+          "description": "Find all matches for regex pattern",
+          "constitutional_reference": "Article VII Section 2.3"
+        },
+        "window_search": {
+          "signature": "window_search(query: str, window_chars: int = 4000) -> List[str]",
+          "description": "Extract context windows around query matches",
+          "constitutional_reference": "Article VII Section 2.3"
+        },
+        "chunk_search": {
+          "signature": "chunk_search(query: str, chunk_size: int = 2000) -> List[Dict]",
+          "description": "Location-aware chunked search with position metadata",
+          "constitutional_reference": "Article VII Section 2.3"
+        },
+        "get_metadata": {
+          "signature": "get_metadata() -> Dict",
+          "description": "Get vault file metadata without loading content",
+          "constitutional_reference": "Article VII Section 2.3"
+        }
+      },
+      "monetization_metadata": {
+        "product_id": "EPOS-LIBRARIAN-1.0",
+        "value_proposition": "Data sovereignty + unlimited context through symbolic search",
+        "pricing_tier": "vault_management",
+        "price_monthly_usd": 497,
+        "features": [
+          "Unlimited context window simulation",
+          "RLM-style symbolic search",
+          "Automatic chunking and indexing",
+          "Cold data archival and recovery"
+        ]
+      },
+      "dependencies": {
+        "required": [
+          "context_handler.py"
+        ],
+        "optional": [
+          "vault_indexer.py",
+          "vault_archiver.py"
+        ],
+        "environment": [
+          "EPOS_ROOT"
+        ]
+      }
+    },
+    "flywheel_analyst": {
+      "id": "flywheel_analyst",
+      "codename": "Agent Omega",
+      "version": "1.0.0",
+      "status": "active",
+      "purpose": "Transform BI logs into strategy; propose governance and product changes",
+      "constitutional_authority": [
+        "Article VIII (BI Integration)",
+        "Article IX (Amendments)"
+      ],
+      "scope": {
+        "primary": [
+          "Analyze bi_decision_log.json across missions and sprints",
+          "Track four flywheels: Content, Revenue, Data Moat, Sovereign Scaling",
+          "Detect failure patterns and propose new governance checks",
+          "Generate amendment proposals when patterns emerge"
+        ],
+        "secondary": [
+          "Dashboard generation",
+          "Trend analysis",
+          "Cross-agent correlation"
+        ]
+      },
+      "tools": {
+        "primary": [
+          {
+            "name": "bi_analyzer.py",
+            "purpose": "Parse and analyze BI decision logs"
+          },
+          {
+            "name": "pattern_detector.py",
+            "purpose": "Statistical pattern detection in error logs"
+          }
+        ],
+        "secondary": [
+          {
+            "name": "amendment_generator.py",
+            "purpose": "Generate constitutional amendment proposals"
+          },
+          {
+            "name": "dashboard_builder.py",
+            "purpose": "Create visual dashboards from metrics"
+          }
+        ]
+      },
+      "workflows": {
+        "failure_pattern_detection": {
+          "trigger": "daily / per sprint",
+          "priority": "high",
+          "timeout_seconds": 300,
+          "steps": [
+            {
+              "order": 1,
+              "action": "parse_outcomes",
+              "source": "bi_decision_log.json",
+              "fields": [
+                "mission_id",
+                "status",
+                "error_code",
+                "timestamp"
+              ]
+            },
+            {
+              "order": 2,
+              "action": "cluster_errors",
+              "algorithm": "frequency_analysis",
+              "group_by": "error_code"
+            },
+            {
+              "order": 3,
+              "action": "detect_threshold_breach",
+              "thresholds": {
+                "same_error_3x_in_24h": "warning",
+                "same_error_10x_in_7d": "critical",
+                "compliance_below_85": "alert"
+              }
+            },
+            {
+              "order": 4,
+              "action": "generate_recommendations",
+              "output_types": [
+                "new_doctor_check",
+                "new_gate_rule",
+                "node_manifest_update"
+              ]
+            }
+          ],
+          "outputs": [
+            "ops/flywheel_reports/{date}_governance.md"
+          ]
+        },
+        "flywheel_metric_tracking": {
+          "trigger": "weekly (Monday 06:00)",
+          "priority": "medium",
+          "timeout_seconds": 600,
+          "metrics": {
+            "content_flywheel": {
+              "metric": "content_pieces_per_node_per_week",
+              "source": "content_lab_logs",
+              "target": ">10"
+            },
+            "revenue_flywheel": {
+              "metric": "revenue_per_node_usd",
+              "source": "node_business_cards",
+              "target": "positive"
+            },
+            "data_moat_flywheel": {
+              "metric": "vault_size_mb + mission_count",
+              "source": "context_vault/registry.json",
+              "target": "growing"
+            },
+            "sovereign_scaling": {
+              "metric": "nodes_passing_independence_tests",
+              "source": "node_sovereignty_reports",
+              "target": "100%"
+            }
+          },
+          "outputs": [
+            "ops/flywheel_reports/{date}_metrics.json",
+            "ops/flywheel_reports/{date}_dashboard.md"
+          ]
+        },
+        "amendment_proposer": {
+          "trigger": "repeated_pattern (3+ sprints)",
+          "priority": "low",
+          "timeout_seconds": 1200,
+          "steps": [
+            {
+              "order": 1,
+              "action": "validate_pattern_persistence",
+              "minimum_occurrences": 3,
+              "minimum_sprints": 3
+            },
+            {
+              "order": 2,
+              "action": "gather_evidence",
+              "sources": [
+                "bi_decision_log.json",
+                "flywheel_reports"
+              ],
+              "fields": [
+                "error_codes",
+                "frequencies",
+                "impact_assessment"
+              ]
+            },
+            {
+              "order": 3,
+              "action": "draft_amendment",
+              "template": "EPOS_CONSTITUTION_AMENDMENT_TEMPLATE.md",
+              "required_sections": [
+                "Problem Statement",
+                "Evidence",
+                "Proposed Change",
+                "Impact Assessment",
+                "Rollout Steps"
+              ]
+            },
+            {
+              "order": 4,
+              "action": "submit_for_review",
+              "destination": "inbox/amendments/",
+              "notify": [
+                "constitutional_arbiter"
+              ]
+            }
+          ],
+          "outputs": [
+            "inbox/amendments/AMENDMENT_{date}_{id}.md"
+          ]
+        }
+      },
+      "flywheels": {
+        "content_flywheel": {
+          "description": "Content output drives engagement drives data drives better content",
+          "metrics": [
+            "pieces_per_week",
+            "engagement_rate",
+            "repurpose_ratio"
+          ],
+          "health_indicator": "growing_quarter_over_quarter"
+        },
+        "revenue_flywheel": {
+          "description": "Node sales drive development drive better nodes drive more sales",
+          "metrics": [
+            "mrr_usd",
+            "node_units_sold",
+            "churn_rate"
+          ],
+          "health_indicator": "positive_net_new"
+        },
+        "data_moat_flywheel": {
+          "description": "More data improves models improves output improves data capture",
+          "metrics": [
+            "vault_size_gb",
+            "unique_sources",
+            "query_depth"
+          ],
+          "health_indicator": "vault_growth_positive"
+        },
+        "sovereign_scaling": {
+          "description": "Independence enables composability enables market reach enables more independence",
+          "metrics": [
+            "nodes_independent",
+            "bundle_combinations",
+            "vendor_lock_free"
+          ],
+          "health_indicator": "all_nodes_sovereign"
+        }
+      },
+      "monetization_metadata": {
+        "product_id": "EPOS-OMEGA-1.0",
+        "value_proposition": "Governance-aware BI dashboard for agentic stacks",
+        "pricing_tier": "analytics",
+        "price_monthly_usd": 149,
+        "features": [
+          "Automated failure pattern detection",
+          "Four-flywheel health tracking",
+          "Constitutional amendment proposals",
+          "Cross-agent correlation analysis"
+        ]
+      },
+      "dependencies": {
+        "required": [
+          "bi_decision_log.json"
+        ],
+        "optional": [
+          "pattern_detector.py",
+          "amendment_generator.py"
+        ],
+        "environment": [
+          "EPOS_ROOT"
+        ]
+      }
+    }
+  },
+  "orchestration_agents": {
+    "agent_zero": {
+      "id": "agent_zero",
+      "role": "execution_engine",
+      "status": "integrated",
+      "path": "C:\\Users\\Jamie\\workspace\\agent-zero",
+      "integration_point": "execution_bridge.py",
+      "contract": {
+        "sandbox": "C:\\Users\\Jamie\\workspace\\agent-zero",
+        "permissions": {
+          "read": [
+            "C:\\Users\\Jamie\\epos_workspace"
+          ],
+          "write": [
+            "C:\\Users\\Jamie\\epos_workspace\\outputs"
+          ],
+          "execute": [
+            "python",
+            "git",
+            "npm"
+          ]
+        },
+        "data_flow": "local_only",
+        "reporting": "structured_json",
+        "rollback": "git_reset",
+        "context_access": "vault_symbolic_only"
+      }
+    },
+    "meta_orchestrator": {
+      "id": "meta_orchestrator",
+      "role": "mission_router",
+      "status": "planned",
+      "port": 8001,
+      "integration_point": "engine/meta_orchestrator.py",
+      "responsibilities": [
+        "Receive missions from external sources",
+        "Route to appropriate agents",
+        "Aggregate responses",
+        "Enforce pre-flight validation"
+      ]
+    }
+  },
+  "agent_relationships": {
+    "constitutional_arbiter": {
+      "provides_to": [
+        "meta_orchestrator",
+        "flywheel_analyst"
+      ],
+      "receives_from": [
+        "flywheel_analyst"
+      ],
+      "blocks": [
+        "merge_to_engine"
+      ]
+    },
+    "context_librarian": {
+      "provides_to": [
+        "agent_zero",
+        "meta_orchestrator"
+      ],
+      "receives_from": [
+        "meta_orchestrator"
+      ],
+      "blocks": []
+    },
+    "flywheel_analyst": {
+      "provides_to": [
+        "constitutional_arbiter"
+      ],
+      "receives_from": [
+        "constitutional_arbiter",
+        "context_librarian",
+        "agent_zero"
+      ],
+      "blocks": []
+    }
+  },
+  "scheduling": {
+    "continuous": [
+      "constitutional_arbiter.pre_flight_pr_scan"
+    ],
+    "on_demand": [
+      "constitutional_arbiter.merge_gate",
+      "context_librarian.context_retrieval"
+    ],
+    "daily": [
+      "flywheel_analyst.failure_pattern_detection"
+    ],
+    "weekly": [
+      "constitutional_arbiter.sprint_boundary_audit",
+      "flywheel_analyst.flywheel_metric_tracking"
+    ],
+    "nightly": [
+      "context_librarian.vault_hygiene"
+    ],
+    "triggered": [
+      "flywheel_analyst.amendment_proposer"
+    ]
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

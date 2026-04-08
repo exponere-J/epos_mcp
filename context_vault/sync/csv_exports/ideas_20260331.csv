@@ -1,0 +1,4 @@
+ID,Title,Category,Priority,Status,Created,Triage Verdict
+IDEA-6d72dc5e,Voice-first CRM interface,feature,medium,triaged,2026-03-31,defer
+IDEA-bab13502,Google Sheets bidirectional sync,integration,high,captured,2026-03-31,
+IDEA-89eef646,Add Google Sheets sync for project tracking,integration,high,researching,2026-03-31,research

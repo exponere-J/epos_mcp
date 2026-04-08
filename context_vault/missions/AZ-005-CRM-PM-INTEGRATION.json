@@ -1,0 +1,29 @@
+{
+  "mission_id": "AZ-005-CRM-PM-INTEGRATION",
+  "title": "Operationalize CRM + Project Management",
+  "description": "Wire lead intake \u2192 TTLG \u2192 proposal \u2192 project tracking",
+  "priority": "CRITICAL",
+  "week": 4,
+  "estimated_duration": "8 hours",
+  "dependencies": [
+    "AirTable functional",
+    "TTLG diagnostic ready"
+  ],
+  "tasks": [
+    "Create lead intake form (Typeform \u2192 AirTable)",
+    "Wire TTLG diagnostic trigger from Phi-3 GUI",
+    "Build auto-proposal engine (diagnostic \u2192 PDF)",
+    "Create project milestone auto-generation",
+    "Test end-to-end: lead submit \u2192 won \u2192 milestones created",
+    "Validate all data flows through 3-tier stack"
+  ],
+  "constitutional_compliance": [
+    "Article II: Audit trail required"
+  ],
+  "success_criteria": [
+    "Test client tracked end-to-end",
+    "Zero manual data entry",
+    "All tiers synchronized"
+  ],
+  "failure_recovery": "Manual proposal generation, document workarounds"
+}

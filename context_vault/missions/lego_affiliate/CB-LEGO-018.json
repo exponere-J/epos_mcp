@@ -1,0 +1,17 @@
+{
+  "brief_id": "CB-LEGO-018",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "closer",
+  "hook_type": "story",
+  "visual_mask": "founder_glow",
+  "target_platform": "youtube_shorts",
+  "script_premise": "My first LEGO set as an adult and how it changed my evening routine.",
+  "hook_line": "I bought my first LEGO set at 35 years old. Here is what happened.",
+  "cta": "Start your collection here. Link below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Creator 3-in-1 Cozy House"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,16 @@
+{
+  "brief_id": "CB-LEGOAF-5809",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-04-04T16:05:27.367323+00:00",
+  "source_spark_id": "SPARK-1a115576",
+  "angle_type": "educator",
+  "hook_type": "question",
+  "visual_mask": "clean_professional",
+  "target_platform": "youtube_shorts",
+  "script_premise": "This video reveals the top LEGO sets that offer the best value for money, helping viewers make informed purchasing decisions.",
+  "hook_line": "Are you tired of overspending on LEGO sets that don't deliver?",
+  "cta": "Check the links in our description to get the best value LEGO sets for yourself",
+  "predicted_eri_score": 0,
+  "affiliate_products": [],
+  "status": "draft"
+}

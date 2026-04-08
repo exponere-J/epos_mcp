@@ -1,0 +1,40 @@
+{
+  "name": "EPOS Ecosystem Architecture Audit",
+  "version": "1.0",
+  "target": "epos",
+  "context": {
+    "domain": "agentic_operating_system",
+    "market_position": "first_mover",
+    "assessment_type": "internal",
+    "time_horizon_days": 90
+  },
+  "phases": {
+    "scout": {
+      "scope": ["intelligence", "communication", "memory", "orchestration", "diagnostic", "research", "content", "sales", "service", "financial", "interface", "execution"],
+      "depth": "detailed",
+      "measurement_points": ["sovereignty_scores", "event_bus_throughput", "vault_health", "node_coverage", "layer_maturity"]
+    },
+    "thinker": {
+      "weighting_model": "market_forward",
+      "extract_intelligence": ["moats", "market_gaps", "thought_leadership_angles", "revenue_opportunities", "competitive_blind_spots"]
+    },
+    "gate": {
+      "approval_criteria": "strategic_alignment",
+      "auto_remediate": false,
+      "escalation_threshold": 3
+    },
+    "surgeon": {
+      "change_scope": "prescriptive",
+      "priority_filter": "revenue_impact",
+      "max_prescriptions_per_gap": 3
+    },
+    "analyst": {
+      "verification_metrics": ["roi_projection", "score_trajectory", "value_at_risk", "market_timing"],
+      "projection_days": [30, 60, 90]
+    }
+  },
+  "output_format": {
+    "type": "strategic_intelligence",
+    "sections": ["executive_summary", "moat_analysis", "market_gaps", "thought_leadership", "revenue_opportunities", "90_day_roadmap"]
+  }
+}

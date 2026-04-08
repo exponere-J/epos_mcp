@@ -1,0 +1,76 @@
+{
+  "conversation_id": "CONV-2aed80f9",
+  "session_type": "discovery_call",
+  "segment": "small_business",
+  "niche": null,
+  "stage": "exploring",
+  "turns": [
+    {
+      "turn_id": "T001",
+      "speaker": "human",
+      "content": "Hi, I run a pressure washing business in Orlando and I need help with marketing.",
+      "intent_detected": "surface_pain",
+      "depth_level": 1,
+      "follow_up_question": "What's the most pressing problem you're trying to solve right now?",
+      "synthesis_triggered": false,
+      "timestamp": "2026-03-29T15:41:15.781360+00:00"
+    },
+    {
+      "turn_id": "T002",
+      "speaker": "epos",
+      "content": "You're running a pressure washing business in Orlando and struggling to get the word out. It sounds like marketing is a key challenge for you right now. \nWhat's the most pressing problem you're trying to solve right now?",
+      "intent_detected": "response",
+      "depth_level": 0,
+      "synthesis_triggered": false,
+      "timestamp": "2026-03-29T15:41:19.426650+00:00"
+    },
+    {
+      "turn_id": "T003",
+      "speaker": "human",
+      "content": "I've been posting on Facebook but nothing seems to get traction. I'm frustrated because I know my work is good.",
+      "intent_detected": "root_cause_signal",
+      "depth_level": 3,
+      "follow_up_question": null,
+      "synthesis_triggered": false,
+      "timestamp": "2026-03-29T15:41:19.426650+00:00"
+    },
+    {
+      "turn_id": "T004",
+      "speaker": "epos",
+      "content": "I totally get your frustration. It can be tough to get traction on Facebook, even with great content. While I don't have specific knowledge on Facebook algorithms, I can tell you that streamlining your audience may help. Can you tell me more about your posts and target audience?",
+      "intent_detected": "response",
+      "depth_level": 0,
+      "synthesis_triggered": false,
+      "timestamp": "2026-03-29T15:41:22.281466+00:00"
+    },
+    {
+      "turn_id": "T005",
+      "speaker": "human",
+      "content": "The real problem is I don't have a system. Every week I start from scratch. Nothing builds on itself.",
+      "intent_detected": "root_cause_signal",
+      "depth_level": 3,
+      "follow_up_question": null,
+      "synthesis_triggered": true,
+      "timestamp": "2026-03-29T15:41:22.281466+00:00"
+    },
+    {
+      "turn_id": "T006",
+      "speaker": "epos",
+      "content": "I understand that you're running a pressure washing business in Orlando and struggling to get traction with your marketing efforts, specifically on Facebook. You've been posting, but it feels like you're not getting anywhere, and you're frustrated because you know your work is good. The root problem here is that you don't have a system in place, which means every week you're starting from scratch and not building on your previous efforts.\n\nThis lack of continuity is holding you back from making progress and seeing real results from your marketing efforts. To address this, I think it would be helpful to implement a more streamlined approach to your marketing. One potential solution could be to utilize a platform that allows you to access and manage multiple marketing tools and models in one place, similar to a unified API gateway.\n\nThe next step would be to explore such platforms and see how they can help you create a more cohesive and efficient marketing system \u2014 does that feel right?",
+      "intent_detected": "response",
+      "depth_level": 0,
+      "synthesis_triggered": true,
+      "timestamp": "2026-03-29T15:41:25.752407+00:00"
+    }
+  ],
+  "detected_needs": [
+    "Hi, I run a pressure washing business in Orlando and I need help with marketing.",
+    "I've been posting on Facebook but nothing seems to get traction. I'm frustrated because I know my wo",
+    "The real problem is I don't have a system. Every week I start from scratch. Nothing builds on itself"
+  ],
+  "unresolved_threads": [],
+  "synthesis_ready": true,
+  "context_summary": "",
+  "created_at": "2026-03-29T15:41:15.781360+00:00",
+  "updated_at": "2026-03-29T15:41:25.752407+00:00"
+}

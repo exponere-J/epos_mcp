@@ -1,0 +1,2 @@
+{"signal_id": "SIG-001", "signal_type": "hot_lead", "steward_action": "acted", "response_time_minutes": 5.0, "context": {}, "recorded_at": "2026-03-30T01:48:07.044368+00:00"}
+{"signal_id": "SIG-002", "signal_type": "sla_breach", "steward_action": "dismissed", "response_time_minutes": 120.0, "context": {}, "recorded_at": "2026-03-30T01:48:07.044368+00:00"}

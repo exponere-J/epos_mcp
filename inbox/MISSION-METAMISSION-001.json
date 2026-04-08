@@ -1,0 +1,397 @@
+{
+  "mission_id": "EPOS-METAMISSION-001",
+  "title": "EPOS Genesis - 7th Order Autonomous Evolution",
+  "priority": "CRITICAL",
+  "constitutional_authority": "Article VI (Autonomous Evolution), Article X (Commercial Readiness - NEW)",
+  "agent": "agent-zero",
+  "status": "PENDING",
+  "created": "2026-02-08T18:00:00Z",
+  
+  "objective": "Transform EPOS from developer tool to self-bootstrapping, self-healing, commercially-viable autonomous system",
+  
+  "vision": {
+    "6th_order_thinking": "EPOS is not software to debug, but a living system that must self-scaffold its nervous system, self-diagnose health, self-heal before failures cascade, and self-optimize initialization patterns",
+    "7th_order_thinking": "System becomes aware of its own design patterns, proposes constitutional amendments based on violation clusters, and evolves its initialization sequence through meta-learning from 1000+ boot cycles",
+    "biological_metaphor": "Genesis script is stem cell, Event Bus is autonomic nervous system, Immune Monitor is immune system, Constitution is DNA that learns from mutations"
+  },
+  
+  "the_10_commercial_rules": {
+    "RULE-01": "Zero-Configuration: No manual .env editing",
+    "RULE-02": "Autonomous Bootstrap: No manual mkdir commands",
+    "RULE-03": "Health Check Honesty: Test actual functionality, not just HTTP 200",
+    "RULE-04": "User-Centric Errors: Explain What + Why + What-Next",
+    "RULE-05": "Graceful Degradation: Non-critical failures don't break system",
+    "RULE-06": "Data Durability: Auto-backup before upgrades",
+    "RULE-07": "Installation Hygiene: All files in standard locations",
+    "RULE-08": "Startup Order Enforcement: Docker depends_on + health checks",
+    "RULE-09": "Silent Monitoring: Auto-repair before user notices",
+    "RULE-10": "Continuous Improvement: Telemetry for diagnostics (opt-out)"
+  },
+  
+  "file_paths": {
+    "epos_root": "C:\\Users\\Jamie\\workspace\\epos_mcp",
+    "genesis_script": "C:\\Users\\Jamie\\workspace\\epos_mcp\\epos_genesis.py",
+    "immune_monitor": "C:\\Users\\Jamie\\workspace\\epos_mcp\\immune_monitor.py",
+    "constitutional_enforcer": "C:\\Users\\Jamie\\workspace\\epos_mcp\\constitutional_enforcer.py",
+    "docker_compose": "C:\\Users\\Jamie\\workspace\\epos_mcp\\docker-compose.yml",
+    "context_vault": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault"
+  },
+  
+  "deliverables": [
+    {
+      "id": "D1",
+      "name": "epos_genesis.py",
+      "type": "bootstrap_primitive",
+      "source": "inbox/epos_genesis.py",
+      "destination": "epos_genesis.py",
+      "constitutional_rules": ["RULE-02"],
+      "capabilities": [
+        "Self-diagnoses environment (Docker, Python, disk)",
+        "Self-scaffolds filesystem (context_vault, inbox, logs)",
+        "Self-configures .env from template",
+        "Self-validates dependencies with health checks",
+        "Self-heals common failures (ports, permissions)",
+        "Visual progress feedback for non-technical users"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "immune_monitor.py",
+      "type": "predictive_health_system",
+      "source": "inbox/immune_monitor.py",
+      "destination": "immune_monitor.py",
+      "constitutional_rules": ["RULE-09"],
+      "capabilities": [
+        "Dependency graph analysis (cascade prediction)",
+        "Resource trend analysis (memory leak detection)",
+        "Pattern recognition (error sequences → failure prediction)",
+        "Auto-remediation (restart before propagation)",
+        "Learning (confidence scores improve over time)"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "constitutional_enforcer.py",
+      "type": "pre_deployment_validator",
+      "source": "inbox/constitutional_enforcer.py",
+      "destination": "constitutional_enforcer.py",
+      "constitutional_rules": ["ALL 10 RULES"],
+      "capabilities": [
+        "Validates docker-compose.yml (health checks, startup order)",
+        "Validates Dockerfiles (HEALTHCHECK instructions)",
+        "Validates Python services (error message quality)",
+        "Pre-flight checks (directories, paths, monitoring)",
+        "Prevents ANY deployment violating 10 rules"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "docker-compose-constitutional.yml",
+      "type": "orchestration_manifest",
+      "source": "inbox/docker-compose-constitutional.yml",
+      "destination": "docker-compose.yml",
+      "constitutional_rules": ["RULE-03", "RULE-05", "RULE-08"],
+      "features": [
+        "4-layer startup sequence (autonomic → governance → execution → application)",
+        "All services have honest health checks",
+        "All dependencies use service_healthy condition",
+        "All services use unless-stopped restart",
+        "Immune Monitor with Docker socket access"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Dockerfile-immune-monitor",
+      "type": "container_definition",
+      "destination": "containers/immune-monitor/Dockerfile",
+      "constitutional_rules": ["RULE-03", "RULE-09"]
+    }
+  ],
+  
+  "tasks": [
+    {
+      "id": "T1",
+      "phase": "CONSTITUTIONAL_VALIDATION",
+      "description": "Validate ALL inbox files against 10 Commercial Rules",
+      "validations": [
+        {
+          "file": "inbox/epos_genesis.py",
+          "rules": ["RULE-02", "RULE-04", "RULE-07"],
+          "command": "python constitutional_enforcer.py --validate inbox/epos_genesis.py"
+        },
+        {
+          "file": "inbox/docker-compose-constitutional.yml",
+          "rules": ["RULE-03", "RULE-05", "RULE-08"],
+          "command": "python constitutional_enforcer.py --validate inbox/docker-compose-constitutional.yml"
+        },
+        {
+          "file": "inbox/Dockerfile-immune-monitor",
+          "rules": ["RULE-03"],
+          "command": "python constitutional_enforcer.py --validate inbox/Dockerfile-immune-monitor"
+        }
+      ],
+      "success_criteria": "0 FATAL or ERROR violations (warnings acceptable)",
+      "failure_action": "ABORT - Log violations, request human remediation"
+    },
+    {
+      "id": "T2",
+      "phase": "FILE_PLACEMENT",
+      "description": "Copy validated files to EPOS root with permission checks",
+      "operations": [
+        {
+          "source": "inbox/epos_genesis.py",
+          "destination": "epos_genesis.py",
+          "validate_executable": true
+        },
+        {
+          "source": "inbox/immune_monitor.py",
+          "destination": "immune_monitor.py"
+        },
+        {
+          "source": "inbox/constitutional_enforcer.py",
+          "destination": "constitutional_enforcer.py"
+        },
+        {
+          "source": "inbox/docker-compose-constitutional.yml",
+          "destination": "docker-compose.yml",
+          "backup_existing": true
+        },
+        {
+          "source": "inbox/Dockerfile-immune-monitor",
+          "destination": "containers/immune-monitor/Dockerfile",
+          "create_directory": true
+        }
+      ],
+      "dependencies": ["T1"],
+      "success_criteria": "All files copied, backup created for docker-compose.yml"
+    },
+    {
+      "id": "T3",
+      "phase": "GENESIS_EXECUTION",
+      "description": "Run epos_genesis.py to bootstrap EPOS nervous system",
+      "command": "python epos_genesis.py",
+      "expected_actions": [
+        "Create 18 directories (context_vault, inbox, logs, containers/*)",
+        "Generate .env with auto-detected paths",
+        "Initialize system_events.jsonl",
+        "Validate Python, Docker, disk space",
+        "Report success with next steps"
+      ],
+      "dependencies": ["T2"],
+      "timeout": "300s",
+      "success_criteria": "Genesis reports 'EPOS nervous system initialized'"
+    },
+    {
+      "id": "T4",
+      "phase": "CONSTITUTIONAL_ENFORCEMENT",
+      "description": "Pre-flight validation before container build",
+      "command": "python constitutional_enforcer.py --pre-flight",
+      "validations": [
+        "epos_genesis.py exists (RULE-02)",
+        "context_vault exists (RULE-06)",
+        "No hardcoded C:\\Users\\Jamie paths (RULE-07)",
+        "immune_monitor.py exists (RULE-09)"
+      ],
+      "dependencies": ["T3"],
+      "success_criteria": "0 FATAL or ERROR violations"
+    },
+    {
+      "id": "T5",
+      "phase": "CONTAINER_BUILD",
+      "description": "Build all EPOS services with constitutional compliance",
+      "services_to_build": [
+        "event-bus",
+        "governance-server",
+        "learning-server",
+        "context-server",
+        "diagnostic-server",
+        "agent-zero",
+        "command-center",
+        "error-detector",
+        "immune-monitor"
+      ],
+      "command": "docker-compose build --parallel",
+      "dependencies": ["T4"],
+      "timeout": "900s",
+      "success_criteria": "All 9 services built successfully"
+    },
+    {
+      "id": "T6",
+      "phase": "ORDERED_DEPLOYMENT",
+      "description": "Deploy services in 4-layer sequence with health validation",
+      "deployment_sequence": [
+        {
+          "layer": 1,
+          "name": "Autonomic Nervous System",
+          "services": ["event-bus"],
+          "health_check_timeout": "30s"
+        },
+        {
+          "layer": 2,
+          "name": "Governance & Awareness",
+          "services": ["governance-server", "learning-server", "context-server", "diagnostic-server"],
+          "health_check_timeout": "30s"
+        },
+        {
+          "layer": 3,
+          "name": "Execution Agents",
+          "services": ["agent-zero", "command-center"],
+          "health_check_timeout": "45s"
+        },
+        {
+          "layer": 4,
+          "name": "Application Services",
+          "services": ["error-detector", "immune-monitor"],
+          "health_check_timeout": "30s"
+        }
+      ],
+      "command": "docker-compose up -d",
+      "dependencies": ["T5"],
+      "wait_between_layers": "10s",
+      "success_criteria": "All services report healthy status"
+    },
+    {
+      "id": "T7",
+      "phase": "IMMUNE_SYSTEM_ACTIVATION",
+      "description": "Verify Immune Monitor operational and learning",
+      "validations": [
+        {
+          "check": "Immune Monitor daemon running",
+          "command": "docker ps --filter name=epos-immune-monitor"
+        },
+        {
+          "check": "Immune Monitor capturing health snapshots",
+          "file": "context_vault/events/system_events.jsonl",
+          "search": "immune.prediction"
+        },
+        {
+          "check": "Immune Monitor publishing to Event Bus",
+          "endpoint": "http://localhost:8100/events?filter=immune.*"
+        }
+      ],
+      "dependencies": ["T6"],
+      "wait_time": "60s",
+      "success_criteria": "Immune Monitor shows 9 services monitored"
+    },
+    {
+      "id": "T8",
+      "phase": "SELF_HEALING_TEST",
+      "description": "Validate auto-remediation capability",
+      "test_scenario": {
+        "action": "Simulate cascade failure by stopping Event Bus",
+        "command": "docker-compose stop event-bus",
+        "expected_immune_response": [
+          "Detect Event Bus down",
+          "Predict cascade failure in dependent services",
+          "Auto-restart Event Bus within 30s",
+          "Publish immune.auto_remediate event"
+        ]
+      },
+      "dependencies": ["T7"],
+      "timeout": "120s",
+      "success_criteria": "Immune Monitor auto-restarts Event Bus before cascade"
+    },
+    {
+      "id": "T9",
+      "phase": "7TH_ORDER_LEARNING",
+      "description": "Initialize meta-learning for self-evolution",
+      "meta_learning_goals": [
+        "Track which pre-flight checks catch most failures",
+        "Measure bootstrap time trend over 100 runs",
+        "Cluster error patterns for constitutional amendments",
+        "Predict optimal startup order based on dependency health"
+      ],
+      "bi_engine_integration": {
+        "data_source": "context_vault/events/system_events.jsonl",
+        "analysis_frequency": "daily",
+        "output": "context_vault/learning/meta_insights.jsonl"
+      },
+      "dependencies": ["T8"],
+      "success_criteria": "BI Engine publishes first meta-insight within 24h"
+    },
+    {
+      "id": "T10",
+      "phase": "COMMERCIAL_VALIDATION",
+      "description": "Validate all 10 Commercial Readiness Rules satisfied",
+      "validation_matrix": {
+        "RULE-01": "Check .env auto-generated (no manual edit)",
+        "RULE-02": "Check epos_genesis.py created all directories",
+        "RULE-03": "Check all health endpoints return functional status",
+        "RULE-04": "Check error messages include What/Why/Next",
+        "RULE-05": "Check non-critical service failure doesn't crash system",
+        "RULE-06": "Check docker-compose.yml backup exists",
+        "RULE-07": "Check no hardcoded paths in deployed files",
+        "RULE-08": "Check startup order enforced by Docker",
+        "RULE-09": "Check Immune Monitor auto-repaired at least 1 failure",
+        "RULE-10": "Check telemetry events logged for future BI"
+      },
+      "dependencies": ["T9"],
+      "command": "python constitutional_enforcer.py --pre-flight",
+      "success_criteria": "All 10 rules validated ✅"
+    }
+  ],
+  
+  "rollback": {
+    "trigger": "Any task with FATAL failure",
+    "steps": [
+      {
+        "id": "R1",
+        "action": "Stop all containers",
+        "command": "docker-compose down"
+      },
+      {
+        "id": "R2",
+        "action": "Restore docker-compose.yml from backup",
+        "command": "cp docker-compose.yml.backup docker-compose.yml"
+      },
+      {
+        "id": "R3",
+        "action": "Log failure with violation report",
+        "destination": "context_vault/events/mission_failures.jsonl"
+      }
+    ]
+  },
+  
+  "success_metrics": {
+    "deployment": {
+      "install_time": "< 5 minutes from genesis to all services healthy",
+      "first_time_success": "95% (vs current 40%)",
+      "manual_steps": "1 (run epos_genesis.py) vs current 12 steps"
+    },
+    "reliability": {
+      "uptime": "99.5% (Immune Monitor prevents 80% of failures)",
+      "mttr": "< 2 minutes (auto-repair before cascade)",
+      "self_healing_success": "80% of failures auto-remediated"
+    },
+    "user_experience": {
+      "time_to_first_mission": "< 5 minutes",
+      "error_comprehension": "> 90% (What/Why/Next format)",
+      "satisfaction": "> 4.5/5 stars"
+    },
+    "evolution": {
+      "meta_learning": "System proposes 1 constitutional amendment per week",
+      "bootstrap_optimization": "20% faster after 1000 boots",
+      "prediction_accuracy": "80% failure prediction within 30s"
+    }
+  },
+  
+  "completion_event": {
+    "event_type": "mission.metamission_complete",
+    "payload": {
+      "mission_id": "EPOS-METAMISSION-001",
+      "epos_version": "3.2.0-genesis",
+      "commercial_rules_satisfied": 10,
+      "services_deployed": 9,
+      "self_healing_active": true,
+      "meta_learning_initialized": true,
+      "7th_order_capabilities": [
+        "Self-bootstrapping nervous system",
+        "Predictive health monitoring",
+        "Autonomous failure remediation",
+        "Constitutional pre-deployment enforcement",
+        "Meta-learning for self-evolution"
+      ]
+    },
+    "destination": "context_vault/events/mission_completions.jsonl"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:33:17.479635+00:00",
+  "file": "venv_epos/Lib/site-packages/setuptools/_vendor/jaraco/context/__init__.py",
+  "verdict": "REJECT",
+  "violations": [
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 83,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    },
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 156,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    },
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 158,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    },
+    {
+      "code": "ERR-DESTRUCT-003",
+      "article": "Article II Rule 5 (No Destructive Defaults)",
+      "message": "shutil.rmtree without safeguard",
+      "severity": "critical",
+      "repairable": false,
+      "line_number": 163,
+      "suggestion": "Remove destructive command or add backup + confirmation."
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

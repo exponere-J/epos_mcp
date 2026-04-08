@@ -1,0 +1,9 @@
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_youtube_short_01", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.799852+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_youtube_short_02", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.801866+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_youtube_short_03", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.805291+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_youtube_short_04", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.805291+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_youtube_short_05", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.811573+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_linkedin_post_01", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.813404+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_linkedin_post_02", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.815426+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_linkedin_post_03", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.815426+00:00"}
+{"event_type": "content.validation", "content_id": "YT_PIPE_TEST_CAS_x_thread_01", "passed": true, "score": 100, "requires_human_review": false, "issues": [], "timestamp": "2026-02-18T05:19:27.815426+00:00"}

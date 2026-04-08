@@ -1,0 +1,16 @@
+{
+  "content_id": "YT_PIPE_TEST_CAS_linkedin_post_01",
+  "platform": "linkedin",
+  "type": "linkedin_post",
+  "text": "that data sovereignty is the entire business model. Here is the EPOS blueprint. The bottom line is if your AI cannot run offline, you do not own it.",
+  "source_attribution": "Source: Why Sovereign AI Wins (https://youtube.com/watch?v=test)",
+  "cta_token": "CTA-CONTENT-LAB-CASCADE",
+  "format": "text_with_image",
+  "auto_approved": false,
+  "permission_status": "AWAITING_HUMAN_APPROVAL",
+  "scheduled_time": "2026-02-18T09:00:00+00:00",
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

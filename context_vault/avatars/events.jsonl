@@ -1,0 +1,5 @@
+{"timestamp": "2026-04-07T12:24:34.196769+00:00", "event_type": "signal_match", "payload": {"matches": 1, "top": "solo_strategic_consultant"}}
+{"timestamp": "2026-04-07T12:24:34.198339+00:00", "event_type": "signal_match", "payload": {"matches": 1, "top": "boutique_agency_founder"}}
+{"timestamp": "2026-04-07T12:24:34.198339+00:00", "event_type": "lead_scored", "payload": {"best_match": "fractional_executive", "best_score": 8.0}}
+{"timestamp": "2026-04-07T12:24:34.198339+00:00", "event_type": "signal_match", "payload": {"matches": 1, "top": "technical_founder_operator"}}
+{"timestamp": "2026-04-07T12:26:33.491942+00:00", "event_type": "lead_scored", "payload": {"best_match": "boutique_agency_founder", "best_score": 8.0}}

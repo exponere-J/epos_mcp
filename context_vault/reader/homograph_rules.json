@@ -1,0 +1,976 @@
+{
+  "version": "1.0",
+  "total_words": 50,
+  "description": "English homograph disambiguation rules for TTS",
+  "note": "Linguistic data, not CCP implementation",
+  "words": [
+    {
+      "word": "read",
+      "forms": [
+        {
+          "pronunciation": "/ri\u02d0d/",
+          "context": "present",
+          "signals": [
+            "to read",
+            "will read"
+          ]
+        },
+        {
+          "pronunciation": "/r\u025bd/",
+          "context": "past",
+          "signals": [
+            "already read",
+            "have read"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "lead",
+      "forms": [
+        {
+          "pronunciation": "/li\u02d0d/",
+          "context": "verb",
+          "signals": [
+            "to lead",
+            "leading"
+          ]
+        },
+        {
+          "pronunciation": "/l\u025bd/",
+          "context": "metal",
+          "signals": [
+            "lead paint",
+            "lead pipe"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "bass",
+      "forms": [
+        {
+          "pronunciation": "/be\u026as/",
+          "context": "music",
+          "signals": [
+            "bass guitar",
+            "bass note"
+          ]
+        },
+        {
+          "pronunciation": "/b\u00e6s/",
+          "context": "fish",
+          "signals": [
+            "bass fishing",
+            "sea bass"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "wound",
+      "forms": [
+        {
+          "pronunciation": "/wu\u02d0nd/",
+          "context": "injury",
+          "signals": [
+            "deep wound",
+            "wound care"
+          ]
+        },
+        {
+          "pronunciation": "/wa\u028and/",
+          "context": "past_wind",
+          "signals": [
+            "wound up",
+            "wound around"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "tear",
+      "forms": [
+        {
+          "pronunciation": "/t\u026a\u0259r/",
+          "context": "eye",
+          "signals": [
+            "tear drop",
+            "tears of"
+          ]
+        },
+        {
+          "pronunciation": "/t\u025b\u0259r/",
+          "context": "rip",
+          "signals": [
+            "tear apart",
+            "wear and tear"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "live",
+      "forms": [
+        {
+          "pronunciation": "/l\u026av/",
+          "context": "verb",
+          "signals": [
+            "to live",
+            "i live"
+          ]
+        },
+        {
+          "pronunciation": "/la\u026av/",
+          "context": "adj",
+          "signals": [
+            "live music",
+            "going live"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "minute",
+      "forms": [
+        {
+          "pronunciation": "/m\u026an\u026at/",
+          "context": "time",
+          "signals": [
+            "one minute",
+            "wait a minute"
+          ]
+        },
+        {
+          "pronunciation": "/ma\u026anju\u02d0t/",
+          "context": "tiny",
+          "signals": [
+            "minute detail"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "bow",
+      "forms": [
+        {
+          "pronunciation": "/ba\u028a/",
+          "context": "bend",
+          "signals": [
+            "take a bow",
+            "bow down"
+          ]
+        },
+        {
+          "pronunciation": "/bo\u028a/",
+          "context": "weapon",
+          "signals": [
+            "bow and arrow",
+            "bow tie"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "close",
+      "forms": [
+        {
+          "pronunciation": "/klo\u028az/",
+          "context": "verb",
+          "signals": [
+            "close the door"
+          ]
+        },
+        {
+          "pronunciation": "/klo\u028as/",
+          "context": "adj",
+          "signals": [
+            "close to",
+            "close friend"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "content",
+      "forms": [
+        {
+          "pronunciation": "/k\u0252nt\u025bnt/",
+          "context": "noun",
+          "signals": [
+            "content creation"
+          ]
+        },
+        {
+          "pronunciation": "/k\u0259nt\u025bnt/",
+          "context": "adj",
+          "signals": [
+            "feel content"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "wind",
+      "forms": [
+        {
+          "pronunciation": "/w\u026and/",
+          "context": "noun",
+          "signals": [
+            "strong wind"
+          ]
+        },
+        {
+          "pronunciation": "/wa\u026and/",
+          "context": "verb",
+          "signals": [
+            "wind up",
+            "wind down"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "use",
+      "forms": [
+        {
+          "pronunciation": "/ju\u02d0s/",
+          "context": "noun",
+          "signals": [
+            "the use of"
+          ]
+        },
+        {
+          "pronunciation": "/ju\u02d0z/",
+          "context": "verb",
+          "signals": [
+            "to use",
+            "can use"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "present",
+      "forms": [
+        {
+          "pronunciation": "/pr\u025bz\u0259nt/",
+          "context": "noun",
+          "signals": [
+            "a present"
+          ]
+        },
+        {
+          "pronunciation": "/pr\u026az\u025bnt/",
+          "context": "verb",
+          "signals": [
+            "to present"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "record",
+      "forms": [
+        {
+          "pronunciation": "/r\u025bk\u0259rd/",
+          "context": "noun",
+          "signals": [
+            "world record"
+          ]
+        },
+        {
+          "pronunciation": "/r\u026ak\u0254\u02d0rd/",
+          "context": "verb",
+          "signals": [
+            "to record"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "object",
+      "forms": [
+        {
+          "pronunciation": "/\u0252bd\u0292\u026akt/",
+          "context": "noun",
+          "signals": [
+            "the object"
+          ]
+        },
+        {
+          "pronunciation": "/\u0259bd\u0292\u025bkt/",
+          "context": "verb",
+          "signals": [
+            "i object"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "produce",
+      "forms": [
+        {
+          "pronunciation": "/pr\u0252dju\u02d0s/",
+          "context": "noun",
+          "signals": [
+            "fresh produce"
+          ]
+        },
+        {
+          "pronunciation": "/pr\u0259dju\u02d0s/",
+          "context": "verb",
+          "signals": [
+            "to produce"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "project",
+      "forms": [
+        {
+          "pronunciation": "/pr\u0252d\u0292\u025bkt/",
+          "context": "noun",
+          "signals": [
+            "the project"
+          ]
+        },
+        {
+          "pronunciation": "/pr\u0259d\u0292\u025bkt/",
+          "context": "verb",
+          "signals": [
+            "to project"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "permit",
+      "forms": [
+        {
+          "pronunciation": "/p\u025c\u02d0rm\u026at/",
+          "context": "noun",
+          "signals": [
+            "building permit"
+          ]
+        },
+        {
+          "pronunciation": "/p\u0259rm\u026at/",
+          "context": "verb",
+          "signals": [
+            "to permit"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "refuse",
+      "forms": [
+        {
+          "pronunciation": "/r\u025bfju\u02d0s/",
+          "context": "noun",
+          "signals": [
+            "refuse collection"
+          ]
+        },
+        {
+          "pronunciation": "/r\u026afju\u02d0z/",
+          "context": "verb",
+          "signals": [
+            "i refuse"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "rebel",
+      "forms": [
+        {
+          "pronunciation": "/r\u025bb\u0259l/",
+          "context": "noun",
+          "signals": [
+            "rebel forces"
+          ]
+        },
+        {
+          "pronunciation": "/r\u026ab\u025bl/",
+          "context": "verb",
+          "signals": [
+            "rebel against"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "subject",
+      "forms": [
+        {
+          "pronunciation": "/s\u028cbd\u0292\u026akt/",
+          "context": "noun",
+          "signals": [
+            "the subject"
+          ]
+        },
+        {
+          "pronunciation": "/s\u0259bd\u0292\u025bkt/",
+          "context": "verb",
+          "signals": [
+            "subject to"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "suspect",
+      "forms": [
+        {
+          "pronunciation": "/s\u028csp\u025bkt/",
+          "context": "noun",
+          "signals": [
+            "the suspect"
+          ]
+        },
+        {
+          "pronunciation": "/s\u0259sp\u025bkt/",
+          "context": "verb",
+          "signals": [
+            "i suspect"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "contract",
+      "forms": [
+        {
+          "pronunciation": "/k\u0252ntr\u00e6kt/",
+          "context": "noun",
+          "signals": [
+            "the contract"
+          ]
+        },
+        {
+          "pronunciation": "/k\u0259ntr\u00e6kt/",
+          "context": "verb",
+          "signals": [
+            "muscles contract"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "conflict",
+      "forms": [
+        {
+          "pronunciation": "/k\u0252nfl\u026akt/",
+          "context": "noun",
+          "signals": [
+            "armed conflict"
+          ]
+        },
+        {
+          "pronunciation": "/k\u0259nfl\u026akt/",
+          "context": "verb",
+          "signals": [
+            "conflict with"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "console",
+      "forms": [
+        {
+          "pronunciation": "/k\u0252nso\u028al/",
+          "context": "noun",
+          "signals": [
+            "game console"
+          ]
+        },
+        {
+          "pronunciation": "/k\u0259nso\u028al/",
+          "context": "verb",
+          "signals": [
+            "to console"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "convert",
+      "forms": [
+        {
+          "pronunciation": "/k\u0252nv\u025c\u02d0rt/",
+          "context": "noun",
+          "signals": [
+            "a convert"
+          ]
+        },
+        {
+          "pronunciation": "/k\u0259nv\u025c\u02d0rt/",
+          "context": "verb",
+          "signals": [
+            "to convert"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "desert",
+      "forms": [
+        {
+          "pronunciation": "/d\u025bz\u0259rt/",
+          "context": "noun",
+          "signals": [
+            "sahara desert"
+          ]
+        },
+        {
+          "pronunciation": "/d\u026az\u025c\u02d0rt/",
+          "context": "verb",
+          "signals": [
+            "desert the post"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "extract",
+      "forms": [
+        {
+          "pronunciation": "/\u025bkstr\u00e6kt/",
+          "context": "noun",
+          "signals": [
+            "vanilla extract"
+          ]
+        },
+        {
+          "pronunciation": "/\u026akstr\u00e6kt/",
+          "context": "verb",
+          "signals": [
+            "extract data"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "impact",
+      "forms": [
+        {
+          "pronunciation": "/\u026amp\u00e6kt/",
+          "context": "noun",
+          "signals": [
+            "major impact"
+          ]
+        },
+        {
+          "pronunciation": "/\u026amp\u00e6kt/",
+          "context": "verb",
+          "signals": [
+            "will impact"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "resume",
+      "forms": [
+        {
+          "pronunciation": "/r\u025bzju\u02d0me\u026a/",
+          "context": "noun",
+          "signals": [
+            "my resume"
+          ]
+        },
+        {
+          "pronunciation": "/r\u026azju\u02d0m/",
+          "context": "verb",
+          "signals": [
+            "to resume"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "separate",
+      "forms": [
+        {
+          "pronunciation": "/s\u025bp\u0259r\u0259t/",
+          "context": "adj",
+          "signals": [
+            "separate room"
+          ]
+        },
+        {
+          "pronunciation": "/s\u025bp\u0259re\u026at/",
+          "context": "verb",
+          "signals": [
+            "to separate"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "moderate",
+      "forms": [
+        {
+          "pronunciation": "/m\u0252d\u0259r\u0259t/",
+          "context": "adj",
+          "signals": [
+            "moderate pace"
+          ]
+        },
+        {
+          "pronunciation": "/m\u0252d\u0259re\u026at/",
+          "context": "verb",
+          "signals": [
+            "to moderate"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "attribute",
+      "forms": [
+        {
+          "pronunciation": "/\u00e6tr\u026abju\u02d0t/",
+          "context": "noun",
+          "signals": [
+            "key attribute"
+          ]
+        },
+        {
+          "pronunciation": "/\u0259tr\u026abju\u02d0t/",
+          "context": "verb",
+          "signals": [
+            "attribute to"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "alternate",
+      "forms": [
+        {
+          "pronunciation": "/\u0254\u02d0lt\u0259rn\u0259t/",
+          "context": "noun",
+          "signals": [
+            "alternate route"
+          ]
+        },
+        {
+          "pronunciation": "/\u0254\u02d0lt\u0259rne\u026at/",
+          "context": "verb",
+          "signals": [
+            "to alternate"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "duplicate",
+      "forms": [
+        {
+          "pronunciation": "/dju\u02d0pl\u026ak\u0259t/",
+          "context": "noun",
+          "signals": [
+            "a duplicate"
+          ]
+        },
+        {
+          "pronunciation": "/dju\u02d0pl\u026ake\u026at/",
+          "context": "verb",
+          "signals": [
+            "to duplicate"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "deliberate",
+      "forms": [
+        {
+          "pronunciation": "/d\u026al\u026ab\u0259r\u0259t/",
+          "context": "adj",
+          "signals": [
+            "deliberate act"
+          ]
+        },
+        {
+          "pronunciation": "/d\u026al\u026ab\u0259re\u026at/",
+          "context": "verb",
+          "signals": [
+            "jury deliberated"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "appropriate",
+      "forms": [
+        {
+          "pronunciation": "/\u0259pro\u028apri\u0259t/",
+          "context": "adj",
+          "signals": [
+            "is appropriate"
+          ]
+        },
+        {
+          "pronunciation": "/\u0259pro\u028aprie\u026at/",
+          "context": "verb",
+          "signals": [
+            "appropriate funds"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "house",
+      "forms": [
+        {
+          "pronunciation": "/ha\u028as/",
+          "context": "noun",
+          "signals": [
+            "the house"
+          ]
+        },
+        {
+          "pronunciation": "/ha\u028az/",
+          "context": "verb",
+          "signals": [
+            "to house"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "polish",
+      "forms": [
+        {
+          "pronunciation": "/p\u0252l\u026a\u0283/",
+          "context": "verb",
+          "signals": [
+            "nail polish"
+          ]
+        },
+        {
+          "pronunciation": "/po\u028al\u026a\u0283/",
+          "context": "nationality",
+          "signals": [
+            "polish language"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "row",
+      "forms": [
+        {
+          "pronunciation": "/ro\u028a/",
+          "context": "line",
+          "signals": [
+            "front row"
+          ]
+        },
+        {
+          "pronunciation": "/ra\u028a/",
+          "context": "argument",
+          "signals": [
+            "had a row"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "dove",
+      "forms": [
+        {
+          "pronunciation": "/d\u028cv/",
+          "context": "bird",
+          "signals": [
+            "white dove"
+          ]
+        },
+        {
+          "pronunciation": "/do\u028av/",
+          "context": "past_dive",
+          "signals": [
+            "dove into"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "entrance",
+      "forms": [
+        {
+          "pronunciation": "/\u025bntr\u0259ns/",
+          "context": "noun",
+          "signals": [
+            "main entrance"
+          ]
+        },
+        {
+          "pronunciation": "/\u026antr\u00e6ns/",
+          "context": "verb",
+          "signals": [
+            "entranced by"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "invalid",
+      "forms": [
+        {
+          "pronunciation": "/\u026anv\u00e6l\u026ad/",
+          "context": "adj",
+          "signals": [
+            "invalid entry"
+          ]
+        },
+        {
+          "pronunciation": "/\u026anv\u0259l\u026ad/",
+          "context": "noun",
+          "signals": [
+            "war invalid"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "decrease",
+      "forms": [
+        {
+          "pronunciation": "/di\u02d0kri\u02d0s/",
+          "context": "noun",
+          "signals": [
+            "a decrease"
+          ]
+        },
+        {
+          "pronunciation": "/d\u026akri\u02d0s/",
+          "context": "verb",
+          "signals": [
+            "to decrease"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "defect",
+      "forms": [
+        {
+          "pronunciation": "/di\u02d0f\u025bkt/",
+          "context": "noun",
+          "signals": [
+            "birth defect"
+          ]
+        },
+        {
+          "pronunciation": "/d\u026af\u025bkt/",
+          "context": "verb",
+          "signals": [
+            "defect from"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "digest",
+      "forms": [
+        {
+          "pronunciation": "/da\u026ad\u0292\u025bst/",
+          "context": "noun",
+          "signals": [
+            "readers digest"
+          ]
+        },
+        {
+          "pronunciation": "/da\u026ad\u0292\u025bst/",
+          "context": "verb",
+          "signals": [
+            "to digest"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "discharge",
+      "forms": [
+        {
+          "pronunciation": "/d\u026ast\u0283\u0251\u02d0rd\u0292/",
+          "context": "noun",
+          "signals": [
+            "hospital discharge"
+          ]
+        },
+        {
+          "pronunciation": "/d\u026ast\u0283\u0251\u02d0rd\u0292/",
+          "context": "verb",
+          "signals": [
+            "to discharge"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "sewer",
+      "forms": [
+        {
+          "pronunciation": "/su\u02d0\u0259r/",
+          "context": "drain",
+          "signals": [
+            "sewer system"
+          ]
+        },
+        {
+          "pronunciation": "/so\u028a\u0259r/",
+          "context": "person",
+          "signals": [
+            "expert sewer"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "mobile",
+      "forms": [
+        {
+          "pronunciation": "/mo\u028aba\u026al/",
+          "context": "adj",
+          "signals": [
+            "mobile phone"
+          ]
+        },
+        {
+          "pronunciation": "/mo\u028abi\u02d0l/",
+          "context": "city",
+          "signals": [
+            "mobile alabama"
+          ]
+        }
+      ]
+    },
+    {
+      "word": "evening",
+      "forms": [
+        {
+          "pronunciation": "/i\u02d0vn\u026a\u014b/",
+          "context": "time",
+          "signals": [
+            "good evening"
+          ]
+        },
+        {
+          "pronunciation": "/i\u02d0v\u0259n\u026a\u014b/",
+          "context": "verb",
+          "signals": [
+            "evening the score"
+          ]
+        }
+      ]
+    }
+  ]
+}

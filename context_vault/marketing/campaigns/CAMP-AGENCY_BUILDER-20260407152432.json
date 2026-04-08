@@ -1,0 +1,16 @@
+{
+  "campaign_id": "CAMP-AGENCY_BUILDER-20260407152432",
+  "avatar_id": "agency_builder",
+  "content_id": "TEST-001",
+  "organic_score": 88.0,
+  "recommended_channels": [
+    "LinkedIn",
+    "Industry conferences",
+    "Mastermind groups",
+    "Agency Slack communities"
+  ],
+  "budget_usd": 994,
+  "status": "staged_for_review",
+  "staged_at": "2026-04-07T15:24:32.858033+00:00",
+  "approval_required": true
+}

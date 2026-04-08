@@ -1,0 +1,17 @@
+{
+  "id": "bridge_handshake",
+  "description": "Validate health of the Huntsman (epos_runner) bridge.",
+  "steps": [
+    {
+      "id": "ping_bridge",
+      "type": "http",
+      "endpoint": "http://localhost:8000/health",
+      "expect": {"status": "ok"}
+    },
+    {
+      "id": "log_result",
+      "type": "log",
+      "event": "bridge_health_checked"
+    }
+  ]
+}

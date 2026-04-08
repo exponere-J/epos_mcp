@@ -1,0 +1,35 @@
+{
+  "niche": "creator",
+  "track": "marketing",
+  "version": "1.0",
+  "scout_dimensions": [
+    "audience engagement",
+    "content strategy",
+    "brand identity",
+    "social media presence",
+    "monetization channels"
+  ],
+  "key_bottleneck_patterns": [
+    "inconsistent content scheduling",
+    "lack of clear brand messaging",
+    "insufficient audience segmentation"
+  ],
+  "thinker_context": "As a creator, establishing a strong online presence is crucial for reaching and engaging with the target audience. However, with the ever-changing landscape of social media and content consumption, it can be challenging to develop a marketing strategy that resonates with the audience and drives desired outcomes. A thorough analysis of the current marketing efforts, including audience engagement, content strategy, and brand identity, is necessary to identify areas for improvement and optimize the marketing approach.",
+  "surgeon_priorities": [
+    "develop a unique value proposition",
+    "create a content calendar with diverse formats",
+    "leverage analytics to inform audience segmentation"
+  ],
+  "mirror_report_tone": "empowering and actionable, with a focus on creative problem-solving",
+  "desire_vocabulary": [
+    "visibility",
+    "engagement",
+    "authenticity",
+    "growth",
+    "monetization",
+    "community",
+    "expression",
+    "impact"
+  ],
+  "generated_at": "2026-03-29T19:07:22.519791+00:00"
+}

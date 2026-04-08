@@ -1,0 +1,585 @@
+<!-- EPOS GOVERNANCE WATERMARK -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPOS Architecture Decisions — System Questions v3.1</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+  --bg:       #080C14;
+  --bg2:      #0D1520;
+  --bg3:      #111A28;
+  --card:     #141E2D;
+  --border:   #1E2E45;
+  --cyan:     #00D9F5;
+  --cyan2:    #0097A7;
+  --blue:     #2962FF;
+  --green:    #00E676;
+  --amber:    #FFB300;
+  --red:      #FF4757;
+  --purple:   #7C4DFF;
+  --white:    #EEF2FF;
+  --gray:     #8FA3BD;
+  --mono:     'Space Mono', monospace;
+  --sans:     'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--white); font-family: var(--sans); font-size: 14px; line-height: 1.6; }
+
+/* HEADER */
+.hdr {
+  background: linear-gradient(135deg, #050A14 0%, #0A1628 60%, #050A14 100%);
+  border-bottom: 2px solid var(--cyan);
+  padding: 28px 20px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.hdr::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,217,245,.04) 39px, rgba(0,217,245,.04) 40px),
+              repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,217,245,.04) 39px, rgba(0,217,245,.04) 40px);
+  pointer-events: none;
+}
+.hdr-inner { position: relative; z-index: 1; }
+.hdr h1 { font-family: var(--mono); color: var(--cyan); font-size: 17px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+.hdr .sub { color: var(--gray); font-size: 12px; font-family: var(--mono); }
+.hdr .badges { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+.badge { display: inline-block; font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1px; padding: 3px 9px; border-radius: 3px; text-transform: uppercase; }
+.b-cyan   { background: rgba(0,217,245,.12); border: 1px solid var(--cyan);   color: var(--cyan); }
+.b-green  { background: rgba(0,230,118,.12); border: 1px solid var(--green);  color: var(--green); }
+.b-amber  { background: rgba(255,179,0,.12); border: 1px solid var(--amber);  color: var(--amber); }
+.b-purple { background: rgba(124,77,255,.12);border: 1px solid var(--purple); color: var(--purple); }
+.b-red    { background: rgba(255,71,87,.12); border: 1px solid var(--red);    color: var(--red); }
+
+/* LAYOUT */
+.wrap { padding: 20px 16px; max-width: 900px; margin: 0 auto; }
+
+/* QUESTION BLOCKS */
+.q-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.q-hdr {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.q-num {
+  font-family: var(--mono); font-size: 22px; font-weight: 700;
+  min-width: 36px; line-height: 1;
+}
+.q-title { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1.4; }
+.q-tag   { font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1px; margin-top: 5px; display: inline-block; padding: 2px 7px; border-radius: 3px; }
+.q-body  { padding: 18px; }
+
+/* VERDICT BANNER */
+.verdict {
+  border-radius: 6px; padding: 12px 16px; margin-bottom: 16px;
+  font-size: 13px; line-height: 1.7;
+}
+.v-green  { background: rgba(0,230,118,.07); border: 1px solid rgba(0,230,118,.3); }
+.v-amber  { background: rgba(255,179,0,.07); border: 1px solid rgba(255,179,0,.3); }
+.v-cyan   { background: rgba(0,217,245,.07); border: 1px solid rgba(0,217,245,.3); }
+.v-purple { background: rgba(124,77,255,.07); border: 1px solid rgba(124,77,255,.3); }
+.v-label  { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+
+/* SECTION TITLES */
+.stitle {
+  font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--cyan); margin: 20px 0 10px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--border);
+}
+
+/* TABLES */
+.tbl-w { overflow-x: auto; margin-bottom: 16px; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; min-width: 400px; }
+th { background: #080C14; color: var(--cyan); font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 8px 10px; border: 1px solid var(--border); text-align: left; }
+td { padding: 8px 10px; border: 1px solid var(--border); font-size: 12px; vertical-align: top; }
+tr:nth-child(odd)  td { background: #0D1520; }
+tr:nth-child(even) td { background: #111A28; }
+
+/* NODE CARDS */
+.node-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+@media (max-width: 600px) { .node-grid { grid-template-columns: 1fr; } }
+.node-card {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px 14px;
+}
+.node-card .nc-id   { font-family: var(--mono); font-size: 9px; color: var(--cyan); letter-spacing: 1px; margin-bottom: 4px; }
+.node-card .nc-name { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+.node-card .nc-desc { color: var(--gray); font-size: 11px; line-height: 1.5; }
+.node-card .nc-foot { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 10px; }
+.node-card .nc-price { font-family: var(--mono); color: var(--green); font-weight: 700; }
+.node-card .nc-tier  { color: var(--gray); }
+
+/* PILL TAGS */
+.pill { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 10px; font-weight: 700; font-family: var(--mono); margin: 2px 2px 2px 0; }
+.p-green  { background: rgba(0,230,118,.12); color: var(--green); border: 1px solid rgba(0,230,118,.25); }
+.p-amber  { background: rgba(255,179,0,.12);  color: var(--amber); border: 1px solid rgba(255,179,0,.25); }
+.p-red    { background: rgba(255,71,87,.12);  color: var(--red);   border: 1px solid rgba(255,71,87,.25); }
+.p-cyan   { background: rgba(0,217,245,.12);  color: var(--cyan);  border: 1px solid rgba(0,217,245,.25); }
+.p-purple { background: rgba(124,77,255,.12); color: var(--purple);border: 1px solid rgba(124,77,255,.25); }
+.p-gray   { background: rgba(143,163,189,.1); color: var(--gray);  border: 1px solid rgba(143,163,189,.2); }
+
+/* ROADMAP STEPS */
+.step { display: flex; gap: 14px; margin-bottom: 12px; align-items: flex-start; }
+.step-num { background: var(--cyan); color: var(--bg); font-family: var(--mono); font-weight: 700; font-size: 12px; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.step-body .step-title { font-weight: 700; font-size: 13px; margin-bottom: 3px; }
+.step-body .step-desc  { color: var(--gray); font-size: 12px; line-height: 1.6; }
+.step-body .step-timing { font-family: var(--mono); font-size: 9px; color: var(--amber); letter-spacing: 1px; margin-top: 4px; }
+
+/* ARCHITECTURE FLOW */
+.arch-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.arch-box {
+  background: var(--bg3); border: 1px solid var(--border); border-radius: 6px;
+  padding: 8px 12px; font-size: 11px; font-family: var(--mono); text-align: center; min-width: 100px;
+}
+.arch-arrow { color: var(--cyan); font-size: 16px; font-weight: 700; }
+.arch-box.active { border-color: var(--cyan); color: var(--cyan); }
+.arch-box.new    { border-color: var(--green); color: var(--green); background: rgba(0,230,118,.05); }
+.arch-box.warn   { border-color: var(--amber); color: var(--amber); }
+
+/* INFO BOX */
+.info-box { background: rgba(0,217,245,.05); border: 1px solid rgba(0,217,245,.2); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.info-box .ib-title { font-family: var(--mono); font-size: 10px; color: var(--cyan); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.info-box p { color: #B0C4D8; font-size: 12px; line-height: 1.7; }
+
+.warn-box { background: rgba(255,179,0,.05); border: 1px solid rgba(255,179,0,.25); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.warn-box .wb-title { font-family: var(--mono); font-size: 10px; color: var(--amber); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.warn-box li { color: #B0C4D8; font-size: 12px; line-height: 1.8; margin-left: 16px; }
+
+/* SEPARATOR */
+.sep { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+/* FOOTER */
+.ftr { border-top: 1px solid var(--border); padding: 16px; text-align: center; color: var(--gray); font-family: var(--mono); font-size: 10px; letter-spacing: 1px; }
+
+.g { color: var(--green); font-weight: 700; }
+.a { color: var(--amber); font-weight: 700; }
+.r { color: var(--red);   font-weight: 700; }
+.c { color: var(--cyan);  }
+.gr { color: var(--gray); }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-inner">
+    <h1>EPOS Architecture Decisions — System Questions v3.1</h1>
+    <div class="sub">EXPONERE · Constitutional Review · 4 System Decisions · February 2026</div>
+    <div class="badges">
+      <span class="badge b-cyan">Q1 — Phi-3 Tool Upgrade</span>
+      <span class="badge b-green">Q2 — Google Sheets Redundancy</span>
+      <span class="badge b-amber">Q3 — Personal / Business Data Separation</span>
+      <span class="badge b-purple">Q4 — Gap Nodes → Standalone Apps</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════════════
+     QUESTION 1: Phi-3 Tool Upgrades + GRAG
+═══════════════════════════════════════════════ -->
+
+<div class="q-block">
+  <div class="q-hdr">
+    <div class="q-num" style="color:#00D9F5;">01</div>
+    <div>
+      <div class="q-title">Phi-3 Mini Tool Upgrades + GRAG Integration<br>— Does this require CJ Map v3.1 or a new version?</div>
+      <span class="q-tag b-cyan">Architecture Decision</span>
+    </div>
+  </div>
+  <div class="q-body">
+
+    <div class="verdict v-green">
+      <div class="v-label" style="color:#00E676;">Verdict — Partial Upgrade Only (v3.1 Patch)</div>
+      The Phi-3 tool additions are <strong style="color:#00E676;">internal infrastructure upgrades</strong>, not consumer-facing journey changes. The Consumer Journey Map describes what the customer experiences across 31+ touchpoints — these tools change how EPOS processes and responds internally. This is a <strong>v3.1 constitutional amendment</strong>, not a new CJ map version. A new CJ map version would only be warranted if a new touchpoint or macro phase is added that changes the customer's experience arc.
+    </div>
+
+    <div class="stitle">What Changes vs What Stays the Same</div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Component</th><th>Change Type</th><th>CJ Impact</th><th>Version Impact</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Internet Search Tool</strong><br><span class="gr">Web lookup via Phi-3</span></td><td>Internal — enhances R1 Radar, MA1 Market Awareness</td><td class="c">None — customer doesn't see the tool, sees better research output</td><td><span class="pill p-green">v3.1 Patch</span></td></tr>
+        <tr><td><strong>Deep Research</strong><br><span class="gr">Multi-step web research</span></td><td>New capability — feeds TTLG Diagnostic with richer data</td><td class="c">Enhances TP06-10 Discovery outputs but same touchpoints</td><td><span class="pill p-green">v3.1 Patch</span></td></tr>
+        <tr><td><strong>Image Generation</strong><br><span class="gr">MidJourney/Flux via Phi-3</span></td><td>Extends Content Lab (C10) — new tool within existing node</td><td class="c">Content Lab already in CJ map. New output type, same node.</td><td><span class="pill p-green">v3.1 Patch</span></td></tr>
+        <tr><td><strong>Video Generation</strong><br><span class="gr">Runway/HeyGen via Phi-3</span></td><td>Extends Content Lab (C10)</td><td class="c">Same — content outputs are already in the journey. New media type.</td><td><span class="pill p-green">v3.1 Patch</span></td></tr>
+        <tr><td><strong>Artifacts</strong><br><span class="gr">Docs, reports, code outputs</span></td><td>New output format within existing VAULT/GATE nodes</td><td class="c">None — audit receipts already in CJ map. Artifacts are a new delivery format.</td><td><span class="pill p-green">v3.1 Patch</span></td></tr>
+        <tr><td><strong>Projects</strong><br><span class="gr">Persistent project memory</span></td><td>Context Vault (C09) expansion — new organization layer</td><td class="c">None — Context Vault already in architecture</td><td><span class="pill p-green">v3.1 Patch</span></td></tr>
+        <tr><td><strong>Prompt-Based Roles</strong><br><span class="gr">Persona injection at runtime</span></td><td>Constitutional upgrade — extends role system at Agent level</td><td class="c">Affects ALL touchpoints (roles already exist, now injectable at runtime)</td><td><span class="pill p-amber">v3.1 + Role Registry Update</span></td></tr>
+        <tr><td><strong>TTS / STT</strong><br><span class="gr">ElevenLabs + Whisper GUI</span></td><td>Voice I/O layer — new interaction modality for existing nodes</td><td class="c">None to customer journey phases. <em>However</em>: if this enables new <strong>voice-first touchpoints</strong> (e.g., phone prospecting), that <em>does</em> add new TPs and would require CJ v4.0</td><td><span class="pill p-amber">v3.1 now / CJ v4.0 when voice TPs launch</span></td></tr>
+        <tr><td><strong>GRAG ↔ EPOS Ecosystem Interaction</strong><br><span class="gr">Tools reading/writing to EPOS nodes</span></td><td>This IS an architectural shift — tools become Event Bus participants</td><td class="c">GRAG-enabled tools change how nodes communicate. Requires constitutional amendment documenting GRAG as a first-class Event Bus citizen.</td><td><span class="pill p-red">EPOS Constitution v3.1 Amendment Required</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="stitle">The GRAG Architecture — What Must Be Specified</div>
+    <div class="info-box">
+      <div class="ib-title">GRAG = Graph-Retrieval Augmented Generation — Constitutional Definition</div>
+      <p>GRAG tools attached to Phi-3 Mini will query the Context Vault, fire events on the Event Bus, and write results to node outputs. This means Phi-3 is no longer just a local LLM — it becomes an <strong style="color:#00D9F5;">orchestration participant</strong> with read/write access to the constitutional ecosystem. The Constitution v3.1 amendment must define: (1) which Context Vault paths are readable by GRAG tools, (2) which Event Bus topics GRAG tools can publish to, (3) whether GRAG outputs require Governance Gate validation before writing to Vault, and (4) tool failure behavior — if internet search fails, does the GRAG chain degrade gracefully or hard-fail the mission?</p>
+    </div>
+
+    <div class="stitle">Phi-3 Command Center GUI — Recommended Tool Manifest</div>
+    <div class="node-grid">
+      <div class="node-card" style="border-color:#00D9F5;">
+        <div class="nc-id">TOOL-01 / SEARCH</div>
+        <div class="nc-name">Internet Search</div>
+        <div class="nc-desc">DuckDuckGo or Brave Search API. Feeds R1 Radar and MA1 Market Awareness. Results stored in Context Vault under <code>tools/search/</code>.</div>
+        <div class="nc-foot"><span class="nc-price">Free / $0</span><span class="nc-tier">GRAG Layer</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00D9F5;">
+        <div class="nc-id">TOOL-02 / DEEP-RESEARCH</div>
+        <div class="nc-name">Deep Research</div>
+        <div class="nc-desc">Multi-hop search + synthesis. Feeds TTLG Diagnostic reports with competitive analysis, market data. Uses Perplexity API or local chain.</div>
+        <div class="nc-foot"><span class="nc-price">~$5-20/mo</span><span class="nc-tier">TTLG Enhanced</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00E676;">
+        <div class="nc-id">TOOL-03 / IMAGE-GEN</div>
+        <div class="nc-name">Image Generation</div>
+        <div class="nc-desc">Flux local or MidJourney API. Outputs to Content Lab asset queue. Brand validator applied before release to BUS.</div>
+        <div class="nc-foot"><span class="nc-price">$10-30/mo</span><span class="nc-tier">Content Lab C10</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00E676;">
+        <div class="nc-id">TOOL-04 / VIDEO-GEN</div>
+        <div class="nc-name">Video Generation</div>
+        <div class="nc-desc">HeyGen avatar + Runway ML. Triggered by Content Lab Cascade. Constitutional Brand Validator required before publish.</div>
+        <div class="nc-foot"><span class="nc-price">$44-165/mo</span><span class="nc-tier">Content Lab C10</span></div>
+      </div>
+      <div class="node-card" style="border-color:#FFB300;">
+        <div class="nc-id">TOOL-05 / ARTIFACTS</div>
+        <div class="nc-name">Artifact Engine</div>
+        <div class="nc-desc">Structured outputs — docs, reports, code files, HTML dashboards. Every artifact gets EPOS Trace ID and is logged to VAULT before delivery.</div>
+        <div class="nc-foot"><span class="nc-price">$0</span><span class="nc-tier">VAULT / GATE</span></div>
+      </div>
+      <div class="node-card" style="border-color:#FFB300;">
+        <div class="nc-id">TOOL-06 / PROJECTS</div>
+        <div class="nc-name">Project Memory</div>
+        <div class="nc-desc">Persistent project namespaces in Context Vault. Each project has own <code>context_vault/projects/{id}/</code> tree. Phi-3 scoped to project on session start.</div>
+        <div class="nc-foot"><span class="nc-price">$0 (local)</span><span class="nc-tier">Context Vault C09</span></div>
+      </div>
+      <div class="node-card" style="border-color:#7C4DFF;">
+        <div class="nc-id">TOOL-07 / ROLES</div>
+        <div class="nc-name">Prompt-Based Roles</div>
+        <div class="nc-desc">Runtime role injection from agent_registry.json. Phi-3 adopts R1 Radar, S1 Sales Brain, or custom roles on demand. Constitutional Article requires Governance Gate approval for new roles.</div>
+        <div class="nc-foot"><span class="nc-price">$0 (local)</span><span class="nc-tier">Agent Registry</span></div>
+      </div>
+      <div class="node-card" style="border-color:#7C4DFF;">
+        <div class="nc-id">TOOL-08 / TTS-STT</div>
+        <div class="nc-name">Voice I/O Layer</div>
+        <div class="nc-desc">ElevenLabs TTS output + Whisper STT input. All transcripts logged to VAULT. Voice-to-Mission pipeline: speech → Whisper → Phi-3 → Agent Zero mission queue.</div>
+        <div class="nc-foot"><span class="nc-price">$22-99/mo</span><span class="nc-tier">Comms Layer</span></div>
+      </div>
+    </div>
+
+    <div class="stitle">Execution Order — v3.1 Implementation Sequence</div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Amend EPOS Constitution v3.1 — GRAG Article</div><div class="step-desc">Add Article XII: GRAG Tool Governance. Define read/write boundaries, Event Bus publish permissions, Governance Gate requirements for tool outputs.</div><div class="step-timing">WEEK 1 — Before writing any tool code</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Create tool_manifest.json in Context Vault</div><div class="step-desc">Each tool gets a sovereign manifest with ID, dependencies, failure modes, and constitutional compliance status. Phi-3 loads this on startup to know available tools.</div><div class="step-timing">WEEK 1</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Build Search + Deep Research tools first</div><div class="step-desc">These are stateless and low-risk. Validate the GRAG → Context Vault → Event Bus pipeline works before adding generative tools (image/video).</div><div class="step-timing">WEEK 2</div></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">Add Artifacts + Projects (Context Vault layer)</div><div class="step-desc">Persistent state tools. These touch VAULT directly — must pass Governance Gate. Pre-mortem: what if a project write corrupts an existing Vault entry?</div><div class="step-timing">WEEK 3</div></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-title">Add Image/Video + Roles + TTS/STT</div><div class="step-desc">Generative and voice tools. Brand Validator must run on all generative outputs before they hit the BUS. Voice-to-Mission pipeline needs dedicated failure handling.</div><div class="step-timing">WEEK 4</div></div></div>
+    <div class="step"><div class="step-num" style="background:#7C4DFF;">CJ</div><div class="step-body"><div class="step-title">CJ Map v4.0 trigger: only when TTS enables new voice-first touchpoints</div><div class="step-desc">If the voice layer creates genuinely new customer-facing interactions (phone prospecting, live voice demos), that triggers CJ v4.0 with new TP entries. Until then, v3.1 covers all current touchpoints.</div><div class="step-timing">WHEN VOICE TPs LAUNCH</div></div></div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     QUESTION 2: Google Sheets Redundancy
+═══════════════════════════════════════════════ -->
+
+<div class="q-block">
+  <div class="q-hdr">
+    <div class="q-num" style="color:#00E676;">02</div>
+    <div>
+      <div class="q-title">Google Sheets as Redundancy + Buffer Layer<br>for Automated Record Keeping</div>
+      <span class="q-tag b-green">Infrastructure Decision</span>
+    </div>
+  </div>
+  <div class="q-body">
+
+    <div class="verdict v-green">
+      <div class="v-label" style="color:#00E676;">Verdict — Yes, and Structure it as a 3-Layer Sovereignty Stack</div>
+      Google Sheets redundancy is architecturally sound and aligned with EPOS sovereignty principles — because Google Sheets is <strong style="color:#00E676;">not your primary system</strong>, it's the buffer/backup. AirTable is primary (structured, API-driven, BrowserUse-native). Google Sheets is the mirror (human-readable, offline-accessible, cloud-redundant). Your local Context Vault JSONL files are the sovereign fallback (zero-dependency, yours forever). This is a <strong>3-tier sovereignty stack</strong>, not vendor lock-in.
+    </div>
+
+    <div class="stitle">3-Tier Record Keeping Sovereignty Stack</div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Tier</th><th>System</th><th>Role</th><th>Sync Direction</th><th>Failure Mode</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill p-cyan">T1 PRIMARY</span></td><td><strong>AirTable</strong><br><span class="gr">EPOS Command Base</span></td><td>Source of truth. Structured. API-driven. BrowserUse native. All automations write here first.</td><td>Master → pushes to T2 and T3</td><td>If AirTable down: T2 Google Sheets becomes read-only reference. T3 Vault = ground truth.</td></tr>
+        <tr><td><span class="pill p-green">T2 REDUNDANCY</span></td><td><strong>Google Sheets</strong><br><span class="gr">Mirror + Buffer</span></td><td>Human-readable backup. Buffer for data refinement before promoting to AirTable. Accessible offline via Google Drive desktop sync. Identical schema.</td><td>Receives push from T1. Human can edit and "promote" corrections back to T1.</td><td>If Sheets down: no operational impact. T1 continues normally.</td></tr>
+        <tr><td><span class="pill p-purple">T3 SOVEREIGN</span></td><td><strong>Context Vault JSONL</strong><br><span class="gr">Local filesystem</span></td><td>Constitutional ground truth. Zero vendor dependency. Immutable append log. Every financial transaction + mission + interaction written here first before AirTable API call.</td><td>Written first. T1 and T2 sync FROM T3 via BrowserUse/n8n.</td><td>If T1 and T2 both down: T3 has complete record. Rebuild from T3 is always possible.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="stitle">Data Flow Architecture — Write-Through Pattern</div>
+    <div class="arch-row">
+      <div class="arch-box new">Event<br>(transaction)</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box new">VAULT<br>JSONL write</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box active">AirTable<br>API write</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box" style="border-color:#00E676; color:#00E676; background:rgba(0,230,118,.05);">Google Sheets<br>mirror sync</div>
+    </div>
+    <div class="arch-row" style="margin-top:4px;">
+      <div class="arch-box" style="min-width:120px; font-size:10px; color:var(--gray);">Human refinement</div>
+      <div class="arch-arrow" style="color:var(--amber);">↑</div>
+      <div class="arch-box warn" style="min-width:120px; font-size:10px;">Google Sheets<br>"Buffer Queue"</div>
+      <div class="arch-arrow" style="color:var(--amber);">→</div>
+      <div class="arch-box warn" style="min-width:120px; font-size:10px;">Promote to<br>AirTable on approve</div>
+    </div>
+
+    <div class="stitle">Google Sheets Implementation — Identical Schema Rules</div>
+    <div class="warn-box">
+      <div class="wb-title">Pre-Mortem: What Breaks Schema Identity</div>
+      <ul>
+        <li>Auto-formatting: Google Sheets will auto-format dates as MM/DD/YYYY — AirTable stores ISO 8601. Fix: force all date columns to <code>Plain Text</code> format until export.</li>
+        <li>Currency symbols: Sheets adds $ symbol which breaks numeric comparisons. Fix: store numbers only in both systems, apply formatting display-only.</li>
+        <li>Column ordering: Any manual column reorder in Sheets breaks the sync script. Fix: lock sheet structure via <code>sheet.protect()</code> — read-only for schema columns.</li>
+        <li>Empty strings vs null: AirTable nulls become empty strings in Sheets. Fix: n8n sync script normalizes null → empty string on ingest.</li>
+        <li>Record IDs: AirTable Record IDs (recXXXXXX) must be preserved in Sheets as a reference column. Never delete this column.</li>
+      </ul>
+    </div>
+
+    <div class="stitle">Sync Implementation — n8n Workflow</div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Sync Event</th><th>Trigger</th><th>n8n Flow</th><th>Frequency</th></tr></thead>
+      <tbody>
+        <tr><td>New AirTable record</td><td>AirTable webhook on record create</td><td>AirTable trigger → format transform → Google Sheets append row</td><td>Real-time</td></tr>
+        <tr><td>AirTable record update</td><td>AirTable webhook on field change</td><td>AirTable trigger → find matching row by Record ID → update row in Sheets</td><td>Real-time</td></tr>
+        <tr><td>Sheets "Buffer" promote</td><td>Sheets: column "Promote to AirTable" = TRUE</td><td>Google Sheets trigger → validate schema → AirTable API create/update → mark as promoted</td><td>On change</td></tr>
+        <tr><td>Daily reconciliation</td><td>Scheduled 11pm daily</td><td>Query AirTable count vs Sheets row count. Alert if mismatch &gt; 0.</td><td>Daily</td></tr>
+        <tr><td>Weekly JSONL backup</td><td>Scheduled Sunday 6am</td><td>Read all AirTable tables → write to <code>vault/backups/weekly_{date}.jsonl</code></td><td>Weekly</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     QUESTION 3: Personal/Business Separation + Apps
+═══════════════════════════════════════════════ -->
+
+<div class="q-block">
+  <div class="q-hdr">
+    <div class="q-num" style="color:#FFB300;">03</div>
+    <div>
+      <div class="q-title">Separate Personal + EPOS Data — Build as Bookkeeping<br>and HR Application Series</div>
+      <span class="q-tag b-amber">Node Architecture Decision</span>
+    </div>
+  </div>
+  <div class="q-body">
+
+    <div class="verdict v-amber">
+      <div class="v-label" style="color:#FFB300;">Verdict — Sovereign Separation via Namespace + Standalone Node Apps</div>
+      This is not just a data decision — it's a <strong style="color:#FFB300;">constitutional sovereignty decision</strong>. Personal data and EPOS operational data must live in completely separate namespaces with no shared tables. The financial applications (bookkeeping, HR) are then built as <strong>sovereign nodes</strong> per the Node Sovereignty Constitution — each passes the 13-point independence test and can be sold standalone or composed into EPOS bundles.
+    </div>
+
+    <div class="stitle">Data Namespace Separation Architecture</div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Namespace</th><th>AirTable Base</th><th>Sheets Mirror</th><th>Vault Path</th><th>Access Control</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill p-purple">PERSONAL</span></td><td><strong>LIFE_Command_Base</strong><br>Personal finances, health, estate, family</td><td>Life_Mirror (private)</td><td><code>vault/personal/</code></td><td>Jamie only. Never synced to EPOS operational nodes.</td></tr>
+        <tr><td><span class="pill p-cyan">EPOS OPS</span></td><td><strong>EPOS_Command_Base</strong><br>Business operations, CJ, missions, KPIs</td><td>EPOS_Mirror (operational)</td><td><code>vault/epos/</code></td><td>Agent Zero, BrowserUse, all EPOS nodes.</td></tr>
+        <tr><td><span class="pill p-green">FINANCIAL APPS</span></td><td><strong>FIN_Apps_Base</strong><br>Bookkeeping + HR applications (separate from ops data)</td><td>FIN_Mirror (accountant-shareable)</td><td><code>vault/financial/</code></td><td>EPOS Finance Agent + CPA access only.</td></tr>
+        <tr><td><span class="pill p-amber">PGP PROPERTY</span></td><td><strong>PGP_Command_Base</strong><br>Pressure washing business — separate entity</td><td>PGP_Mirror</td><td><code>vault/pgp/</code></td><td>Jamie + Stacey. Separate from EPOS entirely.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="stitle">Application Series — Bookkeeping App Suite (Sovereign Nodes)</div>
+    <div class="node-grid">
+      <div class="node-card" style="border-color:#FFB300;">
+        <div class="nc-id">APP-FIN-01 / LEDGER</div>
+        <div class="nc-name">General Ledger App</div>
+        <div class="nc-desc">Double-entry bookkeeping. Every transaction has a debit and credit. Auto-categorizes by Schedule C line. Exports IRS-ready reports. Standalone: works without EPOS.</div>
+        <div class="nc-foot"><span class="nc-price">$49/mo standalone</span><span class="nc-tier">Bookkeeping</span></div>
+      </div>
+      <div class="node-card" style="border-color:#FFB300;">
+        <div class="nc-id">APP-FIN-02 / INVOICING</div>
+        <div class="nc-name">Invoice + AR Manager</div>
+        <div class="nc-desc">Create, send, track invoices. Auto-reconciles against Stripe payments. Aging report. 1099 preparation. Client payment history. Integrates with Ledger App.</div>
+        <div class="nc-foot"><span class="nc-price">$39/mo standalone</span><span class="nc-tier">Accounts Receivable</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00E676;">
+        <div class="nc-id">APP-FIN-03 / PAYROLL</div>
+        <div class="nc-name">Owner Payroll + 401k App</div>
+        <div class="nc-desc">S-Corp salary processing. Solo 401(k) contribution tracking. Payroll tax calculations and filing reminders. W-2 generation. Benefit deduction tracking.</div>
+        <div class="nc-foot"><span class="nc-price">$29/mo standalone</span><span class="nc-tier">Payroll</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00E676;">
+        <div class="nc-id">APP-FIN-04 / TAX</div>
+        <div class="nc-name">Tax Planning Command</div>
+        <div class="nc-desc">Quarterly estimated tax calculator. Deduction optimizer. Schedule C preparation assistant. Annual tax projection with lever modeling. Deadline calendar with IRS alerts.</div>
+        <div class="nc-foot"><span class="nc-price">$59/mo standalone</span><span class="nc-tier">Tax Management</span></div>
+      </div>
+      <div class="node-card" style="border-color:#7C4DFF;">
+        <div class="nc-id">APP-FIN-05 / VENDOR</div>
+        <div class="nc-name">Vendor + Contract Manager</div>
+        <div class="nc-desc">All vendor subscriptions. ROI scoring. Auto-renewal alerts. Contract storage. Backup vendor registry. Sovereignty risk assessment per vendor.</div>
+        <div class="nc-foot"><span class="nc-price">$19/mo standalone</span><span class="nc-tier">Vendor Ops</span></div>
+      </div>
+      <div class="node-card" style="border-color:#7C4DFF;">
+        <div class="nc-id">APP-FIN-06 / REPORTING</div>
+        <div class="nc-name">Financial Reporting Suite</div>
+        <div class="nc-desc">Automated P&L, balance sheet, cash flow statement. Weekly/monthly/quarterly reports. KPI dashboard. Accountant-ready exports. Pulls from Ledger App as data source.</div>
+        <div class="nc-foot"><span class="nc-price">$39/mo standalone</span><span class="nc-tier">Reporting</span></div>
+      </div>
+    </div>
+
+    <div class="stitle">HR Application Series (Sovereign Nodes)</div>
+    <div class="node-grid">
+      <div class="node-card" style="border-color:#00D9F5;">
+        <div class="nc-id">APP-HR-01 / BENEFITS</div>
+        <div class="nc-name">Benefits Administration App</div>
+        <div class="nc-desc">All owner benefits — health, dental, vision, mental health. Policy tracking. Premium deduction management. Provider contacts. Written benefit plan policy generator for IRS documentation.</div>
+        <div class="nc-foot"><span class="nc-price">$19/mo standalone</span><span class="nc-tier">HR / Benefits</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00D9F5;">
+        <div class="nc-id">APP-HR-02 / CONTRACTORS</div>
+        <div class="nc-name">Contractor Management App</div>
+        <div class="nc-desc">Contractor registry. Contract templates. SOW tracking. Payment history. Automated 1099 threshold alerts ($600+). IRS classification documentation (employee vs contractor).</div>
+        <div class="nc-foot"><span class="nc-price">$29/mo standalone</span><span class="nc-tier">HR / Contractors</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00D9F5;">
+        <div class="nc-id">APP-HR-03 / COMPLIANCE</div>
+        <div class="nc-name">HR Compliance &amp; Policy App</div>
+        <div class="nc-desc">Written policy document generator. Leave policy. Anti-harassment. Data privacy. AI tool use policy. EPOS-specific: AI agent employment contracts and constitutional governance policies.</div>
+        <div class="nc-foot"><span class="nc-price">$29/mo standalone</span><span class="nc-tier">HR / Compliance</span></div>
+      </div>
+      <div class="node-card" style="border-color:#00D9F5;">
+        <div class="nc-id">APP-HR-04 / MILEAGE</div>
+        <div class="nc-name">Mileage + Expense Tracker</div>
+        <div class="nc-desc">Business mileage log at IRS 72.5¢/mile. Auto-calculates deduction. Home office measurement tracker. Equipment usage log for Section 179 defense. Receipt vault.</div>
+        <div class="nc-foot"><span class="nc-price">$9/mo standalone</span><span class="nc-tier">Expense / HR</span></div>
+      </div>
+    </div>
+
+    <div class="stitle">The Separation Rule — Written in Constitution</div>
+    <div class="warn-box">
+      <div class="wb-title">Constitutional Amendment: Personal / Business Data Firewall</div>
+      <ul>
+        <li><strong style="color:#FFB300;">Article XIII (proposed):</strong> No EPOS operational node shall read from, write to, or reference any field in the LIFE_Command_Base or personal vault namespace. Violation = constitutional breach, immediate quarantine.</li>
+        <li>Personal AirTable base uses separate API key — EPOS agents do not have access to this key. It exists only in Jamie's personal .env, not in the EPOS workspace .env.</li>
+        <li>Trust and estate data (TRUST_ tables) live in LIFE_Command_Base, not EPOS_Command_Base. The two bases may share a Sheets mirror owner (your Google account) but have zero programmatic cross-access.</li>
+        <li>PGP Property Solutions uses PGP_Command_Base — completely separate from EPOS. The shared-business nature with Stacey requires its own data governance (Stacey has read access to PGP tables, not EPOS tables).</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     QUESTION 4: Gap Nodes → Standalone Applications
+═══════════════════════════════════════════════ -->
+
+<div class="q-block">
+  <div class="q-hdr">
+    <div class="q-num" style="color:#7C4DFF;">04</div>
+    <div>
+      <div class="q-title">Business Planning + Administration Gaps<br>→ Standalone Node Applications</div>
+      <span class="q-tag b-purple">Strategic Node Expansion</span>
+    </div>
+  </div>
+  <div class="q-body">
+
+    <div class="verdict v-purple">
+      <div class="v-label" style="color:#7C4DFF;">Verdict — This IS the EPOS Product Strategy</div>
+      Every gap in business planning and administration that EPOS solves internally IS a product. The Node Sovereignty Constitution already requires every node to pass 5 independence tests and have a standalone value proposition. The gap-to-product pipeline is: <strong style="color:#7C4DFF;">(1) Identify gap in operations → (2) Build sovereign node to solve it → (3) Validate internally → (4) Package as standalone product → (5) White-label at agency tier</strong>. This is the flywheel. EPOS is the R&D lab for every product it sells.
+    </div>
+
+    <div class="stitle">Gap Analysis → Product Roadmap Matrix</div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Business Gap</th><th>Pain It Causes</th><th>Node / App</th><th>Standalone Price</th><th>Phase</th></tr></thead>
+      <tbody>
+        <tr><td><strong>No Unified Inbox</strong><br>Leads fragmented across email, DMs, SMS, marketplace</td><td>Missed follow-ups. Inconsistent response time. Lost revenue.</td><td><strong>N-INBOX-01:</strong> Unified Lead Inbox — aggregates all inbound communications, AI triage, priority scoring</td><td class="g">$97/mo</td><td><span class="pill p-amber">Phase 2</span></td></tr>
+        <tr><td><strong>No Proposal System</strong><br>Custom proposals built manually, inconsistent, slow</td><td>Deal velocity lost. No pricing consistency. Scope creep.</td><td><strong>N-PROP-01:</strong> Auto-Proposal Engine — TTLG diagnostic → auto-generates tiered proposal PDF with constitutional pricing rules</td><td class="g">$79/mo</td><td><span class="pill p-amber">Phase 2</span></td></tr>
+        <tr><td><strong>No Contract Management</strong><br>SOWs, NDAs, service agreements done ad hoc</td><td>Legal exposure. No version control. Signature delays.</td><td><strong>N-CONTRACT-01:</strong> Contract Vault — template library, e-signature integration, automated renewal tracking</td><td class="g">$49/mo</td><td><span class="pill p-amber">Phase 2</span></td></tr>
+        <tr><td><strong>No Onboarding Automation</strong><br>New client onboarding is manual and inconsistent</td><td>Poor first impression. Resource drain. No repeatability.</td><td><strong>N-ONBOARD-01:</strong> Client Onboarding Engine — automated welcome sequences, credential collection, access provisioning, progress tracking</td><td class="g">$59/mo</td><td><span class="pill p-green">Phase 3</span></td></tr>
+        <tr><td><strong>No Project Management</strong><br>No structured system for managing client deliverables</td><td>Deadline misses. Scope disputes. No audit trail.</td><td><strong>N-PM-01:</strong> Sovereign Project Manager — milestone tracking, deliverable approval gates, client portal, constitutional audit receipts</td><td class="g">$79/mo</td><td><span class="pill p-green">Phase 3</span></td></tr>
+        <tr><td><strong>No Reputation Management</strong><br>No system for collecting, showcasing, or monitoring reviews</td><td>Social proof gap. Manual testimonial collection. Missed referral opportunities.</td><td><strong>N-REP-01:</strong> Reputation Engine — auto-review requests, testimonial vault, platform monitoring, case study generator</td><td class="g">$39/mo</td><td><span class="pill p-green">Phase 3</span></td></tr>
+        <tr><td><strong>No SOPs / Process Documentation</strong><br>Institutional knowledge lives only in agent prompts</td><td>Can't train humans. Can't audit processes. Single point of failure.</td><td><strong>N-SOP-01:</strong> Process Intelligence App — auto-generates SOPs from EPOS mission logs, version-controlled, searchable</td><td class="g">$49/mo</td><td><span class="pill p-green">Phase 3</span></td></tr>
+        <tr><td><strong>No Competitive Intelligence</strong><br>Market awareness is ad hoc, not systematic</td><td>Reactive positioning. Missed opportunities. Stale content strategy.</td><td><strong>N-CI-01:</strong> Market Intel Engine — competitor tracking, trend monitoring, weekly intelligence brief, feeds Content Lab and TTLG</td><td class="g">$69/mo</td><td><span class="pill p-purple">Phase 4</span></td></tr>
+        <tr><td><strong>No Client Health Scoring</strong><br>No early warning system for at-risk accounts</td><td>Churn surprises. Reactive retention. Lost ARR.</td><td><strong>N-HEALTH-01:</strong> Client Health Monitor — engagement scoring, usage metrics, risk flags, proactive intervention triggers</td><td class="g">$49/mo</td><td><span class="pill p-purple">Phase 4</span></td></tr>
+        <tr><td><strong>No Pricing Intelligence</strong><br>Pricing is manual, not market-calibrated</td><td>Undercharging. No response to market shifts. Manual proposal errors.</td><td><strong>N-PRICE-01:</strong> Pricing Intelligence App — market rate benchmarking, margin analysis, value-based pricing calculator, constitutional pricing enforcement</td><td class="g">$49/mo</td><td><span class="pill p-purple">Phase 4</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="stitle">The Gap-to-Product Pipeline — Constitutional Process</div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><div class="step-title">Gap Identified in EPOS Operations</div><div class="step-desc">A repeated workaround, a manual step that takes more than 30 minutes, or a process with no audit trail. Log in OPS_Missions table as a "System Gap" mission type.</div><div class="step-timing">Ongoing — document every gap as it appears</div></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><div class="step-title">Pre-Mortem Analysis (Mandatory)</div><div class="step-desc">Before building: write the 5 failure scenarios. What if this node produces wrong data? What if it conflicts with an existing node? What if the API it depends on goes down? Document in ARCHITECTURAL_ANALYSIS.md entry.</div><div class="step-timing">Before any code — constitutional requirement</div></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><div class="step-title">Build as Sovereign Node Internally First</div><div class="step-desc">Build it to solve EPOS's own problem. Must pass all 13 independence tests before touching client-facing code. Internal use is the R&D phase. If it doesn't work for EPOS, it won't work for clients.</div><div class="step-timing">Sprint cycle — 2-4 weeks per node</div></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-body"><div class="step-title">TTLG Diagnostic Validates Product-Market Fit</div><div class="step-desc">Run the gap through TTLG with a real prospect in the niche where the gap is most painful. If the diagnostic consistently surfaces this gap as a top-3 pain point, the node has product-market fit before a single line of product code is written.</div><div class="step-timing">During internal validation phase</div></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><div class="step-title">Package, Price, and Add to Node Business Card</div><div class="step-desc">Every node that passes gets a Node Business Card per the Sovereignty Constitution Appendix B template. Price is set based on cost-basis + 3x minimum ROI rule. Added to the EPOS product catalog and node registry.</div><div class="step-timing">Before any external sales</div></div></div>
+    <div class="step"><div class="step-num" style="background:#7C4DFF;">∞</div><div class="step-body"><div class="step-title">Data and Experience from EPOS Operations Feed Product Improvement</div><div class="step-desc">This is the flywheel. Every EPOS mission log, every client interaction, every TTLG diagnostic output refines the product. The Learning Server (I.I.D.E.A.T.E. Evolution stage) automatically proposes improvements to node manifests based on accumulated operation data. EPOS's lived experience IS the product development R&D.</div><div class="step-timing">Perpetual — self-reinforcing loop</div></div></div>
+
+    <div class="stitle">Revenue Potential — Gap Node Product Catalog</div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Tier</th><th>Bundle</th><th>Nodes Included</th><th>Monthly Price</th><th>Target Buyer</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill p-gray">Starter</span></td><td>Ops Foundation</td><td>Ledger + Invoicing + Vendor Manager</td><td class="g">$97/mo</td><td>Solo operator, freelancer, solopreneur</td></tr>
+        <tr><td><span class="pill p-cyan">Growth</span></td><td>Revenue Ops Stack</td><td>Unified Inbox + Auto-Proposal + Contract Vault + Onboarding</td><td class="g">$197/mo</td><td>Small agency, growing service business</td></tr>
+        <tr><td><span class="pill p-green">Scale</span></td><td>Full Business OS</td><td>All Financial Apps + All HR Apps + All Ops Nodes + Client Health + CI</td><td class="g">$397/mo</td><td>Established agency, multi-person team</td></tr>
+        <tr><td><span class="pill p-amber">White Label</span></td><td>Agency Resell Package</td><td>All nodes, white-labeled. Agency sells to their clients at $197-297/client</td><td class="g">$997/mo</td><td>Agency wanting to productize operations</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- MASTER SUMMARY -->
+<div class="q-block" style="border-color:#00D9F5;">
+  <div class="q-hdr" style="background:rgba(0,217,245,.05);">
+    <div class="q-num" style="color:#00D9F5;">∑</div>
+    <div>
+      <div class="q-title">Master Summary — The Four Decisions as One System</div>
+      <span class="q-tag b-cyan">9th Order Strategic View</span>
+    </div>
+  </div>
+  <div class="q-body">
+    <div class="info-box">
+      <div class="ib-title">The Unified Architecture That Emerges From All Four Answers</div>
+      <p>These four questions are not separate decisions — they describe a single evolving system. <strong style="color:#00D9F5;">Q1</strong> (Phi-3 tools + GRAG) expands what EPOS can sense and generate. <strong style="color:#00E676;">Q2</strong> (Google Sheets redundancy) ensures nothing is ever lost. <strong style="color:#FFB300;">Q3</strong> (data separation + apps) ensures every system knows what it owns and what it doesn't. <strong style="color:#7C4DFF;">Q4</strong> (gap nodes as products) ensures that every inefficiency EPOS solves internally becomes revenue. Together, this is the architecture of a self-funding, self-improving organism that earns money from its own operations data.</p>
+    </div>
+    <div class="tbl-w">
+    <table>
+      <thead><tr><th>Decision</th><th>Constitutional Version</th><th>Immediate Action</th><th>Revenue Impact</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Q1 — Phi-3 Tool Upgrades</strong></td><td><span class="pill p-cyan">EPOS Constitution v3.1</span></td><td>Write GRAG Article (Article XII) BEFORE coding any tool</td><td>Enables 10x output velocity — content, research, voice — multiplying all downstream revenue nodes</td></tr>
+        <tr><td><strong>Q2 — Google Sheets Redundancy</strong></td><td><span class="pill p-green">Infrastructure Layer</span></td><td>Build n8n AirTable → Sheets sync workflow this week</td><td>Zero-loss financial records → audit-ready → S-Corp and trust structures defensible</td></tr>
+        <tr><td><strong>Q3 — Data Separation + Apps</strong></td><td><span class="pill p-amber">Constitution Article XIII</span></td><td>Create 4 separate AirTable bases with firewall rule this week</td><td>Financial app series = $207-235/mo potential standalone revenue per client at Phase 2</td></tr>
+        <tr><td><strong>Q4 — Gap Nodes → Products</strong></td><td><span class="pill p-purple">Node Sovereignty Constitution</span></td><td>Log current operational gaps in OPS_Missions as system gap entries now</td><td>$97-997/mo per bundle. 10 gap nodes × 100 clients = $200K-$1M ARR incremental</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="ftr">
+  EPOS ARCHITECTURE DECISIONS v3.1 — FEBRUARY 2026 — EXPONERE / JAMIE PURDUE<br>
+  CONSTITUTIONAL AUTHORITY: EPOS CONSTITUTION v3.1 + NODE SOVEREIGNTY CONSTITUTION v1.0
+</div>
+
+</body>
+</html>

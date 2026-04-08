@@ -1,0 +1,20 @@
+{
+  "skills": {
+    "generative_model_rotation": {
+      "skill_id": "generative_model_rotation_v1",
+      "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\skills\\generative_model_rotation\\generative_model_rotation_v1.json",
+      "domain": "generative_model_rotation",
+      "version": "1.0",
+      "compiled_at": "2026-03-30T13:38:00.524344+00:00",
+      "friday_invocation": "python epos.py skills invoke generative_model_rotation"
+    },
+    "echoes_imagery_generation": {
+      "skill_id": "echoes_imagery_generation_v1",
+      "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\context_vault\\skills\\echoes_imagery_generation\\echoes_imagery_generation_v1.json",
+      "domain": "echoes_imagery_generation",
+      "version": "1.0",
+      "compiled_at": "2026-03-30T13:38:06.908779+00:00",
+      "friday_invocation": "python epos.py skills invoke echoes_imagery_generation"
+    }
+  }
+}

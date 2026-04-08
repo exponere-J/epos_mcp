@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='utf8'?>
+<nuitka-compilation-report nuitka_version="2.8.9" nuitka_commercial_version="not installed" mode="module" completion="error exit message (1)" exit_message="Failed unexpectedly in Scons C backend compilation.">
+  <module name="epos_hq" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents.base_agent" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\base_agent.py">
+    <optimization-time pass="1" time="0.01" micro_passes="5" max_branch_merge="36" merged_total="665" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="34" merged_total="122" />
+    <module_usages>
+      <module_usage name="asyncio" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="httpx" finding="absolute" line="2" />
+      <module_usage name="epos_hq.core.mcp_hub" finding="absolute" line="3" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents.computeruse_agent" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\computeruse_agent.py">
+    <optimization-time pass="1" time="0.01" micro_passes="5" max_branch_merge="15" merged_total="174" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="15" merged_total="32" />
+    <module_usages>
+      <module_usage name="epos_hq.agents.base_agent" finding="absolute" line="1" />
+      <module_usage name="epos_hq.workflows.computeruse.runner" finding="absolute" line="2" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents.huntsman_agent" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\huntsman_agent.py">
+    <optimization-time pass="1" time="0.00" micro_passes="5" max_branch_merge="15" merged_total="174" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="15" merged_total="32" />
+    <module_usages>
+      <module_usage name="epos_hq.agents.base_agent" finding="absolute" line="1" />
+      <module_usage name="epos_hq.workflows.browser.huntsman" finding="absolute" line="2" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents.mistral_agent" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\mistral_agent.py">
+    <optimization-time pass="1" time="0.00" micro_passes="5" max_branch_merge="14" merged_total="234" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="14" merged_total="44" />
+    <module_usages>
+      <module_usage name="epos_hq.agents.base_agent" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents.phi3_agent" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\phi3_agent.py">
+    <optimization-time pass="1" time="0.00" micro_passes="5" max_branch_merge="14" merged_total="234" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="14" merged_total="44" />
+    <module_usages>
+      <module_usage name="epos_hq.agents.base_agent" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.agents.phi4_agent" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\agents\phi4_agent.py">
+    <optimization-time pass="1" time="0.01" micro_passes="5" max_branch_merge="14" merged_total="234" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="14" merged_total="44" />
+    <module_usages>
+      <module_usage name="epos_hq.agents.base_agent" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.core" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\core\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.core.license" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\core\license.py">
+    <optimization-time pass="1" time="0.07" micro_passes="5" max_branch_merge="15" merged_total="565" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="15" merged_total="97" />
+    <module_usages>
+      <module_usage name="httpx" finding="absolute" line="2" />
+      <module_usage name="json" finding="excluded" line="3" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="os" finding="excluded" line="4" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="hashlib" finding="excluded" line="5" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="uuid" finding="excluded" line="6" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib" finding="excluded" line="7" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib.Path" finding="not-found" line="7" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.core.mcp_hub" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\core\mcp_hub.py">
+    <optimization-time pass="1" time="0.18" micro_passes="7" max_branch_merge="55" merged_total="2694" />
+    <optimization-time pass="2" time="0.01" micro_passes="1" max_branch_merge="51" merged_total="359" />
+    <module_usages>
+      <module_usage name="asyncio" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="json" finding="excluded" line="2" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="uuid" finding="excluded" line="3" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="sys" finding="absolute" line="4" />
+      <module_usage name="os" finding="excluded" line="5" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="time" finding="absolute" line="6" />
+      <module_usage name="tempfile" finding="excluded" line="7" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="shutil" finding="excluded" line="8" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="datetime" finding="excluded" line="9" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="typing" finding="excluded" line="10" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="enum" finding="excluded" line="11" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib" finding="excluded" line="12" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib.Path" finding="not-found" line="12" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.scripts" kind="CompiledPythonNamespacePackage" usage="package" reason="Containing package of 'epos_hq.scripts.inject_content_lab'." source_path="${cwd}\epos_hq\scripts">
+    <optimization-time pass="1" time="0.00" micro_passes="4" max_branch_merge="1" merged_total="2" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.scripts.export_artifacts" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\scripts\export_artifacts.py">
+    <optimization-time pass="1" time="0.01" micro_passes="5" max_branch_merge="16" merged_total="528" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="15" merged_total="104" />
+    <module_usages>
+      <module_usage name="json" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib" finding="excluded" line="2" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib.Path" finding="not-found" line="2" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.scripts.inject_content_lab" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\scripts\inject_content_lab.py">
+    <optimization-time pass="1" time="0.00" micro_passes="4" max_branch_merge="2" merged_total="8" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="2" merged_total="2" />
+    <module_usages>
+      <module_usage name="asyncio" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="sys" finding="absolute" line="2" />
+      <module_usage name="pathlib" finding="excluded" line="3" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib.Path" finding="not-found" line="3" />
+      <module_usage name="epos_hq.core.mcp_hub" finding="absolute" line="8" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.succession" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\succession\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.succession.monitor" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\succession\monitor.py">
+    <optimization-time pass="1" time="0.03" micro_passes="5" max_branch_merge="8" merged_total="60" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="2" merged_total="8" />
+    <module_usages>
+      <module_usage name="asyncio" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="time" finding="absolute" line="2" />
+      <module_usage name="epos_hq.core.mcp_hub" finding="absolute" line="3" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.ui" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\ui\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.ui.command_center" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\ui\command_center.py">
+    <optimization-time pass="1" time="0.09" micro_passes="5" max_branch_merge="65" merged_total="943" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="65" merged_total="188" />
+    <module_usages>
+      <module_usage name="streamlit" finding="absolute" line="1" />
+      <module_usage name="json" finding="excluded" line="2" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="time" finding="absolute" line="3" />
+      <module_usage name="pandas" finding="absolute" line="4" />
+      <module_usage name="pathlib" finding="excluded" line="5" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="pathlib.Path" finding="not-found" line="5" />
+      <module_usage name="datetime" finding="excluded" line="6" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.workflows" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\workflows\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.workflows.browser" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\workflows\browser\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.workflows.browser.huntsman" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\workflows\browser\huntsman.py">
+    <optimization-time pass="1" time="0.08" micro_passes="5" max_branch_merge="32" merged_total="449" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="30" merged_total="83" />
+    <module_usages>
+      <module_usage name="json" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="typing" finding="excluded" line="2" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+      <module_usage name="playwright.async_api" finding="absolute" line="3" />
+      <module_usage name="playwright.async_api.async_playwright" finding="not-found" line="3" />
+    </module_usages>
+  </module>
+  <module name="epos_hq.workflows.computeruse" kind="CompiledPythonPackage" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\workflows\computeruse\__init__.py">
+    <optimization-time pass="1" time="0.00" micro_passes="3" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="excluded" line="1" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.workflows.computeruse.runner" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\workflows\computeruse\runner.py">
+    <optimization-time pass="1" time="0.03" micro_passes="5" max_branch_merge="38" merged_total="288" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" max_branch_merge="32" merged_total="55" />
+    <module_usages>
+      <module_usage name="pyautogui" finding="absolute" line="1" />
+      <module_usage name="time" finding="absolute" line="2" />
+      <module_usage name="json" finding="excluded" line="3" exclusion_reason="Not following into stdlib unless standalone or requested to follow into stdlib." />
+    </module_usages>
+  </module>
+  <module name="epos_hq.workflows.content_pipeline" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${cwd}\epos_hq\workflows\content_pipeline.py">
+    <optimization-time pass="1" time="0.00" micro_passes="4" />
+    <optimization-time pass="2" time="0.00" micro_passes="1" />
+    <module_usages />
+  </module>
+  <performance>
+    <memory_usage name="after_launch" value="38088704" />
+    <memory_usage name="before_c_code_generation" value="41603072" />
+    <memory_usage name="before_running_scons" value="46424064" />
+  </performance>
+  <data_composer blob_size="15863" total="1096">
+    <module_data filename="__bytecode.const" blob_name=".bytecode" blob_size="3" input_size="0" />
+    <module_data filename="__constants.const" blob_name="" blob_size="830" input_size="2106" />
+    <module_data filename="module.epos_hq.agents.base_agent.const" blob_name="epos_hq.agents.base_agent" blob_size="980" input_size="1878" />
+    <module_data filename="module.epos_hq.agents.computeruse_agent.const" blob_name="epos_hq.agents.computeruse_agent" blob_size="616" input_size="1021" />
+    <module_data filename="module.epos_hq.agents.const" blob_name="epos_hq.agents" blob_size="290" input_size="537" />
+    <module_data filename="module.epos_hq.agents.huntsman_agent.const" blob_name="epos_hq.agents.huntsman_agent" blob_size="586" input_size="995" />
+    <module_data filename="module.epos_hq.agents.mistral_agent.const" blob_name="epos_hq.agents.mistral_agent" blob_size="641" input_size="1086" />
+    <module_data filename="module.epos_hq.agents.phi3_agent.const" blob_name="epos_hq.agents.phi3_agent" blob_size="596" input_size="1041" />
+    <module_data filename="module.epos_hq.agents.phi4_agent.const" blob_name="epos_hq.agents.phi4_agent" blob_size="642" input_size="1100" />
+    <module_data filename="module.epos_hq.const" blob_name="epos_hq" blob_size="238" input_size="471" />
+    <module_data filename="module.epos_hq.core.const" blob_name="epos_hq.core" blob_size="282" input_size="529" />
+    <module_data filename="module.epos_hq.core.license.const" blob_name="epos_hq.core.license" blob_size="1106" input_size="2067" />
+    <module_data filename="module.epos_hq.core.mcp_hub.const" blob_name="epos_hq.core.mcp_hub" blob_size="2066" input_size="3938" />
+    <module_data filename="module.epos_hq.scripts.const" blob_name="epos_hq.scripts" blob_size="211" input_size="394" />
+    <module_data filename="module.epos_hq.scripts.export_artifacts.const" blob_name="epos_hq.scripts.export_artifacts" blob_size="548" input_size="1169" />
+    <module_data filename="module.epos_hq.scripts.inject_content_lab.const" blob_name="epos_hq.scripts.inject_content_lab" blob_size="753" input_size="1157" />
+    <module_data filename="module.epos_hq.succession.const" blob_name="epos_hq.succession" blob_size="306" input_size="553" />
+    <module_data filename="module.epos_hq.succession.monitor.const" blob_name="epos_hq.succession.monitor" blob_size="474" input_size="896" />
+    <module_data filename="module.epos_hq.ui.command_center.const" blob_name="epos_hq.ui.command_center" blob_size="1254" input_size="2789" />
+    <module_data filename="module.epos_hq.ui.const" blob_name="epos_hq.ui" blob_size="274" input_size="521" />
+    <module_data filename="module.epos_hq.workflows.browser.const" blob_name="epos_hq.workflows.browser" blob_size="394" input_size="668" />
+    <module_data filename="module.epos_hq.workflows.browser.huntsman.const" blob_name="epos_hq.workflows.browser.huntsman" blob_size="683" input_size="1374" />
+    <module_data filename="module.epos_hq.workflows.computeruse.const" blob_name="epos_hq.workflows.computeruse" blob_size="414" input_size="688" />
+    <module_data filename="module.epos_hq.workflows.computeruse.runner.const" blob_name="epos_hq.workflows.computeruse.runner" blob_size="459" input_size="905" />
+    <module_data filename="module.epos_hq.workflows.const" blob_name="epos_hq.workflows" blob_size="302" input_size="549" />
+    <module_data filename="module.epos_hq.workflows.content_pipeline.const" blob_name="epos_hq.workflows.content_pipeline" blob_size="196" input_size="350" />
+  </data_composer>
+  <command_line>
+    <option value="--module" />
+    <option value="--include-package=epos_hq" />
+    <option value="--output-dir=C:\Users\Jamie\workspace\epos_mcp\dist" />
+    <option value="--remove-output" />
+    <option value="--no-pyi-file" />
+    <option value="C:\Users\Jamie\workspace\epos_mcp\epos_hq" />
+  </command_line>
+  <plugins>
+    <plugin name="anti-bloat" user_enabled="no" />
+    <plugin name="eventlet" user_enabled="no" />
+    <plugin name="gi" user_enabled="no" />
+    <plugin name="implicit-imports" user_enabled="no" />
+    <plugin name="options-nanny" user_enabled="no" />
+    <plugin name="pkg-resources" user_enabled="no" />
+    <plugin name="transformers" user_enabled="no" />
+  </plugins>
+  <distributions />
+  <python python_exe="${sys.prefix}\Scripts\python.exe" python_flavor="CPython Official" python_version="3.13.2" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8" gil="yes">
+    <search_path>
+      <path value="${cwd}" />
+      <path value="${sys.real_prefix}\DLLs" />
+      <path value="${sys.real_prefix}\Lib" />
+      <path value="${sys.real_prefix}" />
+      <path value="${sys.prefix}" />
+      <path value="${sys.prefix}\Lib\site-packages" />
+    </search_path>
+  </python>
+  <output run_filename="${cwd}\dist\epos_hq.cp313-win_amd64.pyd" />
+</nuitka-compilation-report>

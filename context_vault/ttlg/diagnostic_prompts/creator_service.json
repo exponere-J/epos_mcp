@@ -1,0 +1,35 @@
+{
+  "niche": "creator",
+  "track": "service",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Content Quality",
+    "Audience Engagement",
+    "Service Delivery",
+    "Client Acquisition",
+    "Revenue Growth"
+  ],
+  "key_bottleneck_patterns": [
+    "Inconsistent Content Scheduling",
+    "Ineffective Client Communication",
+    "Insufficient Marketing Efforts"
+  ],
+  "thinker_context": "As a creator in the service track, your business relies heavily on your ability to consistently deliver high-quality content and services to your clients. However, with the ever-changing landscape of the creative industry, it can be challenging to stay ahead of the curve and identify areas for improvement. A thorough audit of your service track can help you pinpoint bottlenecks and opportunities for growth, allowing you to refine your strategy and better serve your clients.",
+  "surgeon_priorities": [
+    "Develop a Content Calendar to Ensure Consistency",
+    "Implement a Client Relationship Management System",
+    "Invest in Targeted Marketing Efforts to Reach New Clients"
+  ],
+  "mirror_report_tone": "Empathetic and Solution-Focused",
+  "desire_vocabulary": [
+    "Inspiration",
+    "Creativity",
+    "Growth",
+    "Engagement",
+    "Authenticity",
+    "Connection",
+    "Innovation",
+    "Success"
+  ],
+  "generated_at": "2026-03-29T19:07:25.286386+00:00"
+}

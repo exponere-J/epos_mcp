@@ -1,0 +1,17 @@
+{
+  "brief_id": "CB-LEGO-020",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "architect",
+  "hook_type": "statistic",
+  "visual_mask": "schematic",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Data from 1000 LEGO reviews shows which sets beginners actually finish building.",
+  "hook_line": "73 percent of beginners never finish their first LEGO set. Unless they pick this one.",
+  "cta": "The set with the highest completion rate. Link below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Creator Expert Fiat 500"
+  ],
+  "status": "draft"
+}

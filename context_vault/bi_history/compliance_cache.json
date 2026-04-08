@@ -1,0 +1,28 @@
+{
+  "cached_at": "2026-03-28T21:28:35.048748+00:00",
+  "compliance_score": 88.2,
+  "files_audited": 93,
+  "total_violations": 15,
+  "top_violations": [
+    {
+      "code": "ERR-PATH-002",
+      "count": 8
+    },
+    {
+      "code": "ERR-IMPORT-001",
+      "count": 3
+    },
+    {
+      "code": "ERR-DOCSTRING-001",
+      "count": 2
+    },
+    {
+      "code": "ERR-VERSION-001",
+      "count": 1
+    },
+    {
+      "code": "ERR-IMPORT-002",
+      "count": 1
+    }
+  ]
+}

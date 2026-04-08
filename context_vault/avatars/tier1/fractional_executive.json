@@ -1,0 +1,90 @@
+{
+  "avatar_id": "fractional_executive",
+  "display_name": "Fractional Executive",
+  "tier": 1,
+  "tier_rationale": "Manages a portfolio of 3-8 clients simultaneously. Per-seat economics lock in. High status and high network effect — they bring EPOS into every client.",
+  "tagline": "A senior operator running 3-8 client engagements who needs leverage to look senior in all of them at once.",
+  "demographics": {
+    "role_titles": ["Fractional CMO", "Fractional COO", "Fractional CFO", "Fractional Head of Growth", "Fractional CTO"],
+    "company_size": "1 (operator) serving 3-8 clients",
+    "annual_revenue_range": "$200K - $750K",
+    "team_size": "0-2 (sometimes a coordinator)",
+    "decision_authority": "sole over personal stack; influences client stack"
+  },
+  "psychographics": {
+    "self_identity": "I am the senior brain my clients can't afford full-time.",
+    "core_belief": "Every hour billed must look like 10 hours of value.",
+    "fear": "Being exposed as spread too thin across clients.",
+    "ambition": "Run 8 clients with the polish of an embedded executive.",
+    "status_anxiety": "Looking like a consultant playing executive."
+  },
+  "pain_points": [
+    {"pain": "Context-switching between 5 clients destroys depth", "severity": 10, "frequency": "daily"},
+    {"pain": "Each client expects bespoke artifacts, drowning admin time", "severity": 9, "frequency": "weekly"},
+    {"pain": "Hard to show measurable impact across diverse engagements", "severity": 8, "frequency": "monthly"},
+    {"pain": "Cannot remember the right context for the right client meeting", "severity": 9, "frequency": "daily"},
+    {"pain": "Pipeline of new fractional clients is unpredictable", "severity": 8, "frequency": "monthly"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "Per-client context vault that loads instantly before any meeting", "priority": 1},
+    {"outcome": "Reusable executive artifacts that personalize automatically", "priority": 2},
+    {"outcome": "Cross-client metrics dashboard for personal P&L", "priority": 3},
+    {"outcome": "Inbound pipeline for fractional engagements", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Just dropped a critical detail in a client meeting", "urgency_score": 10},
+    {"trigger": "Client churned citing 'lack of focus'", "urgency_score": 10},
+    {"trigger": "Revenue plateaued because cannot take more clients", "urgency_score": 9},
+    {"trigger": "Considering hiring an EA / coordinator", "urgency_score": 8},
+    {"trigger": "Network peer announced new fractional gig", "urgency_score": 7}
+  ],
+  "objections": [
+    {"objection": "Each client is too different for one system", "counter_angle": "Sovereign per-client vaults; one OS, many tenants."},
+    {"objection": "I don't want client data mingled", "counter_angle": "Sovereign install on operator's machine; per-client encryption boundaries."},
+    {"objection": "Setup time costs me billable hours", "counter_angle": "Onboarding new client into EPOS takes 30 min and recovers 5 hours/week."},
+    {"objection": "Will my clients see this?", "counter_angle": "Operator-private by default; client-facing reports are opt-in artifacts."}
+  ],
+  "channels": {
+    "primary": ["LinkedIn", "Fractional networks (Continuum, Chief Outsiders, etc.)", "Peer Slack groups"],
+    "secondary": ["Newsletter", "Podcast guesting", "Industry events"],
+    "avoided": ["Cold email", "Mass marketing", "Display ads"]
+  },
+  "communication_preferences": {
+    "tone": "Senior peer, executive vocabulary, time-respecting",
+    "length": "Short-medium; executive-summary first",
+    "format": ["one-page summaries", "frameworks", "executive briefings", "dashboards"],
+    "vocabulary": "Leverage, portfolio, throughput, retention, board-ready",
+    "proof_type": "Per-client outcome stories + portfolio P&L visibility"
+  },
+  "crs_weights": {
+    "engagement": 0.20,
+    "intent_keywords": 0.30,
+    "channel_match": 0.20,
+    "timing": 0.15,
+    "social_proof_response": 0.15
+  },
+  "niche_tags": ["fractional", "executive", "portfolio", "advisory", "CXO", "operator"],
+  "price_tolerance": {
+    "monthly_floor": 197,
+    "monthly_ceiling": 997,
+    "one_time_floor": 2500,
+    "one_time_ceiling": 25000,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "LinkedIn essay on fractional context-switching tax",
+    "interest": "Free 'Portfolio Diagnostic' showing per-client leverage gaps",
+    "consideration": "Mirror Report on operator's portfolio + load-balancing recommendations",
+    "decision": "Sovereign install + 30-day onboarding for first 3 clients",
+    "retention": "Quarterly portfolio reviews + new client onboarding workflow"
+  },
+  "signal_keywords": [
+    "fractional CMO", "fractional COO", "fractional CFO", "fractional CTO", "portfolio of clients",
+    "context switching", "multiple clients", "executive bandwidth", "spread thin",
+    "client capacity", "fractional executive", "embedded operator"
+  ],
+  "exclusion_keywords": [
+    "full-time executive", "employed", "W2", "looking for a job", "career change",
+    "first executive role", "MBA student"
+  ]
+}

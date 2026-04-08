@@ -1,0 +1,69 @@
+{
+  "nodes": {
+    "niche_lego_affiliate": {
+      "node_id": "niche_lego_affiliate",
+      "node_type": "niche",
+      "attributes": {
+        "niche_id": "lego_affiliate"
+      },
+      "created_at": "2026-03-29T19:38:35.107995+00:00",
+      "updated_at": "2026-03-29T19:38:35.107995+00:00"
+    }
+  },
+  "edges": {
+    "niche_lego_affiliate_hook_list": {
+      "edge_id": "niche_lego_affiliate_hook_list",
+      "source_id": "niche_lego_affiliate",
+      "target_id": "hook_list",
+      "relationship": "eri_resonance",
+      "weight": 0.72,
+      "evidence_count": 2,
+      "last_updated": "2026-03-29T19:38:35.105858+00:00"
+    },
+    "niche_lego_affiliate_hook_question": {
+      "edge_id": "niche_lego_affiliate_hook_question",
+      "source_id": "niche_lego_affiliate",
+      "target_id": "hook_question",
+      "relationship": "eri_resonance",
+      "weight": 0.45,
+      "evidence_count": 1,
+      "last_updated": "2026-03-29T19:37:43.212304+00:00"
+    },
+    "segment_small_business_converted": {
+      "edge_id": "segment_small_business_converted",
+      "source_id": "segment_small_business",
+      "target_id": "conversion_success",
+      "relationship": "conversion_confirmed",
+      "weight": 1.0,
+      "evidence_count": 3,
+      "last_updated": "2026-04-04T14:51:15.492590+00:00"
+    },
+    "contact_test-001_conversion": {
+      "edge_id": "contact_test-001_conversion",
+      "source_id": "contact_test-001",
+      "target_id": "conversion",
+      "relationship": "converted",
+      "weight": 1.0,
+      "evidence_count": 1,
+      "last_updated": "2026-03-29T19:38:35.153499+00:00"
+    },
+    "fotw_local_service_purchase_intent": {
+      "edge_id": "fotw_local_service_purchase_intent",
+      "source_id": "niche_local_service",
+      "target_id": "signal_purchase_intent",
+      "relationship": "session_signal_frequency",
+      "weight": 0.2,
+      "evidence_count": 1,
+      "last_updated": "2026-03-29T20:12:02.631805+00:00"
+    },
+    "contact_test-pgp_conversion": {
+      "edge_id": "contact_test-pgp_conversion",
+      "source_id": "contact_test-pgp",
+      "target_id": "conversion",
+      "relationship": "converted",
+      "weight": 1.0,
+      "evidence_count": 2,
+      "last_updated": "2026-04-04T14:51:15.500647+00:00"
+    }
+  }
+}

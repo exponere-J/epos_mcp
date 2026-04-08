@@ -1,0 +1,29 @@
+{
+  "mission_id": "AZ-002-AIRTABLE-BASES",
+  "title": "Create AirTable Bases via BrowserUse",
+  "description": "Automate creation of 4 AirTable bases with full schema",
+  "priority": "HIGH",
+  "week": 1,
+  "estimated_duration": "2 hours",
+  "dependencies": [
+    "Playwright installed",
+    "AirTable credentials in .env"
+  ],
+  "tasks": [
+    "Run browseruse_airtable_setup.py --base 'EPOS Command Base'",
+    "Run browseruse_airtable_setup.py --base 'LIFE Command Base'",
+    "Run browseruse_airtable_setup.py --base 'FIN Apps Base'",
+    "Run browseruse_airtable_setup.py --base 'PGP Command Base'",
+    "Capture base IDs to context_vault/airtable/base_manifest.json",
+    "Update epos_config.json with base IDs"
+  ],
+  "constitutional_compliance": [
+    "Article XIII: Personal/business data firewall"
+  ],
+  "success_criteria": [
+    "4 bases created",
+    "Base IDs captured",
+    "Schema validated"
+  ],
+  "failure_recovery": "Manual base creation as fallback, document base IDs"
+}

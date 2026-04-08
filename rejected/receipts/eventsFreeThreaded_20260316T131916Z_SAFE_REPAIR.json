@@ -1,0 +1,29 @@
+{
+  "governance_gate_version": "1.0",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3.1.md",
+  "timestamp": "2026-03-16T13:19:16.386854+00:00",
+  "file": "rejected/eventsFreeThreaded.py",
+  "verdict": "SAFE_REPAIR",
+  "violations": [
+    {
+      "code": "ERR-HEADER-001",
+      "article": "Article III (Governance Gate Triage)",
+      "message": "Missing mandatory file header with absolute path.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": 1,
+      "suggestion": "# File: C:\\Users\\Jamie\\workspace\\epos_mcp\\eventsFreeThreaded.py"
+    },
+    {
+      "code": "ERR-CONFIG-001",
+      "article": "Article II Rule 6 (Configuration Explicitness)",
+      "message": "Entrypoint missing explicit load_dotenv() call.",
+      "severity": "mechanical",
+      "repairable": true,
+      "line_number": 1,
+      "suggestion": "from dotenv import load_dotenv; load_dotenv(Path(__file__).parent / '.env')"
+    }
+  ],
+  "repairs_applied": [],
+  "rollback_path": null
+}

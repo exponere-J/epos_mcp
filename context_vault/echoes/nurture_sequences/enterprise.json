@@ -1,0 +1,57 @@
+{
+  "segment_id": "enterprise",
+  "sequence_name": "The Enterprise Command Path",
+  "trigger": "email_captured + segment_classified",
+  "emails": [
+    {
+      "sequence_position": 1,
+      "delay_hours": 0,
+      "subject": "Email 1 for enterprise",
+      "preview_text": "Preview 1",
+      "body_brief": "Nurture email 1 of 5 for enterprise segment",
+      "cta": "Explore",
+      "cta_url_template": "https://echoes.marketing/enterprise/1",
+      "score_event_on_click": "email_clicked"
+    },
+    {
+      "sequence_position": 2,
+      "delay_hours": 48,
+      "subject": "Email 2 for enterprise",
+      "preview_text": "Preview 2",
+      "body_brief": "Nurture email 2 of 5 for enterprise segment",
+      "cta": "Learn More",
+      "cta_url_template": "https://echoes.marketing/enterprise/2",
+      "score_event_on_click": "email_clicked"
+    },
+    {
+      "sequence_position": 3,
+      "delay_hours": 120,
+      "subject": "Email 3 for enterprise",
+      "preview_text": "Preview 3",
+      "body_brief": "Nurture email 3 of 5 for enterprise segment",
+      "cta": "Read Story",
+      "cta_url_template": "https://echoes.marketing/enterprise/3",
+      "score_event_on_click": "email_clicked"
+    },
+    {
+      "sequence_position": 4,
+      "delay_hours": 168,
+      "subject": "Email 4 for enterprise",
+      "preview_text": "Preview 4",
+      "body_brief": "Nurture email 4 of 5 for enterprise segment",
+      "cta": "Get Free Audit",
+      "cta_url_template": "https://echoes.marketing/enterprise/4",
+      "score_event_on_click": "free_tool_used"
+    },
+    {
+      "sequence_position": 5,
+      "delay_hours": 240,
+      "subject": "Email 5 for enterprise",
+      "preview_text": "Preview 5",
+      "body_brief": "Nurture email 5 of 5 for enterprise segment",
+      "cta": "Book Call",
+      "cta_url_template": "https://echoes.marketing/enterprise/5",
+      "score_event_on_click": "discovery_call_booked"
+    }
+  ]
+}

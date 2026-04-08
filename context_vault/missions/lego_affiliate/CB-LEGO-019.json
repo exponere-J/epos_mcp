@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-019",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "question",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Most beginner LEGO recommendations are wrong because they ignore the build experience.",
+  "hook_line": "Everyone recommends the wrong first LEGO set. Here is why.",
+  "cta": "The actual best starter set. Link in bio.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Technic starter",
+    "LEGO City starter"
+  ],
+  "status": "draft"
+}

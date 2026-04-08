@@ -1,0 +1,29 @@
+{
+  "mission_id": "AZ-004-GOOGLE-SHEETS-SYNC",
+  "title": "Build 3-Tier Sovereignty Stack",
+  "description": "Wire Context Vault \u2192 AirTable \u2192 Google Sheets sync",
+  "priority": "HIGH",
+  "week": 3,
+  "estimated_duration": "6 hours",
+  "dependencies": [
+    "AirTable bases created",
+    "n8n installed"
+  ],
+  "tasks": [
+    "Create Google Sheets mirrors for each AirTable table",
+    "Build n8n workflow: AirTable webhook \u2192 Sheets append",
+    "Build n8n workflow: Sheets buffer \u2192 AirTable API",
+    "Build reconciliation workflow (daily 11pm)",
+    "Test: Create AirTable record \u2192 verify Sheets sync < 30 sec",
+    "Create Context Vault JSONL logging layer"
+  ],
+  "constitutional_compliance": [
+    "3-tier sovereignty stack requirement"
+  ],
+  "success_criteria": [
+    "Real-time sync working",
+    "Daily reconciliation shows 0 mismatch",
+    "JSONL logs present"
+  ],
+  "failure_recovery": "Manual Sheets update as fallback, document sync gaps"
+}

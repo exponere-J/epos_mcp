@@ -1,0 +1,90 @@
+{
+  "avatar_id": "solo_strategic_consultant",
+  "display_name": "Solo Strategic Consultant",
+  "tier": 1,
+  "tier_rationale": "Highest LTV-to-CAC for EPOS. Single decision-maker, immediate pain (time leverage), high tolerance for tooling spend that returns hours.",
+  "tagline": "An expert who sells judgment but is being eaten alive by delivery work.",
+  "demographics": {
+    "role_titles": ["Independent Consultant", "Strategy Advisor", "Management Consultant", "Solo Practitioner"],
+    "company_size": "1 (sometimes +1 VA)",
+    "annual_revenue_range": "$120K - $450K",
+    "team_size": "0-1",
+    "decision_authority": "sole"
+  },
+  "psychographics": {
+    "self_identity": "I am the product. My thinking is the asset.",
+    "core_belief": "Leverage comes from systems, not headcount.",
+    "fear": "Becoming a glorified freelancer trapped in delivery.",
+    "ambition": "Productize expertise into a recurring engine that doesn't need me daily.",
+    "status_anxiety": "Looking 'small' next to agencies; being seen as just-a-freelancer."
+  },
+  "pain_points": [
+    {"pain": "Every new client doubles the operational load", "severity": 9, "frequency": "weekly"},
+    {"pain": "Proposal-writing eats billable time", "severity": 8, "frequency": "weekly"},
+    {"pain": "No content engine — pipeline depends on referrals", "severity": 8, "frequency": "monthly"},
+    {"pain": "Knowledge stays in head, not in systems", "severity": 7, "frequency": "daily"},
+    {"pain": "Cannot take a vacation without revenue stopping", "severity": 9, "frequency": "quarterly"}
+  ],
+  "desired_outcomes": [
+    {"outcome": "10 hours/week reclaimed from ops to strategy", "priority": 1},
+    {"outcome": "Predictable inbound pipeline from owned content", "priority": 2},
+    {"outcome": "Productized offer ladder with clear price tiers", "priority": 3},
+    {"outcome": "Knowledge captured in a vault that compounds", "priority": 4}
+  ],
+  "buying_triggers": [
+    {"trigger": "Just turned down a great client because no capacity", "urgency_score": 10},
+    {"trigger": "Quarterly revenue dipped despite full calendar", "urgency_score": 9},
+    {"trigger": "Burned out after a launch sprint", "urgency_score": 9},
+    {"trigger": "Saw a peer announce a productized offer", "urgency_score": 7},
+    {"trigger": "Read an article about leverage / sovereignty", "urgency_score": 6}
+  ],
+  "objections": [
+    {"objection": "I don't have time to learn another tool", "counter_angle": "Show 'first value in 24 hours' install path; quantify hours reclaimed in week 1."},
+    {"objection": "I tried HubSpot/Notion/X — it didn't stick", "counter_angle": "Position EPOS as an operating system, not a tool; emphasize sovereign ownership and compounding."},
+    {"objection": "My business is too unique for templates", "counter_angle": "Show that the system learns the operator's voice; templates are seeds, not cages."},
+    {"objection": "Can I get this without monthly fees?", "counter_angle": "Sovereign install — owned, not rented."}
+  ],
+  "channels": {
+    "primary": ["LinkedIn", "Email newsletter", "Direct referral"],
+    "secondary": ["Twitter/X", "Substack", "Long-form blog"],
+    "avoided": ["TikTok", "Instagram Reels", "Facebook ads"]
+  },
+  "communication_preferences": {
+    "tone": "Direct, principled, peer-to-peer (never beginner-pitched)",
+    "length": "Medium (300-800 words for posts; 1-3 min for video)",
+    "format": ["frameworks", "case studies", "diagnostic checklists", "essays"],
+    "vocabulary": "Strategic, systems-thinking, leverage, compounding, sovereignty",
+    "proof_type": "Operator stories + quantified hours/revenue reclaimed"
+  },
+  "crs_weights": {
+    "engagement": 0.25,
+    "intent_keywords": 0.30,
+    "channel_match": 0.15,
+    "timing": 0.15,
+    "social_proof_response": 0.15
+  },
+  "niche_tags": ["consulting", "strategy", "advisory", "solo", "productization", "leverage"],
+  "price_tolerance": {
+    "monthly_floor": 99,
+    "monthly_ceiling": 497,
+    "one_time_floor": 1500,
+    "one_time_ceiling": 9500,
+    "currency": "USD"
+  },
+  "conversion_path": {
+    "awareness": "LinkedIn essay or framework post that names their pain ('the consultant trap')",
+    "interest": "Free diagnostic (TTLG-style scorecard) revealing their leverage gaps",
+    "consideration": "Mirror Report showing 3-5 specific gaps + recommended order of operations",
+    "decision": "Sovereign install offer or strategy-installation engagement",
+    "retention": "Quarterly Mirror Report + content / system upgrades"
+  },
+  "signal_keywords": [
+    "burned out", "no capacity", "drowning in delivery", "need leverage", "productize",
+    "capacity ceiling", "time leverage", "system not headcount", "scale without hiring",
+    "content engine", "pipeline drought", "feast or famine", "sovereign business"
+  ],
+  "exclusion_keywords": [
+    "VC funding", "Series A", "hire 10 engineers", "build a startup", "raise capital",
+    "growth hack", "viral", "10x in 30 days"
+  ]
+}

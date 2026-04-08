@@ -1,0 +1,11 @@
+{
+  "id": "smoke_duet_contract",
+  "type": "duet_sprint",
+  "status": "pending",
+  "payload": {
+    "cwd": "out/duet_smoke_out",
+    "os_hint": "gitbash",
+    "task": "Create a new folder dist/nextsteps_smoke with a README.md that explains EPOS Next Steps in 6 bullets. Do not overwrite if it exists. Provide safe verification commands.",
+    "extra_context": "Must align with EPOS brand voice: direct, operator-style. Focus on serving target users with clarity and leverage."
+  }
+}

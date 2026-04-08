@@ -1,0 +1,10 @@
+{
+  "id": "smoke_engineer",
+  "type": "software_sprint",
+  "status": "pending",
+  "payload": {
+    "cwd": "dist/nextsteps_smoke",
+    "task": "Create a README.md explaining EPOS Next Steps in bullet points. Do not overwrite existing files.",
+    "context": "Must align with EPOS ethos: precision, reliability, service to ICP."
+  }
+}

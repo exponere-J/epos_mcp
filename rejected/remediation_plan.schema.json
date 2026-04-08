@@ -1,0 +1,30 @@
+{
+  "$id": "core.remediation_plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "ts", "run_id", "level", "actions", "expected_outcome"],
+  "properties": {
+    "schema_id": { "const": "core.remediation_plan" },
+    "ts": { "type": "string" },
+    "run_id": { "type": "string" },
+    "level": { "type": "integer", "enum": [0, 1, 2] },
+
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "cmd", "reason"],
+        "properties": {
+          "kind": { "type": "string" },
+          "cmd": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+
+    "expected_outcome": { "type": "array", "items": { "type": "string" } }
+  }
+}
+

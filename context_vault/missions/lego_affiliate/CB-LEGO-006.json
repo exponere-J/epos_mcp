@@ -1,0 +1,17 @@
+{
+  "brief_id": "CB-LEGO-006",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "closer",
+  "hook_type": "story",
+  "visual_mask": "founder_glow",
+  "target_platform": "youtube_shorts",
+  "script_premise": "I bought this LEGO set 2 years ago and it tripled in resale value.",
+  "hook_line": "I bought this for 200 dollars. It is now worth 600.",
+  "cta": "Same set still available here. Grab it before retirement.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Star Wars AT-AT"
+  ],
+  "status": "draft"
+}

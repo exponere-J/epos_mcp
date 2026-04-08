@@ -1,0 +1,9 @@
+{
+  "id": "litellm",
+  "name": "LiteLLM",
+  "category": "infrastructure",
+  "use_case": "Unified LLM proxy \u2014 route to any provider",
+  "tier": "L2+",
+  "url": "https://litellm.ai",
+  "added_at": "2026-03-29T12:48:15.812144+00:00"
+}

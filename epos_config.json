@@ -1,0 +1,77 @@
+{
+  "version": "3.1.0",
+  "install_date": "2026-02-20T17:58:37.873270",
+  "workspace_root": "C:\\Users\\Jamie\\workspace\\epos_mcp",
+  "constitutional_authority": "EPOS_CONSTITUTION_v3_1.md",
+  "agents": {
+    "agent_zero": {
+      "enabled": true,
+      "role": "execution_spine",
+      "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\agent-zero",
+      "model": "phi3.5:3.8b-mini-instruct-q4_K_M"
+    },
+    "phi3_command_center": {
+      "enabled": true,
+      "role": "strategic_cortex",
+      "port": 8501,
+      "path": "C:\\Users\\Jamie\\workspace\\epos_mcp\\phi3_command_center.py"
+    }
+  },
+  "mcp_servers": {
+    "context_vault": {
+      "port": 8009,
+      "enabled": false
+    },
+    "event_bus": {
+      "port": 8008,
+      "enabled": false
+    },
+    "governance_gate": {
+      "port": 8007,
+      "enabled": false
+    },
+    "learning_server": {
+      "port": 8006,
+      "enabled": false
+    }
+  },
+  "nodes": {
+    "content_lab": {
+      "port": 8010,
+      "enabled": false
+    },
+    "ttlg_diagnostic": {
+      "port": 8011,
+      "enabled": false
+    },
+    "research_engine": {
+      "port": 8012,
+      "enabled": false
+    }
+  },
+  "airtable_bases": {
+    "epos_command": {
+      "base_id": "",
+      "created": false
+    },
+    "life_command": {
+      "base_id": "",
+      "created": false
+    },
+    "fin_apps": {
+      "base_id": "",
+      "created": false
+    },
+    "pgp_command": {
+      "base_id": "",
+      "created": false
+    }
+  },
+  "s_corp": {
+    "election_date": "2026-01-01",
+    "weekly_salary": 2759,
+    "annual_salary": 143468,
+    "form_2553_filed": false,
+    "filing_deadline": "2026-03-15"
+  }
+}

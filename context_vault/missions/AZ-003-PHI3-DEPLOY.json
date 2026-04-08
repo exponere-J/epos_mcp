@@ -1,0 +1,29 @@
+{
+  "mission_id": "AZ-003-PHI3-DEPLOY",
+  "title": "Deploy Phi-3 Command Center",
+  "description": "Install and configure Phi-3 strategic console",
+  "priority": "HIGH",
+  "week": 2,
+  "estimated_duration": "1 hour",
+  "dependencies": [
+    "Ollama running",
+    "Phi-3 model pulled"
+  ],
+  "tasks": [
+    "Pull Phi-3 model: ollama pull phi3.5:3.8b-mini-instruct-q4_K_M",
+    "Copy phi3_command_center.py to workspace root",
+    "Test launch: streamlit run phi3_command_center.py",
+    "Validate Context Vault integration",
+    "Validate Internet Search tool",
+    "Create startup script for daily use"
+  ],
+  "constitutional_compliance": [
+    "Article XII: GRAG tool governance"
+  ],
+  "success_criteria": [
+    "GUI loads at localhost:8501",
+    "Search returns results",
+    "Sessions log to Vault"
+  ],
+  "failure_recovery": "Check Ollama service, validate model name, check port 8501 availability"
+}

@@ -1,0 +1,45 @@
+{
+  "prescription_id": "RX-URGEON-FU-f69e",
+  "type": "full_transformation",
+  "gap_addressed": "Zero published content",
+  "consequence_chain": "Full transformation eliminates Zero published content and all connected gaps: ~$25000/quarter in recovered value with compound returns from system integration.",
+  "nodes_required": [
+    "content_lab",
+    "multimodal_router"
+  ],
+  "configuration": {
+    "content_lab": {
+      "capabilities_used": [
+        "script_generation",
+        "eri_prediction",
+        "brand_validation"
+      ],
+      "integration": "event_bus"
+    },
+    "multimodal_router": {
+      "capabilities_used": [
+        "image_generation",
+        "local_llm",
+        "provider_failover"
+      ],
+      "integration": "event_bus"
+    }
+  },
+  "estimated_hours": 40.0,
+  "monthly_cost": 296.4,
+  "projected_roi_90d": 11246.1,
+  "deployment_sequence": [
+    "1. Configure event bus integration",
+    "2. Deploy Content Lab with vault path initialization",
+    "3. Deploy Multimodal Router with vault path initialization",
+    "4. Run sovereignty certification",
+    "5. Verify end-to-end pipeline"
+  ],
+  "success_criteria": [
+    "All deployed nodes pass sovereignty certification at 85+",
+    "Event bus shows events from all new nodes",
+    "Doctor reports zero new FAILs",
+    "90-day revenue recovery exceeds monthly cost by 3x"
+  ],
+  "value_at_risk": 25000.0
+}

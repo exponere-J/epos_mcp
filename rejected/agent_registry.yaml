@@ -1,0 +1,8 @@
+agents:
+  agent_zero:
+    type: "tool"
+    container: "epos_az_paused"
+    endpoint: "http://localhost:50080"
+    model: "phi3:mini"
+    capabilities: ["code_analysis", "mission_planning"]
+    status: "parked_ready"

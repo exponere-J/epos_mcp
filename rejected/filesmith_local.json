@@ -1,0 +1,15 @@
+{
+  "id": "filesmith_local",
+  "role": "Local Machine Orchestrator",
+  "domain": "local_ops",
+  "policy": {
+    "routing": [
+      { "if_domain": "filesystem", "delegate_to": "filesystem_local" },
+      { "if_domain": "cli",        "delegate_to": "terminalrunner_local" },
+      { "if_domain": "gui",        "delegate_to": "computeruse_local" }
+    ],
+    "logging": {
+      "event_type": "local_task_routed"
+    }
+  }
+}

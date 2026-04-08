@@ -1,0 +1,16 @@
+{
+  "mission_id": "launch_cfo_001",
+  "agent": "huntsman",
+  "directive": "deploy_product",
+  "parameters": {
+    "platforms": ["gumroad"],
+    "execution_mode": "manual_attest"
+  },
+  "payload": {
+    "product_name": "CFO in a Box: The Financial OS",
+    "price_usd": 297.00,
+    "description_markdown": "## The Financial Operating System for Sovereign Businesses.\n\nMost agents write code. This one manages money.\n\n**Includes:**\n- Auto-Invoicing Logic\n- Tax-Reductive Categorization\n- Sovereign Revenue Routing\n\n*Built by Exponere.*",
+    "call_to_action": "Install Your Financial OS",
+    "files": ["assets/products/CFO_in_a_Box_v1.zip"]
+  }
+}

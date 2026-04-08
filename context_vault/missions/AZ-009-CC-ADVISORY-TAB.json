@@ -1,0 +1,17 @@
+{
+    "description":  "Execution steps defined in EPOS_AZ_MISSION_PACK.html under mission ID AZ-009-CC-ADVISORY-TAB.",
+    "estimated_duration":  "2-4 hours",
+    "priority":  "HIGH",
+    "authority":  "EPOS_CONSTITUTION_v3.1.md",
+    "design_file":  "context_vault/missions/EPOS_AZ_MISSION_PACK.html",
+    "dependencies":  [
+
+                     ],
+    "status":  "proposed",
+    "mission_id":  "AZ-009-CC-ADVISORY-TAB",
+    "title":  "Advisory Requests Table + Command Center",
+    "week":  "Sprint Day 1-2",
+    "tasks":  [
+                  "See EPOS_AZ_MISSION_PACK.html for deterministic execution steps"
+              ]
+}

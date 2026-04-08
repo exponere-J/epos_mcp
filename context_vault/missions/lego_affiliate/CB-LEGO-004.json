@@ -1,0 +1,17 @@
+{
+  "brief_id": "CB-LEGO-004",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "challenger",
+  "hook_type": "statistic",
+  "visual_mask": "glitch",
+  "target_platform": "youtube_shorts",
+  "script_premise": "LEGO retirement sets beat the stock market 8 out of 10 years.",
+  "hook_line": "This toy outperformed the S&P 500. Seriously.",
+  "cta": "Get the full retirement watchlist. Link below.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Star Wars UCS Millennium Falcon"
+  ],
+  "status": "draft"
+}

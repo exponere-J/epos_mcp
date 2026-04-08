@@ -1,0 +1,18 @@
+{
+  "directive_id": "DIR-22480eda",
+  "directive": "Run a self-healing cycle",
+  "mission_type": "healing",
+  "results": [
+    {
+      "mission_id": "M-480eda-001",
+      "executor": "self_healing",
+      "status": "complete",
+      "output": "Healing cycle: 1 actions taken",
+      "details": [
+        "healed"
+      ]
+    }
+  ],
+  "completed_at": "2026-04-07T02:18:48.250477+00:00",
+  "success": true
+}

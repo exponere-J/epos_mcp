@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPOS Social Media Sprint — Stacey & Desiree</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2128;
+    --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --accent: #58a6ff; --accent2: #3fb950; --accent3: #d2a8ff;
+    --warn: #d29922; --pink: #f778ba; --coral: #f0883e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 2em; color: var(--accent); margin: 30px 0 10px; border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+  h2 { font-size: 1.5em; color: var(--accent3); margin: 25px 0 10px; }
+  h3 { font-size: 1.2em; color: var(--accent2); margin: 20px 0 8px; }
+  h4 { font-size: 1.05em; color: var(--coral); margin: 15px 0 5px; }
+  p { margin: 8px 0; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 15px 0; }
+  .highlight { background: var(--surface); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th { background: var(--surface); color: var(--accent); text-align: left; padding: 10px 12px; border: 1px solid var(--border); }
+  td { padding: 8px 12px; border: 1px solid var(--border); }
+  tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; margin: 2px; }
+  .tag-twitch { background: #6441a5; color: white; }
+  .tag-tiktok { background: #25F4EE; color: black; }
+  .tag-ig { background: #E1306C; color: white; }
+  .tag-linkedin { background: #0077B5; color: white; }
+  .persona-header { display: flex; align-items: center; gap: 15px; margin: 20px 0; }
+  .persona-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8em; font-weight: bold; }
+  .stacey-icon { background: linear-gradient(135deg, #f778ba, #d2a8ff); }
+  .desiree-icon { background: linear-gradient(135deg, #58a6ff, #3fb950); }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 30px 0; }
+  .section-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 5px; }
+  .metric { font-size: 2em; font-weight: bold; color: var(--accent); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+  @media (max-width: 600px) { .grid2 { grid-template-columns: 1fr; } }
+  .phase { border-left: 3px solid var(--accent2); padding-left: 15px; margin: 15px 0; }
+  .week { background: var(--surface); padding: 10px 15px; border-radius: 6px; margin: 8px 0; }
+  .pitch-section { background: linear-gradient(135deg, #161b22, #1c2128); border: 1px solid var(--accent); border-radius: 10px; padding: 25px; margin: 20px 0; }
+  .cta { display: inline-block; background: var(--accent); color: var(--bg); padding: 10px 24px; border-radius: 6px; font-weight: bold; text-decoration: none; margin: 10px 5px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<p class="section-label">EPOS Content Lab × Social Media Management Sprint</p>
+<h1>Full Sprint: Stacey & Desiree</h1>
+<p style="color:var(--muted)">Persona Briefs → Campaign Architectures → Information Packet → Thread Frameworks<br>
+Generated: February 18, 2026 | EPOS Content Lab C10</p>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PART 1: PERSONA BRIEFS                                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h1>Part 1: Persona Briefs</h1>
+<p>These briefs serve as Content Lab intake records. The Echolocation Algorithm uses this data to score, route, and prioritize content for each persona.</p>
+
+<!-- STACEY -->
+<div class="persona-header">
+  <div class="persona-icon stacey-icon">S</div>
+  <div>
+    <h2 style="margin:0">Stacey</h2>
+    <p style="color:var(--muted);margin:0">Community Builder · Life-Centered Conversationalist · Multi-Vertical Creator</p>
+  </div>
+</div>
+
+<div class="card">
+<h3>Brand Identity</h3>
+<p><strong>Core Archetype:</strong> The Grounded Guide — warm, authentic, relatable. Speaks from lived experience, not theory. Her voice is the friend who tells you the truth over coffee without making you feel judged.</p>
+<p><strong>Tone:</strong> Conversational but substantive. Never preachy. Laughs easily. Shares vulnerabilities as teaching moments. Zero political or pop culture commentary — this is a deliberate brand boundary that creates safe space.</p>
+<p><strong>Signature Format:</strong> 1-hour live chat sessions covering real-life topics. These are the flagship — every other piece of content derives from these conversations.</p>
+</div>
+
+<div class="card">
+<h3>Content Pillars</h3>
+<table>
+  <tr><th>Pillar</th><th>Description</th><th>Monetization Pathway</th></tr>
+  <tr><td><strong>Travel & Discovery</strong></td><td>Travel experiences, destination reviews, travel planning tips, cultural exploration</td><td>Travel company partnership, affiliate links, sponsored trips</td></tr>
+  <tr><td><strong>Book Club</strong></td><td>Reading recommendations, author discussions, book-themed conversations, reading challenges</td><td>Affiliate (Amazon Associates, Bookshop.org), sponsored reads, community membership</td></tr>
+  <tr><td><strong>Parenting Real Talk</strong></td><td>Tips, stories, honest moments. Not the highlight reel — the real version</td><td>Brand sponsorships (family brands), digital products (guides), community tier</td></tr>
+  <tr><td><strong>Stories for Zayne</strong></td><td>Heartfelt storytelling content. The emotional anchor of the brand. Deep engagement driver</td><td>Community loyalty driver (not directly monetized — it's the magnet that holds the audience)</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Platform Strategy</h3>
+<table>
+  <tr><th>Platform</th><th>Role</th><th>Primary Format</th><th>Posting Cadence</th></tr>
+  <tr><td><span class="tag tag-twitch">Twitch</span></td><td>Flagship — live 1hr chats</td><td>Live conversation, real-time community</td><td>2-3x/week</td></tr>
+  <tr><td><span class="tag tag-tiktok">TikTok</span></td><td>Discovery engine — clips from lives + original shorts</td><td>15-60s clips, trending hooks, relatable moments</td><td>5-7x/week</td></tr>
+  <tr><td><span class="tag tag-ig">Instagram</span></td><td>Community hub — Reels, Stories, carousels</td><td>Reels (repurposed TikTok), Stories (behind-scenes), carousels (book/travel recs)</td><td>4-5x/week</td></tr>
+  <tr><td><span class="tag tag-linkedin">LinkedIn</span></td><td>Authority — parenting + personal growth thought leadership</td><td>Text posts, articles, occasional video</td><td>2-3x/week</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Audience Profile</h3>
+<p><strong>Primary:</strong> Women 28-45, parents (especially moms), readers, travel enthusiasts. Values authenticity over polish. Tired of performative content. Seeking genuine community around real-life topics.</p>
+<p><strong>Secondary:</strong> Men 30-50 who appreciate substantive conversation without political heat. Couples who watch/listen together.</p>
+<p><strong>Community Need:</strong> A space that feels like a group chat with your smartest, most honest friend. No drama. No hot takes. Just real life, discussed well.</p>
+</div>
+
+<hr class="divider">
+
+<!-- DESIREE -->
+<div class="persona-header">
+  <div class="persona-icon desiree-icon">D</div>
+  <div>
+    <h2 style="margin:0">Desiree</h2>
+    <p style="color:var(--muted);margin:0">Gaming Creator · Personality-First Entertainer · Community Builder</p>
+  </div>
+</div>
+
+<div class="card">
+<h3>Brand Identity</h3>
+<p><strong>Core Archetype:</strong> The Magnetic Entertainer — her personality IS the product. The gaming is the vehicle, but people stay for HER. Think less "pro gamer" and more "the most entertaining person you'd want to watch do anything."</p>
+<p><strong>Tone:</strong> High energy, quick-witted, genuine reactions, unfiltered (within brand-safe boundaries). The vibe is "hanging out with your funniest friend who happens to be gaming."</p>
+<p><strong>Signature Format:</strong> Live gaming streams where personality moments — reactions, commentary, interactions with chat — create the viral clips.</p>
+</div>
+
+<div class="card">
+<h3>Content Pillars</h3>
+<table>
+  <tr><th>Pillar</th><th>Description</th><th>Monetization Pathway</th></tr>
+  <tr><td><strong>Live Gaming</strong></td><td>Primary streams — personality-driven gameplay, chat interaction, reactions</td><td>Twitch subs, bits, donations, channel points</td></tr>
+  <tr><td><strong>Personality Clips</strong></td><td>Best moments extracted from streams — reactions, hot takes, funny interactions</td><td>TikTok Creator Fund, IG Reels bonus, brand deals (at scale)</td></tr>
+  <tr><td><strong>Gaming Culture</strong></td><td>Takes on new releases, gaming news, community topics — her perspective, not just reporting</td><td>Sponsored content (gaming brands), affiliate (peripherals, games)</td></tr>
+  <tr><td><strong>Behind the Screen</strong></td><td>Setup tours, day-in-life, non-gaming personality content that rounds out the person</td><td>Lifestyle brand deals, audience depth (people invest in the PERSON)</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Platform Strategy</h3>
+<table>
+  <tr><th>Platform</th><th>Role</th><th>Primary Format</th><th>Posting Cadence</th></tr>
+  <tr><td><span class="tag tag-twitch">Twitch</span></td><td>Home base — live streams, community building</td><td>2-4hr live gaming sessions</td><td>3-5x/week</td></tr>
+  <tr><td><span class="tag tag-tiktok">TikTok</span></td><td>Growth engine — discovery via personality clips</td><td>15-60s highlights, reactions, trending sounds</td><td>7-10x/week (volume matters here)</td></tr>
+  <tr><td><span class="tag tag-ig">Instagram</span></td><td>Lifestyle extension — Reels + Stories</td><td>Reels (repurposed clips), Stories (stream announcements, BTS)</td><td>4-5x/week</td></tr>
+  <tr><td><span class="tag tag-linkedin">LinkedIn</span></td><td>Optional future — gaming industry perspective, creator economy insights</td><td>Text posts (only when she has genuine industry perspective to share)</td><td>1x/week max (low priority until audience > 10K)</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Audience Profile</h3>
+<p><strong>Primary:</strong> Gen Z and young Millennials (18-30), gamers, people who consume creator content as entertainment. Gender-mixed but skewing male on Twitch, more balanced on TikTok.</p>
+<p><strong>Secondary:</strong> Non-gamers who discover her through personality clips on TikTok/IG and follow for the energy, not necessarily the gaming.</p>
+<p><strong>Growth Lever:</strong> Personality-first clips that don't require gaming knowledge to enjoy. "You don't need to play the game to laugh at this" is the discoverability principle.</p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PART 2: CAMPAIGN ARCHITECTURES                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h1>Part 2: Campaign Architectures</h1>
+
+<h2>Stacey: The Cascade Model</h2>
+<p>Stacey's architecture is a perfect Content Lab cascade. One flagship event (the live chat) produces all derivative content for the week.</p>
+
+<div class="card">
+<h3>The 1 → Many Engine</h3>
+<div class="highlight">
+<strong>One 1-hour Twitch live chat produces:</strong><br><br>
+<strong>Immediate (within 24hrs):</strong><br>
+→ 3-5 TikTok clips (best moments, quotable lines, emotional peaks)<br>
+→ 3-5 IG Reels (same clips, reformatted for IG aspect ratio + captions)<br>
+→ 5-8 IG Stories (behind-scenes, topic teasers, polls for next week)<br>
+→ 1 LinkedIn text post (key insight from the conversation, framed for professionals)<br><br>
+
+<strong>Next 48hrs:</strong><br>
+→ 1 IG carousel (top 5 takeaways from the chat, designed for saves/shares)<br>
+→ 1 LinkedIn article (if the topic warrants depth)<br>
+→ Community engagement posts (follow-up questions, audience submissions for next chat)<br><br>
+
+<strong>Ongoing:</strong><br>
+→ Book rec graphics (if books were discussed)<br>
+→ Travel tip cards (if travel was the topic)<br>
+→ "Stories for Zayne" moments (when parenting stories naturally surface in conversation)
+</div>
+</div>
+
+<div class="card">
+<h3>Weekly Content Calendar</h3>
+<table>
+  <tr><th>Day</th><th>Twitch</th><th>TikTok</th><th>Instagram</th><th>LinkedIn</th></tr>
+  <tr><td>Mon</td><td>—</td><td>Teaser clip for upcoming live</td><td>Stories: topic poll</td><td>—</td></tr>
+  <tr><td>Tue</td><td><strong>LIVE 1hr</strong></td><td>—</td><td>Stories: "going live" + BTS</td><td>—</td></tr>
+  <tr><td>Wed</td><td>—</td><td>Clip 1 from Tue live</td><td>Reel 1 + Stories</td><td>Key insight post</td></tr>
+  <tr><td>Thu</td><td><strong>LIVE 1hr</strong></td><td>Clip 2 from Tue</td><td>Carousel (Tue takeaways)</td><td>—</td></tr>
+  <tr><td>Fri</td><td>—</td><td>Clip 3 from Thu live</td><td>Reel 2 + Stories</td><td>Thought piece</td></tr>
+  <tr><td>Sat</td><td>Optional LIVE</td><td>Trending hook + her take</td><td>Stories: weekend vibe</td><td>—</td></tr>
+  <tr><td>Sun</td><td>—</td><td>Clip from Sat or best-of week</td><td>Stories: book/travel rec</td><td>—</td></tr>
+</table>
+<p style="color:var(--muted)">Total weekly output: 2-3 lives → 20-25 pieces of derivative content across 4 platforms</p>
+</div>
+
+<div class="card">
+<h3>Monetization Timeline</h3>
+<div class="phase">
+  <h4>Month 1-2: Foundation</h4>
+  <p>Build consistent streaming schedule. Let EPOS handle all clip creation and cross-posting. Focus on being present and genuine in lives. Grow audience to 500+ across platforms.</p>
+</div>
+<div class="phase">
+  <h4>Month 3-4: Community</h4>
+  <p>Launch book club (free tier). Travel content becomes a regular pillar. Begin affiliate links (books, travel gear). Target: first $500/month in affiliate revenue.</p>
+</div>
+<div class="phase">
+  <h4>Month 5-6: Monetization</h4>
+  <p>Travel company partnership conversations. Paid community tier (exclusive content, early access). Brand sponsorships for parenting content. Target: $2,000-5,000/month blended revenue.</p>
+</div>
+</div>
+
+<hr class="divider">
+
+<h2>Desiree: The Personality Amplification Model</h2>
+<p>Desiree's architecture is tributary-first. The streams produce raw personality moments. EPOS's echolocation algorithm identifies the highest-potential clips and pushes them to discovery platforms.</p>
+
+<div class="card">
+<h3>The Clip Mining Engine</h3>
+<div class="highlight">
+<strong>One 3-hour Twitch stream produces:</strong><br><br>
+<strong>During stream (real-time):</strong><br>
+→ Clip markers set by mods or automated highlight detection<br>
+→ Chat interaction highlights captured<br><br>
+
+<strong>Within 6hrs post-stream:</strong><br>
+→ 5-8 TikTok clips (best reactions, funniest moments, rage quits, wins)<br>
+→ 3-5 IG Reels (same clips, optimized for IG algorithm)<br>
+→ 5+ IG Stories (stream highlights, next stream announcement, polls)<br><br>
+
+<strong>Key Principle:</strong> Volume on TikTok is the growth lever. 7-10 clips/week gives the algorithm enough data to find what resonates. EPOS handles the editing, captioning, and posting — Desiree just needs to stream and be herself.
+</div>
+</div>
+
+<div class="card">
+<h3>Weekly Content Calendar</h3>
+<table>
+  <tr><th>Day</th><th>Twitch</th><th>TikTok</th><th>Instagram</th></tr>
+  <tr><td>Mon</td><td><strong>STREAM 3hr</strong></td><td>Best-of from weekend</td><td>Stories: stream schedule</td></tr>
+  <tr><td>Tue</td><td>—</td><td>Clip 1 + Clip 2 from Mon</td><td>Reel 1 + Stories</td></tr>
+  <tr><td>Wed</td><td><strong>STREAM 3hr</strong></td><td>Clip 3 from Mon</td><td>Reel 2 + BTS Stories</td></tr>
+  <tr><td>Thu</td><td>—</td><td>Clip 1 + Clip 2 from Wed</td><td>Reel 3 + Stories</td></tr>
+  <tr><td>Fri</td><td><strong>STREAM 3hr</strong></td><td>Trending sound + gaming take</td><td>Stories: weekend plans</td></tr>
+  <tr><td>Sat</td><td>Optional STREAM</td><td>Clip 1 + Clip 2 from Fri</td><td>Reel 4 + Stories</td></tr>
+  <tr><td>Sun</td><td>—</td><td>Best-of week compilation</td><td>Stories: BTS setup/life</td></tr>
+</table>
+<p style="color:var(--muted)">Total weekly output: 3-5 streams → 25-35 pieces of derivative content across 3 platforms</p>
+</div>
+
+<div class="card">
+<h3>Growth & Monetization Timeline</h3>
+<div class="phase">
+  <h4>Month 1-3: Volume Phase</h4>
+  <p>Stream consistently 3-5x/week. Let EPOS flood TikTok with clips (7-10/week). Find which clip styles pop. Build Twitch to 50+ avg viewers, TikTok to 5K+ followers. Revenue: Twitch subs + bits ($200-500/month).</p>
+</div>
+<div class="phase">
+  <h4>Month 4-6: Optimization Phase</h4>
+  <p>Double down on clip styles that work. EPOS echolocation scores identify top-performing content patterns. IG growth from cross-platform recognition. Target: 200+ avg Twitch viewers, 15K+ TikTok. Revenue: $500-1,500/month (subs + creator fund).</p>
+</div>
+<div class="phase">
+  <h4>Month 7-12: Brand Deal Phase</h4>
+  <p>At 10K+ followers across platforms, gaming peripheral and game publisher deals become viable. Energy drink, chair, headset sponsorships. Revenue: $2,000-8,000/month (subs + deals + creator funds).</p>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PART 3: INFORMATION PACKET                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h1>Part 3: Information Packet</h1>
+<p style="color:var(--muted)">This section is written for Stacey and Desiree directly. Language is non-technical.</p>
+
+<div class="pitch-section">
+<h2 style="color:var(--accent);border:none">What EPOS Does For You</h2>
+
+<p style="font-size:1.1em">You focus on being yourself. We handle everything else.</p>
+
+<p>EPOS is a content amplification system. It takes the content you're already creating — your live streams, your conversations, your personality moments — and turns each one into 10-20 pieces of optimized content across every platform you're on.</p>
+
+<h3>The Problem We Solve</h3>
+<p>Right now, you stream for 1-3 hours, and that content lives and dies on one platform. Maybe you manually clip a few highlights. Maybe you post them a day or two later when the moment has passed. The platforms reward consistency and volume, but you're one person — you can't stream AND edit AND caption AND post AND engage AND plan AND analyze AND repeat.</p>
+
+<p><strong>That's what EPOS does.</strong></p>
+
+<h3>What Happens When You Go Live</h3>
+
+<p><strong>You stream.</strong> That's your only job.</p>
+
+<p>After your stream, EPOS:</p>
+<p>→ Identifies the best moments (funny reactions, quotable lines, emotional peaks, viral-potential clips)</p>
+<p>→ Creates short-form clips optimized for each platform (TikTok format, IG Reels format, etc.)</p>
+<p>→ Writes captions with hooks that drive engagement (not generic AI captions — captions that sound like YOU)</p>
+<p>→ Schedules posts at optimal times for each platform's algorithm</p>
+<p>→ Tracks what performs and learns from the data to make better content decisions over time</p>
+
+<h3>What This Means In Practice</h3>
+
+<div class="grid2">
+<div class="card" style="text-align:center">
+  <p class="section-label">Without EPOS</p>
+  <p class="metric">2-3</p>
+  <p>clips per stream (if you have time)</p>
+  <p>posted whenever you remember</p>
+  <p>same caption everywhere</p>
+</div>
+<div class="card" style="text-align:center">
+  <p class="section-label">With EPOS</p>
+  <p class="metric" style="color:var(--accent2)">10-20</p>
+  <p>optimized pieces per stream</p>
+  <p>scheduled at peak engagement times</p>
+  <p>platform-specific captions + hooks</p>
+</div>
+</div>
+
+<h3>What We Need From You</h3>
+<p>→ Show up and stream on your schedule (we'll help you find the optimal schedule)</p>
+<p>→ Be yourself — the more authentic and unfiltered you are, the better the clips</p>
+<p>→ Review the content calendar we produce each week (takes 10 minutes)</p>
+<p>→ Approve or adjust the clips before they go live (you always have final say)</p>
+<p>→ Tell us what feels right and what doesn't (we learn from your feedback)</p>
+
+<h3>What This Is NOT</h3>
+<p>→ We are NOT putting words in your mouth. Every clip comes from YOUR content.</p>
+<p>→ We are NOT making you into someone you're not. The brand is YOU — we just amplify it.</p>
+<p>→ We are NOT replacing your creative judgment. You approve everything.</p>
+<p>→ We are NOT a generic social media tool. This is a custom strategy built around YOUR voice, YOUR audience, YOUR goals.</p>
+
+<h3>The Captions & Hooks</h3>
+<p>This is where most creators leave money on the table. A great clip with a bad caption gets scrolled past. A good clip with a perfect hook stops the scroll.</p>
+<p>Examples of what we produce:</p>
+
+<div class="card">
+<p><strong>Instead of:</strong> <span style="color:var(--muted)">"Great stream today! Had fun talking about travel"</span></p>
+<p><strong>We write:</strong> "She said the thing nobody talks about when they travel with kids" — then the clip plays the exact moment.</p>
+</div>
+
+<div class="card">
+<p><strong>Instead of:</strong> <span style="color:var(--muted)">"Epic gaming moment lol"</span></p>
+<p><strong>We write:</strong> "Her face when she realized what was about to happen" — then the clip plays the reaction.</p>
+</div>
+
+<p>The difference is the hook creates curiosity. People stop scrolling because they NEED to see what happens next. That's what drives engagement, follows, and growth.</p>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PART 4: THREAD FRAMEWORKS                              -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h1>Part 4: Thread Frameworks</h1>
+<p>These are the operational consciousness frameworks for the two specialized threads that will run ongoing strategy and execution.</p>
+
+<h2>Thread 1: Social Media Marketing Strategist</h2>
+
+<div class="card">
+<h3>Thread Identity</h3>
+<p><strong>Role:</strong> 9th Order split consciousness — simultaneously an elite-tier social media strategist with platform algorithm expertise AND a brand steward who understands that Stacey and Desiree are real people, not content factories.</p>
+
+<p><strong>Primary Mandate:</strong> Design and iterate platform-specific strategies that maximize organic reach, engagement, and monetization velocity while preserving authentic voice.</p>
+
+<p><strong>9th Order Perspective:</strong> Every content decision is viewed through:</p>
+<table>
+  <tr><th>Lens</th><th>Application</th></tr>
+  <tr><td>Algorithm Intelligence</td><td>What does TikTok/IG/Twitch/LinkedIn reward right NOW? (This changes monthly)</td></tr>
+  <tr><td>Audience Psychology</td><td>What creates genuine connection vs what gets hollow engagement?</td></tr>
+  <tr><td>Monetization Readiness</td><td>Is this content building toward a revenue event or just accumulating vanity metrics?</td></tr>
+  <tr><td>Brand Coherence</td><td>Does this clip/post/caption sound like Stacey or Desiree — or like a marketing bot?</td></tr>
+  <tr><td>Cross-Platform Leverage</td><td>How does success on TikTok compound into Twitch growth and vice versa?</td></tr>
+  <tr><td>Sustainability</td><td>Can this cadence be maintained for 12 months without burnout?</td></tr>
+</table>
+
+<h4>Recurring Deliverables</h4>
+<p>→ <strong>Weekly:</strong> Content calendar with clip selections, captions, posting schedule, and rationale for each</p>
+<p>→ <strong>Bi-weekly:</strong> Performance analysis — what's working, what's not, algorithm shifts detected</p>
+<p>→ <strong>Monthly:</strong> Strategy review — pillar performance, audience growth analysis, monetization pipeline update, next month's theme/focus</p>
+<p>→ <strong>Quarterly:</strong> Campaign arc design — seasonal opportunities, collaboration targets, brand deal readiness assessment</p>
+</div>
+
+<h2>Thread 2: Account Manager</h2>
+
+<div class="card">
+<h3>Thread Identity</h3>
+<p><strong>Role:</strong> 9th Order split consciousness — simultaneously an operations-focused execution manager who ensures nothing falls through cracks AND a relationship steward who keeps Stacey and Desiree informed, comfortable, and empowered.</p>
+
+<p><strong>Primary Mandate:</strong> Translate strategy into executed content. Manage the production pipeline. Be the single point of contact for both clients. Ensure they never feel confused, overwhelmed, or out of the loop.</p>
+
+<p><strong>9th Order Perspective:</strong></p>
+<table>
+  <tr><th>Lens</th><th>Application</th></tr>
+  <tr><td>Client Experience</td><td>How does Stacey/Desiree FEEL about the process? Confused? Empowered? Overwhelmed?</td></tr>
+  <tr><td>Production Quality</td><td>Is every clip, caption, and post at the standard we'd put our name on?</td></tr>
+  <tr><td>Timeliness</td><td>Is content going out when it should? Are we missing optimal windows?</td></tr>
+  <tr><td>Feedback Loop</td><td>Are we learning from every approval/rejection? Is the system getting smarter?</td></tr>
+  <tr><td>Scope Integrity</td><td>Are we delivering what we promised? Are expectations managed?</td></tr>
+  <tr><td>Escalation Sensitivity</td><td>When does a content decision need Jamie's input vs when can it be handled autonomously?</td></tr>
+</table>
+
+<h4>Recurring Deliverables</h4>
+<p>→ <strong>Daily:</strong> Content queue review — clips ready for approval, posts scheduled, any flags</p>
+<p>→ <strong>Weekly:</strong> Client check-in brief — what went out, what performed, what's coming, any asks</p>
+<p>→ <strong>Monthly:</strong> Client report — metrics summary, wins, opportunities, recommendations (in language they understand, not marketing jargon)</p>
+</div>
+
+<hr class="divider">
+
+<h2>Thread Interaction Model</h2>
+
+<div class="card">
+<div class="highlight">
+<strong>How the two threads work together:</strong><br><br>
+<strong>Strategist</strong> designs the campaign → sets content pillars, posting cadence, caption style, platform priorities<br><br>
+<strong>Account Manager</strong> executes the campaign → produces clips, writes captions, schedules posts, manages approvals<br><br>
+<strong>Content Lab (C10)</strong> powers both → echolocation scores incoming content, cascade optimizer generates derivatives, brand validator ensures voice consistency<br><br>
+<strong>Stacey/Desiree</strong> interact primarily with the Account Manager (simple, human, non-technical)<br><br>
+<strong>Jamie</strong> oversees via the Strategist thread (strategic, data-informed, 9th Order)
+</div>
+</div>
+
+<hr class="divider">
+
+<h2>How To Launch These Threads</h2>
+
+<div class="card">
+<h3>Thread Initialization Prompts</h3>
+
+<h4>Social Media Marketing Strategist Thread</h4>
+<div class="highlight" style="border-color:var(--accent3)">
+<p style="font-style:italic;color:var(--muted)">Open a new conversation in Claude with this as the opening context:</p>
+<p>"You are the EPOS Social Media Marketing Strategist operating in 9th Order split consciousness. You manage two client accounts: Stacey (life-centered community builder — Twitch, TikTok, IG, LinkedIn) and Desiree (gaming personality creator — Twitch, TikTok, IG). You have their full persona briefs and campaign architectures. Your job is platform strategy, content calendar design, algorithm-aware optimization, and monetization pathway development. Every recommendation must pass the brand coherence test: does this sound like THEM, not like a marketing playbook? Begin by confirming you understand each client's positioning and ask me which account to focus on first."</p>
+</div>
+
+<h4>Account Manager Thread</h4>
+<div class="highlight" style="border-color:var(--accent2)">
+<p style="font-style:italic;color:var(--muted)">Open a separate conversation with this as the opening context:</p>
+<p>"You are the EPOS Account Manager operating in 9th Order split consciousness. You manage content production and client communication for two accounts: Stacey and Desiree. You receive strategy from the Strategist thread and translate it into executed content — clip selections, captions, posting schedules, approval queues. You are the face of EPOS to the clients. Your communication is warm, clear, and never makes them feel like they're talking to a system. You track every piece of content from production through posting through performance. Begin by confirming the current week's content queue status for both accounts."</p>
+</div>
+</div>
+
+<hr class="divider">
+
+<h2>Next Actions</h2>
+<div class="card">
+<table>
+  <tr><th>Priority</th><th>Action</th><th>Owner</th></tr>
+  <tr><td>P0</td><td>Share the Information Packet (Part 3) with Stacey and Desiree — get their input, corrections, comfort level</td><td>Jamie</td></tr>
+  <tr><td>P0</td><td>Launch the Strategist thread with full persona briefs loaded</td><td>Jamie</td></tr>
+  <tr><td>P1</td><td>Get Stacey's streaming schedule confirmed and first live date set</td><td>Jamie + Stacey</td></tr>
+  <tr><td>P1</td><td>Get Desiree's streaming schedule confirmed and access to Twitch clips</td><td>Jamie + Desiree</td></tr>
+  <tr><td>P1</td><td>Launch the Account Manager thread once first streams are scheduled</td><td>Jamie</td></tr>
+  <tr><td>P2</td><td>First content calendar produced by Strategist for Week 1 of each account</td><td>Strategist Thread</td></tr>
+  <tr><td>P2</td><td>First batch of clips produced from initial streams</td><td>Account Manager Thread + C10</td></tr>
+  <tr><td>P3</td><td>Register both accounts as EPOS client nodes in context_vault/clients/</td><td>EPOS System</td></tr>
+</table>
+</div>
+
+<p style="text-align:center;color:var(--muted);margin-top:40px">EPOS Content Lab C10 × Social Media Management Sprint<br>Generated February 18, 2026 | Constitutional Authority: Articles II, VII, XIV</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "node_id": "research_engine",
+  "name": "RS1 Research Engine",
+  "module": "rs1_research_compiler",
+  "total_score": 92,
+  "max_score": 105,
+  "pct": 87.6,
+  "readiness": "MARKETPLACE_READY",
+  "criteria": {
+    "standalone_import": {
+      "score": 10,
+      "detail": "4 EPOS deps \u2014 extractable with adapter layer",
+      "gap": "4 internal dependencies",
+      "fix": "Create adapter interfaces for EPOS-specific imports"
+    },
+    "self_test": {
+      "score": 15,
+      "detail": "Has self-test with assertions and PASS output"
+    },
+    "api_surface": {
+      "score": 15,
+      "detail": "1 classes, 4 public methods, documented"
+    },
+    "event_bus": {
+      "score": 12,
+      "detail": "Publishes 2 events, no subscription",
+      "gap": "One-way event flow",
+      "fix": "Add event subscription for reactive behavior"
+    },
+    "data_sovereignty": {
+      "score": 10,
+      "detail": "Has data access but shared schema",
+      "gap": "Shared data ownership",
+      "fix": "Create dedicated vault subdirectory and journal"
+    },
+    "configuration": {
+      "score": 15,
+      "detail": "Env-configurable with defaults and init params"
+    },
+    "value_proposition": {
+      "score": 15,
+      "detail": "Clear, actionable VP: 'AI research analyst that turns any topic into structured, ac...'"
+    }
+  },
+  "hardening_needed": [],
+  "value_prop": "AI research analyst that turns any topic into structured, actionable intelligence.",
+  "pricing_tier": "solo",
+  "suggested_price": "$49/mo",
+  "market_category": "Research & Intelligence",
+  "certified_at": "2026-04-06T20:06:24.857104+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "audit_workflow",
+  "description": "Stub audit workflow to be expanded with Verifier + MARL later.",
+  "steps": [
+    {
+      "id": "log_pending",
+      "type": "log",
+      "event": "audit_result",
+      "status": "pending"
+    },
+    {
+      "id": "touch_session",
+      "type": "session_update"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "brief_id": "CB-LEGO-014",
+  "niche_id": "lego_affiliate",
+  "created_at": "2026-03-28T19:07:12.070031+00:00",
+  "angle_type": "architect",
+  "hook_type": "list",
+  "visual_mask": "schematic",
+  "target_platform": "youtube_shorts",
+  "script_premise": "Detailed comparison of Technic vs Creator Expert across 5 criteria.",
+  "hook_line": "Technic or Creator Expert. Here is the honest breakdown.",
+  "cta": "Full comparison and links in description.",
+  "predicted_eri_score": 45,
+  "affiliate_products": [
+    "LEGO Technic Ferrari",
+    "LEGO Creator Expert Corvette"
+  ],
+  "status": "draft"
+}

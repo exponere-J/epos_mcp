@@ -1,0 +1,17 @@
+{
+  "header": {
+    "file": "/home/Jamie/workspace/epos_mcp/missions/mission_00_handshake.json",
+    "role": "SYSTEM_VALIDATION"
+  },
+  "id": "HANDSHAKE_INIT_001",
+  "engine": "auto",
+  "prompt": "DIAGNOSTIC SEQUENCE: 1. Acknowledge Phi-3 reasoning capability. 2. Verify Agent Zero tool access by listing files in /home/Jamie/workspace/epos_mcp. 3. Confirm /home/Jamie/workspace/epos_mcp/context_vault exists and is writable.",
+  "meta": {
+    "source": "admin_handshake",
+    "priority": "critical"
+  },
+  "_governance": {
+    "watermarked": true,
+    "version": "3.1"
+  }
+}

@@ -1,0 +1,6 @@
+[]
+{"touchpoint": "01", "description": "Content auto-personalizes based on viewer engagement history", "feasibility": 40, "market_impact": 70, "discovered_date": "2026-04-06", "status": "open"}
+{"touchpoint": "05", "description": "Embedded TTLG Mini lets viewers self-diagnose in 3 questions", "feasibility": 60, "market_impact": 70, "discovered_date": "2026-04-06", "status": "open"}
+{"touchpoint": "TP05", "description": "Auto-personalize content based on viewer engagement history with --format hints", "feasibility": 40, "market_impact": 85, "discovered_date": "2026-04-07", "status": "open"}
+{"touchpoint": "TP07", "description": "Auto-generated test gap from event handler", "feasibility": 50, "market_impact": 75, "discovered_date": "2026-04-07", "status": "open", "source": "ttlg_diagnostic"}
+{"touchpoint": "TP07", "description": "Auto-generated test gap from event handler", "feasibility": 50, "market_impact": 75, "discovered_date": "2026-04-07", "status": "open", "source": "ttlg_diagnostic"}

@@ -1,0 +1,22 @@
+{
+  "asset_id": "ASSET-7cb98b6b",
+  "asset_type": "case_study",
+  "title": "Case Study Brief \u2014 pgp_orlando",
+  "body": "**Case Study Brief: pgp_orlando**\n\n**Challenge**: Prior to implementing EPOS, pgp_orlando faced inefficiencies in their inventory management and sales tracking processes. Manual data entry and lack of real-time visibility led to stock discrepancies, missed sales opportunities, and prolonged customer wait times.\n\n**Solution**: We implemented a customized EPOS system for pgp_orlando, integrating inventory management, sales tracking, and customer relationship management modules. Our solution included:\n- Streamlined inventory tracking and automated stock alerts\n- Real-time sales reporting and analytics\n- Personalized customer loyalty programs\n\n**Results**: Following EPOS implementation, pgp_orlando experienced:\n- 25% reduction in inventory discrepancies\n- 15% increase in average transaction value\n- 30% decrease in customer wait times\n- 20% growth in customer loyalty program participation\nBy leveraging our EPOS solution, pgp_orlando improved operational efficiency, enhanced customer satisfaction, and drove business growth.",
+  "status": "draft",
+  "niche_id": null,
+  "segment_id": null,
+  "author_agent": "epos_advocacy",
+  "platform_targets": [],
+  "scheduled_at": null,
+  "published_at": null,
+  "eri_predicted": null,
+  "eri_actual": null,
+  "version": 1,
+  "tags": [
+    "case_study",
+    "pgp_orlando"
+  ],
+  "created_at": "2026-03-29T16:11:41.400563+00:00",
+  "updated_at": "2026-03-29T16:11:41.400563+00:00"
+}

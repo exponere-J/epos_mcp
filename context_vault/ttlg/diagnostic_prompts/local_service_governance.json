@@ -1,0 +1,35 @@
+{
+  "niche": "local_service",
+  "track": "governance",
+  "version": "1.0",
+  "scout_dimensions": [
+    "Compliance and Risk Management",
+    "Organizational Structure and Leadership",
+    "Policies and Procedures",
+    "Internal Controls and Auditing",
+    "Regulatory and Industry Standards"
+  ],
+  "key_bottleneck_patterns": [
+    "Inadequate Documentation and Record-Keeping",
+    "Insufficient Training and Employee Development",
+    "Ineffective Communication and Stakeholder Engagement"
+  ],
+  "thinker_context": "Local service businesses often struggle with governance due to limited resources, lack of expertise, and competing priorities. As a result, they may not have the necessary systems, processes, and controls in place to ensure compliance, manage risk, and achieve their goals. A governance audit can help identify areas for improvement and provide recommendations for enhancing overall governance and oversight.",
+  "surgeon_priorities": [
+    "Develop and Implement a Comprehensive Compliance Program",
+    "Establish Clear Roles, Responsibilities, and Lines of Authority",
+    "Conduct Regular Risk Assessments and Internal Audits"
+  ],
+  "mirror_report_tone": "Objective, constructive, and solutions-focused, with a emphasis on providing actionable recommendations for improvement",
+  "desire_vocabulary": [
+    "Compliance",
+    "Efficiency",
+    "Risk",
+    "Control",
+    "Transparency",
+    "Accountability",
+    "Reliability",
+    "Integrity"
+  ],
+  "generated_at": "2026-03-29T19:07:20.892647+00:00"
+}

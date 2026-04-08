@@ -1,0 +1,4 @@
+Project ID,Project Name,Initiative ID,Status,Owner,Start Date,Target Date,Notes
+PROJ-001,EPOS Console Core,INIT-002,Active,Jamie,,,
+PROJ-002,EPOS Router + Decision Graph,INIT-003,In Progress,Jamie,,,
+PROJ-003,EPOS Airtable Base MVP,INIT-004,Planned,Jamie,,,
