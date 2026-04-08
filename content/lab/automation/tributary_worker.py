@@ -34,7 +34,7 @@ from tributaries.echolocation_algorithm import EcholocationAlgorithm
 from validation.brand_validator import BrandValidator
 
 
-EPOS_ROOT = Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent.parent)))
 CONTENT_LAB = EPOS_ROOT / "content" / "lab"
 VAULT_PATH = EPOS_ROOT / "context_vault"
 EVENT_LOG = VAULT_PATH / "events" / "system_events.jsonl"

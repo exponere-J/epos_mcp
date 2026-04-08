@@ -17,6 +17,7 @@ Agent Zero will hit context limits and hallucinate or lose track of mission stat
 """
 
 import json
+import os
 import re
 from pathlib import Path
 from datetime import datetime
@@ -24,7 +25,7 @@ from typing import Dict, List, Optional, Tuple
 import logging
 
 # Establish absolute paths per Article II, Rule 1
-EPOS_ROOT = Path("C:/Users/Jamie/workspace/epos_mcp")
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent)))
 CONTEXT_VAULT_ROOT = EPOS_ROOT / "context_vault"
 REGISTRY_PATH = CONTEXT_VAULT_ROOT / "registry.json"
 OPS_LOGS_DIR = EPOS_ROOT / "ops" / "logs"

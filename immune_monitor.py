@@ -6,6 +6,7 @@ Immune Monitor - EPOS Predictive Health System
 Monitors service health and predicts cascade failures before they happen
 """
 
+import os
 from pathlib import Path
 import requests
 import json
@@ -15,12 +16,12 @@ from typing import Dict, List, Optional
 import logging
 
 class ImmuneMonitor:
-    def __init__(self, epos_root: Path, event_bus_url: str = "http://localhost:8100"):
+    def __init__(self, epos_root: Path, event_bus_url: str = None):
         self.epos_root = Path(epos_root)
-        self.event_bus_url = event_bus_url
+        self.event_bus_url = event_bus_url or os.getenv("EPOS_CORE_URL", "http://epos-core:8001")
         self.log_dir = self.epos_root / "logs"
         self.log_dir.mkdir(exist_ok=True)
-        
+
         # Setup logging
         log_file = self.log_dir / f"immune_monitor_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
         logging.basicConfig(
@@ -32,15 +33,18 @@ class ImmuneMonitor:
             ]
         )
         self.logger = logging.getLogger(__name__)
-        
-        # Service definitions
+
+        _governance = os.getenv("GOVERNANCE_GATE_URL", "http://governance-gate:8101")
+        _learning = os.getenv("LEARNING_URL", "http://learning-server:8102")
+        _context = os.getenv("CONTEXT_URL", "http://context-server:8103")
+        _core = os.getenv("EPOS_CORE_URL", "http://epos-core:8001")
+
+        # Service definitions — Docker service-name URLs
         self.services = {
-            "event-bus": {"url": "http://localhost:8100/health", "critical": True},
-            "governance": {"url": "http://localhost:8101/health", "critical": True, "depends_on": ["event-bus"]},
-            "learning": {"url": "http://localhost:8102/health", "critical": True, "depends_on": ["event-bus"]},
-            "context": {"url": "http://localhost:8103/health", "critical": True, "depends_on": ["event-bus"]},
-            "jarvis-bridge": {"url": "http://localhost:8104/health", "critical": False, "depends_on": ["governance", "learning", "context"]},
-            "command-center": {"url": "http://localhost:8106/health", "critical": False, "depends_on": ["jarvis-bridge"]}
+            "epos-core": {"url": f"{_core}/health", "critical": True},
+            "governance-gate": {"url": f"{_governance}/health", "critical": True},
+            "learning": {"url": f"{_learning}/health", "critical": True},
+            "context": {"url": f"{_context}/health", "critical": True},
         }
         
         self.health_history = {name: [] for name in self.services.keys()}
@@ -188,14 +192,12 @@ class ImmuneMonitor:
 def main():
     """CLI entry point"""
     import sys
-    
-    epos_root = Path.cwd()
-    event_bus_url = "http://localhost:8100"
-    
+
+    epos_root = Path(os.getenv("EPOS_ROOT", Path.cwd()))
     if len(sys.argv) > 1:
         epos_root = Path(sys.argv[1])
-    
-    monitor = ImmuneMonitor(epos_root, event_bus_url)
+
+    monitor = ImmuneMonitor(epos_root)
     monitor.run(interval_seconds=30)
 
 if __name__ == "__main__":

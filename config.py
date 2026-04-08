@@ -11,6 +11,7 @@
 #          Constitution v3.1, Article II, Rule 6 (Config Explicitness)
 # ============================================================
 
+import os
 import sys
 from pathlib import Path
 from dotenv import load_dotenv
@@ -24,8 +25,9 @@ if sys.version_info[:2] < MIN_PYTHON:
     )
 
 # --- Root ---
-EPOS_ROOT        = Path("C:/Users/Jamie/workspace/epos_mcp")
-AZ_ROOT          = Path("C:/Users/Jamie/workspace/agent-zero")
+# EPOS_ROOT env var is set to /app in Docker; falls back to the repo root on the host.
+EPOS_ROOT        = Path(os.getenv("EPOS_ROOT", Path(__file__).resolve().parent))
+AZ_ROOT          = Path(os.getenv("AGENT_ZERO_PATH", EPOS_ROOT.parent / "agent-zero"))
 
 # --- Core Directories ---
 ENGINE_DIR       = EPOS_ROOT / "engine"
@@ -42,7 +44,7 @@ COMPLIANCE_LOG   = OPS_DIR / "compliance_report.json"
 OVERRIDE_LOG     = OPS_DIR / "override_log.json"
 
 # --- Agent Zero Integration ---
-AZ_API_URL       = "http://localhost:8001"
+AZ_API_URL       = os.getenv("AGENT_ZERO_URL", "http://agent-zero:50080")
 AZ_HEALTH_URL    = f"{AZ_API_URL}/health"
 AZ_RUN_URL       = f"{AZ_API_URL}/run-task"
 AZ_RUNNER_LOG    = LOGS_DIR / "az_runner.log"

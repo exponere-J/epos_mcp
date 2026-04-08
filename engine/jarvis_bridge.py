@@ -22,11 +22,11 @@ class JARVISBridge:
         self.epos_root = Path(epos_root)
         self.az_root = Path(az_root)
         
-        # Service URLs from environment or defaults
-        self.event_bus_url = os.getenv("EVENT_BUS_URL", "http://localhost:8100")
-        self.governance_url = os.getenv("GOVERNANCE_URL", "http://localhost:8101")
-        self.learning_url = os.getenv("LEARNING_URL", "http://localhost:8102")
-        self.context_url = os.getenv("CONTEXT_URL", "http://localhost:8103")
+        # Service URLs from environment or Docker service-name defaults
+        self.event_bus_url = os.getenv("EVENT_BUS_URL", os.getenv("EPOS_CORE_URL", "http://epos-core:8001"))
+        self.governance_url = os.getenv("GOVERNANCE_URL", os.getenv("GOVERNANCE_GATE_URL", "http://governance-gate:8101"))
+        self.learning_url = os.getenv("LEARNING_URL", "http://learning-server:8102")
+        self.context_url = os.getenv("CONTEXT_URL", "http://context-server:8103")
         
         # Setup logging
         log_dir = self.epos_root / "logs"

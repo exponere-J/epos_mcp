@@ -240,7 +240,7 @@ class FlywheelAnalyst:
     
     def __init__(self, epos_root: Optional[Path] = None, verbose: bool = False):
         """Initialize the Flywheel Analyst."""
-        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent)))
         self.verbose = verbose
         
         # Load environment

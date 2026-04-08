@@ -18,7 +18,7 @@ import sys
 import os
 
 # Set up paths
-EPOS_ROOT = Path("C:/Users/Jamie/workspace/epos_mcp")
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent)))
 sys.path.insert(0, str(EPOS_ROOT))
 os.environ["EPOS_ROOT"] = str(EPOS_ROOT)
 

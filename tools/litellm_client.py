@@ -41,7 +41,7 @@ from dotenv import load_dotenv
 # ── Environment ──────────────────────────────────────────────
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
-OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL_FAST = os.getenv("GROQ_MODEL_FAST", "llama-3.1-8b-instant")
 GROQ_MODEL_REASONING = os.getenv("GROQ_MODEL_REASONING", "llama-3.3-70b-versatile")

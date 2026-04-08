@@ -36,7 +36,7 @@ AZ_VAULT = VAULT / "agent_zero"
 AZ_VAULT.mkdir(parents=True, exist_ok=True)
 AZ_LOG = AZ_VAULT / "events.jsonl"
 
-AZ_BASE_URL = os.getenv("AGENT_ZERO_URL", "http://localhost:50080")
+AZ_BASE_URL = os.getenv("AGENT_ZERO_URL", "http://agent-zero:8105")
 
 
 class AgentZeroNode:

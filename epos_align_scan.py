@@ -39,7 +39,7 @@ from typing import Optional
 # ─────────────────────────────────────────────────────────────────────────────
 
 EPOS_ROOT_CANDIDATES = [
-    Path("C:/Users/Jamie/workspace/epos_mcp"),
+    Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent))),
     Path("/mnt/c/Users/Jamie/workspace/epos_mcp"),
     Path.cwd(),
 ]

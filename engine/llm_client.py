@@ -45,9 +45,9 @@ except Exception:
 # ── Configuration ──────────────────────────────────────────────
 
 LLM_MODE = os.getenv("LLM_MODE", "groq_direct").lower().strip()
-LITELLM_BASE_URL = os.getenv("LITELLM_BASE_URL", "http://localhost:4000").rstrip("/")
+LITELLM_BASE_URL = os.getenv("LITELLM_BASE_URL", os.getenv("LITELLM_URL", "http://litellm:4000")).rstrip("/")
 LITELLM_API_KEY = os.getenv("LITELLM_MASTER_KEY", "sk-epos-local-proxy")
-OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434").rstrip("/")
 
 DEFAULT_MODEL_BY_MODE = {
     "groq_direct":   os.getenv("GROQ_DEFAULT_MODEL", "llama-3.3-70b-versatile"),

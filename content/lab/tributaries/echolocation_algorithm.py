@@ -31,7 +31,7 @@ from typing import Optional
 # Configuration
 # ---------------------------------------------------------------------------
 
-EPOS_ROOT = Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent.parent)))
 VAULT_PATH = EPOS_ROOT / "context_vault"
 DECISION_LOG = VAULT_PATH / "bi_history" / "echolocation_decisions.jsonl"
 EVENT_LOG = VAULT_PATH / "events" / "system_events.jsonl"

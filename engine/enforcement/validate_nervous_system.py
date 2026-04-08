@@ -62,7 +62,7 @@ def test_governance_gate():
         bus = get_event_bus()
         
         # Create a test file with a violation
-        test_file = Path("C:/Users/Jamie/workspace/epos_mcp/inbox/test_validation.py")
+        import os as _os; test_file = Path(_os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent))) / "inbox/test_validation.py"
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("# Missing header\nimport os")
         
@@ -91,7 +91,7 @@ def test_reward_bus():
         from engine.enforcement.reward_bus import get_reward_bus
         from event_bus import get_event_bus
         
-        epos_root = Path("C:/Users/Jamie/workspace/epos_mcp")
+        epos_root = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
         bus = get_event_bus()
         reward_bus = get_reward_bus(epos_root=epos_root)
         
@@ -130,7 +130,7 @@ def test_compliance_tracker():
     try:
         from engine.enforcement.compliance_tracker import ComplianceTracker
         
-        epos_root = Path("C:/Users/Jamie/workspace/epos_mcp")
+        epos_root = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
         tracker = ComplianceTracker(epos_root=epos_root)
         
         # Record a violation
@@ -160,7 +160,7 @@ def test_remediation_generator():
     try:
         from engine.enforcement.remediation_generator import RemediationGenerator
         
-        epos_root = Path("C:/Users/Jamie/workspace/epos_mcp")
+        epos_root = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
         generator = RemediationGenerator(epos_root=epos_root)
         
         lesson = generator.generate_lesson(

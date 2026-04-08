@@ -106,7 +106,7 @@ class AgentOrchestrator:
     
     def __init__(self, epos_root: Optional[Path] = None, verbose: bool = False):
         """Initialize the orchestrator."""
-        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent)))
         self.verbose = verbose
         
         # Initialize agents (lazy loading)
@@ -169,7 +169,7 @@ class AgentOrchestrator:
         if self._agent_zero is not None:
             return True
         
-        agent_zero_path = Path(os.getenv("AGENT_ZERO_PATH", "C:/Users/Jamie/workspace/agent-zero"))
+        agent_zero_path = Path(os.getenv("AGENT_ZERO_PATH", str(Path(__file__).resolve().parent.parent.parent / "agent-zero")))
         
         if not agent_zero_path.exists():
             self._log("⚠️ Agent Zero path not found")
@@ -479,7 +479,7 @@ class AgentOrchestrator:
             health["agents"]["flywheel_analyst"] = f"error: {e}"
         
         # Check Agent Zero
-        agent_zero_path = Path(os.getenv("AGENT_ZERO_PATH", "C:/Users/Jamie/workspace/agent-zero"))
+        agent_zero_path = Path(os.getenv("AGENT_ZERO_PATH", str(Path(__file__).resolve().parent.parent.parent / "agent-zero")))
         if agent_zero_path.exists():
             health["agents"]["agent_zero"] = {
                 "status": "available",

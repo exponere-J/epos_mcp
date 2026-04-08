@@ -216,7 +216,7 @@ class ContextLibrarian:
     
     def __init__(self, epos_root: Optional[Path] = None, verbose: bool = False):
         """Initialize the Context Librarian."""
-        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent)))
         self.verbose = verbose
         self.vault_root = self.epos_root / "context_vault"
         

@@ -134,7 +134,7 @@ def validate_environment(epos_root: Path) -> bool:
         issues.append("EPOS root")
     
     # Check Agent Zero
-    agent_zero_path = Path(os.getenv("AGENT_ZERO_PATH", "C:/Users/Jamie/workspace/agent-zero"))
+    agent_zero_path = Path(os.getenv("AGENT_ZERO_PATH", str(Path(__file__).resolve().parent.parent.parent / "agent-zero")))
     if agent_zero_path.exists():
         print(f"   ✅ Agent Zero: {agent_zero_path}")
     else:
@@ -239,7 +239,7 @@ def main():
     args = parser.parse_args()
     
     # Determine EPOS root
-    epos_root = Path(args.epos_root) if args.epos_root else Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+    epos_root = Path(args.epos_root) if args.epos_root else Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent)))
     
     print("=" * 60)
     print("🚀 EPOS AGENT SYSTEM SETUP")

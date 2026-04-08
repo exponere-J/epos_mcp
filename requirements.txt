@@ -1,18 +1,43 @@
+# =============================================================================
+# EPOS SOVEREIGN STACK — requirements.txt
+# Python 3.11 | Aligned with Docker containers
+# Last updated: 2026-04-08 (M1 Docker migration)
+# =============================================================================
+
+# Web framework
 fastapi==0.115.5
-uvicorn==0.32.1
+uvicorn[standard]==0.32.1
 pydantic>=2.10.3,<3.0.0
+
+# HTTP clients
+requests>=2.31.0,<3.0.0
+httpx>=0.28.0
+websockets>=15.0.0
+
+# LLM routing
+groq>=0.37.1
+litellm>=1.82.0
+
+# Orchestration / LangGraph
+langgraph>=0.2.0
+
+# Scheduling
+apscheduler>=3.10.0
+
+# Browser automation
+browser-use>=0.12.0
+playwright>=1.40.0
+
+# CLI
+click>=8.1.0
+
+# Config / environment
 python-dotenv>=1.0.0
-anthropic>=0.40.0
-requests>=2.32.3,<3.0.0
+pyyaml>=6.0.1
 
-# LLM Routing
-groq>=0.18.0
-
-# LangGraph / LangChain — pinned to resolve version conflict (Task 4, 2026-04-01)
-langchain>=1.2.14,<2.0.0
-langchain-core>=1.2.24,<2.0.0
-langchain-community>=0.4.1
-langchain-text-splitters>=1.1.1
-langchain-unstructured>=1.0.1
-langgraph>=1.1.4,<1.2.0
-langgraph-checkpoint>=4.0.1
+# Data / serialisation
+lxml>=5.0.0
+numpy>=1.26.0
+Pillow>=10.0.0
+orjson>=3.9.0
+jsonschema>=4.23.0

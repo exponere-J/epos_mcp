@@ -102,8 +102,8 @@ class EPOSEventBus:
     """
     
     # Default paths (Windows absolute per PATH_CLARITY_RULES.md)
-    DEFAULT_EVENT_LOG = Path("C:/Users/Jamie/workspace/epos_mcp/context_vault/events/system_events.jsonl")
-    DEFAULT_EPOS_ROOT = Path("C:/Users/Jamie/workspace/epos_mcp")
+    DEFAULT_EVENT_LOG = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent))) / "context_vault/events/system_events.jsonl"
+    DEFAULT_EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent)))
     
     def __init__(self, event_log_path: Path = None):
         """

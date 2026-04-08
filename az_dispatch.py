@@ -232,15 +232,15 @@ if __name__ == "__main__":
         intent="Scaffold the remaining EPOS system using Agent Zero as the execution arm",
         execution_arm="terminal",
         how=[
-            "python C:/Users/Jamie/workspace/epos_mcp/epos_doctor.py",
-            "mkdir C:/Users/Jamie/workspace/epos_mcp/engine/missions",
-            "mkdir C:/Users/Jamie/workspace/epos_mcp/queue/email",
-            "mkdir C:/Users/Jamie/workspace/epos_mcp/context_vault/receipts",
-            "echo EPOS AZ Bootstrap complete > C:/Users/Jamie/workspace/epos_mcp/logs/bootstrap.log",
+            f"python {EPOS_ROOT}/epos_doctor.py",
+            f"mkdir -p {EPOS_ROOT}/engine/missions",
+            f"mkdir -p {EPOS_ROOT}/queue/email",
+            f"mkdir -p {EPOS_ROOT}/context_vault/receipts",
+            f"echo 'EPOS AZ Bootstrap complete' >> {EPOS_ROOT}/logs/bootstrap.log",
         ],
         constraints=[
-            "All paths must be absolute Windows paths",
-            "Idempotent — safe to re-run (use mkdir without error on exist)",
+            "All paths must be absolute paths rooted at EPOS_ROOT",
+            "Idempotent — safe to re-run (mkdir -p)",
             "No destructive commands",
             "Log every step"
         ],
@@ -249,9 +249,9 @@ if __name__ == "__main__":
             "bootstrap.log exists in logs/"
         ),
         failure_modes=[
-            "AZ not running on :8001 — start with: uvicorn eposrunner:app --port 8001",
-            "Python not 3.11 — activate .venvepos first",
-            "Path C:/Users/Jamie/workspace/ does not exist — verify EPOS_ROOT"
+            "AZ not running — start with: docker compose up -d agent-zero",
+            "Python not 3.11 — verify container image",
+            "EPOS_ROOT not set — set env var or check Docker compose"
         ],
         dry_run=False
     )

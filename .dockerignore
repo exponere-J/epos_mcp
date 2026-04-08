@@ -1,5 +1,77 @@
-﻿*.pyc
-__pycache__
-.git
-.venv
+# =============================================================================
+# EPOS .dockerignore — Keep build context lean
+# =============================================================================
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments (never copy into image)
+.venv/
+.venv*/
+venv/
+venv*/
+venv_epos/
+venv_epos_311/
+venv_az/
+venv_ubuntu/
+.venv_ubuntu/
+env/
+ENV/
+
+# Git history
+.git/
+.gitignore
+
+# Node
+node_modules/
+dist/
+
+# Docker artifacts
+.docker/
+
+# Logs
+logs/
 *.log
+
+# Test / dev artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.cursor/
+.vscode/
+.idea/
+.claude/
+
+# Large binary / model files
+*.bin
+*.safetensors
+*.gguf
+*.h5
+*.pkl
+
+# Embedded repos
+CLI-Anything/
+
+# Sprint logs
+sprint_logs/
+ops/ttlg_sessions/
+ops/surgical_backups/
+
+# Archives
+_archive/
+rejected/

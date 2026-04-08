@@ -84,7 +84,7 @@ class BrowserUseNode:
             backends.append("groq")
         try:
             import requests
-            r = requests.get("http://localhost:11434/api/tags", timeout=3)
+            r = requests.get(f"{os.getenv('OLLAMA_HOST', 'http://ollama:11434')}/api/tags", timeout=3)
             if r.status_code == 200:
                 backends.append("ollama")
         except Exception:
@@ -105,7 +105,7 @@ class BrowserUseNode:
         # Fallback to Ollama
         try:
             from browser_use.llm import ChatOllama
-            return ChatOllama(model="llama3:latest", host="http://localhost:11434")
+            return ChatOllama(model="llama3:latest", host=os.getenv("OLLAMA_HOST", "http://ollama:11434"))
         except Exception:
             pass
 

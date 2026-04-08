@@ -16,7 +16,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 
-EPOS_ROOT = Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
 CONTENT_LAB = EPOS_ROOT / "content" / "lab"
 
 DIRECTORIES = [

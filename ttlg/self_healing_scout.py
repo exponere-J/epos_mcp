@@ -39,7 +39,7 @@ except ImportError:
 
 from path_utils import get_context_vault
 
-EPOS_ROOT = Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent)))
 VAULT = get_context_vault()
 HEALING_VAULT = VAULT / "self_healing"
 

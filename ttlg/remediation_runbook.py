@@ -40,7 +40,7 @@ from path_utils import get_context_vault
 VAULT = get_context_vault()
 HEALING_VAULT = VAULT / "self_healing"
 ACTIONS_LOG = HEALING_VAULT / "actions.jsonl"
-COLD_STORAGE = Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp")) / "cold_storage"
+COLD_STORAGE = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent))) / "cold_storage"
 
 
 class RemediationRunbook:
@@ -118,7 +118,7 @@ class RemediationRunbook:
     def _handle_api_rate_limit(self, finding: dict) -> dict:
         """Tier 0: Switch to fallback provider."""
         # Check Ollama availability
-        ollama_host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+        ollama_host = os.getenv("OLLAMA_HOST", "http://ollama:11434")
         try:
             r = requests.get(f"{ollama_host}/api/tags", timeout=3)
             if r.status_code == 200:

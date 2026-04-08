@@ -246,7 +246,7 @@ class ConstitutionalArbiter:
     
     def __init__(self, epos_root: Optional[Path] = None, verbose: bool = False):
         """Initialize the Constitutional Arbiter."""
-        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent)))
         self.verbose = verbose
         self.audit_log: List[AuditResult] = []
         

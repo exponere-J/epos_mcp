@@ -155,7 +155,7 @@ class GroqRouter:
     def _ollama_fallback(self, messages: list, max_tokens: int, temperature: float):
         """Last-resort fallback to local Ollama. Returns (text, model) or None."""
         import requests
-        ollama_host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+        ollama_host = os.getenv("OLLAMA_HOST", "http://ollama:11434")
         ollama_model = os.getenv("OLLAMA_FALLBACK_MODEL", "mistral:instruct")
         try:
             # Convert chat messages to single prompt

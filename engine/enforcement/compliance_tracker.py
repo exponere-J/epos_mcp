@@ -11,6 +11,7 @@ Maintains JSONL ledgers for each agent showing:
 - Improvement trajectories
 """
 
+import os
 from pathlib import Path
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
@@ -28,7 +29,7 @@ class ComplianceTracker:
     
     def __init__(self, epos_root: Path = None):
         """Initialize tracker with ledger path."""
-        self.epos_root = epos_root or Path("C:/Users/Jamie/workspace/epos_mcp")
+        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
         self.ledger_path = self.epos_root / "context_vault/learning/agent_performance"
         self.ledger_path.mkdir(parents=True, exist_ok=True)
     

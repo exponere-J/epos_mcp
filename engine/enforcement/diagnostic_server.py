@@ -260,7 +260,7 @@ class DiagnosticEngine:
     Constitutional Authority: NODE_SOVEREIGNTY_CONSTITUTION Article III
     """
     
-    DEFAULT_EPOS_ROOT = Path("C:/Users/Jamie/workspace/epos_mcp")
+    DEFAULT_EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
     
     # Capability keywords mapping
     CAPABILITY_KEYWORDS = {

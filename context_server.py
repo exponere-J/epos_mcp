@@ -38,7 +38,7 @@ class SearchResult:
 class ContextVault:
     """Manages the EPOS Context Vault."""
     
-    DEFAULT_EPOS_ROOT = Path("C:/Users/Jamie/workspace/epos_mcp")
+    DEFAULT_EPOS_ROOT = Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent)))
     MAX_INLINE_TOKENS = 8192
     
     def __init__(self, vault_path: Path = None):

@@ -11,6 +11,7 @@ Instead of terminal failures, violations trigger:
 3. Context injection for agent learning
 """
 
+import os
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, Optional
@@ -42,7 +43,7 @@ class RewardBus:
     
     def __init__(self, epos_root: Path = None):
         """Initialize Reward Bus with optional root override."""
-        self.epos_root = epos_root or Path("C:/Users/Jamie/workspace/epos_mcp")
+        self.epos_root = epos_root or Path(os.getenv("EPOS_ROOT", str(Path(__file__).resolve().parent.parent.parent)))
         self.event_bus = get_event_bus() if get_event_bus else None
         
         # Initialize subsystems
