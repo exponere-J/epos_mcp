@@ -1,0 +1,200 @@
+{
+  "aar_id": "20260413-05",
+  "directive_id": "20260413-05",
+  "title": "SCC Shadow Protocol — Training Classroom",
+  "session_date": "2026-04-13",
+  "phase": "Training Infrastructure",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "status": "COMPLETE",
+
+  "missions": [
+    {
+      "id": "M1",
+      "title": "Deploy Training Framework (shadow_protocol.py, practice_gym.py, umep_registry.json)",
+      "status": "COMPLETE",
+      "deliverables": [
+        "epos/training/__init__.py — package init",
+        "epos/training/shadow_protocol.py — ShadowProtocol class (compare_files, score_merit, score_mission, generate_training_pairs, track_merit)",
+        "epos/training/practice_gym.py — PracticeGym class (seed_session, run_scc_exam, run_mission_shadow, commit_grade)",
+        "context_vault/training/umep_registry.json — 30 model slots (12 named), certification levels 0-5",
+        "All 4 files deployed to epos-core container and verified importable"
+      ],
+      "verification": {
+        "shadow_protocol import": "PASS",
+        "practice_gym import": "PASS",
+        "UMEP registry": "PASS — 30 slots, 12 named, 6 cert levels",
+        "result": "3/3 PASS"
+      }
+    },
+    {
+      "id": "M2",
+      "title": "Seed sandbox with 20260413-03A exam",
+      "status": "COMPLETE",
+      "deliverables": [
+        "Sandbox seeded: /app/epos/sandbox/20260413-03A/",
+        "11 SCC stub files staged (.scc.py — shebang only)",
+        "11 baseline files staged (.baseline.py — Desktop CODE implementations)",
+        "Session manifest written: GYM-20260413-03A-20260413T184345Z"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Run SCC exam — 3-try protocol",
+      "status": "COMPLETE",
+      "exam_id": "EXAM-20260413-03A-20260413T184357Z",
+      "result": {
+        "tries_used": 3,
+        "best_merit": 5,
+        "final_grade": "F",
+        "passed": false,
+        "files_examined": 11,
+        "all_stubs": true
+      },
+      "finding": "SCC PRIMARY produced shebang-only stubs for all 11 required files across all 3 exam tries. Merit ceiling decay (Try1=100%, Try2=85%, Try3=70%) had no effect — stub penalty returns merit=5 regardless."
+    },
+    {
+      "id": "M4",
+      "title": "Pattern analysis — Desktop CODE audit",
+      "status": "COMPLETE",
+      "pattern_table": [
+        {"file": "api.py",           "baseline_lines": 108, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "bom_cleaner.py",   "baseline_lines":  67, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "pipeline.py",      "baseline_lines": 134, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "reformulator.py",  "baseline_lines": 122, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "router.py",        "baseline_lines":  77, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "speaker.py",       "baseline_lines":  73, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "training_logger.py","baseline_lines": 73, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "transcriber.py",   "baseline_lines":  71, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "vault_search.py",  "baseline_lines": 121, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "vision.py",        "baseline_lines":  54, "scc_lines": 1, "merit": 5, "grade": "F"},
+        {"file": "vocabulary.py",    "baseline_lines":  86, "scc_lines": 1, "merit": 5, "grade": "F"}
+      ],
+      "primary_pattern": "STUB — no implementation produced (11/11 files, 100%)",
+      "root_cause": "SCC delegation via docker exec produced shebang-only output. SCC does not yet translate directive spec context into full Python module implementations.",
+      "total_implementation_lines_missing": 990
+    },
+    {
+      "id": "M5",
+      "title": "Generate training pairs → 20260413-03A_patterns.jsonl",
+      "status": "COMPLETE",
+      "deliverables": [
+        "context_vault/training/pairs/20260413-03A_patterns.jsonl — 1 pattern pair",
+        "Pattern: STUB — no implementation produced, frequency 11/11 (100%)",
+        "QLoRA target: full-file generation from directive spec"
+      ]
+    },
+    {
+      "id": "M6",
+      "title": "Commit grade to UMEP registry",
+      "status": "COMPLETE",
+      "grade_id": "GRADE-SCC-PRIMARY-20260413-03A-20260413T184601Z",
+      "model_id": "SCC-PRIMARY",
+      "merit": 5,
+      "grade": "F",
+      "certification_level_before": 0,
+      "certification_level_after": 1,
+      "level_change": "0 (Unassessed) → 1 (Attempt)",
+      "missions_completed": 1
+    },
+    {
+      "id": "M7",
+      "title": "AAR_20260413-05.json",
+      "status": "COMPLETE",
+      "stored_at": "context_vault/aar/AAR_20260413-05.json"
+    }
+  ],
+
+  "what_went_well": [
+    "All 3 training framework modules imported cleanly on first try — no dependency issues",
+    "UMEP registry updated live: SCC-PRIMARY promoted 0→1 (Attempt) automatically by commit_grade()",
+    "Merit timeline append worked — track_merit() wrote to merit_timeline.jsonl without error",
+    "30-slot registry with 12 named specialists gives clear model taxonomy for multi-model training",
+    "3-try exam protocol confirmed: stub penalty is merit=5 regardless of try — correct behavior",
+    "Shadow run + training pair generation completed in single invocation of run_mission_shadow()"
+  ],
+
+  "what_went_wrong": [
+    "docker cp fails when target directory doesn't exist in container — required mkdir first, then cp with trailing slash syntax (cp dir/. container:/path/)",
+    "compare_files() key 'similarity_ratio' doesn't exist — actual key is 'matching_lines_pct'. Print script had wrong key.",
+    "generate_training_pairs() uses 'bad_example'/'good_example' keys not 'bad'/'good' — minor key mismatch in debug print only, not functional",
+    "Pattern structure from score_mission() is {'pattern': str, 'frequency': int, 'files_pct': int} — not {'type': str, ...}. Print loop used wrong key in first run.",
+    "Stub pattern string 'STUB — no implementation produced' is not in PATTERN_LESSONS — gets default empty bad/good examples. Training pair lesson text is correct but examples are thin."
+  ],
+
+  "what_was_learned": [
+    "docker cp directory requires: first mkdir in container, then cp with source as 'dir/.' — NOT 'dir/' as destination key",
+    "SCC PRIMARY baseline merit: 5/100 on all files — full stub. Training curriculum must start at zero-to-implementation generation.",
+    "Stub detection in score_merit() correctly assigns merit=5 regardless of try multiplier — the penalty is applied before the multiplier would matter",
+    "UMEP certification auto-promotion works correctly: commit_grade() evaluates cert level and promotes 0→1 on first attempt",
+    "Pattern-level training (1 pair per recurring gap, not per file) is the right abstraction — 11 stubs produce 1 training target, not 11 duplicates"
+  ],
+
+  "training_summary": {
+    "model_id": "SCC-PRIMARY",
+    "directive_examined": "20260413-03A",
+    "files_scored": 11,
+    "aggregate_merit": 5,
+    "grade": "F",
+    "certification_level": 1,
+    "primary_gap": "STUB — no implementation produced",
+    "qlora_curriculum_priority": "Full Python module generation from directive specification context",
+    "next_exam": "Re-examine 20260413-03A after QLoRA fine-tuning on training pairs"
+  },
+
+  "state_delta": {
+    "before": {
+      "training_framework": "not deployed",
+      "SCC_PRIMARY_certification": 0,
+      "training_pairs_count": 0
+    },
+    "after": {
+      "training_framework": "operational",
+      "epos_training_shadow_protocol": "deployed",
+      "epos_training_practice_gym": "deployed",
+      "umep_registry": "deployed — 30 slots, 12 named",
+      "SCC_PRIMARY_certification": 1,
+      "SCC_PRIMARY_merit_history": [{"directive": "20260413-03A", "merit": 5, "grade": "F"}],
+      "training_pairs_files": ["context_vault/training/pairs/20260413-03A_patterns.jsonl"],
+      "sandbox_sessions": ["20260413-03A"]
+    }
+  },
+
+  "pending": [
+    {
+      "item": "QLoRA fine-tuning run on 20260413-03A_patterns.jsonl",
+      "action": "Use training pairs to fine-tune SCC model — stub→implementation generation",
+      "priority": "NEXT SESSION"
+    },
+    {
+      "item": "Re-examination of SCC after fine-tuning",
+      "action": "Re-run run_scc_exam('20260413-03A', file_specs) post-fine-tune",
+      "priority": "NEXT SESSION"
+    },
+    {
+      "item": "Expand PATTERN_LESSONS in shadow_protocol.py",
+      "action": "Add 'STUB — no implementation produced' to PATTERN_LESSONS with concrete bad/good examples showing shebang stub vs full module",
+      "priority": "NEXT SESSION"
+    },
+    {
+      "item": "Commit training files to git",
+      "action": "git add epos/training/ context_vault/training/ context_vault/aar/AAR_20260413-05.json && git commit",
+      "priority": "IMMEDIATE"
+    }
+  ],
+
+  "successor_directives": [
+    {
+      "id": "20260413-06",
+      "title": "QLoRA Fine-Tuning Run",
+      "depends_on": "20260413-05 (training pairs generated)",
+      "status": "UNBLOCKED"
+    }
+  ],
+
+  "signatures": {
+    "directive_author": "Jamie Purdue",
+    "executing_agent": "Desktop CODE (Claude Code)",
+    "constitutional_gate": "EPOS Constitution v3.1",
+    "closed_at": "2026-04-13T19:00:00Z"
+  }
+}

@@ -40,6 +40,19 @@ try:
 except Exception:
     _BUS = None
 
+try:
+    from epos.rewards.publish_reward import publish_reward as _pub_reward
+    def _reward(signal_name: str, value: float, signal_type: str = "process",
+                context: str = "", needs_review: bool = False) -> None:
+        try:
+            _pub_reward(signal_name=signal_name, value=value,
+                        signal_type=signal_type, source="sanitation",
+                        context=context, needs_review=needs_review)
+        except Exception:
+            pass
+except ImportError:
+    def _reward(*a, **kw): pass
+
 from path_utils import get_context_vault
 
 VAULT = get_context_vault()
@@ -243,6 +256,12 @@ class SanitationVerifier:
             results[name] = {"pass": ok, "detail": detail}
             if ok:
                 passed += 1
+                _reward("sanitation_check_pass", 0.125, signal_type="process",
+                        context=f"Check '{name}' passed")
+            else:
+                _reward("sanitation_check_fail", -0.5, signal_type="negative",
+                        context=f"Check '{name}' FAILED: {detail[:120]}",
+                        needs_review=True)
 
         score = f"{passed}/{len(self.CHECKS)}"
         report = {
