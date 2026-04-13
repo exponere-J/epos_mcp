@@ -11,6 +11,7 @@ Returns top-k semantically relevant documents for any query.
 """
 
 import json
+import os
 import numpy as np
 from pathlib import Path
 from datetime import datetime
@@ -20,7 +21,7 @@ EPOS_ROOT = Path("/app")
 VAULT_DIR = EPOS_ROOT / "context_vault"
 INDEX_DIR = VAULT_DIR / "voice" / "embeddings"
 INDEX_FILE = INDEX_DIR / "vault_index.json"
-OLLAMA_URL = "http://localhost:11434"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://epos-ollama:11434")
 
 
 def embed_text(text: str) -> list:
