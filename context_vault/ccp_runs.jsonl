@@ -1,0 +1,7 @@
+{"run_id": "CCP-20260413T201323Z", "source_type": "direct_paste", "text_length": 1115, "elements_extracted": 14, "auto_routed": 10, "pending": 4, "logged_at": "2026-04-13T20:13:23.455551+00:00"}
+{"run_id": "CCP-20260413T202103Z", "source_type": "direct_paste", "text_length": 152, "elements_extracted": 5, "auto_routed": 4, "pending": 1, "logged_at": "2026-04-13T20:21:03.833255+00:00"}
+{"run_id": "CCP-20260413T202159Z", "source_type": "direct_paste", "text_length": 299, "elements_extracted": 7, "auto_routed": 6, "pending": 1, "logged_at": "2026-04-13T20:21:59.176926+00:00"}
+{"run_id": "CCP-20260413T202309Z", "source_type": "direct_paste", "text_length": 39, "elements_extracted": 3, "auto_routed": 3, "pending": 0, "logged_at": "2026-04-13T20:23:09.375727+00:00"}
+{"run_id": "CCP-20260413T215912Z", "source_type": "voice_capture", "text_length": 326, "elements_extracted": 5, "auto_routed": 1, "pending": 4, "logged_at": "2026-04-13T21:59:12.971662+00:00"}
+{"run_id": "CCP-20260413T215913Z", "source_type": "test", "text_length": 50, "elements_extracted": 1, "auto_routed": 1, "pending": 0, "logged_at": "2026-04-13T21:59:13.073538+00:00"}
+{"run_id": "CCP-20260413T215913Z", "source_type": "test", "text_length": 50, "elements_extracted": 1, "auto_routed": 1, "pending": 0, "logged_at": "2026-04-13T21:59:13.106529+00:00"}

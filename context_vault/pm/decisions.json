@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "id": "ELM-F2A6863F97C5",
+      "content": "We decided to use Qwen3-32B for CCP classification.",
+      "type": "decision",
+      "confidence": 0.95,
+      "source_capture_id": null,
+      "status": "pending",
+      "priority": "normal",
+      "assigned_to": null,
+      "due_date": null,
+      "created_at": "2026-04-13T20:21:59.094314+00:00",
+      "source_directive": null,
+      "context_refs": [],
+      "hours_age": 1.6
+    },
+    {
+      "id": "ELM-C8E74A6D409A",
+      "content": "We decided.",
+      "type": "decision",
+      "confidence": 0.95,
+      "source_capture_id": null,
+      "status": "pending",
+      "priority": "normal",
+      "assigned_to": null,
+      "due_date": null,
+      "created_at": "2026-04-13T20:23:09.350889+00:00",
+      "source_directive": null,
+      "context_refs": [],
+      "hours_age": 1.6
+    }
+  ],
+  "updated_at": "2026-04-13T21:59:13.253071+00:00"
+}

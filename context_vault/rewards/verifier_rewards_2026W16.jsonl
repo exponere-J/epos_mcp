@@ -1,0 +1,1 @@
+{"timestamp": "2026-04-13T21:00:56.349707Z", "week": "2026W16", "directive_id": "unknown", "trace_id": "7e41edb1", "source": "verifier", "signal_type": "process", "signal_name": "verification_test", "value": 0.1, "context": "M8 check", "needs_review": false}

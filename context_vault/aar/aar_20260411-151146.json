@@ -1,0 +1,25 @@
+{
+  "session_id": "20260411-151146",
+  "directive": "Create a test file at context_vault/sessions/m5_test.txt with content: M5 VERIFIED",
+  "generated_at": "2026-04-11T15:11:48.003335+00:00",
+  "missions_completed": [
+    "Create a test file at context_vault/sessions/m5_test.txt with content: M5 VERIFIED"
+  ],
+  "what_went_well": [
+    "Directive completed successfully",
+    "1 events published to Event Bus"
+  ],
+  "what_went_wrong": [
+    "No errors recorded"
+  ],
+  "what_was_learned": [],
+  "state_delta": {
+    "files_created": [],
+    "files_modified": [],
+    "events_published": 1
+  },
+  "files_created": [],
+  "files_modified": [],
+  "events_published": 1,
+  "doctor_result": "not_run"
+}

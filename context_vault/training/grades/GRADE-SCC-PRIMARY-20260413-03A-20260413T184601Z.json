@@ -1,0 +1,94 @@
+{
+  "grade_id": "GRADE-SCC-PRIMARY-20260413-03A-20260413T184601Z",
+  "model_id": "SCC-PRIMARY",
+  "directive_id": "20260413-03A",
+  "merit": 5,
+  "grade": "F",
+  "gaps": [
+    "STUB \u2014 no implementation produced"
+  ],
+  "per_file": {
+    "api": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "bom_cleaner": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "pipeline": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "reformulator": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "router": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "speaker": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "training_logger": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "transcriber": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "vault_search": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "vision": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    },
+    "vocabulary": {
+      "total": 5,
+      "grade": "F",
+      "gaps": [
+        "STUB \u2014 no implementation produced"
+      ]
+    }
+  },
+  "progress_report": "SCC PRIMARY delegated DIRECTIVE 20260413-03A (Voice System Initialization) and produced\nstub outputs (shebang-only) for all 11 required files. Primary gap: full implementation\ngeneration. SCC must learn to translate directive specs into complete, EPOS-compliant Python\nmodules with governance watermarks, async patterns, error handling, and event publishing.\nTraining pairs generated targeting stub-to-implementation gap. QLoRA curriculum: full file\ngeneration from directive spec context.",
+  "certification_level_before": 0,
+  "certification_level_after": 1,
+  "level_changed": true,
+  "committed_at": "2026-04-13T18:46:01.978649Z"
+}

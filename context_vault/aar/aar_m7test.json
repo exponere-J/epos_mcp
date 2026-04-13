@@ -1,0 +1,14 @@
+{
+  "session_id": "m7test",
+  "directive": "M7 test",
+  "generated_at": "2026-04-11T15:20:14.562346+00:00",
+  "missions_completed": [],
+  "what_went_well": [],
+  "what_went_wrong": [],
+  "what_was_learned": [],
+  "state_delta": {},
+  "files_created": [],
+  "files_modified": [],
+  "events_published": 0,
+  "doctor_result": "not_run"
+}

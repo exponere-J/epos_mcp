@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "ELM-3F179B385F69",
+      "content": "IDEA: real-time confidence meter in voice UI.",
+      "type": "idea",
+      "confidence": 0.97,
+      "source_capture_id": null,
+      "status": "pending",
+      "priority": "normal",
+      "assigned_to": null,
+      "due_date": null,
+      "created_at": "2026-04-13T20:21:59.139637+00:00",
+      "source_directive": null,
+      "context_refs": [],
+      "hours_age": 1.6
+    },
+    {
+      "id": "ELM-6A7E6BF6E7EC",
+      "content": "Idea: use HeyGen for automated client onboarding videos.",
+      "status": "pending",
+      "priority": "normal",
+      "confidence": 0.97,
+      "original_confidence": 0.97,
+      "source_capture_id": null,
+      "element_type": "idea",
+      "created_at": "2026-04-13T21:59:12.953519+00:00",
+      "hours_age": 0.0
+    }
+  ],
+  "updated_at": "2026-04-13T21:59:13.253071+00:00"
+}

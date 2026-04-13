@@ -1,0 +1,61 @@
+{
+  "date": "2026-04-08",
+  "signals": {
+    "competitive_moves": [],
+    "trending_topics": [
+      {
+        "avatar_id": "agency_builder",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "boutique_agency_founder",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "creative_hustler",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "fractional_executive",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "local_champion",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "solo_operator",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "solo_strategic_consultant",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      },
+      {
+        "avatar_id": "technical_founder_operator",
+        "trending_topics": [],
+        "declining_topics": [],
+        "opportunity_gaps": []
+      }
+    ],
+    "new_tools": [],
+    "regulatory_changes": [],
+    "fotw_sentiment": [],
+    "research_frontier": []
+  },
+  "timestamp": "2026-04-08T22:06:42.271963+00:00"
+}

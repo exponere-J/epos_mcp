@@ -1,0 +1,107 @@
+{
+  "audit_id": "PERM-20260413T074432Z",
+  "timestamp": "2026-04-13T07:44:32.981232+00:00",
+  "status": "PASS",
+  "directories_checked": 16,
+  "directories_writable": 16,
+  "directories_failed": 0,
+  "failed_paths": [],
+  "results": [
+    {
+      "path": "/app/epos",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/epos/tools",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/epos/agents",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/epos/state",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/epos/models",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/epos/pm",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/engine",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/friday",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/friday/executors",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/friday/skills",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/reactor",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/context_vault",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/context_vault/aar",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/context_vault/reports",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/context_vault/infrastructure",
+      "exists": true,
+      "writable": true,
+      "error": null
+    },
+    {
+      "path": "/app/context_vault/sessions",
+      "exists": true,
+      "writable": true,
+      "error": null
+    }
+  ]
+}

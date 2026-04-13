@@ -1,0 +1,12 @@
+{
+  "shadow_tester": "scc",
+  "timestamp": "2026-04-13",
+  "permission_audit": {
+    "status": "PASS",
+    "writable": 16
+  },
+  "path_scan": {
+    "contaminated": 0
+  },
+  "verification_score": "8/8"
+}
