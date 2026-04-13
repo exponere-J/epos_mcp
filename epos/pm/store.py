@@ -337,12 +337,21 @@ class PMStore:
             if not tab:
                 continue
 
+            element_id = route.get("element_id")
+
+            # Dedup: skip if this element ID already exists in the tab
+            existing_ids = {i.get("id") for i in self.list_items(tab)}
+            if element_id in existing_ids:
+                continue
+
+            confidence = route.get("confidence", 1.0)
             entry = {
-                "id": route.get("element_id"),
+                "id": element_id,
                 "content": route.get("content"),
                 "status": "pending",
                 "priority": "normal",
-                "confidence": route.get("confidence"),
+                "confidence": confidence,
+                "original_confidence": confidence,  # preserved for decay engine
                 "source_capture_id": route.get("source_capture_id"),
                 "element_type": route.get("element_type"),
                 "created_at": datetime.now(timezone.utc).isoformat(),

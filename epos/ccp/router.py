@@ -204,22 +204,25 @@ def route_element(element: ExtractedElement, auto_threshold: float = 0.90) -> Ro
     """
     Route a single scored element.
 
-    High confidence (≥ auto_threshold) → auto-write to PM file.
+    High confidence (≥ auto_threshold) → flag for auto-route (PMStore writes).
     Medium/Low → return pending result for human confirmation.
+
+    M4 (20260414-03): route_element() NO LONGER WRITES to PM files.
+    Writing is delegated entirely to PMStore.ingest_ccp_result() (single writer).
 
     Args:
         element: Scored ExtractedElement
         auto_threshold: Confidence above which to auto-route
 
     Returns:
-        RoutingResult with action and written state
+        RoutingResult with action and destination_path (written=False until PMStore ingests)
     """
     if element.confidence >= auto_threshold and not element.needs_llm_review:
-        # Auto-route
+        # Auto-route: record destination but do NOT write — PMStore is single writer
         result = RoutingResult(element, action="auto")
-        dest = _write_element_to_pm(element)
-        result.destination_path = dest
-        result.written = True
+        dest_path = PM_FILES.get(element.type, PM_ROOT / "misc.json")
+        result.destination_path = str(dest_path)
+        result.written = False  # PMStore.ingest_ccp_result() sets written
         result.confirmation_state = CONFIRM_AUTO
         _log_routing_decision(result)
         return result
@@ -318,25 +321,53 @@ def confirm_routing(
                 needs_review=True)
 
     if action in ("confirm", "override"):
+        # M3 (20260414-03): PMStore is single writer — no direct file writes here
+        from epos.pm.store import PMStore, PMTab
+
+        TYPE_TO_TAB = {
+            "action_item":             PMTab.ACTION_ITEMS,
+            "decision":                PMTab.DECISIONS,
+            "research_question":       PMTab.RESEARCH_QUEUE,
+            "idea":                    PMTab.IDEA_PIPELINE,
+            "client_insight":          PMTab.CLIENT_INSIGHTS,
+            "content_seed":            PMTab.IDEA_PIPELINE,
+            "blocker":                 PMTab.BLOCKERS,
+        }
+
+        el = result.element
+        pm_entry = {
+            "id": el.element_id,
+            "content": el.content,
+            "element_type": el.type.value,
+            "confidence": el.confidence,
+            "original_confidence": el.confidence,
+            "source_capture_id": el.source_capture_id,
+            "status": "pending",
+            "priority": "normal",
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+
         if override_destination:
-            # Write to custom destination
+            # Custom destination path (JSONL append, non-tab)
             dest_path = Path(override_destination)
             dest_path.parent.mkdir(parents=True, exist_ok=True)
-            pm_entry = {
-                "id": result.element.element_id,
-                "content": result.element.content,
-                "type": result.element.type.value,
-                "confidence": result.element.confidence,
-                "source_capture_id": result.element.source_capture_id,
-                "status": "pending",
-                "created_at": datetime.now(timezone.utc).isoformat(),
-            }
             with open(dest_path, "a") as f:
                 f.write(json.dumps(pm_entry) + "\n")
             result.destination_path = str(dest_path)
+
         else:
-            dest = _write_element_to_pm(result.element)
-            result.destination_path = dest
+            tab = TYPE_TO_TAB.get(el.type.value)
+            if tab:
+                pm = PMStore()
+                pm.add_from_dict(tab, pm_entry)
+                result.destination_path = str(pm._tab_path(tab))
+            else:
+                # Non-tab type (learning_moment, constitutional_proposal) — JSONL
+                dest_path = PM_FILES.get(el.type, EPOS_ROOT / "context_vault" / "pm" / "misc.jsonl")
+                dest_path.parent.mkdir(parents=True, exist_ok=True)
+                with open(dest_path, "a") as f:
+                    f.write(json.dumps(pm_entry) + "\n")
+                result.destination_path = str(dest_path)
 
         result.written = True
         if result.confirmation_state == CONFIRM_PENDING:

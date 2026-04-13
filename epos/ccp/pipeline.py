@@ -160,6 +160,16 @@ class CCPPipeline:
             "processed_at": datetime.now(timezone.utc).isoformat(),
         }
 
+        # Step 3.5: Write auto-routed elements to PM (single writer — M4, 20260414-03)
+        pm_written = 0
+        try:
+            from epos.pm.store import PMStore
+            pm_ingest = PMStore().ingest_ccp_result(result)
+            pm_written = pm_ingest.get("written", 0)
+        except Exception:
+            pass
+        result["pm_written"] = pm_written
+
         # ── Reward signals (Directive 20260414-02) ────────────────────────────
         _auto = routing["summary"].get("auto_routed", 0)
         _pending = routing["summary"].get("pending_confirmation", 0)

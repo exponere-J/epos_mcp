@@ -127,6 +127,34 @@ async def process_voice_input(audio_bytes: bytes, filename: str = "audio.webm") 
     _reward("reformulation_generated", 0.2,
             context=f"Extracted {len(elements)} elements")
 
+    # Step 5.5: CCP Element Extraction (after reformulation, before TTS — M1 of 20260414-03)
+    try:
+        from epos.ccp.pipeline import CCPPipeline
+        ccp = CCPPipeline()
+        ccp_result = ccp.process_text(
+            text=corrected,
+            source_type="voice_capture",
+            source_capture_id=capture_id,
+        )
+        session_log["steps"].append({
+            "step": "ccp_extraction",
+            "elements_extracted": ccp_result.get("elements_extracted", 0),
+            "auto_routed": ccp_result.get("routing", {}).get("summary", {}).get("auto_routed", 0),
+            "pending_confirmation": ccp_result.get("routing", {}).get("summary", {}).get("pending_confirmation", 0),
+            "pm_written": ccp_result.get("pm_written", 0),
+        })
+        _reward("voice_ccp_extraction",
+                min(ccp_result.get("elements_extracted", 0) * 0.1, 0.5),
+                signal_type="process",
+                context=f"Extracted {ccp_result.get('elements_extracted', 0)} elements from voice session {capture_id}")
+    except Exception as e:
+        session_log["steps"].append({
+            "step": "ccp_extraction",
+            "error": str(e)[:200],
+            "note": "CCP extraction non-fatal — session continues",
+        })
+        ccp_result = {"elements_extracted": 0, "routing": {"auto_routed": [], "pending_confirmation": []}}
+
     # Step 6: TTS (Piper) — graceful fallback
     tts_text = reformulation.get("coaching_cue", "") or reformulation.get("reformulated", "")
     tts_result = speak(tts_text, session_id)
@@ -158,5 +186,9 @@ async def process_voice_input(audio_bytes: bytes, filename: str = "audio.webm") 
         "elements": reformulation.get("elements", []),
         "citations": reformulation.get("citations", []),
         "tts_audio": tts_result.get("audio_path"),
-        "tts_status": tts_result["status"]
+        "tts_status": tts_result["status"],
+        "ccp_elements_extracted": ccp_result.get("elements_extracted", 0),
+        "ccp_auto_routed": ccp_result.get("routing", {}).get("summary", {}).get("auto_routed", 0),
+        "ccp_pending": ccp_result.get("routing", {}).get("summary", {}).get("pending_confirmation", 0),
+        "ccp_pending_elements": ccp_result.get("routing", {}).get("pending_confirmation", []),
     }
