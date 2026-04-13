@@ -1,0 +1,16 @@
+{
+  "session_id": "SCC-20260411T194720Z",
+  "directive": "Create a file at /app/context_vault/test_scc.txt with content: Sovereign Coding Component operational. Then read the file back and verify the content matches.",
+  "generated_at": "2026-04-11T19:47:25.427728+00:00",
+  "missions_completed": [],
+  "what_went_well": [],
+  "what_went_wrong": [],
+  "what_was_learned": [],
+  "state_delta": {},
+  "files_created": [
+    "VAULT_WRITE"
+  ],
+  "files_modified": [],
+  "events_published": 3,
+  "doctor_result": "not_run"
+}

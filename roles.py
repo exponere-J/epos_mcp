@@ -33,7 +33,7 @@ class AgentId(str, Enum):
     ORCHESTRATOR = "orchestrator"  # Agent Orchestrator
     BRIDGE = "bridge"        # Agent Zero Bridge
     FRIDAY = "friday"        # Friday UI / CLI
-    CLAUDE_CODE = "claude_code"  # Claude Code (external)
+    SCC = "scc"  # Sovereign Coding Component (EPOS-native)
     TTLG = "ttlg"            # Talk To the Looking Glass
 
 

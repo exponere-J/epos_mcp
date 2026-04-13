@@ -41,6 +41,7 @@ from path_utils import get_context_vault
 
 VAULT = get_context_vault()
 EVENTS_PATH = VAULT / "events" / "system" / "events.jsonl"
+REACTOR_POSITION_FILE = VAULT / "events" / "system" / ".reactor_position"
 LOG_DIR = Path(os.getenv("LOG_DIR", str(Path(__file__).parent / "logs")))
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -163,8 +164,20 @@ def task_nightly_healing():
         logger.error(f"Nightly healing failed: {e}")
 
 
+def task_friday_nightly_upskill():
+    """23:00 — Friday nightly upskill cycle (runs before self-assessment)."""
+    logger.info("Friday nightly upskill")
+    try:
+        from friday.skills.nightly_upskill import FridayNightlyUpskill
+        result = FridayNightlyUpskill().run_nightly_cycle()
+        phases = sum(1 for v in result.values() if isinstance(v, dict) and v.get("status") == "complete")
+        logger.info(f"Nightly upskill: {phases}/11 phases complete")
+    except Exception as e:
+        logger.error(f"Friday nightly upskill failed: {e}")
+
+
 def task_friday_self_assessment():
-    """23:00 — Friday daily self-assessment."""
+    """23:30 — Friday daily self-assessment (after upskill)."""
     logger.info("Friday self-assessment")
     try:
         from friday.continuous_improvement import FridayContinuousImprovement
@@ -183,6 +196,105 @@ def task_friday_routing_check():
         logger.info(f"Friday routing: accuracy={result.get('accuracy')}")
     except Exception as e:
         logger.error(f"Friday routing check failed: {e}")
+
+
+# ── Friday 5 Daily Anchors ───────────────────────────────────
+
+def task_friday_morning_briefing():
+    """06:00 — Friday morning briefing (metrics + alerts + threads)."""
+    logger.info("Friday morning briefing")
+    try:
+        from friday.skills.morning_briefing import deliver
+        text = deliver()
+        logger.info(f"Morning briefing delivered ({len(text)} chars)")
+    except Exception as e:
+        logger.error(f"Friday morning briefing failed: {e}")
+
+
+def task_friday_flywheel_check():
+    """08:00 — Friday flywheel check (proactive intelligence scan)."""
+    logger.info("Friday flywheel check")
+    try:
+        from friday.skills.proactive_intelligence import scan, format_alerts
+        alerts = scan()
+        logger.info(f"Flywheel check: {len(alerts)} alerts — {format_alerts(alerts)[:200]}")
+    except Exception as e:
+        logger.error(f"Friday flywheel check failed: {e}")
+
+
+def task_friday_kil_scan():
+    """10:00 — Friday KIL (Knowledge-Intelligence-Learning) scan."""
+    logger.info("Friday KIL scan")
+    try:
+        from friday.skills.metrics_observatory import snapshot
+        m = snapshot()
+        llm_req = m.get("llm_requests_24h", 0)
+        briefs = m.get("briefs_generated_7d", 0)
+        logger.info(f"KIL scan: llm_requests_24h={llm_req}, briefs_7d={briefs}")
+        if _BUS:
+            _BUS.publish("friday.kil.scan", {
+                "llm_requests_24h": llm_req,
+                "briefs_generated_7d": briefs,
+                "sparks_7d": m.get("sparks_generated_7d", 0),
+            }, source_module="epos_daemon")
+    except Exception as e:
+        logger.error(f"Friday KIL scan failed: {e}")
+
+
+def task_friday_afternoon_anchor():
+    """14:00 — Friday afternoon proactive scan."""
+    logger.info("Friday afternoon anchor")
+    try:
+        from friday.skills.proactive_intelligence import scan, format_alerts
+        alerts = scan()
+        critical = [a for a in alerts if a["level"] == "CRITICAL"]
+        if critical:
+            logger.warning(f"Afternoon anchor: {len(critical)} CRITICAL alerts")
+            for a in critical:
+                logger.warning(f"  CRITICAL: {a['message']}")
+        else:
+            logger.info(f"Afternoon anchor: {len(alerts)} alerts, none critical")
+    except Exception as e:
+        logger.error(f"Friday afternoon anchor failed: {e}")
+
+
+def task_friday_evening_close():
+    """20:00 — Friday evening close (day summary to vault)."""
+    logger.info("Friday evening close")
+    try:
+        from friday.skills.metrics_observatory import snapshot
+        from friday.skills.thread_tracker import list_open
+        from path_utils import get_context_vault
+
+        vault = get_context_vault()
+        m = snapshot()
+        threads = list_open()
+        now = datetime.now(timezone.utc)
+
+        summary = {
+            "date": now.strftime("%Y-%m-%d"),
+            "closed_at": now.isoformat(),
+            "event_bus_entries_24h": m.get("event_bus_entries_24h"),
+            "llm_requests_24h": m.get("llm_requests_24h"),
+            "posts_published_7d": m.get("posts_published_7d"),
+            "friday_missions_total": m.get("friday_missions_total"),
+            "open_threads": len(threads),
+            "git_commits_7d": m.get("git_commits_7d"),
+        }
+
+        close_dir = vault / "friday" / "daily_close"
+        close_dir.mkdir(parents=True, exist_ok=True)
+        close_path = close_dir / f"{now.strftime('%Y-%m-%d')}_close.json"
+        close_path.write_text(
+            __import__("json").dumps(summary, indent=2), encoding="utf-8"
+        )
+        logger.info(f"Evening close written: {close_path}")
+
+        if _BUS:
+            _BUS.publish("friday.evening.close", summary, source_module="epos_daemon")
+
+    except Exception as e:
+        logger.error(f"Friday evening close failed: {e}")
 
 
 # ══════════════════════════════════════════════════════════════
@@ -291,16 +403,46 @@ def handle_event(event: dict):
         logger.error(f"Handler {handler_name} failed: {e}")
 
 
+def _read_reactor_position() -> int:
+    """Read last saved byte offset from position file. Returns 0 if missing."""
+    try:
+        return int(REACTOR_POSITION_FILE.read_text(encoding="utf-8").strip())
+    except Exception:
+        return -1  # -1 signals: no position file, seek to end
+
+
+def _write_reactor_position(offset: int) -> None:
+    """Persist current byte offset so restarts resume cleanly."""
+    try:
+        REACTOR_POSITION_FILE.write_text(str(offset), encoding="utf-8")
+    except Exception:
+        pass
+
+
 def event_reactor_thread():
-    """Background thread that tails the Event Bus JSONL."""
+    """Background thread that tails the Event Bus JSONL.
+
+    On startup: seeks to saved position (catches up on downtime events) or
+    to EOF if no position file (first-ever run).
+    After each event: writes current offset to .reactor_position so restarts
+    resume exactly where this thread left off — no reprocessing, no gaps.
+    """
     logger.info("Event Reactor started — tailing Event Bus")
     if not EVENTS_PATH.exists():
         logger.warning(f"Event Bus not found at {EVENTS_PATH}")
         return
 
+    saved_pos = _read_reactor_position()
+
     with open(EVENTS_PATH, "r", encoding="utf-8") as f:
-        # Seek to end — only process NEW events
-        f.seek(0, 2)
+        if saved_pos < 0:
+            # First run — no position file. Start from end (don't replay history).
+            f.seek(0, 2)
+            logger.info(f"Event Reactor: no position file, starting at EOF ({f.tell()})")
+        else:
+            f.seek(saved_pos)
+            logger.info(f"Event Reactor: resuming from position {saved_pos}")
+
         while True:
             line = f.readline()
             if line:
@@ -309,6 +451,7 @@ def event_reactor_thread():
                     handle_event(event)
                 except json.JSONDecodeError:
                     pass
+                _write_reactor_position(f.tell())
             else:
                 time.sleep(0.5)
 
@@ -327,15 +470,27 @@ def start_daemon():
 
     # Start APScheduler
     scheduler = BackgroundScheduler()
-    scheduler.add_job(task_kil_scan,         CronTrigger(hour=4, minute=0),   id="kil_scan")
-    scheduler.add_job(task_self_healing,     CronTrigger(hour=5, minute=0),   id="self_healing_morning")
-    scheduler.add_job(task_morning_anchor,   CronTrigger(hour=6, minute=0),   id="morning_anchor")
-    scheduler.add_job(task_content_pipeline, CronTrigger(hour=7, minute=30),  id="content_pipeline")
-    scheduler.add_job(task_fotw_scan,        CronTrigger(hour=8, minute=0),   id="fotw_scan")
-    scheduler.add_job(task_doctor_check,     CronTrigger(hour=12, minute=0),  id="doctor_midday")
-    scheduler.add_job(task_evening_triage,   CronTrigger(hour=18, minute=0),  id="evening_triage")
-    scheduler.add_job(task_nightly_healing,  CronTrigger(hour=22, minute=0),  id="nightly_healing")
-    scheduler.add_job(task_friday_self_assessment, CronTrigger(hour=23, minute=0), id="friday_self_assess")
+    scheduler.add_job(task_kil_scan,                CronTrigger(hour=4,  minute=0),  id="kil_scan")
+    scheduler.add_job(task_self_healing,            CronTrigger(hour=5,  minute=0),  id="self_healing_morning")
+    # Friday anchor 1 — morning briefing
+    scheduler.add_job(task_friday_morning_briefing, CronTrigger(hour=6,  minute=0),  id="friday_morning_briefing")
+    scheduler.add_job(task_morning_anchor,          CronTrigger(hour=6,  minute=5),  id="morning_anchor")
+    scheduler.add_job(task_content_pipeline,        CronTrigger(hour=7,  minute=30), id="content_pipeline")
+    # Friday anchor 2 — flywheel check
+    scheduler.add_job(task_friday_flywheel_check,   CronTrigger(hour=8,  minute=0),  id="friday_flywheel")
+    scheduler.add_job(task_fotw_scan,               CronTrigger(hour=8,  minute=15), id="fotw_scan")
+    # Friday anchor 3 — KIL scan
+    scheduler.add_job(task_friday_kil_scan,         CronTrigger(hour=10, minute=0),  id="friday_kil_scan")
+    scheduler.add_job(task_doctor_check,            CronTrigger(hour=12, minute=0),  id="doctor_midday")
+    # Friday anchor 4 — afternoon proactive scan
+    scheduler.add_job(task_friday_afternoon_anchor, CronTrigger(hour=14, minute=0),  id="friday_afternoon")
+    scheduler.add_job(task_evening_triage,          CronTrigger(hour=18, minute=0),  id="evening_triage")
+    # Friday anchor 5 — evening close
+    scheduler.add_job(task_friday_evening_close,    CronTrigger(hour=20, minute=0),  id="friday_evening_close")
+    scheduler.add_job(task_nightly_healing,         CronTrigger(hour=22, minute=0),  id="nightly_healing")
+    # Friday anchor: nightly upskill at 23:00, self-assessment at 23:30
+    scheduler.add_job(task_friday_nightly_upskill,  CronTrigger(hour=23, minute=0),  id="friday_nightly_upskill")
+    scheduler.add_job(task_friday_self_assessment,  CronTrigger(hour=23, minute=30), id="friday_self_assess")
     from apscheduler.triggers.interval import IntervalTrigger
     scheduler.add_job(task_friday_routing_check, IntervalTrigger(hours=6), id="friday_routing")
     scheduler.start()

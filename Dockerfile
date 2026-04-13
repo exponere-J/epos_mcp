@@ -24,6 +24,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install Playwright browser (Chromium only)
 RUN playwright install chromium --with-deps
 
+# Install Node.js + Claude Code CLI (|| true — graceful if unavailable)
+RUN apt-get update && apt-get install -y --no-install-recommends nodejs npm \
+    && rm -rf /var/lib/apt/lists/* \
+    && npm install -g @anthropic-ai/claude-code || true
+
 # Copy application source
 COPY . .
 

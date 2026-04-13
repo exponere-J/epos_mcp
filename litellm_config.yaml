@@ -1,28 +1,26 @@
 model_list:
-  - model_name: claude-sonnet-4-20250514
+  - model_name: qwen3-coder-30b
     litellm_params:
-      model: groq/qwen/qwen3-32b
-      api_key: os.environ/GROQ_API_KEY
-
-  - model_name: claude-haiku-4-5-20251001
-    litellm_params:
-      model: groq/qwen/qwen3-32b
-      api_key: os.environ/GROQ_API_KEY
-
-  - model_name: claude-3-5-sonnet-20241022
-    litellm_params:
-      model: groq/qwen/qwen3-32b
-      api_key: os.environ/GROQ_API_KEY
-
-  - model_name: qwen-qwq-32b
-    litellm_params:
-      model: groq/qwen/qwen3-32b
-      api_key: os.environ/GROQ_API_KEY
+      model: openrouter/qwen/qwen3-coder-30b-a3b-instruct
+      api_key: os.environ/OPENROUTER_API_KEY
+      drop_params: true
 
   - model_name: qwen3-32b
     litellm_params:
-      model: groq/qwen/qwen3-32b
+      model: openrouter/qwen/qwen3-32b
+      api_key: os.environ/OPENROUTER_API_KEY
+      drop_params: true
+
+  - model_name: llama-3.3-70b
+    litellm_params:
+      model: groq/llama-3.3-70b-versatile
       api_key: os.environ/GROQ_API_KEY
+      drop_params: true
 
 general_settings:
   master_key: sk-epos-local-proxy
+  disable_spend_logs: true
+  disable_error_logs: true
+
+litellm_settings:
+  drop_params: true

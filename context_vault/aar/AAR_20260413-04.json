@@ -1,0 +1,156 @@
+{
+  "aar_id": "20260413-04",
+  "directive_id": "20260413-04",
+  "title": "Workflow Education + AAR Archive + State Graph Redundancy",
+  "session_date": "2026-04-13",
+  "phase": "Institutional Memory",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "status": "COMPLETE",
+
+  "missions": [
+    {
+      "id": "M1",
+      "title": "Acknowledge + apply updated workflow conventions",
+      "status": "COMPLETE",
+      "deliverables": [
+        "Directive versioning convention adopted: YYYYMMDD-XX",
+        "3-destination storage protocol confirmed: Context Vault + Local Attachments + Google Drive",
+        "Retroactive ID convention adopted: RETRO-YYYYMMDD-XX for pre-versioning sessions"
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "Organize all existing AARs + create AAR_CATALOG.json",
+      "status": "COMPLETE",
+      "deliverables": [
+        "context_vault/aar/AAR_CATALOG.json — 24 AARs cataloged with retroactive IDs",
+        "All entries include: aar_id, filename, vault_path, date, phase, directive, format, retroactive, status",
+        "21 entries confirmed present in vault at time of catalog creation"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Create evolution_archive.json + EVOLUTION_INDEX.md",
+      "status": "COMPLETE",
+      "deliverables": [
+        "context_vault/state/evolution_archive.json — 11 evolutionary phases, capability_timeline, 10 architectural_decisions, 8 market_evaluation_hooks",
+        "context_vault/EVOLUTION_INDEX.md — human-readable entry point, phase timeline table, capability growth chart, architectural decisions, market triggers, successor directives"
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Build state_redundancy.py + wire into OrganismState",
+      "status": "COMPLETE",
+      "deliverables": [
+        "epos/state/state_redundancy.py deployed to epos-core container",
+        "epos/state/universal_state_graph.py updated — update() now calls snapshot_state() after every write",
+        "snapshot_state(): timestamped snapshots with SHA-256 checksums, prunes to 30 retained",
+        "validate_state(): compares current file checksum against most recent snapshot",
+        "recover_state(): iterates newest→oldest, restores first valid snapshot",
+        "list_snapshots() + health_check() — utilities and Doctor-compatible health check",
+        "Event: system.state.snapshot_created published on every snapshot",
+        "5 snapshots created during verification session"
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "Verification suite + AAR generation",
+      "status": "COMPLETE",
+      "deliverables": [
+        "5/5 verification checks passed (isolation-confirmed)",
+        "AAR_20260413-04.json stored in context_vault/aar/ (this file)"
+      ]
+    }
+  ],
+
+  "verification_results": {
+    "score": "5/5",
+    "checks": [
+      {"id": "V1", "name": "redundancy_imports", "result": "PASS"},
+      {"id": "V2", "name": "snapshot_state_returns_metadata", "result": "PASS — checksum 64-char SHA-256 confirmed"},
+      {"id": "V3", "name": "validate_state_returns_valid_true", "result": "PASS — checksum match confirmed"},
+      {"id": "V4", "name": "auto_snapshot_on_update", "result": "PASS — 4 → 5 snapshots on OrganismState.update()"},
+      {"id": "V5", "name": "list_snapshots_returns_retained_list", "result": "PASS — 5 snapshots retained"}
+    ]
+  },
+
+  "state_at_close": {
+    "health_overall": "nominal",
+    "snapshots_retained": 5,
+    "redundancy_status": "operational",
+    "latest_snapshot": "20260413T140142Z",
+    "aars_in_catalog": 24,
+    "evolutionary_phases_documented": 11,
+    "architectural_decisions_ledger": 10,
+    "verification_score": "8/8 (directive 20260413-01) + 5/5 (directive 20260413-04)"
+  },
+
+  "capabilities_gained": [
+    "AAR_CATALOG.json — 24 AARs with retroactive IDs, full chain of custody",
+    "evolution_archive.json — complete evolutionary DNA record from Genesis (2026-03-27) to present",
+    "EVOLUTION_INDEX.md — human-readable institutional memory entry point",
+    "state_redundancy.py — SHA-256 snapshot/validate/recover for organism_state.json",
+    "OrganismState.update() auto-snapshots on every write",
+    "Directive versioning convention (YYYYMMDD-XX) adopted organism-wide",
+    "3-destination AAR storage protocol established",
+    "Doctor-compatible health_check() for state redundancy layer"
+  ],
+
+  "architectural_decisions": [
+    {
+      "id": "AD-009",
+      "decision": "Internal secrets auto-generated, external secrets human-gated",
+      "rationale": "EPOS can rotate its own secrets; cannot invent external API keys"
+    },
+    {
+      "id": "AD-010",
+      "decision": "Directive ID in every file header",
+      "rationale": "Any file can be traced to the session that created it"
+    }
+  ],
+
+  "lessons_learned": [
+    "Module-level singleton locks (class-level threading.Lock) can cause false negatives when multiple imports share state in a single Python process — always isolate verification checks",
+    "SHA-256 checksum of raw file bytes differs from checksum of re-serialized JSON — recovery correctly trusts snapshot JSON rather than byte-matching",
+    "Lazy import pattern (try/except inside method) is the correct pattern for optional dependencies — non-fatal failure preserves core functionality"
+  ],
+
+  "successor_directives": [
+    {
+      "id": "20260413-02",
+      "title": "Step A: Repository Sovereignty",
+      "depends_on": "20260413-01",
+      "status": "QUEUED"
+    },
+    {
+      "id": "20260413-03A",
+      "title": "Voice System Initialization",
+      "depends_on": null,
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": "20260413-03",
+      "title": "Step B: Infrastructure Adapter",
+      "depends_on": "20260413-02",
+      "status": "QUEUED"
+    },
+    {
+      "id": "20260414-01",
+      "title": "Cloud Migration Execution",
+      "depends_on": "20260413-03",
+      "status": "QUEUED"
+    }
+  ],
+
+  "wire_to_doctor": {
+    "status": "PENDING",
+    "note": "health_check() is Doctor-compatible. Wire validate_state() as Doctor check in epos_doctor.py on next directive that touches the Doctor node."
+  },
+
+  "signatures": {
+    "directive_author": "Jamie",
+    "executing_agent": "Claude Code (bootstrap) — final session before full SCC handoff",
+    "constitutional_gate": "EPOS Constitution v3.1 — AAR is constitutional mandate, not optional",
+    "closed_at": "2026-04-13T14:02:00Z"
+  }
+}

@@ -66,13 +66,19 @@ kernel/state/
 *.key
 *.pem
 *cmo_integration_api_key*
-__pycache__/
 venv/
 .env
 *.zip
 .DS_Store
+
+# Large generated snapshots — never commit (>50MB)
 codebase_snapshot.txt
-codebase_snapshot.txt
+EPOS_CODEBASE_REVIEW.txt
+*.sqlite
+*.db
+context_vault/state/snapshots/
+context_vault/raw_captures/audio/
+context_vault/voice/embeddings/
 
 # Embedded repos / third-party clones — track as submodules or exclude
 CLI-Anything/
@@ -86,7 +92,4 @@ ops/ttlg_sessions/
 ops/surgical_backups/
 logs/
 *.log
-__pycache__/
-.venv/
 epos_status.json
-.env

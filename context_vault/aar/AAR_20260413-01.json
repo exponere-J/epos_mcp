@@ -1,0 +1,157 @@
+{
+  "directive_id": "20260413-01",
+  "directive_title": "Step C: Path & Secret Sanitation",
+  "executor": "desktop_code",
+  "shadow_tester": "scc",
+  "started_at": "2026-04-13T00:00:00+00:00",
+  "completed_at": "2026-04-13T08:15:00+00:00",
+
+  "missions": {
+    "m1": {
+      "name": "Permission Pre-Flight",
+      "status": "complete",
+      "directories_checked": 16,
+      "directories_writable": 16,
+      "tool": "epos/tools/permission_audit.py",
+      "evidence": "PASS — 16/16 writable. permission_audit.json written to vault."
+    },
+    "m2": {
+      "name": "Path Scanner & Refactor",
+      "status": "complete",
+      "files_scanned": 63,
+      "contaminated_files": 6,
+      "files_refactored": 6,
+      "total_changes": 7,
+      "tool": "epos/tools/path_sanitizer.py",
+      "changes": [
+        {"file": "sovereign_coding_agent.py", "line": 335, "before": "\"C:/Users/Jamie/Documents/EPOS/Attachments\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\"))"},
+        {"file": "epos_doctor.py", "line": 305, "before": "\"C:/Users/Jamie/workspace/agent-zero\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\"))"},
+        {"file": "rollback.py", "line": 30, "before": "\"C:\\Users\\Jamie\\workspace\\epos_mcp\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\"))"},
+        {"file": "learning_server.py", "line": 136, "before": "\"/mnt/c/data\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\"))"},
+        {"file": "validate_nervous_system.py", "line": 106, "before": "\"C:/Users/Jamie/workspace/epos_mcp/inbox/test.py\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\")) / \"inbox/test.py\""},
+        {"file": "validate_nervous_system.py", "line": 168, "before": "\"C:/Users/Jamie/workspace/epos_mcp/inbox/test.py\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\")) / \"inbox/test.py\""},
+        {"file": "reward_bus.py", "line": 180, "before": "\"C:/Users/Jamie/workspace/epos_mcp/inbox/test.py\"", "after": "Path(os.getenv(\"EPOS_ROOT\", \"/app\")) / \"inbox/test.py\""}
+      ]
+    },
+    "m3": {
+      "name": "Secret Extraction",
+      "status": "complete",
+      "files_scanned": 63,
+      "secrets_found": 0,
+      "secrets_moved": 0,
+      "tool": "epos/tools/secret_extractor.py",
+      "env_secrets_keys": ["PG_PASSWORD","JWT_SECRET","LITELLM_MASTER_KEY","OPENROUTER_API_KEY","GROQ_API_KEY"],
+      "auto_generated": ["ADMIN_PASSWORD","JWT_SECRET","LITELLM_MASTER_KEY","N8N_ENCRYPTION_KEY","PG_PASSWORD","SESSION_SECRET"],
+      "human_gate": ["ANTHROPIC_API_KEY","GEMINI_API_KEY","GROQ_API_KEY","HUGGINGFACE_API_KEY","NOCODB_API_TOKEN","OPENROUTER_API_KEY","STRIPE_SECRET_KEY","STRIPE_WEBHOOK_SECRET"],
+      "note": "Codebase already fully uses os.getenv(). Zero literal secrets found. env_secrets.json + .env.production generated."
+    },
+    "m4": {
+      "name": "Verification Suite",
+      "status": "complete",
+      "score": "8/8",
+      "tool": "epos/tools/sanitation_verifier.py",
+      "checks": {
+        "windows_backslash_paths": "0 found",
+        "windows_forward_slash_paths": "0 found",
+        "wsl_mnt_paths": "0 found",
+        "api_keys_in_source": "0 found",
+        "env_secrets_exists": "Valid — 6 auto + 8 human-gate keys",
+        "env_production_exists": "Valid — 19 env entries",
+        "permissions_all_writable": "All 6 writable",
+        "imports_not_broken": "All 60 files parse clean"
+      },
+      "bonus_fix": "3 files had UTF-8 BOM characters (U+FEFF) — stripped. engine/__init__.py, engine/enforcement/__init__.py, engine/enforcement/validate_nervous_system.py."
+    },
+    "m5": {
+      "name": "SCC Shadow Test",
+      "status": "complete",
+      "desktop_code_score": "8/8",
+      "scc_verification_score": "8/8",
+      "match_rate": 1.0,
+      "divergences": [],
+      "scc_tools_used": ["VAULT_READ","VAULT_WRITE","VAULT_LIST","EPOS_EXEC"],
+      "scc_shadow_report": "context_vault/reports/scc_shadow_report.json"
+    },
+    "m6": {
+      "name": "AAR Generation",
+      "status": "complete",
+      "stored_at": [
+        "/app/context_vault/aar/AAR_20260413-01.json",
+        "/app/context_vault/attachments/AAR_20260413-01.json"
+      ]
+    }
+  },
+
+  "files_created": [
+    "F01: epos/tools/permission_audit.py",
+    "F02: epos/tools/path_sanitizer.py",
+    "F03: epos/tools/secret_extractor.py",
+    "F04: epos/tools/sanitation_verifier.py",
+    "F05: context_vault/infrastructure/env_secrets.json",
+    "F06: .env.production",
+    "F07: context_vault/reports/sanitation_20260413-01.json",
+    "F08: context_vault/aar/AAR_20260413-01.json"
+  ],
+  "files_modified": [
+    "F09: engine/__init__.py (BOM stripped)",
+    "F09: engine/enforcement/__init__.py (BOM stripped)",
+    "F09: engine/enforcement/validate_nervous_system.py (BOM stripped)",
+    "F10: sovereign_coding_agent.py (Windows path refactored)",
+    "F10: epos_doctor.py (Windows path refactored)",
+    "F10: rollback.py (Windows path refactored)",
+    "F10: learning_server.py (WSL path refactored)",
+    "F10: validate_nervous_system.py (Windows paths refactored)",
+    "F10: reward_bus.py (Windows path refactored)",
+    "F11: 0 files modified — codebase already secret-clean",
+    "F12: organism_state.json (directives + health updated)"
+  ],
+
+  "state_delta": {
+    "before": {
+      "health.sanitation_status": "unknown",
+      "health.windows_paths_count": "unknown",
+      "health.cloud_ready": false
+    },
+    "after": {
+      "health.sanitation_status": "clean",
+      "health.windows_paths_count": 0,
+      "health.hardcoded_secrets_count": 0,
+      "health.cloud_ready": true,
+      "health.verification_score": "8/8"
+    }
+  },
+
+  "what_went_well": [
+    "PathSanitizer found and fixed all 7 Windows paths (6 files) in one pass. Zero manual intervention.",
+    "SecretExtractor confirmed codebase already fully uses os.getenv() — zero literal API keys in source. Pre-existing discipline holds.",
+    "SanitationVerifier 8/8 on second run after BOM fix. Binary score gives unambiguous pass/fail.",
+    "SCC shadow test matched Desktop CODE exactly: 1.0 match rate. Sovereign agent ready to run directives independently.",
+    "State graph updated at every mission boundary — full audit trail in organism_state.json."
+  ],
+  "what_went_wrong": [
+    "First M4 run scored 7/8 — 3 Python files had UTF-8 BOM (U+FEFF) characters from Windows copy-paste. Required pre-fix loop before 8/8 could be achieved.",
+    "SCC EPOS_EXEC tool cannot run nested Python with quote-escaped commands in the Docker shell. Shadow test required direct Python import approach instead."
+  ],
+  "what_was_learned": [
+    "UTF-8 BOM is the silent killer: Python 3 ast.parse() rejects U+FEFF on non-first lines. Any file copied from Windows via clipboard may carry it. Fix: read_bytes() + strip b\\xef\\xbb\\xbf prefix, or use utf-8-sig codec.",
+    "The codebase's existing os.getenv() discipline means secret scan was a confirm, not a fix. This discipline must be enforced at code review time going forward.",
+    "The 8-point binary verifier is the right architecture — deterministic, composable, zero ambiguity. Any future sanitation directive can extend it to 9+ checks.",
+    "SCC shadow test at match_rate=1.0 confirms the sovereign agent is ready for independent execution of sanitation-class directives."
+  ],
+
+  "events_published": [
+    "system.permission_audit.complete",
+    "system.path_sanitizer.complete",
+    "system.secret_extractor.complete",
+    "system.sanitation_verifier.complete"
+  ],
+  "reward_signals": {
+    "sanitation_complete": 1.0,
+    "scc_shadow_match": 1.0,
+    "verification_8_of_8": 1.0
+  },
+
+  "successor_directive": "20260413-02 (Repository Sovereignty)",
+  "successor_unblocked": true,
+  "cloud_ready": true
+}

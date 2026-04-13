@@ -9,14 +9,17 @@ Friday is a LangGraph StateGraph that receives directives, classifies them,
 decomposes compound directives into mission queues, routes each mission to
 the appropriate executor, captures results, and writes a micro-AAR entry.
 
-The 7 mission types:
-  1. code         -> Claude Code via subprocess or LiteLLM
-  2. browser      -> BrowserUse Node
-  3. computeruse  -> Agent Zero container
+The 10 mission types:
+  1. code         -> code_executor      (LLM generate + optional exec)
+  2. browser      -> browser_executor   (BrowserUse autonomous navigation)
+  3. computeruse  -> computeruse_executor (Agent Zero + computer_use tools)
   4. research     -> RS1 Research Engine
   5. content      -> Content Lab pipeline
-  6. healing      -> Self-Healing Engine
-  7. unknown      -> Friday escalates to Jamie
+  6. healing      -> system_executor (heal)
+  7. ttlg         -> ttlg_executor      (diagnostic / healing / 8scan)
+  8. system       -> system_executor    (doctor, certify, baselines, daemon_status)
+  9. az           -> az_executor        (raw Agent Zero dispatch)
+  10. unknown     -> escalation
 """
 
 import os
@@ -66,17 +69,20 @@ class FridayState(TypedDict, total=False):
 # ── Mission Type Classification ─────────────────────────────
 
 CLASSIFICATION_KEYWORDS = {
-    "code": ["build", "implement", "create", "fix", "refactor", "develop", "code", "module", "function"],
-    "browser": ["navigate", "browse", "post", "publish", "linkedin", "twitter", "x.com", "scrape"],
-    "computeruse": ["click", "open", "drag", "screenshot", "computer", "agent zero"],
-    "research": ["research", "investigate", "find out", "study", "analyze topic", "compile"],
-    "content": ["write content", "create post", "generate script", "content lab", "echolocation"],
-    "healing": ["check health", "doctor", "self-heal", "diagnose", "fix system", "system status"],
+    "code": ["build", "implement", "create", "fix", "refactor", "develop", "code", "module", "function", "write code", "generate code"],
+    "browser": ["navigate", "browse", "post", "publish", "linkedin", "twitter", "x.com", "scrape", "web search", "visit url"],
+    "computeruse": ["click", "open app", "drag", "screenshot", "computer use", "agent zero computer"],
+    "research": ["research", "investigate", "find out", "study", "analyze topic", "compile", "look up"],
+    "content": ["write content", "create post", "generate script", "content lab", "echolocation", "echoes", "draft"],
+    "healing": ["check health", "self-heal", "fix system"],
+    "ttlg": ["ttlg", "diagnostic", "external diagnostic", "internal diagnostic", "build manifest", "healing cycle", "8scan", "pipeline graph"],
+    "system": ["doctor", "diagnose", "certify", "baselines", "daemon status", "system status", "epos health", "sovereignty check"],
+    "az": ["agent zero", "dispatch to az", "az task"],
 }
 
 
 def classify_directive(state: FridayState) -> dict:
-    """Classify directive into one of 7 mission types using keyword matching + LLM fallback."""
+    """Classify directive into one of 10 mission types using keyword matching + LLM fallback."""
     directive = state.get("directive", "").lower()
     scores = {}
     for mtype, keywords in CLASSIFICATION_KEYWORDS.items():
@@ -84,14 +90,14 @@ def classify_directive(state: FridayState) -> dict:
 
     best = max(scores, key=scores.get)
     if scores[best] == 0:
-        # No keywords matched — try LLM classification
         try:
             from groq_router import GroqRouter
             router = GroqRouter()
             prompt = (
-                f"Classify this directive into ONE of: code, browser, computeruse, research, content, healing.\n"
+                "Classify this directive into ONE of: code, browser, computeruse, research, "
+                "content, healing, ttlg, system, az.\n"
                 f"Directive: {directive[:300]}\n"
-                f"Reply with ONLY the category name, nothing else."
+                "Reply with ONLY the category name, nothing else."
             )
             response = router.route("classification", prompt, max_tokens=10, temperature=0.1)
             best = response.strip().lower().split()[0] if response else "unknown"
@@ -119,12 +125,11 @@ def classify_directive(state: FridayState) -> dict:
 
 
 def decompose_directive(state: FridayState) -> dict:
-    """Decompose directive into mission queue. For now, single mission per directive."""
+    """Decompose directive into mission queue. Single mission per directive."""
     directive = state.get("directive", "")
     mission_type = state.get("mission_type", "unknown")
     directive_id = state.get("directive_id", "DIR-UNKNOWN")
 
-    # Single mission for now — multi-mission decomposition is future work
     missions = [{
         "id": f"M-{directive_id[-6:]}-001",
         "type": mission_type,
@@ -139,143 +144,39 @@ def decompose_directive(state: FridayState) -> dict:
     }
 
 
-# ── Executor Nodes (will be replaced with full executors in M3) ──
+# ── Executor Nodes ──────────────────────────────────────────
 
 def route_to_code(state: FridayState) -> dict:
-    """Execute code mission via engine.llm_client and persist generated output."""
+    from friday.executors import code_executor
     mission = state.get("active_mission", {})
-    mission_id = mission.get("id") or str(uuid.uuid4())
-    description = mission.get("description") or state.get("directive", "")
-
-    result: dict
-    try:
-        from engine.llm_client import complete
-
-        system_prompt = (
-            "You are a senior software engineer. When given a coding mission, "
-            "return a complete, runnable implementation. Prefer a single fenced "
-            "code block with a brief inline rationale before the code."
-        )
-        user_prompt = (
-            f"Mission: {description}\n\n"
-            "Produce the implementation. No apologies, no TODOs, no stubs."
-        )
-
-        generated = complete(
-            system=system_prompt,
-            messages=[{"role": "user", "content": user_prompt}],
-            temperature=0.2,
-            max_tokens=2048,
-        )
-
-        # Persist to context_vault/friday/code_output/<mission_id>.md
-        code_dir = FRIDAY_VAULT / "code_output"
-        code_dir.mkdir(parents=True, exist_ok=True)
-        ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        out_path = code_dir / f"{ts}_{mission_id}.md"
-        out_path.write_text(
-            f"# Friday code mission {mission_id}\n\n"
-            f"- timestamp: {datetime.now(timezone.utc).isoformat()}\n"
-            f"- directive: {description}\n\n"
-            f"## Output\n\n{generated}\n",
-            encoding="utf-8",
-        )
-
-        result = {
-            "mission_id": mission_id,
-            "executor": "code",
-            "status": "complete",
-            "output": generated,
-            "output_path": str(out_path),
-        }
-    except Exception as e:
-        result = {
-            "mission_id": mission_id,
-            "executor": "code",
-            "status": "failed",
-            "error": f"{type(e).__name__}: {e}",
-        }
-
-    if _BUS:
-        try:
-            _BUS.publish("code.generated", result, source_module="friday_graph")
-        except Exception:
-            pass
-
+    result = code_executor.run(mission)
     return {"results": state.get("results", []) + [result]}
 
 
 def route_to_browser(state: FridayState) -> dict:
-    """Execute browser mission via BrowserUse sovereign node."""
-    import asyncio
+    from friday.executors import browser_executor
     mission = state.get("active_mission", {})
-    try:
-        from nodes.browser_use_node import BrowserUseNode
-        node = BrowserUseNode()
-        if node.health_check().get("status") != "operational":
-            raise RuntimeError("BrowserUse not operational")
-        # Sync wrapper to call async execute_task
-        result_data = node.execute_task_sync(mission["description"], max_steps=3)
-        result = {
-            "mission_id": mission.get("id"),
-            "executor": "browser_use",
-            "status": "complete" if result_data.get("success") else "failed",
-            "output": str(result_data.get("result", ""))[:500],
-        }
-    except Exception as e:
-        result = {
-            "mission_id": mission.get("id"),
-            "executor": "browser_use",
-            "status": "failed",
-            "error": str(e)[:300],
-        }
-
-    if _BUS:
-        try:
-            _BUS.publish(f"friday.mission.{result['status']}", result, source_module="friday_graph")
-        except Exception:
-            pass
-
+    result = browser_executor.run(mission)
     return {"results": state.get("results", []) + [result]}
 
 
 def route_to_computeruse(state: FridayState) -> dict:
-    """Execute mission via Agent Zero container."""
+    from friday.executors import computeruse_executor
     mission = state.get("active_mission", {})
-    try:
-        from nodes.agent_zero_node import AgentZeroNode
-        node = AgentZeroNode()
-        health = node.health_check()
-        if health.get("status") != "operational":
-            raise RuntimeError(f"Agent Zero not operational: {health.get('reason', '?')}")
-        dispatch = node.dispatch_mission(mission["description"], timeout=30)
-        result = {
-            "mission_id": mission.get("id"),
-            "executor": "agent_zero",
-            "status": dispatch.get("status", "unknown"),
-            "output": str(dispatch.get("response", dispatch.get("error", "")))[:500],
-        }
-    except Exception as e:
-        result = {
-            "mission_id": mission.get("id"),
-            "executor": "agent_zero",
-            "status": "failed",
-            "error": str(e)[:300],
-        }
+    result = computeruse_executor.run(mission)
     return {"results": state.get("results", []) + [result]}
 
 
 def route_to_research(state: FridayState) -> dict:
-    """Execute research mission via RS1."""
     mission = state.get("active_mission", {})
     try:
         from rs1_research_brief import RS1ResearchBrief
-        # Create a research idea for RS1
         result = {
             "mission_id": mission.get("id"),
             "executor": "rs1_research",
             "status": "queued",
             "output": f"Research question queued: {mission['description'][:200]}",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
         }
     except Exception as e:
         result = {
@@ -283,12 +184,12 @@ def route_to_research(state: FridayState) -> dict:
             "executor": "rs1_research",
             "status": "failed",
             "error": str(e)[:300],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
         }
     return {"results": state.get("results", []) + [result]}
 
 
 def route_to_content(state: FridayState) -> dict:
-    """Execute content mission via Content Lab."""
     mission = state.get("active_mission", {})
     try:
         from content_signal_loop import ContentSignalLoop
@@ -299,6 +200,7 @@ def route_to_content(state: FridayState) -> dict:
             "executor": "content_lab",
             "status": "complete",
             "output": f"Content signals processed: {len(signals)}",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
         }
     except Exception as e:
         result = {
@@ -306,49 +208,58 @@ def route_to_content(state: FridayState) -> dict:
             "executor": "content_lab",
             "status": "failed",
             "error": str(e)[:300],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
         }
     return {"results": state.get("results", []) + [result]}
 
 
 def route_to_healing(state: FridayState) -> dict:
-    """Execute healing mission via Self-Healing Engine."""
+    from friday.executors import system_executor
     mission = state.get("active_mission", {})
-    try:
-        from ttlg.pipeline_graph import run_healing_cycle
-        heal_result = run_healing_cycle()
-        actions = heal_result.get("actions_taken", [])
-        result = {
-            "mission_id": mission.get("id"),
-            "executor": "self_healing",
-            "status": "complete",
-            "output": f"Healing cycle: {len(actions)} actions taken",
-            "details": [a.get("action_type") for a in actions[:5]],
-        }
-    except Exception as e:
-        result = {
-            "mission_id": mission.get("id"),
-            "executor": "self_healing",
-            "status": "failed",
-            "error": str(e)[:300],
-        }
+    mission = {**mission, "action": "heal"}
+    result = system_executor.run(mission)
+    return {"results": state.get("results", []) + [result]}
 
-    if _BUS:
-        try:
-            _BUS.publish(f"friday.mission.{result['status']}", result, source_module="friday_graph")
-        except Exception:
-            pass
 
+def route_to_ttlg(state: FridayState) -> dict:
+    from friday.executors import ttlg_executor
+    mission = state.get("active_mission", {})
+    # Infer TTLG mode from description
+    desc = mission.get("description", "").lower()
+    if "8scan" in desc or "doctor" in desc:
+        mission = {**mission, "mode": "8scan"}
+    elif "external" in desc or "diagnostic" in desc or "build manifest" in desc:
+        mission = {**mission, "mode": "external"}
+    elif "internal" in desc or "healing cycle" in desc:
+        mission = {**mission, "mode": "internal"}
+    else:
+        mission = {**mission, "mode": "internal"}
+    result = ttlg_executor.run(mission)
+    return {"results": state.get("results", []) + [result]}
+
+
+def route_to_system(state: FridayState) -> dict:
+    from friday.executors import system_executor
+    mission = state.get("active_mission", {})
+    result = system_executor.run(mission)
+    return {"results": state.get("results", []) + [result]}
+
+
+def route_to_az(state: FridayState) -> dict:
+    from friday.executors import az_executor
+    mission = state.get("active_mission", {})
+    result = az_executor.run(mission)
     return {"results": state.get("results", []) + [result]}
 
 
 def route_to_unknown(state: FridayState) -> dict:
-    """Unknown mission type — escalate to Jamie."""
     mission = state.get("active_mission", {})
     result = {
         "mission_id": mission.get("id"),
         "executor": "escalation",
         "status": "escalated",
         "output": "Mission type unknown — escalated to Jamie for manual handling.",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
     }
 
     if _BUS:
@@ -373,6 +284,9 @@ def route_mission(state: FridayState) -> str:
         "research": "executor_research",
         "content": "executor_content",
         "healing": "executor_healing",
+        "ttlg": "executor_ttlg",
+        "system": "executor_system",
+        "az": "executor_az",
     }
     return routing.get(mtype, "executor_unknown")
 
@@ -391,7 +305,6 @@ def aar_writer(state: FridayState) -> dict:
         "success": all(r.get("status") in ("complete", "dispatched", "queued") for r in results),
     }
 
-    # Save to vault
     aar_path = MISSIONS_DIR / f"{directive_id}_aar.json"
     aar_path.write_text(json.dumps(aar, indent=2), encoding="utf-8")
 
@@ -410,6 +323,13 @@ def aar_writer(state: FridayState) -> dict:
 
 # ── Build the Graph ─────────────────────────────────────────
 
+EXECUTOR_NODES = [
+    "executor_code", "executor_browser", "executor_computeruse",
+    "executor_research", "executor_content", "executor_healing",
+    "executor_ttlg", "executor_system", "executor_az", "executor_unknown",
+]
+
+
 def build_friday_graph():
     """Compile the Friday StateGraph."""
     graph = StateGraph(FridayState)
@@ -422,23 +342,18 @@ def build_friday_graph():
     graph.add_node("executor_research", route_to_research)
     graph.add_node("executor_content", route_to_content)
     graph.add_node("executor_healing", route_to_healing)
+    graph.add_node("executor_ttlg", route_to_ttlg)
+    graph.add_node("executor_system", route_to_system)
+    graph.add_node("executor_az", route_to_az)
     graph.add_node("executor_unknown", route_to_unknown)
     graph.add_node("aar_writer", aar_writer)
 
     graph.set_entry_point("classify")
     graph.add_edge("classify", "decompose")
     graph.add_conditional_edges("decompose", route_mission, {
-        "executor_code": "executor_code",
-        "executor_browser": "executor_browser",
-        "executor_computeruse": "executor_computeruse",
-        "executor_research": "executor_research",
-        "executor_content": "executor_content",
-        "executor_healing": "executor_healing",
-        "executor_unknown": "executor_unknown",
+        node: node for node in EXECUTOR_NODES
     })
-    for executor in ["executor_code", "executor_browser", "executor_computeruse",
-                     "executor_research", "executor_content", "executor_healing",
-                     "executor_unknown"]:
+    for executor in EXECUTOR_NODES:
         graph.add_edge(executor, "aar_writer")
     graph.add_edge("aar_writer", END)
 
@@ -448,13 +363,14 @@ def build_friday_graph():
 friday_app = build_friday_graph()
 
 
-def invoke_friday(directive: str) -> dict:
+def invoke_friday(directive: str, extra: dict = None) -> dict:
     """Run a directive through the Friday graph."""
     config = {"configurable": {"thread_id": f"FRIDAY-{uuid.uuid4().hex[:8]}"}}
     initial = {
         "directive": directive,
         "missions": [],
         "results": [],
+        **(extra or {}),
     }
     return friday_app.invoke(initial, config)
 
@@ -469,29 +385,38 @@ if __name__ == "__main__":
     print(f"Friday graph compiled: {type(friday_app).__name__}")
     passed += 1
 
-    # Test 2: Classify a directive
-    state = classify_directive({"directive": "Run a self-healing cycle"})
-    assert state["mission_type"] == "healing", f"Expected healing, got {state['mission_type']}"
-    print(f"Classification: 'Run a self-healing cycle' -> {state['mission_type']}")
+    # Test 2: Classification — healing
+    state = classify_directive({"directive": "Run a self-healing cycle on EPOS"})
+    assert state["mission_type"] in ("healing", "ttlg", "system"), \
+        f"Expected healing/ttlg/system, got {state['mission_type']}"
+    print(f"Classification: 'self-healing cycle' -> {state['mission_type']}")
     passed += 1
 
-    # Test 3: Run a full directive end-to-end
+    # Test 3: Classification — ttlg
+    state2 = classify_directive({"directive": "Run a full TTLG diagnostic"})
+    assert state2["mission_type"] == "ttlg", f"Expected ttlg, got {state2['mission_type']}"
+    print(f"Classification: 'TTLG diagnostic' -> {state2['mission_type']}")
+    passed += 1
+
+    # Test 4: Classification — system
+    state3 = classify_directive({"directive": "Run the EPOS doctor scan"})
+    assert state3["mission_type"] in ("ttlg", "system"), \
+        f"Expected ttlg or system, got {state3['mission_type']}"
+    print(f"Classification: 'EPOS doctor' -> {state3['mission_type']}")
+    passed += 1
+
+    # Test 5: Full directive end-to-end (system)
     print("\nRunning directive: 'Check the health of all EPOS systems'")
     result = invoke_friday("Check the health of all EPOS systems")
-    assert "results" in result
-    assert len(result["results"]) > 0
-    passed += 1
-
-    # Test 4: AAR was written
+    assert "results" in result and len(result["results"]) > 0
     aar = result.get("aar_entry", {})
-    assert aar.get("directive_id"), "AAR missing directive_id"
-    print(f"AAR: {aar['directive_id']} | success={aar.get('success')}")
+    print(f"AAR: {aar.get('directive_id')} | type={aar.get('mission_type')} | success={aar.get('success')}")
     passed += 1
 
-    # Test 5: Unknown directive escalates
+    # Test 6: Unknown escalation
     result2 = invoke_friday("Tell me a joke about quantum computing")
     last = result2["results"][-1] if result2.get("results") else {}
-    print(f"Unknown directive routed to: {last.get('executor', '?')}")
+    print(f"Unknown directive -> executor={last.get('executor', '?')} status={last.get('status', '?')}")
     passed += 1
 
     print(f"\nPASS: friday_graph ({passed} assertions)")

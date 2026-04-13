@@ -1,0 +1,304 @@
+{
+  "archive_version": "1.0",
+  "created_at": "2026-04-13T00:00:00+00:00",
+  "last_updated": "2026-04-13T00:00:00+00:00",
+  "directive": "20260413-04",
+  "description": "The organism's DNA record. Complete chain of custody from Day 1 to present.",
+
+  "evolutionary_arc": [
+    {
+      "date": "2026-03-27",
+      "phase": "Genesis",
+      "event": "EPOS concept crystallized — first modules built",
+      "directive": "RETRO-20260327-GENESIS-SPRINT",
+      "aar": "AAR_MODULE3_ROLES_20260327",
+      "capabilities_gained": [
+        "Agent role system (Alpha, Sigma, Omega, Orchestrator, Friday, TTLG)",
+        "Intelligence Layer architecture",
+        "Context Librarian (Sigma) — vault read/write",
+        "Constitutional Arbiter (Alpha) — governance scaffold",
+        "Feedback Flywheel (Omega) — reward signal architecture",
+        "Agent Orchestrator — LangGraph state machine"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "LangGraph as canonical state machine",
+        "File-based JSONL event bus",
+        "Constitutional governance as structural constraint (not policy)"
+      ]
+    },
+    {
+      "date": "2026-04-04",
+      "phase": "Foundation",
+      "event": "CCP sovereignty certified — 105/105 + Custom Props Framework",
+      "directive": "RETRO-20260404-01",
+      "aar": null,
+      "capabilities_gained": [
+        "CCP sovereignty 105/105",
+        "4 TTLG presets",
+        "Provisional patent basis",
+        "Custom Properties Framework"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "CCP as universal cognitive layer",
+        "4 concentric rings: raw input → classification → routing → action",
+        "Sovereignty score: 85+ = marketplace ready"
+      ]
+    },
+    {
+      "date": "2026-04-06",
+      "phase": "Foundation",
+      "event": "TTLG deep diagnostic + 12 nodes sovereignty-certified",
+      "directive": "RETRO-20260406-01",
+      "aar": "EPOS_AAR_20260406",
+      "capabilities_gained": [
+        "TTLG 4-node rewrite",
+        "12 nodes sovereignty-certified",
+        "Doctor check framework (31P/1W/0F)",
+        "8-scan diagnostic suite",
+        "Groq rate limit fix (70b + 8b split)"
+      ],
+      "models_seated": [
+        "llama-3.3-70b-versatile (Groq) — reasoning",
+        "llama-3.1-8b-instant (Groq) — fast summarization"
+      ],
+      "architectural_decisions": [
+        "Doctor check as institutional health monitor",
+        "70b reasoning + 8b fast path split at 500-token threshold"
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "phase": "Execution Layer",
+      "event": "Execution arms deployed — full autonomous operation begins",
+      "directive": "RETRO-20260407-01",
+      "aar": "EPOS_AAR_20260407_GAP_CLOSURE",
+      "capabilities_gained": [
+        "BrowserUse node (web navigation)",
+        "EPOS Daemon (8 APScheduler jobs)",
+        "Event Reactor (first event-driven reaction — content.spark.created)",
+        "Agent Zero bridge (port 50080)",
+        "Content Lab (ERI predictor, brief generator, template engine, CRS, marketing reactor)",
+        "42 event handlers wired",
+        "Pre-mortem discipline established",
+        "AAR constitutional amendment (every session, no exceptions)"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "A file is not a feature — nothing done until it runs",
+        "AAR is constitutional mandate, not optional",
+        "Pre-mortem: check imports, paths, permissions before first line of code",
+        "Event chain: spark.created → ERI predicted → script generated → validated → published → echo scored"
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "phase": "Execution Layer",
+      "event": "LLM path wiring — Claude Code CLI routing through LiteLLM",
+      "directive": "RETRO-20260407-02",
+      "aar": "AAR_CC_WIRE_LLM_PATH_20260407",
+      "capabilities_gained": [
+        "LiteLLM proxy routing for Claude Code CLI",
+        "ANTHROPIC_BASE_URL override pattern established"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "Route all LLM calls through LiteLLM proxy",
+        "ANTHROPIC_BASE_URL=http://litellm:4000 inside containers"
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "phase": "Containerization",
+      "event": "Full Docker migration — 14-service compose stack",
+      "directive": "EPOS_DOCKERIZATION_DIRECTIVE_20260408",
+      "aar": "AAR_DOCKERIZATION_20260408",
+      "capabilities_gained": [
+        "14-service Docker compose (epos-core, friday, litellm, daemon, governance-gate, etc.)",
+        "4 services running day 1",
+        "Event bus persistence verified 7/7 operations",
+        "All 577 vault files accessible in containers",
+        "Zero Windows paths in container code",
+        "Hot-deploy pattern (docker exec + docker cp)"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "python:3.11-slim base image",
+        "File-based event bus via shared Docker volume (no network ports)",
+        "LiteLLM as unified routing proxy",
+        "Context vault mounted at /app/context_vault",
+        "docker cp deployment — no source bind mount",
+        "disable_spend_logs: true fixes LiteLLM 400 on startup"
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "phase": "Intelligence",
+      "event": "Friday Chief of Staff — 18/18 execution arms verified",
+      "directive": "FRIDAY_CHIEF_OF_STAFF_DIRECTIVE_20260408",
+      "aar": "AAR_CC_DEPLOY_UPSKILL_20260408",
+      "capabilities_gained": [
+        "Friday identity (6 archetypes: Chief of Staff, Analyst, Navigator, Trainer, Advisor, Operator)",
+        "10 executor types wired",
+        "5 daily anchors (morning briefing, flywheel, KIL, afternoon, evening close)",
+        "22 monitored metrics",
+        "Nightly upskill engine (11 phases)",
+        "Research scanner (6 sources)",
+        "Morning briefing (3-layer: metrics + research + positioning)",
+        "18/18 execution arms verified"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "Friday = personality layer, CCP = comprehension layer, voice = communication layer",
+        "Daily anchor schedule: 6AM–23:30 with 5 Friday-specific touch points",
+        "Upskill engine feeds nightly QLoRA training queue"
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "phase": "Intelligence",
+      "event": "Intelligence layer diagnostic — Groq TPM limit confirmed",
+      "directive": "RETRO-20260410-01",
+      "aar": "AAR_INTELLIGENCE_LAYER_PROXY_20260410",
+      "capabilities_gained": [
+        "Intelligence Layer Diagnostic document",
+        "WSL2 Claude Code TPM limit root-cause identified (72k vs 12k)",
+        "LiteLLM disable_spend_logs fix documented"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "Groq free tier: 12k TPM hard ceiling — cannot run Claude Code CLI through it",
+        "Self-sufficiency sprint triggered by this constraint",
+        "SCC as solution: remove Anthropic/Groq dependency for coding"
+      ]
+    },
+    {
+      "date": "2026-04-11",
+      "phase": "Self-Building",
+      "event": "SCC seated — organism begins building itself",
+      "directive": "SCC_SEATING_DIRECTIVE",
+      "aar": "AAR-20260411-FINAL-RETIREMENT",
+      "capabilities_gained": [
+        "Sovereign Coding Component (scc.py — 16 tools)",
+        "GovernanceManifest (constitutional parameters)",
+        "GATE_PRE_EXECUTE on every tool call",
+        "AAR auto-generation on every session close",
+        "scc_executor.py (replaces claude_code_executor.py)",
+        "Event bus: scc.session.start/complete/tool.executed",
+        "Organism state updates per session",
+        "AgentRole.SCC (replaced AgentRole.CLAUDE_CODE)",
+        "OpenRouter Qwen3-Coder-30B operational",
+        "Universal state graph (OrganismState — 8 sections)",
+        "Model registry (30 slots, 6 tiers)",
+        "PM extraction framework (7 element types)",
+        "Reactor position file tracking"
+      ],
+      "models_seated": [
+        "Qwen3-Coder-30B-A3B (M-CODE-01) via OpenRouter"
+      ],
+      "architectural_decisions": [
+        "SCC replaces Desktop CODE for constitutional coding",
+        "Desktop CODE continues as bootstrap tool until SCC shadow-tests at 90%",
+        "Organism builds itself — nightly QLoRA on every AAR",
+        "TOOL: protocol for model → tool execution",
+        "Lazy imports: nodes boot even if dependencies absent",
+        "Constitutional system prompt embeds EPOS Constitution v3.1"
+      ]
+    },
+    {
+      "date": "2026-04-13",
+      "phase": "Sanitation",
+      "event": "Codebase sanitized — POSIX-clean, cloud-ready",
+      "directive": "20260413-01",
+      "aar": "AAR_20260413-01",
+      "capabilities_gained": [
+        "permission_audit.py (pre-flight write-access verification)",
+        "path_sanitizer.py (Windows path scanner + POSIX refactor)",
+        "secret_extractor.py (hardcoded secret detection + env template)",
+        "sanitation_verifier.py (8-point binary verification suite)",
+        "env_secrets.json (6 auto-generated + 8 human-gate keys)",
+        ".env.production template",
+        "BOM sentinel (U+FEFF detection + strip)",
+        "SCC shadow test infrastructure (match_rate=1.0)",
+        "Directive versioning convention: YYYYMMDD-XX"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "Internal secrets auto-generated by EPOS (rotatable)",
+        "External secrets human-gated (Jamie must supply)",
+        "8/8 binary verifier as sanitation gate before any cloud push",
+        "BOM strip as standard Doctor check for Windows-origin files",
+        "Directive ID in every file header created during session"
+      ]
+    },
+    {
+      "date": "2026-04-13",
+      "phase": "Institutional Memory",
+      "event": "Evolutionary archive created — full chain of custody documented",
+      "directive": "20260413-04",
+      "aar": "AAR_20260413-04",
+      "capabilities_gained": [
+        "AAR_CATALOG.json (24 AARs cataloged with retroactive IDs)",
+        "evolution_archive.json (this file — complete evolutionary arc)",
+        "EVOLUTION_INDEX.md (human-readable entry point)",
+        "state_redundancy.py (snapshot + checksum + recovery)",
+        "Organism state snapshots with SHA-256 checksums",
+        "State recovery from event bus replay",
+        "Updated workflow conventions (directive versioning, 3-destination storage)"
+      ],
+      "models_seated": [],
+      "architectural_decisions": [
+        "Every directive pairs with exactly one AAR",
+        "AAR stored in 3 locations: vault + Attachments + Drive",
+        "State graph snapshots retained for 30 cycles",
+        "SHA-256 checksum validates state integrity on every load",
+        "Recovery from event bus replay if all snapshots lost"
+      ]
+    }
+  ],
+
+  "capability_timeline": {
+    "notes": "Snapshot values at each date milestone. 'current' = latest known.",
+    "nodes_sovereign": {"2026-04-06": 12, "2026-04-07": 22, "current": 22},
+    "event_handlers": {"2026-04-07_start": 10, "2026-04-07_end": 42, "current": 42},
+    "docker_services": {"2026-04-08_running": 4, "2026-04-08_defined": 14, "current_running": 4, "current_defined": 14},
+    "models_seated": {"2026-04-06": 2, "2026-04-11": 1, "current_total": 3},
+    "model_slots_selected": {"2026-04-09": 22, "current": 22},
+    "execution_arms_verified": {"2026-04-08": 18, "current": 18},
+    "doctor_checks_passing": {"2026-04-06": 31, "2026-04-08": 38, "current": 38},
+    "event_bus_total_events": {"2026-04-07": 10, "2026-04-08": 994, "current": 1050},
+    "friday_skills": {"2026-04-08": 7, "current": 7},
+    "aars_in_catalog": {"2026-04-13": 24, "current": 24},
+    "verification_score": {"2026-04-13": "8/8", "current": "8/8"},
+    "scc_sessions": {"2026-04-11": 1, "current": 2},
+    "scc_shadow_match_rate": {"2026-04-13": 1.0, "current": 1.0}
+  },
+
+  "architectural_decisions_ledger": [
+    {"id": "AD-001", "date": "2026-03-27", "decision": "LangGraph as canonical state machine", "rationale": "Composable, observable, supports conditional routing"},
+    {"id": "AD-002", "date": "2026-03-27", "decision": "File-based JSONL event bus", "rationale": "No ports, no network, survives restarts, human-readable"},
+    {"id": "AD-003", "date": "2026-04-07", "decision": "A file is not a feature — nothing done until it runs", "rationale": "Prevent incomplete work from entering the organism"},
+    {"id": "AD-004", "date": "2026-04-07", "decision": "AAR is constitutional mandate", "rationale": "Institutional memory, QLoRA training data, causal chain"},
+    {"id": "AD-005", "date": "2026-04-08", "decision": "Context vault as single source of truth", "rationale": "All agents read/write the same vault, no parallel state"},
+    {"id": "AD-006", "date": "2026-04-08", "decision": "LiteLLM as unified routing proxy", "rationale": "Model-agnostic, swap providers without code changes"},
+    {"id": "AD-007", "date": "2026-04-11", "decision": "SCC replaces Desktop CODE", "rationale": "Self-sufficiency, constitutional governance, cost efficiency"},
+    {"id": "AD-008", "date": "2026-04-11", "decision": "Lazy imports for all EPOS nodes", "rationale": "Any node must boot even if dependencies are not yet seated"},
+    {"id": "AD-009", "date": "2026-04-13", "decision": "Internal secrets auto-generated, external secrets human-gated", "rationale": "EPOS can rotate its own secrets, cannot invent external API keys"},
+    {"id": "AD-010", "date": "2026-04-13", "decision": "Directive ID in every file header", "rationale": "Any file can be traced to the session that created it"}
+  ],
+
+  "market_evaluation_hooks": {
+    "description": "Triggers that should update this archive and inform next build decisions",
+    "hooks": [
+      "Echolocation score shift >10% on a topic — update content_lab.echolocation_score in state graph",
+      "FOTW captures a recurring customer objection — log as gap, evaluate node for next directive",
+      "Competitor launches overlapping feature — evaluate defensive positioning, update roadmap",
+      "Model benchmark exceeded by newer release — queue model swap in registry",
+      "Constitutional rule causes repeated friction — submit amendment proposal via governance gate",
+      "Client requests capability EPOS lacks — log in pm_surface.jsonl as dependency type",
+      "SCC shadow match rate drops below 0.9 — pause retirement, investigate divergence",
+      "Event bus exceeds 10k events — evaluate rotation/archival policy"
+    ]
+  }
+}

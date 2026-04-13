@@ -154,7 +154,7 @@ class EPOSDoctor:
         self.warnings: List[Dict] = []
         self.info: List[Dict] = []
         self.healed: List[Dict] = []
-        self.epos_root = Path(os.getenv("EPOS_ROOT", "C:/Users/Jamie/workspace/epos_mcp"))
+        self.epos_root = Path(os.getenv("EPOS_ROOT", "/app"))
         
         self._load_environment()
     
@@ -302,7 +302,7 @@ class EPOSDoctor:
     
     def check_agent_zero(self) -> Tuple[bool, str]:
         """CHECK 5: Verify Agent Zero is accessible. (Article II Rule 1)"""
-        agent_path = Path(os.getenv("AGENT_ZERO_PATH", "C:/Users/Jamie/workspace/agent-zero"))
+        agent_path = Path(os.getenv("AGENT_ZERO_PATH", "/app/agent-zero"))
         if not agent_path.exists():
             return False, f"Agent Zero not found: {agent_path}"
         # AZ v0.8+: agent.py is at repo root (not python/agent.py)
@@ -924,6 +924,32 @@ class EPOSDoctor:
         except Exception as e:
             return False, f"9th Order check failed: {str(e)[:80]}"
 
+    def check_bom_sentinel(self) -> Tuple[bool, str]:
+        """CHECK E1: Scan for UTF-8 BOM characters in Python files (Directive 20260413-03A)."""
+        try:
+            from epos.tools.bom_cleaner import scan_bom
+            result = scan_bom(str(self.epos_root))
+            infected = result["infected"]
+            if infected > 0:
+                return False, f"BOM infected: {infected} files — run clean_bom() to fix: {result['files'][:3]}"
+            return True, "BOM clean — 0 infected files"
+        except Exception as e:
+            return False, f"BOM sentinel check failed: {str(e)[:80]}"
+
+    def check_state_redundancy(self) -> Tuple[bool, str]:
+        """CHECK E2: Verify state redundancy layer operational (Directive 20260413-04)."""
+        try:
+            from epos.state.state_redundancy import health_check
+            hc = health_check()
+            status = hc.get("status", "unknown")
+            count = hc.get("snapshot_count", 0)
+            latest = hc.get("latest_snapshot", "none")
+            if status == "operational":
+                return True, f"State redundancy operational — {count} snapshots, latest: {latest}"
+            return False, f"State redundancy degraded: {hc.get('validation_detail', {})}"
+        except Exception as e:
+            return False, f"State redundancy check failed: {str(e)[:80]}"
+
     # ════════════════════════════════════════════════════════════
     # MAIN EXECUTION
     # ════════════════════════════════════════════════════════════
@@ -1001,6 +1027,14 @@ class EPOSDoctor:
         self._check("BrowserUse Node", self.check_browser_use)
         self._check("Agent Zero Container", self.check_agent_zero)
         self._check("9th Order Gap Tracker", self.check_ninth_order)
+
+        if not self.silent:
+            print()
+            print("  --- Section E: Sanitation + Redundancy (v3.5 — 20260413-03A) ---")
+            print()
+
+        self._check("BOM Sentinel (Directive 20260413-03A)", self.check_bom_sentinel)
+        self._check("State Redundancy (Directive 20260413-04)", self.check_state_redundancy)
 
         # Summary
         total = self.checks_passed + self.checks_warned + self.checks_failed
