@@ -1,0 +1,254 @@
+{
+  "aar_id": "20260414-01",
+  "directive_id": "20260414-01",
+  "title": "Raw Capture Layer + CCP Business Element Extraction",
+  "session_date": "2026-04-13",
+  "phase": "Unified Intake Foundation",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "predecessor_directives": ["20260413-03A", "20260413-02"],
+  "status": "COMPLETE",
+
+  "missions": [
+    {
+      "id": "M1",
+      "title": "CCP Element Extraction — 9 element types",
+      "status": "COMPLETE",
+      "file": "epos/ccp/extractor.py",
+      "deliverables": [
+        "ExtractedElement dataclass with 9 fields",
+        "ElementType enum — 9 values",
+        "KEYWORD_PATTERNS — 9 element types, 8-10 patterns each",
+        "SUGGESTED_DESTINATIONS — routing map per type",
+        "extract_elements() — sentence-level classification",
+        "extract_from_capture() — load from raw capture JSON"
+      ],
+      "element_types": [
+        "action_item", "decision", "research_question", "idea",
+        "client_insight", "content_seed", "learning_moment",
+        "constitutional_proposal", "blocker"
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "Confidence Scoring — heuristic + LLM fallback",
+      "status": "COMPLETE",
+      "file": "epos/ccp/scorer.py",
+      "deliverables": [
+        "confidence_band() — high/medium/low classification",
+        "score_element() — heuristic + optional LLM refinement",
+        "score_elements() — batch scoring with LLM-only-for-medium optimization",
+        "summarize_scores() — distribution summary",
+        "LLM call via tools.litellm_client ModelTarget.REASONING (Qwen3/Groq)",
+        "Graceful fallback if LLM unavailable"
+      ],
+      "confidence_bands": {
+        "high": ">= 0.90 — auto-route",
+        "medium": "0.70-0.89 — LLM review",
+        "low": "< 0.70 — human confirmation"
+      }
+    },
+    {
+      "id": "M3",
+      "title": "Situational Routing with human confirmation",
+      "status": "COMPLETE",
+      "file": "epos/ccp/router.py",
+      "deliverables": [
+        "route_element() — auto-route HIGH confidence, pending for MEDIUM/LOW",
+        "route_elements() — batch routing with auto/pending split",
+        "confirm_routing() — apply Jamie confirm/override/discard",
+        "_log_routing_decision() — append to routing_decisions.jsonl training pairs",
+        "RoutingResult dataclass with to_dict()"
+      ],
+      "routing_destinations": {
+        "action_item": "context_vault/pm/action_items.json",
+        "decision": "context_vault/pm/decisions.json",
+        "research_question": "context_vault/pm/research_queue.json",
+        "idea": "context_vault/pm/idea_pipeline.json",
+        "client_insight": "context_vault/pm/client_insights.json",
+        "content_seed": "context_vault/pm/idea_pipeline.json",
+        "learning_moment": "context_vault/training/learning_moments.jsonl",
+        "constitutional_proposal": "context_vault/governance/proposals.json",
+        "blocker": "context_vault/pm/blockers.json"
+      }
+    },
+    {
+      "id": "M4",
+      "title": "Wire raw capture → CCP → extraction → routing",
+      "status": "COMPLETE",
+      "file": "epos/ccp/pipeline.py",
+      "deliverables": [
+        "CCPPipeline class — end-to-end orchestrator",
+        "process_text() — text → extract → score → route",
+        "process_capture() — load raw capture by ID → full pipeline",
+        "confirm_element() — apply confirmation to pending element",
+        "get_pm_summary() — PM counts for Friday briefing",
+        "_log_run() — append to ccp_runs.jsonl"
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "PM Surface — local JSON + API",
+      "status": "COMPLETE",
+      "files": ["epos/pm/store.py", "epos/pm/api.py"],
+      "deliverables": [
+        "PMStore class — CRUD for 6 JSON tabs",
+        "PMEntry dataclass — full schema with status lifecycle",
+        "PMTab/PMStatus/PMPriority enums",
+        "get_summary() — counts per tab per status",
+        "ingest_ccp_result() — bulk intake from CCP pipeline run",
+        "FastAPI pm_router — 7 endpoints",
+        "pm_router mounted on command_center.py (port 8001)"
+      ],
+      "tabs": [
+        "action_items.json",
+        "decisions.json",
+        "research_queue.json",
+        "blockers.json",
+        "idea_pipeline.json",
+        "client_insights.json"
+      ],
+      "api_endpoints": [
+        "GET  /pm/summary",
+        "GET  /pm/{tab}",
+        "POST /pm/_ingest",
+        "POST /pm/_confirm",
+        "POST /pm/{tab}",
+        "PATCH /pm/{tab}/{id}",
+        "DELETE /pm/{tab}/{id}"
+      ]
+    },
+    {
+      "id": "M6",
+      "title": "End-to-end test: paste text → CCP → elements → PM",
+      "status": "COMPLETE",
+      "test_input": "5-sentence paragraph with TODO, BLOCKER, IDEA, decision, research question, client insight",
+      "results": {
+        "elements_extracted": 7,
+        "auto_routed": 6,
+        "pending_confirmation": 1,
+        "pm_written": 6,
+        "tabs_touched": ["action_items", "decisions", "research_queue", "blockers", "idea_pipeline", "client_insights"],
+        "api_checks": "5/5 PASS",
+        "no_duplicates": true,
+        "friday_data_accessible": true
+      },
+      "verification_checklist": [
+        "Paste text → CCP extracts elements: PASS",
+        "Each element has type, confidence, suggested destination: PASS",
+        "Auto-route HIGH confidence to PM JSON: PASS",
+        "GET /pm/summary returns accurate counts: PASS",
+        "Friday can read PM surface data: PASS",
+        "No duplicate entries from double-write: PASS"
+      ]
+    },
+    {
+      "id": "M7",
+      "title": "AAR_20260414-01.json",
+      "status": "COMPLETE",
+      "stored_at": "context_vault/aar/AAR_20260414-01.json"
+    }
+  ],
+
+  "new_files": [
+    "epos/ccp/__init__.py",
+    "epos/ccp/extractor.py",
+    "epos/ccp/scorer.py",
+    "epos/ccp/router.py",
+    "epos/ccp/pipeline.py",
+    "epos/pm/store.py",
+    "epos/pm/api.py"
+  ],
+
+  "modified_files": [
+    "command_center.py — added voice_router + pm_router include_router",
+    "epos/pm/__init__.py — updated to export PMStore, PMEntry, PMTab, pm_router"
+  ],
+
+  "what_went_well": [
+    "All 6 CCP/PM modules imported cleanly — no dependency issues",
+    "9 element types classify correctly with keyword heuristics (0.62-0.97 confidence)",
+    "Confidence bands correctly segregate: HIGH auto-routes, MEDIUM/LOW pending",
+    "PMStore tabs auto-initialize on first access — zero setup required",
+    "Route ordering fix (_ingest/_confirm before /{tab}) resolved FastAPI path matching",
+    "Dedup check prevents double-write when router + store both write same element",
+    "Friday.get_pm_summary() returns total_items + total_pending for briefing",
+    "Full end-to-end in one call: 7 elements extracted from 5 sentences in ~20ms"
+  ],
+
+  "what_went_wrong": [
+    "FastAPI parameterized route POST /{tab} caught /_ingest before the specific route — required reordering (specific routes before parameterized)",
+    "Heredoc in docker exec corrupted triple-quoted docstrings — fixed by using docker cp from local workspace",
+    "Route reorder script inserted ingest block inside module docstring — fixed by cp from workspace file",
+    "Double-write: router._write_element_to_pm() AND PMStore.ingest_ccp_result() both wrote to same files — fixed with dedup check in ingest_ccp_result()",
+    "CCPPipeline.get_pm_summary() was missing total_items key that PMStore.get_summary() had — patched inline in container"
+  ],
+
+  "what_was_learned": [
+    "FastAPI uses definition order for route matching within same path prefix — always put specific named routes before /{param} routes",
+    "Heredoc with 'PYEOF' in docker exec: triple-quoted strings inside the Python code corrupt the heredoc — use docker cp instead",
+    "Two-path architecture (router writes to PM files + store writes to PM files) creates duplicates — need single writer pattern",
+    "Single-writer pattern: router.route_element() should only return RoutingResult (no write), let PMStore.ingest_ccp_result() be the only writer",
+    "Dedup by element_id is necessary when both pathways can write to same tab files"
+  ],
+
+  "state_delta": {
+    "before": {
+      "ccp_module": "not deployed",
+      "pm_surface": "exists (extraction_framework.py) but no JSON tabs or API",
+      "voice_pm_integration": "none",
+      "pm_api_routes": 0
+    },
+    "after": {
+      "ccp_module": "operational — 9 element types, heuristic + LLM scoring",
+      "pm_surface": "6 JSON tabs initialized, 7 API endpoints mounted on port 8001",
+      "voice_pm_integration": "raw_capture → CCPPipeline → 6 PM tabs",
+      "pm_api_routes": 7,
+      "friday_briefing_data": "CCPPipeline.get_pm_summary() operational",
+      "training_pairs_log": "context_vault/training/pairs/routing_decisions.jsonl"
+    }
+  },
+
+  "pending": [
+    {
+      "item": "Commit all new files to git",
+      "action": "git add epos/ccp/ epos/pm/store.py epos/pm/api.py epos/pm/__init__.py context_vault/aar/AAR_20260414-01.json context_vault/training/",
+      "priority": "IMMEDIATE"
+    },
+    {
+      "item": "Wire CCPPipeline into voice/pipeline.py so voice sessions auto-extract elements",
+      "action": "After transcribe() + correct() → call CCPPipeline.process_text(corrected_text, source_type='voice_capture')",
+      "priority": "NEXT SESSION"
+    },
+    {
+      "item": "Single-writer refactor: remove _write_element_to_pm() from router.py, let PMStore be the only writer",
+      "action": "Simplifies dedup logic, removes dual-write complexity",
+      "priority": "NEXT SESSION"
+    },
+    {
+      "item": "Wire Friday morning_briefing.py to call PMStore.get_summary()",
+      "action": "Replace any placeholder PM data with live get_summary() call",
+      "priority": "NEXT SESSION"
+    },
+    {
+      "item": "Sync epos/pm/store.py and epos/ccp/pipeline.py patches back to local workspace",
+      "action": "docker cp container fixes back to local files before git commit",
+      "priority": "IMMEDIATE"
+    }
+  ],
+
+  "successor_directives": [
+    {
+      "id": "20260414-02",
+      "title": "Voice → CCP auto-wire + Friday PM briefing integration",
+      "depends_on": "20260414-01",
+      "status": "UNBLOCKED"
+    }
+  ],
+
+  "signatures": {
+    "directive_author": "Jamie Purdue",
+    "executing_agent": "Desktop CODE (Claude Code)",
+    "constitutional_gate": "EPOS Constitution v3.1",
+    "closed_at": "2026-04-13T21:00:00Z"
+  }
+}

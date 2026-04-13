@@ -1,0 +1,115 @@
+{
+  "date": "2026-04-08",
+  "phase_1_aar_absorption": {
+    "status": "complete",
+    "aars_scanned": 1,
+    "learnings": [
+      {
+        "source": "AAR_DOCKERIZATION_20260408.md",
+        "learning": "& Fixed (not in directive)\n\n| Bug | Fix |\n|---|---|\n| `venv_az/` committed in M0 snapshot | Added to `.gitignore` |\n| `command_center.py` has no `/health` endpoint | Not blocking; `/docs` serves at 200 |\n| `governance-gate` and `governance-server` both EXPOSE 8101 | Mapped to different host ports: 8101 vs 8108 |\n| `api/epos_api.py` referenced in old compose but doesn't exist | Corrected CMD to `command_center:app` |\n\n---"
+      }
+    ]
+  },
+  "phase_2_sop_scan": {
+    "status": "complete",
+    "sops_modified_7d": 4,
+    "files": [
+      {
+        "file": "EPOS_CODING_SKILL.md",
+        "modified": "2026-04-07T00:52:45+00:00"
+      },
+      {
+        "file": "EPOS_DIRECTIVE_SKILL.md",
+        "modified": "2026-04-07T00:53:20+00:00"
+      },
+      {
+        "file": "EPOS_AAR_SKILL.md",
+        "modified": "2026-04-07T00:52:56+00:00"
+      },
+      {
+        "file": "EPOS_NODE_SOVEREIGNTY_SKILL.md",
+        "modified": "2026-04-07T00:53:07+00:00"
+      }
+    ]
+  },
+  "phase_3_baseline_delta": {
+    "status": "complete",
+    "counts": {
+      "vault_files": 584,
+      "python_files": 193
+    },
+    "deltas": {
+      "vault_files": 5,
+      "python_files": 0
+    }
+  },
+  "phase_4_avatar_recalibration": {
+    "status": "complete",
+    "avatars_checked": 1,
+    "recalibrations": []
+  },
+  "phase_5_template_expansion": {
+    "status": "complete",
+    "new_templates": 6,
+    "files": [
+      {
+        "file": "render_log.jsonl",
+        "dir": "templates"
+      },
+      {
+        "file": "invoice.json",
+        "dir": "templates"
+      },
+      {
+        "file": "cold_outreach.json",
+        "dir": "templates"
+      },
+      {
+        "file": "post_diagnostic.json",
+        "dir": "templates"
+      },
+      {
+        "file": "weekly_brief.json",
+        "dir": "templates"
+      },
+      {
+        "file": "welcome.json",
+        "dir": "templates"
+      }
+    ]
+  },
+  "phase_6_research_ingestion": {
+    "status": "complete",
+    "briefs_ingested": 0,
+    "findings": []
+  },
+  "phase_7_industry_scan": {
+    "status": "complete",
+    "findings": 0,
+    "sources": []
+  },
+  "phase_8_pattern_promotion": {
+    "status": "complete",
+    "promotions": []
+  },
+  "phase_9_capability_gaps": {
+    "status": "complete",
+    "gaps": []
+  },
+  "phase_10_improvement_candidates": {
+    "status": "complete",
+    "candidates": [
+      {
+        "type": "aar_learning",
+        "source": "AAR_DOCKERIZATION_20260408.md",
+        "summary": "& Fixed (not in directive)\n\n| Bug | Fix |\n|---|---|\n| `venv_az/` committed in M0 snapshot | Added to `.gitignore` |\n| `command_center.py` has no `/health` endpoint | Not blocking; `/docs` serves at 20",
+        "action": "Review and codify if recurring"
+      }
+    ]
+  },
+  "phase_11_constitutional_proposals": {
+    "status": "complete",
+    "proposals": [],
+    "note": "No gate log found"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "aar_id": "AAR_20260414-02",
+  "directive_id": "20260414-02",
+  "directive_name": "Reward Bus Backwire",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "status": "COMPLETE",
+  "verification_score": "10/10",
+  "missions": {
+    "M1": {
+      "name": "Audit existing reward touchpoints",
+      "status": "COMPLETE",
+      "finding": "5 modules identified for reward wiring: voice/pipeline, voice/router, tools/sanitation_verifier, tools/bom_cleaner, training/shadow_protocol. CCP (M5) added as 6th target after deployment."
+    },
+    "M2": {
+      "name": "Wire voice/pipeline.py to reward bus",
+      "status": "COMPLETE",
+      "signals": [
+        "raw_capture_saved (+0.2, process)",
+        "vocabulary_correction_applied (+0.1, process)",
+        "vault_search_executed (+0.2, process)",
+        "reformulation_generated (+0.2, process)",
+        "tts_attempted (+0.1, process)"
+      ],
+      "total_value_per_session": 0.8
+    },
+    "M3": {
+      "name": "Wire sanitation tools to reward bus",
+      "status": "COMPLETE",
+      "files": [
+        "epos/tools/sanitation_verifier.py",
+        "epos/tools/bom_cleaner.py"
+      ],
+      "signals": [
+        "sanitation_check_pass (+0.125, process) — 8 possible per run",
+        "sanitation_check_fail (-0.5, negative, needs_review) — per failed check",
+        "bom_contamination_found (-0.3, negative) — per infected file",
+        "bom_scan_clean (+0.1, process) — when scan finds 0 BOM"
+      ]
+    },
+    "M4": {
+      "name": "Wire shadow_protocol.py to reward bus",
+      "status": "COMPLETE",
+      "signals": [
+        "scc_has_watermark (process, 0.15 if pass else 0.0)",
+        "scc_has_error_handling (process, 0.15 if pass else 0.0)",
+        "scc_has_docstrings (process, 0.10 if pass else 0.0)",
+        "scc_has_type_hints (process, 0.05 if pass else 0.0)",
+        "scc_has_posix_paths (process, 0.15 if pass else 0.0)",
+        "scc_file_merit (outcome, merit/100)",
+        "scc_produced_stub (negative, -0.5, needs_review=True)",
+        "scc_merit_compound (compound, process_total x outcome)"
+      ],
+      "design_note": "Compound signal = process_total x merit_outcome provides non-linear QLoRA gradient: high quality + high merit = multiplicative reward"
+    },
+    "M5": {
+      "name": "Wire CCP pipeline + router to reward bus",
+      "status": "COMPLETE",
+      "files": [
+        "epos/ccp/pipeline.py",
+        "epos/ccp/router.py"
+      ],
+      "signals": [
+        "ccp_elements_extracted (process, min(n*0.05, 0.50))",
+        "ccp_auto_routed (outcome, min(n*0.10, 0.50))",
+        "ccp_pending_review (process, min(n*0.02, 0.10))",
+        "ccp_run_empty (negative, -0.1) — when 0 elements extracted",
+        "ccp_routing_confirmed (outcome, +0.2) — human confirms suggestion",
+        "ccp_routing_overridden (outcome, +0.1, needs_review) — human changes type",
+        "ccp_routing_discarded (negative, -0.1) — human discards element"
+      ]
+    },
+    "M6": {
+      "name": "PM hook point stubs in voice/router.py",
+      "status": "COMPLETE",
+      "note": "Comments added for pm_item_created/completed/blocked/stale and decision lifecycle signals. Activated when PM surface goes live."
+    },
+    "M7": {
+      "name": "Foundation: publish_reward.py + reward_aggregator.py",
+      "status": "COMPLETE",
+      "files": [
+        "epos/rewards/__init__.py",
+        "epos/rewards/publish_reward.py",
+        "epos/rewards/reward_aggregator.py"
+      ],
+      "publish_reward_schema": {
+        "timestamp": "ISO UTC",
+        "week": "2026W16 format",
+        "directive_id": "optional",
+        "trace_id": "auto-generated UUID fragment",
+        "source": "caller module",
+        "signal_type": "process | outcome | negative | compound",
+        "signal_name": "snake_case identifier",
+        "value": "float (-1.0 to +1.0)",
+        "context": "human-readable detail",
+        "needs_review": "bool (auto-True when value < -0.3)"
+      },
+      "aggregator_windows": ["today", "this_week", "all_time"],
+      "qlora_hold_logic": "qlora_deployment_held=True when needs_review_count > 0"
+    },
+    "M8": {
+      "name": "Verification + AAR",
+      "status": "COMPLETE",
+      "verification_score": "10/10",
+      "checks": [
+        "publish_reward importable + writes signal to JSONL",
+        "reward_aggregator runs + returns structured summary",
+        "JSONL files exist on disk with signals",
+        "shadow_protocol wired (5 process + outcome + negative + compound)",
+        "voice pipeline wired (5 process signals)",
+        "voice router wired (routing + reformulation signals)",
+        "sanitation verifier wired (pass/fail per check)",
+        "bom cleaner wired (contamination + clean signals)",
+        "ccp pipeline wired (4 signals across pipeline steps)",
+        "ccp router wired (confirm/override/discard outcome signals)"
+      ]
+    }
+  },
+  "signal_taxonomy": {
+    "process": "Intermediate step completed — earns small positive reward for doing work",
+    "outcome": "End result achieved — higher reward for delivering value",
+    "negative": "Failure or quality violation — penalizes bad patterns, triggers review queue",
+    "compound": "Multi-dimensional product signal for non-linear QLoRA gradient"
+  },
+  "modules_wired": [
+    "epos/rewards/publish_reward.py",
+    "epos/rewards/reward_aggregator.py",
+    "epos/voice/pipeline.py",
+    "epos/voice/router.py",
+    "epos/tools/sanitation_verifier.py",
+    "epos/tools/bom_cleaner.py",
+    "epos/training/shadow_protocol.py",
+    "epos/ccp/pipeline.py",
+    "epos/ccp/router.py"
+  ],
+  "total_unique_signal_names": 27,
+  "design_decisions": [
+    "All _reward() calls are non-fatal (wrapped in try/except) — reward bus failure never crashes callers",
+    "Reward files partitioned by source + ISO week for efficient rotation (rotate_files() archives >4 weeks)",
+    "auto_flag_negative=True in publish_reward: value < -0.3 automatically sets needs_review=True",
+    "Compound signal (shadow_protocol) = process_total x outcome provides curved QLoRA gradient",
+    "qlora_deployment_held blocks checkpoint deployment until Jamie reviews flagged signals"
+  ],
+  "next_steps": [
+    "Wire friday/skills/morning_briefing.py to aggregate_rewards(window=today) for voice briefing",
+    "Wire nightly_training.py to check_qlora_hold() before checkpoint deployment",
+    "Activate PM hook point stubs in voice/router.py when PM surface is live",
+    "Add reward signals to epos_doctor.py health checks"
+  ]
+}

@@ -1,0 +1,1 @@
+{"timestamp": "2026-04-13T20:52:27.102458Z", "week": "2026W16", "directive_id": "unknown", "trace_id": "c6e677e3", "source": "system", "signal_type": "process", "signal_name": "test_signal", "value": 0.5, "context": "M7 import test", "needs_review": false}

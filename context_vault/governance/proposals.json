@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "ELM-10D352E786B9",
+      "content": "Constitutional proposal: CCP confidence threshold for auto-routing should be",
+      "type": "constitutional_proposal",
+      "confidence": 0.97,
+      "source_capture_id": null,
+      "status": "pending",
+      "priority": "normal",
+      "assigned_to": null,
+      "due_date": null,
+      "created_at": "2026-04-13T20:13:23.445921+00:00",
+      "source_directive": null,
+      "context_refs": []
+    }
+  ],
+  "updated_at": "2026-04-13T20:13:23.447678+00:00"
+}

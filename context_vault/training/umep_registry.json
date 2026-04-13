@@ -1,0 +1,496 @@
+{
+  "registry_id": "UMEP-v1.0",
+  "title": "Universal Model Education Protocol Registry",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "directive": "20260413-05 (SCC Shadow Protocol)",
+  "created_at": "2026-04-13T00:00:00Z",
+  "updated_at": "2026-04-13T18:46:01.971099Z",
+  "certification_schema": {
+    "0": {
+      "level": 0,
+      "name": "Unassessed",
+      "description": "No exam attempt recorded",
+      "criteria": "No missions completed"
+    },
+    "1": {
+      "level": 1,
+      "name": "Attempt",
+      "description": "At least one exam attempt on record, any grade",
+      "criteria": "1+ missions attempted, any merit score"
+    },
+    "2": {
+      "level": 2,
+      "name": "Junior",
+      "description": "Basic mission execution with guidance",
+      "criteria": "3+ missions completed, avg merit \u2265 60"
+    },
+    "3": {
+      "level": 3,
+      "name": "Intermediate",
+      "description": "Independent mission execution, minor gaps only",
+      "criteria": "7+ missions completed, avg merit \u2265 75"
+    },
+    "4": {
+      "level": 4,
+      "name": "Senior",
+      "description": "High-quality execution, EPOS-compliant patterns",
+      "criteria": "15+ missions completed, avg merit \u2265 85"
+    },
+    "5": {
+      "level": 5,
+      "name": "Autonomous",
+      "description": "Desktop CODE parity \u2014 trusted delegation target",
+      "criteria": "30+ missions completed, avg merit \u2265 90 sustained 7 days"
+    }
+  },
+  "graduation_criteria": {
+    "junior_to_intermediate": {
+      "missions_required": 7,
+      "merit_threshold": 75,
+      "sustained_sessions": 1
+    },
+    "intermediate_to_senior": {
+      "missions_required": 15,
+      "merit_threshold": 85,
+      "sustained_sessions": 3
+    },
+    "senior_to_autonomous": {
+      "missions_required": 30,
+      "merit_threshold": 90,
+      "sustained_days": 7,
+      "note": "7-day window: avg merit \u2265 90 across last 10 sessions"
+    }
+  },
+  "models": {
+    "SCC-PRIMARY": {
+      "model_id": "SCC-PRIMARY",
+      "display_name": "SCC Primary Instance",
+      "role": "Sovereign Coding Counterpart \u2014 primary delegation target",
+      "certification_level": 1,
+      "missions_completed": [
+        "20260413-03A"
+      ],
+      "merit_history": [
+        {
+          "directive_id": "20260413-03A",
+          "merit": 5,
+          "grade": "F",
+          "recorded_at": "2026-04-13T18:46:01.971082Z"
+        }
+      ],
+      "last_merit": 5,
+      "last_grade": "F",
+      "last_directive": "20260413-03A",
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T18:46:01.971097Z",
+      "last_promotion": "2026-04-13T18:46:01.971095Z"
+    },
+    "SCC-SHADOW": {
+      "model_id": "SCC-SHADOW",
+      "display_name": "SCC Shadow Instance",
+      "role": "Training/evaluation shadow of SCC-PRIMARY",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-INFRA-01": {
+      "model_id": "M-INFRA-01",
+      "display_name": "Infrastructure Specialist 01",
+      "role": "Docker / deployment / DevOps missions",
+      "specialization": [
+        "docker",
+        "deployment",
+        "infrastructure",
+        "networking"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-VOICE-01": {
+      "model_id": "M-VOICE-01",
+      "display_name": "Voice System Specialist 01",
+      "role": "Voice pipeline / ASR / TTS / transcription missions",
+      "specialization": [
+        "voice",
+        "asr",
+        "tts",
+        "transcription",
+        "vocabulary"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-AGENT-01": {
+      "model_id": "M-AGENT-01",
+      "display_name": "Agent Architect 01",
+      "role": "Agent scaffolding / tool routing / event publishing missions",
+      "specialization": [
+        "agents",
+        "tools",
+        "events",
+        "routing",
+        "sovereign_coding"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-STATE-01": {
+      "model_id": "M-STATE-01",
+      "display_name": "State Management Specialist 01",
+      "role": "State persistence / redundancy / organism state missions",
+      "specialization": [
+        "state",
+        "persistence",
+        "redundancy",
+        "snapshots"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-API-01": {
+      "model_id": "M-API-01",
+      "display_name": "API Integration Specialist 01",
+      "role": "FastAPI endpoints / route scaffolding / API integration missions",
+      "specialization": [
+        "fastapi",
+        "api",
+        "routes",
+        "endpoints",
+        "http"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-VAULT-01": {
+      "model_id": "M-VAULT-01",
+      "display_name": "Vault & Memory Specialist 01",
+      "role": "Context vault / semantic search / embedding / AAR missions",
+      "specialization": [
+        "vault",
+        "embeddings",
+        "semantic_search",
+        "memory",
+        "aar"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-TRAIN-01": {
+      "model_id": "M-TRAIN-01",
+      "display_name": "Training Framework Specialist 01",
+      "role": "QLoRA fine-tuning / training pair generation / merit tracking",
+      "specialization": [
+        "qlora",
+        "training",
+        "fine_tuning",
+        "merit",
+        "shadow_protocol"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-SECURITY-01": {
+      "model_id": "M-SECURITY-01",
+      "display_name": "Security & Compliance Specialist 01",
+      "role": "BOM sanitization / path compliance / governance watermark missions",
+      "specialization": [
+        "security",
+        "bom",
+        "compliance",
+        "governance",
+        "git_hooks"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-CODE-01": {
+      "model_id": "M-CODE-01",
+      "display_name": "General Coder 01",
+      "role": "General Python implementation missions, utility modules",
+      "specialization": [
+        "python",
+        "utilities",
+        "general_implementation"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "M-CLASSIFY-01": {
+      "model_id": "M-CLASSIFY-01",
+      "display_name": "Classification & Analysis Specialist 01",
+      "role": "Diff analysis / divergence classification / pattern detection",
+      "specialization": [
+        "classification",
+        "analysis",
+        "diff",
+        "patterns",
+        "divergence"
+      ],
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "last_merit": null,
+      "last_grade": null,
+      "last_directive": null,
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-13": {
+      "model_id": "SLOT-13",
+      "display_name": "Reserved Slot 13",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-14": {
+      "model_id": "SLOT-14",
+      "display_name": "Reserved Slot 14",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-15": {
+      "model_id": "SLOT-15",
+      "display_name": "Reserved Slot 15",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-16": {
+      "model_id": "SLOT-16",
+      "display_name": "Reserved Slot 16",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-17": {
+      "model_id": "SLOT-17",
+      "display_name": "Reserved Slot 17",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-18": {
+      "model_id": "SLOT-18",
+      "display_name": "Reserved Slot 18",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-19": {
+      "model_id": "SLOT-19",
+      "display_name": "Reserved Slot 19",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-20": {
+      "model_id": "SLOT-20",
+      "display_name": "Reserved Slot 20",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-21": {
+      "model_id": "SLOT-21",
+      "display_name": "Reserved Slot 21",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-22": {
+      "model_id": "SLOT-22",
+      "display_name": "Reserved Slot 22",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-23": {
+      "model_id": "SLOT-23",
+      "display_name": "Reserved Slot 23",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-24": {
+      "model_id": "SLOT-24",
+      "display_name": "Reserved Slot 24",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-25": {
+      "model_id": "SLOT-25",
+      "display_name": "Reserved Slot 25",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-26": {
+      "model_id": "SLOT-26",
+      "display_name": "Reserved Slot 26",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-27": {
+      "model_id": "SLOT-27",
+      "display_name": "Reserved Slot 27",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-28": {
+      "model_id": "SLOT-28",
+      "display_name": "Reserved Slot 28",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-29": {
+      "model_id": "SLOT-29",
+      "display_name": "Reserved Slot 29",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    },
+    "SLOT-30": {
+      "model_id": "SLOT-30",
+      "display_name": "Reserved Slot 30",
+      "certification_level": 0,
+      "missions_completed": [],
+      "merit_history": [],
+      "registered_at": "2026-04-13T00:00:00Z",
+      "updated_at": "2026-04-13T00:00:00Z"
+    }
+  },
+  "named_slots": 12,
+  "total_slots": 30,
+  "active_models": 0,
+  "merit_scale": {
+    "A": {
+      "min": 90,
+      "max": 100,
+      "label": "Excellent"
+    },
+    "B": {
+      "min": 80,
+      "max": 89,
+      "label": "Good"
+    },
+    "C": {
+      "min": 70,
+      "max": 79,
+      "label": "Satisfactory"
+    },
+    "D": {
+      "min": 60,
+      "max": 69,
+      "label": "Marginal"
+    },
+    "F": {
+      "min": 0,
+      "max": 59,
+      "label": "Failing"
+    }
+  },
+  "merit_weights": {
+    "functional_correctness": 0.4,
+    "code_quality": 0.25,
+    "epos_compliance": 0.2,
+    "completeness": 0.15
+  }
+}

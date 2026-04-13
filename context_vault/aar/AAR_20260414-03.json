@@ -1,0 +1,135 @@
+{
+  "aar_id": "AAR_20260414-03",
+  "directive_id": "20260414-03",
+  "directive_name": "Integration Wiring + Confidence Decay",
+  "constitutional_authority": "EPOS Constitution v3.1",
+  "status": "COMPLETE",
+  "verification_score": "8/8",
+  "integration_test_score": "8/8",
+  "decay_engine_score": "4/4",
+  "missions": {
+    "M1": {
+      "name": "Wire Voice Pipeline to CCP Extraction",
+      "status": "COMPLETE",
+      "file": "epos/voice/pipeline.py",
+      "change": "Added Step 5.5 after reformulation — CCPPipeline.process_text() called on corrected transcript",
+      "return_fields_added": [
+        "ccp_elements_extracted",
+        "ccp_auto_routed",
+        "ccp_pending",
+        "ccp_pending_elements"
+      ],
+      "reward_signal": "voice_ccp_extraction (process, min(n*0.1, 0.5))"
+    },
+    "M2": {
+      "name": "Wire Friday Morning Briefing to PM Surface",
+      "status": "COMPLETE",
+      "file": "friday/skills/morning_briefing.py",
+      "functions_added": [
+        "get_pm_briefing() — PMStore.get_summary() → human-readable sentence",
+        "get_reward_briefing() — aggregate_rewards(today) → net reward + QLoRA hold status",
+        "get_decay_briefing() — decay engine sweep result → expiry/aging status"
+      ],
+      "sections_added_to_generate": [
+        "## PM Surface",
+        "## Reward Bus",
+        "## Confidence Decay"
+      ],
+      "test_output": "You have 12 items across 6 tabs. 11 pending, 1 in progress."
+    },
+    "M3": {
+      "name": "Wire Confirm Endpoint to PM Surface via PMStore",
+      "status": "COMPLETE",
+      "file": "epos/ccp/router.py — confirm_routing()",
+      "change": "Replaced direct _write_element_to_pm() calls in confirm/override actions with PMStore.add_from_dict(). Custom override_destination still uses direct JSONL append. Non-tab types (learning_moment, constitutional_proposal) use direct JSONL.",
+      "type_to_tab_map": "action_item/decision/research_question/idea/client_insight/content_seed/blocker → PMTab"
+    },
+    "M4": {
+      "name": "Single-Writer Refactor",
+      "status": "COMPLETE",
+      "files": ["epos/ccp/router.py", "epos/ccp/pipeline.py", "epos/pm/store.py"],
+      "changes": [
+        "route_element(): removed _write_element_to_pm() call — sets destination_path only, written=False",
+        "pipeline.process_text(): added Step 3.5 — PMStore().ingest_ccp_result(result) after result dict built",
+        "store.ingest_ccp_result(): added dedup check (existing_ids set), added original_confidence field"
+      ],
+      "result": "PMStore is the sole writer to PM JSON tab files. No dual-write paths remain.",
+      "test": "pm_written tracked in pipeline result — confirmed=1 per run"
+    },
+    "M5": {
+      "name": "Confidence Decay Engine",
+      "status": "COMPLETE",
+      "file": "epos/ccp/decay.py",
+      "decay_schedule": [
+        "0-24h: 0.00 decay per 12h (fresh)",
+        "24-48h: 0.05 decay per 12h (gentle)",
+        "48-72h: 0.10 decay per 12h (moderate)",
+        "72h+: 0.15 decay per 12h (aggressive)"
+      ],
+      "exemptions": [
+        "status confirmed/in_progress: NO DECAY",
+        "status blocked: PAUSED (Friday alerts)",
+        "type decision: 50% rate",
+        "type constitutional_proposal: NO DECAY"
+      ],
+      "archive_threshold": 0.50,
+      "aging_threshold": 0.70,
+      "self_test": "4/4 scenarios correct",
+      "verified_behaviors": [
+        "36h: 0.95 → 0.90 (1 period in 24-48h band)",
+        "80h: 0.70 → 0.30 (archived)",
+        "80h decision: 0.70 → 0.50 (slow decay, not archived)",
+        "200h constitutional_proposal: 0.95 → 0.95 (no decay)"
+      ],
+      "reward_signals": [
+        "element_expired_unreviewed (-0.2, negative, needs_review=True)"
+      ],
+      "integration": "get_decay_summary() wired into friday/skills/morning_briefing.py"
+    },
+    "M6": {
+      "name": "End-to-End Integration Test",
+      "status": "COMPLETE",
+      "score": "8/8",
+      "tests": [
+        "T1: CCP pipeline e2e — extracted=5, pm_written=1",
+        "T2: PM surface has items — total_items=10",
+        "T3: Single writer dedup confirmed",
+        "T4: PM briefing returns live counts",
+        "T5: Reward briefing shows today signals + net reward",
+        "T6: Decay briefing returns status string",
+        "T7: Decay sweep archives 80h element",
+        "T8: Voice pipeline has CCP fields"
+      ]
+    },
+    "M7": {
+      "name": "Commit + Push + AAR",
+      "status": "COMPLETE"
+    }
+  },
+  "state_delta": {
+    "health": {
+      "voice_ccp_integrated": true,
+      "friday_pm_integrated": true,
+      "confidence_decay": "operational",
+      "single_writer": true
+    },
+    "capabilities": {
+      "voice_to_pm_pipeline": "operational",
+      "friday_pm_briefing": "live",
+      "confidence_decay_sweep": "on_demand_and_schedulable_12h"
+    }
+  },
+  "design_notes": [
+    "Decay math: total_decay = sum((hours_in_band / 12) * rate_per_12h) across DECAY_SCHEDULE bands",
+    "At 36h: only 12h in 24-48h band = 1 period * 0.05 = 0.05 decay (directive showed 48h math)",
+    "Single-writer ensures no race conditions between router and pipeline writing to same JSON tabs",
+    "original_confidence preserved in PM entry so decay engine has baseline to work from",
+    "get_decay_briefing() runs a live sweep on every morning briefing call — lightweight since most items are fresh"
+  ],
+  "next_steps": [
+    "Wire apply_decay_sweep() into EPOS daemon APScheduler (every 12h)",
+    "Activate PM hook point signals in voice/router.py when PM surface goes live",
+    "Wire nightly_training.py to check_qlora_hold() before checkpoint deployment",
+    "Add /pm/decay endpoint to FastAPI pm_router for manual sweep trigger"
+  ]
+}

@@ -1,0 +1,1 @@
+{"timestamp": "2026-04-13T21:59:13.269290Z", "week": "2026W16", "directive_id": "unknown", "trace_id": "d02ed4b9", "source": "decay_engine", "signal_type": "negative", "signal_name": "element_expired_unreviewed", "value": -0.2, "context": "Expired [action_items]: type=action_item conf 0.70\u21920.30 after 80h", "needs_review": true}

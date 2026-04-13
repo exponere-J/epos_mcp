@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "ELM-49E5AD81E7EF",
+      "content": "TODO: commit training files to git.",
+      "type": "action_item",
+      "confidence": 0.97,
+      "source_capture_id": null,
+      "status": "in_progress",
+      "priority": "normal",
+      "assigned_to": null,
+      "due_date": null,
+      "created_at": "2026-04-13T20:21:59.079111+00:00",
+      "source_directive": null,
+      "context_refs": [],
+      "updated_at": "2026-04-13T20:21:59.254019+00:00",
+      "hours_age": 1.6
+    },
+    {
+      "id": "ELM-A639237014F8",
+      "content": "TODO: test.",
+      "type": "action_item",
+      "confidence": 0.97,
+      "source_capture_id": null,
+      "status": "pending",
+      "priority": "normal",
+      "assigned_to": null,
+      "due_date": null,
+      "created_at": "2026-04-13T20:23:09.337493+00:00",
+      "source_directive": null,
+      "context_refs": [],
+      "hours_age": 1.6
+    },
+    {
+      "id": "ELM-6A1BA81BDC3C",
+      "content": "TODO: review the API spec.",
+      "status": "pending",
+      "priority": "normal",
+      "confidence": 0.97,
+      "original_confidence": 0.97,
+      "source_capture_id": null,
+      "element_type": "action_item",
+      "created_at": "2026-04-13T21:59:13.061797+00:00",
+      "hours_age": 0.0
+    },
+    {
+      "id": "ELM-A50FB4AB19F7",
+      "content": "TODO: review the API spec.",
+      "status": "pending",
+      "priority": "normal",
+      "confidence": 0.97,
+      "original_confidence": 0.97,
+      "source_capture_id": null,
+      "element_type": "action_item",
+      "created_at": "2026-04-13T21:59:13.092544+00:00",
+      "hours_age": 0.0
+    }
+  ],
+  "updated_at": "2026-04-13T21:59:13.253071+00:00"
+}

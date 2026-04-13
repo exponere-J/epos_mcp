@@ -34,6 +34,100 @@ BRIEFINGS_DIR = VAULT / "friday" / "briefings"
 BRIEFINGS_DIR.mkdir(parents=True, exist_ok=True)
 
 
+# ── PM Surface integration (Directive 20260414-03) ───────────────────────────
+
+def get_pm_briefing() -> str:
+    """Generate PM surface section for Friday morning briefing.
+
+    Returns:
+        Human-readable sentence(s) about current PM state.
+    """
+    try:
+        from epos.pm.store import PMStore
+        pm = PMStore()
+        summary = pm.get_summary()
+
+        total = summary.get("total_items", 0)
+        if total == 0:
+            return "Your PM surface is clear. No pending items."
+
+        # Count across all tabs
+        pending = in_progress = blocked = complete = 0
+        tab_names = [k for k in summary if isinstance(summary[k], dict)]
+        for tab_key in tab_names:
+            tab = summary[tab_key]
+            pending     += tab.get("pending", 0)
+            in_progress += tab.get("in_progress", 0)
+            blocked     += tab.get("blocked", 0)
+            complete    += tab.get("complete", 0)
+
+        briefing = f"You have {total} item{'s' if total != 1 else ''} across {len(tab_names)} tabs. "
+
+        parts = []
+        if pending:     parts.append(f"{pending} pending")
+        if in_progress: parts.append(f"{in_progress} in progress")
+        if blocked:     parts.append(f"{blocked} blocked")
+        if complete:    parts.append(f"{complete} complete")
+        if parts:
+            briefing += ", ".join(parts) + "."
+
+        if blocked > 0:
+            briefing += (f" ATTENTION: {blocked} item{'s are' if blocked != 1 else ' is'} "
+                         f"blocked and need{'s' if blocked == 1 else ''} your review.")
+
+        return briefing
+
+    except Exception as e:
+        return f"PM surface unavailable: {str(e)[:100]}"
+
+
+def get_reward_briefing() -> str:
+    """Generate reward signal summary for Friday morning briefing.
+
+    Returns:
+        Human-readable reward bus status and QLoRA hold state.
+    """
+    try:
+        from epos.rewards.reward_aggregator import aggregate_rewards
+        summary = aggregate_rewards(window="today")
+
+        if summary["total_signals"] == 0:
+            return "No reward signals recorded today."
+
+        briefing = (f"{summary['total_signals']} reward signal"
+                    f"{'s' if summary['total_signals'] != 1 else ''} today. "
+                    f"Net reward: {summary['net_reward']:+.2f}.")
+
+        if summary.get("needs_review_count", 0) > 0:
+            n = summary["needs_review_count"]
+            briefing += (f" ATTENTION: {n} signal{'s' if n != 1 else ''} need"
+                         f"{'s' if n == 1 else ''} review. "
+                         f"QLoRA checkpoint deployment is held until reviewed.")
+
+        if summary.get("top_negative_patterns"):
+            top = summary["top_negative_patterns"][0]
+            briefing += (f" Top gap: {top['pattern'].replace('_', ' ')} "
+                         f"({top['count']} instance{'s' if top['count'] != 1 else ''}).")
+
+        return briefing
+
+    except Exception as e:
+        return f"Reward summary unavailable: {str(e)[:100]}"
+
+
+def get_decay_briefing() -> str:
+    """Run confidence decay sweep and return status for morning briefing.
+
+    Returns:
+        Human-readable decay status sentence(s).
+    """
+    try:
+        from epos.ccp.decay import get_decay_summary
+        return get_decay_summary()
+    except Exception as e:
+        return f"Decay engine unavailable: {str(e)[:100]}"
+
+
 def generate() -> dict:
     """
     Generate the morning briefing.
@@ -125,6 +219,16 @@ def generate() -> dict:
     lines += ["", "## Market Awareness"]
     lines.append(f"  {market_brief}" if market_brief else "  No market signals available.")
 
+    # Layer 4: PM Surface + Reward Bus + Decay (Directive 20260414-03)
+    lines += ["", "## PM Surface"]
+    lines.append(f"  {get_pm_briefing()}")
+
+    lines += ["", "## Reward Bus"]
+    lines.append(f"  {get_reward_briefing()}")
+
+    lines += ["", "## Confidence Decay"]
+    lines.append(f"  {get_decay_briefing()}")
+
     text = "\n".join(lines)
 
     # 5. Persist
@@ -159,6 +263,9 @@ def generate() -> dict:
             "market_brief": market_brief,
             "signals": market_signals,
         },
+        "pm_briefing": get_pm_briefing(),
+        "reward_briefing": get_reward_briefing(),
+        "decay_briefing": get_decay_briefing(),
         "path": str(briefing_path),
         "date": date_key,
     }

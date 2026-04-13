@@ -1,0 +1,1 @@
+{"id": "ELM-70D1739B86FE", "content": "LEARNING: docker cp fails when target directory doesn't exist in container.", "type": "learning_moment", "confidence": 0.96, "source_capture_id": null, "status": "pending", "priority": "normal", "assigned_to": null, "due_date": null, "created_at": "2026-04-13T20:13:23.408179+00:00", "source_directive": null, "context_refs": []}

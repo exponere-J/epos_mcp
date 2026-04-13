@@ -1,0 +1,16 @@
+{
+  "session_id": "SCC-20260413T164147Z",
+  "directive": "Create the file /app/epos/voice/transcriber.py with exactly this content:\n\n#!/usr/bin/env python3\n# EPOS GOVERNANCE WATERMARK\n\"\"\"\nepos/voice/transcriber.py \u2014 Groq Whisper STT + Raw Capture\n===========================================================\nConstitutional Authority: EPOS Constitution v3.1\nDirective: 20260413-03A (Sensory Organ Initialization)\n\"\"\"\n\nimport os\nimport httpx\nimport json\nfrom datetime import datetime\nfrom pathlib import Path\n\nEPOS_ROOT = Path(os.getenv(\"EPOS_ROOT\", \"/app\"))\nVAULT_PATH = EPOS_ROOT / \"context_vault\" / \"raw_captures\"\n\n\nasync def transcribe(audio_bytes: bytes, filename: str = \"audio.webm\") -> dict:\n    \"\"\"Send audio to Groq Whisper API. Returns transcript dict.\"\"\"\n    url = \"https://api.groq.com/openai/v1/audio/transcriptions\"\n    headers = {\"Authorization\": f\"Bearer {os.getenv('GROQ_API_KEY')}\"}\n\n    async with httpx.AsyncClient(timeout=30.0) as client:\n        response = await client.post(\n            url,\n            headers=headers,\n            files={\"file\": (filename, audio_bytes, \"audio/webm\")},\n            data={\"model\": \"whisper-large-v3-turbo\", \"response_format\": \"json\"}\n        )\n        response.raise_for_status()\n        return response.json()\n\n\ndef save_raw_capture(transcript: str, audio_bytes: bytes) -> str:\n    \"\"\"Save raw audio + metadata to immutable vault. Full fidelity.\"\"\"\n    timestamp = datetime.utcnow().strftime(\"%Y%m%dT%H%M%SZ\")\n    capture_id = f\"CAP-{timestamp}\"\n\n    audio_dir = VAULT_PATH / \"audio\"\n    audio_dir.mkdir(parents=True, exist_ok=True)\n    audio_path = audio_dir / f\"{capture_id}.webm\"\n    audio_path.write_bytes(audio_bytes)\n\n    capture_data = {\n        \"capture_id\": capture_id,\n        \"source_type\": \"voice_dictation\",\n        \"raw_transcript\": transcript,\n        \"audio_path\": str(audio_path),\n        \"audio_size_bytes\": len(audio_bytes),\n        \"captured_at\": datetime.utcnow().isoformat() + \"Z\",\n        \"processed\": False\n    }\n\n    VAULT_PATH.mkdir(parents=True, exist_ok=True)\n    meta_path = VAULT_PATH / f\"{capture_id}.json\"\n    meta_path.write_text(json.dumps(capture_data, indent=2))\n\n    return capture_id\n",
+  "generated_at": "2026-04-13T16:43:32.592406+00:00",
+  "missions_completed": [],
+  "what_went_well": [],
+  "what_went_wrong": [],
+  "what_was_learned": [],
+  "state_delta": {},
+  "files_created": [
+    "VAULT_WRITE"
+  ],
+  "files_modified": [],
+  "events_published": 2,
+  "doctor_result": "not_run"
+}

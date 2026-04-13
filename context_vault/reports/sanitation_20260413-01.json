@@ -1,0 +1,43 @@
+{
+  "report_id": "VERIFY-20260413T141000Z",
+  "timestamp": "2026-04-13T14:10:00.144862+00:00",
+  "directive": "20260413-01",
+  "score": "8/8",
+  "passed": 8,
+  "total": 8,
+  "status": "PASS",
+  "checks": {
+    "windows_backslash_paths": {
+      "pass": true,
+      "detail": "0 found"
+    },
+    "windows_forward_slash_paths": {
+      "pass": true,
+      "detail": "0 found"
+    },
+    "wsl_mnt_paths": {
+      "pass": true,
+      "detail": "0 found"
+    },
+    "api_keys_in_source": {
+      "pass": true,
+      "detail": "0 found"
+    },
+    "env_secrets_exists": {
+      "pass": true,
+      "detail": "Valid \u2014 6 auto + 8 human-gate keys"
+    },
+    "env_production_exists": {
+      "pass": true,
+      "detail": "Valid \u2014 19 env entries"
+    },
+    "permissions_all_writable": {
+      "pass": true,
+      "detail": "All 6 writable"
+    },
+    "imports_not_broken": {
+      "pass": true,
+      "detail": "All 61 files parse clean"
+    }
+  }
+}

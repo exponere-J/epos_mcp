@@ -1,0 +1,16 @@
+{
+  "session_id": "session_001",
+  "directive": "",
+  "generated_at": "2026-04-13T16:41:59.785699+00:00",
+  "missions_completed": [],
+  "what_went_well": [],
+  "what_went_wrong": [],
+  "what_was_learned": [],
+  "state_delta": {},
+  "files_created": [
+    "VAULT_WRITE"
+  ],
+  "files_modified": [],
+  "events_published": 1,
+  "doctor_result": "not_run"
+}
