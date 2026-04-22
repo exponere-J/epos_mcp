@@ -4,7 +4,7 @@ stasis.py — EPOS Emergency Halt and Constitutional Violation System
 ====================================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Article V (Pre-Flight), Article VI
 Mission ID: EPOS Core Heal — Module 2 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/stasis.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/stasis.py
 
 Single responsibility: emergency halt and constitutional violation raising.
 All log writes use absolute paths from path_utils.get_logs_dir().

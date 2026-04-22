@@ -4,7 +4,7 @@
 epos_cli_router.py — Unified CLI for Agent & Node Communication
 =================================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/epos_cli_router.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_cli_router.py
 
 The nervous system's command interface.
 Every agent, every node, every module — addressable from one CLI.

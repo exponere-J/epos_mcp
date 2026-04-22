@@ -4,7 +4,7 @@ constitutional_arbiter.py — EPOS Constitutional Compliance Checker
 ===================================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles II, III, IV, XIV
 Mission ID: EPOS Core Heal — Module 6 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/constitutional_arbiter.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/constitutional_arbiter.py
 
 Single responsibility: Audit Python files for constitutional compliance.
 Checks path discipline, file headers, version gates, import hygiene,

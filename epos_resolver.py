@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\epos_resolver.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_resolver.py
 # EPOS Resolution Agent v1.0
 # TTLG Diagnostic → Surgical Resolution Pipeline
 # Authority: EPOS Constitution v3.1

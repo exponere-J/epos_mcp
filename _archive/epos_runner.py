@@ -1,9 +1,9 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/epos_runner.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_runner.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
 # ============================================================
-# FILE:    C:/Users/Jamie/workspace/epos_mcp/eposrunner.py
+# FILE:    /mnt/c/Users/Jamie/workspace/epos_mcp/eposrunner.py
 # PURPOSE: FastAPI execution server. This is Agent Zero's
 #          Terminal arm. It receives commands from az_dispatch,
 #          validates them, executes them, and logs receipts.

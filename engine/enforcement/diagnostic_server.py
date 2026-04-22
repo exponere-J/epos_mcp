@@ -1,5 +1,5 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\enforcement\diagnostic_server.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/enforcement/diagnostic_server.py
 """
 EPOS Diagnostic Server - Through the Looking Glass
 Constitutional Authority: NODE_SOVEREIGNTY_CONSTITUTION.md Article III

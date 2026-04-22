@@ -3,7 +3,7 @@
 groq_router.py — EPOS Groq Model Router
 =========================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/groq_router.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/groq_router.py
 # EPOS GOVERNANCE WATERMARK
 
 Routes LLM tasks to the correct Groq model based on task type.

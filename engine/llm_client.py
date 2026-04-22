@@ -5,7 +5,7 @@
 engine/llm_client.py — Unified LLM client with 3 runtime modes
 ================================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/engine/llm_client.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/llm_client.py
 
 Modes (selected via LLM_MODE env var):
     groq_direct   (default) — routes through groq_router.GroqRouter

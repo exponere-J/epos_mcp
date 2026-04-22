@@ -4,7 +4,7 @@
 epos_cms.py — EPOS Content Management System
 ==============================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/epos_cms.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_cms.py
 
 Every content asset — scripts, white papers, conversations —
 has a lifecycle here. The exhale side of the organism.

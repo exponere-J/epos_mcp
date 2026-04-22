@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\enforcement\context_server.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/enforcement/context_server.py
 """
 EPOS Context Server - Context Injection and RLM Symbolic Search
 Constitutional Authority: Article VII (Context Governance)

@@ -4,7 +4,7 @@
 epos_conversation.py — Consultative Conversation Engine
 =========================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/epos_conversation.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_conversation.py
 
 Conducts conversations that reveal what the human actually needs —
 not just what they asked for.

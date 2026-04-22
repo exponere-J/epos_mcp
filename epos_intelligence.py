@@ -4,7 +4,7 @@ epos_intelligence.py — EPOS Business Intelligence & Decision Logging
 =====================================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles II, VII, VIII
 Mission ID: EPOS Core Heal — Module 4 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/epos_intelligence.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_intelligence.py
 
 Single responsibility: Record decisions, mission outcomes, governance metrics,
 and flywheel effects to structured JSONL logs. Provide analytics queries

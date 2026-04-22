@@ -1,9 +1,9 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/az_dispatch.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/az_dispatch.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
 # ============================================================
-# FILE:    C:/Users/Jamie/workspace/epos_mcp/az_dispatch.py
+# FILE:    /mnt/c/Users/Jamie/workspace/epos_mcp/az_dispatch.py
 # PURPOSE: The single entry point for dispatching all missions
 #          to Agent Zero. This file is the nervous system
 #          bridge between EPOS governance and AZ execution.

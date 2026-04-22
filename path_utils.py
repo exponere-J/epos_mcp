@@ -4,7 +4,7 @@ path_utils.py — EPOS Canonical Path Resolution
 ================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Article II (Path Discipline)
 Mission ID: EPOS Core Heal — Module 1 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/path_utils.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/path_utils.py
 
 Single responsibility: resolve all EPOS paths from EPOS_ROOT.
 Never from cwd. Handles Windows, WSL, and Linux automatically.

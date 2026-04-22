@@ -1,5 +1,5 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\rollback.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/rollback.py
 """
 EPOS Rollback Authority v1.2 — Snapshot & Restore System
 
@@ -27,7 +27,7 @@ from dotenv import load_dotenv; load_dotenv()
 # NOTE: EPOSDoctor pre-flight moved to runtime (was crashing at import time)
 # Call _preflight() before snapshot/restore operations instead.
 
-EPOS_ROOT = Path(os.getenv("EPOS_ROOT", r"C:\Users\Jamie\workspace\epos_mcp"))
+EPOS_ROOT = Path(os.getenv("EPOS_ROOT", "/mnt/c/Users/Jamie/workspace/epos_mcp"))
 SNAPSHOT_DIR = EPOS_ROOT / "backups" / "snapshots"
 SNAPSHOT_INDEX = SNAPSHOT_DIR / "index.jsonl"
 RETENTION_DAYS = 30

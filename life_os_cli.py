@@ -4,7 +4,7 @@ life_os_cli.py — EPOS LifeOS Command Line Interface
 =====================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles II, VIII
 Mission ID: LIFEOS-CLI-001
-File Location: C:/Users/Jamie/workspace/epos_mcp/life_os_cli.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/life_os_cli.py
 
 Commands:
     python life_os_cli.py projects           — Dashboard of all projects

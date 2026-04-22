@@ -1,6 +1,6 @@
 # ============================================================================
 # EPOS SOVEREIGN STACK — OpenClaw Integration
-# File: C:\Users\Jamie\workspace\epos_mcp\docker-compose.openclaw.yml
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/docker-compose.openclaw.yml
 #
 # USAGE: docker compose -f docker-compose.yml -f docker-compose.openclaw.yml up -d
 #

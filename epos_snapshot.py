@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\epos_snapshot.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_snapshot.py
 import os
 from pathlib import Path
 import datetime

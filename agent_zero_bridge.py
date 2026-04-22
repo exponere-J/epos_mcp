@@ -4,7 +4,7 @@ agent_zero_bridge.py — EPOS Agent Zero Execution Bridge
 =========================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles II, III, VII, X
 Mission ID: EPOS Core Heal — Module 9 of 9 (FINAL)
-File Location: C:/Users/Jamie/workspace/epos_mcp/agent_zero_bridge.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/agent_zero_bridge.py
 
 Single responsibility: Translate orchestrated missions into Agent Zero
 subprocess calls. Enforce the constitutional rule that logged-is-not-executed.

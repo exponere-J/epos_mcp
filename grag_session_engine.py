@@ -4,7 +4,7 @@
 grag_session_engine.py — Live Session Intelligence (GRAG)
 ==========================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/grag_session_engine.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/grag_session_engine.py
 
 GRAG = Generative Retrieval-Augmented Generation
 Monitors active sessions. Detects questions. Fires live queries.

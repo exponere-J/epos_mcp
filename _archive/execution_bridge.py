@@ -1,9 +1,9 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/engine\execution_bridge.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/execution_bridge.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
-# File: C:\Users\Jamie\workspace\epos_mcp\execution_bridge.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/execution_bridge.py
 
 from abc import ABC, abstractmethod
 import json

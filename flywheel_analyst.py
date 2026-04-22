@@ -4,7 +4,7 @@ flywheel_analyst.py — EPOS Flywheel Pattern Recognition & SOP Evolution
 =========================================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles V, VI, VIII
 Mission ID: EPOS Core Heal — Module 7 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/flywheel_analyst.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/flywheel_analyst.py
 
 Single responsibility: Read BI records, compliance data, and mission logs.
 Generate FlywheelReport and SOP Update Proposals. Never auto-execute

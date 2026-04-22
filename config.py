@@ -1,9 +1,9 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/config.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/config.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
 # ============================================================
-# FILE:    C:/Users/Jamie/workspace/epos_mcp/config.py
+# FILE:    /mnt/c/Users/Jamie/workspace/epos_mcp/config.py
 # PURPOSE: Single Source of Truth for all EPOS paths and
 #          constants. Every module imports from here.
 #          No module may hardcode a path. Ever.

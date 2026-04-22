@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/python/agent.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/python/agent.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 def run(payload: dict) -> dict:

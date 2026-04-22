@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\event_bus.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/event_bus.py
 """
 EPOS Unified Event Bus - The Nervous System
 Constitutional Authority: Article VII (Context Governance)

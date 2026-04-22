@@ -3,7 +3,7 @@
 ttlg_scheduler.py — EPOS TTLG Automated Schedule
 ==================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/ttlg_scheduler.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/ttlg_scheduler.py
 # EPOS GOVERNANCE WATERMARK
 
 Runs TTLG light scouts on schedule. Default: daily.

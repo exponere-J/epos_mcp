@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/master_installer.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/master_installer.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5

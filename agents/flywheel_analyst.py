@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\agents\flywheel_analyst.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/agents/flywheel_analyst.py
 
 """
 Flywheel Analyst (Agent Omega) v1.0.0

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# File: C:/Users/Jamie/workspace/epos_mcp/ma1_niche_scanner.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/ma1_niche_scanner.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """

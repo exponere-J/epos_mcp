@@ -1,9 +1,9 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/meta_orchestrator.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/meta_orchestrator.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
 # ==============================================================================
-# FILE: C:/Users/Jamie/workspace/epos_mcp/meta_orchestrator.py
+# FILE: /mnt/c/Users/Jamie/workspace/epos_mcp/meta_orchestrator.py
 # ROLE: META-ORCHESTRATOR / CENTRAL NERVOUS SYSTEM ROUTER
 # ==============================================================================
 

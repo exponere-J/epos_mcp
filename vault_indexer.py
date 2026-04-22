@@ -3,7 +3,7 @@
 vault_indexer.py — EPOS Context Vault Global Index Builder
 ===========================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/vault_indexer.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/vault_indexer.py
 # EPOS GOVERNANCE WATERMARK
 
 Scans all context_vault/ namespaces and rebuilds global_index.json.

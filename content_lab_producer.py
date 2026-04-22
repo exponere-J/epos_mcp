@@ -3,7 +3,7 @@
 content_lab_producer.py — EPOS Content Lab Script Generator
 =============================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/content_lab_producer.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/content_lab_producer.py
 # EPOS GOVERNANCE WATERMARK
 
 Turns Creative Briefs into production-ready scripts using GroqRouter.

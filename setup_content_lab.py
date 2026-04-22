@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/setup_content_lab.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/setup_content_lab.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """

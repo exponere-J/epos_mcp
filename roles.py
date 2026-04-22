@@ -4,7 +4,7 @@ roles.py — EPOS Agent Role Definitions
 ========================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles V, X
 Mission ID: EPOS Core Heal — Module 3 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/roles.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/roles.py
 
 Single responsibility: Define all agent roles, capabilities, and constraints
 as structured data. No business logic — this is a registry.

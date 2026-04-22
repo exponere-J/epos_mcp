@@ -3,7 +3,7 @@
 flywheel_scheduler.py — EPOS Flywheel Scheduled Reporting
 ==========================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/flywheel_scheduler.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/flywheel_scheduler.py
 # EPOS GOVERNANCE WATERMARK
 
 Runs flywheel health checks and vault index rebuilds.

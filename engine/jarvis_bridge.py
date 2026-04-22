@@ -1,5 +1,5 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/engine/jarvis_bridge.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/jarvis_bridge.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """

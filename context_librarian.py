@@ -4,7 +4,7 @@ context_librarian.py — EPOS Context Vault Interface
 =====================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Article VII (Context Governance)
 Mission ID: EPOS Core Heal — Module 5 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/context_librarian.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/context_librarian.py
 
 Single responsibility: Ingest, index, search, and manage the Context Vault.
 All large data (>8K tokens) goes through this module — never inline.

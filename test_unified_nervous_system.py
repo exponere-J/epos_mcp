@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\tests\test_unified_nervous_system.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/tests/test_unified_nervous_system.py
 """
 EPOS Unified Nervous System - Integration Test
 Constitutional Authority: EPOS_UNIFIED_NERVOUS_SYSTEM.md

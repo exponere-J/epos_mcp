@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# File: C:/Users/Jamie/workspace/epos_mcp/tools\governance_gate_audit.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/tools/governance_gate_audit.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
 r"""
-File: C:\Users\Jamie\workspace\epos_mcp\tools\governance_gate_audit.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/tools/governance_gate_audit.py
 
 GOVERNANCE GATE AUDIT SCRIPT (FIXED)
 """

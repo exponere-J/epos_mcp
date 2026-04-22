@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/containers/event-bus/server.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/containers/event-bus/server.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 print('Service event-bus starting...')

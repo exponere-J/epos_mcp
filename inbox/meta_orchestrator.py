@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\meta_orchestrator.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/meta_orchestrator.py
 """
 EPOS Meta-Orchestrator v3.2
 Constitutional governance layer for all mission execution.

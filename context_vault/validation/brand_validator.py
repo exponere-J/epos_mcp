@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/context_vault/validation/brand_validator.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/validation/brand_validator.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """

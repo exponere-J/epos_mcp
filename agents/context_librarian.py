@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\agents\context_librarian.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/agents/context_librarian.py
 
 """
 Context Librarian (Agent Sigma) v1.0.0

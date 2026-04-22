@@ -103,7 +103,7 @@ def test_reward_bus():
             payload={
                 "agent_id": "test_agent",
                 "violations": ["ERR-PATH-001"],
-                "file_path": "C:/Users/Jamie/workspace/epos_mcp/inbox/test.py",
+                "file_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/inbox/test.py",
                 "mission_id": "TEST_003"
             },
             metadata={"trace_id": "TEST_003"}
@@ -165,7 +165,7 @@ def test_remediation_generator():
         
         lesson = generator.generate_lesson(
             violation_code="ERR-PATH-001",
-            file_path="C:/Users/Jamie/workspace/epos_mcp/inbox/test.py",
+            file_path="/mnt/c/Users/Jamie/workspace/epos_mcp/inbox/test.py",
             agent_id="test_agent"
         )
         

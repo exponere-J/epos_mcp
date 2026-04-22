@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# File: C:\Users\Jamie\workspace\epos_mcp\codebase_review_snapshot.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/codebase_review_snapshot.py
 
 from pathlib import Path
 from datetime import datetime, timezone

@@ -1,4 +1,4 @@
-# # File: C:\Users\Jamie\workspace\epos_mcp\epos_align_scan.py
+# # File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_align_scan.py
 # EPOS Alignment Scanner v1.0
 # Pre-Mortem Imaginative Projection Engine
 # Authority: EPOS Constitution v3.1, Article I (Pre-Mortem Mandate)

@@ -3,7 +3,7 @@
 echoes_lead_scorer.py — Echoes Marketing Lead Scoring Engine
 ==============================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/echoes_lead_scorer.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/echoes_lead_scorer.py
 # EPOS GOVERNANCE WATERMARK
 
 Scores every lead interaction and routes to correct nurture sequence.

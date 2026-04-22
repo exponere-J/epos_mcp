@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\epos_cli.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_cli.py
 # repair_origin: human_authored
 # requires_metadata_confirmation: false
 

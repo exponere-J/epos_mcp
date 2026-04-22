@@ -1,9 +1,9 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/engine\governed_orchestrator.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/governed_orchestrator.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\governed_orchestrator.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/governed_orchestrator.py
 
 import os
 from pathlib import Path

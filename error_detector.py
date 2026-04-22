@@ -4,7 +4,7 @@ EPOS Error Detector Service
 Constitutional Authority: Article VI (Autonomous Evolution), Article VII (Context Governance)
 Port: 8115 (Media Production Pipeline)
 Mission: INTEGRATION-LAYER-001
-File Location: C:/Users/Jamie/workspace/epos_mcp/error_detector.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/error_detector.py
 """
 
 import os

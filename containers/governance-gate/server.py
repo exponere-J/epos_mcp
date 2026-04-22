@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/containers/governance-gate/server.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/containers/governance-gate/server.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 print('Service governance-gate starting...')

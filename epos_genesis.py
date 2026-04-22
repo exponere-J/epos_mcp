@@ -1,4 +1,4 @@
-# File: C:/Users/Jamie/workspace/epos_mcp/epos_genesis.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_genesis.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """

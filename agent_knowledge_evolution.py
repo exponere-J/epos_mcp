@@ -3,7 +3,7 @@
 agent_knowledge_evolution.py — Agent Knowledge Evolution System
 ================================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/agent_knowledge_evolution.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/agent_knowledge_evolution.py
 # EPOS GOVERNANCE WATERMARK
 
 The living knowledge base for every agent in the EPOS ecosystem.

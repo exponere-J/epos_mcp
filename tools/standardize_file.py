@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# File: C:/Users/Jamie/workspace/epos_mcp/tools\standardize_file.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/tools/standardize_file.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5

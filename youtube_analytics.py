@@ -3,7 +3,7 @@
 youtube_analytics.py — EPOS YouTube Analytics & ERI Feedback Loop
 ==================================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/youtube_analytics.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/youtube_analytics.py
 # EPOS GOVERNANCE WATERMARK
 
 After videos publish, pulls real engagement data from YouTube Data API

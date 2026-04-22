@@ -1,9 +1,9 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/engine\roles\analyst.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/roles/analyst.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\roles\analyst.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/roles/analyst.py
 """
 Flywheel Analyst (Agent Omega)
 Turns BI logs into strategic intelligence and governance proposals.

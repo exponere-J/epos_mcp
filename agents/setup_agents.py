@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\agents\setup_agents.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/agents/setup_agents.py
 
 """
 EPOS Agent System Setup Script

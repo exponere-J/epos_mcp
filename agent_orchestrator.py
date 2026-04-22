@@ -4,7 +4,7 @@ agent_orchestrator.py — EPOS Multi-Agent Mission Orchestrator
 ==============================================================
 Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles V, X
 Mission ID: EPOS Core Heal — Module 8 of 9
-File Location: C:/Users/Jamie/workspace/epos_mcp/agent_orchestrator.py
+File Location: /mnt/c/Users/Jamie/workspace/epos_mcp/agent_orchestrator.py
 
 Single responsibility: Route missions to agents, validate permissions,
 checkpoint workflow state, coordinate inter-agent communication.

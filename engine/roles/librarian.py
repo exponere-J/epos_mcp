@@ -1,9 +1,9 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/engine\roles\librarian.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/roles/librarian.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 # Note: Legacy file — migration to root scheduled Sprint 5
-# File: C:\Users\Jamie\workspace\epos_mcp\engine\roles\librarian.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/roles/librarian.py
 """
 Context Librarian (Agent Sigma)
 Custodian of Context Vault with symbolic search capabilities.

@@ -4,7 +4,7 @@
 echoes_research_engine.py — Echoes Authority Content Engine
 =============================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/echoes_research_engine.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/echoes_research_engine.py
 
 The L1 Intelligence layer. Generates white papers, newsletter briefs,
 tool reviews, and model benchmarks. Builds audience and authority.

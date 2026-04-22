@@ -3,7 +3,7 @@
 epos_event_bus.py — EPOS Canonical Cross-Process Event Bus
 ============================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/epos_event_bus.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_event_bus.py
 # EPOS GOVERNANCE WATERMARK
 
 The nervous system. One JSONL file. All modules publish here.

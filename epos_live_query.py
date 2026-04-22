@@ -4,7 +4,7 @@
 epos_live_query.py — On-Demand Synthesis Engine
 =================================================
 Constitutional Authority: EPOS Constitution v3.1
-File: C:/Users/Jamie/workspace/epos_mcp/epos_live_query.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_live_query.py
 
 Takes any question. Queries vault, agent knowledge, research briefs, Groq.
 Returns synthesized answer within 15 seconds.

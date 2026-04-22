@@ -1,5 +1,5 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/content/lab/automation/tributary_worker.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/content/lab/automation/tributary_worker.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """

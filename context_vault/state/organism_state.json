@@ -1,5 +1,5 @@
 {
-  "registry_version": "1.2",
+  "registry_version": "1.3",
   "schema_version": 1,
   "ratified_under": "Article XVI \u00a71 (The Awareness Mandate)",
   "generated_at": "2026-04-22T00:00:00Z",
@@ -20,16 +20,18 @@
     "root_py"
   ],
   "totals": {
-    "registered": 8,
+    "registered": 19,
     "revise_pending": 1,
     "rejected": 0,
     "legacy_audit": 177,
     "compliance": {
-      "COMPLIANT": 79,
-      "RETROFIT_REQUIRED": 36,
-      "UNKNOWN": 71
+      "COMPLIANT": 89,
+      "RETROFIT_REQUIRED": 37,
+      "UNKNOWN": 71,
+      "LEGACY_AUDIT": 0
     },
-    "retrofit_backlog": 36
+    "total_components": 197,
+    "component_id_range": "E-0001 to E-0197"
   },
   "process_registry": [
     {
@@ -91,7 +93,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0001",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "agent_orchestrator.py",
@@ -152,7 +168,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0002",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "agent_zero_bridge.py",
@@ -216,7 +246,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "bridge_runtime",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0003",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "az_dispatch.py",
@@ -267,7 +311,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0004",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "az_mission_executor.py",
@@ -335,7 +393,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0005",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "browseruse_airtable_setup.py",
@@ -404,7 +476,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "web_automation_arm",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0006",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "codebase_review_snapshot.py",
@@ -455,7 +541,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0007",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "command_center.py",
@@ -506,7 +606,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0008",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "config.py",
@@ -557,7 +671,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0009",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "constitutional_arbiter.py",
@@ -612,7 +740,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0010",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "constitutional_enforcer.py",
@@ -667,7 +809,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0011",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.agent-zero.az_bridge.py",
@@ -727,7 +883,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "bridge_runtime",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0012",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.context-server.server.py",
@@ -778,7 +948,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0013",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.event-bus.server.py",
@@ -829,7 +1013,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0014",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.governance-gate.server.py",
@@ -884,7 +1082,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0015",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.governance-server.server.py",
@@ -939,7 +1151,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0016",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.immune-monitor.server.py",
@@ -993,7 +1219,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "health_monitor",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0017",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "containers.learning-server.server.py",
@@ -1044,7 +1284,73 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0018",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0187",
+      "module": "containers.mirofish.simulator.py",
+      "path": "containers/mirofish/simulator.py",
+      "size_bytes": 10878,
+      "lines": 312,
+      "mtime": "2026-04-22T10:46:30Z",
+      "docstring_head": "MiroFish Simulation Kernel.",
+      "capability_tags": [
+        "simulation"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "MiroFish Simulation Kernel.",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_lab.__init__.py",
@@ -1105,7 +1411,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0019",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_lab.brief_generator.py",
@@ -1166,7 +1486,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0020",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_lab.crs_scorer.py",
@@ -1227,7 +1561,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0021",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_lab.echolocation_predictor.py",
@@ -1290,7 +1638,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0022",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_lab.template_engine.py",
@@ -1351,7 +1713,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0023",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_lab_producer.py",
@@ -1412,7 +1788,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0024",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "content_signal_loop.py",
@@ -1463,7 +1853,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0025",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "context_graph.py",
@@ -1514,7 +1918,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0026",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "context_handler.py",
@@ -1565,7 +1983,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0027",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "context_librarian.py",
@@ -1616,7 +2048,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0028",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "context_server.py",
@@ -1667,7 +2113,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0029",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "dashboard_engine.py",
@@ -1718,7 +2178,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0030",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "echoes_lead_scorer.py",
@@ -1772,7 +2246,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "scoring_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0031",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "echoes_research_engine.py",
@@ -1823,7 +2311,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0032",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.__init__.py",
@@ -1874,7 +2376,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0033",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.autonomy.py",
@@ -1925,7 +2441,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0034",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.command_validator.py",
@@ -1976,7 +2506,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0035",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.__init__.py",
@@ -2027,7 +2571,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0036",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.compliance_tracker.py",
@@ -2078,7 +2636,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0037",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.diagnostic_server.py",
@@ -2129,7 +2701,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0038",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.governance_gate.py",
@@ -2184,7 +2770,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0039",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.learning_server.py",
@@ -2235,7 +2835,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0040",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.reward_bus.py",
@@ -2295,7 +2909,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "signal_aggregator",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0041",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.enforcement.validate_nervous_system.py",
@@ -2346,7 +2974,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0042",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.epos_doctor.py",
@@ -2400,7 +3042,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0043",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.governance_gate.py",
@@ -2455,7 +3111,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0044",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.governed_orchestrator.py",
@@ -2506,7 +3176,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0045",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.jarvis_bridge.py",
@@ -2568,7 +3252,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "bridge_runtime",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0046",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.llm_client.py",
@@ -2619,7 +3317,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0047",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.roles.analyst.py",
@@ -2670,7 +3382,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0048",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.roles.arbiter.py",
@@ -2725,7 +3451,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0049",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.roles.librarian.py",
@@ -2776,7 +3516,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0050",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "engine.rollback.py",
@@ -2827,7 +3581,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0051",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.py",
@@ -2878,7 +3646,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0052",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.__init__.py",
@@ -2929,7 +3711,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0053",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.agents.__init__.py",
@@ -2990,7 +3786,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0054",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.agents.scc.py",
@@ -3052,7 +3862,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0055",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.agents.sovereign_coding_agent.py",
@@ -3113,7 +3937,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0056",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.ccp.__init__.py",
@@ -3174,7 +4012,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "context_primitive",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0057",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.ccp.decay.py",
@@ -3235,7 +4087,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "context_primitive",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0058",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.ccp.extractor.py",
@@ -3296,7 +4162,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "context_primitive",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0059",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.ccp.pipeline.py",
@@ -3357,7 +4237,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "context_primitive",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0060",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.ccp.router.py",
@@ -3418,7 +4312,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "context_primitive",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0061",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.ccp.scorer.py",
@@ -3479,7 +4387,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "context_primitive",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0062",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.models.__init__.py",
@@ -3532,7 +4454,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "model_registry",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0063",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.models.model_registry.py",
@@ -3585,7 +4521,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "model_registry",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0064",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.pm.__init__.py",
@@ -3639,7 +4589,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "project_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0065",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.pm.api.py",
@@ -3693,7 +4657,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "project_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0066",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.pm.extraction_framework.py",
@@ -3747,7 +4725,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "project_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0067",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.pm.store.py",
@@ -3801,7 +4793,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "project_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0068",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.rewards.__init__.py",
@@ -3855,7 +4861,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "signal_aggregator",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0069",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.rewards.publish_reward.py",
@@ -3909,7 +4929,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "signal_aggregator",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0070",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.rewards.reward_aggregator.py",
@@ -3963,7 +4997,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "signal_aggregator",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0071",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.state.__init__.py",
@@ -4018,7 +5066,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "state_primitive",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0072",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.state.state_redundancy.py",
@@ -4073,7 +5135,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "state_primitive",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0073",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.state.universal_state_graph.py",
@@ -4128,7 +5204,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "state_primitive",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0074",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.tools.bom_cleaner.py",
@@ -4188,7 +5278,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "dev_utility",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0075",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.tools.path_sanitizer.py",
@@ -4248,7 +5352,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "dev_utility",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0076",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.tools.permission_audit.py",
@@ -4308,7 +5426,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "dev_utility",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0077",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.tools.sanitation_verifier.py",
@@ -4368,7 +5500,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "dev_utility",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0078",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.tools.secret_extractor.py",
@@ -4428,7 +5574,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "dev_utility",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0079",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.training.__init__.py",
@@ -4482,7 +5642,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "training_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0080",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.training.practice_gym.py",
@@ -4536,7 +5710,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "training_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0081",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.training.shadow_protocol.py",
@@ -4590,7 +5778,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "training_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0082",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.__init__.py",
@@ -4651,7 +5853,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0083",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.api.py",
@@ -4712,7 +5928,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0084",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.pipeline.py",
@@ -4773,7 +6003,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0085",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.reformulator.py",
@@ -4834,7 +6078,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0086",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.router.py",
@@ -4895,7 +6153,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0087",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.speaker.py",
@@ -4956,7 +6228,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0088",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.training_logger.py",
@@ -5019,7 +6305,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0089",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.transcriber.py",
@@ -5080,7 +6380,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0090",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.vault_search.py",
@@ -5141,7 +6455,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0091",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.vision.py",
@@ -5202,7 +6530,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0092",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos.voice.vocabulary.py",
@@ -5263,7 +6605,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensory_voice",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0093",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_advocacy.py",
@@ -5314,7 +6670,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0094",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_agent_cli.py",
@@ -5375,7 +6745,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0095",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_align_scan.py",
@@ -5426,7 +6810,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0096",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_cli.py",
@@ -5477,7 +6875,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0097",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_cli_router.py",
@@ -5528,7 +6940,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0098",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_cms.py",
@@ -5579,7 +7005,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0099",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_conversation.py",
@@ -5630,7 +7070,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0100",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_daemon.py",
@@ -5681,7 +7135,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0101",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_event_bus.py",
@@ -5735,7 +7203,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "messaging_primitive",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0102",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_financial.py",
@@ -5786,7 +7268,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0103",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_genesis.py",
@@ -5837,7 +7333,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0104",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_intelligence.py",
@@ -5888,7 +7398,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0105",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_live_query.py",
@@ -5939,7 +7463,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0106",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_node_cli.py",
@@ -5990,7 +7528,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0107",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_resolver.py",
@@ -6041,7 +7593,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0108",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_snapshot.py",
@@ -6092,7 +7658,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0109",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_stewardship.py",
@@ -6143,7 +7723,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0110",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_support.py",
@@ -6194,7 +7788,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0111",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_ttlg_engagement.py",
@@ -6254,7 +7862,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0112",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_ttlg_package.py",
@@ -6314,7 +7936,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0113",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "epos_verify_arms.py",
@@ -6365,7 +8001,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0114",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "error_detector.py",
@@ -6416,7 +8066,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0115",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "event_bus.py",
@@ -6470,7 +8134,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "messaging_primitive",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0116",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "evl1_evolution_steward.py",
@@ -6521,7 +8199,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0117",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "export_codebase_inventory.py",
@@ -6572,7 +8264,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0118",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "flywheel_analyst.py",
@@ -6632,7 +8338,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "learning_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0119",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "flywheel_scheduler.py",
@@ -6692,7 +8412,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "learning_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0120",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "fotw_capture.py",
@@ -6752,7 +8486,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensor",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0121",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "fotw_listener.py",
@@ -6812,7 +8560,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "sensor",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0122",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.__init__.py",
@@ -6867,7 +8629,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "steward_capability",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0123",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.api.py",
@@ -6922,7 +8698,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "steward_capability",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0124",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.continuous_improvement.py",
@@ -6977,7 +8767,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "steward_capability",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0125",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.__init__.py",
@@ -7046,7 +8850,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0126",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.az_executor.py",
@@ -7115,7 +8933,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0127",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.browser_executor.py",
@@ -7196,7 +9028,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0128",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.claude_code_executor.py",
@@ -7265,7 +9111,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0129",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.code_executor.py",
@@ -7334,7 +9194,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0130",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.computeruse_executor.py",
@@ -7409,7 +9283,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0131",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.scc_executor.py",
@@ -7479,7 +9367,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0132",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.system_executor.py",
@@ -7548,7 +9450,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "executor_surface",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0133",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.executors.ttlg_executor.py",
@@ -7625,7 +9541,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0134",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.friday_graph.py",
@@ -7680,7 +9610,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "steward_capability",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0135",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.__init__.py",
@@ -7736,7 +9680,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0136",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.metrics_observatory.py",
@@ -7792,7 +9750,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0137",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.morning_briefing.py",
@@ -7848,7 +9820,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0138",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.nightly_upskill.py",
@@ -7904,7 +9890,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0139",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.personality.py",
@@ -7960,7 +9960,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0140",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.proactive_intelligence.py",
@@ -8016,7 +10030,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0141",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.research_scanner.py",
@@ -8072,7 +10100,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0142",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday.skills.thread_tracker.py",
@@ -8128,7 +10170,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "capability_skill",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0143",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday_daily_anchors.py",
@@ -8183,7 +10239,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "steward_capability",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0144",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "friday_intelligence.py",
@@ -8238,7 +10308,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "steward_capability",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0145",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "governance_gate.py",
@@ -8293,7 +10377,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0146",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "grag_session_engine.py",
@@ -8344,7 +10442,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0147",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "groq_router.py",
@@ -8395,7 +10507,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0148",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "idea_log.py",
@@ -8446,7 +10572,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0149",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "immune_monitor.py",
@@ -8500,7 +10640,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "health_monitor",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0150",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "lead_scoring.py",
@@ -8554,7 +10708,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "scoring_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0151",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "life_os_cli.py",
@@ -8605,7 +10773,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0152",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "lifeos_kernel.py",
@@ -8656,7 +10838,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0153",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "lifeos_sovereignty.py",
@@ -8707,7 +10903,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0154",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "ma1_niche_scanner.py",
@@ -8758,7 +10968,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0155",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "marl_reward_collector.py",
@@ -8812,7 +11036,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "signal_aggregator",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0156",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "master_installer.py",
@@ -8863,7 +11101,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0157",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "multimodal_router.py",
@@ -8914,7 +11166,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0158",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "node_sovereignty_certifier.py",
@@ -8965,7 +11231,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0159",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.__init__.py",
@@ -9016,7 +11296,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0160",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.agent_zero_node.py",
@@ -9077,7 +11371,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "agent_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0161",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.avatar_registry.py",
@@ -9128,7 +11436,230 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0162",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0188",
+      "module": "nodes.bridge.__init__.py",
+      "path": "nodes/bridge/__init__.py",
+      "size_bytes": 566,
+      "lines": 18,
+      "mtime": "2026-04-22T10:40:56Z",
+      "docstring_head": "nodes.bridge \u2014 The Sandbox \u2194 WSL Bridge Runtime",
+      "capability_tags": [
+        "bridge"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "nodes.bridge \u2014 The Sandbox \u2194 WSL Bridge Runtime",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0189",
+      "module": "nodes.bridge.directive_queue.py",
+      "path": "nodes/bridge/directive_queue.py",
+      "size_bytes": 3250,
+      "lines": 96,
+      "mtime": "2026-04-22T10:41:53Z",
+      "docstring_head": "directive_queue.py \u2014 Directive Intake for the Forge",
+      "capability_tags": [
+        "bridge"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "directive_queue.py \u2014 Directive Intake for the Forge",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0190",
+      "module": "nodes.bridge.ingestion_runner.py",
+      "path": "nodes/bridge/ingestion_runner.py",
+      "size_bytes": 8762,
+      "lines": 233,
+      "mtime": "2026-04-22T10:41:30Z",
+      "docstring_head": "ingestion_runner.py \u2014 Sandbox \u2192 WSL Bridge Ingestion Runner",
+      "capability_tags": [
+        "bridge"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "ingestion_runner.py \u2014 Sandbox \u2192 WSL Bridge Ingestion Runner",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0191",
+      "module": "nodes.bridge.persona_reloader.py",
+      "path": "nodes/bridge/persona_reloader.py",
+      "size_bytes": 2499,
+      "lines": 78,
+      "mtime": "2026-04-22T10:41:40Z",
+      "docstring_head": "persona_reloader.py \u2014 SCC Persona Hot-Swap",
+      "capability_tags": [
+        "bridge",
+        "identity"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "persona_reloader.py \u2014 SCC Persona Hot-Swap",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.browser_use_node.py",
@@ -9197,7 +11728,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "web_automation_arm",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0163",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.execution_arm.__init__.py",
@@ -9269,7 +11814,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "execution_arm_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0164",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.execution_arm.browser_use_arm.py",
@@ -9348,7 +11907,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "execution_arm_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0165",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.execution_arm.callable.py",
@@ -9422,7 +11995,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "execution_arm_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0166",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.execution_arm.computer_use_arm.py",
@@ -9495,7 +12082,21 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "execution_arm_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0167",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.execution_arm.deletion_gate.py",
@@ -9571,7 +12172,74 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "execution_arm_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0168",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0192",
+      "module": "nodes.execution_arm.firecrawl_arm.py",
+      "path": "nodes/execution_arm/firecrawl_arm.py",
+      "size_bytes": 7335,
+      "lines": 184,
+      "mtime": "2026-04-22T10:43:05Z",
+      "docstring_head": "firecrawl_arm.py \u2014 Firecrawl Arm (web scraping, API-based)",
+      "capability_tags": [
+        "execution_arm",
+        "web_scraping"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "firecrawl_arm.py \u2014 Firecrawl Arm (web scraping, API-based)",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.execution_arm.mode_selector.py",
@@ -9644,7 +12312,282 @@
         "sovereign_ratified_changes": true
       },
       "process_role": "execution_arm_primary",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0169",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0193",
+      "module": "nodes.scc.personas.__init__.py",
+      "path": "nodes/scc/personas/__init__.py",
+      "size_bytes": 1344,
+      "lines": 47,
+      "mtime": "2026-04-22T10:42:25Z",
+      "docstring_head": "SCC persona loader.",
+      "capability_tags": [
+        "identity",
+        "sovereign_coding"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "SCC persona loader.",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0194",
+      "module": "nodes.simulation.__init__.py",
+      "path": "nodes/simulation/__init__.py",
+      "size_bytes": 586,
+      "lines": 18,
+      "mtime": "2026-04-22T10:44:49Z",
+      "docstring_head": "nodes.simulation \u2014 MiroFish Simulation Engine (client-side)",
+      "capability_tags": [
+        "simulation"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "nodes.simulation \u2014 MiroFish Simulation Engine (client-side)",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0195",
+      "module": "nodes.simulation.avatars.py",
+      "path": "nodes/simulation/avatars.py",
+      "size_bytes": 7676,
+      "lines": 207,
+      "mtime": "2026-04-22T10:45:20Z",
+      "docstring_head": "avatars.py \u2014 8 Content Lab Avatars (seeded)",
+      "capability_tags": [
+        "simulation"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "avatars.py \u2014 8 Content Lab Avatars (seeded)",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0196",
+      "module": "nodes.simulation.mirofish_client.py",
+      "path": "nodes/simulation/mirofish_client.py",
+      "size_bytes": 2845,
+      "lines": 90,
+      "mtime": "2026-04-22T10:45:43Z",
+      "docstring_head": "mirofish_client.py \u2014 Python Client for the MiroFish Sidecar",
+      "capability_tags": [
+        "simulation"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "mirofish_client.py \u2014 Python Client for the MiroFish Sidecar",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
+    },
+    {
+      "component_id": "E-0197",
+      "module": "nodes.simulation.scenario.py",
+      "path": "nodes/simulation/scenario.py",
+      "size_bytes": 2791,
+      "lines": 88,
+      "mtime": "2026-04-22T10:45:33Z",
+      "docstring_head": "scenario.py \u2014 MiroFish Scenario Schema",
+      "capability_tags": [
+        "simulation"
+      ],
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "(recent; pending deep TTLG)",
+        "thinker": "(pending)",
+        "gate_reason": "Added after initial registry build; inline TTLG pending.",
+        "validated_at": "2026-04-22T13:49:46.776576+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "scenario.py \u2014 MiroFish Scenario Schema",
+      "governing_articles": [],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Forge",
+        "validated_by": [
+          "Doctor"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "uncategorized_utility",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:46.776576+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "nodes.unified_health.py",
@@ -9698,7 +12641,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "health_monitor",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0170",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "paperclip_governance.py",
@@ -9753,7 +12710,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "governance_gate",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0171",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "path_utils.py",
@@ -9804,7 +12775,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0172",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "payment_gateway.py",
@@ -9855,7 +12840,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0173",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "reputation_manager.py",
@@ -9908,7 +12907,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "reputation_surface",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0174",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "roles.py",
@@ -9959,7 +12972,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0175",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "rs1_research_brief.py",
@@ -10010,7 +13037,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0176",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "rs1_research_compiler.py",
@@ -10061,7 +13102,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0177",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "setup_content_lab.py",
@@ -10122,7 +13177,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "content_engine",
-      "amendment_compliance": "COMPLIANT"
+      "amendment_compliance": "COMPLIANT",
+      "component_id": "E-0178",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "sheets_sync.py",
@@ -10173,7 +13242,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0179",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "stasis.py",
@@ -10224,7 +13307,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0180",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "test_unified_nervous_system.py",
@@ -10275,7 +13372,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0181",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "ttlg_agents.py",
@@ -10345,7 +13456,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0182",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "ttlg_conversational.py",
@@ -10405,7 +13530,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0183",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "ttlg_scheduler.py",
@@ -10465,7 +13604,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "diagnostic_engine",
-      "amendment_compliance": "RETROFIT_REQUIRED"
+      "amendment_compliance": "RETROFIT_REQUIRED",
+      "component_id": "E-0184",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "vault_indexer.py",
@@ -10516,7 +13669,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0185",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     },
     {
       "module": "youtube_analytics.py",
@@ -10567,7 +13734,21 @@
         "sovereign_ratified_changes": false
       },
       "process_role": "uncategorized_utility",
-      "amendment_compliance": "UNKNOWN"
+      "amendment_compliance": "UNKNOWN",
+      "component_id": "E-0186",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-22T13:49:05.083422+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Initial component ID assignment under Article XVI \u00a71"
+        }
+      ],
+      "scheme_version": 1
     }
   ],
   "enriched_at": "2026-04-22T13:23:27.565618+00:00",
@@ -10583,5 +13764,13 @@
     "ran_at": "2026-04-22T00:00:00Z",
     "fields_fixed": 4,
     "rule": "Windows paths normalized to WSL; underlying files flagged RETROFIT_REQUIRED"
+  },
+  "component_id_scheme": {
+    "format": "E-NNNN",
+    "range_assigned": "E-0001 to E-0197",
+    "total_assigned": 197,
+    "version_format": "major.minor",
+    "major_bump": "public-API / signature change",
+    "minor_bump": "body-level / docstring / metadata change"
   }
 }

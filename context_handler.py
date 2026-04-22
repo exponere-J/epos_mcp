@@ -1,4 +1,4 @@
-# File: C:\Users\Jamie\workspace\epos_mcp\context_handler.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/context_handler.py
 
 """
 EPOS Context Handler v3.1

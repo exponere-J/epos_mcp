@@ -1,6 +1,6 @@
 # EPOS GOVERNANCE WATERMARK
 """
-File: C:/Users/Jamie/workspace/epos_mcp/engine/enforcement/reward_bus.py
+File: /mnt/c/Users/Jamie/workspace/epos_mcp/engine/enforcement/reward_bus.py
 Purpose: Orchestrates the failure→lesson→improvement cycle
 Constitutional Authority: EPOS_CONSTITUTION_v3.1.md Article III
 
@@ -177,7 +177,7 @@ if __name__ == "__main__":
         "payload": {
             "agent_id": "agent_zero",
             "violations": ["ERR-PATH-001"],
-            "file_path": "C:/Users/Jamie/workspace/epos_mcp/inbox/test.py",
+            "file_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/inbox/test.py",
             "mission_id": "TEST_001"
         },
         "metadata": {

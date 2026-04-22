@@ -1,7 +1,7 @@
 #!/bin/bash
 # EPOS PROGRESS WINDOW v1.0
 # Real-time visualization of codebase build state
-# Location: C:\Users\Jamie\workspace\epos_mcp\epos_progress_window.sh
+# Location: /mnt/c/Users/Jamie/workspace/epos_mcp/epos_progress_window.sh
 
 set -e
 

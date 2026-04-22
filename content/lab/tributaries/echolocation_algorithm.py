@@ -1,5 +1,5 @@
 # EPOS GOVERNANCE WATERMARK
-# File: C:/Users/Jamie/workspace/epos_mcp/content/lab/tributaries/echolocation_algorithm.py
+# File: /mnt/c/Users/Jamie/workspace/epos_mcp/content/lab/tributaries/echolocation_algorithm.py
 # Constitutional Authority: EPOS Constitution v3.1
 # Governed: True
 """
