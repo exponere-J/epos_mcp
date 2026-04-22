@@ -1,120 +1,1643 @@
 {
-  "meta": {
-    "schema_version": "1.0",
-    "created_at": "2026-04-11T14:49:33.431864+00:00",
-    "last_updated": "2026-04-13T16:44:29.863543+00:00",
-    "session_count": 999
+  "registry_version": "1.0",
+  "schema_version": 1,
+  "ratified_under": "Article XVI \u00a71 (The Awareness Mandate)",
+  "generated_at": "2026-04-22T00:00:00Z",
+  "generated_by": "The Architect (session)",
+  "gate_verdicts_in_use": [
+    "REGISTER",
+    "REVISE",
+    "REJECT",
+    "LEGACY_AUDIT"
+  ],
+  "totals": {
+    "registered": 8,
+    "revise_pending": 0,
+    "rejected": 0,
+    "legacy_audit": 65
   },
-  "health": {
-    "overall": "nominal",
-    "doctor_last_run": null,
-    "checks_passed": 0,
-    "checks_warned": 0,
-    "checks_failed": 0,
-    "nodes": {},
-    "sanitation_status": "clean",
-    "windows_paths_count": 0,
-    "hardcoded_secrets_count": 0,
-    "verification_score": "8/8",
-    "cloud_ready": true,
-    "redundancy_test": "wired_traced",
-    "redundancy_wired": true,
-    "voice_system": "operational"
-  },
-  "intelligence_layer": {
-    "models_seated": [
-      "qwen3-coder-30b",
-      "qwen3-32b",
-      "groq-whisper"
-    ],
-    "models_pending": [],
-    "last_upskill": null,
-    "upskill_phases_complete": 0,
-    "research_scanner_last_run": null
-  },
-  "content_lab": {
-    "echolocation_score": 67.3,
-    "avatars_active": 0,
-    "content_queued": 0,
-    "content_published_today": 0,
-    "fotw_signals_today": 0
-  },
-  "pipeline": {
-    "missions_active": [],
-    "missions_completed_today": 3,
-    "missions_blocked": [],
-    "daemon_jobs": 0,
-    "last_daemon_heartbeat": null
-  },
-  "sovereignty": {
-    "nodes_marketplace_ready": 9,
-    "nodes_total": 0,
-    "certifier_last_run": "2026-04-13T14:11:08.786413+00:00",
-    "governance_gate_blocks_today": 0,
-    "governance_gate_approvals_today": 0,
-    "last_scc_session": "SCC-20260413T164147Z",
-    "scc_sessions_total": 2
-  },
-  "training": {
-    "qlora_queue_depth": 0,
-    "last_training_cycle": null,
-    "reward_signals_today": 0,
-    "models_in_training": []
-  },
-  "event_bus": {
-    "total_events": 0,
-    "events_today": 0,
-    "last_event_at": null,
-    "bus_size_kb": 0.0
-  },
-  "directives": {
-    "active": "20260413-04",
-    "active_title": "Workflow Education + AAR Archive + State Graph Redundancy",
-    "started_at": "2026-04-13T13:51:25.030673+00:00",
-    "executor": "desktop_code",
-    "shadow_tester": "scc",
-    "status": "in_progress",
-    "20260413-01": {
-      "m1_permission_audit": {
-        "status": "complete",
-        "directories": 16,
-        "writable": 16
-      },
-      "m2_path_scan": {
-        "status": "complete",
-        "files_scanned": 63,
-        "contaminated": 6,
-        "refactored": 6
-      },
-      "m3_secret_extraction": {
-        "status": "complete",
-        "secrets_found": 0,
-        "moved_to_env": 0,
-        "env_secrets_generated": true,
-        "env_production_generated": true
-      },
-      "m4_verification": {
-        "status": "complete",
-        "score": "8/8"
-      },
-      "m5_scc_shadow": {
-        "status": "complete",
-        "match_rate": 1.0,
-        "scc_score": "8/8"
-      },
-      "m6_aar": {
-        "status": "complete",
-        "path": "context_vault/aar/AAR_20260413-01.json"
+  "process_registry": [
+    {
+      "module": "epos.__init__.py",
+      "path": "epos/__init__.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 1,
+      "size_bytes": 20,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
       }
     },
-    "last_completed": "20260413-01",
-    "20260413-04": {
-      "m2_aar_archive": {
-        "status": "complete",
-        "total_aars": 24,
-        "in_vault": 16,
-        "catalog": "context_vault/aar/AAR_CATALOG.json"
+    {
+      "module": "epos.agents.__init__.py",
+      "path": "epos/agents/__init__.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 1,
+      "size_bytes": 22,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.agents.scc.py",
+      "path": "epos/agents/scc.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 664,
+      "size_bytes": 27985,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "scc.py \u2014 Sovereign Coding Component (SCC)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.agents.sovereign_coding_agent.py",
+      "path": "epos/agents/sovereign_coding_agent.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 844,
+      "size_bytes": 36262,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/agents/sovereign_coding_agent.py \u2014 EPOS Sovereign Coding Agent",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.ccp.__init__.py",
+      "path": "epos/ccp/__init__.py",
+      "capability_tags": [
+        "concentric_context_protocol"
+      ],
+      "lines": 33,
+      "size_bytes": 1035,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/ccp/__init__.py \u2014 Command Capture Protocol Package",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.ccp.decay.py",
+      "path": "epos/ccp/decay.py",
+      "capability_tags": [
+        "concentric_context_protocol"
+      ],
+      "lines": 346,
+      "size_bytes": 13202,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/ccp/decay.py \u2014 Confidence Decay Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.ccp.extractor.py",
+      "path": "epos/ccp/extractor.py",
+      "capability_tags": [
+        "concentric_context_protocol"
+      ],
+      "lines": 343,
+      "size_bytes": 15997,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/ccp/extractor.py \u2014 CCP Element Extraction Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.ccp.pipeline.py",
+      "path": "epos/ccp/pipeline.py",
+      "capability_tags": [
+        "concentric_context_protocol"
+      ],
+      "lines": 358,
+      "size_bytes": 14616,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/ccp/pipeline.py \u2014 CCP End-to-End Pipeline Orchestrator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.ccp.router.py",
+      "path": "epos/ccp/router.py",
+      "capability_tags": [
+        "concentric_context_protocol"
+      ],
+      "lines": 377,
+      "size_bytes": 16716,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/ccp/router.py \u2014 CCP Situational Routing Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.ccp.scorer.py",
+      "path": "epos/ccp/scorer.py",
+      "capability_tags": [
+        "concentric_context_protocol"
+      ],
+      "lines": 234,
+      "size_bytes": 9279,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/ccp/scorer.py \u2014 CCP Confidence Scoring Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.models.__init__.py",
+      "path": "epos/models/__init__.py",
+      "capability_tags": [
+        "model_registry"
+      ],
+      "lines": 1,
+      "size_bytes": 22,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.models.model_registry.py",
+      "path": "epos/models/model_registry.py",
+      "capability_tags": [
+        "model_registry"
+      ],
+      "lines": 541,
+      "size_bytes": 20729,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/models/model_registry.py \u2014 EPOS Model Registry",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.pm.__init__.py",
+      "path": "epos/pm/__init__.py",
+      "capability_tags": [
+        "project_management"
+      ],
+      "lines": 1,
+      "size_bytes": 18,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.pm.api.py",
+      "path": "epos/pm/api.py",
+      "capability_tags": [
+        "project_management"
+      ],
+      "lines": 295,
+      "size_bytes": 10381,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/pm/api.py \u2014 PM Surface FastAPI Router",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.pm.extraction_framework.py",
+      "path": "epos/pm/extraction_framework.py",
+      "capability_tags": [
+        "project_management"
+      ],
+      "lines": 415,
+      "size_bytes": 14845,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/pm/extraction_framework.py \u2014 PM Extraction Framework",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.pm.store.py",
+      "path": "epos/pm/store.py",
+      "capability_tags": [
+        "project_management"
+      ],
+      "lines": 363,
+      "size_bytes": 13849,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/pm/store.py \u2014 PM Surface JSON Store",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.rewards.__init__.py",
+      "path": "epos/rewards/__init__.py",
+      "capability_tags": [
+        "reward_signal"
+      ],
+      "lines": 15,
+      "size_bytes": 508,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/rewards/__init__.py \u2014 Reward Bus Package",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.rewards.publish_reward.py",
+      "path": "epos/rewards/publish_reward.py",
+      "capability_tags": [
+        "reward_signal"
+      ],
+      "lines": 116,
+      "size_bytes": 4152,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/rewards/publish_reward.py \u2014 Universal Reward Signal Publisher",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.rewards.reward_aggregator.py",
+      "path": "epos/rewards/reward_aggregator.py",
+      "capability_tags": [
+        "reward_signal"
+      ],
+      "lines": 285,
+      "size_bytes": 9556,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/rewards/reward_aggregator.py \u2014 Reward Signal Aggregator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.state.__init__.py",
+      "path": "epos/state/__init__.py",
+      "capability_tags": [
+        "state_graph"
+      ],
+      "lines": 1,
+      "size_bytes": 21,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.state.state_redundancy.py",
+      "path": "epos/state/state_redundancy.py",
+      "capability_tags": [
+        "state_graph"
+      ],
+      "lines": 247,
+      "size_bytes": 8645,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "state_redundancy.py \u2014 Organism State Snapshot + Recovery",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.state.universal_state_graph.py",
+      "path": "epos/state/universal_state_graph.py",
+      "capability_tags": [
+        "state_graph"
+      ],
+      "lines": 297,
+      "size_bytes": 10753,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/state/universal_state_graph.py \u2014 EPOS Universal State Graph",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.tools.bom_cleaner.py",
+      "path": "epos/tools/bom_cleaner.py",
+      "capability_tags": [
+        "dev_tool"
+      ],
+      "lines": 90,
+      "size_bytes": 3034,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/tools/bom_cleaner.py \u2014 UTF-8 BOM Sentinel",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.tools.path_sanitizer.py",
+      "path": "epos/tools/path_sanitizer.py",
+      "capability_tags": [
+        "dev_tool"
+      ],
+      "lines": 264,
+      "size_bytes": 9188,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "path_sanitizer.py \u2014 Windows Path Scanner & POSIX Refactor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.tools.permission_audit.py",
+      "path": "epos/tools/permission_audit.py",
+      "capability_tags": [
+        "dev_tool"
+      ],
+      "lines": 164,
+      "size_bytes": 5280,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "permission_audit.py \u2014 Pre-Flight Write-Access Verification",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.tools.sanitation_verifier.py",
+      "path": "epos/tools/sanitation_verifier.py",
+      "capability_tags": [
+        "dev_tool"
+      ],
+      "lines": 311,
+      "size_bytes": 11126,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "sanitation_verifier.py \u2014 8-Point Binary Verification Suite",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.tools.secret_extractor.py",
+      "path": "epos/tools/secret_extractor.py",
+      "capability_tags": [
+        "dev_tool"
+      ],
+      "lines": 336,
+      "size_bytes": 12396,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "secret_extractor.py \u2014 Hardcoded Secret Detection & Extraction",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.training.__init__.py",
+      "path": "epos/training/__init__.py",
+      "capability_tags": [
+        "training"
+      ],
+      "lines": 8,
+      "size_bytes": 276,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/training/__init__.py \u2014 EPOS Training Framework Package",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.training.practice_gym.py",
+      "path": "epos/training/practice_gym.py",
+      "capability_tags": [
+        "training"
+      ],
+      "lines": 638,
+      "size_bytes": 24652,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/training/practice_gym.py \u2014 SCC Practice Gym & Examination Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.training.shadow_protocol.py",
+      "path": "epos/training/shadow_protocol.py",
+      "capability_tags": [
+        "training"
+      ],
+      "lines": 498,
+      "size_bytes": 24590,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/training/shadow_protocol.py \u2014 SCC Shadow Protocol + Merit Scoring",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.__init__.py",
+      "path": "epos/voice/__init__.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 10,
+      "size_bytes": 331,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/__init__.py \u2014 EPOS Voice System Package",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.api.py",
+      "path": "epos/voice/api.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 108,
+      "size_bytes": 3382,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/api.py \u2014 FastAPI Voice Endpoints",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.pipeline.py",
+      "path": "epos/voice/pipeline.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 194,
+      "size_bytes": 7665,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/pipeline.py \u2014 EPOS Voice Pipeline (Full Flow)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.reformulator.py",
+      "path": "epos/voice/reformulator.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 122,
+      "size_bytes": 4232,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/reformulator.py \u2014 Qwen3-32B Reasoning + Reformulation (Friday)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.router.py",
+      "path": "epos/voice/router.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 142,
+      "size_bytes": 5293,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/router.py \u2014 Voice Element Router",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.speaker.py",
+      "path": "epos/voice/speaker.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 73,
+      "size_bytes": 2344,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/speaker.py \u2014 Piper TTS Text-to-Speech",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.training_logger.py",
+      "path": "epos/voice/training_logger.py",
+      "capability_tags": [
+        "training",
+        "voice_pipeline"
+      ],
+      "lines": 73,
+      "size_bytes": 2416,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/training_logger.py \u2014 QLoRA Training Data Logger",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.transcriber.py",
+      "path": "epos/voice/transcriber.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 71,
+      "size_bytes": 2326,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/transcriber.py \u2014 Groq Whisper STT + Raw Capture",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.vault_search.py",
+      "path": "epos/voice/vault_search.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 121,
+      "size_bytes": 3814,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/vault_search.py \u2014 Vault Semantic Search",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.vision.py",
+      "path": "epos/voice/vision.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 54,
+      "size_bytes": 1859,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/vision.py \u2014 M-VISION-01 Interface (Screen Description Skeleton)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.voice.vocabulary.py",
+      "path": "epos/voice/vocabulary.py",
+      "capability_tags": [
+        "voice_pipeline"
+      ],
+      "lines": 86,
+      "size_bytes": 2550,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos/voice/vocabulary.py \u2014 EPOS Term Correction Post-Processor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.__init__.py",
+      "path": "friday/__init__.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 3,
+      "size_bytes": 123,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Friday \u2014 Executive-level orchestration via LangGraph StateGraph.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.api.py",
+      "path": "friday/api.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 91,
+      "size_bytes": 2537,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "api.py \u2014 Friday FastAPI Endpoint",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.continuous_improvement.py",
+      "path": "friday/continuous_improvement.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 260,
+      "size_bytes": 9399,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "continuous_improvement.py \u2014 Friday Continuous Improvement Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.__init__.py",
+      "path": "friday/executors/__init__.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 1,
+      "size_bytes": 72,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.az_executor.py",
+      "path": "friday/executors/az_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 130,
+      "size_bytes": 4018,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "az_executor.py \u2014 Agent Zero Executor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.browser_executor.py",
+      "path": "friday/executors/browser_executor.py",
+      "capability_tags": [
+        "executor",
+        "web_automation"
+      ],
+      "lines": 129,
+      "size_bytes": 4223,
+      "mtime": "2026-04-22T09:56:01Z",
+      "docstring_head": "browser_executor.py \u2014 Friday entry for the BrowserUse arm",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Friday-level wrapper around execution_arm.execute. Two paths: in-process import \u2192 AZ HTTP fallback.",
+        "thinker": "Replaces prior direct BrowserUseNode call. Fallback chain preserved and widened.",
+        "gate_reason": "Backward-compatible; mode_hint extended; selection metadata forwarded.",
+        "analyst_note": "Spec \u2194 actual match: dispatcher emits normalized result with arm + mode + selection.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "friday.executors.claude_code_executor.py",
+      "path": "friday/executors/claude_code_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 17,
+      "size_bytes": 627,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "claude_code_executor.py \u2014 DEPRECATED compatibility shim",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.code_executor.py",
+      "path": "friday/executors/code_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 155,
+      "size_bytes": 5145,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "code_executor.py \u2014 LLM Code Generation Executor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.computeruse_executor.py",
+      "path": "friday/executors/computeruse_executor.py",
+      "capability_tags": [
+        "executor",
+        "os_automation"
+      ],
+      "lines": 150,
+      "size_bytes": 5023,
+      "mtime": "2026-04-22T09:56:25Z",
+      "docstring_head": "computeruse_executor.py \u2014 Friday entry for the ComputerUse arm",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Friday-level wrapper around execution_arm.execute (computer_use path). Preserves computeruse_approved gate before dispatch.",
+        "thinker": "Approval gate + deletion gate layered correctly. No silent execution path.",
+        "gate_reason": "Two-layer approval (executor level + arm-level deletion gate) satisfies constitutional 'no bypass' clause.",
+        "analyst_note": "Spec \u2194 actual match: unapproved \u2192 escalated; approved \u2192 dispatched through arm.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "friday.executors.scc_executor.py",
+      "path": "friday/executors/scc_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 221,
+      "size_bytes": 7613,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "scc_executor.py \u2014 Sovereign Coding Component Executor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.system_executor.py",
+      "path": "friday/executors/system_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 216,
+      "size_bytes": 7699,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "system_executor.py \u2014 EPOS System Operations Executor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.executors.ttlg_executor.py",
+      "path": "friday/executors/ttlg_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 195,
+      "size_bytes": 6807,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "ttlg_executor.py \u2014 TTLG (Two-Tier LangGraph) Executor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.friday_graph.py",
+      "path": "friday/friday_graph.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 423,
+      "size_bytes": 16113,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "friday_graph.py \u2014 Friday Orchestration StateGraph",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.__init__.py",
+      "path": "friday/skills/__init__.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 1,
+      "size_bytes": 57,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.metrics_observatory.py",
+      "path": "friday/skills/metrics_observatory.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 267,
+      "size_bytes": 10184,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "metrics_observatory.py \u2014 Friday Metrics Observatory",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.morning_briefing.py",
+      "path": "friday/skills/morning_briefing.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 288,
+      "size_bytes": 10012,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "morning_briefing.py \u2014 Friday Morning Briefing",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.nightly_upskill.py",
+      "path": "friday/skills/nightly_upskill.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 428,
+      "size_bytes": 17350,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "nightly_upskill.py \u2014 Friday Nightly Upskill Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.personality.py",
+      "path": "friday/skills/personality.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 98,
+      "size_bytes": 3218,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "personality.py \u2014 Friday System Prompt Assembler",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.proactive_intelligence.py",
+      "path": "friday/skills/proactive_intelligence.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 157,
+      "size_bytes": 5572,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "proactive_intelligence.py \u2014 Friday Proactive Intelligence Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.research_scanner.py",
+      "path": "friday/skills/research_scanner.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 295,
+      "size_bytes": 11489,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "research_scanner.py \u2014 Friday Research Knowledge Scanner",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday.skills.thread_tracker.py",
+      "path": "friday/skills/thread_tracker.py",
+      "capability_tags": [
+        "skill"
+      ],
+      "lines": 174,
+      "size_bytes": 5432,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "thread_tracker.py \u2014 Friday Thread Tracker",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "nodes.__init__.py",
+      "path": "nodes/__init__.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 2,
+      "size_bytes": 81,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Nodes \u2014 Sovereign execution components.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "nodes.agent_zero_node.py",
+      "path": "nodes/agent_zero_node.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 181,
+      "size_bytes": 6962,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "agent_zero_node.py \u2014 Agent Zero HTTP Bridge Node",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "nodes.avatar_registry.py",
+      "path": "nodes/avatar_registry.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 377,
+      "size_bytes": 13561,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "avatar_registry.py \u2014 EPOS 12-Avatar Signal Architecture Registry",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "nodes.browser_use_node.py",
+      "path": "nodes/browser_use_node.py",
+      "capability_tags": [
+        "web_automation"
+      ],
+      "lines": 225,
+      "size_bytes": 7862,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "browser_use_node.py \u2014 BrowserUse Sovereign Node",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "nodes.execution_arm.__init__.py",
+      "path": "nodes/execution_arm/__init__.py",
+      "capability_tags": [
+        "execution_arm"
+      ],
+      "lines": 37,
+      "size_bytes": 1072,
+      "mtime": "2026-04-22T09:53:17Z",
+      "docstring_head": "nodes.execution_arm \u2014 EPOS Execution Arm (four variants)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Package entrypoint; exports execute, select, guard, health, arm classes.",
+        "thinker": "No overlap; cleanly exports the four-variant arm surface. New capability, no regression.",
+        "gate_reason": "Conforms to Article XVI \u00a73; governance watermarked; public API stable.",
+        "analyst_note": "Spec \u2194 actual match: exports exactly the symbols declared in README.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "nodes.execution_arm.browser_use_arm.py",
+      "path": "nodes/execution_arm/browser_use_arm.py",
+      "capability_tags": [
+        "execution_arm",
+        "web_automation"
+      ],
+      "lines": 270,
+      "size_bytes": 9310,
+      "mtime": "2026-04-22T09:51:12Z",
+      "docstring_head": "browser_use_arm.py \u2014 BrowserUse Arm (headless + headed)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "BrowserUse arm \u2014 both modes. Inputs: task, mode, max_steps, context. Outputs: ArmResult. Dependencies: browser-use, Playwright/Chromium, optional Xvfb for headed. Failure modes: import-guarded; headed\u2192headless fallback on no display.",
+        "thinker": "Replaces legacy hardcoded-headless browser_use_node (still importable for back-compat). No silent regressions.",
+        "gate_reason": "Two modes exposed, graceful degradation, governance-watermarked, logs per-run.",
+        "analyst_note": "Spec \u2194 actual match: 2/2 modes operational; fallback annotated in receipts.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "nodes.execution_arm.callable.py",
+      "path": "nodes/execution_arm/callable.py",
+      "capability_tags": [
+        "entrypoint",
+        "execution_arm"
+      ],
+      "lines": 184,
+      "size_bytes": 6232,
+      "mtime": "2026-04-22T09:53:08Z",
+      "docstring_head": "callable.py \u2014 Universal Entrypoint for the Execution Arm",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Universal entrypoint. execute() + execute_async() + health() + install_event_bus_handler(). Inputs: task, mode_hint, max_steps, context. Outputs: dict result with 'selection' attached.",
+        "thinker": "Bridges in-process, event-bus, and REST (via AZ bridge). 'Callable by any component' (Sovereign directive) satisfied.",
+        "gate_reason": "Three surfaces unified behind one core; thread-safe singleton arms.",
+        "analyst_note": "Spec \u2194 actual match: three call surfaces verified by structural dry-run.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "nodes.execution_arm.computer_use_arm.py",
+      "path": "nodes/execution_arm/computer_use_arm.py",
+      "capability_tags": [
+        "execution_arm",
+        "os_automation"
+      ],
+      "lines": 486,
+      "size_bytes": 20002,
+      "mtime": "2026-04-22T09:52:25Z",
+      "docstring_head": "computer_use_arm.py \u2014 ComputerUse Arm (headless + headed)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "ComputerUse arm \u2014 tool loop (computer + bash + str_replace_editor). Inputs: task, mode, max_turns, context. Outputs: ArmResult. Dependencies: anthropic SDK, xdotool, scrot, Xvfb. Failure modes: missing deps \u2192 'unavailable' health; destructive bash triggers deletion gate.",
+        "thinker": "Net-new capability. Bash heuristic catches destructive patterns (rm -rf, DROP TABLE, docker rm...). No overlap with BrowserUse.",
+        "gate_reason": "Article XVI \u00a73 satisfied; deletion gate integrated; bash destructive-heuristic present.",
+        "analyst_note": "Spec \u2194 actual match: four tool handlers (bash, str_replace_editor, computer, screenshot) implemented; deletion gate wired.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "nodes.execution_arm.deletion_gate.py",
+      "path": "nodes/execution_arm/deletion_gate.py",
+      "capability_tags": [
+        "execution_arm",
+        "governance"
+      ],
+      "lines": 147,
+      "size_bytes": 4630,
+      "mtime": "2026-04-22T09:49:38Z",
+      "docstring_head": "deletion_gate.py \u2014 Sovereign-Approved Deletion Guard",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Deletion approval guard. Inputs: target + context. Outputs: GuardResult + log entry. Dependency: filesystem. Failure modes: log path unwritable (swallowed).",
+        "thinker": "Net-new capability enforcing 'Deletion only upon approval' (Sovereign directive). No overlap.",
+        "gate_reason": "Hard-rule compliance; logs every attempt; raises DeletionRefused on denial.",
+        "analyst_note": "Spec \u2194 actual match: enforces the Sovereign hard-rule verbatim.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "nodes.execution_arm.mode_selector.py",
+      "path": "nodes/execution_arm/mode_selector.py",
+      "capability_tags": [
+        "execution_arm",
+        "reasoner"
+      ],
+      "lines": 204,
+      "size_bytes": 7716,
+      "mtime": "2026-04-22T09:50:26Z",
+      "docstring_head": "mode_selector.py \u2014 Reasoning Router for the Four Execution Variants",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Reasoning router. Inputs: task + context + mode_hint. Outputs: Selection (arm, mode, reason, confidence). Dependency: none beyond stdlib. Failure modes: defaults safely to browser_use.headless.",
+        "thinker": "Deterministic, testable reasoner. Overlap with: nothing. Risk: rule drift as task vocabulary evolves; mitigated by explicit override paths.",
+        "gate_reason": "Article XVI \u00a73 'reasoning that determines when each is necessary' fully satisfied.",
+        "analyst_note": "Spec \u2194 actual match: confidence field + explicit overrides + safe default all present.",
+        "validated_at": "2026-04-22T00:00:00Z",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "module": "nodes.unified_health.py",
+      "path": "nodes/unified_health.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 156,
+      "size_bytes": 5469,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "unified_health.py \u2014 Unified Health Check Surface",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "validated_at": null,
+        "validator": null
       }
     }
-  }
+  ]
 }

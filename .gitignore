@@ -93,3 +93,6 @@ ops/surgical_backups/
 logs/
 *.log
 epos_status.json
+
+# Claude Code local settings (personal per-machine overrides)
+.claude/settings.local.json
