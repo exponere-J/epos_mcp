@@ -1,22 +1,1174 @@
 {
-  "registry_version": "1.0",
+  "registry_version": "1.1",
   "schema_version": 1,
   "ratified_under": "Article XVI \u00a71 (The Awareness Mandate)",
   "generated_at": "2026-04-22T00:00:00Z",
-  "generated_by": "The Architect (session)",
+  "generated_by": "The Architect (session; expanded ecosystem scope)",
   "gate_verdicts_in_use": [
     "REGISTER",
     "REVISE",
     "REJECT",
     "LEGACY_AUDIT"
   ],
+  "scope": [
+    "epos",
+    "nodes",
+    "friday",
+    "engine",
+    "containers",
+    "content_lab",
+    "root_py"
+  ],
   "totals": {
     "registered": 8,
-    "revise_pending": 0,
+    "revise_pending": 1,
     "rejected": 0,
-    "legacy_audit": 65
+    "legacy_audit": 177
   },
   "process_registry": [
+    {
+      "module": "agent_knowledge_evolution.py",
+      "path": "agent_knowledge_evolution.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 452,
+      "size_bytes": 20020,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "agent_knowledge_evolution.py \u2014 Agent Knowledge Evolution System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "agent_orchestrator.py",
+      "path": "agent_orchestrator.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 428,
+      "size_bytes": 17525,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "agent_orchestrator.py \u2014 EPOS Multi-Agent Mission Orchestrator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "agent_zero_bridge.py",
+      "path": "agent_zero_bridge.py",
+      "capability_tags": [
+        "agent",
+        "bridge"
+      ],
+      "lines": 358,
+      "size_bytes": 13893,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "agent_zero_bridge.py \u2014 EPOS Agent Zero Execution Bridge",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "az_dispatch.py",
+      "path": "az_dispatch.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 260,
+      "size_bytes": 11329,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Verify AZ is online and EPOS environment is healthy.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "az_mission_executor.py",
+      "path": "az_mission_executor.py",
+      "capability_tags": [
+        "executor"
+      ],
+      "lines": 337,
+      "size_bytes": 17243,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "AGENT ZERO MISSION EXECUTOR \u00e2\u20ac\u201d EPOS Integration Wrapper",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "browseruse_airtable_setup.py",
+      "path": "browseruse_airtable_setup.py",
+      "capability_tags": [
+        "web_automation"
+      ],
+      "lines": 505,
+      "size_bytes": 20862,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "BROWSERUSE AIRTABLE SETUP AUTOMATION",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "codebase_review_snapshot.py",
+      "path": "codebase_review_snapshot.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 162,
+      "size_bytes": 5266,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "command_center.py",
+      "path": "command_center.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 57,
+      "size_bytes": 1730,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "config.py",
+      "path": "config.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 68,
+      "size_bytes": 2651,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "constitutional_arbiter.py",
+      "path": "constitutional_arbiter.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 497,
+      "size_bytes": 17386,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "constitutional_arbiter.py \u2014 EPOS Constitutional Compliance Checker",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "constitutional_enforcer.py",
+      "path": "constitutional_enforcer.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 389,
+      "size_bytes": 15596,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS CONSTITUTIONAL ENFORCER - Pre-Deployment Validator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "containers.agent-zero.az_bridge.py",
+      "path": "containers/agent-zero/az_bridge.py",
+      "capability_tags": [
+        "agent",
+        "bridge"
+      ],
+      "lines": 327,
+      "size_bytes": 12823,
+      "mtime": "2026-04-22T09:54:21Z",
+      "docstring_head": "Agent Zero Bridge \u2014 EPOS Governed Executor (with execution-arm routing)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REVISE",
+      "ttlg": {
+        "gate_reason": "recent but no inline TTLG yet \u2014 queue for live deep TTLG"
+      }
+    },
+    {
+      "module": "containers.context-server.server.py",
+      "path": "containers/context-server/server.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 8,
+      "size_bytes": 290,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "containers.event-bus.server.py",
+      "path": "containers/event-bus/server.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 8,
+      "size_bytes": 280,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "containers.governance-gate.server.py",
+      "path": "containers/governance-gate/server.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 8,
+      "size_bytes": 292,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "containers.governance-server.server.py",
+      "path": "containers/governance-server/server.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 94,
+      "size_bytes": 3217,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "containers.immune-monitor.server.py",
+      "path": "containers/immune-monitor/server.py",
+      "capability_tags": [
+        "immune_monitor"
+      ],
+      "lines": 206,
+      "size_bytes": 8033,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Immune Monitor - EPOS Predictive Health System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "containers.learning-server.server.py",
+      "path": "containers/learning-server/server.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 8,
+      "size_bytes": 292,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_lab.__init__.py",
+      "path": "content_lab/__init__.py",
+      "capability_tags": [
+        "content_production"
+      ],
+      "lines": 1,
+      "size_bytes": 27,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_lab.brief_generator.py",
+      "path": "content_lab/brief_generator.py",
+      "capability_tags": [
+        "content_production"
+      ],
+      "lines": 312,
+      "size_bytes": 13202,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "brief_generator.py \u2014 Avatar-Calibrated Content Brief Generator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_lab.crs_scorer.py",
+      "path": "content_lab/crs_scorer.py",
+      "capability_tags": [
+        "content_production"
+      ],
+      "lines": 316,
+      "size_bytes": 12146,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "crs_scorer.py \u2014 Communication Resonance Score (CRS)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_lab.echolocation_predictor.py",
+      "path": "content_lab/echolocation_predictor.py",
+      "capability_tags": [
+        "content_production",
+        "scoring"
+      ],
+      "lines": 539,
+      "size_bytes": 22010,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "echolocation_predictor.py \u2014 Resonance Predictor (Pre-Publication)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_lab.template_engine.py",
+      "path": "content_lab/template_engine.py",
+      "capability_tags": [
+        "content_production"
+      ],
+      "lines": 349,
+      "size_bytes": 13450,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "template_engine.py \u2014 Communication Template Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_lab_producer.py",
+      "path": "content_lab_producer.py",
+      "capability_tags": [
+        "content_production"
+      ],
+      "lines": 185,
+      "size_bytes": 8062,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "content_lab_producer.py \u2014 EPOS Content Lab Script Generator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "content_signal_loop.py",
+      "path": "content_signal_loop.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 242,
+      "size_bytes": 9558,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "content_signal_loop.py \u2014 Content Production Signal Loop",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "context_graph.py",
+      "path": "context_graph.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 163,
+      "size_bytes": 6510,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "context_graph.py \u2014 EPOS Weighted Knowledge Graph",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "context_handler.py",
+      "path": "context_handler.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 400,
+      "size_bytes": 14413,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Context Handler v3.1",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "context_librarian.py",
+      "path": "context_librarian.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 415,
+      "size_bytes": 13918,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "context_librarian.py \u2014 EPOS Context Vault Interface",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "context_server.py",
+      "path": "context_server.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 340,
+      "size_bytes": 12063,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Context Server - Context Injection and RLM Symbolic Search",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "dashboard_engine.py",
+      "path": "dashboard_engine.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 169,
+      "size_bytes": 6757,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "dashboard_engine.py \u2014 EPOS Dashboard Aggregation Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "echoes_lead_scorer.py",
+      "path": "echoes_lead_scorer.py",
+      "capability_tags": [
+        "lead_scoring"
+      ],
+      "lines": 209,
+      "size_bytes": 7465,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "echoes_lead_scorer.py \u2014 Echoes Marketing Lead Scoring Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "echoes_research_engine.py",
+      "path": "echoes_research_engine.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 199,
+      "size_bytes": 7271,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "echoes_research_engine.py \u2014 Echoes Authority Content Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.__init__.py",
+      "path": "engine/__init__.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 6,
+      "size_bytes": 123,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.autonomy.py",
+      "path": "engine/autonomy.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 58,
+      "size_bytes": 1943,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "The Heartbeat of EPOS.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.command_validator.py",
+      "path": "engine/command_validator.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 84,
+      "size_bytes": 3020,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Raised when a command violates constitutional boundaries.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.__init__.py",
+      "path": "engine/enforcement/__init__.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 16,
+      "size_bytes": 344,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.compliance_tracker.py",
+      "path": "engine/enforcement/compliance_tracker.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 262,
+      "size_bytes": 8431,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "File: C:/Users/Jamie/workspace/epos_mcp/engine/enforcement/compliance_tracker.py",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.diagnostic_server.py",
+      "path": "engine/enforcement/diagnostic_server.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 595,
+      "size_bytes": 21566,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Diagnostic Server - Through the Looking Glass",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.governance_gate.py",
+      "path": "engine/enforcement/governance_gate.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 29,
+      "size_bytes": 816,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "engine.enforcement.governance_gate \u2014 Re-export for sovereignty certification.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.learning_server.py",
+      "path": "engine/enforcement/learning_server.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 776,
+      "size_bytes": 24997,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Learning Server - Autonomous Learning and Remediation",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.reward_bus.py",
+      "path": "engine/enforcement/reward_bus.py",
+      "capability_tags": [
+        "reward_signal"
+      ],
+      "lines": 194,
+      "size_bytes": 7198,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "File: C:/Users/Jamie/workspace/epos_mcp/engine/enforcement/reward_bus.py",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.enforcement.validate_nervous_system.py",
+      "path": "engine/enforcement/validate_nervous_system.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 216,
+      "size_bytes": 6498,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "from pathlib import Path",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.epos_doctor.py",
+      "path": "engine/epos_doctor.py",
+      "capability_tags": [
+        "diagnostic"
+      ],
+      "lines": 1249,
+      "size_bytes": 58809,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Doctor v3.2 - Comprehensive Environment Validation + Article XIV Governance",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.governance_gate.py",
+      "path": "engine/governance_gate.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 27,
+      "size_bytes": 674,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "engine.governance_gate \u2014 Re-export for sovereignty certification.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.governed_orchestrator.py",
+      "path": "engine/governed_orchestrator.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 81,
+      "size_bytes": 2791,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Returns the combined status of the environment and engine purity.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.jarvis_bridge.py",
+      "path": "engine/jarvis_bridge.py",
+      "capability_tags": [
+        "bridge"
+      ],
+      "lines": 249,
+      "size_bytes": 9481,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "JARVIS Bridge - Agent Zero Integration Layer",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.llm_client.py",
+      "path": "engine/llm_client.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 340,
+      "size_bytes": 12349,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "engine/llm_client.py \u2014 Unified LLM client with 3 runtime modes",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.roles.analyst.py",
+      "path": "engine/roles/analyst.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 300,
+      "size_bytes": 10147,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Flywheel Analyst (Agent Omega)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.roles.arbiter.py",
+      "path": "engine/roles/arbiter.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 195,
+      "size_bytes": 6401,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Constitutional Arbiter (Agent Alpha)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.roles.librarian.py",
+      "path": "engine/roles/librarian.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 235,
+      "size_bytes": 8037,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Context Librarian (Agent Sigma)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "engine.rollback.py",
+      "path": "engine/rollback.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 249,
+      "size_bytes": 9641,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Rollback Authority v1.2 \u2014 Snapshot & Restore System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos.py",
+      "path": "epos.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 1737,
+      "size_bytes": 70569,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos.py \u2014 Universal EPOS Command Line Interface",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
     {
       "module": "epos.__init__.py",
       "path": "epos/__init__.py",
@@ -34,7 +1186,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -56,7 +1208,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -65,7 +1217,8 @@
       "module": "epos.agents.scc.py",
       "path": "epos/agents/scc.py",
       "capability_tags": [
-        "agent"
+        "agent",
+        "sovereign_coding"
       ],
       "lines": 664,
       "size_bytes": 27985,
@@ -78,7 +1231,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -100,7 +1253,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -122,7 +1275,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -144,7 +1297,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -166,7 +1319,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -188,7 +1341,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -210,7 +1363,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -232,7 +1385,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -254,7 +1407,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -276,7 +1429,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -298,7 +1451,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -320,7 +1473,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -342,7 +1495,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -364,7 +1517,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -386,7 +1539,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -408,7 +1561,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -430,7 +1583,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -452,7 +1605,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -474,7 +1627,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -496,7 +1649,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -518,7 +1671,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -540,7 +1693,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -562,7 +1715,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -584,7 +1737,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -606,7 +1759,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -628,7 +1781,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -650,7 +1803,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -672,7 +1825,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -694,7 +1847,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -716,7 +1869,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -738,7 +1891,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -760,7 +1913,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -782,7 +1935,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -804,7 +1957,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -827,7 +1980,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -849,7 +2002,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -871,7 +2024,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -893,7 +2046,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -915,7 +2068,645 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_advocacy.py",
+      "path": "epos_advocacy.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 113,
+      "size_bytes": 4796,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_advocacy.py \u2014 Advocacy Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_agent_cli.py",
+      "path": "epos_agent_cli.py",
+      "capability_tags": [
+        "agent"
+      ],
+      "lines": 110,
+      "size_bytes": 3575,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_agent_cli.py \u2014 Agent Communication CLI",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_align_scan.py",
+      "path": "epos_align_scan.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 985,
+      "size_bytes": 43231,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Pre-mortem profile extracted from a single file.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_cli.py",
+      "path": "epos_cli.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 465,
+      "size_bytes": 16052,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS CLI v1.0 \u2014 Unified Command Surface for the Agentic Operating System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_cli_router.py",
+      "path": "epos_cli_router.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 541,
+      "size_bytes": 23474,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_cli_router.py \u2014 Unified CLI for Agent & Node Communication",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_cms.py",
+      "path": "epos_cms.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 270,
+      "size_bytes": 10971,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_cms.py \u2014 EPOS Content Management System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_conversation.py",
+      "path": "epos_conversation.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 378,
+      "size_bytes": 16486,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_conversation.py \u2014 Consultative Conversation Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_daemon.py",
+      "path": "epos_daemon.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 577,
+      "size_bytes": 23996,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_daemon.py \u2014 EPOS Autonomous Operating Daemon",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_event_bus.py",
+      "path": "epos_event_bus.py",
+      "capability_tags": [
+        "event_bus"
+      ],
+      "lines": 220,
+      "size_bytes": 7776,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_event_bus.py \u2014 EPOS Canonical Cross-Process Event Bus",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_financial.py",
+      "path": "epos_financial.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 198,
+      "size_bytes": 7841,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_financial.py \u2014 EPOS Financial Operations",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_genesis.py",
+      "path": "epos_genesis.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 218,
+      "size_bytes": 7417,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Genesis - Bootstrap Script",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_intelligence.py",
+      "path": "epos_intelligence.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 323,
+      "size_bytes": 12015,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_intelligence.py \u2014 EPOS Business Intelligence & Decision Logging",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_live_query.py",
+      "path": "epos_live_query.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 251,
+      "size_bytes": 9888,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_live_query.py \u2014 On-Demand Synthesis Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_node_cli.py",
+      "path": "epos_node_cli.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 169,
+      "size_bytes": 5658,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_node_cli.py \u2014 Node Operations CLI",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_resolver.py",
+      "path": "epos_resolver.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 812,
+      "size_bytes": 35269,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Parse the markdown report into structured conflict/recommendation buckets.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_snapshot.py",
+      "path": "epos_snapshot.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 39,
+      "size_bytes": 1472,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_stewardship.py",
+      "path": "epos_stewardship.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 168,
+      "size_bytes": 6585,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_stewardship.py \u2014 Engagement Health + Stewardship Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_support.py",
+      "path": "epos_support.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 182,
+      "size_bytes": 7056,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_support.py \u2014 EPOS Client Support System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_ttlg_engagement.py",
+      "path": "epos_ttlg_engagement.py",
+      "capability_tags": [
+        "ttlg"
+      ],
+      "lines": 214,
+      "size_bytes": 8508,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_ttlg_engagement.py \u2014 90-Day Client Engagement Flow",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_ttlg_package.py",
+      "path": "epos_ttlg_package.py",
+      "capability_tags": [
+        "ttlg"
+      ],
+      "lines": 231,
+      "size_bytes": 9675,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "epos_ttlg_package.py \u2014 TTLG Client Deliverable Generator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "epos_verify_arms.py",
+      "path": "epos_verify_arms.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 160,
+      "size_bytes": 6379,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Execution Arm Verification \u2014 run inside epos-core container.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "error_detector.py",
+      "path": "error_detector.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 368,
+      "size_bytes": 11695,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Error Detector Service",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "event_bus.py",
+      "path": "event_bus.py",
+      "capability_tags": [
+        "event_bus"
+      ],
+      "lines": 563,
+      "size_bytes": 17706,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Unified Event Bus - The Nervous System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "evl1_evolution_steward.py",
+      "path": "evl1_evolution_steward.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 142,
+      "size_bytes": 6095,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "evl1_evolution_steward.py \u2014 Weekly Evolution Cycle",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "export_codebase_inventory.py",
+      "path": "export_codebase_inventory.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 88,
+      "size_bytes": 2779,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Codebase Inventory Export",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "flywheel_analyst.py",
+      "path": "flywheel_analyst.py",
+      "capability_tags": [
+        "pattern_learning"
+      ],
+      "lines": 449,
+      "size_bytes": 18151,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "flywheel_analyst.py \u2014 EPOS Flywheel Pattern Recognition & SOP Evolution",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "flywheel_scheduler.py",
+      "path": "flywheel_scheduler.py",
+      "capability_tags": [
+        "pattern_learning"
+      ],
+      "lines": 78,
+      "size_bytes": 2822,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "flywheel_scheduler.py \u2014 EPOS Flywheel Scheduled Reporting",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "fotw_capture.py",
+      "path": "fotw_capture.py",
+      "capability_tags": [
+        "signal_detection"
+      ],
+      "lines": 659,
+      "size_bytes": 26672,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "fotw_capture.py \u2014 Fly on the Wall Passive Capture System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "fotw_listener.py",
+      "path": "fotw_listener.py",
+      "capability_tags": [
+        "signal_detection"
+      ],
+      "lines": 438,
+      "size_bytes": 17579,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "fotw_listener.py \u2014 Fly on the Wall: Expression Listener",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -924,7 +2715,7 @@
       "module": "friday.__init__.py",
       "path": "friday/__init__.py",
       "capability_tags": [
-        "uncategorized"
+        "friday"
       ],
       "lines": 3,
       "size_bytes": 123,
@@ -937,7 +2728,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -946,7 +2737,7 @@
       "module": "friday.api.py",
       "path": "friday/api.py",
       "capability_tags": [
-        "uncategorized"
+        "friday"
       ],
       "lines": 91,
       "size_bytes": 2537,
@@ -959,7 +2750,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -968,7 +2759,7 @@
       "module": "friday.continuous_improvement.py",
       "path": "friday/continuous_improvement.py",
       "capability_tags": [
-        "uncategorized"
+        "friday"
       ],
       "lines": 260,
       "size_bytes": 9399,
@@ -981,7 +2772,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -990,7 +2781,8 @@
       "module": "friday.executors.__init__.py",
       "path": "friday/executors/__init__.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday"
       ],
       "lines": 1,
       "size_bytes": 72,
@@ -1003,7 +2795,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1012,7 +2804,8 @@
       "module": "friday.executors.az_executor.py",
       "path": "friday/executors/az_executor.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday"
       ],
       "lines": 130,
       "size_bytes": 4018,
@@ -1025,7 +2818,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1035,6 +2828,7 @@
       "path": "friday/executors/browser_executor.py",
       "capability_tags": [
         "executor",
+        "friday",
         "web_automation"
       ],
       "lines": 129,
@@ -1058,7 +2852,8 @@
       "module": "friday.executors.claude_code_executor.py",
       "path": "friday/executors/claude_code_executor.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday"
       ],
       "lines": 17,
       "size_bytes": 627,
@@ -1071,7 +2866,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1080,7 +2875,8 @@
       "module": "friday.executors.code_executor.py",
       "path": "friday/executors/code_executor.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday"
       ],
       "lines": 155,
       "size_bytes": 5145,
@@ -1093,7 +2889,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1103,6 +2899,7 @@
       "path": "friday/executors/computeruse_executor.py",
       "capability_tags": [
         "executor",
+        "friday",
         "os_automation"
       ],
       "lines": 150,
@@ -1126,7 +2923,9 @@
       "module": "friday.executors.scc_executor.py",
       "path": "friday/executors/scc_executor.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday",
+        "sovereign_coding"
       ],
       "lines": 221,
       "size_bytes": 7613,
@@ -1139,7 +2938,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1148,7 +2947,8 @@
       "module": "friday.executors.system_executor.py",
       "path": "friday/executors/system_executor.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday"
       ],
       "lines": 216,
       "size_bytes": 7699,
@@ -1161,7 +2961,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1170,7 +2970,9 @@
       "module": "friday.executors.ttlg_executor.py",
       "path": "friday/executors/ttlg_executor.py",
       "capability_tags": [
-        "executor"
+        "executor",
+        "friday",
+        "ttlg"
       ],
       "lines": 195,
       "size_bytes": 6807,
@@ -1183,7 +2985,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1192,7 +2994,7 @@
       "module": "friday.friday_graph.py",
       "path": "friday/friday_graph.py",
       "capability_tags": [
-        "uncategorized"
+        "friday"
       ],
       "lines": 423,
       "size_bytes": 16113,
@@ -1205,7 +3007,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1214,6 +3016,7 @@
       "module": "friday.skills.__init__.py",
       "path": "friday/skills/__init__.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 1,
@@ -1227,7 +3030,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1236,6 +3039,7 @@
       "module": "friday.skills.metrics_observatory.py",
       "path": "friday/skills/metrics_observatory.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 267,
@@ -1249,7 +3053,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1258,6 +3062,7 @@
       "module": "friday.skills.morning_briefing.py",
       "path": "friday/skills/morning_briefing.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 288,
@@ -1271,7 +3076,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1280,6 +3085,7 @@
       "module": "friday.skills.nightly_upskill.py",
       "path": "friday/skills/nightly_upskill.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 428,
@@ -1293,7 +3099,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1302,6 +3108,7 @@
       "module": "friday.skills.personality.py",
       "path": "friday/skills/personality.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 98,
@@ -1315,7 +3122,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1324,6 +3131,7 @@
       "module": "friday.skills.proactive_intelligence.py",
       "path": "friday/skills/proactive_intelligence.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 157,
@@ -1337,7 +3145,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1346,6 +3154,7 @@
       "module": "friday.skills.research_scanner.py",
       "path": "friday/skills/research_scanner.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 295,
@@ -1359,7 +3168,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1368,6 +3177,7 @@
       "module": "friday.skills.thread_tracker.py",
       "path": "friday/skills/thread_tracker.py",
       "capability_tags": [
+        "friday",
         "skill"
       ],
       "lines": 174,
@@ -1381,7 +3191,359 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday_daily_anchors.py",
+      "path": "friday_daily_anchors.py",
+      "capability_tags": [
+        "friday"
+      ],
+      "lines": 274,
+      "size_bytes": 10673,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "friday_daily_anchors.py \u2014 Friday Daily Anchor System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "friday_intelligence.py",
+      "path": "friday_intelligence.py",
+      "capability_tags": [
+        "friday"
+      ],
+      "lines": 220,
+      "size_bytes": 9678,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "friday_intelligence.py \u2014 Friday's Personal Knowledge & Learning System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "governance_gate.py",
+      "path": "governance_gate.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 1117,
+      "size_bytes": 40603,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS Governance Gate v1.0 \u2014 Constitutional Triage & Safe Repair",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "grag_session_engine.py",
+      "path": "grag_session_engine.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 201,
+      "size_bytes": 8305,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "grag_session_engine.py \u2014 Live Session Intelligence (GRAG)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "groq_router.py",
+      "path": "groq_router.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 212,
+      "size_bytes": 7660,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "groq_router.py \u2014 EPOS Groq Model Router",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "idea_log.py",
+      "path": "idea_log.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 259,
+      "size_bytes": 9417,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "idea_log.py \u2014 EPOS Idea Capture and Triage System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "immune_monitor.py",
+      "path": "immune_monitor.py",
+      "capability_tags": [
+        "immune_monitor"
+      ],
+      "lines": 204,
+      "size_bytes": 7848,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "Immune Monitor - EPOS Predictive Health System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "lead_scoring.py",
+      "path": "lead_scoring.py",
+      "capability_tags": [
+        "lead_scoring"
+      ],
+      "lines": 372,
+      "size_bytes": 13556,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "lead_scoring.py \u2014 EPOS Autonomous Lead Scoring Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "life_os_cli.py",
+      "path": "life_os_cli.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 305,
+      "size_bytes": 10515,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "life_os_cli.py \u2014 EPOS LifeOS Command Line Interface",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "lifeos_kernel.py",
+      "path": "lifeos_kernel.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 150,
+      "size_bytes": 6648,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "lifeos_kernel.py \u2014 Personal Sovereignty Layer",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "lifeos_sovereignty.py",
+      "path": "lifeos_sovereignty.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 397,
+      "size_bytes": 18665,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "lifeos_sovereignty.py - Personal Sovereignty Integration Layer",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "ma1_niche_scanner.py",
+      "path": "ma1_niche_scanner.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 427,
+      "size_bytes": 16063,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "MA1 Niche Scanner v0.1 \u2014 YouTube Shorts ERI Competitor Analysis",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "marl_reward_collector.py",
+      "path": "marl_reward_collector.py",
+      "capability_tags": [
+        "reward_signal"
+      ],
+      "lines": 129,
+      "size_bytes": 6099,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "marl_reward_collector.py \u2014 MARL Reward Signal Processor",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "master_installer.py",
+      "path": "master_installer.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 725,
+      "size_bytes": 28457,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "EPOS MASTER INSTALLER \u2014 Agent Zero Execution Package",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "multimodal_router.py",
+      "path": "multimodal_router.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 375,
+      "size_bytes": 15221,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "multimodal_router.py \u2014 EPOS Multimodal Generation Router",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "node_sovereignty_certifier.py",
+      "path": "node_sovereignty_certifier.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 676,
+      "size_bytes": 31877,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "node_sovereignty_certifier.py \u2014 Node Sovereignty Certification Engine",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1403,7 +3565,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1425,7 +3587,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1447,7 +3609,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1469,7 +3631,7 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
@@ -1621,7 +3783,7 @@
       "module": "nodes.unified_health.py",
       "path": "nodes/unified_health.py",
       "capability_tags": [
-        "uncategorized"
+        "health"
       ],
       "lines": 156,
       "size_bytes": 5469,
@@ -1634,7 +3796,360 @@
       "ttlg": {
         "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "Existed before the validation protocol. Operational, not blocked. Metadata-only registration.",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "paperclip_governance.py",
+      "path": "paperclip_governance.py",
+      "capability_tags": [
+        "governance"
+      ],
+      "lines": 362,
+      "size_bytes": 14327,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "paperclip_governance.py \u2014 Paperclip Agent Governance Framework",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "path_utils.py",
+      "path": "path_utils.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 269,
+      "size_bytes": 8466,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "path_utils.py \u2014 EPOS Canonical Path Resolution",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "payment_gateway.py",
+      "path": "payment_gateway.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 395,
+      "size_bytes": 14919,
+      "mtime": "2026-04-19T19:29:34Z",
+      "docstring_head": "payment_gateway.py \u2014 EPOS Payment Gateway (Stripe Integration)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "reputation_manager.py",
+      "path": "reputation_manager.py",
+      "capability_tags": [
+        "reputation"
+      ],
+      "lines": 261,
+      "size_bytes": 9958,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "reputation_manager.py \u2014 EPOS Reputation Management Node",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "roles.py",
+      "path": "roles.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 346,
+      "size_bytes": 11702,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "roles.py \u2014 EPOS Agent Role Definitions",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "rs1_research_brief.py",
+      "path": "rs1_research_brief.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 278,
+      "size_bytes": 11345,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "rs1_research_brief.py \u2014 EPOS Research Brief Generator",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "rs1_research_compiler.py",
+      "path": "rs1_research_compiler.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 234,
+      "size_bytes": 9915,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "rs1_research_compiler.py \u2014 EPOS Research Skill Compiler",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "setup_content_lab.py",
+      "path": "setup_content_lab.py",
+      "capability_tags": [
+        "content_production"
+      ],
+      "lines": 125,
+      "size_bytes": 3842,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "EPOS Content Lab - Directory Setup (Hell Week Sprint 1)",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "sheets_sync.py",
+      "path": "sheets_sync.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 371,
+      "size_bytes": 14172,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "sheets_sync.py \u2014 EPOS Google Sheets Sync Layer",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "stasis.py",
+      "path": "stasis.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 234,
+      "size_bytes": 7934,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "stasis.py \u2014 EPOS Emergency Halt and Constitutional Violation System",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "test_unified_nervous_system.py",
+      "path": "test_unified_nervous_system.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 367,
+      "size_bytes": 10415,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "EPOS Unified Nervous System - Integration Test",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "ttlg_agents.py",
+      "path": "ttlg_agents.py",
+      "capability_tags": [
+        "agent",
+        "ttlg"
+      ],
+      "lines": 1016,
+      "size_bytes": 43568,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "Returns a LangChain-compatible LLM client.",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "ttlg_conversational.py",
+      "path": "ttlg_conversational.py",
+      "capability_tags": [
+        "ttlg"
+      ],
+      "lines": 421,
+      "size_bytes": 16593,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "ttlg_conversational.py \u2014 Conversational TTLG Diagnostic Interface",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "ttlg_scheduler.py",
+      "path": "ttlg_scheduler.py",
+      "capability_tags": [
+        "ttlg"
+      ],
+      "lines": 104,
+      "size_bytes": 3993,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "ttlg_scheduler.py \u2014 EPOS TTLG Automated Schedule",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "vault_indexer.py",
+      "path": "vault_indexer.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 104,
+      "size_bytes": 3674,
+      "mtime": "2026-04-19T19:29:43Z",
+      "docstring_head": "vault_indexer.py \u2014 EPOS Context Vault Global Index Builder",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
+      }
+    },
+    {
+      "module": "youtube_analytics.py",
+      "path": "youtube_analytics.py",
+      "capability_tags": [
+        "uncategorized"
+      ],
+      "lines": 179,
+      "size_bytes": 6201,
+      "mtime": "2026-04-19T19:29:44Z",
+      "docstring_head": "youtube_analytics.py \u2014 EPOS YouTube Analytics & ERI Feedback Loop",
+      "health": "unknown",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "LEGACY_AUDIT",
+      "ttlg": {
+        "scout": "(pending live TTLG deep verification)",
+        "thinker": "(pending)",
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
         "validated_at": null,
         "validator": null
       }
