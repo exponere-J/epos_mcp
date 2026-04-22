@@ -1,0 +1,3161 @@
+{
+  "capability_index": {
+    "agent": [
+      "agent_knowledge_evolution.py",
+      "agent_orchestrator.py",
+      "agent_zero_bridge.py",
+      "containers/agent-zero/az_bridge.py",
+      "epos/agents/__init__.py",
+      "epos/agents/scc.py",
+      "epos/agents/sovereign_coding_agent.py",
+      "epos_agent_cli.py",
+      "nodes/agent_zero_node.py",
+      "ttlg_agents.py"
+    ],
+    "bridge": [
+      "agent_zero_bridge.py",
+      "containers/agent-zero/az_bridge.py",
+      "engine/jarvis_bridge.py"
+    ],
+    "concentric_context_protocol": [
+      "epos/ccp/__init__.py",
+      "epos/ccp/decay.py",
+      "epos/ccp/extractor.py",
+      "epos/ccp/pipeline.py",
+      "epos/ccp/router.py",
+      "epos/ccp/scorer.py"
+    ],
+    "content_production": [
+      "content_lab/__init__.py",
+      "content_lab/brief_generator.py",
+      "content_lab/crs_scorer.py",
+      "content_lab/echolocation_predictor.py",
+      "content_lab/template_engine.py",
+      "content_lab_producer.py",
+      "setup_content_lab.py"
+    ],
+    "dev_tool": [
+      "epos/tools/bom_cleaner.py",
+      "epos/tools/path_sanitizer.py",
+      "epos/tools/permission_audit.py",
+      "epos/tools/sanitation_verifier.py",
+      "epos/tools/secret_extractor.py"
+    ],
+    "diagnostic": [
+      "engine/epos_doctor.py"
+    ],
+    "entrypoint": [
+      "nodes/execution_arm/callable.py"
+    ],
+    "event_bus": [
+      "epos_event_bus.py",
+      "event_bus.py"
+    ],
+    "execution_arm": [
+      "nodes/execution_arm/__init__.py",
+      "nodes/execution_arm/browser_use_arm.py",
+      "nodes/execution_arm/callable.py",
+      "nodes/execution_arm/computer_use_arm.py",
+      "nodes/execution_arm/deletion_gate.py",
+      "nodes/execution_arm/mode_selector.py"
+    ],
+    "executor": [
+      "az_mission_executor.py",
+      "friday/executors/__init__.py",
+      "friday/executors/az_executor.py",
+      "friday/executors/browser_executor.py",
+      "friday/executors/claude_code_executor.py",
+      "friday/executors/code_executor.py",
+      "friday/executors/computeruse_executor.py",
+      "friday/executors/scc_executor.py",
+      "friday/executors/system_executor.py",
+      "friday/executors/ttlg_executor.py"
+    ],
+    "friday": [
+      "friday/__init__.py",
+      "friday/api.py",
+      "friday/continuous_improvement.py",
+      "friday/executors/__init__.py",
+      "friday/executors/az_executor.py",
+      "friday/executors/browser_executor.py",
+      "friday/executors/claude_code_executor.py",
+      "friday/executors/code_executor.py",
+      "friday/executors/computeruse_executor.py",
+      "friday/executors/scc_executor.py",
+      "friday/executors/system_executor.py",
+      "friday/executors/ttlg_executor.py",
+      "friday/friday_graph.py",
+      "friday/skills/__init__.py",
+      "friday/skills/metrics_observatory.py",
+      "friday/skills/morning_briefing.py",
+      "friday/skills/nightly_upskill.py",
+      "friday/skills/personality.py",
+      "friday/skills/proactive_intelligence.py",
+      "friday/skills/research_scanner.py",
+      "friday/skills/thread_tracker.py",
+      "friday_daily_anchors.py",
+      "friday_intelligence.py"
+    ],
+    "governance": [
+      "constitutional_arbiter.py",
+      "constitutional_enforcer.py",
+      "containers/governance-gate/server.py",
+      "containers/governance-server/server.py",
+      "engine/enforcement/governance_gate.py",
+      "engine/governance_gate.py",
+      "engine/roles/arbiter.py",
+      "governance_gate.py",
+      "nodes/execution_arm/deletion_gate.py",
+      "paperclip_governance.py"
+    ],
+    "health": [
+      "nodes/unified_health.py"
+    ],
+    "immune_monitor": [
+      "containers/immune-monitor/server.py",
+      "immune_monitor.py"
+    ],
+    "lead_scoring": [
+      "echoes_lead_scorer.py",
+      "lead_scoring.py"
+    ],
+    "model_registry": [
+      "epos/models/__init__.py",
+      "epos/models/model_registry.py"
+    ],
+    "os_automation": [
+      "friday/executors/computeruse_executor.py",
+      "nodes/execution_arm/computer_use_arm.py"
+    ],
+    "pattern_learning": [
+      "flywheel_analyst.py",
+      "flywheel_scheduler.py"
+    ],
+    "project_management": [
+      "epos/pm/__init__.py",
+      "epos/pm/api.py",
+      "epos/pm/extraction_framework.py",
+      "epos/pm/store.py"
+    ],
+    "reasoner": [
+      "nodes/execution_arm/mode_selector.py"
+    ],
+    "reputation": [
+      "reputation_manager.py"
+    ],
+    "reward_signal": [
+      "engine/enforcement/reward_bus.py",
+      "epos/rewards/__init__.py",
+      "epos/rewards/publish_reward.py",
+      "epos/rewards/reward_aggregator.py",
+      "marl_reward_collector.py"
+    ],
+    "scoring": [
+      "content_lab/echolocation_predictor.py"
+    ],
+    "signal_detection": [
+      "fotw_capture.py",
+      "fotw_listener.py"
+    ],
+    "skill": [
+      "friday/skills/__init__.py",
+      "friday/skills/metrics_observatory.py",
+      "friday/skills/morning_briefing.py",
+      "friday/skills/nightly_upskill.py",
+      "friday/skills/personality.py",
+      "friday/skills/proactive_intelligence.py",
+      "friday/skills/research_scanner.py",
+      "friday/skills/thread_tracker.py"
+    ],
+    "sovereign_coding": [
+      "epos/agents/scc.py",
+      "friday/executors/scc_executor.py"
+    ],
+    "state_graph": [
+      "epos/state/__init__.py",
+      "epos/state/state_redundancy.py",
+      "epos/state/universal_state_graph.py"
+    ],
+    "training": [
+      "epos/training/__init__.py",
+      "epos/training/practice_gym.py",
+      "epos/training/shadow_protocol.py",
+      "epos/voice/training_logger.py"
+    ],
+    "ttlg": [
+      "epos_ttlg_engagement.py",
+      "epos_ttlg_package.py",
+      "friday/executors/ttlg_executor.py",
+      "ttlg_agents.py",
+      "ttlg_conversational.py",
+      "ttlg_scheduler.py"
+    ],
+    "uncategorized": [
+      "az_dispatch.py",
+      "codebase_review_snapshot.py",
+      "command_center.py",
+      "config.py",
+      "containers/context-server/server.py",
+      "containers/event-bus/server.py",
+      "containers/learning-server/server.py",
+      "content_signal_loop.py",
+      "context_graph.py",
+      "context_handler.py",
+      "context_librarian.py",
+      "context_server.py",
+      "dashboard_engine.py",
+      "echoes_research_engine.py",
+      "engine/__init__.py",
+      "engine/autonomy.py",
+      "engine/command_validator.py",
+      "engine/enforcement/__init__.py",
+      "engine/enforcement/compliance_tracker.py",
+      "engine/enforcement/diagnostic_server.py",
+      "engine/enforcement/learning_server.py",
+      "engine/enforcement/validate_nervous_system.py",
+      "engine/governed_orchestrator.py",
+      "engine/llm_client.py",
+      "engine/roles/analyst.py",
+      "engine/roles/librarian.py",
+      "engine/rollback.py",
+      "epos.py",
+      "epos/__init__.py",
+      "epos_advocacy.py",
+      "epos_align_scan.py",
+      "epos_cli.py",
+      "epos_cli_router.py",
+      "epos_cms.py",
+      "epos_conversation.py",
+      "epos_daemon.py",
+      "epos_financial.py",
+      "epos_genesis.py",
+      "epos_intelligence.py",
+      "epos_live_query.py",
+      "epos_node_cli.py",
+      "epos_resolver.py",
+      "epos_snapshot.py",
+      "epos_stewardship.py",
+      "epos_support.py",
+      "epos_verify_arms.py",
+      "error_detector.py",
+      "evl1_evolution_steward.py",
+      "export_codebase_inventory.py",
+      "grag_session_engine.py",
+      "groq_router.py",
+      "idea_log.py",
+      "life_os_cli.py",
+      "lifeos_kernel.py",
+      "lifeos_sovereignty.py",
+      "ma1_niche_scanner.py",
+      "master_installer.py",
+      "multimodal_router.py",
+      "node_sovereignty_certifier.py",
+      "nodes/__init__.py",
+      "nodes/avatar_registry.py",
+      "path_utils.py",
+      "payment_gateway.py",
+      "roles.py",
+      "rs1_research_brief.py",
+      "rs1_research_compiler.py",
+      "sheets_sync.py",
+      "stasis.py",
+      "test_unified_nervous_system.py",
+      "vault_indexer.py",
+      "youtube_analytics.py"
+    ],
+    "voice_pipeline": [
+      "epos/voice/__init__.py",
+      "epos/voice/api.py",
+      "epos/voice/pipeline.py",
+      "epos/voice/reformulator.py",
+      "epos/voice/router.py",
+      "epos/voice/speaker.py",
+      "epos/voice/training_logger.py",
+      "epos/voice/transcriber.py",
+      "epos/voice/vault_search.py",
+      "epos/voice/vision.py",
+      "epos/voice/vocabulary.py"
+    ],
+    "web_automation": [
+      "browseruse_airtable_setup.py",
+      "friday/executors/browser_executor.py",
+      "nodes/browser_use_node.py",
+      "nodes/execution_arm/browser_use_arm.py"
+    ]
+  },
+  "forward_deps": {
+    "agent_knowledge_evolution.py": [
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "agent_orchestrator.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "roles",
+      "stasis",
+      "typing",
+      "uuid"
+    ],
+    "agent_zero_bridge.py": [
+      "agent_orchestrator",
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "importlib",
+      "importlib.util",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "roles",
+      "site",
+      "stasis",
+      "subprocess",
+      "typing",
+      "uuid"
+    ],
+    "az_dispatch.py": [
+      "config",
+      "datetime",
+      "dotenv",
+      "engine.command_validator",
+      "json",
+      "logging",
+      "pathlib",
+      "pydantic",
+      "requests",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "az_mission_executor.py": [
+      "argparse",
+      "datetime",
+      "dotenv",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "browseruse_airtable_setup.py": [
+      "argparse",
+      "browser_use",
+      "datetime",
+      "dotenv",
+      "json",
+      "langchain_openai",
+      "os",
+      "pathlib",
+      "re",
+      "sys",
+      "time"
+    ],
+    "codebase_review_snapshot.py": [
+      "datetime",
+      "os",
+      "pathlib"
+    ],
+    "command_center.py": [
+      "asyncio",
+      "event_bus",
+      "fastapi",
+      "fastapi.staticfiles",
+      "json",
+      "pathlib",
+      "uvicorn"
+    ],
+    "config.py": [
+      "dotenv",
+      "os",
+      "pathlib",
+      "sys"
+    ],
+    "constitutional_arbiter.py": [
+      "argparse",
+      "ast",
+      "collections",
+      "dataclasses",
+      "datetime",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "roles",
+      "sys",
+      "typing"
+    ],
+    "constitutional_enforcer.py": [
+      "argparse",
+      "dataclasses",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys",
+      "typing",
+      "yaml"
+    ],
+    "containers/agent-zero/az_bridge.py": [
+      "__future__",
+      "datetime",
+      "event_bus",
+      "http.server",
+      "json",
+      "nodes.execution_arm",
+      "os",
+      "pathlib",
+      "sys",
+      "threading",
+      "time",
+      "typing"
+    ],
+    "containers/context-server/server.py": [
+      "fastapi"
+    ],
+    "containers/event-bus/server.py": [
+      "fastapi"
+    ],
+    "containers/governance-gate/server.py": [
+      "fastapi"
+    ],
+    "containers/governance-server/server.py": [],
+    "containers/immune-monitor/server.py": [
+      "datetime",
+      "json",
+      "logging",
+      "os",
+      "pathlib",
+      "requests",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "containers/learning-server/server.py": [
+      "fastapi"
+    ],
+    "content_lab/__init__.py": [],
+    "content_lab/brief_generator.py": [
+      "content_lab.echolocation_predictor",
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "nodes.avatar_registry",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "content_lab/crs_scorer.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "nodes.avatar_registry",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "content_lab/echolocation_predictor.py": [
+      "datetime",
+      "epos_event_bus",
+      "hashlib",
+      "json",
+      "nodes.avatar_registry",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "content_lab/template_engine.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "nodes.avatar_registry",
+      "path_utils",
+      "pathlib",
+      "re",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "content_lab_producer.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "multimodal_router",
+      "path_utils",
+      "pathlib"
+    ],
+    "content_signal_loop.py": [
+      "context_graph",
+      "datetime",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing"
+    ],
+    "context_graph.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "context_handler.py": [
+      "argparse",
+      "datetime",
+      "json",
+      "logging",
+      "os",
+      "pathlib",
+      "re",
+      "sys",
+      "typing"
+    ],
+    "context_librarian.py": [
+      "argparse",
+      "datetime",
+      "epos_intelligence",
+      "hashlib",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing"
+    ],
+    "context_server.py": [
+      "argparse",
+      "dataclasses",
+      "datetime",
+      "event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "dashboard_engine.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "echoes_lead_scorer.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "subprocess",
+      "typing",
+      "uuid"
+    ],
+    "echoes_research_engine.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "engine/__init__.py": [],
+    "engine/autonomy.py": [
+      "pathlib",
+      "stasis",
+      "sys",
+      "time"
+    ],
+    "engine/command_validator.py": [
+      "config",
+      "dotenv",
+      "logging",
+      "pathlib",
+      "sys"
+    ],
+    "engine/enforcement/__init__.py": [],
+    "engine/enforcement/compliance_tracker.py": [
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "typing"
+    ],
+    "engine/enforcement/diagnostic_server.py": [
+      "argparse",
+      "dataclasses",
+      "datetime",
+      "enum",
+      "event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "engine/enforcement/governance_gate.py": [
+      "governance_gate",
+      "pathlib",
+      "sys"
+    ],
+    "engine/enforcement/learning_server.py": [
+      "argparse",
+      "dataclasses",
+      "datetime",
+      "event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "engine/enforcement/reward_bus.py": [
+      "datetime",
+      "engine.enforcement.compliance_tracker",
+      "engine.enforcement.remediation_generator",
+      "event_bus",
+      "os",
+      "pathlib",
+      "sys",
+      "traceback",
+      "typing"
+    ],
+    "engine/enforcement/validate_nervous_system.py": [],
+    "engine/epos_doctor.py": [
+      "argparse",
+      "content_signal_loop",
+      "context_handler",
+      "datetime",
+      "dotenv",
+      "epos.state.state_redundancy",
+      "epos.tools.bom_cleaner",
+      "epos_event_bus",
+      "friday_daily_anchors",
+      "hashlib",
+      "idea_log",
+      "json",
+      "lead_scoring",
+      "lifeos_sovereignty",
+      "nodes.agent_zero_node",
+      "nodes.browser_use_node",
+      "os",
+      "pathlib",
+      "rs1_research_brief",
+      "sheets_sync",
+      "shutil",
+      "socket",
+      "subprocess",
+      "sys",
+      "ttlg.props.schema",
+      "ttlg.remediation_runbook",
+      "ttlg.self_healing_scout",
+      "typing"
+    ],
+    "engine/governance_gate.py": [
+      "governance_gate",
+      "pathlib",
+      "sys"
+    ],
+    "engine/governed_orchestrator.py": [
+      "fastapi",
+      "os",
+      "path_utils",
+      "pathlib",
+      "pydantic",
+      "stasis",
+      "sys",
+      "typing",
+      "uvicorn"
+    ],
+    "engine/jarvis_bridge.py": [
+      "asyncio",
+      "datetime",
+      "json",
+      "logging",
+      "os",
+      "pathlib",
+      "requests",
+      "sys",
+      "typing",
+      "websockets"
+    ],
+    "engine/llm_client.py": [
+      "__future__",
+      "dotenv",
+      "groq_router",
+      "json",
+      "os",
+      "pathlib",
+      "requests",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "engine/roles/analyst.py": [
+      "collections",
+      "datetime",
+      "json",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "engine/roles/arbiter.py": [
+      "datetime",
+      "epos_doctor",
+      "governance_gate",
+      "json",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "engine/roles/librarian.py": [
+      "datetime",
+      "hashlib",
+      "json",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "engine/rollback.py": [
+      "argparse",
+      "datetime",
+      "dotenv",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "shutil",
+      "sys",
+      "typing"
+    ],
+    "epos.py": [
+      "ccp_engine",
+      "content.lab.content_lab_core",
+      "content.lab.nodes.r1_radar",
+      "content.lab.spark_to_brief",
+      "content_lab_producer",
+      "content_signal_loop",
+      "context_graph",
+      "dashboard_engine",
+      "datetime",
+      "dotenv",
+      "element_router",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_financial",
+      "epos_live_query",
+      "flywheel_scheduler",
+      "fotw_listener",
+      "friday.friday_graph",
+      "friday_daily_anchors",
+      "friday_intelligence",
+      "graphs.ttlg_diagnostic_graph",
+      "groq_router",
+      "idea_log",
+      "json",
+      "knowledge.kil_daily",
+      "lead_scoring",
+      "lifeos_kernel",
+      "lifeos_sovereignty",
+      "multimodal_router",
+      "nightly_scanner",
+      "nodes.browser_use_node",
+      "notebooklm_bridge",
+      "os",
+      "paperclip_governance",
+      "path_utils",
+      "pathlib",
+      "payment_gateway",
+      "process_initiator",
+      "reputation_manager",
+      "rs1_research_brief",
+      "rs1_research_compiler",
+      "sheets_sync",
+      "subprocess",
+      "sys",
+      "thread_extractor",
+      "ttlg.mirror_report",
+      "ttlg.pipeline_graph",
+      "ttlg.props.schema",
+      "ttlg.remediation_runbook",
+      "ttlg.self_healing_scout",
+      "ttlg_conversational"
+    ],
+    "epos/__init__.py": [],
+    "epos/agents/__init__.py": [],
+    "epos/agents/scc.py": [
+      "ast",
+      "datetime",
+      "epos.state.universal_state_graph",
+      "epos_event_bus",
+      "governance_gate",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "requests",
+      "subprocess",
+      "sys",
+      "threading",
+      "typing",
+      "urllib.request"
+    ],
+    "epos/agents/sovereign_coding_agent.py": [
+      "__future__",
+      "datetime",
+      "engine.governance_gate",
+      "engine.llm_client",
+      "epos.state.universal_state_graph",
+      "epos_event_bus",
+      "glob",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys",
+      "time",
+      "typing",
+      "urllib.request"
+    ],
+    "epos/ccp/__init__.py": [
+      "epos.ccp.extractor",
+      "epos.ccp.pipeline",
+      "epos.ccp.router",
+      "epos.ccp.scorer"
+    ],
+    "epos/ccp/decay.py": [
+      "datetime",
+      "epos.rewards.publish_reward",
+      "json",
+      "os",
+      "pathlib",
+      "typing"
+    ],
+    "epos/ccp/extractor.py": [
+      "dataclasses",
+      "enum",
+      "json",
+      "pathlib",
+      "re",
+      "typing",
+      "uuid"
+    ],
+    "epos/ccp/pipeline.py": [
+      "datetime",
+      "epos.ccp.extractor",
+      "epos.ccp.router",
+      "epos.ccp.scorer",
+      "epos.pm.store",
+      "epos.rewards.publish_reward",
+      "json",
+      "os",
+      "pathlib",
+      "typing"
+    ],
+    "epos/ccp/router.py": [
+      "datetime",
+      "epos.ccp.extractor",
+      "epos.ccp.scorer",
+      "epos.pm.store",
+      "epos.rewards.publish_reward",
+      "json",
+      "os",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "epos/ccp/scorer.py": [
+      "epos.ccp.extractor",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "tools.litellm_client",
+      "typing"
+    ],
+    "epos/models/__init__.py": [],
+    "epos/models/model_registry.py": [
+      "__future__",
+      "datetime",
+      "epos.state.universal_state_graph",
+      "epos_event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "tempfile",
+      "typing",
+      "unittest.mock"
+    ],
+    "epos/pm/__init__.py": [],
+    "epos/pm/api.py": [
+      "datetime",
+      "epos.ccp.pipeline",
+      "epos.pm.store",
+      "fastapi",
+      "json",
+      "pathlib",
+      "pydantic",
+      "typing"
+    ],
+    "epos/pm/extraction_framework.py": [
+      "__future__",
+      "datetime",
+      "engine.llm_client",
+      "epos_event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "typing",
+      "uuid"
+    ],
+    "epos/pm/store.py": [
+      "dataclasses",
+      "datetime",
+      "enum",
+      "epos.ccp.extractor",
+      "json",
+      "os",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "epos/rewards/__init__.py": [
+      "epos.rewards.publish_reward"
+    ],
+    "epos/rewards/publish_reward.py": [
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "epos/rewards/reward_aggregator.py": [
+      "collections",
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "typing"
+    ],
+    "epos/state/__init__.py": [],
+    "epos/state/state_redundancy.py": [
+      "datetime",
+      "epos_event_bus",
+      "hashlib",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "shutil",
+      "sys",
+      "typing"
+    ],
+    "epos/state/universal_state_graph.py": [
+      "__future__",
+      "datetime",
+      "epos.state.state_redundancy",
+      "epos_event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "tempfile",
+      "threading",
+      "time",
+      "typing"
+    ],
+    "epos/tools/bom_cleaner.py": [
+      "epos.rewards.publish_reward",
+      "pathlib",
+      "sys"
+    ],
+    "epos/tools/path_sanitizer.py": [
+      "argparse",
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "sys",
+      "typing"
+    ],
+    "epos/tools/permission_audit.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "epos/tools/sanitation_verifier.py": [
+      "ast",
+      "datetime",
+      "epos.rewards.publish_reward",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "epos/tools/secret_extractor.py": [
+      "argparse",
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "secrets",
+      "string",
+      "sys",
+      "typing"
+    ],
+    "epos/training/__init__.py": [],
+    "epos/training/practice_gym.py": [
+      "datetime",
+      "epos.training.shadow_protocol",
+      "json",
+      "os",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "typing"
+    ],
+    "epos/training/shadow_protocol.py": [
+      "__future__",
+      "datetime",
+      "difflib",
+      "epos.rewards.publish_reward",
+      "json",
+      "pathlib",
+      "re",
+      "typing"
+    ],
+    "epos/voice/__init__.py": [],
+    "epos/voice/api.py": [
+      "epos.voice.pipeline",
+      "epos.voice.training_logger",
+      "epos.voice.vault_search",
+      "epos.voice.vocabulary",
+      "fastapi",
+      "fastapi.responses",
+      "pathlib"
+    ],
+    "epos/voice/pipeline.py": [
+      "datetime",
+      "epos.ccp.pipeline",
+      "epos.rewards.publish_reward",
+      "epos.voice.reformulator",
+      "epos.voice.speaker",
+      "epos.voice.training_logger",
+      "epos.voice.transcriber",
+      "epos.voice.vault_search",
+      "epos.voice.vocabulary",
+      "epos_event_bus",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "epos/voice/reformulator.py": [
+      "json",
+      "os",
+      "pathlib",
+      "requests"
+    ],
+    "epos/voice/router.py": [
+      "datetime",
+      "epos.rewards.publish_reward",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "epos/voice/speaker.py": [
+      "datetime",
+      "os",
+      "pathlib",
+      "subprocess"
+    ],
+    "epos/voice/training_logger.py": [
+      "datetime",
+      "json",
+      "pathlib"
+    ],
+    "epos/voice/transcriber.py": [
+      "datetime",
+      "httpx",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "epos/voice/vault_search.py": [
+      "datetime",
+      "json",
+      "numpy",
+      "os",
+      "pathlib",
+      "requests"
+    ],
+    "epos/voice/vision.py": [
+      "datetime",
+      "json",
+      "pathlib"
+    ],
+    "epos/voice/vocabulary.py": [
+      "json",
+      "pathlib",
+      "re"
+    ],
+    "epos_advocacy.py": [
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "epos_agent_cli.py": [
+      "argparse",
+      "datetime",
+      "dotenv",
+      "epos_cli_router",
+      "json",
+      "pathlib",
+      "sys"
+    ],
+    "epos_align_scan.py": [
+      "argparse",
+      "ast",
+      "dataclasses",
+      "datetime",
+      "importlib.util",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "socket",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "epos_cli.py": [
+      "datetime",
+      "dotenv",
+      "engine.epos_doctor",
+      "filelock",
+      "governance_gate",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys"
+    ],
+    "epos_cli_router.py": [
+      "agent_knowledge_evolution",
+      "argparse",
+      "constitutional_arbiter",
+      "content.lab.nodes.an1_analyst",
+      "content.lab.nodes.r1_radar",
+      "context_librarian",
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_financial",
+      "epos_intelligence",
+      "epos_support",
+      "flywheel_analyst",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "uuid"
+    ],
+    "epos_cms.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "epos_conversation.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "epos_live_query",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "random",
+      "typing",
+      "uuid"
+    ],
+    "epos_daemon.py": [
+      "apscheduler.schedulers.background",
+      "apscheduler.triggers.cron",
+      "apscheduler.triggers.interval",
+      "content_signal_loop",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "fotw_listener",
+      "friday.continuous_improvement",
+      "friday.skills.metrics_observatory",
+      "friday.skills.morning_briefing",
+      "friday.skills.nightly_upskill",
+      "friday.skills.proactive_intelligence",
+      "friday.skills.thread_tracker",
+      "friday_daily_anchors",
+      "friday_intelligence",
+      "json",
+      "knowledge.kil_daily",
+      "logging",
+      "nightly_scanner",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "reactor.content_reactor",
+      "reactor.handlers_v2",
+      "reactor.marketing_reactor",
+      "subprocess",
+      "sys",
+      "threading",
+      "time",
+      "ttlg.pipeline_graph"
+    ],
+    "epos_event_bus.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "json",
+      "path_utils",
+      "pathlib",
+      "re",
+      "threading",
+      "typing",
+      "uuid"
+    ],
+    "epos_financial.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "typing",
+      "uuid"
+    ],
+    "epos_genesis.py": [
+      "datetime",
+      "json",
+      "logging",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "epos_intelligence.py": [
+      "argparse",
+      "collections",
+      "datetime",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing"
+    ],
+    "epos_live_query.py": [
+      "agent_knowledge_evolution",
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "echoes_research_engine",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "time",
+      "typing"
+    ],
+    "epos_node_cli.py": [
+      "argparse",
+      "context_graph",
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "json",
+      "path_utils",
+      "pathlib",
+      "subprocess",
+      "sys"
+    ],
+    "epos_resolver.py": [
+      "argparse",
+      "dataclasses",
+      "datetime",
+      "importlib.util",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "epos_snapshot.py": [
+      "datetime",
+      "os",
+      "pathlib"
+    ],
+    "epos_stewardship.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "subprocess",
+      "typing",
+      "uuid"
+    ],
+    "epos_support.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "epos_live_query",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "typing",
+      "uuid"
+    ],
+    "epos_ttlg_engagement.py": [
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "subprocess",
+      "typing",
+      "uuid"
+    ],
+    "epos_ttlg_package.py": [
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_financial",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "epos_verify_arms.py": [
+      "engine.llm_client",
+      "friday.executors.az_executor",
+      "friday.executors.browser_executor",
+      "friday.executors.code_executor",
+      "friday.executors.computeruse_executor",
+      "friday.executors.scc_executor",
+      "friday.executors.system_executor",
+      "friday.executors.ttlg_executor",
+      "friday.friday_graph",
+      "friday.skills.morning_briefing",
+      "friday.skills.nightly_upskill",
+      "friday.skills.research_scanner",
+      "groq_router",
+      "nodes.avatar_registry",
+      "pathlib",
+      "reactor.content_reactor",
+      "sys"
+    ],
+    "error_detector.py": [
+      "datetime",
+      "event_bus",
+      "fastapi",
+      "logging",
+      "os",
+      "pathlib",
+      "pydantic",
+      "re",
+      "sys",
+      "typing",
+      "uvicorn"
+    ],
+    "event_bus.py": [
+      "dataclasses",
+      "datetime",
+      "enum",
+      "fcntl",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "threading",
+      "time",
+      "typing"
+    ],
+    "evl1_evolution_steward.py": [
+      "agent_knowledge_evolution",
+      "content.lab.nodes.comment_intelligence",
+      "context_graph",
+      "datetime",
+      "dotenv",
+      "echoes_research_engine",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "sys"
+    ],
+    "export_codebase_inventory.py": [
+      "__future__",
+      "datetime",
+      "os",
+      "pathlib"
+    ],
+    "flywheel_analyst.py": [
+      "constitutional_arbiter",
+      "dataclasses",
+      "datetime",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "re",
+      "roles",
+      "typing",
+      "uuid"
+    ],
+    "flywheel_scheduler.py": [
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "flywheel_analyst",
+      "json",
+      "path_utils",
+      "pathlib",
+      "vault_indexer"
+    ],
+    "fotw_capture.py": [
+      "agent_knowledge_evolution",
+      "context_graph",
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_cms",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "fotw_listener.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "hashlib",
+      "json",
+      "path_utils",
+      "pathlib",
+      "re",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "friday/__init__.py": [],
+    "friday/api.py": [
+      "datetime",
+      "fastapi",
+      "friday.friday_graph",
+      "json",
+      "pathlib",
+      "pydantic",
+      "sys",
+      "uvicorn"
+    ],
+    "friday/continuous_improvement.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "friday/executors/__init__.py": [],
+    "friday/executors/az_executor.py": [
+      "datetime",
+      "epos_event_bus",
+      "os",
+      "pathlib",
+      "requests",
+      "sys"
+    ],
+    "friday/executors/browser_executor.py": [
+      "__future__",
+      "datetime",
+      "epos_event_bus",
+      "nodes.execution_arm",
+      "os",
+      "pathlib",
+      "requests",
+      "sys"
+    ],
+    "friday/executors/claude_code_executor.py": [
+      "friday.executors.scc_executor"
+    ],
+    "friday/executors/code_executor.py": [
+      "datetime",
+      "engine.llm_client",
+      "epos_event_bus",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys"
+    ],
+    "friday/executors/computeruse_executor.py": [
+      "__future__",
+      "datetime",
+      "epos_event_bus",
+      "nodes.execution_arm",
+      "os",
+      "pathlib",
+      "requests",
+      "sys"
+    ],
+    "friday/executors/scc_executor.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "requests",
+      "sys"
+    ],
+    "friday/executors/system_executor.py": [
+      "datetime",
+      "engine.baseline_manager",
+      "engine.epos_doctor",
+      "engine.sovereignty_certifier",
+      "epos_event_bus",
+      "os",
+      "pathlib",
+      "requests",
+      "sys",
+      "ttlg.pipeline_graph"
+    ],
+    "friday/executors/ttlg_executor.py": [
+      "datetime",
+      "engine.epos_doctor",
+      "epos_event_bus",
+      "os",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "ttlg.pipeline_graph"
+    ],
+    "friday/friday_graph.py": [
+      "content_signal_loop",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "friday.executors",
+      "groq_router",
+      "json",
+      "langgraph.checkpoint.memory",
+      "langgraph.graph",
+      "os",
+      "path_utils",
+      "pathlib",
+      "rs1_research_brief",
+      "sys",
+      "typing",
+      "typing_extensions",
+      "uuid"
+    ],
+    "friday/skills/__init__.py": [],
+    "friday/skills/metrics_observatory.py": [
+      "datetime",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "requests",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "friday/skills/morning_briefing.py": [
+      "datetime",
+      "epos.ccp.decay",
+      "epos.pm.store",
+      "epos.rewards.reward_aggregator",
+      "epos_event_bus",
+      "friday.skills.metrics_observatory",
+      "friday.skills.proactive_intelligence",
+      "friday.skills.research_scanner",
+      "friday.skills.thread_tracker",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "friday/skills/nightly_upskill.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "friday/skills/personality.py": [
+      "datetime",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "friday/skills/proactive_intelligence.py": [
+      "datetime",
+      "epos_event_bus",
+      "friday.skills.metrics_observatory",
+      "friday.skills.thread_tracker",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing"
+    ],
+    "friday/skills/research_scanner.py": [
+      "datetime",
+      "engine.llm_client",
+      "epos_event_bus",
+      "json",
+      "nodes.avatar_registry",
+      "os",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "friday/skills/thread_tracker.py": [
+      "datetime",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "uuid"
+    ],
+    "friday_daily_anchors.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "lifeos_sovereignty",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing"
+    ],
+    "friday_intelligence.py": [
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "groq_router",
+      "idea_log",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "governance_gate.py": [
+      "argparse",
+      "dataclasses",
+      "datetime",
+      "difflib",
+      "enum",
+      "epos_event_bus",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "shutil",
+      "sys",
+      "tempfile",
+      "typing"
+    ],
+    "grag_session_engine.py": [
+      "agent_knowledge_evolution",
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "epos_live_query",
+      "json",
+      "pathlib",
+      "typing",
+      "uuid"
+    ],
+    "groq_router.py": [
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "groq",
+      "json",
+      "os",
+      "pathlib",
+      "requests",
+      "time",
+      "typing"
+    ],
+    "idea_log.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "immune_monitor.py": [
+      "datetime",
+      "json",
+      "logging",
+      "os",
+      "pathlib",
+      "requests",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "lead_scoring.py": [
+      "datetime",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "subprocess",
+      "typing"
+    ],
+    "life_os_cli.py": [
+      "argparse",
+      "datetime",
+      "dotenv",
+      "json",
+      "os",
+      "pathlib",
+      "subprocess",
+      "sys"
+    ],
+    "lifeos_kernel.py": [
+      "datetime",
+      "dotenv",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "lifeos_sovereignty.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "lifeos_kernel",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "ma1_niche_scanner.py": [
+      "argparse",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "math",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "requests",
+      "typing",
+      "uuid"
+    ],
+    "marl_reward_collector.py": [
+      "context_graph",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "pathlib",
+      "py_compile",
+      "sys"
+    ],
+    "master_installer.py": [
+      "argparse",
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "shutil",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "multimodal_router.py": [
+      "base64",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "requests",
+      "time",
+      "typing"
+    ],
+    "node_sovereignty_certifier.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "importlib",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "nodes/__init__.py": [],
+    "nodes/agent_zero_node.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "requests",
+      "sys"
+    ],
+    "nodes/avatar_registry.py": [
+      "datetime",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "re",
+      "sys",
+      "typing"
+    ],
+    "nodes/browser_use_node.py": [
+      "asyncio",
+      "browser_use",
+      "browser_use.browser.context",
+      "browser_use.llm",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "requests",
+      "sys"
+    ],
+    "nodes/execution_arm/__init__.py": [
+      "browser_use_arm",
+      "callable",
+      "computer_use_arm",
+      "deletion_gate",
+      "mode_selector"
+    ],
+    "nodes/execution_arm/browser_use_arm.py": [
+      "__future__",
+      "asyncio",
+      "browser_use",
+      "browser_use.browser.context",
+      "browser_use.llm",
+      "dataclasses",
+      "datetime",
+      "deletion_gate",
+      "json",
+      "os",
+      "pathlib",
+      "requests",
+      "shutil",
+      "subprocess",
+      "typing"
+    ],
+    "nodes/execution_arm/callable.py": [
+      "__future__",
+      "asyncio",
+      "browser_use_arm",
+      "computer_use_arm",
+      "datetime",
+      "deletion_gate",
+      "epos_event_bus",
+      "mode_selector",
+      "os",
+      "threading",
+      "typing"
+    ],
+    "nodes/execution_arm/computer_use_arm.py": [
+      "__future__",
+      "anthropic",
+      "asyncio",
+      "base64",
+      "dataclasses",
+      "datetime",
+      "deletion_gate",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "shutil",
+      "subprocess",
+      "time",
+      "typing"
+    ],
+    "nodes/execution_arm/deletion_gate.py": [
+      "__future__",
+      "dataclasses",
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "typing"
+    ],
+    "nodes/execution_arm/mode_selector.py": [
+      "__future__",
+      "dataclasses",
+      "re",
+      "typing"
+    ],
+    "nodes/unified_health.py": [
+      "datetime",
+      "importlib",
+      "json",
+      "node_sovereignty_certifier",
+      "nodes.avatar_registry",
+      "path_utils",
+      "pathlib",
+      "sys"
+    ],
+    "paperclip_governance.py": [
+      "dataclasses",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "path_utils.py": [
+      "dotenv",
+      "os",
+      "pathlib",
+      "platform",
+      "sys"
+    ],
+    "payment_gateway.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "stripe",
+      "typing"
+    ],
+    "reputation_manager.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "roles.py": [
+      "dataclasses",
+      "enum",
+      "path_utils",
+      "pathlib",
+      "typing"
+    ],
+    "rs1_research_brief.py": [
+      "datetime",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "idea_log",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "rs1_research_compiler.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "typing",
+      "uuid"
+    ],
+    "setup_content_lab.py": [
+      "datetime",
+      "json",
+      "os",
+      "pathlib"
+    ],
+    "sheets_sync.py": [
+      "csv",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "google.oauth2.service_account",
+      "googleapiclient.discovery",
+      "idea_log",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "py_compile",
+      "subprocess",
+      "typing"
+    ],
+    "stasis.py": [
+      "datetime",
+      "dotenv",
+      "json",
+      "path_utils",
+      "pathlib",
+      "platform",
+      "sys",
+      "time"
+    ],
+    "test_unified_nervous_system.py": [
+      "datetime",
+      "engine.enforcement.context_server",
+      "engine.enforcement.diagnostic_server",
+      "engine.enforcement.governance_gate",
+      "engine.enforcement.learning_server",
+      "engine.event_bus",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "time"
+    ],
+    "ttlg_agents.py": [
+      "argparse",
+      "datetime",
+      "dotenv",
+      "json",
+      "langchain_anthropic",
+      "langchain_core.messages",
+      "langgraph.checkpoint.memory",
+      "langgraph.graph",
+      "os",
+      "pathlib",
+      "re",
+      "subprocess",
+      "sys",
+      "typing"
+    ],
+    "ttlg_conversational.py": [
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "fotw_listener",
+      "groq_router",
+      "json",
+      "path_utils",
+      "pathlib",
+      "sys",
+      "typing",
+      "uuid"
+    ],
+    "ttlg_scheduler.py": [
+      "constitutional_arbiter",
+      "content.lab.nodes.r1_radar",
+      "datetime",
+      "dotenv",
+      "epos_event_bus",
+      "epos_intelligence",
+      "flywheel_scheduler",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib"
+    ],
+    "vault_indexer.py": [
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "json",
+      "path_utils",
+      "pathlib"
+    ],
+    "youtube_analytics.py": [
+      "datetime",
+      "dotenv",
+      "epos_intelligence",
+      "json",
+      "os",
+      "path_utils",
+      "pathlib",
+      "requests",
+      "typing"
+    ]
+  },
+  "reverse_deps": {
+    "epos_intelligence.py": [
+      "agent_knowledge_evolution.py",
+      "agent_orchestrator.py",
+      "agent_zero_bridge.py",
+      "constitutional_arbiter.py",
+      "content_lab_producer.py",
+      "content_signal_loop.py",
+      "context_graph.py",
+      "context_librarian.py",
+      "echoes_lead_scorer.py",
+      "echoes_research_engine.py",
+      "epos_advocacy.py",
+      "epos_cli_router.py",
+      "epos_cms.py",
+      "epos_conversation.py",
+      "epos_financial.py",
+      "epos_live_query.py",
+      "epos_stewardship.py",
+      "epos_support.py",
+      "epos_ttlg_engagement.py",
+      "epos_ttlg_package.py",
+      "evl1_evolution_steward.py",
+      "flywheel_analyst.py",
+      "flywheel_scheduler.py",
+      "fotw_capture.py",
+      "fotw_listener.py",
+      "friday_intelligence.py",
+      "grag_session_engine.py",
+      "groq_router.py",
+      "lead_scoring.py",
+      "lifeos_sovereignty.py",
+      "ma1_niche_scanner.py",
+      "marl_reward_collector.py",
+      "multimodal_router.py",
+      "node_sovereignty_certifier.py",
+      "paperclip_governance.py",
+      "payment_gateway.py",
+      "reputation_manager.py",
+      "rs1_research_brief.py",
+      "rs1_research_compiler.py",
+      "sheets_sync.py",
+      "ttlg_conversational.py",
+      "ttlg_scheduler.py",
+      "vault_indexer.py",
+      "youtube_analytics.py"
+    ],
+    "groq_router.py": [
+      "agent_knowledge_evolution.py",
+      "content_lab_producer.py",
+      "echoes_lead_scorer.py",
+      "echoes_research_engine.py",
+      "engine/llm_client.py",
+      "epos.py",
+      "epos_advocacy.py",
+      "epos_cli_router.py",
+      "epos_conversation.py",
+      "epos_live_query.py",
+      "epos_stewardship.py",
+      "epos_ttlg_engagement.py",
+      "epos_ttlg_package.py",
+      "epos_verify_arms.py",
+      "fotw_listener.py",
+      "friday/friday_graph.py",
+      "friday_intelligence.py",
+      "lifeos_kernel.py",
+      "lifeos_sovereignty.py",
+      "ma1_niche_scanner.py",
+      "reputation_manager.py",
+      "rs1_research_brief.py",
+      "rs1_research_compiler.py",
+      "ttlg_conversational.py"
+    ],
+    "path_utils.py": [
+      "agent_knowledge_evolution.py",
+      "agent_orchestrator.py",
+      "agent_zero_bridge.py",
+      "constitutional_arbiter.py",
+      "content_lab/brief_generator.py",
+      "content_lab/crs_scorer.py",
+      "content_lab/echolocation_predictor.py",
+      "content_lab/template_engine.py",
+      "content_lab_producer.py",
+      "content_signal_loop.py",
+      "context_graph.py",
+      "context_librarian.py",
+      "dashboard_engine.py",
+      "echoes_lead_scorer.py",
+      "echoes_research_engine.py",
+      "engine/governed_orchestrator.py",
+      "epos.py",
+      "epos/agents/scc.py",
+      "epos/state/state_redundancy.py",
+      "epos/tools/path_sanitizer.py",
+      "epos/tools/permission_audit.py",
+      "epos/tools/sanitation_verifier.py",
+      "epos/tools/secret_extractor.py",
+      "epos_advocacy.py",
+      "epos_cli_router.py",
+      "epos_cms.py",
+      "epos_conversation.py",
+      "epos_daemon.py",
+      "epos_event_bus.py",
+      "epos_intelligence.py",
+      "epos_live_query.py",
+      "epos_node_cli.py",
+      "epos_stewardship.py",
+      "epos_ttlg_engagement.py",
+      "epos_ttlg_package.py",
+      "evl1_evolution_steward.py",
+      "flywheel_analyst.py",
+      "flywheel_scheduler.py",
+      "fotw_capture.py",
+      "fotw_listener.py",
+      "friday/continuous_improvement.py",
+      "friday/executors/code_executor.py",
+      "friday/executors/scc_executor.py",
+      "friday/executors/ttlg_executor.py",
+      "friday/friday_graph.py",
+      "friday/skills/metrics_observatory.py",
+      "friday/skills/morning_briefing.py",
+      "friday/skills/nightly_upskill.py",
+      "friday/skills/proactive_intelligence.py",
+      "friday/skills/research_scanner.py",
+      "friday/skills/thread_tracker.py",
+      "friday_daily_anchors.py",
+      "friday_intelligence.py",
+      "idea_log.py",
+      "lead_scoring.py",
+      "lifeos_kernel.py",
+      "lifeos_sovereignty.py",
+      "ma1_niche_scanner.py",
+      "node_sovereignty_certifier.py",
+      "nodes/agent_zero_node.py",
+      "nodes/avatar_registry.py",
+      "nodes/browser_use_node.py",
+      "nodes/unified_health.py",
+      "paperclip_governance.py",
+      "reputation_manager.py",
+      "roles.py",
+      "rs1_research_brief.py",
+      "rs1_research_compiler.py",
+      "sheets_sync.py",
+      "stasis.py",
+      "ttlg_conversational.py",
+      "ttlg_scheduler.py",
+      "vault_indexer.py",
+      "youtube_analytics.py"
+    ],
+    "roles.py": [
+      "agent_orchestrator.py",
+      "agent_zero_bridge.py",
+      "constitutional_arbiter.py",
+      "flywheel_analyst.py"
+    ],
+    "stasis.py": [
+      "agent_orchestrator.py",
+      "agent_zero_bridge.py",
+      "engine/autonomy.py",
+      "engine/governed_orchestrator.py"
+    ],
+    "agent_orchestrator.py": [
+      "agent_zero_bridge.py"
+    ],
+    "epos_event_bus.py": [
+      "agent_zero_bridge.py",
+      "constitutional_arbiter.py",
+      "content_lab/brief_generator.py",
+      "content_lab/crs_scorer.py",
+      "content_lab/echolocation_predictor.py",
+      "content_lab/template_engine.py",
+      "content_lab_producer.py",
+      "content_signal_loop.py",
+      "context_graph.py",
+      "dashboard_engine.py",
+      "echoes_lead_scorer.py",
+      "echoes_research_engine.py",
+      "engine/epos_doctor.py",
+      "epos.py",
+      "epos/agents/scc.py",
+      "epos/agents/sovereign_coding_agent.py",
+      "epos/models/model_registry.py",
+      "epos/pm/extraction_framework.py",
+      "epos/state/state_redundancy.py",
+      "epos/state/universal_state_graph.py",
+      "epos/tools/path_sanitizer.py",
+      "epos/tools/permission_audit.py",
+      "epos/tools/sanitation_verifier.py",
+      "epos/tools/secret_extractor.py",
+      "epos/voice/pipeline.py",
+      "epos_advocacy.py",
+      "epos_cli_router.py",
+      "epos_cms.py",
+      "epos_conversation.py",
+      "epos_daemon.py",
+      "epos_financial.py",
+      "epos_node_cli.py",
+      "epos_stewardship.py",
+      "epos_support.py",
+      "epos_ttlg_engagement.py",
+      "epos_ttlg_package.py",
+      "evl1_evolution_steward.py",
+      "flywheel_analyst.py",
+      "fotw_capture.py",
+      "fotw_listener.py",
+      "friday/continuous_improvement.py",
+      "friday/executors/az_executor.py",
+      "friday/executors/browser_executor.py",
+      "friday/executors/code_executor.py",
+      "friday/executors/computeruse_executor.py",
+      "friday/executors/scc_executor.py",
+      "friday/executors/system_executor.py",
+      "friday/executors/ttlg_executor.py",
+      "friday/friday_graph.py",
+      "friday/skills/morning_briefing.py",
+      "friday/skills/nightly_upskill.py",
+      "friday/skills/proactive_intelligence.py",
+      "friday/skills/research_scanner.py",
+      "friday_daily_anchors.py",
+      "governance_gate.py",
+      "idea_log.py",
+      "lead_scoring.py",
+      "lifeos_sovereignty.py",
+      "ma1_niche_scanner.py",
+      "marl_reward_collector.py",
+      "multimodal_router.py",
+      "node_sovereignty_certifier.py",
+      "nodes/agent_zero_node.py",
+      "nodes/avatar_registry.py",
+      "nodes/browser_use_node.py",
+      "nodes/execution_arm/callable.py",
+      "paperclip_governance.py",
+      "payment_gateway.py",
+      "reputation_manager.py",
+      "rs1_research_brief.py",
+      "rs1_research_compiler.py",
+      "sheets_sync.py",
+      "ttlg_conversational.py",
+      "ttlg_scheduler.py"
+    ],
+    "config.py": [
+      "az_dispatch.py",
+      "engine/command_validator.py"
+    ],
+    "engine/command_validator.py": [
+      "az_dispatch.py"
+    ],
+    "event_bus.py": [
+      "command_center.py",
+      "containers/agent-zero/az_bridge.py",
+      "context_server.py",
+      "engine/enforcement/diagnostic_server.py",
+      "engine/enforcement/learning_server.py",
+      "engine/enforcement/reward_bus.py",
+      "error_detector.py"
+    ],
+    "nodes/execution_arm/__init__.py": [
+      "containers/agent-zero/az_bridge.py",
+      "friday/executors/browser_executor.py",
+      "friday/executors/computeruse_executor.py"
+    ],
+    "content_lab/echolocation_predictor.py": [
+      "content_lab/brief_generator.py"
+    ],
+    "nodes/avatar_registry.py": [
+      "content_lab/brief_generator.py",
+      "content_lab/crs_scorer.py",
+      "content_lab/echolocation_predictor.py",
+      "content_lab/template_engine.py",
+      "epos_verify_arms.py",
+      "friday/skills/research_scanner.py",
+      "nodes/unified_health.py"
+    ],
+    "multimodal_router.py": [
+      "content_lab_producer.py",
+      "epos.py"
+    ],
+    "context_graph.py": [
+      "content_signal_loop.py",
+      "epos.py",
+      "epos_node_cli.py",
+      "evl1_evolution_steward.py",
+      "fotw_capture.py",
+      "marl_reward_collector.py"
+    ],
+    "governance_gate.py": [
+      "engine/enforcement/governance_gate.py",
+      "engine/governance_gate.py",
+      "engine/roles/arbiter.py",
+      "epos/agents/scc.py",
+      "epos_cli.py"
+    ],
+    "engine/enforcement/compliance_tracker.py": [
+      "engine/enforcement/reward_bus.py"
+    ],
+    "content_signal_loop.py": [
+      "engine/epos_doctor.py",
+      "epos.py",
+      "epos_daemon.py",
+      "friday/friday_graph.py"
+    ],
+    "context_handler.py": [
+      "engine/epos_doctor.py"
+    ],
+    "epos/state/state_redundancy.py": [
+      "engine/epos_doctor.py",
+      "epos/state/universal_state_graph.py"
+    ],
+    "epos/tools/bom_cleaner.py": [
+      "engine/epos_doctor.py"
+    ],
+    "friday_daily_anchors.py": [
+      "engine/epos_doctor.py",
+      "epos.py",
+      "epos_daemon.py"
+    ],
+    "idea_log.py": [
+      "engine/epos_doctor.py",
+      "epos.py",
+      "friday_intelligence.py",
+      "rs1_research_brief.py",
+      "sheets_sync.py"
+    ],
+    "lead_scoring.py": [
+      "engine/epos_doctor.py",
+      "epos.py"
+    ],
+    "lifeos_sovereignty.py": [
+      "engine/epos_doctor.py",
+      "epos.py",
+      "friday_daily_anchors.py"
+    ],
+    "nodes/agent_zero_node.py": [
+      "engine/epos_doctor.py"
+    ],
+    "nodes/browser_use_node.py": [
+      "engine/epos_doctor.py",
+      "epos.py"
+    ],
+    "rs1_research_brief.py": [
+      "engine/epos_doctor.py",
+      "epos.py",
+      "friday/friday_graph.py"
+    ],
+    "sheets_sync.py": [
+      "engine/epos_doctor.py",
+      "epos.py"
+    ],
+    "ttlg/props/schema.py": [
+      "engine/epos_doctor.py",
+      "epos.py"
+    ],
+    "ttlg/remediation_runbook.py": [
+      "engine/epos_doctor.py",
+      "epos.py"
+    ],
+    "ttlg/self_healing_scout.py": [
+      "engine/epos_doctor.py",
+      "epos.py"
+    ],
+    "content/lab/content_lab_core.py": [
+      "epos.py"
+    ],
+    "content/lab/nodes/r1_radar.py": [
+      "epos.py",
+      "epos_cli_router.py",
+      "ttlg_scheduler.py"
+    ],
+    "content/lab/spark_to_brief.py": [
+      "epos.py"
+    ],
+    "content_lab_producer.py": [
+      "epos.py"
+    ],
+    "dashboard_engine.py": [
+      "epos.py"
+    ],
+    "epos_cms.py": [
+      "epos.py",
+      "epos_advocacy.py",
+      "epos_cli_router.py",
+      "epos_node_cli.py",
+      "epos_stewardship.py",
+      "epos_ttlg_engagement.py",
+      "epos_ttlg_package.py",
+      "fotw_capture.py"
+    ],
+    "epos_financial.py": [
+      "epos.py",
+      "epos_cli_router.py",
+      "epos_ttlg_package.py"
+    ],
+    "epos_live_query.py": [
+      "epos.py",
+      "epos_conversation.py",
+      "epos_support.py",
+      "grag_session_engine.py"
+    ],
+    "flywheel_scheduler.py": [
+      "epos.py",
+      "ttlg_scheduler.py"
+    ],
+    "fotw_listener.py": [
+      "epos.py",
+      "epos_daemon.py",
+      "ttlg_conversational.py"
+    ],
+    "friday/friday_graph.py": [
+      "epos.py",
+      "epos_verify_arms.py",
+      "friday/api.py"
+    ],
+    "friday_intelligence.py": [
+      "epos.py",
+      "epos_daemon.py"
+    ],
+    "graphs/ttlg_diagnostic_graph.py": [
+      "epos.py"
+    ],
+    "knowledge/kil_daily.py": [
+      "epos.py",
+      "epos_daemon.py"
+    ],
+    "lifeos_kernel.py": [
+      "epos.py",
+      "lifeos_sovereignty.py"
+    ],
+    "paperclip_governance.py": [
+      "epos.py"
+    ],
+    "payment_gateway.py": [
+      "epos.py"
+    ],
+    "reputation_manager.py": [
+      "epos.py"
+    ],
+    "rs1_research_compiler.py": [
+      "epos.py"
+    ],
+    "ttlg/mirror_report.py": [
+      "epos.py"
+    ],
+    "ttlg/pipeline_graph.py": [
+      "epos.py",
+      "epos_daemon.py",
+      "friday/executors/system_executor.py",
+      "friday/executors/ttlg_executor.py"
+    ],
+    "ttlg_conversational.py": [
+      "epos.py"
+    ],
+    "epos/state/universal_state_graph.py": [
+      "epos/agents/scc.py",
+      "epos/agents/sovereign_coding_agent.py",
+      "epos/models/model_registry.py"
+    ],
+    "engine/governance_gate.py": [
+      "epos/agents/sovereign_coding_agent.py"
+    ],
+    "engine/llm_client.py": [
+      "epos/agents/sovereign_coding_agent.py",
+      "epos/pm/extraction_framework.py",
+      "epos_verify_arms.py",
+      "friday/executors/code_executor.py",
+      "friday/skills/research_scanner.py"
+    ],
+    "epos/ccp/extractor.py": [
+      "epos/ccp/__init__.py",
+      "epos/ccp/pipeline.py",
+      "epos/ccp/router.py",
+      "epos/ccp/scorer.py",
+      "epos/pm/store.py"
+    ],
+    "epos/ccp/pipeline.py": [
+      "epos/ccp/__init__.py",
+      "epos/pm/api.py",
+      "epos/voice/pipeline.py"
+    ],
+    "epos/ccp/router.py": [
+      "epos/ccp/__init__.py",
+      "epos/ccp/pipeline.py"
+    ],
+    "epos/ccp/scorer.py": [
+      "epos/ccp/__init__.py",
+      "epos/ccp/pipeline.py",
+      "epos/ccp/router.py"
+    ],
+    "epos/rewards/publish_reward.py": [
+      "epos/ccp/decay.py",
+      "epos/ccp/pipeline.py",
+      "epos/ccp/router.py",
+      "epos/rewards/__init__.py",
+      "epos/tools/bom_cleaner.py",
+      "epos/tools/sanitation_verifier.py",
+      "epos/training/shadow_protocol.py",
+      "epos/voice/pipeline.py",
+      "epos/voice/router.py"
+    ],
+    "epos/pm/store.py": [
+      "epos/ccp/pipeline.py",
+      "epos/ccp/router.py",
+      "epos/pm/api.py",
+      "friday/skills/morning_briefing.py"
+    ],
+    "tools/litellm_client.py": [
+      "epos/ccp/scorer.py"
+    ],
+    "epos/training/shadow_protocol.py": [
+      "epos/training/practice_gym.py"
+    ],
+    "epos/voice/pipeline.py": [
+      "epos/voice/api.py"
+    ],
+    "epos/voice/training_logger.py": [
+      "epos/voice/api.py",
+      "epos/voice/pipeline.py"
+    ],
+    "epos/voice/vault_search.py": [
+      "epos/voice/api.py",
+      "epos/voice/pipeline.py"
+    ],
+    "epos/voice/vocabulary.py": [
+      "epos/voice/api.py",
+      "epos/voice/pipeline.py"
+    ],
+    "epos/voice/reformulator.py": [
+      "epos/voice/pipeline.py"
+    ],
+    "epos/voice/speaker.py": [
+      "epos/voice/pipeline.py"
+    ],
+    "epos/voice/transcriber.py": [
+      "epos/voice/pipeline.py"
+    ],
+    "epos_cli_router.py": [
+      "epos_agent_cli.py"
+    ],
+    "engine/epos_doctor.py": [
+      "epos_cli.py",
+      "friday/executors/system_executor.py",
+      "friday/executors/ttlg_executor.py"
+    ],
+    "agent_knowledge_evolution.py": [
+      "epos_cli_router.py",
+      "epos_live_query.py",
+      "evl1_evolution_steward.py",
+      "fotw_capture.py",
+      "grag_session_engine.py"
+    ],
+    "constitutional_arbiter.py": [
+      "epos_cli_router.py",
+      "flywheel_analyst.py",
+      "ttlg_scheduler.py"
+    ],
+    "content/lab/nodes/an1_analyst.py": [
+      "epos_cli_router.py"
+    ],
+    "context_librarian.py": [
+      "epos_cli_router.py"
+    ],
+    "epos_support.py": [
+      "epos_cli_router.py"
+    ],
+    "flywheel_analyst.py": [
+      "epos_cli_router.py",
+      "flywheel_scheduler.py"
+    ],
+    "friday/continuous_improvement.py": [
+      "epos_daemon.py"
+    ],
+    "friday/skills/metrics_observatory.py": [
+      "epos_daemon.py",
+      "friday/skills/morning_briefing.py",
+      "friday/skills/proactive_intelligence.py"
+    ],
+    "friday/skills/morning_briefing.py": [
+      "epos_daemon.py",
+      "epos_verify_arms.py"
+    ],
+    "friday/skills/nightly_upskill.py": [
+      "epos_daemon.py",
+      "epos_verify_arms.py"
+    ],
+    "friday/skills/proactive_intelligence.py": [
+      "epos_daemon.py",
+      "friday/skills/morning_briefing.py"
+    ],
+    "friday/skills/thread_tracker.py": [
+      "epos_daemon.py",
+      "friday/skills/morning_briefing.py",
+      "friday/skills/proactive_intelligence.py"
+    ],
+    "reactor/content_reactor.py": [
+      "epos_daemon.py",
+      "epos_verify_arms.py"
+    ],
+    "reactor/handlers_v2.py": [
+      "epos_daemon.py"
+    ],
+    "reactor/marketing_reactor.py": [
+      "epos_daemon.py"
+    ],
+    "echoes_research_engine.py": [
+      "epos_live_query.py",
+      "evl1_evolution_steward.py"
+    ],
+    "friday/executors/az_executor.py": [
+      "epos_verify_arms.py"
+    ],
+    "friday/executors/browser_executor.py": [
+      "epos_verify_arms.py"
+    ],
+    "friday/executors/code_executor.py": [
+      "epos_verify_arms.py"
+    ],
+    "friday/executors/computeruse_executor.py": [
+      "epos_verify_arms.py"
+    ],
+    "friday/executors/scc_executor.py": [
+      "epos_verify_arms.py",
+      "friday/executors/claude_code_executor.py"
+    ],
+    "friday/executors/system_executor.py": [
+      "epos_verify_arms.py"
+    ],
+    "friday/executors/ttlg_executor.py": [
+      "epos_verify_arms.py"
+    ],
+    "friday/skills/research_scanner.py": [
+      "epos_verify_arms.py",
+      "friday/skills/morning_briefing.py"
+    ],
+    "vault_indexer.py": [
+      "flywheel_scheduler.py"
+    ],
+    "friday/executors/__init__.py": [
+      "friday/friday_graph.py"
+    ],
+    "epos/ccp/decay.py": [
+      "friday/skills/morning_briefing.py"
+    ],
+    "epos/rewards/reward_aggregator.py": [
+      "friday/skills/morning_briefing.py"
+    ],
+    "node_sovereignty_certifier.py": [
+      "nodes/unified_health.py"
+    ],
+    "engine/enforcement/diagnostic_server.py": [
+      "test_unified_nervous_system.py"
+    ],
+    "engine/enforcement/governance_gate.py": [
+      "test_unified_nervous_system.py"
+    ],
+    "engine/enforcement/learning_server.py": [
+      "test_unified_nervous_system.py"
+    ]
+  },
+  "browseruse_lineage": {
+    "files": [
+      "browseruse_airtable_setup.py",
+      "friday/executors/browser_executor.py",
+      "nodes/browser_use_node.py",
+      "nodes/execution_arm/browser_use_arm.py"
+    ],
+    "consumers_per_file": {
+      "browseruse_airtable_setup.py": [],
+      "friday/executors/browser_executor.py": [
+        "epos_verify_arms.py"
+      ],
+      "nodes/browser_use_node.py": [
+        "engine/epos_doctor.py",
+        "epos.py"
+      ],
+      "nodes/execution_arm/browser_use_arm.py": []
+    },
+    "internal_deps_per_file": {
+      "browseruse_airtable_setup.py": [
+        "browser_use"
+      ],
+      "friday/executors/browser_executor.py": [],
+      "nodes/browser_use_node.py": [
+        "browser_use",
+        "browser_use.browser.context",
+        "browser_use.llm"
+      ],
+      "nodes/execution_arm/browser_use_arm.py": [
+        "browser_use",
+        "browser_use.browser.context",
+        "browser_use.llm"
+      ]
+    }
+  },
+  "summary": {
+    "modules_total": 186,
+    "capabilities": 32,
+    "modules_with_imports": 170,
+    "modules_with_consumers": 106,
+    "top_capabilities": [
+      [
+        "uncategorized",
+        [
+          "az_dispatch.py",
+          "codebase_review_snapshot.py",
+          "command_center.py",
+          "config.py",
+          "containers/context-server/server.py",
+          "containers/event-bus/server.py",
+          "containers/learning-server/server.py",
+          "content_signal_loop.py",
+          "context_graph.py",
+          "context_handler.py",
+          "context_librarian.py",
+          "context_server.py",
+          "dashboard_engine.py",
+          "echoes_research_engine.py",
+          "engine/__init__.py",
+          "engine/autonomy.py",
+          "engine/command_validator.py",
+          "engine/enforcement/__init__.py",
+          "engine/enforcement/compliance_tracker.py",
+          "engine/enforcement/diagnostic_server.py",
+          "engine/enforcement/learning_server.py",
+          "engine/enforcement/validate_nervous_system.py",
+          "engine/governed_orchestrator.py",
+          "engine/llm_client.py",
+          "engine/roles/analyst.py",
+          "engine/roles/librarian.py",
+          "engine/rollback.py",
+          "epos.py",
+          "epos/__init__.py",
+          "epos_advocacy.py",
+          "epos_align_scan.py",
+          "epos_cli.py",
+          "epos_cli_router.py",
+          "epos_cms.py",
+          "epos_conversation.py",
+          "epos_daemon.py",
+          "epos_financial.py",
+          "epos_genesis.py",
+          "epos_intelligence.py",
+          "epos_live_query.py",
+          "epos_node_cli.py",
+          "epos_resolver.py",
+          "epos_snapshot.py",
+          "epos_stewardship.py",
+          "epos_support.py",
+          "epos_verify_arms.py",
+          "error_detector.py",
+          "evl1_evolution_steward.py",
+          "export_codebase_inventory.py",
+          "grag_session_engine.py",
+          "groq_router.py",
+          "idea_log.py",
+          "life_os_cli.py",
+          "lifeos_kernel.py",
+          "lifeos_sovereignty.py",
+          "ma1_niche_scanner.py",
+          "master_installer.py",
+          "multimodal_router.py",
+          "node_sovereignty_certifier.py",
+          "nodes/__init__.py",
+          "nodes/avatar_registry.py",
+          "path_utils.py",
+          "payment_gateway.py",
+          "roles.py",
+          "rs1_research_brief.py",
+          "rs1_research_compiler.py",
+          "sheets_sync.py",
+          "stasis.py",
+          "test_unified_nervous_system.py",
+          "vault_indexer.py",
+          "youtube_analytics.py"
+        ]
+      ],
+      [
+        "friday",
+        [
+          "friday/__init__.py",
+          "friday/api.py",
+          "friday/continuous_improvement.py",
+          "friday/executors/__init__.py",
+          "friday/executors/az_executor.py",
+          "friday/executors/browser_executor.py",
+          "friday/executors/claude_code_executor.py",
+          "friday/executors/code_executor.py",
+          "friday/executors/computeruse_executor.py",
+          "friday/executors/scc_executor.py",
+          "friday/executors/system_executor.py",
+          "friday/executors/ttlg_executor.py",
+          "friday/friday_graph.py",
+          "friday/skills/__init__.py",
+          "friday/skills/metrics_observatory.py",
+          "friday/skills/morning_briefing.py",
+          "friday/skills/nightly_upskill.py",
+          "friday/skills/personality.py",
+          "friday/skills/proactive_intelligence.py",
+          "friday/skills/research_scanner.py",
+          "friday/skills/thread_tracker.py",
+          "friday_daily_anchors.py",
+          "friday_intelligence.py"
+        ]
+      ],
+      [
+        "voice_pipeline",
+        [
+          "epos/voice/__init__.py",
+          "epos/voice/api.py",
+          "epos/voice/pipeline.py",
+          "epos/voice/reformulator.py",
+          "epos/voice/router.py",
+          "epos/voice/speaker.py",
+          "epos/voice/training_logger.py",
+          "epos/voice/transcriber.py",
+          "epos/voice/vault_search.py",
+          "epos/voice/vision.py",
+          "epos/voice/vocabulary.py"
+        ]
+      ],
+      [
+        "agent",
+        [
+          "agent_knowledge_evolution.py",
+          "agent_orchestrator.py",
+          "agent_zero_bridge.py",
+          "containers/agent-zero/az_bridge.py",
+          "epos/agents/__init__.py",
+          "epos/agents/scc.py",
+          "epos/agents/sovereign_coding_agent.py",
+          "epos_agent_cli.py",
+          "nodes/agent_zero_node.py",
+          "ttlg_agents.py"
+        ]
+      ],
+      [
+        "executor",
+        [
+          "az_mission_executor.py",
+          "friday/executors/__init__.py",
+          "friday/executors/az_executor.py",
+          "friday/executors/browser_executor.py",
+          "friday/executors/claude_code_executor.py",
+          "friday/executors/code_executor.py",
+          "friday/executors/computeruse_executor.py",
+          "friday/executors/scc_executor.py",
+          "friday/executors/system_executor.py",
+          "friday/executors/ttlg_executor.py"
+        ]
+      ],
+      [
+        "governance",
+        [
+          "constitutional_arbiter.py",
+          "constitutional_enforcer.py",
+          "containers/governance-gate/server.py",
+          "containers/governance-server/server.py",
+          "engine/enforcement/governance_gate.py",
+          "engine/governance_gate.py",
+          "engine/roles/arbiter.py",
+          "governance_gate.py",
+          "nodes/execution_arm/deletion_gate.py",
+          "paperclip_governance.py"
+        ]
+      ],
+      [
+        "skill",
+        [
+          "friday/skills/__init__.py",
+          "friday/skills/metrics_observatory.py",
+          "friday/skills/morning_briefing.py",
+          "friday/skills/nightly_upskill.py",
+          "friday/skills/personality.py",
+          "friday/skills/proactive_intelligence.py",
+          "friday/skills/research_scanner.py",
+          "friday/skills/thread_tracker.py"
+        ]
+      ],
+      [
+        "content_production",
+        [
+          "content_lab/__init__.py",
+          "content_lab/brief_generator.py",
+          "content_lab/crs_scorer.py",
+          "content_lab/echolocation_predictor.py",
+          "content_lab/template_engine.py",
+          "content_lab_producer.py",
+          "setup_content_lab.py"
+        ]
+      ],
+      [
+        "concentric_context_protocol",
+        [
+          "epos/ccp/__init__.py",
+          "epos/ccp/decay.py",
+          "epos/ccp/extractor.py",
+          "epos/ccp/pipeline.py",
+          "epos/ccp/router.py",
+          "epos/ccp/scorer.py"
+        ]
+      ],
+      [
+        "ttlg",
+        [
+          "epos_ttlg_engagement.py",
+          "epos_ttlg_package.py",
+          "friday/executors/ttlg_executor.py",
+          "ttlg_agents.py",
+          "ttlg_conversational.py",
+          "ttlg_scheduler.py"
+        ]
+      ]
+    ]
+  }
+}

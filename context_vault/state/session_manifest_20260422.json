@@ -1,0 +1,658 @@
+[
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/.gitignore",
+    "repo_path": ".gitignore",
+    "status": "MODIFIED",
+    "sha256": "e00513b172dfc6fc63d6f4fab86989985ec2225e2895aac2a0eaedaa14e9c083",
+    "size_bytes": 1352,
+    "lines": 98
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/MEMORY.md",
+    "repo_path": "MEMORY.md",
+    "status": "ADDED",
+    "sha256": "695c37a20514064895c095efaed1603f7efa405ebfb9f9cb447c659626b4e458",
+    "size_bytes": 3954,
+    "lines": 58
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/agent-zero/Dockerfile",
+    "repo_path": "containers/agent-zero/Dockerfile",
+    "status": "MODIFIED",
+    "sha256": "5ca69e2f43b22846404d138be50ada039a297b0e24bdb7cb1d02c356cdcff4fc",
+    "size_bytes": 3067,
+    "lines": 77
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/agent-zero/az_bridge.py",
+    "repo_path": "containers/agent-zero/az_bridge.py",
+    "status": "MODIFIED",
+    "sha256": "264b99ce575b7e0faf5e86171740c9189f1ef14e40a858988fc9bed12644e139",
+    "size_bytes": 12823,
+    "lines": 327
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/mirofish/Dockerfile",
+    "repo_path": "containers/mirofish/Dockerfile",
+    "status": "ADDED",
+    "sha256": "bf79a1acf8eff1e8a283779a59dfad6a488e47bb6593667d4ef3a3154b28f07a",
+    "size_bytes": 1011,
+    "lines": 36
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/mirofish/requirements.txt",
+    "repo_path": "containers/mirofish/requirements.txt",
+    "status": "ADDED",
+    "sha256": "f812f1a4c51a49b422878f650f56551f6d76e37786ed62cc928b6cf5d1514c9c",
+    "size_bytes": 78,
+    "lines": 5
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/mirofish/simulator.py",
+    "repo_path": "containers/mirofish/simulator.py",
+    "status": "ADDED",
+    "sha256": "d91ed6d1a8de1276a6456cfbf96011fc017b6ca6d1f5fb38449c91a6757fb59d",
+    "size_bytes": 10878,
+    "lines": 312
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/aar/TTLG_POST_COMPLETION_20260422_AAR.md",
+    "repo_path": "context_vault/aar/TTLG_POST_COMPLETION_20260422_AAR.md",
+    "status": "ADDED",
+    "sha256": "c1e0a80a72a4ea7f0871f6befd76a821488125c56769398ed6915c0e7b5e9932",
+    "size_bytes": 7272,
+    "lines": 140
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_CC_DEPLOY_UPSKILL_20260408.md",
+    "repo_path": "context_vault/attachments/AAR_CC_DEPLOY_UPSKILL_20260408.md",
+    "status": "RENAMED",
+    "from_path": "AAR_CC_DEPLOY_UPSKILL_20260408.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_CC_WIRE_LLM_PATH_20260407.md",
+    "repo_path": "context_vault/attachments/AAR_CC_WIRE_LLM_PATH_20260407.md",
+    "status": "RENAMED",
+    "from_path": "AAR_CC_WIRE_LLM_PATH_20260407.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_DOCKERIZATION_20260408.md",
+    "repo_path": "context_vault/attachments/AAR_DOCKERIZATION_20260408.md",
+    "status": "RENAMED",
+    "from_path": "AAR_DOCKERIZATION_20260408.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_INTELLIGENCE_LAYER_PROXY_20260410.md",
+    "repo_path": "context_vault/attachments/AAR_INTELLIGENCE_LAYER_PROXY_20260410.md",
+    "status": "RENAMED",
+    "from_path": "AAR_INTELLIGENCE_LAYER_PROXY_20260410.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_MODULE3_ROLES_20260327.md",
+    "repo_path": "context_vault/attachments/AAR_MODULE3_ROLES_20260327.md",
+    "status": "RENAMED",
+    "from_path": "AAR_MODULE3_ROLES_20260327.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_MODULE4_INTELLIGENCE_20260327.md",
+    "repo_path": "context_vault/attachments/AAR_MODULE4_INTELLIGENCE_20260327.md",
+    "status": "RENAMED",
+    "from_path": "AAR_MODULE4_INTELLIGENCE_20260327.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_MODULE5_LIBRARIAN_20260327.md",
+    "repo_path": "context_vault/attachments/AAR_MODULE5_LIBRARIAN_20260327.md",
+    "status": "RENAMED",
+    "from_path": "AAR_MODULE5_LIBRARIAN_20260327.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_MODULE6_ARBITER_20260328.md",
+    "repo_path": "context_vault/attachments/AAR_MODULE6_ARBITER_20260328.md",
+    "status": "RENAMED",
+    "from_path": "AAR_MODULE6_ARBITER_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_MODULE7_FLYWHEEL_20260328.md",
+    "repo_path": "context_vault/attachments/AAR_MODULE7_FLYWHEEL_20260328.md",
+    "status": "RENAMED",
+    "from_path": "AAR_MODULE7_FLYWHEEL_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_MODULE8_ORCHESTRATOR_20260328.md",
+    "repo_path": "context_vault/attachments/AAR_MODULE8_ORCHESTRATOR_20260328.md",
+    "status": "RENAMED",
+    "from_path": "AAR_MODULE8_ORCHESTRATOR_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_SPRINT2_PROGRESS_20260328.md",
+    "repo_path": "context_vault/attachments/AAR_SPRINT2_PROGRESS_20260328.md",
+    "status": "RENAMED",
+    "from_path": "AAR_SPRINT2_PROGRESS_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_TEMPLATE.md",
+    "repo_path": "context_vault/attachments/AAR_TEMPLATE.md",
+    "status": "RENAMED",
+    "from_path": "AAR_TEMPLATE.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AGENT_ZERO_ALIGN_AAR_20260327.md",
+    "repo_path": "context_vault/attachments/AGENT_ZERO_ALIGN_AAR_20260327.md",
+    "status": "RENAMED",
+    "from_path": "AGENT_ZERO_ALIGN_AAR_20260327.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/ARTIFACT_1_MORNING_SESSION_AAR.md",
+    "repo_path": "context_vault/attachments/ARTIFACT_1_MORNING_SESSION_AAR.md",
+    "status": "RENAMED",
+    "from_path": "ARTIFACT_1_MORNING_SESSION_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/BUSINESS_OPS_TTLG_AAR.md",
+    "repo_path": "context_vault/attachments/BUSINESS_OPS_TTLG_AAR.md",
+    "status": "RENAMED",
+    "from_path": "BUSINESS_OPS_TTLG_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/COMPLETE_BUILD_AAR_20260329.md",
+    "repo_path": "context_vault/attachments/COMPLETE_BUILD_AAR_20260329.md",
+    "status": "RENAMED",
+    "from_path": "COMPLETE_BUILD_AAR_20260329.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/DEEP_AAR_COMPLETE_BUILD_20260330.md",
+    "repo_path": "context_vault/attachments/DEEP_AAR_COMPLETE_BUILD_20260330.md",
+    "status": "RENAMED",
+    "from_path": "DEEP_AAR_COMPLETE_BUILD_20260330.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/ECHOES_BUSINESS_ARCHITECTURE_AAR.md",
+    "repo_path": "context_vault/attachments/ECHOES_BUSINESS_ARCHITECTURE_AAR.md",
+    "status": "RENAMED",
+    "from_path": "ECHOES_BUSINESS_ARCHITECTURE_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/ECHOES_JOURNEY_INFRASTRUCTURE_AAR.md",
+    "repo_path": "context_vault/attachments/ECHOES_JOURNEY_INFRASTRUCTURE_AAR.md",
+    "status": "RENAMED",
+    "from_path": "ECHOES_JOURNEY_INFRASTRUCTURE_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/ECHOES_LAUNCH_WORKSPACE_AAR_20260328.md",
+    "repo_path": "context_vault/attachments/ECHOES_LAUNCH_WORKSPACE_AAR_20260328.md",
+    "status": "RENAMED",
+    "from_path": "ECHOES_LAUNCH_WORKSPACE_AAR_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260406.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260406.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260406.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260406_BOTH_SESSIONS.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260406_BOTH_SESSIONS.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260406_BOTH_SESSIONS.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260406_EVENING.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260406_EVENING.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260406_EVENING.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260407.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260407.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260407.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260407_AFTERNOON.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260407_AFTERNOON.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260407_AFTERNOON.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260407_CONTENT_LAB_COMPLETION.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260407_CONTENT_LAB_COMPLETION.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260407_CONTENT_LAB_COMPLETION.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260407_GAP_CLOSURE.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260407_GAP_CLOSURE.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260407_GAP_CLOSURE.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_AAR_20260407_TTLG_CODEBASE_CC_SCAN.md",
+    "repo_path": "context_vault/attachments/EPOS_AAR_20260407_TTLG_CODEBASE_CC_SCAN.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_AAR_20260407_TTLG_CODEBASE_CC_SCAN.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/EPOS_CLEANUP_AAR_20260328.md",
+    "repo_path": "context_vault/attachments/EPOS_CLEANUP_AAR_20260328.md",
+    "status": "RENAMED",
+    "from_path": "EPOS_CLEANUP_AAR_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/FRIDAY_V2_AAR.md",
+    "repo_path": "context_vault/attachments/FRIDAY_V2_AAR.md",
+    "status": "RENAMED",
+    "from_path": "FRIDAY_V2_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/LIFEOS_CLI_AAR_20260327.md",
+    "repo_path": "context_vault/attachments/LIFEOS_CLI_AAR_20260327.md",
+    "status": "RENAMED",
+    "from_path": "LIFEOS_CLI_AAR_20260327.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/LIFEOS_RS1_AAR_20260330.md",
+    "repo_path": "context_vault/attachments/LIFEOS_RS1_AAR_20260330.md",
+    "status": "RENAMED",
+    "from_path": "LIFEOS_RS1_AAR_20260330.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/MISSION_A_PREFLIGHT_CLEANUP_AAR_20260401.md",
+    "repo_path": "context_vault/attachments/MISSION_A_PREFLIGHT_CLEANUP_AAR_20260401.md",
+    "status": "RENAMED",
+    "from_path": "MISSION_A_PREFLIGHT_CLEANUP_AAR_20260401.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/RESEARCH_INTELLIGENCE_AAR.md",
+    "repo_path": "context_vault/attachments/RESEARCH_INTELLIGENCE_AAR.md",
+    "status": "RENAMED",
+    "from_path": "RESEARCH_INTELLIGENCE_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/RS1_SKILL_COMPILER_AAR.md",
+    "repo_path": "context_vault/attachments/RS1_SKILL_COMPILER_AAR.md",
+    "status": "RENAMED",
+    "from_path": "RS1_SKILL_COMPILER_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SESSION_AAR_20260329.md",
+    "repo_path": "context_vault/attachments/SESSION_AAR_20260329.md",
+    "status": "RENAMED",
+    "from_path": "SESSION_AAR_20260329.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT2_FINAL_AAR_20260328.md",
+    "repo_path": "context_vault/attachments/SPRINT2_FINAL_AAR_20260328.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT2_FINAL_AAR_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT3_AAR_20260328.md",
+    "repo_path": "context_vault/attachments/SPRINT3_AAR_20260328.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT3_AAR_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT3_FINAL_AAR_20260328.md",
+    "repo_path": "context_vault/attachments/SPRINT3_FINAL_AAR_20260328.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT3_FINAL_AAR_20260328.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT4_AAR_20260329.md",
+    "repo_path": "context_vault/attachments/SPRINT4_AAR_20260329.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT4_AAR_20260329.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT5_AAR_20260329.md",
+    "repo_path": "context_vault/attachments/SPRINT5_AAR_20260329.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT5_AAR_20260329.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT6_AAR_20260329.md",
+    "repo_path": "context_vault/attachments/SPRINT6_AAR_20260329.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT6_AAR_20260329.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SPRINT_AAR_20260401_TTLG_OVERHAUL.md",
+    "repo_path": "context_vault/attachments/SPRINT_AAR_20260401_TTLG_OVERHAUL.md",
+    "status": "RENAMED",
+    "from_path": "SPRINT_AAR_20260401_TTLG_OVERHAUL.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/SYNTHESIS_SPRINT_AAR.md",
+    "repo_path": "context_vault/attachments/SYNTHESIS_SPRINT_AAR.md",
+    "status": "RENAMED",
+    "from_path": "SYNTHESIS_SPRINT_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/TTLG_EPOS_SELF_AUDIT_AAR_20260401.md",
+    "repo_path": "context_vault/attachments/TTLG_EPOS_SELF_AUDIT_AAR_20260401.md",
+    "status": "RENAMED",
+    "from_path": "TTLG_EPOS_SELF_AUDIT_AAR_20260401.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/TTLG_HARDENING_AAR.md",
+    "repo_path": "context_vault/attachments/TTLG_HARDENING_AAR.md",
+    "status": "RENAMED",
+    "from_path": "TTLG_HARDENING_AAR.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/TTLG_V2_SELF_HEALING_AAR_20260404.md",
+    "repo_path": "context_vault/attachments/TTLG_V2_SELF_HEALING_AAR_20260404.md",
+    "status": "RENAMED",
+    "from_path": "TTLG_V2_SELF_HEALING_AAR_20260404.md"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/aar_v1 (1).json",
+    "repo_path": "context_vault/attachments/aar_v1 (1).json",
+    "status": "RENAMED",
+    "from_path": "aar_v1 (1).json"
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/ARCHITECT_ARCHETYPE.md",
+    "repo_path": "context_vault/doctrine/councils/ARCHITECT_ARCHETYPE.md",
+    "status": "ADDED",
+    "sha256": "bc90a00ff175163ca09153c828a9733e7d8b9cde2b79fc3f15fb349dd706ec84",
+    "size_bytes": 3245,
+    "lines": 71
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/ARCHITECT_TOOL_REGISTRY_v1.md",
+    "repo_path": "context_vault/doctrine/councils/ARCHITECT_TOOL_REGISTRY_v1.md",
+    "status": "ADDED",
+    "sha256": "67d12c6b3fd97983576b68cf1776c75a096136ec8b78ea33fd6ae9aebffc2791",
+    "size_bytes": 8184,
+    "lines": 141
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/CHRONICLER_ARCHETYPE.md",
+    "repo_path": "context_vault/doctrine/councils/CHRONICLER_ARCHETYPE.md",
+    "status": "ADDED",
+    "sha256": "811a49a29b4fd1ade601aa4085f44fe513b13e8e47b9c25fa3d9ecbaf60b69a4",
+    "size_bytes": 3618,
+    "lines": 72
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/COUNCIL_CHARTER_v1.md",
+    "repo_path": "context_vault/doctrine/councils/COUNCIL_CHARTER_v1.md",
+    "status": "ADDED",
+    "sha256": "5e6b6b91ac2057945e6eee20a0f5ccbac336c32b1a572315bc742a7dad0f15eb",
+    "size_bytes": 5700,
+    "lines": 99
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/FORGE_ARCHETYPE.md",
+    "repo_path": "context_vault/doctrine/councils/FORGE_ARCHETYPE.md",
+    "status": "ADDED",
+    "sha256": "7653680b8317447a78f4581c27304048a60c63fa2b24a1acae0002b70b9981c4",
+    "size_bytes": 4128,
+    "lines": 87
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/OPERATING_PROTOCOL_v1.md",
+    "repo_path": "context_vault/doctrine/councils/OPERATING_PROTOCOL_v1.md",
+    "status": "ADDED",
+    "sha256": "07f92707009b46eb0a74ac89593071ee61d23143983d3770b6f1ae2e9d7fce9a",
+    "size_bytes": 5203,
+    "lines": 120
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/ORACLE_ARCHETYPE.md",
+    "repo_path": "context_vault/doctrine/councils/ORACLE_ARCHETYPE.md",
+    "status": "ADDED",
+    "sha256": "46d807a22553b73c375c0980fc43b11d66d03de862bfa895159592ac12e020ac",
+    "size_bytes": 3164,
+    "lines": 66
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/SENTINEL_ARCHETYPE.md",
+    "repo_path": "context_vault/doctrine/councils/SENTINEL_ARCHETYPE.md",
+    "status": "ADDED",
+    "sha256": "7190a14d43aad9c86ea4e46579472462afd975b287dec3ec7b4e4b0aa047896e",
+    "size_bytes": 3498,
+    "lines": 75
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/STEWARD_ARCHETYPE.md",
+    "repo_path": "context_vault/doctrine/councils/STEWARD_ARCHETYPE.md",
+    "status": "ADDED",
+    "sha256": "7fb3151139f0884691920d2fc2554682943997b0c418043661b7cc0d0128c8df",
+    "size_bytes": 4429,
+    "lines": 89
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/TTLG_RESUBMISSION_LOOP_v1.md",
+    "repo_path": "context_vault/doctrine/councils/TTLG_RESUBMISSION_LOOP_v1.md",
+    "status": "ADDED",
+    "sha256": "ba297caa227162bccee98ab1cf32e9066b5c6a8669e61cf465e2c22e7460c19a",
+    "size_bytes": 5922,
+    "lines": 149
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/pipeline/ORGANISM_LAUNCH_PROGRESSION_20260421.md",
+    "repo_path": "context_vault/doctrine/pipeline/ORGANISM_LAUNCH_PROGRESSION_20260421.md",
+    "status": "ADDED",
+    "sha256": "0c137c305d90be160724ae946d4e6bcb6dec52494743be507ecc9f7d540ff4b0",
+    "size_bytes": 7500,
+    "lines": 160
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/strategic_intelligence/ONE_ORGANISM_TWO_HEARTBEATS_20260421.md",
+    "repo_path": "context_vault/doctrine/strategic_intelligence/ONE_ORGANISM_TWO_HEARTBEATS_20260421.md",
+    "status": "ADDED",
+    "sha256": "a8f7ad9bbeb8635c61443e2743c0157664355e355cb0e37a70e95443274fef3c",
+    "size_bytes": 9243,
+    "lines": 150
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/state/organism_state.json",
+    "repo_path": "context_vault/state/organism_state.json",
+    "status": "MODIFIED",
+    "sha256": "1dee53e1716f08c63c14ecc6f6513c8288f8fc377f4847b49fe3078395f49752",
+    "size_bytes": 321080,
+    "lines": 10587
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/friday/executors/browser_executor.py",
+    "repo_path": "friday/executors/browser_executor.py",
+    "status": "MODIFIED",
+    "sha256": "fd3b35949ac766b137340d1556e993cae681a4ef546dd3751e6a84b8a3d7d4c5",
+    "size_bytes": 4223,
+    "lines": 129
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/friday/executors/computeruse_executor.py",
+    "repo_path": "friday/executors/computeruse_executor.py",
+    "status": "MODIFIED",
+    "sha256": "d19f6b55acd9b239d9643db043bbdd6e1a440fa036566e9c036f25e57cd35035",
+    "size_bytes": 5023,
+    "lines": 150
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_AZ_ARMS_20260421.md",
+    "repo_path": "missions/FORGE_DIRECTIVE_AZ_ARMS_20260421.md",
+    "status": "ADDED",
+    "sha256": "b2029364a1da50da8411672ded029483a5e9687affca9bbf393d6479ef525f31",
+    "size_bytes": 6580,
+    "lines": 127
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_MIROFISH_STAGE1_20260422.md",
+    "repo_path": "missions/FORGE_DIRECTIVE_MIROFISH_STAGE1_20260422.md",
+    "status": "ADDED",
+    "sha256": "b6cac51f1d8d64d29af68b803e562dbdde06f03cce7fd7bac4364330229f8c76",
+    "size_bytes": 5764,
+    "lines": 146
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_NOTEBOOKLM_ARM_20260422.md",
+    "repo_path": "missions/FORGE_DIRECTIVE_NOTEBOOKLM_ARM_20260422.md",
+    "status": "ADDED",
+    "sha256": "b791dff97129e603aa985cd7f5139d130586c1be7cd6a2c0d220f3371b53890b",
+    "size_bytes": 2903,
+    "lines": 75
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_PUPPETEER_ARM_20260422.md",
+    "repo_path": "missions/FORGE_DIRECTIVE_PUPPETEER_ARM_20260422.md",
+    "status": "ADDED",
+    "sha256": "c0afdba859e7f045b495c1d3e8aac0cffc451e6ba15e373b2f8e4ac009f29475",
+    "size_bytes": 2862,
+    "lines": 66
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_STAGE1_20260421.md",
+    "repo_path": "missions/FORGE_DIRECTIVE_STAGE1_20260421.md",
+    "status": "ADDED",
+    "sha256": "e9c3df10db38866c6c3dad220f418ed174bd575062e785185677e0b7224099b7",
+    "size_bytes": 10170,
+    "lines": 152
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/__init__.py",
+    "repo_path": "nodes/bridge/__init__.py",
+    "status": "ADDED",
+    "sha256": "d5440bb8b882346b643fefaa1ffc523702e12c97453c461e88d46569adbcca77",
+    "size_bytes": 566,
+    "lines": 18
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/directive_queue.py",
+    "repo_path": "nodes/bridge/directive_queue.py",
+    "status": "ADDED",
+    "sha256": "2455cb8c313bb1b232be175822343b7b124d4483f776ad9c44939984c1a64b1c",
+    "size_bytes": 3250,
+    "lines": 96
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/ingestion_runner.py",
+    "repo_path": "nodes/bridge/ingestion_runner.py",
+    "status": "ADDED",
+    "sha256": "ae047b0b6d61d593af8fba2a1324fbd7b8c96f97b32b4d97d79f2def76d86943",
+    "size_bytes": 8762,
+    "lines": 233
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/persona_reloader.py",
+    "repo_path": "nodes/bridge/persona_reloader.py",
+    "status": "ADDED",
+    "sha256": "b313ccf4f2a5f2d771d01b3d28b8dcb038bfbcf88e4be67de51129df789940b2",
+    "size_bytes": 2499,
+    "lines": 78
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/README.md",
+    "repo_path": "nodes/execution_arm/README.md",
+    "status": "ADDED",
+    "sha256": "31eb96a1bbe95b1c7b7e04ea2cc10b733af04be30131e3fd0a065fb527f2e496",
+    "size_bytes": 4117,
+    "lines": 137
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/__init__.py",
+    "repo_path": "nodes/execution_arm/__init__.py",
+    "status": "ADDED",
+    "sha256": "ee74b5e778b1bcdeddf1237d42f5f6cc1c493ce0180dea8f0132ab133c1d6d52",
+    "size_bytes": 1072,
+    "lines": 37
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/browser_use_arm.py",
+    "repo_path": "nodes/execution_arm/browser_use_arm.py",
+    "status": "ADDED",
+    "sha256": "6f7c37a282fff415dfe2210a3636feaf7b3c72299f7b10e0f09570e8c7c0b98e",
+    "size_bytes": 9310,
+    "lines": 270
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/callable.py",
+    "repo_path": "nodes/execution_arm/callable.py",
+    "status": "ADDED",
+    "sha256": "7d2fce31e8b3ded87c89fe81da1e43f8109bea5027d7ae075a6d37bfa8d2ffb1",
+    "size_bytes": 6232,
+    "lines": 184
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/computer_use_arm.py",
+    "repo_path": "nodes/execution_arm/computer_use_arm.py",
+    "status": "ADDED",
+    "sha256": "df36606fc082f84fa316d6f6c0d824f7415dc00e97a082b4ce6f9e279d8f8c31",
+    "size_bytes": 20002,
+    "lines": 486
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/deletion_gate.py",
+    "repo_path": "nodes/execution_arm/deletion_gate.py",
+    "status": "ADDED",
+    "sha256": "afee937b55edb629cbe169bd34924e5a18b6f7bde1dcde30cf7d8419a39b4389",
+    "size_bytes": 4630,
+    "lines": 147
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/firecrawl_arm.py",
+    "repo_path": "nodes/execution_arm/firecrawl_arm.py",
+    "status": "ADDED",
+    "sha256": "4401448d9323fba671252c7675911218f297037e92c087b9da48adfa1877936b",
+    "size_bytes": 7335,
+    "lines": 184
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/mode_selector.py",
+    "repo_path": "nodes/execution_arm/mode_selector.py",
+    "status": "ADDED",
+    "sha256": "cdfa01e44d85d50c093fa5a1a635bfa44235ebb1a962971616561a35c9f26743",
+    "size_bytes": 7716,
+    "lines": 204
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/scc/personas/__init__.py",
+    "repo_path": "nodes/scc/personas/__init__.py",
+    "status": "ADDED",
+    "sha256": "fb4a28af1d3c5707d0f19fee02f7b397975164f6e91e038c126ea2c490b778a7",
+    "size_bytes": 1344,
+    "lines": 47
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/scc/personas/architect.md",
+    "repo_path": "nodes/scc/personas/architect.md",
+    "status": "ADDED",
+    "sha256": "8a41c10f9e0096397096a5b430ee8bdece7e087a1dd990a0ea2574fab3ef7077",
+    "size_bytes": 4327,
+    "lines": 89
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/__init__.py",
+    "repo_path": "nodes/simulation/__init__.py",
+    "status": "ADDED",
+    "sha256": "1ecfa503a4601b60d1c2e7bdd9f5f23985d65e12fa03f5718624d10827341643",
+    "size_bytes": 586,
+    "lines": 18
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/avatars.py",
+    "repo_path": "nodes/simulation/avatars.py",
+    "status": "ADDED",
+    "sha256": "f848f4b5dee42bded1b3cc3f936f09a4e0d3350ec744b47d34c8aa2c7eedcb2a",
+    "size_bytes": 7676,
+    "lines": 207
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/mirofish_client.py",
+    "repo_path": "nodes/simulation/mirofish_client.py",
+    "status": "ADDED",
+    "sha256": "e3a564cdfd6dfdaf15b0856ba7b6921aa50948415602b6cb7b97b910518e2e94",
+    "size_bytes": 2845,
+    "lines": 90
+  },
+  {
+    "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/scenario.py",
+    "repo_path": "nodes/simulation/scenario.py",
+    "status": "ADDED",
+    "sha256": "5c245b88d390e6a7276cd374e6d55ec7001d6e1ab894e1ceee8afbcfec705b17",
+    "size_bytes": 2791,
+    "lines": 88
+  }
+]
