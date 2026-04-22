@@ -5,7 +5,12 @@
     "status": "MODIFIED",
     "sha256": "e00513b172dfc6fc63d6f4fab86989985ec2225e2895aac2a0eaedaa14e9c083",
     "size_bytes": 1352,
-    "lines": 98
+    "lines": 98,
+    "first_line_sha256": "df39434f81daab24bdad7d1441d7fe51182c667129f461035e29840d079b7ac7",
+    "last_nonempty_line_sha256": "fca16cae5b0e32edfa6b55eaa32a98ffbf4a0c7d885fb585785fc83b6ea2d9c3",
+    "trailing_newline": true,
+    "first_line_preview": "# =========================",
+    "last_nonempty_line_preview": ".claude/settings.local.json"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/MEMORY.md",
@@ -13,7 +18,12 @@
     "status": "ADDED",
     "sha256": "695c37a20514064895c095efaed1603f7efa405ebfb9f9cb447c659626b4e458",
     "size_bytes": 3954,
-    "lines": 58
+    "lines": 58,
+    "first_line_sha256": "f1d58a00bfff54318fc291eda8e8271cc7c4928a87b2b30e3c5a4956abc623ee",
+    "last_nonempty_line_sha256": "f0b9003e5132c0ab7746875f3b7bf839eebd30d6909120ccfe056dccb5990db3",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS INSTITUTIONAL MEMORY",
+    "last_nonempty_line_preview": "  5. Package products, fix Docker services, first LinkedIn post"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/agent-zero/Dockerfile",
@@ -21,7 +31,12 @@
     "status": "MODIFIED",
     "sha256": "5ca69e2f43b22846404d138be50ada039a297b0e24bdb7cb1d02c356cdcff4fc",
     "size_bytes": 3067,
-    "lines": 77
+    "lines": 77,
+    "first_line_sha256": "ccd4b05fe82c0e9c09bf9dac7a5292166aa1282cdc9138672a7b150e8de019ef",
+    "last_nonempty_line_sha256": "239ccfd993a9a2adb5f096ad18c7c4228fca9a6b89c2de089472f18119d20035",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS Agent Zero \u2014 Governed Autonomous Executor + Execution Arm",
+    "last_nonempty_line_preview": "CMD [\"python\", \"az_bridge.py\"]"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/agent-zero/az_bridge.py",
@@ -29,7 +44,12 @@
     "status": "MODIFIED",
     "sha256": "264b99ce575b7e0faf5e86171740c9189f1ef14e40a858988fc9bed12644e139",
     "size_bytes": 12823,
-    "lines": 327
+    "lines": 327,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "4f6cf07844db28236b932503553b89889515673eab78c9b9644e8970d0a549d4",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "        print(\"\\n[AZ-Bridge] Shutdown requested \u2014 Goodbye\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/mirofish/Dockerfile",
@@ -37,7 +57,12 @@
     "status": "ADDED",
     "sha256": "bf79a1acf8eff1e8a283779a59dfad6a488e47bb6593667d4ef3a3154b28f07a",
     "size_bytes": 1011,
-    "lines": 36
+    "lines": 36,
+    "first_line_sha256": "fc6dcedc07471c0bc93b51fdc8e09a84e8fc18f1ab5ace9a80de2b05d9d1d3a8",
+    "last_nonempty_line_sha256": "d3eb0b6a0f1dba38aaa38bc2f6aaada9a225e5271902e723881bdef5ee3f6784",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS MiroFish \u2014 Swarm Intelligence Simulator (Stage 1)",
+    "last_nonempty_line_preview": "CMD [\"python\", \"simulator.py\"]"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/mirofish/requirements.txt",
@@ -45,7 +70,12 @@
     "status": "ADDED",
     "sha256": "f812f1a4c51a49b422878f650f56551f6d76e37786ed62cc928b6cf5d1514c9c",
     "size_bytes": 78,
-    "lines": 5
+    "lines": 5,
+    "first_line_sha256": "314ba4a01f7e15532dc67d1d7542150b69548abe05e6cd443140675aa902d5fb",
+    "last_nonempty_line_sha256": "6bb8dc886ca7c80170b9d0d829a9d8e696298b0936e6d90fe97768ff8cb30d90",
+    "trailing_newline": true,
+    "first_line_preview": "aiohttp>=3.9.0",
+    "last_nonempty_line_preview": "httpx>=0.27.0"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/containers/mirofish/simulator.py",
@@ -53,7 +83,12 @@
     "status": "ADDED",
     "sha256": "d91ed6d1a8de1276a6456cfbf96011fc017b6ca6d1f5fb38449c91a6757fb59d",
     "size_bytes": 10878,
-    "lines": 312
+    "lines": 312,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "24ca9eec20b059e9c93247a33f61e9898decf963ce17c518df9f7027380e4a38",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    uvicorn.run(app, host=\"0.0.0.0\", port=int(os.getenv(\"MIROFISH_PORT\", \"8110\")))"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/aar/TTLG_POST_COMPLETION_20260422_AAR.md",
@@ -61,7 +96,12 @@
     "status": "ADDED",
     "sha256": "c1e0a80a72a4ea7f0871f6befd76a821488125c56769398ed6915c0e7b5e9932",
     "size_bytes": 7272,
-    "lines": 140
+    "lines": 140,
+    "first_line_sha256": "23cfccb73db9aad56a62206616ce511c50fd19e3a6213eca866407301ea1bff5",
+    "last_nonempty_line_sha256": "6684eece158167306ae71e0b1b26c8ff97399364ac11a6f35116ed599dfa56fc",
+    "trailing_newline": true,
+    "first_line_preview": "# TTLG POST-COMPLETION DIAGNOSTIC \u2014 Full Organism Validation",
+    "last_nonempty_line_preview": "- `context_vault/doctrine/councils/ARCHITECT_TOOL_REGISTRY_v1.md` \u2014 tool governance"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/attachments/AAR_CC_DEPLOY_UPSKILL_20260408.md",
@@ -357,7 +397,12 @@
     "status": "ADDED",
     "sha256": "bc90a00ff175163ca09153c828a9733e7d8b9cde2b79fc3f15fb349dd706ec84",
     "size_bytes": 3245,
-    "lines": 71
+    "lines": 71,
+    "first_line_sha256": "96e9edc257fbb5fe29d0b58c8b0842f0b037fba390c80c8ab9043ee2c16da8b3",
+    "last_nonempty_line_sha256": "255575e0f9096cfa4052ee7baccc12ff979dd18ad6bf477dc427e0de167a950b",
+    "trailing_newline": true,
+    "first_line_preview": "# ARCHITECT_ARCHETYPE \u2014 The Architect",
+    "last_nonempty_line_preview": "- Zero speculative-infrastructure findings in Sentinel audits."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/ARCHITECT_TOOL_REGISTRY_v1.md",
@@ -365,7 +410,12 @@
     "status": "ADDED",
     "sha256": "67d12c6b3fd97983576b68cf1776c75a096136ec8b78ea33fd6ae9aebffc2791",
     "size_bytes": 8184,
-    "lines": 141
+    "lines": 141,
+    "first_line_sha256": "7a3f04dddbae26dbed4310cb3e652dbc7b339b933fdb7a37f7c97b2fa095d253",
+    "last_nonempty_line_sha256": "ad75e771b46284f68150091124efbe0d41a2f8e1a6b778eb515657a4c11fceb3",
+    "trailing_newline": true,
+    "first_line_preview": "# ARCHITECT TOOL & SKILL REGISTRY v1",
+    "last_nonempty_line_preview": "- `/home/user/epos_mcp/CLAUDE.md` (project discipline)"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/CHRONICLER_ARCHETYPE.md",
@@ -373,7 +423,12 @@
     "status": "ADDED",
     "sha256": "811a49a29b4fd1ade601aa4085f44fe513b13e8e47b9c25fa3d9ecbaf60b69a4",
     "size_bytes": 3618,
-    "lines": 72
+    "lines": 72,
+    "first_line_sha256": "1a9cd32d2945da4c8318fddc073f71852b06666abc9dcfed4c5b9487e9fd0ba1",
+    "last_nonempty_line_sha256": "792467e3308a7b1a1c8626925accfcfe8921c36afa475bdc52d2215a87a3c777",
+    "trailing_newline": true,
+    "first_line_preview": "# CHRONICLER_ARCHETYPE \u2014 The Chronicler",
+    "last_nonempty_line_preview": "- Training-pair yield \u2014 flashcards generated per week feeding Training/BizEd."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/COUNCIL_CHARTER_v1.md",
@@ -381,7 +436,12 @@
     "status": "ADDED",
     "sha256": "5e6b6b91ac2057945e6eee20a0f5ccbac336c32b1a572315bc742a7dad0f15eb",
     "size_bytes": 5700,
-    "lines": 99
+    "lines": 99,
+    "first_line_sha256": "5af1e09b9b3828f68f199ff0a17078f7fda0fb4b7ea8bca2bd5e0cf53f1a9bfb",
+    "last_nonempty_line_sha256": "b156e0c16904d41a90b0c4f4e288b108e70afed5145a9bf19d236e9fbe34be98",
+    "trailing_newline": true,
+    "first_line_preview": "# COUNCIL_CHARTER_v1",
+    "last_nonempty_line_preview": "- `../pipeline/ORGANISM_LAUNCH_PROGRESSION_20260421.md`"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/FORGE_ARCHETYPE.md",
@@ -389,7 +449,12 @@
     "status": "ADDED",
     "sha256": "7653680b8317447a78f4581c27304048a60c63fa2b24a1acae0002b70b9981c4",
     "size_bytes": 4128,
-    "lines": 87
+    "lines": 87,
+    "first_line_sha256": "b2f22278adf7fd1f30f8b0094d941fd59548fb71e77079956fb7ffb447b5d095",
+    "last_nonempty_line_sha256": "3cc60b90799b6ca10964150ba3a1907a358fb3441be47edba4b793ab17bedc06",
+    "trailing_newline": true,
+    "first_line_preview": "# FORGE_ARCHETYPE \u2014 The Forge",
+    "last_nonempty_line_preview": "- Readiness-receipt honesty \u2014 no `VERIFIED` claim without verification evidence."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/OPERATING_PROTOCOL_v1.md",
@@ -397,7 +462,12 @@
     "status": "ADDED",
     "sha256": "07f92707009b46eb0a74ac89593071ee61d23143983d3770b6f1ae2e9d7fce9a",
     "size_bytes": 5203,
-    "lines": 120
+    "lines": 120,
+    "first_line_sha256": "d948c77a2d0ac670ffb706e0d80cc7e71498642ceb9c933172ea42ae8d4ada69",
+    "last_nonempty_line_sha256": "f35a00334178e976bc1444bc8ba0507e763acab863ead116f525db861f887bdb",
+    "trailing_newline": true,
+    "first_line_preview": "# OPERATING_PROTOCOL_v1",
+    "last_nonempty_line_preview": "- `../pipeline/ORGANISM_LAUNCH_PROGRESSION_20260421.md` (execution plan)"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/ORACLE_ARCHETYPE.md",
@@ -405,7 +475,12 @@
     "status": "ADDED",
     "sha256": "46d807a22553b73c375c0980fc43b11d66d03de862bfa895159592ac12e020ac",
     "size_bytes": 3164,
-    "lines": 66
+    "lines": 66,
+    "first_line_sha256": "73b9620b41015c608da3563cabdc5f82cdb5b2fad66b8e3568dabda796d4cac8",
+    "last_nonempty_line_sha256": "80f50b201e351b08c0597f51a94ffa3adb08f6f09e5cf686fd9c016b5d7d8593",
+    "trailing_newline": true,
+    "first_line_preview": "# ORACLE_ARCHETYPE \u2014 The Oracle",
+    "last_nonempty_line_preview": "- Avatar-validation rate \u2014 percentage of Oracle-proposed avatars confirmed by live sales data within"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/SENTINEL_ARCHETYPE.md",
@@ -413,7 +488,12 @@
     "status": "ADDED",
     "sha256": "7190a14d43aad9c86ea4e46579472462afd975b287dec3ec7b4e4b0aa047896e",
     "size_bytes": 3498,
-    "lines": 75
+    "lines": 75,
+    "first_line_sha256": "4907e1400b6b0e6845a9bcbc1a5bf19a9593f34ba575ba39e791e4228c4ab77d",
+    "last_nonempty_line_sha256": "c1a1d5ea5b3411224da7ee39ec1f4aec41272bfab8f5306b00d8aaa84fd7d69f",
+    "trailing_newline": true,
+    "first_line_preview": "# SENTINEL_ARCHETYPE \u2014 The Sentinel",
+    "last_nonempty_line_preview": "- Survival-mechanism adoption rate \u2014 flagged mechanisms ratified by the Sovereign."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/STEWARD_ARCHETYPE.md",
@@ -421,7 +501,12 @@
     "status": "ADDED",
     "sha256": "7fb3151139f0884691920d2fc2554682943997b0c418043661b7cc0d0128c8df",
     "size_bytes": 4429,
-    "lines": 89
+    "lines": 89,
+    "first_line_sha256": "241059424950c46aa6d4f1a66534c5a3defe0a9cdcbec10b00ee2158f748dd4d",
+    "last_nonempty_line_sha256": "93a778a55568ad5828d0e704d23c1ea22f2ccce8553cc82bb2b7a25b9e69ce0d",
+    "trailing_newline": true,
+    "first_line_preview": "# STEWARD_ARCHETYPE \u2014 The Steward",
+    "last_nonempty_line_preview": "- Client health-score week-over-week delta."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/councils/TTLG_RESUBMISSION_LOOP_v1.md",
@@ -429,7 +514,12 @@
     "status": "ADDED",
     "sha256": "ba297caa227162bccee98ab1cf32e9066b5c6a8669e61cf465e2c22e7460c19a",
     "size_bytes": 5922,
-    "lines": 149
+    "lines": 149,
+    "first_line_sha256": "b0b54e67ad8630c1fe41be5a696791e0f3fe492932e17b34f257c861656f6b1f",
+    "last_nonempty_line_sha256": "c37fb821ae3fc68d9059ac64ea820870a9a81774a36bfaf7b18f6971720b930f",
+    "trailing_newline": true,
+    "first_line_preview": "# TTLG RESUBMISSION LOOP v1",
+    "last_nonempty_line_preview": "  produced the initial Registry population"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/pipeline/ORGANISM_LAUNCH_PROGRESSION_20260421.md",
@@ -437,7 +527,12 @@
     "status": "ADDED",
     "sha256": "0c137c305d90be160724ae946d4e6bcb6dec52494743be507ecc9f7d540ff4b0",
     "size_bytes": 7500,
-    "lines": 160
+    "lines": 160,
+    "first_line_sha256": "10de3f5b8fbd0be341e4693aee3f8011a76c1d74dc8e6b045803a8fcb2ebcfb0",
+    "last_nonempty_line_sha256": "74471a8c282c4315bac111c2f72ce5fe0f571cb69e1b55f8a3174f35748fb99f",
+    "trailing_newline": true,
+    "first_line_preview": "# ORGANISM LAUNCH PROGRESSION \u2014 Stages 0 \u2192 4 (2026-04-21)",
+    "last_nonempty_line_preview": "- `/home/user/epos_mcp/context_vault/doctrine/strategic_intelligence/EPOS_MARKET_POSITIONING_2026040"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/doctrine/strategic_intelligence/ONE_ORGANISM_TWO_HEARTBEATS_20260421.md",
@@ -445,7 +540,12 @@
     "status": "ADDED",
     "sha256": "a8f7ad9bbeb8635c61443e2743c0157664355e355cb0e37a70e95443274fef3c",
     "size_bytes": 9243,
-    "lines": 150
+    "lines": 150,
+    "first_line_sha256": "c1d89adf1e57363360af4fd28977df25b852571f3049d7b1c06384bbad99bd59",
+    "last_nonempty_line_sha256": "198f5980ff389698ac7ecb4137bc9d630e577c5108fcdea1a1d9fcad56a1f8fa",
+    "trailing_newline": true,
+    "first_line_preview": "# ONE ORGANISM, TWO HEARTBEATS \u2014 EPOS Sovereign Council Strategy (2026-04-21)",
+    "last_nonempty_line_preview": "*1% daily. 37x annually.*"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/context_vault/state/organism_state.json",
@@ -453,7 +553,12 @@
     "status": "MODIFIED",
     "sha256": "1dee53e1716f08c63c14ecc6f6513c8288f8fc377f4847b49fe3078395f49752",
     "size_bytes": 321080,
-    "lines": 10587
+    "lines": 10587,
+    "first_line_sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+    "last_nonempty_line_sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+    "trailing_newline": true,
+    "first_line_preview": "{",
+    "last_nonempty_line_preview": "}"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/friday/executors/browser_executor.py",
@@ -461,7 +566,12 @@
     "status": "MODIFIED",
     "sha256": "fd3b35949ac766b137340d1556e993cae681a4ef546dd3751e6a84b8a3d7d4c5",
     "size_bytes": 4223,
-    "lines": 129
+    "lines": 129,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "be49c6fe64e7a9abcbd7eb3b9ec63edd2be9e38e990308540c1f0e7da3dd7180",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: browser_executor\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/friday/executors/computeruse_executor.py",
@@ -469,7 +579,12 @@
     "status": "MODIFIED",
     "sha256": "d19f6b55acd9b239d9643db043bbdd6e1a440fa036566e9c036f25e57cd35035",
     "size_bytes": 5023,
-    "lines": 150
+    "lines": 150,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "c94afd16e9b845c0a21390da9891ae346958dd25fac113fa4ca681f1c4a69236",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: computeruse_executor\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_AZ_ARMS_20260421.md",
@@ -477,7 +592,12 @@
     "status": "ADDED",
     "sha256": "b2029364a1da50da8411672ded029483a5e9687affca9bbf393d6479ef525f31",
     "size_bytes": 6580,
-    "lines": 127
+    "lines": 127,
+    "first_line_sha256": "39e65d63901d0be39d46d16b0187989c6e7b4c207c7c8aa20f79b6e1297e36ca",
+    "last_nonempty_line_sha256": "4c9f92f69a1528fcae1115770d4692a36c5f31403b3fe6bb3e4bc3be9bc70f1f",
+    "trailing_newline": true,
+    "first_line_preview": "# FORGE DIRECTIVE \u2014 AZ EXECUTION ARMS (2026-04-21)",
+    "last_nonempty_line_preview": "- On fail: blocker memo to `context_vault/bi/az_arms/` and Sovereign escalation."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_MIROFISH_STAGE1_20260422.md",
@@ -485,7 +605,12 @@
     "status": "ADDED",
     "sha256": "b6cac51f1d8d64d29af68b803e562dbdde06f03cce7fd7bac4364330229f8c76",
     "size_bytes": 5764,
-    "lines": 146
+    "lines": 146,
+    "first_line_sha256": "cb3fd3855d6fe1723c30cd077a2b6e1d678fec1f70302dbe211ac888cf538d85",
+    "last_nonempty_line_sha256": "972717a50f704f7c2d224d4d75e1d67c4f4ba82204e4005155818e983eaa876a",
+    "trailing_newline": true,
+    "first_line_preview": "# FORGE DIRECTIVE \u2014 MIROFISH SIMULATION ENGINE STAGE 1 (2026-04-22)",
+    "last_nonempty_line_preview": "the remaining growth roadmap."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_NOTEBOOKLM_ARM_20260422.md",
@@ -493,7 +618,12 @@
     "status": "ADDED",
     "sha256": "b791dff97129e603aa985cd7f5139d130586c1be7cd6a2c0d220f3371b53890b",
     "size_bytes": 2903,
-    "lines": 75
+    "lines": 75,
+    "first_line_sha256": "b3e743df33ec42bba66e14d992401d55fb7e1ba8718d74de804ea6f0e6a6ba0a",
+    "last_nonempty_line_sha256": "e11fb2e262979fe8737beae3da044dcca0e9e349a43b59f10720731b3fa5a724",
+    "trailing_newline": true,
+    "first_line_preview": "# FORGE DIRECTIVE \u2014 NOTEBOOKLM CLI ARM (2026-04-22)",
+    "last_nonempty_line_preview": "  upstream in the Forge's ingest pipeline."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_PUPPETEER_ARM_20260422.md",
@@ -501,7 +631,12 @@
     "status": "ADDED",
     "sha256": "c0afdba859e7f045b495c1d3e8aac0cffc451e6ba15e373b2f8e4ac009f29475",
     "size_bytes": 2862,
-    "lines": 66
+    "lines": 66,
+    "first_line_sha256": "af20c2a259569ca6907bc11b6a3972fed7c52d6d48a0ca6f1a6361cfb723bb39",
+    "last_nonempty_line_sha256": "d26cabb2e3133e646d6e5f0ebaca548798d472af9d83bc2d64b01fed5c1a379e",
+    "trailing_newline": true,
+    "first_line_preview": "# FORGE DIRECTIVE \u2014 PUPPETEER STEALTH ARM (2026-04-22)",
+    "last_nonempty_line_preview": "- Mobile emulation profiles (future directive)."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/missions/FORGE_DIRECTIVE_STAGE1_20260421.md",
@@ -509,7 +644,12 @@
     "status": "ADDED",
     "sha256": "e9c3df10db38866c6c3dad220f418ed174bd575062e785185677e0b7224099b7",
     "size_bytes": 10170,
-    "lines": 152
+    "lines": 152,
+    "first_line_sha256": "9d9e1fb68cbe7e054ed027b55d338a6254ed9254371107c767b53d4b5ee3fdcb",
+    "last_nonempty_line_sha256": "0bbe590bb8cf6b57c40b46db12a7f5cb08f115262057ba5193caf72afa933878",
+    "trailing_newline": true,
+    "first_line_preview": "# FORGE DIRECTIVE \u2014 STAGE 1 (2026-04-21)",
+    "last_nonempty_line_preview": "- `../context_vault/doctrine/products/HIDDEN_PRODUCTS_PARTS_BIN_MATRIX.md`"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/__init__.py",
@@ -517,7 +657,12 @@
     "status": "ADDED",
     "sha256": "d5440bb8b882346b643fefaa1ffc523702e12c97453c461e88d46569adbcca77",
     "size_bytes": 566,
-    "lines": 18
+    "lines": 18,
+    "first_line_sha256": "b6d267efe80a3dbcf2f2d67e21d8c15783a2f031427f827d43b6222fe9c4bf02",
+    "last_nonempty_line_sha256": "cfae0d4248f7142f7b17f826cd7a519280e312577690e957830d23dcf35a3fff",
+    "trailing_newline": true,
+    "first_line_preview": "\"\"\"",
+    "last_nonempty_line_preview": "]"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/directive_queue.py",
@@ -525,7 +670,12 @@
     "status": "ADDED",
     "sha256": "2455cb8c313bb1b232be175822343b7b124d4483f776ad9c44939984c1a64b1c",
     "size_bytes": 3250,
-    "lines": 96
+    "lines": 96,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "9c9a0cd197c2557ed5f478adc29576c8df1d28f95602c4536b0c18c73fbca0e1",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "        print(\"no sample directive found\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/ingestion_runner.py",
@@ -533,7 +683,12 @@
     "status": "ADDED",
     "sha256": "ae047b0b6d61d593af8fba2a1324fbd7b8c96f97b32b4d97d79f2def76d86943",
     "size_bytes": 8762,
-    "lines": 233
+    "lines": 233,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "3ecc4ec319add1d8d0b001cc6341d270bc8b5c3457a62df5fee3571915d2e2f0",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "        raise"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/bridge/persona_reloader.py",
@@ -541,7 +696,12 @@
     "status": "ADDED",
     "sha256": "b313ccf4f2a5f2d771d01b3d28b8dcb038bfbcf88e4be67de51129df789940b2",
     "size_bytes": 2499,
-    "lines": 78
+    "lines": 78,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "06f5c68e71ac5d8e16a9d2cf9a018ff85e9416988c805b57f5597bfc17340ebc",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "        print(f\"skip: {target} not present\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/README.md",
@@ -549,7 +709,12 @@
     "status": "ADDED",
     "sha256": "31eb96a1bbe95b1c7b7e04ea2cc10b733af04be30131e3fd0a065fb527f2e496",
     "size_bytes": 4117,
-    "lines": 137
+    "lines": 137,
+    "first_line_sha256": "21668bbba5b8d95c08dd75a701031bd67e1221738b08cfbb98c0e30613948da5",
+    "last_nonempty_line_sha256": "42b81026f7becf0ca3425a528ed4da5f41bb1058c93c1f763585f1a21a7c2397",
+    "trailing_newline": true,
+    "first_line_preview": "# `nodes.execution_arm` \u2014 EPOS Execution Arm",
+    "last_nonempty_line_preview": "  Diagnostic after the Forge Directive's verification block passes."
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/__init__.py",
@@ -557,7 +722,12 @@
     "status": "ADDED",
     "sha256": "ee74b5e778b1bcdeddf1237d42f5f6cc1c493ce0180dea8f0132ab133c1d6d52",
     "size_bytes": 1072,
-    "lines": 37
+    "lines": 37,
+    "first_line_sha256": "c9059ed98deec918ae6b392651b3b9ccacf51420a9c5791a629e11f2eea98c6e",
+    "last_nonempty_line_sha256": "cfae0d4248f7142f7b17f826cd7a519280e312577690e957830d23dcf35a3fff",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS Artifact \u2014 FORGE_DIRECTIVE_AZ_ARMS_20260421",
+    "last_nonempty_line_preview": "]"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/browser_use_arm.py",
@@ -565,7 +735,12 @@
     "status": "ADDED",
     "sha256": "6f7c37a282fff415dfe2210a3636feaf7b3c72299f7b10e0f09570e8c7c0b98e",
     "size_bytes": 9310,
-    "lines": 270
+    "lines": 270,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "4c337b472d6789f3f2f0361f9064a42afb4bc7db50d3aec41fc61fffa06596ba",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: browser_use_arm (structural)\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/callable.py",
@@ -573,7 +748,12 @@
     "status": "ADDED",
     "sha256": "7d2fce31e8b3ded87c89fe81da1e43f8109bea5027d7ae075a6d37bfa8d2ffb1",
     "size_bytes": 6232,
-    "lines": 184
+    "lines": 184,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "40be47f8b710c44352c172ea5827018100eb03bc5c2a55e4772d742634cfb1e5",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: callable (structural)\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/computer_use_arm.py",
@@ -581,7 +761,12 @@
     "status": "ADDED",
     "sha256": "df36606fc082f84fa316d6f6c0d824f7415dc00e97a082b4ce6f9e279d8f8c31",
     "size_bytes": 20002,
-    "lines": 486
+    "lines": 486,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "03ed6999a6ca098ff1913baab4f76d45e3e8d477bacbffd848d76056e48dc2ef",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: computer_use_arm (structural)\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/deletion_gate.py",
@@ -589,7 +774,12 @@
     "status": "ADDED",
     "sha256": "afee937b55edb629cbe169bd34924e5a18b6f7bde1dcde30cf7d8419a39b4389",
     "size_bytes": 4630,
-    "lines": 147
+    "lines": 147,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "ca56d75da1dfb241e04b59e5a66a3ab10b5fabad79ffc9135489e63e1c4777b9",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: deletion_gate\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/firecrawl_arm.py",
@@ -597,7 +787,12 @@
     "status": "ADDED",
     "sha256": "4401448d9323fba671252c7675911218f297037e92c087b9da48adfa1877936b",
     "size_bytes": 7335,
-    "lines": 184
+    "lines": 184,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "cc5a3268358a9cb4459bcaa64c065ab8da7526baf71e4d07f00b051860a9eecd",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: firecrawl_arm (structural)\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/execution_arm/mode_selector.py",
@@ -605,7 +800,12 @@
     "status": "ADDED",
     "sha256": "cdfa01e44d85d50c093fa5a1a635bfa44235ebb1a962971616561a35c9f26743",
     "size_bytes": 7716,
-    "lines": 204
+    "lines": 204,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "2a16a9322a55b073135a79c59b79bb10d9d6826a1e481c72b9f7586aa6655f88",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"PASS: mode_selector\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/scc/personas/__init__.py",
@@ -613,7 +813,12 @@
     "status": "ADDED",
     "sha256": "fb4a28af1d3c5707d0f19fee02f7b397975164f6e91e038c126ea2c490b778a7",
     "size_bytes": 1344,
-    "lines": 47
+    "lines": 47,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "5dff6183ad110914e13c789b600370394f98f151d8f73388916549942a947c16",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "        print(f\"{name:<20}  sha={p.sha256_16}  {len(p.text)} chars\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/scc/personas/architect.md",
@@ -621,7 +826,12 @@
     "status": "ADDED",
     "sha256": "8a41c10f9e0096397096a5b430ee8bdece7e087a1dd990a0ea2574fab3ef7077",
     "size_bytes": 4327,
-    "lines": 89
+    "lines": 89,
+    "first_line_sha256": "73c50d803c93eb60b340e389f76d8c08c277fff2b00d3a5e209cafa94ddad53f",
+    "last_nonempty_line_sha256": "bebfeb75c0015d72d92cd1a9eac192e1dd106f56ec3e63be53458f971d5ed15d",
+    "trailing_newline": true,
+    "first_line_preview": "# SCC Persona: THE ARCHITECT",
+    "last_nonempty_line_preview": "This persona hot-swaps via the `nodes/bridge/persona_reloader.py` handler. Whenever the Sovereign ed"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/__init__.py",
@@ -629,7 +839,12 @@
     "status": "ADDED",
     "sha256": "1ecfa503a4601b60d1c2e7bdd9f5f23985d65e12fa03f5718624d10827341643",
     "size_bytes": 586,
-    "lines": 18
+    "lines": 18,
+    "first_line_sha256": "23b3a9126ef166d427075a9ccfdf8d932b2183ee8c6ddcc21e322188ab3a425e",
+    "last_nonempty_line_sha256": "cfae0d4248f7142f7b17f826cd7a519280e312577690e957830d23dcf35a3fff",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS Artifact \u2014 MiroFish (Simulator) Stage 1",
+    "last_nonempty_line_preview": "]"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/avatars.py",
@@ -637,7 +852,12 @@
     "status": "ADDED",
     "sha256": "f848f4b5dee42bded1b3cc3f936f09a4e0d3350ec744b47d34c8aa2c7eedcb2a",
     "size_bytes": 7676,
-    "lines": 207
+    "lines": 207,
+    "first_line_sha256": "34d800e4474d6b41894dd334198c5428e837160b923f9d0001115620a0da28cc",
+    "last_nonempty_line_sha256": "5d91d3d25da702e1f61b3d5d0363c90fab36e5c0ed8cee628a206b8479aa92ba",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS Artifact \u2014 MiroFish Stage 1",
+    "last_nonempty_line_preview": "        raise KeyError(f\"unknown avatar '{avatar_id}'. Known: {list(BY_ID)}\")"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/mirofish_client.py",
@@ -645,7 +865,12 @@
     "status": "ADDED",
     "sha256": "e3a564cdfd6dfdaf15b0856ba7b6921aa50948415602b6cb7b97b910518e2e94",
     "size_bytes": 2845,
-    "lines": 90
+    "lines": 90,
+    "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
+    "last_nonempty_line_sha256": "ab730020fc91a6ebe64148884c3f75aa824bec2ab836fb51b36dc266d8e7044b",
+    "trailing_newline": true,
+    "first_line_preview": "#!/usr/bin/env python3",
+    "last_nonempty_line_preview": "    print(\"MiroFish client health:\", health())"
   },
   {
     "wsl_path": "/mnt/c/Users/Jamie/workspace/epos_mcp/nodes/simulation/scenario.py",
@@ -653,6 +878,11 @@
     "status": "ADDED",
     "sha256": "5c245b88d390e6a7276cd374e6d55ec7001d6e1ab894e1ceee8afbcfec705b17",
     "size_bytes": 2791,
-    "lines": 88
+    "lines": 88,
+    "first_line_sha256": "34d800e4474d6b41894dd334198c5428e837160b923f9d0001115620a0da28cc",
+    "last_nonempty_line_sha256": "20f31ad311aea89ec963e1309c728d05b69e424b746dbcfa75f326a62ea05728",
+    "trailing_newline": true,
+    "first_line_preview": "# EPOS Artifact \u2014 MiroFish Stage 1",
+    "last_nonempty_line_preview": "    print(f\"wrote {out / (s.scenario_id + '.json')}\")"
   }
 ]

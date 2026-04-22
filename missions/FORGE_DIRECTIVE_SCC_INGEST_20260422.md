@@ -51,12 +51,22 @@ SCC iterates the manifest; for each entry SCC runs the gate steps below.
 For every `ADDED` or `MODIFIED` entry:
 
 1. **Path discipline (Article XIV)** — reject if `wsl_path` does not begin with `/mnt/c/Users/Jamie/workspace/epos_mcp/` or contains `C:\`, `C:/`, or backslash separators.
-2. **Hash integrity** — compute SHA256 of on-disk content; must equal manifest entry; reject on mismatch.
+
+2. **Anti-truncation six-field check** (per `context_vault/doctrine/councils/TTLG_ANTI_TRUNCATION_CONTRACT_v1.md`) — TTLG independently re-computes the six integrity fields from the on-disk file and compares to the manifest. **ALL SIX must pass:**
+   - `full_sha256` — byte-exact match
+   - `byte_count` — size match
+   - `line_count` — structural match
+   - `first_line_sha256` — head intact
+   - `last_nonempty_line_sha256` — tail intact (catches the most common SCC failure)
+   - `trailing_newline` — encoding/whitespace intact
+
+   Any single miss → `REJECT_TRUNCATION` or `REJECT_TAIL_TRUNCATION`. No silent truncation possible.
+
 3. **Line endings** — file must be LF-only (no CRLF); reject and auto-fix by stripping `\r` before acceptance.
 4. **Shebang check** (for `.py` and `.sh`) — must be POSIX (`#!/usr/bin/env python3`, `#!/usr/bin/env bash`, `#!/bin/sh`); reject otherwise.
 5. **Governance watermark** (for files under `nodes/`, `containers/`, `friday/`, `engine/`) — first 5 lines must include one of: `EPOS Artifact`, `EPOS GOVERNANCE`, `EPOS_CONSTITUTION`, or `Constitutional Authority`. Exception: `__init__.py` files < 40 lines are exempt.
 6. **Secret scan** — reject if file contains any of: `BEGIN PRIVATE KEY`, `BEGIN RSA`, `AKIA[0-9A-Z]{16}`, `sk-[a-zA-Z0-9]{48}`, `ghp_[a-zA-Z0-9]{36}`.
-7. **Destination create** — `mkdir -p $(dirname wsl_path)` then write the file.
+7. **Destination create** — `mkdir -p $(dirname wsl_path)` then write atomically (`<wsl_path>.partial` → fsync → rename) per the Contract's Forge clause.
 8. **Gate receipt** — append to `context_vault/bi/governance_gate.jsonl`:
 
 ```json
