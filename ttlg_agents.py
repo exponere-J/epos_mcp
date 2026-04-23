@@ -1,3 +1,7 @@
+# EPOS GOVERNANCE WATERMARK
+# Constitutional Authority: EPOS_CONSTITUTION_v3.1 Articles V, X, XIV (WSL Discipline)
+# Retrofit applied: 2026-04-22 — WSL canonicalization, governance gate compliance
+
 # File: /mnt/c/Users/Jamie/workspace/epos_mcp/ttlg_agents.py
 # TTLG Agent Team v1.0 — LangGraph Implementation
 # Through The Looking Glass: Autonomous Diagnostic & Resolution Pipeline
