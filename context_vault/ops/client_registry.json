@@ -1,0 +1,20 @@
+{
+  "registry_version": "1.0",
+  "schema": {
+    "client_id": "string",
+    "fields": [
+      "client_id", "archetype", "stage", "entered_stage_at",
+      "last_touchpoint_at", "touchpoint_count", "current_health_score",
+      "at_risk", "flags"
+    ]
+  },
+  "stages": ["LEAD", "DISCOVERY", "PROPOSAL", "ACTIVE", "RETAINED", "LAPSED", "CHURNED"],
+  "archetypes": [
+    "founder_solo", "vp_marketing", "consultant_indie",
+    "agency_ops_lead", "growth_hacker", "enterprise_innovation",
+    "creator_studio", "small_service_owner", "default"
+  ],
+  "clients": [],
+  "last_refreshed": null,
+  "note": "Rollup auto-generated daily by epos/ops/client_health_scoring.score_all() + supervisory_monitor.audit_all()"
+}

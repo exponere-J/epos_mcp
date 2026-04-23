@@ -20,18 +20,18 @@
     "root_py"
   ],
   "totals": {
-    "registered": 103,
+    "registered": 114,
     "revise_pending": 1,
     "rejected": 0,
     "legacy_audit": 177,
     "compliance": {
-      "COMPLIANT": 210,
+      "COMPLIANT": 221,
       "RETROFIT_REQUIRED": 0,
       "UNKNOWN": 71,
       "LEGACY_AUDIT": 0
     },
-    "total_components": 281,
-    "component_id_range": "E-0001 to E-0281"
+    "total_components": 292,
+    "component_id_range": "E-0001 to E-0292"
   },
   "process_registry": [
     {
@@ -2405,6 +2405,384 @@
       ],
       "scheme_version": 1,
       "sha256": "c358c73507ea0d1d8b5ffde0a7f60afd6a1af909e954ddc43c6068e506c7b6c3"
+    },
+    {
+      "component_id": "E-0287",
+      "module": "context_vault.fotw.signal_registry.json",
+      "path": "context_vault/fotw/signal_registry.json",
+      "size_bytes": 694,
+      "lines": 22,
+      "mtime": "2026-04-23T18:39:59Z",
+      "docstring_head": "FOTW signal registry \u2014 Listener row",
+      "capability_tags": [
+        "registry",
+        "fotw",
+        "signal_detection"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "FOTW signal registry \u2014 Listener row",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "FOTW signal registry \u2014 Listener row",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "registry",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "e71da63727af8d0f727ee3a6fc915b8300d0ab1eac05ee7b3a48a111d678e75d"
+    },
+    {
+      "component_id": "E-0289",
+      "module": "context_vault.intelligence.PARTS_BIN_INVENTORY.md",
+      "path": "context_vault/intelligence/PARTS_BIN_INVENTORY.md",
+      "size_bytes": 1276,
+      "lines": 33,
+      "mtime": "2026-04-23T18:39:59Z",
+      "docstring_head": "Parts Bin reusable-component inventory \u2014 Synthesizer row",
+      "capability_tags": [
+        "matrix",
+        "parts_bin",
+        "synthesis"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Parts Bin reusable-component inventory \u2014 Synthesizer row",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "Parts Bin reusable-component inventory \u2014 Synthesizer row",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "matrix",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "64ec1223c0d9dcdbc909c646a1f4bb478d11af3553f24a9b87eb72cdd8800939"
+    },
+    {
+      "component_id": "E-0288",
+      "module": "context_vault.intelligence.PIPELINE_STAGE_MATRIX.md",
+      "path": "context_vault/intelligence/PIPELINE_STAGE_MATRIX.md",
+      "size_bytes": 847,
+      "lines": 29,
+      "mtime": "2026-04-23T18:39:59Z",
+      "docstring_head": "Pipeline stage distribution matrix \u2014 Gatekeeper row",
+      "capability_tags": [
+        "matrix",
+        "pipeline",
+        "orchestration"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Pipeline stage distribution matrix \u2014 Gatekeeper row",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "Pipeline stage distribution matrix \u2014 Gatekeeper row",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "matrix",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "9821089f3b8f16e86f89ca7e94a12530e363df34a72334b8d980ac2e723f7fd2"
+    },
+    {
+      "component_id": "E-0292",
+      "module": "context_vault.ops.client_registry.json",
+      "path": "context_vault/ops/client_registry.json",
+      "size_bytes": 711,
+      "lines": 20,
+      "mtime": "2026-04-23T18:39:59Z",
+      "docstring_head": "Client state rollup registry \u2014 Steward row",
+      "capability_tags": [
+        "registry",
+        "ops",
+        "client_state"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Client state rollup registry \u2014 Steward row",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "Client state rollup registry \u2014 Steward row",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "registry",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "a81e857a5604e4c6b4cba0bf89869377f39e2876ab7aaa1a47d38c6020bb993d"
+    },
+    {
+      "component_id": "E-0291",
+      "module": "context_vault.products.catalog.json",
+      "path": "context_vault/products/catalog.json",
+      "size_bytes": 1270,
+      "lines": 41,
+      "mtime": "2026-04-23T18:39:59Z",
+      "docstring_head": "Product catalog \u2014 Deployer row",
+      "capability_tags": [
+        "registry",
+        "products",
+        "catalog"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "Product catalog \u2014 Deployer row",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "Product catalog \u2014 Deployer row",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "registry",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "2ac91f476386fe178432ee3653d4e18c116d975950b5325abbf65b8f639a4084"
+    },
+    {
+      "component_id": "E-0290",
+      "module": "context_vault.simulation.run_registry.json",
+      "path": "context_vault/simulation/run_registry.json",
+      "size_bytes": 448,
+      "lines": 15,
+      "mtime": "2026-04-23T18:39:59Z",
+      "docstring_head": "MiroFish run registry \u2014 Prover row",
+      "capability_tags": [
+        "registry",
+        "simulation",
+        "mirofish"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "MiroFish run registry \u2014 Prover row",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "MiroFish run registry \u2014 Prover row",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "registry",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "76e87dbbc906a3b6294341683af4d4306d6d0da5169c80cf4efd3447377d79ac"
     },
     {
       "module": "dashboard_engine.py",
@@ -12816,6 +13194,324 @@
       "scheme_version": 1
     },
     {
+      "component_id": "E-0282",
+      "module": "missions.FORGE_DIRECTIVE_CC_OP_001_GUMROAD_CLIENT_20260423.md",
+      "path": "missions/FORGE_DIRECTIVE_CC_OP_001_GUMROAD_CLIENT_20260423.md",
+      "size_bytes": 3716,
+      "lines": 96,
+      "mtime": "2026-04-23T18:38:21Z",
+      "docstring_head": "CC-OP-001 Gumroad & Lemon Squeezy client",
+      "capability_tags": [
+        "directive",
+        "commerce",
+        "gumroad",
+        "lemon_squeezy"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "CC-OP-001 Gumroad & Lemon Squeezy client",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "CC-OP-001 Gumroad & Lemon Squeezy client",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "directive",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "8e36f649f14f53623eb4825ee6f1cd4b1e8ef089dcdf9560bb9fe6f516e30a9b"
+    },
+    {
+      "component_id": "E-0283",
+      "module": "missions.FORGE_DIRECTIVE_CC_OP_002_SESSION_KEEPER_20260423.md",
+      "path": "missions/FORGE_DIRECTIVE_CC_OP_002_SESSION_KEEPER_20260423.md",
+      "size_bytes": 2135,
+      "lines": 61,
+      "mtime": "2026-04-23T18:38:32Z",
+      "docstring_head": "CC-OP-002 Session persistence layer",
+      "capability_tags": [
+        "directive",
+        "commerce",
+        "session_state"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "CC-OP-002 Session persistence layer",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "CC-OP-002 Session persistence layer",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "directive",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "0ce6af8af0a4f9249a4d847f5f73f14cd6774d3829f6a33db038e77501c8834d"
+    },
+    {
+      "component_id": "E-0284",
+      "module": "missions.FORGE_DIRECTIVE_CC_OP_003_SIGNAL_BUFFER_20260423.md",
+      "path": "missions/FORGE_DIRECTIVE_CC_OP_003_SIGNAL_BUFFER_20260423.md",
+      "size_bytes": 2610,
+      "lines": 85,
+      "mtime": "2026-04-23T18:38:46Z",
+      "docstring_head": "CC-OP-003 SQLite signal buffer",
+      "capability_tags": [
+        "directive",
+        "traffic",
+        "signal_buffer",
+        "sqlite"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "CC-OP-003 SQLite signal buffer",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "CC-OP-003 SQLite signal buffer",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "directive",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "55097178e31f3012ffa0851bb3cbf7512a7f3e950c1d00c6667f0ec56c4786d4"
+    },
+    {
+      "component_id": "E-0285",
+      "module": "missions.FORGE_DIRECTIVE_CC_OP_004_PIPELINE_ORCHESTRATOR_20260423.md",
+      "path": "missions/FORGE_DIRECTIVE_CC_OP_004_PIPELINE_ORCHESTRATOR_20260423.md",
+      "size_bytes": 3031,
+      "lines": 82,
+      "mtime": "2026-04-23T18:39:06Z",
+      "docstring_head": "CC-OP-004 Signal-to-shelf pipeline orchestrator",
+      "capability_tags": [
+        "directive",
+        "pipeline",
+        "orchestrator"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "CC-OP-004 Signal-to-shelf pipeline orchestrator",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "CC-OP-004 Signal-to-shelf pipeline orchestrator",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "directive",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "fd2811d9d3fdc3d8d9d409aa35fd7e97b5c2d876295d1d1be70d324fd83853d7"
+    },
+    {
+      "component_id": "E-0286",
+      "module": "missions.FORGE_DIRECTIVE_CC_OP_005_ECHOLOCATION_AGENT_20260423.md",
+      "path": "missions/FORGE_DIRECTIVE_CC_OP_005_ECHOLOCATION_AGENT_20260423.md",
+      "size_bytes": 2636,
+      "lines": 77,
+      "mtime": "2026-04-23T18:39:21Z",
+      "docstring_head": "CC-OP-005 Echolocation measurement agent",
+      "capability_tags": [
+        "directive",
+        "commerce",
+        "echolocation",
+        "measurement"
+      ],
+      "health": "operational",
+      "dependencies": [],
+      "consumers": [],
+      "gate_verdict": "REGISTER",
+      "ttlg": {
+        "scout": "CC-OP-005 Echolocation measurement agent",
+        "thinker": "Seated under Unified Registry Doctrine (D-000N). Matches the Signal-to-Shelf Pipeline's stage contracts.",
+        "gate_reason": "Schema coherent; JSON valid or markdown fence-balanced; governed Article XVI \u00a71 registration.",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      },
+      "utility_prose": "CC-OP-005 Echolocation measurement agent",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI \u00a71",
+        "XVI \u00a72"
+      ],
+      "amendments_applicable": [],
+      "touchpoints": {
+        "authored_by": "Architect",
+        "validated_by": [
+          "Doctor",
+          "TTLG"
+        ],
+        "scored_by": [
+          "Reward Bus",
+          "Steward"
+        ],
+        "sovereign_ratified_changes": true
+      },
+      "process_role": "directive",
+      "amendment_compliance": "COMPLIANT",
+      "version": {
+        "major": 1,
+        "minor": 0
+      },
+      "version_history": [
+        {
+          "timestamp": "2026-04-23T18:40:45.013059+00:00",
+          "major": 1,
+          "minor": 0,
+          "reason": "Unified Registry Doctrine seating"
+        }
+      ],
+      "scheme_version": 1,
+      "sha256": "cc352de6221ddd32a90f9cab8153b0469e3f08559a524be728761ffb693c29d2"
+    },
+    {
       "module": "multimodal_router.py",
       "path": "multimodal_router.py",
       "capability_tags": [
@@ -19151,8 +19847,8 @@
   },
   "component_id_scheme": {
     "format": "E-NNNN",
-    "range_assigned": "E-0001 to E-0281",
-    "total_assigned": 281,
+    "range_assigned": "E-0001 to E-0292",
+    "total_assigned": 292,
     "version_format": "major.minor",
     "major_bump": "public-API / signature change",
     "minor_bump": "body-level / docstring / metadata change"
@@ -25124,6 +25820,72 @@
         "thinker": "First read-write doctrine \u2014 re-renders on Bridge ingestion. Steady-state living document.",
         "gate_reason": "Resolves all internal references; Appendix A cited verbatim from prior session content.",
         "validated_at": "2026-04-23T10:54:46.510136+00:00",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "doctrine_id": "D-0002",
+      "title": "EPOS UNIFIED REGISTRY DOCTRINE 20260423",
+      "path": "context_vault/doctrine/strategic_intelligence/EPOS_UNIFIED_REGISTRY_DOCTRINE_20260423.md",
+      "version": "1.0",
+      "ratified": "2026-04-23T18:40:45.013059+00:00",
+      "ratified_by": "Sovereign",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI"
+      ],
+      "ttlg": {
+        "scout": "Unified Registry Doctrine \u2014 Sovereign Growth Machine strategic overview",
+        "thinker": "Triad of pipeline doctrine; strategic/implementation/mechanical lenses",
+        "gate_reason": "Cross-references resolve; schema coherent; Sovereign-ratified language preserved verbatim",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "doctrine_id": "D-0003",
+      "title": "EPOS SIGNAL TO SHELF PIPELINE",
+      "path": "context_vault/doctrine/strategic_intelligence/EPOS_SIGNAL_TO_SHELF_PIPELINE.md",
+      "version": "1.0",
+      "ratified": "2026-04-23T18:40:45.013059+00:00",
+      "ratified_by": "Sovereign",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI"
+      ],
+      "ttlg": {
+        "scout": "Signal-to-Shelf Pipeline implementation plan \u2014 5 stages, CC-BF + CC-OP build order",
+        "thinker": "Triad of pipeline doctrine; strategic/implementation/mechanical lenses",
+        "gate_reason": "Cross-references resolve; schema coherent; Sovereign-ratified language preserved verbatim",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
+        "validator": "Architect (inline)"
+      }
+    },
+    {
+      "doctrine_id": "D-0004",
+      "title": "EPOS OPERATIONAL COMPONENTS EXPLODED",
+      "path": "context_vault/doctrine/strategic_intelligence/EPOS_OPERATIONAL_COMPONENTS_EXPLODED.md",
+      "version": "1.0",
+      "ratified": "2026-04-23T18:40:45.013059+00:00",
+      "ratified_by": "Sovereign",
+      "governing_articles": [
+        "V",
+        "VII",
+        "X",
+        "XIV",
+        "XVI"
+      ],
+      "ttlg": {
+        "scout": "Operational Components Exploded \u2014 mechanical detail per pipeline role",
+        "thinker": "Triad of pipeline doctrine; strategic/implementation/mechanical lenses",
+        "gate_reason": "Cross-references resolve; schema coherent; Sovereign-ratified language preserved verbatim",
+        "validated_at": "2026-04-23T18:40:45.013059+00:00",
         "validator": "Architect (inline)"
       }
     }

@@ -1,0 +1,41 @@
+{
+  "catalog_version": "1.0",
+  "schema": {
+    "product_id": "P-NNNN",
+    "fields": [
+      "product_id", "title", "platform", "price_usd", "live_url",
+      "listed_at", "last_updated_at", "status",
+      "components_used", "mirofish_run_id", "echolocation_t24h_metrics",
+      "echolocation_t48h_metrics", "total_sales", "total_revenue_usd"
+    ]
+  },
+  "statuses": ["draft", "awaiting_copy_approval", "live", "paused", "retired"],
+  "products": [
+    {
+      "product_id": "P-0001",
+      "title": "CCP Pack — Stop Sending Flat Prompts",
+      "platform": "Gumroad",
+      "price_usd": null,
+      "live_url": null,
+      "listed_at": null,
+      "last_updated_at": "2026-04-22",
+      "status": "draft",
+      "components_used": ["E-0024", "nodes/execution_arm (ref patterns)"],
+      "mirofish_run_id": null,
+      "total_sales": 0, "total_revenue_usd": 0
+    },
+    {
+      "product_id": "P-0002",
+      "title": "Pre-Mortem Kit — 5 Constitutional Docs + Doctor",
+      "platform": "Gumroad",
+      "price_usd": null,
+      "live_url": null,
+      "listed_at": null,
+      "last_updated_at": "2026-04-22",
+      "status": "draft",
+      "components_used": ["E-0049"],
+      "mirofish_run_id": null,
+      "total_sales": 0, "total_revenue_usd": 0
+    }
+  ]
+}

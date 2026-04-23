@@ -1,0 +1,22 @@
+{
+  "registry_version": "1.0",
+  "schema": {
+    "signal_id": "sha256(verbatim+source_url)[:16]",
+    "fields": [
+      "signal_id", "verbatim", "source_platform", "source_url",
+      "source_author", "signal_type", "confidence", "frequency",
+      "priority_score", "pain_magnitude", "source_diversity",
+      "current_phase", "created_at", "last_seen_at"
+    ]
+  },
+  "signal_types": [
+    "pain_language", "feature_request", "price_sensitivity",
+    "competitor_weakness", "unmet_need"
+  ],
+  "current_phases": [
+    "sensing", "staging", "synthesis", "fortification",
+    "sovereign_pricing_gate", "implantation", "sovereign_copy_gate",
+    "stewardship", "terminal"
+  ],
+  "signals": []
+}
