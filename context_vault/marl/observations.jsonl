@@ -1,0 +1,2 @@
+{"timestamp": "2026-04-23T14:13:44.243840+00:00", "agent_id": "dispatcher", "state_hash": "c82223eff268e506", "state_preview": "{'task_type': 'web_read', 'has_url': True}", "action": "browser_use.headless", "outcome_signal": "positive", "reward_value": 1.0, "metadata": {}}
+{"timestamp": "2026-04-23T14:13:44.244177+00:00", "agent_id": "dispatcher", "state_hash": "c82223eff268e506", "state_preview": "{'task_type': 'web_read', 'has_url': True}", "action": "browser_use.headed", "outcome_signal": "negative", "reward_value": -0.5, "metadata": {}}

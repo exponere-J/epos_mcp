@@ -18,7 +18,10 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     EPOS_ARM_LOG_DIR=/app/context_vault/execution_arm \
-    EPOS_DELETION_LOG=/app/context_vault/bi/deletion_attempts.jsonl
+    EPOS_DELETION_LOG=/app/context_vault/bi/deletion_attempts.jsonl \
+    DISPLAY=:99 \
+    EPOS_XVFB_DISPLAY=:99 \
+    EPOS_HEADED_DEFAULT=false
 
 WORKDIR /app
 
@@ -48,7 +51,12 @@ RUN pip install --upgrade pip \
         python-dotenv \
         "anthropic>=0.40.0" \
         "browser-use>=0.1.40" \
-        "playwright>=1.45.0"
+        "playwright>=1.45.0" \
+        "firecrawl-py>=1.0.0" \
+        "notebooklm-py>=0.1.0" \
+        "fastapi>=0.110.0" \
+        "uvicorn>=0.29.0" \
+        "httpx>=0.27.0"
 
 # Install only Chromium (skipping firefox/webkit saves ~700MB).
 RUN playwright install --with-deps chromium
@@ -57,13 +65,21 @@ RUN playwright install --with-deps chromium
 # engine/ — governance + event bus primitives shared with the bridge
 COPY engine/ ./engine/
 
-# nodes/execution_arm/ — the four-variant arm
+# nodes/execution_arm/ — the four-variant arm + Firecrawl arm
 COPY nodes/execution_arm/ ./nodes/execution_arm/
+# nodes/bridge/ — ingestion runner + persona reloader + directive queue
+COPY nodes/bridge/ ./nodes/bridge/
+# nodes/scc/personas/ — Architect persona for SCC proxy mode
+COPY nodes/scc/personas/ ./nodes/scc/personas/
 # path_utils referenced by various nodes; safe to include
 COPY path_utils.py ./path_utils.py
 
 # Agent Zero bridge (HTTP + event bus + inbox router)
 COPY containers/agent-zero/az_bridge.py ./az_bridge.py
+
+# Xvfb startup script — boots virtual display before az_bridge starts
+COPY containers/agent-zero/start.sh ./start.sh
+RUN chmod +x /app/start.sh
 
 RUN mkdir -p /app/inbox /app/outbox /app/context_vault \
              /app/context_vault/execution_arm /app/context_vault/bi
@@ -74,4 +90,7 @@ EXPOSE 8105
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
     CMD curl -fsS http://127.0.0.1:8105/api/health || exit 1
 
-CMD ["python", "az_bridge.py"]
+# Entrypoint starts Xvfb then the bridge.
+# Headed/headless toggle is per-call (mode_hint) — the container always
+# has a virtual display ready; "headless" still works (Chromium ignores DISPLAY).
+CMD ["/app/start.sh"]

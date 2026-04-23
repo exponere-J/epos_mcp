@@ -1,0 +1,3 @@
+{"command": "Schedule a meeting with Jamie on Friday", "intent": "schedule_meeting", "action": "calcom", "route": "calcom", "result": {"status": "queued", "backend": "calcom", "who": "Jamie", "when": "Friday"}, "timestamp": "2026-04-23T14:19:35.820798+00:00"}
+{"command": "brief me", "intent": "briefing_request", "action": "friday", "route": "friday", "result": {"status": "briefing_ready", "length_chars": 440}, "timestamp": "2026-04-23T14:19:35.832121+00:00"}
+{"command": "Scrape top Gumroad products", "intent": "web_read", "action": "execution_arm", "route": "execution_arm", "result": {"status": "dispatched", "arm_result": {"success": false, "arm": "browser_use"}}, "timestamp": "2026-04-23T14:19:35.907762+00:00"}

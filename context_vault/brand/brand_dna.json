@@ -1,0 +1,29 @@
+{
+  "brand_id": "epos.exponere",
+  "version": "1.0",
+  "ratified": "2026-04-22",
+  "name": "EPOS",
+  "tagline": "1% daily. 37x annually.",
+  "promise": "An organism, not a tool. Sovereignty + governance + autonomy in one substrate.",
+  "voice": {
+    "tone": ["plain-spoken", "Architect-direct", "no-fluff"],
+    "vocabulary_preferences": ["organism", "Sovereign", "Forge", "Architect", "constitutional"],
+    "vocabulary_avoidances": ["leverage", "synergy", "actually", "literally"]
+  },
+  "audience_archetypes": [
+    "founder_solo", "vp_marketing", "consultant_indie",
+    "growth_hacker", "small_service_owner"
+  ],
+  "value_pillars": [
+    {"pillar": "Self-awareness", "evidence": "process_matrix proprioception every 5 min"},
+    {"pillar": "Self-improvement", "evidence": "Reward Bus → QLoRA daily training"},
+    {"pillar": "Sovereign control", "evidence": "deletion_gate + approval flows + governance Articles"},
+    {"pillar": "Anti-stub discipline", "evidence": "TTLG anti-truncation contract; no silent failures"}
+  ],
+  "stage_1_products": [
+    {"id": "ccp_prompt_pack", "title": "CCP Pack — Stop Sending Flat Prompts", "platform": "Gumroad",
+     "price_test_points_usd": [19, 29, 39, 49]},
+    {"id": "premortem_kit", "title": "Pre-Mortem Kit — 5-Doc Framework + Doctor", "platform": "Gumroad",
+     "price_test_points_usd": [29, 49, 79, 99]}
+  ]
+}

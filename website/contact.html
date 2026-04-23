@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — EXPONERE</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="/" class="brand">EXPONERE</a>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="case_study.html">Case Study</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero narrow">
+    <h1>Book a time that works.</h1>
+    <p class="lede">I run 30-minute diagnostic calls twice a week. No
+    sales pressure — if we don't fit, we don't fit.</p>
+  </section>
+
+  <!-- Cal.com inline embed — replace CAL_USERNAME in config.js -->
+  <div id="cal-inline-embed"></div>
+  <script src="assets/config.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById("cal-inline-embed");
+      if (!window.CAL_USERNAME) return;
+      var f = document.createElement("iframe");
+      f.src = "https://cal.com/" + window.CAL_USERNAME + "/30min?embed=1";
+      f.style.width = "100%"; f.style.height = "720px"; f.style.border = "0";
+      el.appendChild(f);
+    })();
+  </script>
+
+  <section class="email-fallback">
+    <h2>Prefer email?</h2>
+    <p>Write me at <a href="mailto:jamie@exponere.co">jamie@exponere.co</a>.
+    Include 2 sentences about what you're working on and what's blocked.
+    I read every one.</p>
+  </section>
+</main>
+
+<footer><p>&copy; EXPONERE.</p></footer>
+</body>
+</html>

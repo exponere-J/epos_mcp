@@ -1,0 +1,23 @@
+{
+  "migration_id": "mig_20260423_141339",
+  "target_server": "CCX33-Nuremberg",
+  "target_ip": "",
+  "target_hostname": "",
+  "started_at": "2026-04-23T14:13:39.147059+00:00",
+  "current_phase": "PREP",
+  "phase_history": [
+    {
+      "phase": "PREP",
+      "timestamp": "2026-04-23T14:13:42.999799+00:00",
+      "outcome": "complete",
+      "detail": {
+        "files_manifest_count": 1391,
+        "manifest_sha": "6687d0911ceeb874"
+      }
+    }
+  ],
+  "backup_path": "/home/user/epos_mcp/backups/mig_20260423_141339_pre.tar.gz",
+  "manifest_sha": "6687d0911ceeb874",
+  "status": "running",
+  "errors": []
+}

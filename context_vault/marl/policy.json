@@ -1,0 +1,9 @@
+{
+  "dispatcher:c82223eff268e506": {
+    "agent_id": "dispatcher",
+    "state_hash": "c82223eff268e506",
+    "recommended_action": "browser_use.headless",
+    "mean_reward": 1.0,
+    "n_observations": 1
+  }
+}
