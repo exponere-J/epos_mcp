@@ -20,16 +20,16 @@
     "root_py"
   ],
   "totals": {
-    "registered": 117,
+    "registered": 114,
     "revise_pending": 1,
     "rejected": 0,
-    "legacy_audit": 176,
+    "legacy_audit": 177,
     "compliance": {
-      "COMPLIANT": 223,
+      "COMPLIANT": 221,
       "UNKNOWN": 71
     },
-    "total_components": 294,
-    "component_id_range": "E-0001 to E-0294"
+    "total_components": 292,
+    "component_id_range": "E-0001 to E-0292"
   },
   "process_registry": [
     {
@@ -6171,24 +6171,22 @@
       "module": "epos.pm.store.py",
       "path": "epos/pm/store.py",
       "capability_tags": [
-        "external_signal_router",
-        "project_management",
-        "single_writer"
+        "project_management"
       ],
-      "lines": 516,
-      "size_bytes": 20438,
-      "mtime": "2026-04-24T05:34:34Z",
+      "lines": 363,
+      "size_bytes": 13849,
+      "mtime": "2026-04-19T19:29:34Z",
       "docstring_head": "epos/pm/store.py \u2014 PM Surface JSON Store",
       "health": "unknown",
       "dependencies": [],
       "consumers": [],
-      "gate_verdict": "REGISTER",
+      "gate_verdict": "LEGACY_AUDIT",
       "ttlg": {
-        "scout": "PMStore \u2014 PM Surface single-writer; now supports list_all() + apply_external_signal() for cross-system integration (Undb mirror, Voice Bridge, FOTW)",
+        "scout": "(pending live TTLG deep verification)",
         "thinker": "(pending)",
-        "gate_reason": "AST OK; 10 functional tests pass (source routing, keyword classification, 48h dedup, rejection, tab filter). Version-bumped from v1.0 \u2192 v1.1.",
-        "validated_at": "2026-04-24T05:36:34.638605+00:00",
-        "validator": "Architect (inline, Stage 0C)"
+        "gate_reason": "Existed before the validation protocol. Operational, not blocked.",
+        "validated_at": null,
+        "validator": null
       },
       "utility_prose": "epos/pm/store.py \u2014 PM Surface JSON Store",
       "governing_articles": [
@@ -6225,7 +6223,7 @@
       "component_id": "E-0068",
       "version": {
         "major": 1,
-        "minor": 1
+        "minor": 0
       },
       "version_history": [
         {
@@ -6233,24 +6231,9 @@
           "major": 1,
           "minor": 0,
           "reason": "Initial component ID assignment under Article XVI \u00a71"
-        },
-        {
-          "timestamp": "2026-04-24T05:36:34.638605+00:00",
-          "major": 1,
-          "minor": 1,
-          "reason": "Stage 0C: added list_all() + apply_external_signal() per FORGE-ORCH-20260423"
         }
       ],
-      "scheme_version": 1,
-      "sha256": "f0e3512f65a74ac3a8686abfd77fd2263a81392158420569c33918e18ed079bc",
-      "integrity": {
-        "full_sha256": "f0e3512f65a74ac3a8686abfd77fd2263a81392158420569c33918e18ed079bc",
-        "byte_count": 20438,
-        "line_count": 516,
-        "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
-        "last_nonempty_line_sha256": "393bc8435b359a56a57f77790393a2e34c44def7c5dea128a69d493572e1d622",
-        "trailing_newline": true
-      }
+      "scheme_version": 1
     },
     {
       "component_id": "E-0251",
@@ -6782,80 +6765,6 @@
       ],
       "scheme_version": 1,
       "sha256": "c9322fd906569b99a2ff96456c3416639be4d99f5fe7856f629e6ea7ab92dd03"
-    },
-    {
-      "component_id": "E-0293",
-      "path": "epos/state/registry_reconciler.py",
-      "capability_tags": [
-        "governance",
-        "state_graph",
-        "registry",
-        "parallel_writer"
-      ],
-      "gate_verdict": "REGISTER",
-      "version": {
-        "major": 1,
-        "minor": 0
-      },
-      "version_history": [
-        {
-          "timestamp": "2026-04-24T05:35:51.577716+00:00",
-          "major": 1,
-          "minor": 0,
-          "reason": "FORGE-ORCH-20260423 Stage 0"
-        }
-      ],
-      "utility_prose": "Single-writer merger for organism_state.json; file-locked, schema-validated, conflict-detecting",
-      "docstring_head": "Single-writer merger for organism_state.json; file-locked, schema-validated, conflict-detecting",
-      "lines": 444,
-      "size_bytes": 17343,
-      "mtime": "2026-04-24T05:31:23Z",
-      "sha256": "3ad29740e492e8388e950d471bd5a163bbfeff98b4a7d74a47536e60ff54966a",
-      "integrity": {
-        "full_sha256": "3ad29740e492e8388e950d471bd5a163bbfeff98b4a7d74a47536e60ff54966a",
-        "byte_count": 17343,
-        "line_count": 444,
-        "first_line_sha256": "381f9bfc69d49d39040a7d5fc3197ce385019a2ba2de649622f841a8c658ed37",
-        "last_nonempty_line_sha256": "920117e06c7068fb5fb0dc2f2fb95bce1248006e3034405249878bbd0be17a28",
-        "trailing_newline": true
-      },
-      "governing_articles": [
-        "V",
-        "VII",
-        "X",
-        "XIV",
-        "XVI \u00a71"
-      ],
-      "amendments_applicable": [],
-      "touchpoints": {
-        "authored_by": "Architect (Stage 0)",
-        "validated_by": [
-          "Doctor",
-          "TTLG"
-        ],
-        "scored_by": [
-          "Reward Bus",
-          "Steward"
-        ],
-        "sovereign_ratified_changes": true
-      },
-      "process_role": "registry_reconciler",
-      "amendment_compliance": "COMPLIANT",
-      "scheme_version": 1,
-      "health": "operational",
-      "dependencies": [
-        "fcntl",
-        "json",
-        "hashlib"
-      ],
-      "consumers": [],
-      "ttlg": {
-        "scout": "Inputs: /tmp/registry_proposals/*.json. Outputs: merged organism_state.json + reconciler_log.jsonl. Dependencies: stdlib only. Failure modes: lock contention \u2192 retry + back-off; malformed proposal \u2192 rejected/ queue; content conflict \u2192 conflicts/ queue.",
-        "thinker": "Core of the parallel-fan-out orchestration. Eliminates registry corruption under subagent concurrency. Emits registry.reconciled event for downstream (Steward briefing, Reward Bus).",
-        "gate_reason": "AST OK; functional smoke test passes with 2 merged + 1 conflict + 1 rejected as expected; atomic write with backup.",
-        "validated_at": "2026-04-24T05:35:51.577716+00:00",
-        "validator": "Architect (inline, dogfood)"
-      }
     },
     {
       "module": "epos.state.state_redundancy.py",
@@ -13599,77 +13508,6 @@
       ],
       "scheme_version": 1,
       "sha256": "cc352de6221ddd32a90f9cab8153b0469e3f08559a524be728761ffb693c29d2"
-    },
-    {
-      "component_id": "E-0294",
-      "path": "missions/templates/FORGE_SUBAGENT_BRIEF.md",
-      "capability_tags": [
-        "doctrine",
-        "contract",
-        "subagent",
-        "governance"
-      ],
-      "gate_verdict": "REGISTER",
-      "version": {
-        "major": 1,
-        "minor": 0
-      },
-      "version_history": [
-        {
-          "timestamp": "2026-04-24T05:35:51.577716+00:00",
-          "major": 1,
-          "minor": 0,
-          "reason": "FORGE-ORCH-20260423 Stage 0"
-        }
-      ],
-      "utility_prose": "Verbatim binding contract every parallel Forge subagent receives before writing anything",
-      "docstring_head": "Verbatim binding contract every parallel Forge subagent receives before writing anything",
-      "lines": 233,
-      "size_bytes": 8537,
-      "mtime": "2026-04-24T05:33:17Z",
-      "sha256": "779df2735dabe83c6f4e0c70ba83f216d32bb64811c328f27265ef4667451f36",
-      "integrity": {
-        "full_sha256": "779df2735dabe83c6f4e0c70ba83f216d32bb64811c328f27265ef4667451f36",
-        "byte_count": 8537,
-        "line_count": 233,
-        "first_line_sha256": "e116a92c8bec82491aa883b7d2169631bfcb8108f4d183664fde8d9904f04181",
-        "last_nonempty_line_sha256": "198f5980ff389698ac7ecb4137bc9d630e577c5108fcdea1a1d9fcad56a1f8fa",
-        "trailing_newline": true
-      },
-      "governing_articles": [
-        "V",
-        "VII",
-        "X",
-        "XIV",
-        "XVI \u00a71",
-        "XVI \u00a73"
-      ],
-      "amendments_applicable": [],
-      "touchpoints": {
-        "authored_by": "Architect (Stage 0)",
-        "validated_by": [
-          "Doctor",
-          "TTLG"
-        ],
-        "scored_by": [
-          "Reward Bus",
-          "Steward"
-        ],
-        "sovereign_ratified_changes": true
-      },
-      "process_role": "subagent_contract",
-      "amendment_compliance": "COMPLIANT",
-      "scheme_version": 1,
-      "health": "operational",
-      "dependencies": [],
-      "consumers": [],
-      "ttlg": {
-        "scout": "Inputs: none (reference doc). Outputs: consistent subagent behavior. Dependencies: none. Failure modes: subagent ignores contract \u2192 caught by Reconciler schema validation or anti-truncation recheck.",
-        "thinker": "Unblocks Stage 1 fan-out. Without uniform brief, parallel subagents produce stylistically drifted code and registry collisions. Every subagent reads this verbatim.",
-        "gate_reason": "12 sections covering watermark, anti-truncation, ID reservation, schema, WSL discipline, output contract, Doctor, merge gate, dependencies, communication, Sovereign override, acknowledgment.",
-        "validated_at": "2026-04-24T05:35:51.577716+00:00",
-        "validator": "Architect (inline, dogfood)"
-      }
     },
     {
       "module": "multimodal_router.py",

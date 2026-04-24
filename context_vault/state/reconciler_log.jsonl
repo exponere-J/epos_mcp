@@ -1,0 +1,14 @@
+{"kind": "proposal.merged", "file": "forge_a_session_keeper.json", "component_id": "E-0293"}
+{"kind": "proposal.merged", "file": "forge_b_signal_buffer.json", "component_id": "E-0293"}
+{"kind": "proposal.merged", "file": "forge_c_conflict.json", "component_id": "E-0293"}
+{"kind": "proposal.rejected", "file": "forge_d_malformed.json", "reason": "missing required field: version"}
+{"kind": "reconcile.complete", "started_at": "2026-04-24T05:30:21.771174+00:00", "finished_at": "2026-04-24T05:30:21.821775+00:00", "proposals_scanned": 4, "merged": 3, "rejected": 1, "conflicts": 0, "lock_contentions": 0, "next_component_id": "E-0293", "merge_ids": ["E-0293", "E-0293", "E-0293"], "reject_reasons": [{"file": "forge_d_malformed.json", "reason": "missing required field: version"}], "conflict_ids": [], "error": ""}
+{"kind": "proposal.merged", "file": "forge_a.json", "component_id": "E-0293"}
+{"kind": "proposal.merged", "file": "forge_b.json", "component_id": "E-0294"}
+{"kind": "proposal.conflict", "file": "forge_c_conflict.json", "path": "epos/commerce/_t_session_keeper.py", "reason": "path reuse with different cid"}
+{"kind": "proposal.rejected", "file": "forge_d_bad.json", "reason": "missing required field: version"}
+{"kind": "reconcile.complete", "started_at": "2026-04-24T05:31:50.051459+00:00", "finished_at": "2026-04-24T05:31:50.104530+00:00", "proposals_scanned": 4, "merged": 2, "rejected": 1, "conflicts": 1, "lock_contentions": 0, "next_component_id": "E-0295", "merge_ids": ["E-0293", "E-0294"], "reject_reasons": [{"file": "forge_d_bad.json", "reason": "missing required field: version"}], "conflict_ids": [{"path": "epos/commerce/_t_session_keeper.py", "file": "forge_c_conflict.json", "existing_cid": "E-0293", "proposed_cid": "E-0295", "reason": "path already registered under different component_id"}], "error": ""}
+{"kind": "proposal.merged", "file": "stage0_01_registry_reconciler.json", "component_id": "E-0293"}
+{"kind": "proposal.merged", "file": "stage0_02_subagent_contract.json", "component_id": "E-0294"}
+{"kind": "proposal.conflict", "file": "stage0_03_pm_surface_extended.json", "path": "epos/pm/store.py", "reason": "path reuse with different cid"}
+{"kind": "reconcile.complete", "started_at": "2026-04-24T05:35:51.688659+00:00", "finished_at": "2026-04-24T05:35:51.734130+00:00", "proposals_scanned": 3, "merged": 2, "rejected": 0, "conflicts": 1, "lock_contentions": 0, "next_component_id": "E-0295", "merge_ids": ["E-0293", "E-0294"], "reject_reasons": [], "conflict_ids": [{"path": "epos/pm/store.py", "file": "stage0_03_pm_surface_extended.json", "existing_cid": "E-0068", "proposed_cid": "E-0295", "reason": "path already registered under different component_id"}], "error": ""}

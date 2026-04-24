@@ -361,3 +361,156 @@ class PMStore:
             tabs_touched.add(tab.value)
 
         return {"written": written, "tabs_touched": sorted(tabs_touched)}
+
+    # ── Extensions for Stage-0C (FORGE-ORCH-20260423) ────────────────────────
+
+    def list_all(self, tab: Optional[str] = None) -> List[dict]:
+        """
+        Return all items across all tabs, or a single tab if specified.
+
+        Args:
+            tab: Optional tab name as string (action_items / decisions /
+                 research_queue / blockers / idea_pipeline / client_insights).
+                 None = all tabs, merged.
+
+        Returns:
+            List of item dicts, newest first. Each item carries a `_tab` key
+            identifying its source tab so callers can distinguish origins.
+
+        Used by: Schedule Builder (BUILD 69), PM-Undb Mirror (BUILD 68),
+                 Voice Bridge (BUILD 66 pm_surface route).
+        """
+        items: List[dict] = []
+        if tab is not None:
+            try:
+                t = PMTab(tab)
+            except ValueError:
+                raise ValueError(
+                    f"unknown tab {tab!r}; valid: {[t.value for t in PMTab]}"
+                )
+            for it in self.list_items(t):
+                it["_tab"] = t.value
+                items.append(it)
+        else:
+            for t in PMTab:
+                for it in self.list_items(t):
+                    it["_tab"] = t.value
+                    items.append(it)
+        items.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+        return items
+
+    def apply_external_signal(self, signal: dict) -> dict:
+        """
+        Ingest an external signal (Undb webhook, FOTW capture, Voice Bridge
+        command, etc.) as a PM-surface item. Preserves the Article VII
+        single-writer discipline: external sources route THROUGH this method
+        rather than writing to JSON directly.
+
+        Signal shape (minimum):
+            {
+              "source":    "<undb|fotw|voice|oracle|manual>",
+              "content":   "<human-readable text>",
+              "tab_hint":  "<optional explicit PM tab>",
+              # optional fields respected if present:
+              "priority":  "critical|high|normal|low",
+              "status":    "pending|in_progress|blocked|complete",
+              "confidence": 0.0-1.0,
+              "due_date":  "<ISO date>",
+              "assigned_to": "<string>",
+            }
+
+        Routing rules (if tab_hint is missing):
+            - signal.source == "fotw"     → idea_pipeline (market signal → concept)
+            - signal.source == "undb"     → action_items (CRM mutation → task)
+            - signal.source == "voice"    → action_items (dictated task)
+            - signal.source == "oracle"   → research_queue (market question)
+            - contains "block" / "stuck"  → blockers
+            - contains "decide" / "which" → decisions
+            - default                     → action_items
+
+        Returns:
+            {"status": "applied", "tab": "<tab>", "item_id": "<id>",
+             "written": true|false, "reason": "<short note>"}
+        """
+        if not isinstance(signal, dict):
+            return {"status": "rejected", "reason": "signal must be a dict",
+                    "written": False}
+        content = signal.get("content", "").strip()
+        if not content:
+            return {"status": "rejected", "reason": "missing content",
+                    "written": False}
+
+        source = (signal.get("source") or "external").lower()
+        tab_hint = signal.get("tab_hint")
+        if tab_hint:
+            try:
+                tab = PMTab(tab_hint)
+            except ValueError:
+                return {"status": "rejected",
+                        "reason": f"unknown tab_hint {tab_hint!r}",
+                        "written": False}
+        else:
+            tab = self._route_signal_to_tab(source, content)
+
+        lower = content.lower()
+        item = {
+            "id": signal.get("id") or f"EXT-{uuid.uuid4().hex[:10].upper()}",
+            "content": content,
+            "status": signal.get("status", PMStatus.PENDING.value),
+            "priority": signal.get("priority", "normal"),
+            "confidence": float(signal.get("confidence", 0.8)),
+            "source_capture_id": signal.get("source_capture_id"),
+            "assigned_to": signal.get("assigned_to"),
+            "due_date": signal.get("due_date"),
+            "external_source": source,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+
+        # Dedup by content hash + source, last 48h
+        import hashlib
+        h = hashlib.sha256(f"{source}:{content}".encode("utf-8")).hexdigest()[:16]
+        cutoff_iso = (datetime.now(timezone.utc).timestamp() - 48 * 3600)
+        for existing in self.list_items(tab):
+            try:
+                ts = datetime.fromisoformat(
+                    existing.get("created_at", "").replace("Z", "+00:00")
+                ).timestamp()
+            except Exception:
+                continue
+            if ts < cutoff_iso:
+                continue
+            existing_h = hashlib.sha256(
+                f"{existing.get('external_source','')}:{existing.get('content','')}"
+                .encode("utf-8")
+            ).hexdigest()[:16]
+            if existing_h == h:
+                return {"status": "deduped", "tab": tab.value,
+                        "item_id": existing.get("id"),
+                        "written": False,
+                        "reason": "duplicate within 48h window"}
+
+        saved = self.add_from_dict(tab, item)
+        return {"status": "applied", "tab": tab.value,
+                "item_id": saved.get("id"), "written": True,
+                "reason": f"routed from source={source}"}
+
+    def _route_signal_to_tab(self, source: str, content: str) -> "PMTab":
+        """Classifier used when tab_hint is absent."""
+        source_map = {
+            "fotw": PMTab.IDEA_PIPELINE,
+            "undb": PMTab.ACTION_ITEMS,
+            "voice": PMTab.ACTION_ITEMS,
+            "oracle": PMTab.RESEARCH_QUEUE,
+        }
+        if source in source_map:
+            return source_map[source]
+        lower = content.lower()
+        if any(k in lower for k in ("block", "stuck", "cannot", "waiting on")):
+            return PMTab.BLOCKERS
+        if any(k in lower for k in ("decide", "which option", "should we",
+                                      "pick between")):
+            return PMTab.DECISIONS
+        if lower.endswith("?") or lower.startswith(("how ", "what ",
+                                                      "when ", "why ")):
+            return PMTab.RESEARCH_QUEUE
+        return PMTab.ACTION_ITEMS
