@@ -96,3 +96,11 @@ epos_status.json
 
 # Claude Code local settings (personal per-machine overrides)
 .claude/settings.local.json
+
+# Registry Reconciler transient state (locks, backups, in-flight partials)
+*.reconciler.lock
+*.reconciler.bak
+*.reconciler.partial
+
+# Subagent proposal staging (transient)
+/tmp/registry_proposals/
